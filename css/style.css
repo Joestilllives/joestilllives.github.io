@@ -1,0 +1,264 @@
+*{box-sizing: content-box;
+margin:0;
+padding:0;
+font-size: calc(1vw + 1vh + .5vmin);
+  text-decoration:none;
+  scroll-behavior:smooth;
+}
+
+#navbar{
+  position:fixed;
+  background-color: white;
+  top: 0;
+  right:0;
+  width:95%;
+  text-align: right;
+z-index:1; 
+}
+.navname{
+  font-family: 'indie flower';
+  font-weight: bold;
+  font-size:1.5em;
+text-align:left !important;
+  float: left;
+}
+
+
+a{
+  color:rgb(6, 19, 40);
+  font-family:Coiny;
+  padding: 10px;
+  font-size:1.4em;
+    text-decoration:none;
+}
+a:hover {
+  color:orange;
+   }
+
+#welcome-section{
+  height: 100vh;
+background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+
+
+  <!--https://webgradients.com/-->
+  }
+#section1{
+  text-transform: uppercase;
+  text-align: center;
+  position:relative;
+  top:20vh;
+  color:white;
+font-family: Coiny;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+border-top: 40px solid #001f3f;
+  margin-left:auto;
+  margin-right:auto;
+  animation: move 1s linear infinite;
+}
+
+@keyframes move{
+  0%{transform:translate(0);}
+  50%{transform:translateY(5px);}
+  100%{transform:translate(0);}
+}
+
+
+#projects{
+  height:100vh;
+display:flex;
+  flex-direction:column;
+
+}
+#Mainh1{
+  padding-bottom:50px;
+  text-align: center;
+    font-size:3em;
+  color: white;
+  font-family:coiny;
+}
+
+
+.subheading{
+  margin:10px;
+    text-align: center;
+    font-size:1.5em;
+  color: black;
+  font-family:'indie flower';
+  }
+
+
+@media(max-width:450px)
+{
+  
+    
+}
+.projectlist{
+ font-family:'indie flower';
+ color:black;
+ font-size: 1em;
+text-decoration: none;
+ }
+.projectlist:hover{
+  color:orange;
+}
+
+#grid{
+background:white;
+  display:flex;
+  justify-content:space-around;
+  line-height:2;
+  font-weight: 900;
+
+}
+#Contact_me{
+  height: 40vh;
+background-color: #42b0e2;
+  width:100%;
+  margin:auto;
+  position:relative;
+}
+#Links{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  
+  
+  
+  font-size: 0.75em;
+  width:80%;
+  height:40%;
+  text-align:center;
+  color:white;
+}
+
+.Contacts{
+  padding:10px;
+  margin:10px;
+color:white;
+  display:inline-flex;
+}
+
+.Contacts:hover{
+  background:white;
+  color:black;
+  animation: shake 500ms linear;
+}
+@keyframes shake{
+  0%{transform:translate(0);}
+  20%{transform:translate(5px);}
+  40%{transform:translate(-5px);}
+  60%{transform:translate(5px);}
+  80%{transform:translate(-5px);}
+  100%{transform:translate(0);}
+}
+
+
+footer{
+ background-color:black;
+  text-align:right;
+  font-size:1.2em;
+  padding:2px;
+  color:white;
+  font-weight:bold;
+  font-family: 'indie flower';
+}
+
+#skillset{
+height:100vh;
+background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+}
+
+#Secondh1, #Thirdh1{
+  padding:5px;
+  text-align: center;
+    font-size:2em;
+  color: white;
+  font-family:coiny;
+  background:black;
+  mix-blend-mode: multiply;
+}
+.languages i{color:orange;}
+.languages{
+  width:15vw;
+  max-width: auto;
+  /*background:black;*/
+  margin-left:auto;
+  margin-right:auto;
+  padding: 5px;
+}
+.glitch{
+  font-size:2em;
+  color: black;
+  margin-bottom: 15vh;
+/*text-shadow: 5px 0 #00ffea;*/
+  position:relative;
+  z-index:5;
+}
+ .glitch:before, .glitch:after {
+        display: block;
+        content: 'CARRY ON MY WAYWARD SON';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+   height: 100%;
+        width: 100%;
+        opacity: .5;
+    }
+.glitch:after {
+        color: #f0f;
+       
+            animation: glitch 3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+ z-index:1;
+
+}
+.glitch:before {
+        color: #0ff;
+       
+            animation: glitch 3s cubic-bezier(.25, .46, .45, .94) both infinite;
+
+z-index:2;
+}
+
+
+@keyframes glitch {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(-1px, 1px)
+    }
+    40% {
+        transform: translate(-1px, -1px)
+    }
+    60% {
+        transform: translate(1px, 1px)
+    }
+    80% {
+        transform: translate(1px, -1px)
+    }
+    to {
+        transform: translate(0)
+    }
+}
+
+i::after{
+  content: attr(data-lang);
+  font-size:0.2em;
+  background:black;
+  color:white;
+  position:absolute;
+  display:none;
+}
+i:hover::after{
+  display:block;
+}
