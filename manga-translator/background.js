@@ -83,6 +83,8 @@ const missingModels = new Set();
 //   3 = also no JSON mode (the prompt alone asks for JSON).
 const compatLevel = new Map();
 const MAX_COMPAT = 3;
+// Models that just answered "overloaded": model -> time until which we skip them.
+const busyUntil = new Map();
 
 // ------------------------------------------------------------------- cache
 
@@ -163,15 +165,32 @@ async function runBatch() {
   try {
     const settings = await getSettings();
     const batch = queue.splice(0, Math.max(1, Math.min(8, settings.batchSize | 0)));
+    const deliver = (items, pages) => items.forEach((item, i) => {
+      const result = { bubbles: pages[i] || [], t: Date.now() };
+      cacheSet(item.key, result);
+      item.resolve(result);
+    });
     try {
-      const pages = await translateBatch(settings, batch);
+      let pages;
+      try {
+        pages = await translateBatch(settings, batch);
+      } catch (err) {
+        if (batch.length < 2 || !["busy", "timeout", "other"].includes(err.code)) throw err;
+        // A big request failed. Smaller ones often get through: go one page at a time.
+        logEvent(`${batch.length}-page request failed (${err.message}) — trying one page at a time`);
+        pages = [];
+        for (let i = 0; i < batch.length; i++) {
+          const one = await translateBatch(settings, [batch[i]]);   // throws → fails the rest
+          await bumpStats(1, 1);
+          deliver([batch[i]], one);
+          pages.push(null);
+        }
+        setStatus("");
+        return;
+      }
       setStatus("");
       await bumpStats(1, batch.length);
-      batch.forEach((item, i) => {
-        const result = { bubbles: pages[i] || [], t: Date.now() };
-        cacheSet(item.key, result);
-        item.resolve(result);
-      });
+      deliver(batch, pages);
     } catch (err) {
       const e = err instanceof TranslateError ? err : new TranslateError("other", String(err && err.message || err));
       setStatus("");
@@ -324,15 +343,41 @@ function extractPages(body, count) {
   return out;
 }
 
+// Ask Google which models this key can use (once a day) so there are working
+// fallbacks even when the names in settings are out of date or overloaded.
+async function discoverModels(apiKey) {
+  const { discovered } = await browser.storage.local.get("discovered");
+  if (discovered && discovered.day === quotaDay() && discovered.key === apiKey.slice(-6)) return discovered.models;
+  let models = [];
+  try {
+    const r = await handleTestKey({ apiKey });
+    if (r.ok) models = r.models.filter((m) => !/preview-\d|exp|thinking|native|computer|robotics|gemma/i.test(m)).slice(0, 12);
+    logEvent(`Models available to this key: ${models.join(", ") || "(none found)"}`);
+  } catch (_) { /* offline — just use the configured list */ }
+  if (models.length) await browser.storage.local.set({ discovered: { day: quotaDay(), key: apiKey.slice(-6), models } });
+  return models;
+}
+
 async function translateBatch(settings, items) {
   if (!settings.apiKey) throw new TranslateError("nokey", "Add your free Gemini API key in the extension settings.");
-  const models = (settings.models || []).map((m) => m.trim()).filter(Boolean);
+  const configured = (settings.models || []).map((m) => m.trim()).filter(Boolean);
+  const found = await discoverModels(settings.apiKey);
+  // Configured names first (skipping ones Google says don't exist), then any other usable models.
+  const models = configured.filter((m) => !found.length || found.includes(m) || /latest/.test(m))
+    .concat(found.filter((m) => !configured.includes(m)))
+    .slice(0, 8);
+  // Skip models that were overloaded in the last couple of minutes (unless that's all of them).
+  const now = Date.now();
+  const rested = models.filter((m) => (busyUntil.get(m) || 0) < now);
+  if (rested.length && rested.length < models.length) models.splice(0, models.length, ...rested);
   let lastError = null;
   let timeouts = 0;
+  let busyModels = 0;
 
   for (const model of models) {
     if (missingModels.has(model)) continue;
     if (timeouts >= 2) break;          // two models timed out: stop rather than wait for minutes
+    if (busyModels >= 3) break;        // three different models all busy: Google is having a bad moment
     const state = await getModelState();
     if (state.exhausted[model]) continue;
 
@@ -393,11 +438,23 @@ async function translateBatch(settings, items) {
         continue;
       }
       if (r.status >= 500) {
-        lastError = new TranslateError("other", `Gemini is overloaded (${r.status}).`);
-        if (busyWaits++ >= 1) break;
-        setStatus(`${model} is busy, retrying…`);
-        await sleep(3000);
-        continue;
+        lastError = new TranslateError("busy", `Gemini is overloaded (${r.status}).`);
+        busyWaits++;
+        if (busyWaits === 1) {
+          setStatus(`${model} is busy, retrying…`);
+          await sleep(4000);
+          continue;
+        }
+        // Server errors are sometimes caused by the strict answer format rather
+        // than real overload, so try once more asking plainly.
+        if (busyWaits === 2 && (compatLevel.get(model) || 0) < 2) {
+          compatLevel.set(model, 2);
+          logEvent(`${model}: retrying with a simpler request (level 2)`);
+          continue;
+        }
+        busyModels++;
+        busyUntil.set(model, Date.now() + 120000);
+        break;
       }
       lastError = new TranslateError("other", msg || `Gemini error ${r.status}`);
       break;

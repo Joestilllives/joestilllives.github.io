@@ -252,10 +252,23 @@
       rec.status = "error";
       rec.code = result && result.code;
       rec.error = (result && result.error) || "Translation failed.";
+      // Google being busy usually passes quickly: retry by itself a couple of times.
+      const tries = autoRetries.get(img) || 0;
+      if ((rec.code === "busy" || rec.code === "timeout" || rec.code === "rate") && tries < 2) {
+        autoRetries.set(img, tries + 1);
+        const wait = tries ? 45 : 20;
+        rec.error = `Gemini is busy. Trying again in ${wait}s.`;
+        setTimeout(() => {
+          if (!active || records.get(img) !== rec) return;
+          dropRecord(img);
+          consider(img);
+        }, wait * 1000);
+      }
     }
     renderBubbles(img, rec);
     updatePill();
   }
+  const autoRetries = new WeakMap();
 
   // --------------------------------------------------------------- overlay
 
