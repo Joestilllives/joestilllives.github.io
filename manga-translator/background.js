@@ -77,8 +77,12 @@ const REQUEST_TIMEOUT_MS = 75000;
 
 // Models that returned "not found" this session; skip them until restart.
 const missingModels = new Set();
-// Models that rejected the thinkingConfig field.
-const noThinkingConfig = new Set();
+// How "plain" a request each model needs. Some models reject optional settings
+// with a vague "invalid argument" error, so we step down until one is accepted:
+//   0 = everything, 1 = no thinking setting, 2 = also no response schema,
+//   3 = also no JSON mode (the prompt alone asks for JSON).
+const compatLevel = new Map();
+const MAX_COMPAT = 3;
 
 // ------------------------------------------------------------------- cache
 
@@ -201,6 +205,8 @@ function buildPrompt(settings, count) {
     `Keep translations concise enough to fit in the bubble. Do not add notes or explanations.`,
     `If a page has no Japanese text, return an empty bubbles list for it.`,
     `"page" is the 1-based index of the image in this request.`,
+    `Answer with ONLY a JSON object, no other text, in exactly this shape:`,
+    `{"pages":[{"page":1,"bubbles":[{"box_2d":[ymin,xmin,ymax,xmax],"japanese":"...","translation":"...","kind":"speech|thought|narration|sfx|sign"}]}]}`,
   ].join("\n");
 }
 
@@ -258,13 +264,12 @@ async function callGemini(settings, model, items) {
     parts.push({ text: `Page ${i + 1}:` });
     parts.push({ inline_data: { mime_type: item.mime, data: item.image } });
   });
-  const generationConfig = {
-    temperature: 0.4,
-    responseMimeType: "application/json",
-    responseSchema: RESPONSE_SCHEMA,
-  };
+  const level = compatLevel.get(model) || 0;
+  const generationConfig = { temperature: 0.4 };
+  if (level < 3) generationConfig.responseMimeType = "application/json";
+  if (level < 2) generationConfig.responseSchema = RESPONSE_SCHEMA;
   // Thinking adds latency and isn't needed here; some models reject the field.
-  if (!noThinkingConfig.has(model)) generationConfig.thinkingConfig = { thinkingBudget: 0 };
+  if (level < 1) generationConfig.thinkingConfig = { thinkingBudget: 0 };
 
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT_MS);
@@ -295,8 +300,9 @@ function extractPages(body, count) {
     data = JSON.parse(text);
   } catch (_) {
     try {
-      // Occasionally wrapped in a code fence.
-      data = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ""));
+      // Sometimes wrapped in a code fence or surrounded by a sentence.
+      const a = text.indexOf("{"), b = text.lastIndexOf("}");
+      data = JSON.parse(text.slice(a, b + 1));
     } catch (_e) {
       throw new TranslateError("other", "Gemini's answer was cut off or garbled.");
     }
@@ -330,7 +336,8 @@ async function translateBatch(settings, items) {
     const state = await getModelState();
     if (state.exhausted[model]) continue;
 
-    for (let attempt = 0; attempt < 3; attempt++) {
+    let rateWaits = 0, busyWaits = 0;
+    for (let attempt = 0; attempt < 8; attempt++) {
       let r;
       const started = Date.now();
       setStatus(`Waiting for ${model}…`);
@@ -354,17 +361,22 @@ async function translateBatch(settings, items) {
         if (!r.body) { lastError = new TranslateError("other", "Gemini sent an unreadable answer."); break; }
         return extractPages(r.body, items.length);
       }
-      if (r.status === 400 && /thinking/i.test(msg) && !noThinkingConfig.has(model)) {
-        noThinkingConfig.add(model);
-        continue;
-      }
       if ((r.status === 400 && /API key/i.test(msg)) || r.status === 401 || r.status === 403) {
         throw new TranslateError("badkey", "Your Gemini API key was rejected. Check it in the extension settings.");
       }
-      if (r.status === 404 || (r.status === 400 && /not found|not supported/i.test(msg))) {
+      if (r.status === 404 || (r.status === 400 && /not found|is not supported for/i.test(msg))) {
         missingModels.add(model);
         lastError = new TranslateError("other", `Model ${model} isn't available.`);
         break;
+      }
+      if (r.status === 400) {
+        // The model didn't like how we asked. Ask more plainly and try again.
+        const level = compatLevel.get(model) || 0;
+        lastError = new TranslateError("other", msg || "Gemini rejected the request.");
+        if (level >= MAX_COMPAT) break;
+        compatLevel.set(model, level + 1);
+        logEvent(`${model}: retrying with a simpler request (level ${level + 1})`);
+        continue;
       }
       if (r.status === 429) {
         if (isDailyQuota(r.body)) {
@@ -374,7 +386,7 @@ async function translateBatch(settings, items) {
         }
         // Per-minute limit: wait once (briefly), then move on to the next model.
         lastError = new TranslateError("rate", "Free per-minute limit reached. Wait a minute.");
-        if (attempt >= 1) break;
+        if (rateWaits++ >= 1) break;
         const wait = Math.min(30000, parseRetryDelay(r.body));
         setStatus(`Free per-minute limit reached, retrying in ${Math.round(wait / 1000)}s…`);
         await sleep(wait);
@@ -382,7 +394,7 @@ async function translateBatch(settings, items) {
       }
       if (r.status >= 500) {
         lastError = new TranslateError("other", `Gemini is overloaded (${r.status}).`);
-        if (attempt >= 1) break;
+        if (busyWaits++ >= 1) break;
         setStatus(`${model} is busy, retrying…`);
         await sleep(3000);
         continue;
@@ -397,6 +409,9 @@ async function translateBatch(settings, items) {
 // ---------------------------------------------------------------- handlers
 
 async function handleTranslate(msg) {
+  if (typeof msg.image !== "string" || msg.image.length < 200) {
+    return { ok: false, code: "image", error: "Couldn't read this page image." };
+  }
   const key = await sha256(msg.src);
   const cached = await cacheGet(key);
   if (cached) return { ok: true, cached: true, bubbles: cached.bubbles };

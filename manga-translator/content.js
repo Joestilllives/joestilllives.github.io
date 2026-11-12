@@ -180,7 +180,7 @@
     // Keep text legible: shrink big pages, but never squash a tall webtoon strip too narrow.
     let scale = Math.min(1, 1600 / Math.max(w, h));
     scale = Math.max(scale, Math.min(1, 900 / w));
-    scale = Math.min(scale, Math.sqrt(8e6 / (w * h)), 1);
+    scale = Math.min(scale, Math.sqrt(6e6 / (w * h)), 1);
     const cw = Math.max(1, Math.round(w * scale));
     const ch = Math.max(1, Math.round(h * scale));
     const canvas = document.createElement("canvas");
@@ -191,7 +191,9 @@
     ctx.fillRect(0, 0, cw, ch);
     ctx.drawImage(bmp, 0, 0, cw, ch);
     bmp.close && bmp.close();
-    return canvas.toDataURL("image/jpeg", 0.85).split(",")[1];
+    const b64 = canvas.toDataURL("image/jpeg", 0.85).split(",")[1] || "";
+    if (b64.length < 200) throw new Error("empty image");
+    return b64;
   }
 
   async function captureImage(img, src) {
