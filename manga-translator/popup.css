@@ -1,0 +1,41 @@
+:root {
+  --bg: #ffffff; --fg: #111827; --muted: #6b7280; --card: #f3f4f6;
+  --accent: #f97316; --accent-fg: #fff; --ok: #15803d; --err: #b91c1c; --border: #d1d5db;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111827; --fg: #f9fafb; --muted: #9ca3af; --card: #1f2937; --border: #374151; --ok: #4ade80; --err: #f87171; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 16px; min-width: 300px; max-width: 520px;
+  background: var(--bg); color: var(--fg);
+  font: 15px/1.45 system-ui, -apple-system, Roboto, sans-serif;
+}
+header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+h1 { font-size: 18px; margin: 0; }
+h2 { font-size: 15px; margin: 0 0 8px; }
+section, details { background: var(--card); border-radius: 12px; padding: 14px; margin-bottom: 12px; }
+summary { font-weight: 600; cursor: pointer; }
+details[open] summary { margin-bottom: 10px; }
+a { color: var(--accent); }
+.steps { margin: 0 0 8px; padding-left: 20px; }
+.hint { color: var(--muted); font-size: 13px; margin: 6px 0; }
+.status { font-size: 14px; margin: 8px 0 0; min-height: 1em; }
+.status.ok { color: var(--ok); } .status.err { color: var(--err); }
+.row { display: flex; gap: 8px; margin-top: 8px; }
+input[type=text], input[type=password], textarea, select {
+  width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--fg); font: inherit;
+}
+textarea { font-family: ui-monospace, monospace; font-size: 13px; }
+label { display: block; margin-top: 10px; font-size: 14px; }
+label.check { display: flex; align-items: center; gap: 8px; }
+button {
+  flex: 1; padding: 10px 14px; border: 0; border-radius: 8px;
+  background: var(--accent); color: var(--accent-fg); font: 600 15px/1.2 inherit; cursor: pointer;
+}
+button.secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); }
+button.small { flex: 0 0 auto; padding: 10px 12px; background: transparent; border: 1px solid var(--border); color: var(--fg); }
+button.big { width: 100%; padding: 14px; font-size: 16px; }
+button.big.on { background: #15803d; color: #fff; }
+.site-label { margin: 0 0 8px; word-break: break-all; }

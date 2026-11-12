@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manga Lens Translator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon.svg" alt="" width="32" height="32">
+    <h1>Manga Lens Translator</h1>
+  </header>
+
+  <section id="site-section" hidden>
+    <p class="site-label">This site: <strong id="site-host"></strong></p>
+    <button id="site-toggle" class="big"></button>
+    <p class="hint" id="site-hint"></p>
+  </section>
+
+  <section>
+    <h2>Your free Gemini API key</h2>
+    <ol class="steps">
+      <li>Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> and sign in with a Google account.</li>
+      <li>Tap <b>Create API key</b> and copy it.</li>
+      <li>Paste it here and tap <b>Save</b>.</li>
+    </ol>
+    <p class="hint">Don't add billing to that Google project, and you can never be charged. When the free limit runs out, it just stops until tomorrow.</p>
+    <div class="row">
+      <input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste key (starts with AIza…)">
+      <button id="show-key" class="small" type="button" aria-label="Show key">👁</button>
+    </div>
+    <div class="row">
+      <button id="save-key">Save</button>
+      <button id="test-key" class="secondary">Test key</button>
+    </div>
+    <p id="key-status" class="status"></p>
+  </section>
+
+  <section>
+    <h2>Today's usage</h2>
+    <p id="usage" class="status">…</p>
+    <p class="hint">Several pages go in each request to stretch the free daily limit. Pages you've already read are saved and never re-sent.</p>
+  </section>
+
+  <details>
+    <summary>Advanced</summary>
+    <label>Models to try, in order (one per line)
+      <textarea id="models" rows="4" spellcheck="false"></textarea>
+    </label>
+    <p class="hint">When one model's free daily limit runs out, the next one is used. "Test key" lists the models your key can use.</p>
+    <label>Pages per request
+      <select id="batch">
+        <option value="1">1 (fastest first page, uses limit quickest)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4 (default)</option>
+        <option value="6">6</option>
+        <option value="8">8 (stretches limit most)</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="sfx"> Translate sound effects</label>
+    <label>Translate into
+      <input id="lang" type="text" placeholder="English">
+    </label>
+    <div class="row">
+      <button id="save-adv">Save</button>
+      <button id="clear-cache" class="secondary">Clear saved translations</button>
+    </div>
+    <div class="row">
+      <button id="reset-quota" class="secondary">Retry models marked "limit hit"</button>
+    </div>
+    <p id="adv-status" class="status"></p>
+  </details>
+
+  <script src="popup.js"></script>
+</body>
+</html>
