@@ -39,3 +39,5 @@ button.small { flex: 0 0 auto; padding: 10px 12px; background: transparent; bord
 button.big { width: 100%; padding: 14px; font-size: 16px; }
 button.big.on { background: #15803d; color: #fff; }
 .site-label { margin: 0 0 8px; word-break: break-all; }
+pre { margin: 0; padding: 10px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border);
+  font: 12px/1.4 ui-monospace, monospace; white-space: pre-wrap; word-break: break-word; max-height: 300px; overflow: auto; }

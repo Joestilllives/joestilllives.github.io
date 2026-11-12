@@ -61,6 +61,20 @@ async function bumpStats(requests, pages) {
   await browser.storage.local.set({ stats: s });
 }
 
+// What we're doing right now (shown on the page while it waits) and a short
+// activity log (shown in settings) so problems can be diagnosed.
+let liveStatus = "";
+const activityLog = [];
+function setStatus(text) { liveStatus = text; }
+function logEvent(text) {
+  const time = new Date().toLocaleTimeString("en-GB");
+  activityLog.push(`${time}  ${text}`);
+  if (activityLog.length > 40) activityLog.shift();
+  browser.storage.local.set({ activityLog }).catch(() => {});
+}
+
+const REQUEST_TIMEOUT_MS = 75000;
+
 // Models that returned "not found" this session; skip them until restart.
 const missingModels = new Set();
 // Models that rejected the thinkingConfig field.
@@ -147,6 +161,7 @@ async function runBatch() {
     const batch = queue.splice(0, Math.max(1, Math.min(8, settings.batchSize | 0)));
     try {
       const pages = await translateBatch(settings, batch);
+      setStatus("");
       await bumpStats(1, batch.length);
       batch.forEach((item, i) => {
         const result = { bubbles: pages[i] || [], t: Date.now() };
@@ -155,6 +170,8 @@ async function runBatch() {
       });
     } catch (err) {
       const e = err instanceof TranslateError ? err : new TranslateError("other", String(err && err.message || err));
+      setStatus("");
+      logEvent(`Failed: ${e.message}`);
       batch.forEach((item) => item.reject(e));
       // On a "stop everything" error, fail the rest of the queue too instead of
       // burning more requests.
@@ -249,14 +266,21 @@ async function callGemini(settings, model, items) {
   // Thinking adds latency and isn't needed here; some models reject the field.
   if (!noThinkingConfig.has(model)) generationConfig.thinkingConfig = { thinkingBudget: 0 };
 
-  const res = await fetch(`${API_BASE}/models/${encodeURIComponent(model)}:generateContent`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "x-goog-api-key": settings.apiKey },
-    body: JSON.stringify({ contents: [{ role: "user", parts }], generationConfig }),
-  });
-  let body = null;
-  try { body = await res.json(); } catch (_) { /* non-JSON */ }
-  return { status: res.status, body };
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const res = await fetch(`${API_BASE}/models/${encodeURIComponent(model)}:generateContent`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": settings.apiKey },
+      body: JSON.stringify({ contents: [{ role: "user", parts }], generationConfig }),
+      signal: ctrl.signal,
+    });
+    let body = null;
+    try { body = await res.json(); } catch (_) { /* non-JSON or timed out mid-body */ }
+    return { status: res.status, body };
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 function extractPages(body, count) {
@@ -270,8 +294,12 @@ function extractPages(body, count) {
   try {
     data = JSON.parse(text);
   } catch (_) {
-    // Occasionally wrapped in a code fence.
-    data = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ""));
+    try {
+      // Occasionally wrapped in a code fence.
+      data = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ""));
+    } catch (_e) {
+      throw new TranslateError("other", "Gemini's answer was cut off or garbled.");
+    }
   }
   const out = Array.from({ length: count }, () => []);
   (data.pages || []).forEach((p, i) => {
@@ -294,24 +322,36 @@ async function translateBatch(settings, items) {
   if (!settings.apiKey) throw new TranslateError("nokey", "Add your free Gemini API key in the extension settings.");
   const models = (settings.models || []).map((m) => m.trim()).filter(Boolean);
   let lastError = null;
+  let timeouts = 0;
 
   for (const model of models) {
     if (missingModels.has(model)) continue;
+    if (timeouts >= 2) break;          // two models timed out: stop rather than wait for minutes
     const state = await getModelState();
     if (state.exhausted[model]) continue;
 
-    for (let attempt = 0; attempt < 4; attempt++) {
+    for (let attempt = 0; attempt < 3; attempt++) {
       let r;
+      const started = Date.now();
+      setStatus(`Waiting for ${model}…`);
       try {
         r = await callGemini(settings, model, items);
       } catch (e) {
-        lastError = new TranslateError("network", "Network error talking to Gemini.");
+        const timedOut = e && e.name === "AbortError";
+        logEvent(`${model}: ${timedOut ? "no answer after " + REQUEST_TIMEOUT_MS / 1000 + "s" : "network error: " + (e && e.message)}`);
+        lastError = timedOut
+          ? new TranslateError("timeout", "Gemini took too long to answer.")
+          : new TranslateError("network", "Network error talking to Gemini.");
+        if (timedOut) { timeouts++; break; } // don't sit through another long wait on the same model
         await sleep(2000);
         continue;
       }
       const msg = (r.body && r.body.error && r.body.error.message) || "";
+      const secs = ((Date.now() - started) / 1000).toFixed(1);
+      logEvent(`${model}: ${items.length} page(s) → HTTP ${r.status} in ${secs}s${msg ? " — " + msg.slice(0, 160) : ""}`);
 
       if (r.status === 200) {
+        if (!r.body) { lastError = new TranslateError("other", "Gemini sent an unreadable answer."); break; }
         return extractPages(r.body, items.length);
       }
       if (r.status === 400 && /thinking/i.test(msg) && !noThinkingConfig.has(model)) {
@@ -332,11 +372,18 @@ async function translateBatch(settings, items) {
           lastError = new TranslateError("quota", "Today's free Gemini limit is used up. It resets at midnight Pacific time.");
           break;
         }
-        await sleep(Math.min(60000, parseRetryDelay(r.body)));
+        // Per-minute limit: wait once (briefly), then move on to the next model.
+        lastError = new TranslateError("rate", "Free per-minute limit reached. Wait a minute.");
+        if (attempt >= 1) break;
+        const wait = Math.min(30000, parseRetryDelay(r.body));
+        setStatus(`Free per-minute limit reached, retrying in ${Math.round(wait / 1000)}s…`);
+        await sleep(wait);
         continue;
       }
       if (r.status >= 500) {
-        lastError = new TranslateError("other", `Gemini server error (${r.status}).`);
+        lastError = new TranslateError("other", `Gemini is overloaded (${r.status}).`);
+        if (attempt >= 1) break;
+        setStatus(`${model} is busy, retrying…`);
         await sleep(3000);
         continue;
       }
@@ -404,6 +451,9 @@ browser.runtime.onMessage.addListener((msg, sender) => {
       return Promise.all([browser.storage.local.get("stats"), getModelState()]).then(([s, m]) => ({
         stats: s.stats && s.stats.day === quotaDay() ? s.stats : { requests: 0, pages: 0 },
         exhausted: Object.keys(m.exhausted),
+        live: liveStatus,
+        queued: queue.length,
+        log: activityLog.slice(),
       }));
     case "resetQuota":
       return browser.storage.local.remove("modelState").then(() => missingModels.clear());

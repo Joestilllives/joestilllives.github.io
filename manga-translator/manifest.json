@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Manga Lens Translator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Translates Japanese manga pages into English right on the page, using your own free Google Gemini API key.",
   "icons": {
     "48": "icons/icon.svg",

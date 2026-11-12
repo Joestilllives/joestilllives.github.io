@@ -35,7 +35,9 @@ async function renderUsage() {
   const s = await browser.runtime.sendMessage({ type: "getStatus" });
   let text = `${s.stats.pages} page(s) translated in ${s.stats.requests} request(s) today.`;
   if (s.exhausted.length) text += ` Limit hit today on: ${s.exhausted.join(", ")}.`;
+  if (s.live) text += ` Right now: ${s.live}`;
   status($("usage"), text, s.exhausted.length ? "err" : "");
+  $("log").textContent = (s.log || []).length ? s.log.slice().reverse().join("\n") : "Nothing yet.";
 }
 
 async function init() {
@@ -105,6 +107,8 @@ $("clear-cache").addEventListener("click", async () => {
   await browser.runtime.sendMessage({ type: "clearCache" });
   status($("adv-status"), "Saved translations cleared.", "ok");
 });
+
+$("refresh-log").addEventListener("click", renderUsage);
 
 $("reset-quota").addEventListener("click", async () => {
   await browser.runtime.sendMessage({ type: "resetQuota" });

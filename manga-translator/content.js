@@ -217,10 +217,11 @@
 
   async function translateImage(img) {
     const src = img.currentSrc || img.src;
-    const rec = { src, status: "working" };
+    const rec = { src, status: "working", since: Date.now() };
     records.set(img, rec);
     ensureLayer(img, rec);
     updatePill();
+    pollStatus();
     preparing++;
     let image;
     try {
@@ -264,6 +265,7 @@
     badge.className = "mlt-badge";
     badge.textContent = "Translating…";
     layer.appendChild(badge);
+    rec.badge = badge;
     root.appendChild(layer);
     rec.layer = layer;
     ro.observe(img);
@@ -277,7 +279,7 @@
     if (rec.status === "error") {
       const badge = document.createElement("div");
       badge.className = "mlt-badge mlt-badge-error";
-      badge.textContent = rec.code === "quota" || rec.code === "nokey" || rec.code === "badkey"
+      badge.textContent = rec.code === "nokey" || rec.code === "badkey"
         ? rec.error
         : rec.error + " Tap to retry.";
       badge.addEventListener("click", (ev) => {
@@ -378,6 +380,28 @@
   function layoutAll() {
     if (!active) return;
     for (const [img, rec] of records) positionLayer(img, rec);
+  }
+
+  // While pages are waiting, show what's actually happening (which model we're
+  // waiting on, rate-limit waits) and for how long, instead of a bare "Translating…".
+  let polling = false;
+  async function pollStatus() {
+    if (polling) return;
+    polling = true;
+    try {
+      while (active && [...records.values()].some((r) => r.status === "working")) {
+        let live = "";
+        try { live = (await browser.runtime.sendMessage({ type: "getStatus" })).live || ""; } catch (_) { /* ignore */ }
+        for (const rec of records.values()) {
+          if (rec.status !== "working" || !rec.badge) continue;
+          const secs = Math.round((Date.now() - rec.since) / 1000);
+          rec.badge.textContent = (live || "Translating…") + (secs >= 5 ? ` ${secs}s` : "");
+        }
+        await new Promise((r) => setTimeout(r, 1000));
+      }
+    } finally {
+      polling = false;
+    }
   }
 
   // ------------------------------------------------------------ status pill
