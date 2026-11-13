@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Pip</title>
+<meta name="description" content="Pip, a pocket companion with a cute face that saves your voice notes in English and Hindi.">
+<meta name="theme-color" content="#ffe3d3">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pip">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  :root {
+    --ink: #2b2140;
+    --soft: #6d5f86;
+    --card: rgba(255,255,255,.72);
+    --line: rgba(43,33,64,.12);
+    --accent: #ff7aa2;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; height: 100%; overflow: hidden; color: var(--ink);
+    background: #ffe3d3;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
+    user-select: none; -webkit-user-select: none; overscroll-behavior: none;
+  }
+  canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: manipulation; }
+
+  .top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 2;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: calc(env(safe-area-inset-top) + 12px) 16px 0;
+  }
+  .pill {
+    appearance: none; border: 0; font: inherit; color: var(--ink);
+    background: var(--card); border-radius: 999px; padding: 10px 14px; font-size: 15px;
+    box-shadow: 0 2px 10px rgba(43,33,64,.08); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  }
+  .lang { display: flex; padding: 4px; gap: 2px; }
+  .lang button { appearance: none; border: 0; background: transparent; font: inherit; color: var(--soft);
+    padding: 6px 12px; border-radius: 999px; font-size: 15px; }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  #notesBtn { display: flex; align-items: center; gap: 8px; }
+  #count { background: var(--accent); color: #fff; border-radius: 999px; min-width: 22px; height: 22px;
+    font-size: 13px; display: inline-grid; place-items: center; padding: 0 6px; font-weight: 700; }
+
+  .bottom {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 2;
+    padding: 0 16px calc(env(safe-area-inset-bottom) + 20px);
+    display: grid; justify-items: center; gap: 14px;
+  }
+  #caption {
+    min-height: 3.2em; max-width: 520px; width: 100%; text-align: center;
+    font-size: 19px; line-height: 1.4; font-weight: 600; padding: 0 8px;
+  }
+  #heard { font-size: 14px; color: var(--soft); text-align: center; min-height: 1.3em; max-width: 520px; }
+  #chip { display: none; }
+  #chip.show { display: inline-block; }
+  .row { display: flex; gap: 12px; align-items: center; }
+  #mic {
+    appearance: none; border: 0; width: 76px; height: 76px; border-radius: 50%;
+    background: var(--ink); color: #fff; display: grid; place-items: center;
+    box-shadow: 0 6px 20px rgba(43,33,64,.25); transition: transform .15s;
+  }
+  #mic:active { transform: scale(.94); }
+  #mic.live { background: var(--accent); animation: pulse 1.2s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(255,122,162,.55)} 100%{box-shadow:0 0 0 22px rgba(255,122,162,0)} }
+  .round { width: 52px; height: 52px; border-radius: 50%; padding: 0; display: grid; place-items: center; }
+
+  #typeBox { display: none; width: 100%; max-width: 520px; gap: 8px; }
+  #typeBox.show { display: flex; }
+  #typeBox input { flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 14px;
+    border: 1px solid var(--line); background: #fff; color: var(--ink); }
+
+  /* notes sheet */
+  #sheet {
+    position: fixed; inset: 0; z-index: 5; display: none;
+    background: rgba(43,33,64,.35);
+  }
+  #sheet.show { display: block; }
+  .panel {
+    position: absolute; left: 0; right: 0; bottom: 0; max-height: 82%;
+    background: #fffaf6; border-radius: 24px 24px 0 0; display: flex; flex-direction: column;
+    padding: 18px 16px calc(env(safe-area-inset-bottom) + 16px);
+    box-shadow: 0 -10px 40px rgba(43,33,64,.2);
+  }
+  .panel h2 { margin: 0; font-size: 20px; }
+  .panel header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; }
+  .panel header .row { gap: 8px; }
+  #list { overflow-y: auto; list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  #list li { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 12px 12px 12px 14px;
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: start; }
+  #list .t { font-size: 16px; line-height: 1.4; word-break: break-word; user-select: text; -webkit-user-select: text; }
+  #list .d { font-size: 12px; color: var(--soft); grid-column: 1; }
+  #list .x { grid-row: 1 / span 2; grid-column: 2; appearance: none; border: 0; background: #f4eef8; color: var(--soft);
+    width: 34px; height: 34px; border-radius: 50%; font-size: 16px; }
+  .empty { color: var(--soft); text-align: center; padding: 28px 8px; line-height: 1.5; }
+  .small { font-size: 14px; padding: 8px 12px; }
+
+  /* first-run */
+  #hello { position: fixed; inset: 0; z-index: 6; display: grid; place-items: center; padding: 24px 16px;
+    background: rgba(255,227,211,.92); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  #hello .card { max-width: 380px; width: 100%; text-align: center; }
+  #hello h1 { font-size: 44px; margin: 0 0 6px; }
+  #hello p { color: var(--soft); margin: 0 0 18px; line-height: 1.5; }
+  #hello ul { text-align: left; padding: 0; margin: 0 0 24px; list-style: none; display: grid; gap: 10px; }
+  #hello li { background: var(--card); border-radius: 14px; padding: 10px 14px; line-height: 1.4; font-size: 15px; }
+  #hello li b { display: block; }
+  #start { appearance: none; border: 0; width: 100%; padding: 16px; border-radius: 16px; font: inherit; font-weight: 700;
+    font-size: 18px; color: #fff; background: var(--ink); }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="Pip's face. Tap to talk."></canvas>
+
+<div class="top">
+  <div class="pill lang" role="group" aria-label="Language">
+    <button id="enBtn" aria-pressed="true">EN</button>
+    <button id="hiBtn" aria-pressed="false">हिं</button>
+  </div>
+  <button class="pill" id="notesBtn">Notes <span id="count">0</span></button>
+</div>
+
+<div class="bottom">
+  <div id="caption"></div>
+  <div id="heard"></div>
+  <button class="pill small" id="chip">＋ Save that as a note</button>
+  <div id="typeBox">
+    <input id="typeIn" type="text" placeholder="Type to Pip…" enterkeyhint="send" autocomplete="off">
+    <button class="pill" id="typeSend">Send</button>
+  </div>
+  <div class="row">
+    <button class="pill round" id="kbBtn" aria-label="Type instead">⌨️</button>
+    <button id="mic" aria-label="Tap to talk">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="22"/></svg>
+    </button>
+    <button class="pill round" id="helpBtn" aria-label="What can Pip do?">?</button>
+  </div>
+</div>
+
+<div id="sheet">
+  <div class="panel" role="dialog" aria-label="Your notes">
+    <header>
+      <h2 id="notesTitle">Your notes</h2>
+      <div class="row">
+        <button class="pill small" id="shareBtn">Share</button>
+        <button class="pill small" id="closeBtn">Close</button>
+      </div>
+    </header>
+    <ul id="list"></ul>
+  </div>
+</div>
+
+<div id="hello">
+  <div class="card">
+    <h1>Hi, I'm Pip 👋</h1>
+    <p>Your pocket buddy. Talk to me in English or Hindi.</p>
+    <ul>
+      <li><b>"Note: call the electrician tomorrow"</b>"नोट करो कल दूध लाना है"</li>
+      <li><b>"Read my notes"</b>"मेरे नोट्स सुनाओ"</li>
+      <li><b>"Delete last note" · "What time is it?"</b>"आखिरी नोट हटाओ" · "कितने बजे हैं?"</li>
+    </ul>
+    <button id="start">Wake Pip up</button>
+  </div>
+</div>
+
+<script>
+(() => {
+  // ---------- storage (never trust it to exist) ----------
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (_) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (_) {} },
+  };
+  let notes = store.get('pip.notes', []);
+  let lang = store.get('pip.lang', 'en');
+  const saveNotes = () => { store.set('pip.notes', notes); renderNotes(); };
+
+  // ---------- text ----------
+  const T = {
+    en: {
+      hi: ["Hi! Tap me and talk.", "Hello hello! What's up?", "Hey! I'm all ears."],
+      saved: n => [`Got it! Saved: "${n}"`, `Noted! "${n}"`, `Saved it. "${n}"`],
+      none: "You don't have any notes yet. Say \"note\" and then anything.",
+      count: n => `You have ${n} note${n === 1 ? '' : 's'}.`,
+      latest: "Here are the latest ones.",
+      deleted: n => `Deleted: "${n}"`,
+      nothingDel: "There's nothing to delete.",
+      time: s => `It's ${s}.`,
+      date: s => `Today is ${s}.`,
+      how: "I'm great! Just happy to be in your pocket.",
+      name: "I'm Pip! Your pocket buddy.",
+      thanks: "Anytime! 💖",
+      help: "Say \"note\" and then your note. Ask me to read your notes, delete the last note, or tell you the time.",
+      sleep: "Okay, nap time. Tap me to wake me up.",
+      unknown: "Hmm, I only know a few tricks so far. Want me to save that as a note?",
+      emptyNote: "What should I note? Say \"note\" and then the note.",
+      noMic: "I can't hear on this browser. Type to me instead!",
+      micDenied: "I need the microphone to hear you. Allow it in Chrome's site settings.",
+      noSpeech: "I didn't hear anything. Try again?",
+      listening: "Listening…",
+      chip: "＋ Save that as a note",
+      title: "Your notes",
+      emptyList: "No notes yet.<br>Tap the mic and say “Note: …”",
+      typeHint: "Type to Pip…",
+      notes: "Notes", share: "Share", close: "Close",
+    },
+    hi: {
+      hi: ["नमस्ते! मुझे टैप करके बोलिए।", "हेलो! क्या हाल है?", "हाँ जी, बोलिए!"],
+      saved: n => [`नोट कर लिया: "${n}"`, `ठीक है, याद रखूँगा: "${n}"`, `सेव हो गया: "${n}"`],
+      none: "अभी कोई नोट नहीं है। \"नोट करो\" बोलकर कुछ भी बताइए।",
+      count: n => `आपके ${n} नोट्स हैं।`,
+      latest: "ये रहे सबसे नए वाले।",
+      deleted: n => `हटा दिया: "${n}"`,
+      nothingDel: "हटाने के लिए कुछ नहीं है।",
+      time: s => `अभी ${s} बजे हैं।`,
+      date: s => `आज ${s} है।`,
+      how: "मैं बढ़िया हूँ! आपकी जेब में रहकर खुश हूँ।",
+      name: "मैं पिप हूँ! आपका छोटा सा दोस्त।",
+      thanks: "कोई बात नहीं! 💖",
+      help: "\"नोट करो\" बोलकर अपना नोट बताइए। मैं नोट्स सुना सकता हूँ, आखिरी नोट हटा सकता हूँ, या समय बता सकता हूँ।",
+      sleep: "ठीक है, मैं सो रहा हूँ। जगाने के लिए टैप करें।",
+      unknown: "हम्म, अभी मुझे ज़्यादा नहीं आता। क्या इसे नोट कर लूँ?",
+      emptyNote: "क्या नोट करूँ? \"नोट करो\" के बाद बताइए।",
+      noMic: "इस ब्राउज़र में मैं सुन नहीं सकता। टाइप करके बताइए!",
+      micDenied: "सुनने के लिए माइक की अनुमति चाहिए। Chrome की साइट सेटिंग में अनुमति दें।",
+      noSpeech: "कुछ सुनाई नहीं दिया। फिर से बोलिए?",
+      listening: "सुन रहा हूँ…",
+      chip: "＋ इसे नोट कर लो",
+      title: "आपके नोट्स",
+      emptyList: "अभी कोई नोट नहीं।<br>माइक दबाकर बोलिए “नोट करो …”",
+      typeHint: "पिप को लिखिए…",
+      notes: "नोट्स", share: "शेयर", close: "बंद करें",
+    },
+  };
+  const t = () => T[lang];
+  const pick = a => Array.isArray(a) ? a[Math.floor(Math.random() * a.length)] : a;
+  const ORD_HI = ['पहला', 'दूसरा', 'तीसरा', 'चौथा', 'पाँचवाँ'];
+  const ORD_EN = ['One', 'Two', 'Three', 'Four', 'Five'];
+
+  // ---------- understanding ----------
+  // Works on English, Hindi (Devanagari) and Hinglish in Latin script.
+  const NOTE_START = [
+    /^(?:note\s*(?:karo|kar lo|karna|kar do)|yaad\s*(?:rakho|rakhna|rakh lo)|likh\s*(?:lo|do))\b\s*[:,.\-–]?\s*(.*)$/i,
+    /^(?:please\s+|pip\s*,?\s*)?(?:take a note|make a note|add a note|save a note|note down|note that|note|remember that|remember to|remember|write down|write that)\b\s*(?:that\s+)?[:,.\-–]?\s*(.*)$/i,
+    /^(?:नोट\s*(?:करो|कर लो|कर दो|कीजिए|करना|करें)?|याद\s*(?:रखो|रखना|रख लो|रखिए|रखें)|लिख\s*(?:लो|दो|लीजिए|लें))\s*[:,.\-–।]?\s*(.*)$/,
+  ];
+  const NOTE_END = [
+    /^(.+?)\s+(?:नोट\s*(?:करो|कर लो|कर दो|कीजिए|करना|करें)|याद\s*(?:रखो|रखना|रख लो|रखिए)|लिख\s*(?:लो|दो|लीजिए))[।.!]?$/,
+    /^(.+?)\s+(?:note\s*(?:karo|kar lo|kar do|karna)|yaad\s*(?:rakho|rakhna|rakh lo)|likh\s*(?:lo|do))[.!]?$/i,
+  ];
+  const R = {
+    read: /\b(read|show|tell|list|what are|what's in)\b.*\bnotes?\b|\bmy notes\b|notes?\s*(sunao|batao|dikhao|padho)|नोट्?स?\s*(सुनाओ|सुनाइए|बताओ|बताइए|दिखाओ|पढ़ो)|मेरे\s*नोट/i,
+    del: /\b(delete|remove|undo|erase)\b.*\b(last|previous|latest)\b|\blast note\b.*\b(delete|remove)\b|(aakhri|akhri|last)\s*note\s*(hatao|mitao|delete)|आखिरी\s*नोट\s*(हटाओ|हटा दो|मिटाओ|डिलीट)|पिछला\s*नोट\s*(हटाओ|मिटाओ)/i,
+    time: /\bwhat(?:'s| is)? the time\b|\bwhat time\b|\btime is it\b|kitne baje|kya time|kya samay|कितने बजे|क्या टाइम|क्या समय|समय क्या|टाइम क्या/i,
+    date: /\bwhat(?:'s| is)? (?:the )?(?:date|day)\b|\btoday'?s date\b|aaj kya (?:din|tarikh|date)|आज क्या (?:दिन|तारीख|डेट)|आज की तारीख|आज कौन सा दिन/i,
+    hi: /^(?:hi|hello|hey|hii+|namaste|namaskar|good (?:morning|evening|afternoon))\b|^(?:नमस्ते|नमस्कार|हेलो|हाय|हैलो)/i,
+    how: /how are you|kaise ho|kaisi ho|kya haal|कैसे हो|कैसी हो|क्या हाल/i,
+    name: /your name|who are you|tumhara naam|aapka naam|tum kaun|तुम्हारा नाम|आपका नाम|तुम कौन|आप कौन/i,
+    thanks: /thank|thanks|shukriya|dhanyavad|धन्यवाद|शुक्रिया|थैंक/i,
+    help: /\bhelp\b|what can you do|madad|kya kar sakte|मदद|क्या कर सकते/i,
+    sleep: /go to sleep|good ?night|so jao|bye|सो जाओ|गुड नाइट|अलविदा|बाय/i,
+  };
+
+  function understand(raw) {
+    const s = raw.trim().replace(/\s+/g, ' ');
+    for (const re of NOTE_START) { const m = s.match(re); if (m) return { kind: 'note', text: m[1] }; }
+    for (const re of NOTE_END) { const m = s.match(re); if (m) return { kind: 'note', text: m[1] }; }
+    for (const k of ['del', 'read', 'time', 'date', 'how', 'name', 'thanks', 'help', 'sleep', 'hi']) {
+      if (R[k].test(s)) return { kind: k };
+    }
+    return { kind: 'unknown', text: s };
+  }
+
+  const cleanNote = s => {
+    s = s.trim().replace(/^[\s:,.\-–।]+|[\s,.\-–।]+$/g, '');
+    return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+  };
+
+  function addNote(text) {
+    const n = cleanNote(text);
+    if (!n) return say(t().emptyNote, 'thinking');
+    notes.push({ id: Date.now(), text: n, at: Date.now(), lang });
+    saveNotes();
+    face.pop();
+    say(pick(t().saved(n)), 'happy');
+  }
+
+  let lastUnknown = '';
+  function handle(raw) {
+    const said = raw.trim();
+    if (!said) return;
+    heard.textContent = '“' + said + '”';
+    chip.classList.remove('show');
+    const r = understand(said);
+    const now = new Date();
+    const locale = lang === 'hi' ? 'hi-IN' : 'en-IN';
+    switch (r.kind) {
+      case 'note': return addNote(r.text);
+      case 'read': {
+        if (!notes.length) return say(t().none, 'thinking');
+        const last = notes.slice(-5).reverse();
+        const ord = lang === 'hi' ? ORD_HI : ORD_EN;
+        const body = last.map((n, i) => `${ord[i]}: ${n.text}.`).join(' ');
+        return say(`${t().count(notes.length)} ${notes.length > 5 ? t().latest : ''} ${body}`, 'talk');
+      }
+      case 'del': {
+        if (!notes.length) return say(t().nothingDel, 'thinking');
+        const gone = notes.pop(); saveNotes();
+        return say(t().deleted(gone.text), 'oops');
+      }
+      case 'time': {
+        const s = now.toLocaleTimeString(locale, { hour: 'numeric', minute: '2-digit' });
+        return say(t().time(s), 'talk');
+      }
+      case 'date': {
+        const s = now.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long' });
+        return say(t().date(s), 'talk');
+      }
+      case 'hi': return say(pick(t().hi), 'happy');
+      case 'how': return say(t().how, 'happy');
+      case 'name': return say(t().name, 'happy');
+      case 'thanks': face.pop(); return say(t().thanks, 'happy');
+      case 'help': return say(t().help, 'talk');
+      case 'sleep': say(t().sleep, 'talk', () => face.set('sleep')); return;
+      default:
+        lastUnknown = r.text;
+        chip.textContent = t().chip;
+        chip.classList.add('show');
+        return say(t().unknown, 'thinking');
+    }
+  }
+
+  // ---------- voice out ----------
+  let voices = [];
+  const loadVoices = () => { try { voices = speechSynthesis.getVoices(); } catch (_) {} };
+  if ('speechSynthesis' in window) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+  function pickVoice() {
+    const want = lang === 'hi' ? ['hi-IN', 'hi'] : ['en-IN', 'en-GB', 'en-US', 'en'];
+    for (const w of want) {
+      const v = voices.find(v => v.lang.replace('_', '-').toLowerCase().startsWith(w.toLowerCase()));
+      if (v) return v;
+    }
+    return null;
+  }
+  function say(text, mood = 'talk', after) {
+    caption.textContent = text;
+    face.set(mood === 'talk' ? 'talk' : mood);
+    if (!('speechSynthesis' in window)) { setTimeout(() => { face.set('idle'); after && after(); }, 1800); return; }
+    try {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text.replace(/[“”"💖👋]/g, ''));
+      const v = pickVoice(); if (v) u.voice = v;
+      u.lang = lang === 'hi' ? 'hi-IN' : 'en-IN';
+      u.pitch = 1.45; u.rate = 1.04;
+      u.onstart = () => face.talking(true);
+      u.onend = u.onerror = () => {
+        face.talking(false);
+        setTimeout(() => { if (face.state !== 'sleep' && face.state !== 'listen') face.set('idle'); after && after(); }, 500);
+      };
+      speechSynthesis.speak(u);
+    } catch (_) { after && after(); }
+  }
+
+  // ---------- voice in ----------
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let rec = null, listening = false;
+  function listen() {
+    if (!SR) { showType(true); return say(t().noMic, 'thinking'); }
+    if (listening) { rec && rec.stop(); return; }
+    try { speechSynthesis.cancel(); } catch (_) {}
+    rec = new SR();
+    rec.lang = lang === 'hi' ? 'hi-IN' : 'en-IN';
+    rec.interimResults = true;
+    rec.maxAlternatives = 1;
+    let finalText = '';
+    rec.onstart = () => {
+      listening = true; mic.classList.add('live');
+      face.set('listen'); caption.textContent = t().listening; heard.textContent = ''; chip.classList.remove('show');
+    };
+    rec.onresult = e => {
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const r = e.results[i];
+        if (r.isFinal) finalText += r[0].transcript; else interim += r[0].transcript;
+      }
+      heard.textContent = finalText + interim;
+    };
+    rec.onerror = e => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') say(t().micDenied, 'oops');
+      else if (e.error === 'no-speech') say(t().noSpeech, 'thinking');
+    };
+    rec.onend = () => {
+      listening = false; mic.classList.remove('live');
+      const said = (finalText || heard.textContent).trim();
+      if (said) { face.set('think'); setTimeout(() => handle(said), 350); }
+      else if (face.state === 'listen') face.set('idle');
+    };
+    try { rec.start(); } catch (_) {}
+  }
+
+  // ---------- UI wiring ----------
+  const $ = id => document.getElementById(id);
+  const caption = $('caption'), heard = $('heard'), chip = $('chip'), mic = $('mic');
+  const typeBox = $('typeBox'), typeIn = $('typeIn');
+
+  function setLang(l) {
+    lang = l; store.set('pip.lang', l);
+    document.documentElement.lang = l;
+    $('enBtn').setAttribute('aria-pressed', l === 'en');
+    $('hiBtn').setAttribute('aria-pressed', l === 'hi');
+    $('notesBtn').firstChild.textContent = t().notes + ' ';
+    $('notesTitle').textContent = t().title;
+    $('shareBtn').textContent = t().share;
+    $('closeBtn').textContent = t().close;
+    typeIn.placeholder = t().typeHint;
+    chip.textContent = t().chip;
+    renderNotes();
+  }
+  $('enBtn').onclick = () => { setLang('en'); say(pick(T.en.hi), 'happy'); };
+  $('hiBtn').onclick = () => { setLang('hi'); say(pick(T.hi.hi), 'happy'); };
+  mic.onclick = listen;
+  $('helpBtn').onclick = () => say(t().help, 'talk');
+  chip.onclick = () => { chip.classList.remove('show'); addNote(lastUnknown); };
+
+  function showType(on) { typeBox.classList.toggle('show', on); if (on) typeIn.focus(); }
+  $('kbBtn').onclick = () => showType(!typeBox.classList.contains('show'));
+  const sendTyped = () => { const v = typeIn.value; typeIn.value = ''; handle(v); };
+  $('typeSend').onclick = sendTyped;
+  typeIn.addEventListener('keydown', e => { if (e.key === 'Enter') sendTyped(); });
+
+  // notes sheet
+  const sheet = $('sheet'), list = $('list');
+  const fmt = ms => new Date(ms).toLocaleString(lang === 'hi' ? 'hi-IN' : 'en-IN',
+    { hour: 'numeric', minute: '2-digit', day: 'numeric', month: 'short' });
+  function renderNotes() {
+    $('count').textContent = notes.length;
+    list.innerHTML = '';
+    if (!notes.length) { list.innerHTML = `<li class="empty" style="display:block;border:0;background:none">${t().emptyList}</li>`; return; }
+    [...notes].reverse().forEach(n => {
+      const li = document.createElement('li');
+      const tx = document.createElement('div'); tx.className = 't'; tx.textContent = n.text;
+      const d = document.createElement('div'); d.className = 'd'; d.textContent = fmt(n.at);
+      const x = document.createElement('button'); x.className = 'x'; x.textContent = '✕'; x.setAttribute('aria-label', 'Delete note');
+      x.onclick = () => { notes = notes.filter(m => m.id !== n.id); saveNotes(); };
+      li.append(tx, x, d); list.append(li);
+    });
+  }
+  $('notesBtn').onclick = () => { renderNotes(); sheet.classList.add('show'); };
+  $('closeBtn').onclick = () => sheet.classList.remove('show');
+  sheet.addEventListener('click', e => { if (e.target === sheet) sheet.classList.remove('show'); });
+  $('shareBtn').onclick = async () => {
+    const text = notes.map(n => `• ${n.text}  (${fmt(n.at)})`).join('\n') || '—';
+    try {
+      if (navigator.share) await navigator.share({ title: 'My notes from Pip', text });
+      else { await navigator.clipboard.writeText(text); $('shareBtn').textContent = '✓'; setTimeout(() => $('shareBtn').textContent = t().share, 1200); }
+    } catch (_) {}
+  };
+
+  // ---------- the face ----------
+  const cv = $('c'), ctx = cv.getContext('2d');
+  let W, H, dpr;
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  addEventListener('resize', resize); resize();
+
+  const MOODS = {
+    idle:   { bg: [255, 227, 211], eye: 1.0 },
+    listen: { bg: [206, 244, 226], eye: 1.18 },
+    think:  { bg: [230, 222, 255], eye: 0.95 },
+    thinking:{ bg: [230, 222, 255], eye: 0.95 },
+    talk:   { bg: [255, 238, 196], eye: 1.0 },
+    happy:  { bg: [255, 214, 228], eye: 1.0 },
+    oops:   { bg: [255, 226, 200], eye: 1.05 },
+    sleep:  { bg: [205, 214, 240], eye: 1.0 },
+  };
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const face = {
+    state: 'idle', bg: [255, 227, 211], gx: 0, gy: 0, tgx: 0, tgy: 0, blink: 0, nextBlink: 0,
+    mouth: 0, isTalking: false, eyeScale: 1, bounce: 0, hearts: [], zs: [], lastActive: performance.now(), tilt: { x: 0, y: 0 },
+    set(s) { this.state = s; this.lastActive = performance.now(); if (s === 'happy') this.bounce = 1; },
+    talking(on) { this.isTalking = on; },
+    // little burst of hearts + a happy hop
+    pop() { this.bounce = 1; for (let i = 0; i < 6; i++) this.hearts.push({ x: W / 2 + (Math.random() - .5) * 160, y: H * .42, vy: -1.5 - Math.random() * 1.5, life: 1, s: 10 + Math.random() * 10 }); },
+  };
+
+  function heart(x, y, s, a) {
+    ctx.save(); ctx.translate(x, y); ctx.scale(s / 16, s / 16); ctx.globalAlpha = a;
+    ctx.fillStyle = '#ff6f9a'; ctx.beginPath();
+    ctx.moveTo(0, 5); ctx.bezierCurveTo(-14, -6, -6, -16, 0, -8); ctx.bezierCurveTo(6, -16, 14, -6, 0, 5); ctx.fill();
+    ctx.restore();
+  }
+
+  // gaze: wander, follow taps, follow tilt
+  let wanderAt = 0;
+  cv.addEventListener('pointerdown', e => {
+    face.tgx = (e.clientX / W - .5) * 2; face.tgy = (e.clientY / H - .45) * 2; wanderAt = performance.now() + 900;
+    if (face.state === 'sleep') { face.set('idle'); say(pick(t().hi), 'happy'); return; }
+    if (!listening && face.state !== 'talk') listen();
+  });
+  addEventListener('deviceorientation', e => {
+    if (e.gamma == null) return;
+    face.tilt.x = Math.max(-1, Math.min(1, e.gamma / 35));
+    face.tilt.y = Math.max(-1, Math.min(1, (e.beta - 45) / 35));
+  });
+
+  function frame(now) {
+    requestAnimationFrame(frame);
+    const m = MOODS[face.state] || MOODS.idle;
+    face.bg = face.bg.map((v, i) => lerp(v, m.bg[i], 0.06));
+    const [r, g, b] = face.bg.map(Math.round);
+    ctx.fillStyle = `rgb(${r},${g},${b})`; ctx.fillRect(0, 0, W, H);
+    document.body.style.background = `rgb(${r},${g},${b})`;
+
+    // fall asleep when ignored
+    if (face.state === 'idle' && now - face.lastActive > 60000) face.set('sleep');
+
+    // gaze targets
+    if (now > wanderAt) {
+      wanderAt = now + 1600 + Math.random() * 2600;
+      if (face.state === 'think' || face.state === 'thinking') { face.tgx = .55; face.tgy = -.6; }
+      else if (face.state === 'listen') { face.tgx = 0; face.tgy = 0; }
+      else { face.tgx = (Math.random() - .5) * 1.2; face.tgy = (Math.random() - .5) * .7; }
+    }
+    face.gx = lerp(face.gx, face.tgx + face.tilt.x * .5, .08);
+    face.gy = lerp(face.gy, face.tgy + face.tilt.y * .3, .08);
+
+    // blinking
+    if (now > face.nextBlink) { face.blink = 1; face.nextBlink = now + 2200 + Math.random() * 3800; }
+    face.blink = Math.max(0, face.blink - 0.12);
+    const blinkAmt = face.blink > 0.5 ? (1 - face.blink) * 2 : face.blink * 2; // 0 open → 1 shut → 0
+
+    face.eyeScale = lerp(face.eyeScale, m.eye, .12);
+    face.bounce = Math.max(0, face.bounce - 0.03);
+    const bob = Math.sin(now / 600) * 3 - Math.sin(face.bounce * Math.PI) * 18;
+    const breathe = face.state === 'sleep' ? Math.sin(now / 900) * 4 : 0;
+
+    const S = Math.min(W, H * .62);
+    const cx = W / 2, cy = H * .40 + bob + breathe;
+    const ex = S * .2, er = S * .1 * face.eyeScale;
+    const ox = face.gx * er * .45, oy = face.gy * er * .35;
+
+    // cheeks
+    ctx.fillStyle = 'rgba(255,120,150,.28)';
+    for (const sx of [-1, 1]) { ctx.beginPath(); ctx.ellipse(cx + sx * ex * 1.45, cy + er * 1.25, er * .62, er * .34, 0, 0, Math.PI * 2); ctx.fill(); }
+
+    // eyes
+    ctx.lineCap = 'round';
+    for (const sx of [-1, 1]) {
+      const x = cx + sx * ex + ox, y = cy + oy;
+      if (face.state === 'happy') {
+        ctx.strokeStyle = '#2b2140'; ctx.lineWidth = er * .32;
+        ctx.beginPath(); ctx.arc(x, y + er * .35, er * .78, Math.PI * 1.15, Math.PI * 1.85); ctx.stroke();
+      } else if (face.state === 'sleep') {
+        ctx.strokeStyle = '#2b2140'; ctx.lineWidth = er * .28;
+        ctx.beginPath(); ctx.arc(x, y - er * .1, er * .72, Math.PI * .15, Math.PI * .85); ctx.stroke();
+      } else {
+        const sy = Math.max(.06, 1 - blinkAmt) * (face.state === 'oops' ? (sx < 0 ? 1.08 : .9) : 1);
+        ctx.fillStyle = '#2b2140';
+        ctx.beginPath(); ctx.ellipse(x, y, er * .86, er * 1.08 * sy, 0, 0, Math.PI * 2); ctx.fill();
+        if (sy > .3) {
+          ctx.fillStyle = '#fff';
+          ctx.beginPath(); ctx.ellipse(x - er * .28 + ox * .2, y - er * .38 * sy, er * .3, er * .3 * sy, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.beginPath(); ctx.ellipse(x + er * .3 + ox * .2, y + er * .3 * sy, er * .13, er * .13 * sy, 0, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+    }
+
+    // mouth
+    const my = cy + er * 1.55, mw = er * .55;
+    ctx.strokeStyle = '#2b2140'; ctx.fillStyle = '#5a2a45'; ctx.lineWidth = er * .16;
+    const target = face.isTalking ? .35 + .65 * Math.abs(Math.sin(now / 95)) * (.6 + .4 * Math.sin(now / 230)) : 0;
+    face.mouth = lerp(face.mouth, target, .35);
+    if (face.mouth > .08) {
+      ctx.beginPath(); ctx.ellipse(cx, my + er * .1, mw * .7, er * .5 * face.mouth + 2, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#ff8fb0'; ctx.beginPath(); ctx.ellipse(cx, my + er * .1 + er * .28 * face.mouth, mw * .4, er * .16 * face.mouth, 0, 0, Math.PI * 2); ctx.fill();
+    } else if (face.state === 'listen' || face.state === 'oops') {
+      ctx.beginPath(); ctx.ellipse(cx, my, mw * .32, mw * .38, 0, 0, Math.PI * 2); ctx.fill();
+    } else if (face.state === 'think' || face.state === 'thinking') {
+      ctx.beginPath(); ctx.moveTo(cx - mw * .5, my + 4); ctx.quadraticCurveTo(cx, my - 4, cx + mw * .6, my); ctx.stroke();
+    } else if (face.state === 'sleep') {
+      ctx.beginPath(); ctx.ellipse(cx, my + 2, mw * .2, mw * .16 + Math.sin(now / 900) * 2, 0, 0, Math.PI * 2); ctx.fill();
+    } else {
+      // tiny cat-like "w" smile
+      ctx.beginPath();
+      ctx.moveTo(cx - mw, my - 2);
+      ctx.quadraticCurveTo(cx - mw * .5, my + mw * .7, cx, my);
+      ctx.quadraticCurveTo(cx + mw * .5, my + mw * .7, cx + mw, my - 2);
+      ctx.stroke();
+    }
+
+    // thinking dots
+    if (face.state === 'think' || face.state === 'thinking') {
+      ctx.fillStyle = '#6d5f86';
+      for (let i = 0; i < 3; i++) {
+        const a = .3 + .7 * Math.max(0, Math.sin(now / 250 - i * .8));
+        ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(cx + ex * 1.7 + i * 18, cy - er * 2 - i * 12, 5 + i * 2, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    // listening rings
+    if (face.state === 'listen') {
+      for (let i = 0; i < 2; i++) {
+        const k = ((now / 1400) + i / 2) % 1;
+        ctx.strokeStyle = `rgba(43,33,64,${.18 * (1 - k)})`; ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(cx, cy + er * .3, S * (.38 + k * .25), 0, Math.PI * 2); ctx.stroke();
+      }
+    }
+    // zzz
+    if (face.state === 'sleep') {
+      ctx.fillStyle = '#6d5f86'; ctx.font = '600 22px system-ui';
+      for (let i = 0; i < 3; i++) {
+        const k = ((now / 2200) + i / 3) % 1;
+        ctx.globalAlpha = Math.sin(k * Math.PI);
+        ctx.font = `600 ${16 + k * 18}px system-ui`;
+        ctx.fillText('z', cx + ex * 1.5 + k * 40, cy - er * 1.6 - k * 70);
+      }
+      ctx.globalAlpha = 1;
+    }
+    // hearts
+    face.hearts = face.hearts.filter(h => h.life > 0);
+    for (const h of face.hearts) { h.y += h.vy; h.x += Math.sin(h.y / 20); h.life -= .012; heart(h.x, h.y, h.s, Math.max(0, h.life)); }
+  }
+  requestAnimationFrame(frame);
+
+  // ---------- start ----------
+  setLang(lang);
+  renderNotes();
+  $('start').onclick = async () => {
+    $('hello').classList.add('hidden');
+    store.set('pip.welcomed', true);
+    try { if ('wakeLock' in navigator) await navigator.wakeLock.request('screen'); } catch (_) {}
+    say(lang === 'hi' ? 'नमस्ते! मैं पिप हूँ। मुझे टैप करके बोलिए।' : "Hi! I'm Pip. Tap me and talk!", 'happy');
+  };
+  if (store.get('pip.welcomed', false)) $('hello').classList.add('hidden');
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) { try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (_) {} }
+  });
+
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+  // test hook
+  window.pip = { handle, understand, get notes() { return notes; }, face };
+})();
+</script>
+</body>
+</html>
