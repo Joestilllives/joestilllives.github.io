@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Tilt</title>
+<meta name="description" content="A motion instrument: tilt your phone to change the note, touch to sound it, shake to hit a drum.">
+<meta name="theme-color" content="#0d0b1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tilt">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #0d0b1a;
+    --ink: #f4ecff;
+    --dim: #8f86b3;
+    --line: #2a2550;
+    --accent: #ff8a5c;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    touch-action: none; user-select: none; -webkit-user-select: none; overscroll-behavior: none;
+  }
+  canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+
+  #bar {
+    position: fixed; left: 0; right: 0; top: 0; z-index: 2;
+    display: flex; gap: 8px; align-items: center; justify-content: space-between;
+    padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
+    pointer-events: none;
+  }
+  #bar > * { pointer-events: auto; }
+  .chip {
+    appearance: none; border: 1px solid var(--line); background: rgba(13,11,26,.7);
+    color: var(--ink); font: inherit; font-size: 14px; padding: 8px 12px; border-radius: 999px;
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+  .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+  #note { font-variant-numeric: tabular-nums; font-size: 14px; color: var(--dim); min-width: 3ch; text-align: center; }
+
+  #intro {
+    position: fixed; inset: 0; z-index: 3; display: grid; place-items: center;
+    padding: 24px 16px; background: radial-gradient(ellipse at 50% 40%, #241d4a 0%, var(--bg) 70%);
+  }
+  #intro .card { max-width: 380px; width: 100%; text-align: center; }
+  #intro h1 { font-size: 56px; margin: 0 0 4px; letter-spacing: -.02em; font-weight: 800;
+    background: linear-gradient(90deg, #ffd27a, #ff6f91, #9b8cff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  #intro p.sub { color: var(--dim); margin: 0 0 28px; }
+  #intro ul { list-style: none; padding: 0; margin: 0 0 32px; text-align: left; display: grid; gap: 14px; }
+  #intro li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; line-height: 1.35; }
+  #intro li b { display: block; }
+  #intro li span.i { font-size: 26px; text-align: center; }
+  #intro li small { color: var(--dim); }
+  #go {
+    appearance: none; border: 0; width: 100%; padding: 18px; border-radius: 16px; font: inherit;
+    font-size: 18px; font-weight: 700; color: #1a1030;
+    background: linear-gradient(90deg, #ffd27a, #ff8a5c);
+  }
+  #warn { color: #ffb4a0; font-size: 13px; margin-top: 14px; min-height: 1em; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="bar" class="hidden">
+  <button class="chip" id="scaleBtn">Pentatonic</button>
+  <span id="note">—</span>
+  <button class="chip" id="holdBtn" aria-pressed="false">Hold</button>
+  <button class="chip" id="centerBtn">Re-center</button>
+</div>
+
+<div id="intro">
+  <div class="card">
+    <h1>Tilt</h1>
+    <p class="sub">Your phone is the instrument.</p>
+    <ul>
+      <li><span class="i">📐</span><div><b>Tilt forward and back</b><small>Changes the note. Tip the top up to go higher.</small></div></li>
+      <li><span class="i">↔️</span><div><b>Roll left and right</b><small>Changes the tone, from dark and soft to bright.</small></div></li>
+      <li><span class="i">✋</span><div><b>Touch anywhere</b><small>Plays the note. Two fingers add a harmony, three play a chord.</small></div></li>
+      <li><span class="i">💥</span><div><b>Shake</b><small>Hits a drum.</small></div></li>
+    </ul>
+    <button id="go">Start playing</button>
+    <div id="warn"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  // ---------- Music ----------
+  const SCALES = [
+    ['Pentatonic', [0, 2, 4, 7, 9]],
+    ['Minor',      [0, 2, 3, 5, 7, 8, 10]],
+    ['Major',      [0, 2, 4, 5, 7, 9, 11]],
+    ['Blues',      [0, 3, 5, 6, 7, 10]],
+    ['Arabic',     [0, 1, 4, 5, 7, 8, 11]],
+  ];
+  const NAMES = ['C','C♯','D','E♭','E','F','F♯','G','A♭','A','B♭','B'];
+  const ROOT = 48;      // C3
+  const OCTAVES = 3;
+  let scaleIdx = 0;
+  const scale = () => SCALES[scaleIdx][1];
+  const steps = () => scale().length * OCTAVES + 1;
+  const degToMidi = d => {
+    const s = scale(), n = s.length, o = Math.floor(d / n);
+    return ROOT + 12 * o + s[((d % n) + n) % n];
+  };
+  const mtof = m => 440 * Math.pow(2, (m - 69) / 12);
+
+  // ---------- State ----------
+  const st = {
+    pitch: 0.5, bright: 0.5,         // smoothed 0..1 controls
+    rawPitch: 0.5, rawBright: 0.5,
+    center: null, lastBeta: null,
+    usingSensors: false,
+    pointers: new Map(),
+    hold: false,
+    degree: -1,
+    level: 0,                        // visual loudness
+    ripples: [], trail: [],
+  };
+
+  // ---------- Audio ----------
+  let ac, master, filter, delay, voices = [];
+  function initAudio() {
+    ac = new (window.AudioContext || window.webkitAudioContext)();
+    master = ac.createGain(); master.gain.value = 0.8;
+    const comp = ac.createDynamicsCompressor();
+    filter = ac.createBiquadFilter(); filter.type = 'lowpass'; filter.Q.value = 6; filter.frequency.value = 1200;
+
+    // echo
+    delay = ac.createDelay(1); delay.delayTime.value = 0.32;
+    const fb = ac.createGain(); fb.gain.value = 0.32;
+    const wet = ac.createGain(); wet.gain.value = 0.28;
+    const dtone = ac.createBiquadFilter(); dtone.type = 'lowpass'; dtone.frequency.value = 2500;
+    filter.connect(master);
+    filter.connect(delay); delay.connect(dtone); dtone.connect(fb); fb.connect(delay); dtone.connect(wet); wet.connect(master);
+    master.connect(comp); comp.connect(ac.destination);
+
+    // three voices: root, harmony, chord tone
+    for (let i = 0; i < 3; i++) {
+      const g = ac.createGain(); g.gain.value = 0; g.connect(filter);
+      const a = ac.createOscillator(); a.type = 'sawtooth';
+      const b = ac.createOscillator(); b.type = 'triangle'; b.detune.value = 7;
+      const sub = ac.createOscillator(); sub.type = 'sine';
+      const sg = ac.createGain(); sg.gain.value = i === 0 ? 0.6 : 0;
+      a.connect(g); b.connect(g); sub.connect(sg); sg.connect(g);
+      // gentle vibrato
+      const lfo = ac.createOscillator(); lfo.frequency.value = 5 + i * 0.4;
+      const lg = ac.createGain(); lg.gain.value = 4;
+      lfo.connect(lg); lg.connect(a.detune); lg.connect(b.detune);
+      [a, b, sub, lfo].forEach(o => o.start());
+      voices.push({ g, a, b, sub });
+    }
+  }
+
+  const VOICE_OFFSETS = [0, 2, 4]; // scale degrees above the played note (harmony in thirds/triad)
+  function setPitch(deg, glide) {
+    const t = ac.currentTime;
+    voices.forEach((v, i) => {
+      const f = mtof(degToMidi(deg + VOICE_OFFSETS[i]));
+      [v.a, v.b].forEach(o => o.frequency.setTargetAtTime(f, t, glide));
+      v.sub.frequency.setTargetAtTime(f / 2, t, glide);
+    });
+  }
+
+  function setVoicing(count) {
+    const t = ac.currentTime;
+    const n = st.hold ? Math.max(1, count) : count;
+    voices.forEach((v, i) => {
+      const on = i < n;
+      v.g.gain.cancelScheduledValues(t);
+      v.g.gain.setTargetAtTime(on ? (i === 0 ? 0.22 : 0.14) : 0, t, on ? 0.02 : 0.12);
+    });
+  }
+
+  function drum(power) {
+    const t = ac.currentTime;
+    // body thump
+    const o = ac.createOscillator(); o.type = 'sine';
+    const g = ac.createGain();
+    o.frequency.setValueAtTime(160, t); o.frequency.exponentialRampToValueAtTime(42, t + 0.25);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.9 * power, t + 0.005);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.45);
+    o.connect(g); g.connect(master); o.start(t); o.stop(t + 0.5);
+    // noise crack
+    const len = Math.floor(ac.sampleRate * 0.2);
+    const buf = ac.createBuffer(1, len, ac.sampleRate);
+    const d = buf.getChannelData(0);
+    for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+    const n = ac.createBufferSource(); n.buffer = buf;
+    const hp = ac.createBiquadFilter(); hp.type = 'bandpass'; hp.frequency.value = 1800; hp.Q.value = 0.8;
+    const ng = ac.createGain(); ng.gain.value = 0.5 * power;
+    n.connect(hp); hp.connect(ng); ng.connect(master); ng.connect(delay); n.start(t);
+  }
+
+  // ---------- Sensors ----------
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const PITCH_RANGE = 70; // degrees of forward/back tilt covering the full range
+
+  function onOrient(e) {
+    if (e.beta == null) return;
+    st.usingSensors = true;
+    if (st.center == null) st.center = e.beta;
+    st.lastBeta = e.beta;
+    st.rawPitch = clamp(0.5 + (e.beta - st.center) / PITCH_RANGE);
+    st.rawBright = clamp(0.5 + (e.gamma || 0) / 80);
+  }
+
+  let lastShake = 0, prevMag = 9.8;
+  function onMotion(e) {
+    const a = e.accelerationIncludingGravity;
+    if (!a || a.x == null) return;
+    const mag = Math.hypot(a.x, a.y, a.z);
+    const jerk = Math.abs(mag - prevMag);
+    prevMag = mag;
+    const now = performance.now();
+    if (jerk > 11 && now - lastShake > 160) {
+      lastShake = now;
+      const power = clamp((jerk - 8) / 20, 0.35, 1);
+      drum(power);
+      buzz(25);
+      ripple(innerWidth / 2, innerHeight / 2, power * 2, true);
+    }
+  }
+
+  const buzz = ms => { try { navigator.vibrate && navigator.vibrate(ms); } catch (_) {} };
+
+  async function askSensors() {
+    let ok = true;
+    for (const E of [window.DeviceOrientationEvent, window.DeviceMotionEvent]) {
+      if (E && typeof E.requestPermission === 'function') {
+        try { if ((await E.requestPermission()) !== 'granted') ok = false; } catch (_) { ok = false; }
+      }
+    }
+    addEventListener('deviceorientation', onOrient);
+    addEventListener('devicemotion', onMotion);
+    return ok;
+  }
+
+  // ---------- Touch ----------
+  const cv = document.getElementById('c');
+  function pointerControl(e) {
+    // Without motion sensors (desktop), the pointer position plays the role of tilt
+    if (st.usingSensors) return;
+    st.rawPitch = clamp(1 - e.clientY / innerHeight);
+    st.rawBright = clamp(e.clientX / innerWidth);
+  }
+  cv.addEventListener('pointerdown', e => {
+    cv.setPointerCapture(e.pointerId);
+    st.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    pointerControl(e);
+    if (ac.state !== 'running') ac.resume();
+    setVoicing(st.pointers.size);
+    ripple(e.clientX, e.clientY, 1);
+  });
+  cv.addEventListener('pointermove', e => {
+    if (st.pointers.has(e.pointerId)) { st.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY }); pointerControl(e); }
+    else if (!st.usingSensors && st.hold) pointerControl(e);
+  });
+  const up = e => { st.pointers.delete(e.pointerId); setVoicing(st.pointers.size); };
+  cv.addEventListener('pointerup', up);
+  cv.addEventListener('pointercancel', up);
+
+  // ---------- UI ----------
+  const scaleBtn = document.getElementById('scaleBtn');
+  const holdBtn = document.getElementById('holdBtn');
+  const noteEl = document.getElementById('note');
+  scaleBtn.onclick = () => {
+    scaleIdx = (scaleIdx + 1) % SCALES.length;
+    scaleBtn.textContent = SCALES[scaleIdx][0];
+    st.degree = -1;
+  };
+  holdBtn.onclick = () => {
+    st.hold = !st.hold;
+    holdBtn.setAttribute('aria-pressed', st.hold);
+    setVoicing(st.pointers.size);
+  };
+  document.getElementById('centerBtn').onclick = () => {
+    if (st.lastBeta != null) st.center = st.lastBeta;
+    buzz(15);
+  };
+
+  document.getElementById('go').onclick = async () => {
+    initAudio();
+    await ac.resume();
+    const ok = await askSensors();
+    if (!ok) document.getElementById('warn').textContent = 'Motion access was refused, so touch position will control the sound instead.';
+    try { if ('wakeLock' in navigator) await navigator.wakeLock.request('screen'); } catch (_) {}
+    document.getElementById('intro').classList.add('hidden');
+    document.getElementById('bar').classList.remove('hidden');
+    setPitch(Math.round(st.pitch * (steps() - 1)), 0.001);
+  };
+  document.addEventListener('visibilitychange', () => {
+    if (!ac) return;
+    if (document.hidden) ac.suspend(); else { ac.resume(); try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (_) {} }
+  });
+
+  // ---------- Visuals ----------
+  const ctx = cv.getContext('2d');
+  let W, H, dpr;
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  addEventListener('resize', resize); resize();
+
+  function ripple(x, y, size, drumHit) {
+    st.ripples.push({ x, y, r: 0, life: 1, size, drumHit, hue: hueFor(st.pitch) });
+  }
+  const hueFor = p => 260 - p * 230; // violet (low) → amber (high)
+
+  function frame() {
+    requestAnimationFrame(frame);
+    // smooth controls
+    st.pitch += (st.rawPitch - st.pitch) * 0.18;
+    st.bright += (st.rawBright - st.bright) * 0.15;
+
+    const n = steps();
+    const playing = st.pointers.size > 0 || st.hold;
+    st.level += ((playing ? 1 : 0) - st.level) * 0.12;
+
+    if (ac) {
+      // snap to scale with a little hysteresis so the note doesn't flicker on a boundary
+      const exact = st.pitch * (n - 1);
+      let deg = st.degree < 0 ? Math.round(exact) : st.degree;
+      if (Math.abs(exact - deg) > 0.65) deg = Math.round(exact);
+      if (deg !== st.degree) {
+        st.degree = deg;
+        setPitch(deg, 0.035);
+        const m = degToMidi(deg);
+        noteEl.textContent = NAMES[m % 12] + (Math.floor(m / 12) - 1);
+        if (playing) buzz(6);
+      }
+      filter.frequency.setTargetAtTime(180 * Math.pow(2, st.bright * 6), ac.currentTime, 0.05);
+      filter.Q.setTargetAtTime(2 + st.bright * 8, ac.currentTime, 0.1);
+    }
+
+    // background
+    const hue = hueFor(st.pitch);
+    ctx.fillStyle = `hsl(${hue}, 45%, ${5 + st.level * 5}%)`;
+    ctx.fillRect(0, 0, W, H);
+
+    // note lanes
+    const top = H * 0.12, bot = H * 0.92;
+    const laneY = d => bot - (d / (n - 1)) * (bot - top);
+    const perOct = scale().length;
+    for (let d = 0; d < n; d++) {
+      const y = laneY(d);
+      const active = d === st.degree;
+      const isRoot = d % perOct === 0;
+      ctx.strokeStyle = active ? `hsla(${hue},100%,70%,${0.35 + st.level * 0.6})`
+                               : isRoot ? 'rgba(160,150,220,.28)' : 'rgba(120,110,190,.12)';
+      ctx.lineWidth = active ? 3 : isRoot ? 1.5 : 1;
+      ctx.beginPath(); ctx.moveTo(16, y); ctx.lineTo(W - 16, y); ctx.stroke();
+      if (isRoot || active) {
+        const m = degToMidi(d);
+        ctx.fillStyle = active ? `hsl(${hue},100%,80%)` : 'rgba(180,170,230,.45)';
+        ctx.font = '11px system-ui, sans-serif';
+        ctx.fillText(NAMES[m % 12] + (Math.floor(m / 12) - 1), 18, y - 5);
+      }
+    }
+
+    // orb: x = tone, y = exact (unsnapped) pitch
+    const ox = 32 + st.bright * (W - 64);
+    const oy = bot - st.pitch * (bot - top);
+    st.trail.push({ x: ox, y: oy });
+    if (st.trail.length > 40) st.trail.shift();
+    ctx.lineCap = 'round';
+    for (let i = 1; i < st.trail.length; i++) {
+      const a = i / st.trail.length;
+      ctx.strokeStyle = `hsla(${hue},100%,65%,${a * (0.15 + st.level * 0.5)})`;
+      ctx.lineWidth = a * 10;
+      ctx.beginPath(); ctx.moveTo(st.trail[i - 1].x, st.trail[i - 1].y); ctx.lineTo(st.trail[i].x, st.trail[i].y); ctx.stroke();
+    }
+    const R = 26 + st.level * 34 + st.pointers.size * 8;
+    const g = ctx.createRadialGradient(ox, oy, 0, ox, oy, R * 2.4);
+    g.addColorStop(0, `hsla(${hue},100%,92%,${0.6 + st.level * 0.4})`);
+    g.addColorStop(0.25, `hsla(${hue},100%,62%,${0.35 + st.level * 0.45})`);
+    g.addColorStop(1, `hsla(${hue},100%,50%,0)`);
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(ox, oy, R * 2.4, 0, Math.PI * 2); ctx.fill();
+
+    // finger halos
+    for (const p of st.pointers.values()) {
+      ctx.strokeStyle = `hsla(${hue},100%,75%,.5)`; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 34, 0, Math.PI * 2); ctx.stroke();
+    }
+
+    // ripples
+    st.ripples = st.ripples.filter(r => r.life > 0);
+    for (const r of st.ripples) {
+      r.r += 6 * r.size + (r.drumHit ? 10 : 0);
+      r.life -= r.drumHit ? 0.03 : 0.025;
+      ctx.strokeStyle = r.drumHit ? `rgba(255,255,255,${r.life * 0.7})` : `hsla(${r.hue},100%,70%,${r.life})`;
+      ctx.lineWidth = r.drumHit ? 6 * r.life : 2;
+      ctx.beginPath(); ctx.arc(r.x, r.y, r.r, 0, Math.PI * 2); ctx.stroke();
+    }
+    if (st.ripples.some(r => r.drumHit && r.life > 0.85)) {
+      ctx.fillStyle = 'rgba(255,255,255,.08)'; ctx.fillRect(0, 0, W, H);
+    }
+  }
+  requestAnimationFrame(frame);
+
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+})();
+</script>
+</body>
+</html>
