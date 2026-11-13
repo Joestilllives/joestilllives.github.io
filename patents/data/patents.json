@@ -1,21 +1,342 @@
 {
-  "updated": "2026-11-13",
-  "patents": [
-    {
-      "demo": true,
-      "id": "DEMO-0001",
-      "title": "Example layout only — not a real patent",
-      "topic": "Clean water",
-      "filing_year": 1994,
-      "late_citations": 0,
-      "original_idea": "This card shows how each analyzed patent will look. Real entries will appear here after the first batch of data is analyzed.",
-      "why_it_stalled": "What was missing or too expensive back then (e.g. sensors, batteries, cheap solar, phones, AI).",
-      "what_changed": "Which modern technology now fills that gap, and what it costs today.",
-      "product_idea": "A concrete product someone could build today, aimed at underprivileged users.",
-      "who_it_helps": "Who benefits, and roughly how many people.",
-      "build_cost": "Rough cost to build a first prototype.",
-      "risks": "Newer patents that might block it, regulation, distribution challenges.",
-      "scores": { "impact": 3, "feasibility": 3, "cost": 3, "market": 3 }
-    }
-  ]
+ "updated": "2026-11-13",
+ "batch": "Batch 1: 16 hand-picked from 360 candidates",
+ "patents": [
+  {
+   "id": "US4852802A",
+   "topic": "Small-farm agriculture",
+   "title": "Soil-moisture irrigation that only waters when needed",
+   "original_title": "Smart irrigation sprinklers",
+   "filing_year": 1988,
+   "total_citations": 282,
+   "original_idea": "A soil probe next to each sprinkler blocks watering when the soil is already moist.",
+   "why_it_stalled": "Sensors, valves and controllers were costly and needed mains power and wiring, so it suited golf courses and rich farms only.",
+   "what_changed": "Capacitive soil sensors cost about ₹150–300, a microcontroller with Wi-Fi/GSM about ₹300, and solar pumps are subsidised in India (PM-KUSUM).",
+   "product_idea": "A solar-powered soil-moisture controller that switches a farm pump on and off and sends SMS/WhatsApp alerts in local languages. Sold to farmers, or bundled with solar pump installers.",
+   "who_it_helps": "Smallholder farmers (India has ~100 million farm households); saves water, diesel/electricity and labour of night-time pump runs.",
+   "build_cost": "Prototype roughly ₹3,000–6,000; unit cost at scale perhaps ₹2,000–4,000.",
+   "risks": "Several Indian agri-tech startups already sell similar devices — needs a clear price or simplicity edge. Sensor durability in salty soil.",
+   "scores": {
+    "impact": 5,
+    "feasibility": 5,
+    "cost": 4,
+    "market": 5
+   }
+  },
+  {
+   "id": "US5111539A",
+   "topic": "Low-cost health checks",
+   "title": "Phone camera reads urine test strips for pregnancy & kidney checks",
+   "original_title": "Toilet device with system for inspecting health conditions",
+   "filing_year": 1990,
+   "total_citations": 272,
+   "original_idea": "A toilet that dips a test strip in urine and reads it automatically to report health conditions.",
+   "why_it_stalled": "Needed a costly built-in analyser and display inside a special toilet.",
+   "what_changed": "Any smartphone camera plus colour-correction software can now read a standard ₹10–20 dipstick accurately.",
+   "product_idea": "An app for community health workers (ASHA workers) that reads urine strips with a phone camera to flag protein (pre-eclampsia risk), glucose and infection in pregnant women, and logs results.",
+   "who_it_helps": "Pregnant women in villages without labs; pre-eclampsia is a major cause of maternal deaths.",
+   "build_cost": "App prototype mostly software: ₹0–20,000 if you build it yourself; colour-calibration card printing is cheap.",
+   "risks": "A medical-device approval (CDSCO) is likely needed for diagnosis claims. Competitors exist abroad (e.g. Healthy.io), so local language + offline use is the edge.",
+   "scores": {
+    "impact": 5,
+    "feasibility": 5,
+    "cost": 5,
+    "market": 3
+   }
+  },
+  {
+   "id": "US5636643A",
+   "topic": "Mobility & prosthetics",
+   "title": "Low-cost suction dressing for diabetic foot wounds",
+   "original_title": "Wound treatment employing reduced pressure",
+   "filing_year": 1993,
+   "total_citations": 2558,
+   "original_idea": "Healing wounds faster by sealing them with foam and a cover and applying gentle vacuum.",
+   "why_it_stalled": "Not a failure — it became a big business — but the pumps and dressings stayed very expensive, so poor patients rarely get it.",
+   "what_changed": "Tiny battery micro-pumps cost a few hundred rupees; even simple mechanical (spring/bellows) vacuum versions have been shown to work in research.",
+   "product_idea": "A cheap, reusable negative-pressure pump with low-cost foam dressings for district hospitals and home care, especially diabetic foot ulcers that lead to amputations.",
+   "who_it_helps": "Diabetic patients at risk of amputation (India has ~100 million diabetics), burn and trauma patients.",
+   "build_cost": "Prototype ₹5,000–15,000; must then fund clinical testing.",
+   "risks": "Medical device regulation and clinical trials take time and money; needs a doctor/hospital partner. Check for newer patents on specific pump designs.",
+   "scores": {
+    "impact": 5,
+    "feasibility": 4,
+    "cost": 3,
+    "market": 4
+   }
+  },
+  {
+   "id": "US5899855A",
+   "topic": "Low-cost health checks",
+   "title": "Health-worker kit: BP, sugar and oxygen readings sent to a doctor",
+   "original_title": "Modular microprocessor-based health monitoring system",
+   "filing_year": 1995,
+   "total_citations": 2413,
+   "original_idea": "Turning a video-game console into a health monitor: plug in a glucose meter, show results on a TV, send them to a clinic by phone line.",
+   "why_it_stalled": "Needed a special console, cartridges and landlines; very few homes had them.",
+   "what_changed": "Every health worker has an Android phone; Bluetooth BP cuffs, oximeters and glucometers are cheap; India has the free eSanjeevani teleconsultation network.",
+   "product_idea": "A low-cost kit + offline app for ASHA workers that records readings from Bluetooth devices and shares a summary with a doctor, focused on high BP and diabetes.",
+   "who_it_helps": "Rural patients with chronic disease who rarely see a doctor.",
+   "build_cost": "App prototype ₹0–30,000; devices ₹3,000–6,000 per kit.",
+   "risks": "Government and NGO apps exist; selling to government is slow. Data privacy rules (DPDP Act).",
+   "scores": {
+    "impact": 5,
+    "feasibility": 4,
+    "cost": 4,
+    "market": 3
+   }
+  },
+  {
+   "id": "US6396239B1",
+   "topic": "Off-grid energy & light",
+   "title": "Rent-a-solar cart for street vendors",
+   "original_title": "Portable solar generator",
+   "filing_year": 2001,
+   "total_citations": 416,
+   "original_idea": "A solar generator on wheels: battery box, folding solar panel on a mast, and a power panel.",
+   "why_it_stalled": "Lead-acid batteries were heavy and short-lived; solar panels were expensive.",
+   "what_changed": "Solar panels are now ~₹25–30 per watt and lithium-iron-phosphate batteries last 3,000+ cycles and weigh a third as much.",
+   "product_idea": "A pushable solar cart with LED lights, phone charging and a fan/blender socket, rented daily to street-food and night-market vendors who now use kerosene or diesel gensets.",
+   "who_it_helps": "Street vendors (India has ~10 million), saving fuel costs and fumes.",
+   "build_cost": "Prototype about ₹15,000–25,000 (200 W panel, 1 kWh LiFePO4, inverter, cart).",
+   "risks": "Battery theft and damage; collecting daily rent; existing solar-lantern businesses.",
+   "scores": {
+    "impact": 4,
+    "feasibility": 5,
+    "cost": 3,
+    "market": 4
+   }
+  },
+  {
+   "id": "US6309532B1",
+   "topic": "Clean water",
+   "title": "Solar capacitive deionization for salty or fluoride groundwater",
+   "original_title": "Method and apparatus for capacitive deionization and electrochemical purification and regeneration of electrodes",
+   "filing_year": 1999,
+   "total_citations": 307,
+   "original_idea": "Removing salt from water by passing it between charged carbon electrodes that hold the ions, then releasing them to regenerate.",
+   "why_it_stalled": "Good carbon electrodes were expensive and power electronics were costly.",
+   "what_changed": "Activated-carbon cloth and graphite sheets are cheap; solar power and simple controllers make it run off-grid. It wastes far less water than RO.",
+   "product_idea": "A village or school water unit for brackish or fluoride-contaminated groundwater (Rajasthan, Telangana, Gujarat), powered by solar, sold to panchayats or NGOs.",
+   "who_it_helps": "Tens of millions of Indians drink fluoride or high-salinity water.",
+   "build_cost": "Lab prototype ₹20,000–50,000; field unit more.",
+   "risks": "Performance with real groundwater needs testing; RO is the established competitor; maintenance in villages.",
+   "scores": {
+    "impact": 5,
+    "feasibility": 3,
+    "cost": 3,
+    "market": 4
+   }
+  },
+  {
+   "id": "US6299774B1",
+   "topic": "Cooking & heating",
+   "title": "Prefab smart biogas unit for 2–5 cow households",
+   "original_title": "Anaerobic digester system",
+   "filing_year": 2000,
+   "total_citations": 325,
+   "original_idea": "A simple, single-tank digester that turns manure into methane with little skill or supervision.",
+   "why_it_stalled": "Farm-scale digesters were bulky, needed construction and frequently failed without anyone noticing.",
+   "what_changed": "Prefabricated HDPE/PVC digesters, cheap gas-pressure and temperature sensors, and phone alerts can catch problems early.",
+   "product_idea": "A factory-made biogas kit for small dairy households, with a sensor that messages the owner and installer when gas output drops, plus a slurry-as-fertiliser buy-back.",
+   "who_it_helps": "Rural women who cook on wood or dung fires (smoke is a major cause of illness).",
+   "build_cost": "Prototype ₹20,000–40,000; government biogas subsidies may apply.",
+   "risks": "Many past biogas units were abandoned due to poor maintenance — the service model matters more than the hardware. Existing makers (e.g. Sistema.bio).",
+   "scores": {
+    "impact": 4,
+    "feasibility": 4,
+    "cost": 3,
+    "market": 4
+   }
+  },
+  {
+   "id": "US6209343B1",
+   "topic": "Food preservation",
+   "title": "Phase-change carrier for vaccines and insulin",
+   "original_title": "Portable apparatus for storing and/or transporting biological samples, tissues and/or organs",
+   "filing_year": 1998,
+   "total_citations": 365,
+   "original_idea": "A transport box that uses a phase-change material plus a cold core to hold a steady low temperature.",
+   "why_it_stalled": "Phase-change materials and good insulation were pricey; there was no cheap way to prove temperature was kept.",
+   "what_changed": "Phase-change materials at fixed temperatures are widely available, and a ₹300 Bluetooth temperature logger can prove the cold chain.",
+   "product_idea": "A carrier that holds 2–8 °C for days without electricity, with a temperature logger readable by phone, for insulin users and village vaccination drives.",
+   "who_it_helps": "Insulin users without reliable fridges; health workers carrying vaccines.",
+   "build_cost": "Prototype ₹3,000–8,000.",
+   "risks": "Must be tested to WHO-type standards for vaccines; insulin home use is an easier first market.",
+   "scores": {
+    "impact": 4,
+    "feasibility": 4,
+    "cost": 4,
+    "market": 3
+   }
+  },
+  {
+   "id": "US5966956A",
+   "topic": "Food preservation",
+   "title": "Solar cold room for farmer groups, pay-per-crate",
+   "original_title": "Portable refrigerated storage unit",
+   "filing_year": 1997,
+   "total_citations": 271,
+   "original_idea": "A foldable refrigerated room that ships like a shipping container and works without a foundation.",
+   "why_it_stalled": "Refrigeration needed grid power or diesel, so it suited emergency or military use only.",
+   "what_changed": "Cheap solar, efficient inverter compressors and \"ice battery\" thermal storage let a cold room run off-grid overnight.",
+   "product_idea": "A solar cold room at village markets where farmers pay a small fee per crate per day to keep vegetables and fruit fresh.",
+   "who_it_helps": "Small farmers who lose a large share of produce to spoilage and must sell fast at low prices.",
+   "build_cost": "Expensive: ₹5–10 lakh per room. Better started as a business plan with a partner or grant.",
+   "risks": "High capital cost; similar models exist (e.g. Ecozen, ColdHubs). Needs local operators.",
+   "scores": {
+    "impact": 5,
+    "feasibility": 4,
+    "cost": 1,
+    "market": 4
+   }
+  },
+  {
+   "id": "US5894608A",
+   "topic": "Sanitation",
+   "title": "Hands-free urine collector for bedridden people at home",
+   "original_title": "Portable system for the collection of urine",
+   "filing_year": 1997,
+   "total_citations": 251,
+   "original_idea": "A portable suction-based system that collects, deodorises and stores urine for people who cannot reach a toilet.",
+   "why_it_stalled": "Required a mains-powered motor/fan and was bulky and pricey, so it stayed in hospitals.",
+   "what_changed": "Small brushless fans and rechargeable batteries are cheap; better skin-safe materials exist.",
+   "product_idea": "A low-cost battery-powered urine collection system for bedridden elderly and disabled people in small homes, reducing bedsores and caregiver burden.",
+   "who_it_helps": "Elderly and disabled people cared for at home by family members, often women.",
+   "build_cost": "Prototype ₹5,000–10,000.",
+   "risks": "Comfort and hygiene need careful testing; competing imported products are expensive.",
+   "scores": {
+    "impact": 3,
+    "feasibility": 4,
+    "cost": 4,
+    "market": 3
+   }
+  },
+  {
+   "id": "US5012609A",
+   "topic": "Small-farm agriculture",
+   "title": "LED micro-farm for urban women's self-help groups",
+   "original_title": "Method and apparatus for irradiation of plants using optoelectronic devices",
+   "filing_year": 1988,
+   "total_citations": 238,
+   "original_idea": "Growing plants under arrays of LEDs in specific colours instead of sunlight.",
+   "why_it_stalled": "LEDs were dim and very expensive in 1988.",
+   "what_changed": "LED grow lights are now cheap and efficient.",
+   "product_idea": "A shelf-sized LED microgreens farm kit plus training, so self-help groups can sell fresh microgreens to city restaurants.",
+   "who_it_helps": "Low-income urban women seeking home-based income.",
+   "build_cost": "Kit ₹10,000–20,000.",
+   "risks": "Microgreens is a niche market; needs nearby buyers; electricity costs.",
+   "scores": {
+    "impact": 3,
+    "feasibility": 4,
+    "cost": 3,
+    "market": 3
+   }
+  },
+  {
+   "id": "US4808430A",
+   "topic": "Small-farm agriculture",
+   "title": "Gel-coated seeds that survive dry spells",
+   "original_title": "Method of applying gel coating to plant seeds",
+   "filing_year": 1988,
+   "total_citations": 725,
+   "original_idea": "Wrapping each seed in a water-holding gel capsule with an air bubble.",
+   "why_it_stalled": "The coating machinery was industrial and expensive; small farmers had no access.",
+   "what_changed": "Seaweed-based gels (alginate) are cheap and simple coating equipment can be built locally.",
+   "product_idea": "A seed-coating service for direct-seeded rice and millets, helping seeds survive irregular monsoon rain.",
+   "who_it_helps": "Rain-fed farmers facing more erratic rainfall.",
+   "build_cost": "Experiments ₹5,000–15,000.",
+   "risks": "Needs field trials and agronomy partners; benefit varies by crop and soil.",
+   "scores": {
+    "impact": 3,
+    "feasibility": 3,
+    "cost": 4,
+    "market": 3
+   }
+  },
+  {
+   "id": "US6182453B1",
+   "topic": "Clean water",
+   "title": "Solar air-to-water generator for humid coastal villages",
+   "original_title": "Portable, potable water recovery and dispensing apparatus",
+   "filing_year": 2000,
+   "total_citations": 404,
+   "original_idea": "Making drinking water by cooling air until moisture condenses, then filtering and sterilising it.",
+   "why_it_stalled": "It uses a lot of electricity per litre, which was expensive and required grid power.",
+   "what_changed": "Solar power is much cheaper and compressors are more efficient, but the energy use per litre is still significant.",
+   "product_idea": "A solar water kiosk in humid coastal areas where groundwater is salty, selling drinking water by the can.",
+   "who_it_helps": "Coastal communities in Odisha, Tamil Nadu, West Bengal, Andhra with saline groundwater.",
+   "build_cost": "Prototype ₹30,000–80,000.",
+   "risks": "Works poorly in dry weather; water cost per litre may be higher than RO or delivered water. Existing companies sell such machines.",
+   "scores": {
+    "impact": 4,
+    "feasibility": 3,
+    "cost": 2,
+    "market": 3
+   }
+  },
+  {
+   "id": "US5761854A",
+   "topic": "Low-cost housing",
+   "title": "Fold-out container shelter for floods and disasters",
+   "original_title": "Collapsible portable containerized shelter",
+   "filing_year": 1994,
+   "total_citations": 324,
+   "original_idea": "A shipping container whose side walls fold down to triple the floor space, with a fabric cover.",
+   "why_it_stalled": "Used mainly for industrial camps; costs were high and nothing powered it off-grid.",
+   "what_changed": "Used containers are cheap; solar roofs, LED lighting and water tanks can be built in.",
+   "product_idea": "A ready-to-deploy flood/cyclone relief shelter with solar power and water storage that state disaster authorities or NGOs can stockpile.",
+   "who_it_helps": "Families displaced by floods and cyclones (Assam, Odisha, Bihar).",
+   "build_cost": "Prototype ₹2–4 lakh.",
+   "risks": "Sales are to governments/NGOs (slow tenders). Heat inside steel containers needs insulation.",
+   "scores": {
+    "impact": 3,
+    "feasibility": 4,
+    "cost": 2,
+    "market": 3
+   }
+  },
+  {
+   "id": "US5157893A",
+   "topic": "Low-cost housing",
+   "title": "Thin insulation panels for tin-roof homes in heatwaves",
+   "original_title": "Compact vacuum insulation",
+   "filing_year": 1990,
+   "total_citations": 228,
+   "original_idea": "Very thin vacuum insulation panels held apart by glass beads.",
+   "why_it_stalled": "Vacuum panels were costly to make and fragile.",
+   "what_changed": "Still expensive, but heatwaves are worsening and cheaper alternatives (reflective coatings, foam-board) can deliver part of the benefit.",
+   "product_idea": "A cheap roof-insulation retrofit for metal-roofed slum homes; vacuum panels may be too costly, so start with a simpler insulated reflective panel.",
+   "who_it_helps": "Families in metal-roofed homes where indoor temperatures can exceed 45 °C.",
+   "build_cost": "Testing ₹10,000–30,000.",
+   "risks": "Vacuum panels are probably too expensive for this market; the original idea mostly inspires rather than transfers directly.",
+   "scores": {
+    "impact": 4,
+    "feasibility": 2,
+    "cost": 2,
+    "market": 3
+   }
+  },
+  {
+   "id": "US6080927A",
+   "topic": "Cooking & heating",
+   "title": "Solar panel that also makes hot water for clinics and hostels",
+   "original_title": "Solar concentrator for heat and electricity",
+   "filing_year": 1995,
+   "total_citations": 292,
+   "original_idea": "A self-steering mirror concentrates sunlight on solar cells that are cooled by water, giving both electricity and hot water.",
+   "why_it_stalled": "Tracking mirrors and solar cells were expensive and complex.",
+   "what_changed": "Solar cells are cheap now; simple flat \"PVT\" panels give hot water and power without mirrors.",
+   "product_idea": "A combined solar panel + water heater for rural clinics, hostels and small hotels that need hot water.",
+   "who_it_helps": "Patients and students in rural institutions; saves firewood or electric heating.",
+   "build_cost": "Prototype ₹25,000–50,000.",
+   "risks": "Competes with cheap separate solar water heaters + panels; harder to sell the advantage.",
+   "scores": {
+    "impact": 3,
+    "feasibility": 3,
+    "cost": 2,
+    "market": 3
+   }
+  }
+ ]
 }

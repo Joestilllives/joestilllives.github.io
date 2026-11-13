@@ -69,7 +69,7 @@ button{font:inherit;background:var(--accent);color:var(--bg);border:0;border-rad
       <option value="roi">Sort: best opportunity</option>
       <option value="impact">Sort: most impact</option>
       <option value="cost">Sort: cheapest to build</option>
-      <option value="late">Sort: most ahead of its time</option>
+      <option value="late">Sort: most cited</option>
     </select>
     <input id="q" type="search" placeholder="Search ideas…" aria-label="Search">
     <span class="count" id="count"></span>
@@ -89,7 +89,7 @@ button{font:inherit;background:var(--accent);color:var(--bg);border:0;border-rad
     <pre id="sql">Loading…</pre>
   </details>
 
-  <p class="note">Scores are a starting point for research, not legal or business advice. A newer patent can still cover an improvement to an expired one — check with a patent professional before building.</p>
+  <p class="note">“What held it back” is an informed reading of the patent and its era, not a recorded fact — patent offices don't record why ideas weren't adopted. Costs are rough estimates. Scores are a starting point for research, not legal or business advice. A newer patent can still cover an improvement to an expired one — check with a patent professional before building.</p>
 </div>
 
 <script>
@@ -109,14 +109,15 @@ function card(p){
         <div class="meta">${p.demo?'<span class="demo-tag">DEMO</span>':''}${link}
           <span class="chip">${esc(p.topic)}</span>
           ${p.filing_year?`<span>Filed ${esc(p.filing_year)}</span>`:''}
-          ${p.late_citations?`<span>Cited ${esc(p.late_citations)}× 15+ yrs later</span>`:''}</div>
+          ${p.total_citations?`<span>Cited by ${esc(p.total_citations)} later patents</span>`:''}</div>
+        ${p.original_title?`<div class="meta">Original title: “${esc(p.original_title)}”</div>`:''}
       </div>
       <div class="roi"><b>${roi(p)}</b><span>score</span></div>
     </div>
     <p class="idea"><b>Product idea:</b> ${esc(p.product_idea)}</p>
     <dl>
       <div><dt>Original idea</dt><dd>${esc(p.original_idea)}</dd></div>
-      <div><dt>Why it stalled</dt><dd>${esc(p.why_it_stalled)}</dd></div>
+      <div><dt>What held it back</dt><dd>${esc(p.why_it_stalled)}</dd></div>
       <div><dt>What changed</dt><dd>${esc(p.what_changed)}</dd></div>
       <div><dt>Who it helps</dt><dd>${esc(p.who_it_helps)}</dd></div>
       <div><dt>Build cost</dt><dd>${esc(p.build_cost)}</dd></div>
@@ -129,15 +130,16 @@ function card(p){
 function render(){
   const t = $("#topic").value, q = $("#q").value.toLowerCase(), sort = $("#sort").value;
   let rows = all.filter(p => (!t || p.topic === t) && (!q || JSON.stringify(p).toLowerCase().includes(q)));
-  const key = { roi, impact:p=>p.scores?.impact||0, cost:p=>p.scores?.cost||0, late:p=>p.late_citations||0 }[sort];
+  const key = { roi, impact:p=>p.scores?.impact||0, cost:p=>p.scores?.cost||0, late:p=>p.total_citations||0 }[sort];
   rows.sort((a,b) => (a.demo-b.demo) || key(b)-key(a));
   $("#list").innerHTML = rows.length ? rows.map(card).join("") : '<p class="empty">No matches.</p>';
   const real = rows.filter(p=>!p.demo).length;
-  $("#count").textContent = `${real} patent${real===1?'':'s'} analyzed`;
+  $("#count").textContent = `${real} patent${real===1?'':'s'} shown`;
 }
 
 fetch("data/patents.json").then(r=>r.json()).then(d=>{
   all = d.patents || [];
+  if (d.batch) $(".lede").insertAdjacentHTML("afterend", `<p class="count" style="margin:-12px 0 20px">${esc(d.batch)} · updated ${esc(d.updated)}</p>`);
   [...new Set(all.map(p=>p.topic))].sort().forEach(t => $("#topic").insertAdjacentHTML("beforeend", `<option>${esc(t)}</option>`));
   render();
 }).catch(()=> $("#list").innerHTML = '<p class="empty">Could not load data.</p>');
