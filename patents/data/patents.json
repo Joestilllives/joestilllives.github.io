@@ -1,0 +1,21 @@
+{
+  "updated": "2026-11-13",
+  "patents": [
+    {
+      "demo": true,
+      "id": "DEMO-0001",
+      "title": "Example layout only — not a real patent",
+      "topic": "Clean water",
+      "filing_year": 1994,
+      "late_citations": 0,
+      "original_idea": "This card shows how each analyzed patent will look. Real entries will appear here after the first batch of data is analyzed.",
+      "why_it_stalled": "What was missing or too expensive back then (e.g. sensors, batteries, cheap solar, phones, AI).",
+      "what_changed": "Which modern technology now fills that gap, and what it costs today.",
+      "product_idea": "A concrete product someone could build today, aimed at underprivileged users.",
+      "who_it_helps": "Who benefits, and roughly how many people.",
+      "build_cost": "Rough cost to build a first prototype.",
+      "risks": "Newer patents that might block it, regulation, distribution challenges.",
+      "scores": { "impact": 3, "feasibility": 3, "cost": 3, "market": 3 }
+    }
+  ]
+}

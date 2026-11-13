@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Chance Patents</title>
+<meta name="description" content="Expired patents that were ahead of their time, re-imagined with today's technology to improve life for underprivileged communities.">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#1d1d1b; --muted:#66645e; --line:#e3dfd5;
+  --accent:#1f7a5a; --accent-soft:#e2f1ea; --warn:#9a5b00; --chip:#efece4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141513; --surface:#1d1f1c; --ink:#ecebe6; --muted:#a3a198; --line:#2f322d;
+    --accent:#5cc69a; --accent-soft:#1e3a2e; --warn:#e0a54a; --chip:#262924;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141513; --surface:#1d1f1c; --ink:#ecebe6; --muted:#a3a198; --line:#2f322d;
+  --accent:#5cc69a; --accent-soft:#1e3a2e; --warn:#e0a54a; --chip:#262924;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 6px;letter-spacing:-.02em}
+.lede{color:var(--muted);max-width:680px;margin:0 0 24px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 20px}
+select,input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+input{flex:1 1 200px}
+.count{color:var(--muted);font-size:.9rem}
+.grid{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px}
+.card.demo{border-style:dashed}
+.top{display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.title{font-weight:650;font-size:1.08rem;margin:0}
+.meta{color:var(--muted);font-size:.85rem;margin-top:4px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.chip{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:.78rem}
+.demo-tag{background:var(--warn);color:var(--bg);border-radius:999px;padding:2px 10px;font-size:.72rem;font-weight:700}
+.roi{flex:none;text-align:center;background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:6px 12px;min-width:68px}
+.roi b{display:block;font-size:1.5rem;line-height:1.1}
+.roi span{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em}
+.idea{margin:12px 0 0;padding:10px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+dl{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0 6px}
+@media(min-width:720px){dl{grid-template-columns:1fr 1fr}}
+dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+dd{margin:2px 0 0}
+.bars{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.bar{display:inline-flex;gap:3px;vertical-align:middle;margin-left:6px}
+.bar i{width:10px;height:6px;border-radius:2px;background:var(--line)}
+.bar i.on{background:var(--accent)}
+a{color:var(--accent)}
+details.how{margin-top:40px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+details.how summary{cursor:pointer;font-weight:650}
+pre{background:var(--chip);border-radius:8px;padding:12px;overflow:auto;font-size:.78rem;max-height:360px}
+button{font:inherit;background:var(--accent);color:var(--bg);border:0;border-radius:8px;padding:7px 14px;cursor:pointer}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+.note{font-size:.85rem;color:var(--muted);margin-top:28px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Second Chance Patents</h1>
+  <p class="lede">Expired patents whose ideas were ahead of their time, matched with today's technology to make useful, affordable products for underprivileged communities. Expired patents are in the public domain, so anyone may build them.</p>
+
+  <div class="controls">
+    <select id="topic" aria-label="Filter by topic"><option value="">All topics</option></select>
+    <select id="sort" aria-label="Sort">
+      <option value="roi">Sort: best opportunity</option>
+      <option value="impact">Sort: most impact</option>
+      <option value="cost">Sort: cheapest to build</option>
+      <option value="late">Sort: most ahead of its time</option>
+    </select>
+    <input id="q" type="search" placeholder="Search ideas…" aria-label="Search">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="grid" id="list"></div>
+
+  <details class="how">
+    <summary>How this works &amp; how to add more patents (free)</summary>
+    <ol>
+      <li><b>Find candidates.</b> Open the <a href="https://console.cloud.google.com/bigquery" target="_blank" rel="noopener">BigQuery sandbox</a> (free, no card), paste the query below, check the size estimate in the top-right is under 1&nbsp;TB, and run it.</li>
+      <li><b>Export.</b> Click <i>Save results → CSV</i> and share the file.</li>
+      <li><b>Analyze.</b> Each patent is read and scored: what blocked it, what has changed, a product idea, who it helps, cost, and risks.</li>
+    </ol>
+    <p><b>Score (0–100)</b> = impact on people 35% · feasibility today 25% · low build cost 20% · market/demand 20%.</p>
+    <p><button id="copy">Copy query</button></p>
+    <pre id="sql">Loading…</pre>
+  </details>
+
+  <p class="note">Scores are a starting point for research, not legal or business advice. A newer patent can still cover an improvement to an expired one — check with a patent professional before building.</p>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const roi = p => { const s = p.scores || {}; return Math.round(((s.impact||0)*.35 + (s.feasibility||0)*.25 + (s.cost||0)*.2 + (s.market||0)*.2) / 5 * 100); };
+const bar = n => `<span class="bar">${[1,2,3,4,5].map(i=>`<i class="${i<=n?'on':''}"></i>`).join("")}</span>`;
+let all = [];
+
+function card(p){
+  const link = p.demo ? "" : `<a href="https://patents.google.com/patent/${esc(p.id)}" target="_blank" rel="noopener">${esc(p.id)}</a>`;
+  const s = p.scores || {};
+  return `<article class="card${p.demo?' demo':''}">
+    <div class="top">
+      <div>
+        <h2 class="title">${esc(p.title)}</h2>
+        <div class="meta">${p.demo?'<span class="demo-tag">DEMO</span>':''}${link}
+          <span class="chip">${esc(p.topic)}</span>
+          ${p.filing_year?`<span>Filed ${esc(p.filing_year)}</span>`:''}
+          ${p.late_citations?`<span>Cited ${esc(p.late_citations)}× 15+ yrs later</span>`:''}</div>
+      </div>
+      <div class="roi"><b>${roi(p)}</b><span>score</span></div>
+    </div>
+    <p class="idea"><b>Product idea:</b> ${esc(p.product_idea)}</p>
+    <dl>
+      <div><dt>Original idea</dt><dd>${esc(p.original_idea)}</dd></div>
+      <div><dt>Why it stalled</dt><dd>${esc(p.why_it_stalled)}</dd></div>
+      <div><dt>What changed</dt><dd>${esc(p.what_changed)}</dd></div>
+      <div><dt>Who it helps</dt><dd>${esc(p.who_it_helps)}</dd></div>
+      <div><dt>Build cost</dt><dd>${esc(p.build_cost)}</dd></div>
+      <div><dt>Risks</dt><dd>${esc(p.risks)}</dd></div>
+    </dl>
+    <div class="bars"><span>Impact${bar(s.impact)}</span><span>Feasibility${bar(s.feasibility)}</span><span>Low cost${bar(s.cost)}</span><span>Market${bar(s.market)}</span></div>
+  </article>`;
+}
+
+function render(){
+  const t = $("#topic").value, q = $("#q").value.toLowerCase(), sort = $("#sort").value;
+  let rows = all.filter(p => (!t || p.topic === t) && (!q || JSON.stringify(p).toLowerCase().includes(q)));
+  const key = { roi, impact:p=>p.scores?.impact||0, cost:p=>p.scores?.cost||0, late:p=>p.late_citations||0 }[sort];
+  rows.sort((a,b) => (a.demo-b.demo) || key(b)-key(a));
+  $("#list").innerHTML = rows.length ? rows.map(card).join("") : '<p class="empty">No matches.</p>';
+  const real = rows.filter(p=>!p.demo).length;
+  $("#count").textContent = `${real} patent${real===1?'':'s'} analyzed`;
+}
+
+fetch("data/patents.json").then(r=>r.json()).then(d=>{
+  all = d.patents || [];
+  [...new Set(all.map(p=>p.topic))].sort().forEach(t => $("#topic").insertAdjacentHTML("beforeend", `<option>${esc(t)}</option>`));
+  render();
+}).catch(()=> $("#list").innerHTML = '<p class="empty">Could not load data.</p>');
+fetch("query.sql").then(r=>r.text()).then(t=> $("#sql").textContent = t);
+$("#copy").onclick = () => { try { navigator.clipboard.writeText($("#sql").textContent); $("#copy").textContent = "Copied"; } catch(e){} };
+["#topic","#sort","#q"].forEach(s => $(s).addEventListener("input", render));
+</script>
+</body>
+</html>
