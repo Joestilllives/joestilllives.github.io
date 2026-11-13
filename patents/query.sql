@@ -12,8 +12,8 @@ WITH tagged AS (
   SELECT
     p.publication_number,
     p.filing_date,
-    (SELECT t.text FROM UNNEST(p.title_localized) t WHERE t.language = 'en' LIMIT 1) AS title,
-    (SELECT a.text FROM UNNEST(p.abstract_localized) a WHERE a.language = 'en' LIMIT 1) AS abstract,
+    (SELECT t.text FROM UNNEST(p.title_localized) t ORDER BY t.language = 'en' DESC LIMIT 1) AS title,
+    (SELECT a.text FROM UNNEST(p.abstract_localized) a ORDER BY a.language = 'en' DESC LIMIT 1) AS abstract,
     (SELECT STRING_AGG(DISTINCT c.code, ' ') FROM UNNEST(p.cpc) c) AS cpc_codes,
     CASE
       WHEN EXISTS (SELECT 1 FROM UNNEST(p.cpc) c WHERE STARTS_WITH(c.code, 'C02F') OR STARTS_WITH(c.code, 'E03B')) THEN 'Clean water'
@@ -34,7 +34,7 @@ WITH tagged AS (
 scored AS (
   SELECT
     t.*,
-    ARRAY_LENGTH(r.cited_by) AS total_citations,
+    IFNULL(ARRAY_LENGTH(r.cited_by), 0) AS total_citations,
     (SELECT COUNT(*) FROM UNNEST(r.cited_by) cb
        WHERE cb.filing_date >= t.filing_date + 150000) AS late_citations   -- cited 15+ years later
   FROM tagged t
@@ -53,6 +53,6 @@ SELECT
   ROUND(SAFE_DIVIDE(late_citations, total_citations), 2) AS ahead_of_time_ratio,
   cpc_codes
 FROM scored
-WHERE late_citations >= 5
-QUALIFY ROW_NUMBER() OVER (PARTITION BY topic ORDER BY late_citations DESC) <= 40
+WHERE total_citations > 0
+QUALIFY ROW_NUMBER() OVER (PARTITION BY topic ORDER BY late_citations DESC, total_citations DESC) <= 40
 ORDER BY topic, late_citations DESC;
