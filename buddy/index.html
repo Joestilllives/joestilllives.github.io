@@ -243,7 +243,7 @@
   // Works on English, Hindi (Devanagari) and Hinglish in Latin script.
   const NOTE_START = [
     /^(?:note\s*(?:karo|kar lo|karna|kar do)|yaad\s*(?:rakho|rakhna|rakh lo)|likh\s*(?:lo|do))\b\s*[:,.\-–]?\s*(.*)$/i,
-    /^(?:please\s+|pip\s*,?\s*)?(?:take a note|make a note|add a note|save a note|note down|note that|note|remember that|remember to|remember|write down|write that)\b\s*(?:that\s+)?[:,.\-–]?\s*(.*)$/i,
+    /^(?:please\s+|pip\s*,?\s*)?(?:take a note|make a note|add a note|save a note|note down|note that|note|remind me to|remind me that|remind me|remember that|remember to|remember|write down|write that)\b\s*(?:that\s+)?[:,.\-–]?\s*(.*)$/i,
     /^(?:नोट\s*(?:करो|कर लो|कर दो|कीजिए|करना|करें)?|याद\s*(?:रखो|रखना|रख लो|रखिए|रखें)|लिख\s*(?:लो|दो|लीजिए|लें))\s*[:,.\-–।]?\s*(.*)$/,
   ];
   const NOTE_END = [
@@ -251,7 +251,7 @@
     /^(.+?)\s+(?:note\s*(?:karo|kar lo|kar do|karna)|yaad\s*(?:rakho|rakhna|rakh lo)|likh\s*(?:lo|do))[.!]?$/i,
   ];
   const R = {
-    read: /\b(read|show|tell|list|what are|what's in)\b.*\bnotes?\b|\bmy notes\b|notes?\s*(sunao|batao|dikhao|padho)|नोट्?स?\s*(सुनाओ|सुनाइए|बताओ|बताइए|दिखाओ|पढ़ो)|मेरे\s*नोट/i,
+    read: /^notes?[.?!]?$|\b(read|show|tell|list|what are|what's in)\b.*\bnotes?\b|\bmy notes\b|notes?\s*(sunao|batao|dikhao|padho)|नोट्?स?\s*(सुनाओ|सुनाइए|बताओ|बताइए|दिखाओ|पढ़ो)|मेरे\s*नोट/i,
     del: /\b(delete|remove|undo|erase)\b.*\b(last|previous|latest)\b|\blast note\b.*\b(delete|remove)\b|(aakhri|akhri|last)\s*note\s*(hatao|mitao|delete)|आखिरी\s*नोट\s*(हटाओ|हटा दो|मिटाओ|डिलीट)|पिछला\s*नोट\s*(हटाओ|मिटाओ)/i,
     time: /\bwhat(?:'s| is)? the time\b|\bwhat time\b|\btime is it\b|kitne baje|kya time|kya samay|कितने बजे|क्या टाइम|क्या समय|समय क्या|टाइम क्या/i,
     date: /\bwhat(?:'s| is)? (?:the )?(?:date|day)\b|\btoday'?s date\b|aaj kya (?:din|tarikh|date)|आज क्या (?:दिन|तारीख|डेट)|आज की तारीख|आज कौन सा दिन/i,
@@ -625,7 +625,7 @@
   };
   if (store.get('pip.welcomed', false)) $('hello').classList.add('hidden');
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) { try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (_) {} }
+    if (!document.hidden) { if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {}); }
   });
 
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

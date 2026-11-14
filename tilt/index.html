@@ -253,6 +253,7 @@
     st.rawBright = clamp(e.clientX / innerWidth);
   }
   cv.addEventListener('pointerdown', e => {
+    if (!ac) return;
     cv.setPointerCapture(e.pointerId);
     st.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     pointerControl(e);
@@ -278,6 +279,7 @@
     st.degree = -1;
   };
   holdBtn.onclick = () => {
+    if (!ac) return;
     st.hold = !st.hold;
     holdBtn.setAttribute('aria-pressed', st.hold);
     setVoicing(st.pointers.size);
@@ -288,9 +290,11 @@
   };
 
   document.getElementById('go').onclick = async () => {
+    // Ask for motion access first: iOS only shows the prompt while the tap is still "fresh"
+    const sensors = askSensors();
     initAudio();
     await ac.resume();
-    const ok = await askSensors();
+    const ok = await sensors;
     if (!ok) document.getElementById('warn').textContent = 'Motion access was refused, so touch position will control the sound instead.';
     try { if ('wakeLock' in navigator) await navigator.wakeLock.request('screen'); } catch (_) {}
     document.getElementById('intro').classList.add('hidden');
@@ -299,7 +303,7 @@
   };
   document.addEventListener('visibilitychange', () => {
     if (!ac) return;
-    if (document.hidden) ac.suspend(); else { ac.resume(); try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (_) {} }
+    if (document.hidden) ac.suspend(); else { ac.resume(); if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {}); }
   });
 
   // ---------- Visuals ----------
