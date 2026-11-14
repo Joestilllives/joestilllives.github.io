@@ -1,7 +1,14 @@
+html{
+  /* scales gently with the screen, but never tiny on phones or huge on big monitors */
+  font-size: clamp(15px, .55vw + .55vh + 8px, 20px);
+}
+body{
+  font-family: Nunito, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.4;
+}
 *{box-sizing: content-box;
 margin:0;
 padding:0;
-font-size: calc(1vw + 1vh + .5vmin);
   text-decoration:none;
   scroll-behavior:smooth;
 }
@@ -15,24 +22,28 @@ background-color: #020C24;
   right:0;
   left:0;
   box-sizing:border-box;
-  text-align: right;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-end;
 z-index:1000; 
 }
 .navname{
-  font-family: 'indie flower';
-  font-weight: bold;
-  font-size:1.5em;
-text-align:left !important;
-  float: left;
+  font-family: Coiny, sans-serif;
+  font-weight: normal;
+  font-size:1.4em;
+  margin-right:auto;
+  padding-left:5px;
   color:white;
 }
 
 
 a{
   color:white;
-  font-family:'indie flower';
+  font-family: Nunito, sans-serif;
+  font-weight:600;
   padding: 10px;
-  font-size:1.4em;
+  font-size:1.05em;
     text-decoration:none;
 }
 a:hover {
@@ -51,7 +62,7 @@ background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, 
   position:relative;
   top:20vh;
   color:white;
-font-family: Coiny;
+font-family: Coiny, sans-serif;
 }
 
 .arrow-down {
@@ -76,16 +87,17 @@ border-top: 40px solid #020C24;
   text-align: center;
     font-size:3em;
   color: white;
-  font-family:coiny;
+  font-family: Coiny, sans-serif;
 }
 
 
 .subheading{
   margin:10px;
     text-align: center;
-    font-size:1.5em;
-  color: black;
-  font-family:'indie flower';
+    font-size:1.3em;
+  font-weight:600;
+  color: #020C24;
+  font-family: Nunito, sans-serif;
   }
 
 
@@ -174,27 +186,28 @@ color:white;
 footer{
  background-color:black;
   text-align:right;
-  font-size:1.2em;
-  padding:2px;
+  font-size:.9em;
+  padding:6px 12px;
   color:white;
-  font-weight:bold;
-  font-family: 'indie flower';
+  font-weight:700;
+  font-family: Nunito, sans-serif;
 }
 
 section{ scroll-margin-top:90px; }
 
 #skillset{
-min-height:70vh;
-padding-bottom:8vh;
+padding-bottom:10vh;
 background: #42b0e2;
 }
+
+h1, h2{ line-height:1.15; }
 
 #Gridh1, #Secondh1, #Thirdh1{
   padding:5px;
   text-align: center;
     font-size:2em;
   color: white;
-  font-family:coiny;
+  font-family: Coiny, sans-serif;
   background:black;
   mix-blend-mode: multiply;
 }
@@ -215,12 +228,13 @@ background: #42b0e2;
   align-items:center;
   gap:12px;
   color:white;
-  font-family:'indie flower';
-  font-size:1.4em;
+  font-family: Nunito, sans-serif;
+  font-weight:700;
+  font-size:1.1em;
 }
 .languages i{
   color:orange;
-  font-size:4em;
+  font-size:4.5em;
   transition:transform .6s;
 }
 .languages li:hover i{ transform:rotate(360deg); }
@@ -281,9 +295,9 @@ z-index:2;
 }
 
 @media(max-width:600px){
-  #navbar{ text-align:center; padding:4px 2px; }
-  .navname{ float:none; text-align:center !important; font-size:1.2em; }
-  #navbar a{ display:inline-block; font-size:1.05em; padding:2px 5px; }
+  #navbar{ justify-content:center; padding:4px 2px; }
+  .navname{ flex-basis:100%; margin:0; padding:0; text-align:center; font-size:1.15em; }
+  #navbar a{ display:inline-block; font-size:.95em; padding:2px 6px; }
   section{ scroll-margin-top:100px; }
   #projects{ grid-template-columns:1fr; grid-template-rows:auto; height:auto; }
   #Gridh1{ grid-column:1; }
