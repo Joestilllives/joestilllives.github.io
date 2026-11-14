@@ -201,7 +201,8 @@ padding-bottom:10vh;
 background: #42b0e2;
 }
 
-h1, h2{ line-height:1.15; }
+h1, h2, h3, .glitch{ line-height:1.15; }
+.glitch{ font-weight:bold; }
 
 #Gridh1, #Secondh1, #Thirdh1{
   padding:5px;
