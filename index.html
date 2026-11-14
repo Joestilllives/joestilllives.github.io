@@ -23,14 +23,18 @@
 
 <header>
   <nav id="navbar">
-     <h1 class="navname">Rahul Gupta</h1>
-    <a href="#welcome-section">Home</a>
-    <a href="#skillset">Skills</a>
-        <a href="#projects">Projects</a>
-   <a href="#Contact_me">Contact Me</a>
-    <a href="tilt/">Tilt (phone app)</a>
-    <a href="buddy/">Pip (pocket buddy)</a>
- 
+    <a class="navname" href="#welcome-section">Rahul Gupta</a>
+    <button id="menuBtn" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="navlinks">
+      <a href="#welcome-section">Home</a>
+      <a href="#skillset">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#Contact_me">Contact Me</a>
+      <a href="tilt/">Tilt (phone app)</a>
+      <a href="buddy/">Pip (pocket buddy)</a>
+    </div>
   </nav>
   </header>
   <main>
@@ -38,26 +42,31 @@
       <div id="section1">
       <h1 id="Mainh1">Hey there! Call me Joe
       </h1>
-      <h2 class="glitch">Carry on my wayward son
-      </h2>
-               <a href="#skillset">
-               <div class="arrow-down">
-               </div></a>
-       
-        </div>
+      <h2 class="glitch">Carry on my wayward son</h2>
+      <p class="tagline">I make playful little things for the web: an instrument you play by tilting your phone, a pocket buddy that keeps your notes, and whatever idea comes next.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#Contact_me">Contact me</a>
+      </div>
+      <a href="#skillset" class="arrow-link" aria-label="Scroll down"><div class="arrow-down"></div></a>
+      </div>
     </section>
     <section id="skillset">
     <h1 id="Thirdh1">Skillset</h1>      
-    <h2 class="subheading">The languages I know</h2>
+    <h2 class="subheading">The languages I work in</h2>
     <ul class="languages">
       <li><i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span></li>
       <li><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></li>
       <li><i class="fas fa-database" aria-hidden="true"></i><span>SQL</span></li>
       <li><i class="fab fa-js" aria-hidden="true"></i><span>JavaScript</span></li>
+      <li><i class="fab fa-python" aria-hidden="true"></i><span>Python</span></li>
+      <li><i class="fas fa-microchip" aria-hidden="true"></i><span>C</span></li>
     </ul>
     </section>
     <section id="projects">
       <h1 id="Gridh1">Here lie a few of my thingamajings</h1>
+    <a class="projectlist app tilt" href="tilt/"><span><b>Tilt</b>Tilt your phone to play music, shake it for drums.</span></a>
+    <a class="projectlist app pip" href="buddy/"><span><b>Pip</b>A pocket buddy that saves voice notes in English and Hindi.</span></a>
     <a class="projectlist one" href="https://codepen.io/JoeStillLives/full/OdvdWv" target="_blank" rel="noopener"><span>Project 1</span></a>
 <a class="projectlist two" href="https://codepen.io/JoeStillLives/full/ErMQeg" target="_blank" rel="noopener"><span>Project 2</span></a>     
       <a class="projectlist three" href="https://codepen.io/JoeStillLives/full/Lqadjr" target="_blank" rel="noopener"><span>Project 3</span></a>
@@ -83,6 +92,15 @@ Written &amp; coded by Rahul Gupta
   
   
 
+<script>
+  // phone menu: toggle the links, close after picking one
+  (function () {
+    var btn = document.getElementById('menuBtn'), nav = document.getElementById('navbar');
+    function set(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function () { set(!nav.classList.contains('open')); });
+    document.getElementById('navlinks').addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+  })();
+</script>
 </body>
 
 </html>
