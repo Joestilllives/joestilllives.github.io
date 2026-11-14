@@ -162,6 +162,7 @@ background-color: #42b0e2;
   color:white;
 }
 
+.Contacts .icon{ font-size:3em; }
 .Contacts{
   padding:10px;
   margin:10px;
@@ -234,12 +235,13 @@ h1, h2, h3, .glitch{ line-height:1.15; }
   font-weight:700;
   font-size:1.1em;
 }
-.languages i{
+.icon{ height:1em; fill:currentColor; display:block; flex:none; }
+.languages .icon{
   color:orange;
   font-size:4.5em;
   transition:transform .6s;
 }
-.languages li:hover i{ transform:rotate(360deg); }
+.languages li:hover .icon{ transform:rotate(360deg); }
 .glitch{
   font-size:2em;
   color: black;
@@ -358,11 +360,11 @@ z-index:2;
   #projects{ grid-auto-rows:auto; }
   .projectlist{ min-height:28vh; }
   #skillset{ min-height:0; }
-  .languages i{ font-size:3em; }
+  .languages .icon{ font-size:3em; }
 }
 
 @media (prefers-reduced-motion: reduce){
   *{ scroll-behavior:auto !important; }
   .arrow-down, .glitch:before, .glitch:after, .Contacts:hover{ animation:none !important; }
-  .languages i{ transition:none; }
+  .languages .icon{ transition:none; }
 }
