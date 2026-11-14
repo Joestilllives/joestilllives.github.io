@@ -13,7 +13,8 @@ font-size: calc(1vw + 1vh + .5vmin);
 background-color: #020C24;
   top: 0;
   right:0;
-  width:98%;
+  left:0;
+  box-sizing:border-box;
   text-align: right;
 z-index:1000; 
 }
@@ -39,6 +40,7 @@ a:hover {
    }
 
 #welcome-section{
+  overflow:hidden;
   height: 100vh;
 background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
   /* https://webgradients.com/ */
@@ -95,7 +97,7 @@ height:100vh;
   background:#FF4081;
   display:grid;
 grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 1fr);
+grid-template-rows: auto 1fr 1fr;
   grid-gap: 5px;
 }
 #Gridh1{
