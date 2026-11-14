@@ -41,10 +41,8 @@ a:hover {
 #welcome-section{
   height: 100vh;
 background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
-
-
-  <!--https://webgradients.com/-->
-  }
+  /* https://webgradients.com/ */
+}
 #section1{
   text-transform: uppercase;
   text-align: center;
@@ -89,10 +87,6 @@ border-top: 40px solid #020C24;
   }
 
 
-@media(max-width:450px)
-{
-   
-}
 #projects{
 height:100vh;
  /* background-image:url("<img src='https://images.unsplash.com/photo-1414877611609-3ff962bb2c92?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>");
@@ -112,35 +106,27 @@ grid-row:1/2;
 .projectlist{
   border: 5px solid white;
 }
-/*.one{
-        grid-column: 1 / 4;
-      grid-row: 2 /5;
- background-image:url("https://codepen.io/JoeStillLives/pen/OdvdWv/image/large.png");
-  background-size: cover;
- background-position: center;
+.projectlist{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  overflow:hidden;
+  background-color:#020C24;
+  background-size:cover;
+  background-position:center;
 }
-.two{
-    grid-column: 3 / 4;
-      grid-row: 5 / 7;
- background-image:url("https://codepen.io/JoeStillLives/pen/ErMQeg/image/large.png");
-
-  background-size: cover;
- background-position: center;
+.projectlist span{
+  width:100%;
+  text-align:center;
+  background:rgba(2,12,36,.75);
+  padding:6px 0;
 }
-.three{
-    grid-column: 3 / 5;
-      grid-row: 2 / 5;
- background-image:url("https://codepen.io/JoeStillLives/pen/Lqadjr/image/large.png");
-  background-size: cover;
- background-position: center;
-}
-.four{
-    grid-column: 2 / 3;
-      grid-row: 2 / 4;
- background-image:url("https://codepen.io/JoeStillLives/pen/YBJwZe/image/large.png");
-  background-size: cover;
- background-position: center;
-}*/
+.projectlist:hover{ border-color:orange; }
+.one  { background-image:url("https://shots.codepen.io/JoeStillLives/pen/OdvdWv-800.jpg"); }
+.two  { background-image:url("https://shots.codepen.io/JoeStillLives/pen/ErMQeg-800.jpg"); }
+.three{ background-image:url("https://shots.codepen.io/JoeStillLives/pen/Lqadjr-800.jpg"); }
+.four { background-image:url("https://shots.codepen.io/JoeStillLives/pen/YBJwZe-800.jpg"); }
 
 #Contact_me{
   height: 40vh;
@@ -192,6 +178,8 @@ footer{
   font-weight:bold;
   font-family: 'indie flower';
 }
+
+section{ scroll-margin-top:90px; }
 
 #skillset{
 height:100vh;
@@ -285,4 +273,14 @@ transform: translateX(-50%);
 }
 i:hover::after{
   display:block;
+}
+
+@media(max-width:600px){
+  #navbar{ text-align:center; }
+  .navname{ float:none; text-align:center !important; }
+  #navbar a{ display:inline-block; padding:4px 6px; }
+  #projects{ grid-template-columns:1fr; grid-template-rows:auto; height:auto; }
+  #Gridh1{ grid-column:1; }
+  .projectlist{ min-height:40vh; }
+  .languages{ width:auto; text-align:center; }
 }
