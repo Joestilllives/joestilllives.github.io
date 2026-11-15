@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gudiya's Home Bakery · Sample bakery website</title>
+  <meta name="description" content="A sample website for a home bakery: a menu customers can order from, with the order sent straight to WhatsApp.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#fff7ee; --choc:#4a2c21; --muted:#7a5d52; --pink:#e8577e; --pink-soft:#fde3ea; --line:#f0dfd2; --veg:#15803d; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Inter, system-ui, sans-serif; color:var(--choc); background:var(--cream); line-height:1.5; }
+    a { color:inherit; }
+    .wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 20px; border-radius:999px; font:600 15px Inter, sans-serif; text-decoration:none; border:0; cursor:pointer; }
+    .btn.p { background:var(--pink); color:#fff; }
+    .btn.o { background:#fff; color:var(--choc); border:2px solid var(--choc); }
+    .btn svg { width:18px; height:18px; fill:currentColor; }
+    .top { display:flex; align-items:center; justify-content:space-between; padding:18px 0; gap:12px; }
+    .logo { font-family:Fraunces, serif; font-weight:800; font-size:24px; text-decoration:none; }
+    .logo small { display:block; font:400 12px Inter, sans-serif; color:var(--muted); }
+    .hero { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; padding:24px 0 48px; }
+    .pill { display:inline-flex; gap:6px; align-items:center; font-size:13px; font-weight:600; background:#fff; border:1px solid var(--line); padding:6px 12px; border-radius:999px; }
+    .pill i { width:10px; height:10px; border:2px solid var(--veg); display:inline-grid; place-items:center; }
+    .pill i::after { content:""; width:4px; height:4px; border-radius:50%; background:var(--veg); }
+    h1 { font-family:Fraunces, serif; font-weight:800; font-size:clamp(36px, 6vw, 60px); line-height:1.05; margin:16px 0 14px; }
+    h1 span { color:var(--pink); }
+    .lead { font-size:18px; color:var(--muted); max-width:30em; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .cake { aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 50% 50%, #fff 0 34%, var(--pink-soft) 34.5% 60%, #fbd0dc 60.5%); display:grid; place-items:center; font-size:min(34vw, 180px); max-width:420px; justify-self:center; width:100%; }
+    section { padding:44px 0; }
+    h2 { font-family:Fraunces, serif; font-weight:800; font-size:clamp(28px, 4vw, 40px); }
+    .sub { color:var(--muted); margin:4px 0 20px; }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+    .filters button { font:600 14px Inter, sans-serif; padding:8px 16px; border-radius:999px; border:1px solid var(--line); background:#fff; color:var(--choc); cursor:pointer; }
+    .filters button[aria-pressed="true"] { background:var(--choc); color:#fff; border-color:var(--choc); }
+    .menu { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .item { background:#fff; border:1px solid var(--line); border-radius:20px; padding:16px; display:flex; flex-direction:column; gap:6px; }
+    .item .emoji { font-size:44px; background:var(--pink-soft); border-radius:14px; height:96px; display:grid; place-items:center; margin-bottom:6px; }
+    .item h3 { font-size:17px; }
+    .item p { font-size:14px; color:var(--muted); }
+    .item .row { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:8px; }
+    .item .price { font-weight:600; font-size:18px; }
+    .qty { display:flex; align-items:center; gap:4px; background:var(--cream); border-radius:999px; padding:3px; }
+    .qty button { width:32px; height:32px; border-radius:50%; border:0; background:#fff; font:600 18px Inter, sans-serif; cursor:pointer; color:var(--choc); }
+    .qty button.add { width:auto; padding:0 14px; border-radius:999px; background:var(--pink); color:#fff; font-size:14px; }
+    .qty span { min-width:22px; text-align:center; font-weight:600; }
+    .how { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .how div { background:#fff; border-radius:20px; padding:18px; border:1px solid var(--line); }
+    .how b { font-family:Fraunces, serif; font-size:30px; color:var(--pink); display:block; }
+    .cart { position:fixed; left:50%; transform:translateX(-50%) translateY(140%); bottom:14px; width:min(560px, calc(100% - 24px)); background:var(--choc); color:#fff; border-radius:20px; padding:12px 12px 12px 18px; display:flex; align-items:center; gap:12px; z-index:60; transition:transform .25s ease; box-shadow:0 14px 40px rgba(74,44,33,.35); }
+    .cart.show { transform:translateX(-50%) translateY(0); }
+    .cart .sum { flex:1; font-size:14px; }
+    .cart .sum b { display:block; font-size:18px; }
+    .sheet { position:fixed; inset:0; background:rgba(0,0,0,.45); display:none; align-items:flex-end; justify-content:center; z-index:70; padding:12px; }
+    .sheet.show { display:flex; }
+    .sheet form { background:#fff; width:min(520px, 100%); border-radius:22px; padding:20px; display:grid; gap:12px; max-height:90vh; overflow:auto; }
+    .sheet h3 { font-family:Fraunces, serif; font-size:24px; }
+    .lines { font-size:14px; border-bottom:1px dashed var(--line); padding-bottom:10px; display:grid; gap:4px; }
+    .lines div { display:flex; justify-content:space-between; }
+    label { font-weight:600; font-size:14px; display:grid; gap:6px; }
+    input, select, textarea { font:inherit; padding:11px 12px; border:1px solid var(--line); border-radius:10px; width:100%; background:var(--cream); }
+    .seg { display:flex; gap:8px; }
+    .seg label { flex:1; display:flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:10px; padding:10px; font-weight:400; }
+    .seg input { width:auto; }
+    footer { padding:28px 0 110px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); }
+    @media (max-width:860px) {
+      .hero { grid-template-columns:1fr; }
+      .cake { order:-1; max-width:240px; }
+      .menu { grid-template-columns:repeat(2, 1fr); }
+      .how { grid-template-columns:1fr; }
+      .top .btn { display:none; }
+    }
+    @media (max-width:520px) { .menu { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2l-.4-.2z"/></symbol>
+  </svg>
+
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="#">Gudiya's Home Bakery<small>Baked fresh to order · Your City</small></a>
+      <a class="btn p" href="#menu">Order now</a>
+    </header>
+
+    <div class="hero">
+      <div>
+        <span class="pill"><i></i>100% eggless options · FSSAI registered</span>
+        <h1>Cakes baked at home, <span>with love</span>, for your celebrations.</h1>
+        <p class="lead">Birthday cakes, brownies, cookies and cupcakes made fresh in a home kitchen. Choose from the menu, and your order lands on WhatsApp. No apps, no commission.</p>
+        <div class="actions">
+          <a class="btn p" href="#menu">See the menu</a>
+          <a class="btn o" href="#" data-wa="Hi! I want a custom cake. Can you help me with a design?"><svg><use href="#wa"/></svg>Custom cake enquiry</a>
+        </div>
+      </div>
+      <div class="cake" aria-hidden="true">🎂</div>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Menu</h2>
+      <p class="sub">Tap + to add. Order at least one day ahead; custom cakes need two days.</p>
+      <div class="filters" id="filters"></div>
+      <div class="menu" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How ordering works</h2>
+      <p class="sub">Simple for you, simple for us.</p>
+      <div class="how">
+        <div><b>1</b>Pick your treats from the menu and choose pickup or delivery.</div>
+        <div><b>2</b>Your order comes to us on WhatsApp. We confirm and share a UPI QR for payment.</div>
+        <div><b>3</b>Fresh from the oven on your chosen day. Delivery within 5 km.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">Gudiya's Home Bakery is a made-up business. This is a sample website.</div>
+  </footer>
+
+  <div class="cart" id="cart" aria-live="polite">
+    <div class="sum"><span id="cartCount">0 items</span><b id="cartTotal">₹0</b></div>
+    <button class="btn p" type="button" id="checkout"><svg><use href="#wa"/></svg>Order on WhatsApp</button>
+  </div>
+
+  <div class="sheet" id="sheet">
+    <form id="orderForm">
+      <h3>Almost done</h3>
+      <div class="lines" id="lines"></div>
+      <label>Your name <input name="name" required autocomplete="name"></label>
+      <label>Needed on <input name="date" type="date" required></label>
+      <div class="seg">
+        <label><input type="radio" name="mode" value="Pickup" checked> Pickup</label>
+        <label><input type="radio" name="mode" value="Delivery (+₹50)"> Delivery +₹50</label>
+      </div>
+      <label>Message on cake / notes <input name="note" placeholder="Happy Birthday Riya!"></label>
+      <button class="btn p" type="submit"><svg><use href="#wa"/></svg>Send order</button>
+      <button class="btn o" type="button" id="cancel">Keep shopping</button>
+    </form>
+  </div>
+
+  <script src="../demo.js"></script>
+  <script>
+    var ITEMS = [
+      { id: 'tc', cat: 'Cakes', e: '🍫', name: 'Chocolate truffle cake', d: 'Rich dark ganache. Eggless.', unit: '½ kg', price: 650 },
+      { id: 'rv', cat: 'Cakes', e: '❤️', name: 'Red velvet cake', d: 'Cream cheese frosting.', unit: '½ kg', price: 750 },
+      { id: 'pa', cat: 'Cakes', e: '🍍', name: 'Pineapple cake', d: 'Light, fresh cream. Eggless.', unit: '½ kg', price: 500 },
+      { id: 'bs', cat: 'Cakes', e: '🧁', name: 'Butterscotch cake', d: 'With crunchy praline bits.', unit: '½ kg', price: 550 },
+      { id: 'fb', cat: 'Brownies', e: '🟫', name: 'Fudge brownies', d: 'Gooey centre. Box of 6.', unit: 'box', price: 360 },
+      { id: 'wb', cat: 'Brownies', e: '🥜', name: 'Walnut brownies', d: 'Loaded with walnuts. Box of 6.', unit: 'box', price: 420 },
+      { id: 'cc', cat: 'Cookies', e: '🍪', name: 'Choco-chip cookies', d: 'Crisp edges, soft middle. 250 g.', unit: 'jar', price: 280 },
+      { id: 'ac', cat: 'Cookies', e: '🌰', name: 'Atta jaggery cookies', d: 'Whole wheat, no maida. 250 g.', unit: 'jar', price: 240 },
+      { id: 'cu', cat: 'Cupcakes', e: '🧁', name: 'Assorted cupcakes', d: 'Vanilla, choco & strawberry. Box of 6.', unit: 'box', price: 450 }
+    ];
+    var cart = {}, filter = 'All';
+    var grid = document.getElementById('menuGrid'), filters = document.getElementById('filters');
+    var money = function (n) { return '₹' + n.toLocaleString('en-IN'); };
+
+    ['All', 'Cakes', 'Brownies', 'Cookies', 'Cupcakes'].forEach(function (c) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = c;
+      b.addEventListener('click', function () { filter = c; renderMenu(); });
+      filters.appendChild(b);
+    });
+
+    function renderMenu() {
+      [].forEach.call(filters.children, function (b) { b.setAttribute('aria-pressed', b.textContent === filter); });
+      grid.innerHTML = '';
+      ITEMS.filter(function (i) { return filter === 'All' || i.cat === filter; }).forEach(function (i) {
+        var el = document.createElement('div');
+        el.className = 'item';
+        el.innerHTML = '<div class="emoji"></div><h3></h3><p></p><div class="row"><span class="price"></span><div class="qty"></div></div>';
+        el.querySelector('.emoji').textContent = i.e;
+        el.querySelector('h3').textContent = i.name;
+        el.querySelector('p').textContent = i.d;
+        el.querySelector('.price').textContent = money(i.price) + ' / ' + i.unit;
+        var q = el.querySelector('.qty'), n = cart[i.id] || 0;
+        if (!n) {
+          q.innerHTML = '<button type="button" class="add">+ Add</button>';
+          q.firstChild.addEventListener('click', function () { change(i.id, 1); });
+        } else {
+          q.innerHTML = '<button type="button" aria-label="Remove one">−</button><span></span><button type="button" aria-label="Add one">+</button>';
+          q.children[1].textContent = n;
+          q.children[0].addEventListener('click', function () { change(i.id, -1); });
+          q.children[2].addEventListener('click', function () { change(i.id, 1); });
+        }
+        grid.appendChild(el);
+      });
+    }
+
+    function lines() { return ITEMS.filter(function (i) { return cart[i.id]; }); }
+    function total() { return lines().reduce(function (s, i) { return s + i.price * cart[i.id]; }, 0); }
+    function change(id, d) {
+      cart[id] = Math.max(0, (cart[id] || 0) + d);
+      if (!cart[id]) delete cart[id];
+      renderMenu();
+      var count = lines().reduce(function (s, i) { return s + cart[i.id]; }, 0);
+      document.getElementById('cartCount').textContent = count + (count === 1 ? ' item' : ' items');
+      document.getElementById('cartTotal').textContent = money(total());
+      document.getElementById('cart').classList.toggle('show', count > 0);
+    }
+    renderMenu();
+
+    var sheet = document.getElementById('sheet');
+    var dateInput = document.querySelector('#orderForm input[name="date"]');
+    var tomorrow = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
+    dateInput.min = tomorrow;
+    document.getElementById('checkout').addEventListener('click', function () {
+      var box = document.getElementById('lines');
+      box.innerHTML = '';
+      lines().forEach(function (i) {
+        var r = document.createElement('div');
+        r.innerHTML = '<span></span><span></span>';
+        r.children[0].textContent = cart[i.id] + ' × ' + i.name;
+        r.children[1].textContent = money(i.price * cart[i.id]);
+        box.appendChild(r);
+      });
+      var t = document.createElement('div');
+      t.innerHTML = '<b>Total</b><b></b>';
+      t.children[1].textContent = money(total());
+      box.appendChild(t);
+      sheet.classList.add('show');
+    });
+    document.getElementById('cancel').addEventListener('click', function () { sheet.classList.remove('show'); });
+    sheet.addEventListener('click', function (e) { if (e.target === sheet) sheet.classList.remove('show'); });
+
+    document.getElementById('orderForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(this);
+      var delivery = f.get('mode').indexOf('Delivery') === 0;
+      var msg = 'Hi! I would like to order:\n\n' + lines().map(function (i) { return '• ' + cart[i.id] + ' × ' + i.name + ' (' + i.unit + ') – ' + money(i.price * cart[i.id]); }).join('\n');
+      msg += '\n\nTotal: ' + money(total() + (delivery ? 50 : 0)) + (delivery ? ' incl. delivery' : '');
+      msg += '\nName: ' + f.get('name') + '\nFor: ' + new Date(f.get('date') + 'T00:00').toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' }) + '\n' + (delivery ? 'Delivery' : 'Pickup');
+      if (f.get('note')) msg += '\nNote: ' + f.get('note');
+      sheet.classList.remove('show');
+      Demo.whatsapp(msg);
+    });
+  </script>
+</body>
+</html>

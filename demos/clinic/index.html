@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sukoon Dental Care · Sample clinic website</title>
+  <meta name="description" content="A sample website for a neighbourhood dental clinic: timings, treatments, fees and WhatsApp appointment booking.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#12302f; --muted:#4d6665; --teal:#0f766e; --teal-soft:#e6f4f2; --bg:#fbfcfc; --line:#dbe7e5; --open:#15803d; --closed:#b42318; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"DM Sans", system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+    a { color:inherit; }
+    .wrap { max-width:1040px; margin:0 auto; padding:0 16px; }
+    header.top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 0; }
+    .logo { font-family:"DM Serif Display", serif; font-size:24px; color:var(--teal); text-decoration:none; }
+    .logo small { display:block; font:500 12px "DM Sans", sans-serif; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 20px; border-radius:999px; font-weight:700; text-decoration:none; border:2px solid var(--teal); cursor:pointer; font-size:15px; }
+    .btn.fill { background:var(--teal); color:#fff; }
+    .btn.ghost { background:#fff; color:var(--teal); }
+    .btn svg { width:18px; height:18px; fill:currentColor; }
+    .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:32px; align-items:center; padding:32px 0 48px; }
+    .status { display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; padding:6px 12px; border-radius:999px; background:#fff; border:1px solid var(--line); }
+    .status::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--muted); }
+    .status[data-state="open"] { color:var(--open); } .status[data-state="open"]::before { background:var(--open); }
+    .status[data-state="closed"] { color:var(--closed); } .status[data-state="closed"]::before { background:var(--closed); }
+    h1 { font-family:"DM Serif Display", serif; font-weight:400; font-size:clamp(34px, 5.5vw, 54px); line-height:1.08; margin:16px 0 14px; }
+    .lead { font-size:18px; color:var(--muted); max-width:34em; }
+    .hero .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .facts { display:flex; flex-wrap:wrap; gap:20px; margin-top:28px; color:var(--muted); font-size:14px; }
+    .facts b { display:block; color:var(--ink); font-size:22px; }
+    .photo { aspect-ratio:4/5; border-radius:28px; background:linear-gradient(160deg, #b9e3dd, #0f766e); position:relative; overflow:hidden; }
+    .photo::after { content:"\1F9B7"; position:absolute; inset:0; display:grid; place-items:center; font-size:110px; }
+    .photo span { position:absolute; left:16px; right:16px; bottom:16px; z-index:1; background:#fff; border-radius:16px; padding:12px 14px; font-size:14px; box-shadow:0 8px 24px rgba(0,0,0,.12); }
+    section { padding:48px 0; }
+    h2 { font-family:"DM Serif Display", serif; font-weight:400; font-size:clamp(28px, 4vw, 38px); margin-bottom:8px; }
+    .sub { color:var(--muted); margin-bottom:24px; }
+    .grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px; }
+    .card h3 { font-size:18px; margin-bottom:4px; }
+    .card p { color:var(--muted); font-size:15px; }
+    .card .price { margin-top:12px; font-weight:700; color:var(--teal); }
+    .doc { display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:center; }
+    .avatar { width:96px; height:96px; border-radius:50%; background:var(--teal-soft); display:grid; place-items:center; font-family:"DM Serif Display", serif; font-size:36px; color:var(--teal); }
+    .band { background:var(--teal-soft); }
+    table { width:100%; border-collapse:collapse; background:#fff; border-radius:18px; overflow:hidden; border:1px solid var(--line); }
+    td { padding:12px 16px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    tr.today td { background:#fffbe8; font-weight:700; }
+    td:last-child { text-align:right; }
+    .two { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+    form { background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px; display:grid; gap:12px; }
+    label { font-weight:700; font-size:14px; display:grid; gap:6px; }
+    input, select, textarea { font:inherit; padding:11px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); width:100%; }
+    .quotes { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .quotes blockquote { background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; font-size:15px; }
+    .quotes cite { display:block; margin-top:10px; font-style:normal; color:var(--muted); font-size:13px; }
+    .stars { color:#e0a800; letter-spacing:2px; }
+    .map { border-radius:18px; min-height:220px; background:repeating-linear-gradient(45deg, #e9f1f0 0 14px, #f4f8f7 14px 28px); display:grid; place-items:center; color:var(--muted); border:1px solid var(--line); text-align:center; padding:16px; }
+    footer { padding:32px 0 96px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); }
+    .sticky { position:fixed; left:12px; right:12px; bottom:12px; display:none; gap:8px; z-index:50; }
+    .sticky .btn { flex:1; box-shadow:0 8px 24px rgba(0,0,0,.18); }
+    @media (max-width:820px) {
+      .hero, .two { grid-template-columns:1fr; }
+      .photo { aspect-ratio:16/10; order:-1; }
+      .grid, .quotes { grid-template-columns:1fr; }
+      .top .btn { display:none; }
+      .sticky { display:flex; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2l-.4-.2z"/></symbol>
+    <symbol id="ph" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+  </svg>
+
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="#">Sukoon Dental Care<small>Main Market, Your City</small></a>
+      <a class="btn fill" href="#book" data-wa="Hello, I would like to book a dental appointment."><svg><use href="#wa"/></svg>Book on WhatsApp</a>
+    </header>
+
+    <div class="hero">
+      <div>
+        <span class="status" id="status">Checking timings…</span>
+        <h1>Gentle dental care, five minutes from home.</h1>
+        <p class="lead">Check-ups, cleaning, fillings, root canals and braces for the whole family. Book on WhatsApp in under a minute, without waiting on hold.</p>
+        <div class="actions">
+          <a class="btn fill" href="#book"><svg><use href="#wa"/></svg>Book an appointment</a>
+          <a class="btn ghost" href="#" data-call><svg><use href="#ph"/></svg>Call the clinic</a>
+        </div>
+        <div class="facts">
+          <div><b>12+ yrs</b>in practice</div>
+          <div><b>4.8 ★</b>on Google</div>
+          <div><b>₹300</b>consultation</div>
+        </div>
+      </div>
+      <div class="photo"><span><b>Same-day pain relief.</b> Toothache? Message us and we fit you in today.</span></div>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Treatments & fees</h2>
+      <p class="sub">Clear prices up front. The doctor confirms the final cost after checking.</p>
+      <div class="grid">
+        <div class="card"><h3>Check-up & X-ray</h3><p>Full mouth check with a digital X-ray if needed.</p><div class="price">₹300 – ₹500</div></div>
+        <div class="card"><h3>Cleaning & polishing</h3><p>Removes stains and tartar. Fresh breath, healthier gums.</p><div class="price">from ₹800</div></div>
+        <div class="card"><h3>Tooth-coloured filling</h3><p>Fixes cavities in one visit, matched to your tooth.</p><div class="price">from ₹1,000</div></div>
+        <div class="card"><h3>Root canal</h3><p>Painless RCT under local anaesthesia, usually 2 visits.</p><div class="price">from ₹4,500</div></div>
+        <div class="card"><h3>Braces & aligners</h3><p>Metal, ceramic or clear aligners. EMI available.</p><div class="price">from ₹30,000</div></div>
+        <div class="card"><h3>Kids' dentistry</h3><p>Friendly first visits, fluoride and sealants.</p><div class="price">from ₹400</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two">
+      <div>
+        <h2>Meet your dentist</h2>
+        <div class="doc" style="margin-top:16px">
+          <div class="avatar">AK</div>
+          <div>
+            <h3>Dr. A. Kapoor, BDS, MDS</h3>
+            <p style="color:var(--muted)">Speaks Hindi, English and Punjabi. Known for explaining every step before starting, so nothing is a surprise.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Timings</h2>
+        <table id="hours">
+          <tr data-d="1"><td>Monday</td><td>10 am – 2 pm, 5 – 9 pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>10 am – 2 pm, 5 – 9 pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>10 am – 2 pm, 5 – 9 pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>10 am – 2 pm, 5 – 9 pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>10 am – 2 pm, 5 – 9 pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>10 am – 2 pm, 5 – 9 pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>11 am – 2 pm</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="book">
+    <div class="wrap two">
+      <div>
+        <h2>Book an appointment</h2>
+        <p class="sub">Fill this in and it goes to the clinic on WhatsApp. We reply within the hour during clinic timings.</p>
+        <div class="map">📍 Google Map of the clinic goes here<br>Main Market, Your City · Parking available</div>
+      </div>
+      <form id="bookForm">
+        <label>Your name <input name="name" required autocomplete="name"></label>
+        <label>Problem
+          <select name="reason">
+            <option>Check-up</option><option>Toothache</option><option>Cleaning</option><option>Filling</option>
+            <option>Root canal</option><option>Braces / aligners</option><option>For my child</option><option>Something else</option>
+          </select>
+        </label>
+        <label>Preferred day <input name="date" type="date" required></label>
+        <label>Time
+          <select name="time"><option>Morning (10 am – 2 pm)</option><option>Evening (5 – 9 pm)</option></select>
+        </label>
+        <button class="btn fill" type="submit"><svg><use href="#wa"/></svg>Send on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What patients say</h2>
+      <p class="sub">Sample reviews. The real site would show the clinic's Google reviews.</p>
+      <div class="quotes">
+        <blockquote><span class="stars">★★★★★</span><br>Root canal done without any pain. Doctor explained everything in Hindi, which my mother really appreciated.<cite>Sample review</cite></blockquote>
+        <blockquote><span class="stars">★★★★★</span><br>Booked on WhatsApp at night and got a slot the next morning. Very clean clinic.<cite>Sample review</cite></blockquote>
+        <blockquote><span class="stars">★★★★★</span><br>My son was scared of dentists. Now he asks when his next visit is.<cite>Sample review</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">Sukoon Dental Care is a made-up clinic. This is a sample website.</div>
+  </footer>
+
+  <div class="sticky">
+    <a class="btn ghost" href="#" data-call><svg><use href="#ph"/></svg>Call</a>
+    <a class="btn fill" href="#book"><svg><use href="#wa"/></svg>Book</a>
+  </div>
+
+  <script src="../demo.js"></script>
+  <script>
+    var day = [[600, 840], [1020, 1260]];
+    Demo.openStatus(document.getElementById('status'), { 0: [[660, 840]], 1: day, 2: day, 3: day, 4: day, 5: day, 6: day });
+    var today = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', weekday: 'short' }).format(new Date());
+    var idx = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(today);
+    var row = document.querySelector('#hours tr[data-d="' + idx + '"]');
+    if (row) row.classList.add('today');
+
+    var dateInput = document.querySelector('input[name="date"]');
+    dateInput.min = new Date().toISOString().slice(0, 10);
+    document.getElementById('bookForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(this);
+      var d = new Date(f.get('date') + 'T00:00');
+      var when = d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' });
+      Demo.whatsapp('Hello, I would like to book an appointment.\n\nName: ' + f.get('name') + '\nFor: ' + f.get('reason') + '\nDay: ' + when + '\nTime: ' + f.get('time'));
+    });
+  </script>
+</body>
+</html>
