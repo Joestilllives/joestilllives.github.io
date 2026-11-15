@@ -127,3 +127,32 @@ def get_prices(cfg: dict) -> pd.DataFrame:
     else:
         raise ValueError(f"unknown data source {src!r}")
     return clean_prices(px, min_history=d.get("min_history", 260))
+
+
+_RATE_CACHE: dict = {}
+
+
+def get_rates(cfg: dict, index: pd.DatetimeIndex) -> pd.Series:
+    """Annualised cash rate (decimal) aligned to `index`.
+
+    [financing] rate_source = "constant" (uses `rate`), "yfinance" (13-week
+    T-bill, ^IRX) or "csv" (`rate_path` with columns date, rate).
+    """
+    f = cfg.get("financing", {})
+    src = f.get("rate_source", "constant")
+    if src == "constant":
+        return pd.Series(float(f.get("rate", 0.0)), index=index)
+    key = (src, f.get("rate_path"))
+    if key not in _RATE_CACHE:
+        if src == "yfinance":
+            import yfinance as yf
+            raw = yf.download("^IRX", start="1990-01-01", progress=False, auto_adjust=False)["Close"]
+            _RATE_CACHE[key] = raw.squeeze() / 100.0
+        elif src == "csv":
+            df = pd.read_csv(f["rate_path"], parse_dates=["date"]).set_index("date")
+            _RATE_CACHE[key] = df["rate"].astype(float)
+        else:
+            raise ValueError(f"unknown rate_source {src!r}")
+    r = _RATE_CACHE[key].copy()
+    r.index = pd.to_datetime(r.index).tz_localize(None)
+    return r.reindex(r.index.union(index)).ffill().reindex(index).bfill().fillna(0.0)

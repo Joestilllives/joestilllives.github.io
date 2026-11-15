@@ -73,18 +73,22 @@ def deflated_sharpe(returns: pd.Series, n_trials: int, trial_sharpes: list[float
     return probabilistic_sharpe(r, expected_max_sharpe(n_trials, sr_std))
 
 
-def summary(returns: pd.Series) -> dict:
+def summary(returns: pd.Series, rf: pd.Series | None = None) -> dict:
+    """Stats on total returns. Sharpe, Sortino and PSR use returns in excess
+    of the cash rate `rf` (daily, decimal) when given: a leveraged book must
+    beat its own financing to add anything."""
     r = returns.dropna()
     # Skip the warm-up period where the book is flat.
     nz = r.ne(0).to_numpy().nonzero()[0]
     r = r.iloc[nz[0]:] if len(nz) else r
+    x = r - rf.reindex(r.index).fillna(0.0) if rf is not None else r
     if len(r) < 2:
         return {}
     years = len(r) / TRADING_DAYS
     total = float((1 + r).prod())
     vol = float(r.std() * sqrt(TRADING_DAYS))
-    mean = float(r.mean() * TRADING_DAYS)
-    down = r[r < 0].std() * sqrt(TRADING_DAYS)
+    mean = float(x.mean() * TRADING_DAYS)
+    down = x[x < 0].std() * sqrt(TRADING_DAYS)
     dd = drawdown(r)
     cagr = total ** (1 / years) - 1 if total > 0 else -1.0
     monthly = (1 + r).resample("ME").prod() - 1
@@ -101,7 +105,7 @@ def summary(returns: pd.Series) -> dict:
         "worst_day": float(r.min()), "worst_month": float(monthly.min()),
         "var_95_daily": float(-np.percentile(r, 5)),
         "cvar_95_daily": float(-r[r <= np.percentile(r, 5)].mean()),
-        "psr": probabilistic_sharpe(r),
+        "psr": probabilistic_sharpe(x),
     }
 
 

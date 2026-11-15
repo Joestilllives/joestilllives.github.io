@@ -67,7 +67,7 @@ def cmd_validate(cfg: dict, args) -> int:
     wf = walk_forward(prices, cfg, DEFAULT_GRID, v.get("train_years", 5), v.get("test_years", 1))
     print(wf.choices.to_string(index=False, float_format=lambda x: f"{x:.2f}"))
     oos = summary(wf.oos_returns)
-    print("\n   Out-of-sample stitched track:")
+    print("\n   Out-of-sample stitched track (returns above cash):")
     print(format_stats({**{k: oos[k] for k in ("cagr", "vol", "sharpe", "max_drawdown", "psr")},
                         "dsr": wf.dsr}))
 

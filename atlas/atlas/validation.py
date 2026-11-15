@@ -48,7 +48,7 @@ def walk_forward(prices: pd.DataFrame, cfg: dict, grid: list[dict], train_years:
                  test_years: int = 1) -> WalkForwardResult:
     """Every component is causal, so each variant is simulated once over the
     full history and selection uses only returns from *before* each test window."""
-    runs = [run_backtest(prices, deep_merge(cfg, g)).returns for g in grid]
+    runs = [run_backtest(prices, deep_merge(cfg, g)).excess for g in grid]
     idx = prices.index
     start = idx[0] + pd.DateOffset(years=train_years)
     pieces, rows = [], []

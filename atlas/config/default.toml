@@ -69,6 +69,14 @@ half_spread_bps = 1.0
 impact_k = 0.5
 adv_usd = 5e8
 
+[financing]
+# Idle cash earns the cash rate; leverage pays rate + spread; shorts pay a fee.
+rate_source = "constant"     # "constant" | "yfinance" (13-week T-bill ^IRX) | "csv"
+rate = 0.0                  # used when rate_source = "constant"
+# rate_path = "data/rates.csv"  # csv: columns date, rate (annual decimal)
+borrow_spread_bps = 50
+short_fee_bps = 50
+
 [live]
 broker = "paper"            # "paper" | "alpaca"
 state_dir = "state"

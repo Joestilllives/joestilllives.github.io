@@ -19,6 +19,7 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 
+from .data import get_rates
 from .execution import CostModel, apply_buffer
 from .metrics import summary
 from .portfolio import RiskModel, target_weights
@@ -37,10 +38,18 @@ class BacktestResult:
     exposure_scale: pd.Series
     regime: pd.Series
     signals: dict
+    rf: pd.Series          # daily cash rate
+    financing: pd.Series   # daily financing P&L (fraction of equity)
+
+    @property
+    def excess(self) -> pd.Series:
+        """Returns above cash: what Sharpe, PSR, DSR and walk-forward judge."""
+        return self.returns - self.rf
 
     @property
     def stats(self) -> dict:
-        s = summary(self.returns)
+        s = summary(self.returns, self.rf)
+        s["financing_ann"] = float(self.financing.mean() * 252)
         s["avg_gross"] = float(self.weights.abs().sum(axis=1).mean())
         s["turnover_ann"] = float(self.turnover.mean() * 252)
         s["cost_drag_ann"] = float(self.costs.mean() * 252)
@@ -74,6 +83,12 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
     F = forecasts.reindex_like(prices).to_numpy()
     G = regime.reindex(prices.index).fillna(1.0).to_numpy()
     T, n = px.shape
+    fcfg = cfg.get("financing", {})
+    rf_s = get_rates(cfg, prices.index) / 252.0
+    RF = rf_s.to_numpy()
+    borrow_spread = fcfg.get("borrow_spread_bps", 50.0) / 1e4 / 252
+    short_fee = fcfg.get("short_fee_bps", 50.0) / 1e4 / 252
+    FIN = np.zeros(T)
 
     model = make_risk_model(n, cfg)
     risk = RiskManager(rcfg, pcfg.get("target_vol", 0.12))
@@ -99,7 +114,14 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
         port_r = None
         if i > 0:
             r = np.nan_to_num(simple[i])
-            port_r = float(w @ r)
+            # Financing on the book held overnight: idle cash earns the cash
+            # rate, borrowed cash (longs > equity) pays rate + spread, shorts
+            # pay a borrow fee (proceeds are posted as collateral).
+            cash = 1.0 - w.clip(min=0).sum()
+            fin = cash * RF[i] if cash >= 0 else cash * (RF[i] + borrow_spread)
+            fin -= (-w.clip(max=0)).sum() * short_fee
+            FIN[i] = fin
+            port_r = float(w @ r) + fin
             equity *= 1.0 + port_r
             w = w * (1.0 + r) / (1.0 + port_r) if port_r > -1 else np.zeros(n)
         model.update(logr[i])
@@ -130,5 +152,5 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
         weights=pd.DataFrame(W, idx, prices.columns),
         costs=pd.Series(C, idx), turnover=pd.Series(TO, idx),
         exposure_scale=pd.Series(S, idx), regime=pd.Series(G, idx),
-        signals=individual,
+        signals=individual, rf=rf_s, financing=pd.Series(FIN, idx),
     )

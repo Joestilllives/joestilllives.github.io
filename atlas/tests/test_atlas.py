@@ -133,6 +133,25 @@ class Execution(unittest.TestCase):
             self.assertEqual(len((Path(d) / "journal.jsonl").read_text().splitlines()), n)
 
 
+class Financing(unittest.TestCase):
+    def test_flat_book_earns_cash_rate(self):
+        idx = pd.bdate_range("2015-01-01", periods=600)
+        flat = pd.DataFrame(100.0, index=idx, columns=["A", "B"])
+        cfg = deep_merge(CFG, {"financing": {"rate_source": "constant", "rate": 0.04}})
+        res = run_backtest(flat, cfg)
+        self.assertTrue(np.allclose(res.weights.to_numpy(), 0.0))
+        self.assertAlmostEqual(res.returns.iloc[1:].mean() * 252, 0.04, places=6)
+        self.assertAlmostEqual(res.excess.iloc[1:].abs().max(), 0.0, places=12)
+
+    def test_leverage_costs_more_than_cash(self):
+        cfg = deep_merge(CFG, {"financing": {"rate_source": "constant", "rate": 0.05}})
+        res = run_backtest(PX, cfg)
+        long = res.weights.clip(lower=0).sum(axis=1).shift(1).fillna(0)
+        lev_days = long > 1.05
+        self.assertTrue(lev_days.any())
+        self.assertTrue((res.financing[lev_days] < 0).all())
+
+
 class Metrics(unittest.TestCase):
     def test_psr(self):
         rng = np.random.default_rng(0)

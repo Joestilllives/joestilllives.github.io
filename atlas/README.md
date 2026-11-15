@@ -42,7 +42,7 @@ file and pass `--config my.toml`.
 | `portfolio.py` | Recursive risk model: fast EWMA vols, slow EWMA correlations shrunk toward the average. **Risk-budget** sizing (forecast × target vol ÷ instrument vol × diversification multiplier) or **mean-variance** (ridge-regularised Σ⁻¹μ). Constraints: per-asset cap, gross and net caps, long-only, ex-ante vol ceiling. |
 | `risk.py` | **Drawdown ladder**: from a 10% drawdown, exposure scales down linearly; at 25% the book goes flat for 21 days, then re-arms at half size and grows back. **Lifetime kill** at 35% below the all-time high: permanent until a human resets it. **Vol-breach** cut when realised vol exceeds 2× target. **Pre-trade checks** (NaN, caps, max order size, a `KILL` file). |
 | `execution.py` | Costs: commission + half-spread + square-root market impact. A no-trade buffer that trades only to the band edge (roughly halves turnover). Share-rounded order generation. `PaperBroker` (file-backed) and `AlpacaBroker` (stdlib REST, paper endpoint by default). |
-| `backtest.py` | Event-driven daily loop with an execution lag (default: decide at the close, trade at the next close). Costs are charged on every trade. |
+| `backtest.py` | Event-driven daily loop with an execution lag (default: decide at the close, trade at the next close). Costs are charged on every trade, and financing is charged daily (cash interest, margin interest, short fees). |
 | `metrics.py` | CAGR, vol, Sharpe, Sortino, Calmar, max drawdown, VaR/CVaR, hit rates, **Probabilistic Sharpe**, and the **Deflated Sharpe**, which corrects for how many variants you tried. |
 | `validation.py` | Walk-forward selection (choose on the past, trade the unseen next year), stationary block-bootstrap Sharpe CI, 1×/2×/3× cost stress, per-signal ablation, and a **look-ahead probe** (scramble the future and check that past weights don't move). |
 | `live.py` | One daily cycle: freshness check → model → account equity → risk controls → targets → buffer → throttle → checks → submit → persist state → append to `state/journal.jsonl`. Re-running on the same day is safe. |
@@ -65,35 +65,34 @@ to 100%. With `trend_strength = 0` (pure noise) the
 unit tests require the gate to fail on every seed. A system that reports good
 results on noise is broken.
 
-## Real-data backtest: 5 ETFs, Nov 2006 – Aug 2026
+## Real-data results (default config, nothing tuned on this data)
 
-Universe: SPY, TLT, IEF, GLD, DBC (dividend-adjusted, built by
-`python scripts/build_etf5.py data/etf5.csv`; then
-`python -m atlas validate --config config/etf5.toml`). The default config
-ran **unchanged**. Nothing was tuned on this data.
+Financing is in the simulation: idle cash earns the 13-week T-bill rate, and
+leverage pays T-bills + 0.5%. Shorts pay 0.5% a year. Sharpe, PSR, DSR and
+walk-forward are all measured on **returns above cash**.
 
-| | CAGR | Vol | Sharpe | Max DD |
-| --- | --- | --- | --- | --- |
-| **Atlas** | 5.7% | 11.7% | 0.53 | −27% |
-| Atlas walk-forward out-of-sample | 5.3% | 10.5% | 0.54 | −25% |
-| SPY buy & hold | 11.1% | 19.5% | 0.64 | −55% |
-| 60/40 SPY/IEF | 8.1% | 11.0% | 0.77 | −33% |
-| Equal-weight 5 ETFs | 6.5% | 8.5% | 0.79 | −22% |
-| 50% Atlas + 50% 60/40 | 7.4% | 7.4% | 1.00 | −13% |
+| Universe | CAGR | Sharpe above cash | Max DD | OOS DSR | Gate |
+| --- | --- | --- | --- | --- | --- |
+| 28 ETFs, 2005 – Nov 2026 (`config/etf_broad.toml`, Yahoo) | 3.3% | 0.19 | −30% | 62% | **FAIL** |
+| 5 ETFs, 2006 – Aug 2026 (`config/etf5.toml`) | 4.7% | 0.33 | −25% | 91% | **FAIL** |
+| SPY buy & hold, 2005 – 2026 | 11.0% | 0.55 | −55% | | |
+| 60/40 SPY/IEF, 2005 – 2026 | 8.1% | 0.62 | −33% | | |
 
-The gate **passes**: no look-ahead, Deflated Sharpe 97%, Sharpe 0.50 at
-3× costs, bootstrap 90% CI on Sharpe [0.12, 0.94].
+What the tests say:
 
-How to read this: on its own, Atlas earned less than simply holding the
-ETFs. Its value is as a **diversifier**: daily correlation with SPY is −0.19,
-and it made +24% in 2008 and +15% in 2022, years when stocks and 60/40 fell
-hard. Trend and time-series momentum carry the result (Sharpe 0.51 and 0.67
-alone). Cross-sectional momentum and low-vol lose money on a 5-asset universe
-and should be dropped for it, but dropping them after seeing these results
-is overfitting until it is confirmed on other data. Caveats: only 5 assets;
-interest on cash and margin is not in the simulation (a rough estimate at
-1.6% T-bills puts its effect at about zero); some IEF dividends are missing
-in 2005–09; the 50/50 blend was chosen after the fact.
+- **Before financing was modelled, both universes passed the gate.** The
+  28-ETF book holds ~1.65× long and ~0.5× short on average. Paying for that
+  leverage costs ~1.7% a year, which turns a Sharpe of 0.49 into 0.19.
+  Leveraged ETFs are an expensive way to run a diversified risk-parity trend
+  book. Futures carry the leverage almost for free, which is why CTAs use them.
+- **Trend and time-series momentum are real but modest** (Sharpe above cash
+  0.3–0.5 on both universes). **Low-vol loses money in every test** (synthetic,
+  5 ETFs, 28 ETFs). Cross-sectional momentum is weak.
+- **It hedges.** Daily correlation with SPY is about 0; it made money in 2008 and 2022.
+- **The drawdown ladder is path-dependent.** On the 5-ETF set, switching it
+  off raises CAGR from 4.7% to 5.7% and the max drawdown from 25% to 33%.
+  Small changes in daily P&L shift when it triggers.
+- Survivorship: the ETF lists contain funds that still exist today.
 
 ## Going live: checklist
 
