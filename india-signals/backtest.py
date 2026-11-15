@@ -43,10 +43,15 @@ def prepare(p):
     p["size_q"] = np.nan
     p.loc[liq, "size_q"] = p[liq].groupby("date")["turn_avg20"].transform(
         lambda s: pd.qcut(s.rank(method="first"), 5, labels=False))
+    # Compare like with like: the stock's simple return vs the AVERAGE simple return
+    # of its size group. (Averaging log returns first would understate the benchmark
+    # by roughly half the variance, ~2-3% over 60 days for small caps, and make every
+    # signal look better than it is.)
     for h in HORIZONS:
-        mkt = p[liq].groupby(["date", "size_q"])[f"fwd{h}"].mean().rename(f"bm{h}")
+        p[f"simple{h}"] = np.expm1(p[f"fwd{h}"])
+        mkt = p[liq].groupby(["date", "size_q"])[f"simple{h}"].mean().rename(f"bm{h}")
         p = p.join(mkt, on=["date", "size_q"])
-        p[f"ex{h}"] = np.expm1(p[f"fwd{h}"]) - np.expm1(p[f"bm{h}"])
+        p[f"ex{h}"] = p[f"simple{h}"] - p[f"bm{h}"]
     p["vol_x"] = p["volume"] / p["vol_avg20"]
     p["deliv_jump"] = p["deliv_per"] - p["deliv_avg60"]
     return p
