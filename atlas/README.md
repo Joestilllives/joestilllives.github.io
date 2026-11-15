@@ -129,8 +129,20 @@ Before real money:
 - **3 months of paper trading must track the backtest** (`paper_india/`,
   `python scripts/paper_report.py config/india_v2.toml`).
 
-Daily run after the NSE close (15:30 IST):
+Daily run after NSE publishes its bhavcopy (~18:00 IST; the run refuses to
+trade until the official closes are out and match):
 `python -m atlas rebalance --config config/india_v2.toml --execute`.
+
+### Framework upgrades for live trading in India
+
+| Added | What it does | What it found |
+| --- | --- | --- |
+| `atlas/tax.py` | FIFO tax lots, Indian STCG/LTCG/slab rules by asset class, loss set-off and carry-forward, ₹1.25 lakh exemption, tax paid each 31 March (`[tax] enabled = true`) | v2-IN **10.3% a year after tax** vs Nifty buy-and-hold **10.9%**. Tax costs v2-IN 2.1% a year. After tax its edge is lower risk (−13% vs −36% worst loss), not return. |
+| `atlas/crosscheck.py` | Before any order, last prices must match NSE's official bhavcopy within 0.5%, or nothing trades. Fails closed if NSE is unreachable. | Caught on first use that the India data builder sent index-level prices (e.g. PHARMABEES ₹623 vs real ₹29.32). Order quantities would have been wrong. Fixed; all 15 now match exactly. |
+| `atlas/monitor.py`, `scripts/paper_report.py` | Bootstrapped expectation bands from the backtest and paper-vs-backtest tracking | Pre-committed stop rules for v2-IN: after 3 months, WARNING below −4.0%, STOP below −6.6%. After 1 year: −2.4% / −8.2%. |
+| `scripts/robustness.py` | One-at-a-time parameter perturbation (diagnostic, never used to pick settings) | Sharpe above cash 0.61–0.75 across 15 perturbations (0.65 as validated), all positive: a plateau, not a spike. The regime overlay and drawdown ladder never triggered in India. |
+| `ZerodhaBroker` | Kite Connect v3: CNC delivery orders, after-market orders after hours (fills at the next open, like the one-day lag), sells before buys | Untested against a real account. Kite tokens need a daily manual login. |
+| `buffer_floor` | Configurable minimum no-trade band (v2/v2-IN keep the validated 0.25) | A v3 candidate. Changing it needs a fresh test. |
 
 ## Atlas v2 (US): pre-registered holdout test → paper trading
 

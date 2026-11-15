@@ -108,6 +108,9 @@ def cmd_rebalance(cfg: dict, args) -> int:
     state = Path(lc.get("state_dir", "state"))
     if lc.get("broker", "paper") == "alpaca":
         broker = AlpacaBroker()
+    elif lc.get("broker") == "zerodha":
+        from .execution import ZerodhaBroker
+        broker = ZerodhaBroker(amo=lc.get("amo", True))
     else:
         broker = PaperBroker(state / "paper_account.json", cfg.get("capital", 1e6))
     rec = rebalance(prices, cfg, broker, dry_run=not args.execute, state_dir=state)

@@ -69,11 +69,25 @@ rate = 0.06                 # ~average Indian 91-day T-bill since 2009
 borrow_spread_bps = 50
 short_fee_bps = 50
 
+[tax]
+# Indian capital-gains tax model (atlas/tax.py). Off for v2-IN paper trading
+# (the pre-registered rules ignore tax); turn on to measure after-tax results.
+enabled = false
+stcg_equity = 0.20
+ltcg = 0.125
+slab = 0.312                # 30% + cess, for slab-taxed gains and cash interest
+exemption = 125000
+equity = ["NIFTYBEES.NS","JUNIORBEES.NS","BANKBEES.NS","PSUBNKBEES.NS","ITBEES.NS","PHARMABEES.NS","AUTOBEES.NS","CPSEETF.NS"]
+other = ["GOLDBEES.NS","SILVERBEES.NS","MON100.NS","MAFANG.NS","HNGSNGBEES.NS"]
+debt = ["LTGILTBEES.NS","GILT5YBEES.NS"]
+
 [live]
-broker = "paper"            # "paper" | "alpaca"
+broker = "paper"            # "paper" | "zerodha" (needs KITE_API_KEY, KITE_ACCESS_TOKEN) | "alpaca"
 state_dir = "paper_india"   # committed to git: the paper-trading record
 max_staleness_days = 5      # ignored for synthetic data
 min_order_notional = 2000.0
+crosscheck = "nse_bhavcopy"  # official NSE close must match within 0.5% or no trade
+crosscheck_tol = 0.005
 fractional = false
 
 [validation]

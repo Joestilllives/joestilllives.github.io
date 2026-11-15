@@ -47,6 +47,12 @@ def rebalance(prices: pd.DataFrame, cfg: dict, broker: Broker, dry_run: bool = T
 
     symbols = list(prices.columns)
     last_px = prices.iloc[-1].to_numpy()
+
+    # 1b) Second-source check: official exchange closes must match (fails closed).
+    crosscheck = None
+    if lcfg.get("crosscheck") == "nse_bhavcopy":
+        from .crosscheck import verify_nse
+        crosscheck = verify_nse(prices.iloc[-1], prices.index[-1], lcfg.get("crosscheck_tol", 0.005))
     accrued = 0.0
     if isinstance(broker, PaperBroker):
         # Interest accrues on the book held since the last run, at the old marks.
@@ -104,7 +110,7 @@ def rebalance(prices: pd.DataFrame, cfg: dict, broker: Broker, dry_run: bool = T
         new_w[~np.isfinite(last_px)] = 0.0
         seeded = True
     else:
-        new_w = apply_buffer(cur_w, target, ecfg.get("buffer", 0.1))
+        new_w = apply_buffer(cur_w, target, ecfg.get("buffer", 0.1), ecfg.get("buffer_floor", 0.25))
     # Throttle: no single trade above max_order_frac of equity per day. Large
     # moves (first deployment, regime flips) are worked over several days.
     lim = rcfg.get("max_order_frac", 0.25) * 0.98
@@ -143,6 +149,7 @@ def rebalance(prices: pd.DataFrame, cfg: dict, broker: Broker, dry_run: bool = T
         "gross": float(np.abs(new_w).sum()),
         "throttled": throttled,
         "seeded_from_backtest": seeded,
+        "crosscheck_max_dev": max((v["dev"] for v in crosscheck.values()), default=None) if crosscheck else None,
         "targets": {s: round(float(w), 5) for s, w in zip(symbols, new_w) if abs(w) > 1e-6},
         "orders": [{"symbol": o.symbol, "qty": o.qty, "price": o.price} for o in orders],
         "fills": fills,

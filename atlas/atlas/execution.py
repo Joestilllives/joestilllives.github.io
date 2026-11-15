@@ -36,16 +36,20 @@ class CostModel:
         return float(linear + impact.sum())
 
 
-def apply_buffer(current: np.ndarray, target: np.ndarray, buffer: float) -> np.ndarray:
+def apply_buffer(current: np.ndarray, target: np.ndarray, buffer: float,
+                 floor_frac: float = 0.25) -> np.ndarray:
     """Trade only when outside a +/- buffer band, and then only to the band edge.
 
     Buffer is in weight units, scaled by |target| so big positions get wider
     bands (absolute floor 0.25*buffer). This roughly halves turnover for a
-    small loss in tracking.
+    small loss in tracking. `floor_frac` sets the absolute band floor as a
+    fraction of `buffer` (0.25 -> 2.5% of equity at buffer=0.1). Books with
+    many small positions want a lower floor; 0.25 is kept as the default
+    because v2 / v2-IN were validated with it.
     """
     if buffer <= 0:
         return target.copy()
-    band = np.maximum(buffer * np.abs(target), buffer * 0.25)
+    band = np.maximum(buffer * np.abs(target), buffer * floor_frac)
     diff = target - current
     out = current.copy()
     hi = diff > band
@@ -189,5 +193,65 @@ class AlpacaBroker(Broker):
                 "symbol": o.symbol, "qty": str(abs(round(o.qty, 6))),
                 "side": "buy" if o.qty > 0 else "sell",
                 "type": "market", "time_in_force": "day",
+            }))
+        return out
+
+
+class ZerodhaBroker(Broker):
+    """Zerodha Kite Connect v3 adapter (stdlib only). UNTESTED against a live
+    account: prove it with tiny size first.
+
+    Credentials from the environment: KITE_API_KEY and KITE_ACCESS_TOKEN. Kite
+    access tokens expire daily and need an interactive login (exchange rules), so
+    a person must refresh the token each trading day before the run.
+
+    Orders go as CNC (delivery) market orders. After market hours they are
+    placed as AMO (after-market orders) and execute at the next session's open,
+    which matches the backtest's one-day lag.
+    """
+
+    BASE = "https://api.kite.trade"
+
+    def __init__(self, amo: bool = True):
+        self.amo = amo
+        self.headers = {"X-Kite-Version": "3",
+                        "Authorization": f"token {os.environ['KITE_API_KEY']}:{os.environ['KITE_ACCESS_TOKEN']}"}
+
+    def _req(self, method: str, path: str, form: dict | None = None):
+        import urllib.parse
+        data = urllib.parse.urlencode(form).encode() if form else None
+        h = dict(self.headers)
+        if data:
+            h["Content-Type"] = "application/x-www-form-urlencoded"
+        req = urllib.request.Request(self.BASE + path, data=data, headers=h, method=method)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            body = json.loads(r.read())
+        if body.get("status") != "success":
+            raise RuntimeError(f"Kite error: {body}")
+        return body["data"]
+
+    def _holdings(self) -> list:
+        return self._req("GET", "/portfolio/holdings")
+
+    def equity(self) -> float:
+        cash = float(self._req("GET", "/user/margins")["equity"]["net"])
+        return cash + sum((h["quantity"] + h.get("t1_quantity", 0)) * h["last_price"] for h in self._holdings())
+
+    def positions(self) -> dict[str, float]:
+        return {h["tradingsymbol"] + ".NS": float(h["quantity"] + h.get("t1_quantity", 0))
+                for h in self._holdings()}
+
+    def submit(self, orders: list[Order]) -> list[dict]:
+        out = []
+        variety = "amo" if self.amo else "regular"
+        # Sells first, so their proceeds fund the buys.
+        for o in sorted(orders, key=lambda o: o.qty):
+            qty = int(round(abs(o.qty)))
+            if qty == 0:
+                continue
+            out.append(self._req("POST", f"/orders/{variety}", {
+                "tradingsymbol": o.symbol.replace(".NS", ""), "exchange": "NSE",
+                "transaction_type": "BUY" if o.qty > 0 else "SELL",
+                "order_type": "MARKET", "quantity": qty, "product": "CNC", "validity": "DAY",
             }))
         return out

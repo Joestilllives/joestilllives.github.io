@@ -173,6 +173,82 @@ class PaperFinancing(unittest.TestCase):
             self.assertAlmostEqual(amt, (eq * 0.0365 - 500 * 0.0365) * 10 / 365, places=6)
 
 
+class Tax(unittest.TestCase):
+    def setUp(self):
+        from atlas.tax import TaxConfig, TaxLedger
+        self.L = TaxLedger(TaxConfig(classes={"G": "other", "D": "debt"}))
+        self.d = pd.Timestamp
+
+    def test_short_term_equity_fifo(self):
+        L, d = self.L, self.d
+        L.buy("E", 100, 10.0, d("2024-05-01"))
+        L.buy("E", 100, 20.0, d("2024-06-01"))
+        L.sell("E", 150, 30.0, d("2024-09-01"))      # FIFO: 100@10 + 50@20 -> 2000 + 500
+        self.assertAlmostEqual(L.settle(2025), 2500 * 0.20)
+        self.assertEqual(sum(u for u, _, _ in L.lots["E"]), 50)
+
+    def test_long_term_exemption_and_other_classes(self):
+        L, d = self.L, self.d
+        L.buy("E", 1000, 100.0, d("2023-01-02"))
+        L.sell("E", 1000, 400.0, d("2024-06-03"))    # LT gain 300k, 125k exempt
+        L.buy("G", 100, 100.0, d("2024-06-03"))
+        L.sell("G", 100, 150.0, d("2024-09-03"))     # gold short-term -> slab
+        L.buy("D", 100, 100.0, d("2022-06-03"))
+        L.sell("D", 100, 110.0, d("2024-09-03"))     # debt -> slab even if long
+        expect = 175_000 * 0.125 + 5000 * 0.312 + 1000 * 0.312
+        self.assertAlmostEqual(L.settle(2025), expect)
+
+    def test_losses_offset_and_carry_forward(self):
+        L, d = self.L, self.d
+        L.buy("E", 100, 50.0, d("2024-05-01"))
+        L.sell("E", 100, 30.0, d("2024-06-01"))      # ST loss 2000
+        self.assertEqual(L.settle(2025), 0.0)
+        L.buy("E", 100, 30.0, d("2025-05-01"))
+        L.sell("E", 100, 60.0, d("2025-06-01"))      # ST gain 3000, 2000 carried loss
+        self.assertAlmostEqual(L.settle(2026), 1000 * 0.20)
+
+    def test_backtest_tax_reduces_returns(self):
+        cfg = deep_merge(CFG, {"tax": {"enabled": True}})
+        a, b = run_backtest(PX, CFG), run_backtest(PX, cfg)
+        self.assertIsNone(a.tax)
+        self.assertGreaterEqual(b.tax.sum(), 0.0)
+        self.assertLessEqual(b.equity.iloc[-1], a.equity.iloc[-1] + 1e-6)
+
+
+class CrossCheck(unittest.TestCase):
+    def test_mismatch_and_missing_fail_closed(self):
+        from unittest import mock
+        from atlas import crosscheck
+        official = pd.Series({"NIFTYBEES": 286.64, "GOLDBEES": 111.91})
+        last = pd.Series({"NIFTYBEES.NS": 286.64, "GOLDBEES.NS": 111.91})
+        with mock.patch.object(crosscheck, "nse_bhavcopy", return_value=official):
+            rep = crosscheck.verify_nse(last, pd.Timestamp("2026-11-13"))
+            self.assertEqual(rep["NIFTYBEES.NS"]["dev"], 0.0)
+            with self.assertRaises(crosscheck.DataCheckError):
+                crosscheck.verify_nse(last * 1.02, pd.Timestamp("2026-11-13"))
+            with self.assertRaises(crosscheck.DataCheckError):
+                crosscheck.verify_nse(pd.Series({"ITBEES.NS": 35.5}), pd.Timestamp("2026-11-13"))
+
+    def test_unreachable_source_fails_closed(self):
+        from unittest import mock
+        from atlas import crosscheck
+        with mock.patch("urllib.request.urlopen", side_effect=OSError("down")):
+            with self.assertRaises(crosscheck.DataCheckError):
+                crosscheck.nse_bhavcopy(pd.Timestamp("2026-11-13"))
+
+
+class Monitor(unittest.TestCase):
+    def test_bands_and_status(self):
+        from atlas.monitor import expectation_band, status
+        rng = np.random.default_rng(0)
+        r = pd.Series(rng.normal(0.0004, 0.006, 3000), pd.bdate_range("2010-01-01", periods=3000))
+        b = expectation_band(r, 63, n_boot=500)
+        self.assertLess(b[1], b[5]); self.assertLess(b[5], b[50]); self.assertLess(b[50], b[99])
+        self.assertEqual(status(b[50], b), "OK")
+        self.assertEqual(status((b[1] + b[5]) / 2, b), "WARNING")
+        self.assertEqual(status(b[1] - 0.01, b), "STOP")
+
+
 class Metrics(unittest.TestCase):
     def test_psr(self):
         rng = np.random.default_rng(0)

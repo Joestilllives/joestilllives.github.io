@@ -45,6 +45,10 @@ def build_india_prices(start: str = "2005-01-01") -> pd.DataFrame:
         else:
             r = e
         r = r[~r.index.duplicated()].dropna()
-        out[etf] = (1 + r).cumprod() * 100.0
+        lvl = (1 + r).cumprod()
+        # Anchor to the ETF's real last traded price so levels (and therefore
+        # order quantities) are real; returns are unchanged by the scaling.
+        last_real = raw[etf].dropna()
+        out[etf] = lvl * (float(last_real.iloc[-1]) / float(lvl.iloc[-1])) if len(last_real) else lvl * 100.0
     px = pd.DataFrame(out).sort_index()
     return px.loc[px.notna().any(axis=1)]

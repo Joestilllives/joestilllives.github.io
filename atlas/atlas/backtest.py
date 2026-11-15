@@ -26,6 +26,7 @@ from .portfolio import RiskModel, target_weights
 from .regime import regime_multiplier
 from .risk import RiskManager
 from .signals import build_forecasts
+from .tax import TaxConfig, TaxLedger, financial_year
 
 
 @dataclass
@@ -40,6 +41,8 @@ class BacktestResult:
     signals: dict
     rf: pd.Series          # daily cash rate
     financing: pd.Series   # daily financing P&L (fraction of equity)
+    tax: pd.Series | None = None   # tax paid (fraction of equity) on FY-end days
+    ledger: object = None
 
     @property
     def excess(self) -> pd.Series:
@@ -50,6 +53,8 @@ class BacktestResult:
     def stats(self) -> dict:
         s = summary(self.returns, self.rf)
         s["financing_ann"] = float(self.financing.mean() * 252)
+        if self.tax is not None:
+            s["tax_drag_ann"] = float(self.tax.sum() / max(len(self.tax) / 252, 1e-9))
         s["avg_gross"] = float(self.weights.abs().sum(axis=1).mean())
         s["turnover_ann"] = float(self.turnover.mean() * 252)
         s["cost_drag_ann"] = float(self.costs.mean() * 252)
@@ -89,6 +94,11 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
     borrow_spread = fcfg.get("borrow_spread_bps", 50.0) / 1e4 / 252
     short_fee = fcfg.get("short_fee_bps", 50.0) / 1e4 / 252
     FIN = np.zeros(T)
+    tcfg = cfg.get("tax", {})
+    ledger = TaxLedger(TaxConfig.from_cfg(tcfg)) if tcfg.get("enabled", False) else None
+    TAX = np.zeros(T)
+    syms = list(prices.columns)
+    dates = prices.index
 
     model = make_risk_model(n, cfg)
     risk = RiskManager(rcfg, pcfg.get("target_vol", 0.12))
@@ -102,8 +112,18 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
 
     def execute(target: np.ndarray, i: int) -> None:
         nonlocal w, equity
-        new = apply_buffer(w, target, buf)
+        new = apply_buffer(w, target, buf, ecfg.get("buffer_floor", 0.25))
         dw = new - w
+        if ledger is not None:
+            for k in np.nonzero(np.abs(dw) > 1e-12)[0]:
+                p = px[i, k]
+                if not np.isfinite(p) or p <= 0:
+                    continue
+                units = dw[k] * equity / p
+                if units > 0 and new[k] > 0:
+                    ledger.buy(syms[k], units, p, dates[i])
+                elif units < 0 and w[k] > 0:
+                    ledger.sell(syms[k], min(-units, w[k] * equity / p), p, dates[i])
         c = cost_model.cost_frac(dw, model.vol, equity)
         equity *= 1.0 - c
         w = new
@@ -124,6 +144,17 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
             port_r = float(w @ r) + fin
             equity *= 1.0 + port_r
             w = w * (1.0 + r) / (1.0 + port_r) if port_r > -1 else np.zeros(n)
+        if ledger is not None and i > 0:
+            if FIN[i] > 0:
+                ledger.add_interest(FIN[i] * equity / (1.0 + port_r))
+            if financial_year(dates[i]) != financial_year(dates[i - 1]):
+                tax = ledger.settle(financial_year(dates[i - 1]))
+                if tax > 0:
+                    frac = min(tax / equity, 0.99)
+                    # Paid from cash: holdings unchanged, so weights scale up.
+                    w = w / (1.0 - frac)
+                    equity *= 1.0 - frac
+                    TAX[i] = frac
         model.update(logr[i])
         risk.on_equity(equity, port_r)
 
@@ -153,4 +184,5 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
         costs=pd.Series(C, idx), turnover=pd.Series(TO, idx),
         exposure_scale=pd.Series(S, idx), regime=pd.Series(G, idx),
         signals=individual, rf=rf_s, financing=pd.Series(FIN, idx),
+        tax=pd.Series(TAX, idx) if ledger is not None else None, ledger=ledger,
     )
