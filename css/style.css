@@ -108,7 +108,7 @@ min-height:100vh;
  background-position: center;*/
   background:#FF4081;
   display:grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(2, 1fr);
 grid-template-rows: auto;
 grid-auto-rows: minmax(34vh, 1fr);
   grid-gap: 5px;
@@ -138,10 +138,6 @@ grid-row:1/2;
   padding:6px 0;
 }
 .projectlist:hover{ border-color:orange; }
-.one  { background-image:url("https://shots.codepen.io/JoeStillLives/pen/OdvdWv-800.jpg"); }
-.two  { background-image:url("https://shots.codepen.io/JoeStillLives/pen/ErMQeg-800.jpg"); }
-.three{ background-image:url("https://shots.codepen.io/JoeStillLives/pen/Lqadjr-800.jpg"); }
-.four { background-image:url("https://shots.codepen.io/JoeStillLives/pen/YBJwZe-800.jpg"); }
 
 #Contact_me{
   height: 40vh;
@@ -348,10 +344,7 @@ z-index:2;
 /* Second Chance Patents: ruled paper with dark ink */
 .patents{ background:repeating-linear-gradient(0deg, transparent 0 27px, rgba(26,107,74,.16) 27px 28px), #f4efe2; }
 .patents span{ color:#13372a; }
-@media(min-width:901px){
-  /* 8 tiles in 3 columns: let the last one fill the final row */
-  .projectlist:last-child{ grid-column:span 2; }
-}
+
 
 @media(max-width:900px){
   #projects{ grid-template-columns:repeat(2, 1fr); }

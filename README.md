@@ -4,7 +4,7 @@ Personal site of Rahul Gupta (Joe), served by GitHub Pages at <https://joestilll
 
 | Path | What it is |
 | --- | --- |
-| `/` | Portfolio: skills, CodePen projects, contact links. Originally built on [CodePen](https://codepen.io/JoeStillLives/pen/jddqQb). |
+| `/` | Portfolio: skills, projects, contact links. Originally built on [CodePen](https://codepen.io/JoeStillLives/pen/jddqQb). |
 | [`/tilt/`](https://joestilllives.github.io/tilt/) | **Tilt**: tilt your phone to change the note, touch to play it, shake for a drum. Installable web app. |
 | [`/buddy/`](https://joestilllives.github.io/buddy/) | **Pip**: a pocket buddy that saves voice notes in English and Hindi. Installable web app. |
 | [`/aqi/`](https://joestilllives.github.io/aqi/) | **Clear Air Check**: India's official AQI compared with independent sources, all on the Indian AQI scale. |
