@@ -10,7 +10,7 @@ Personal site of Rahul Gupta (Joe), served by GitHub Pages at <https://joestilll
 | [`/aqi/`](https://joestilllives.github.io/aqi/) | **Clear Air Check**: India's official AQI compared with independent sources, all on the Indian AQI scale. |
 | [`/patents/`](https://joestilllives.github.io/patents/) | **Second Chance Patents**: expired patents re-imagined for underprivileged communities, with the BigQuery queries used to find them. |
 | [`/services/`](https://joestilllives.github.io/services/) | **Websites for local businesses**: what I offer, pricing, and links to the sample sites. |
-| [`/demos/`](https://joestilllives.github.io/demos/clinic/) | Sample sites for made-up businesses (clinic, coaching centre, home bakery), linked from `/services/`. |
+| [`/demos/`](https://joestilllives.github.io/demos/clinic/) | Sample sites for made-up businesses (clinic, coaching centre, home bakery) and a WhatsApp-style AI assistant demo (`/demos/assistant/`), linked from `/services/`. |
 
 Everything is plain HTML, CSS and JavaScript with no build step. Push to `master` and Pages publishes it.
 

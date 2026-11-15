@@ -41,7 +41,7 @@
     .promise { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:32px; font-weight:700; font-size:15px; }
     .promise span::before { content:"\2713  "; color:var(--orange); }
 
-    section { padding:64px 0; }
+    section { padding:64px 0; scroll-margin-top:56px; }
     h2 { font-family:Coiny, sans-serif; font-weight:400; font-size:clamp(28px, 4.2vw, 42px); line-height:1.15; }
     .sub { color:var(--muted); margin:6px 0 28px; max-width:40em; }
 
@@ -84,6 +84,17 @@
     .addons span { background:#fff; border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:14px; font-weight:700; }
     .note { margin-top:14px; font-size:14px; color:var(--muted); }
 
+    .ai { display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:24px; padding:28px; }
+    .ai .new { display:inline-block; background:var(--wa); color:#063b1c; font-weight:800; font-size:13px; padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+    .ai ul { list-style:none; display:grid; gap:8px; margin:16px 0 20px; }
+    .ai li::before { content:"\2713  "; color:var(--plum); font-weight:800; }
+    .ai .actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .chat { background:#efeae2; border-radius:18px; padding:16px; display:grid; gap:8px; font-size:15px; }
+    .chat p { max-width:85%; padding:8px 12px; border-radius:10px; box-shadow:0 1px .5px rgba(0,0,0,.12); }
+    .chat .c { justify-self:end; background:#d9fdd3; }
+    .chat .b { background:#fff; }
+    .ai-price { margin-top:16px; display:flex; flex-wrap:wrap; gap:10px 24px; font-size:15px; color:var(--muted); }
+    .ai-price b { color:var(--ink); font-size:20px; display:block; }
     .faq { max-width:760px; }
     details { border-bottom:1px solid var(--line); padding:16px 0; }
     summary { font-weight:800; font-size:18px; cursor:pointer; }
@@ -98,7 +109,8 @@
 
     @media (max-width:880px) {
       nav.top .links a:not(.keep) { display:none; }
-      .pains, .demos, .plans { grid-template-columns:1fr; }
+      .pains, .demos, .plans, .ai { grid-template-columns:1fr; }
+      .ai { padding:20px; }
       .steps { grid-template-columns:1fr 1fr; }
       .plan.best { margin-top:8px; }
     }
@@ -115,6 +127,7 @@
       <a class="name" href="/">Joe</a>
       <div class="links">
         <a href="#examples">Examples</a>
+        <a href="#assistant">AI assistant</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">Questions</a>
         <a class="keep" href="#contact">Contact</a>
@@ -169,6 +182,38 @@
           <div class="shot bake">🎂</div>
           <div class="body"><b>Home bakery</b><p>A menu customers order from like a food app, and the full order lands on your WhatsApp. No commission.</p><span class="go">Open example &rarr;</span></div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="assistant" style="padding-top:0">
+    <div class="wrap">
+      <div class="ai">
+        <div>
+          <span class="new">New</span>
+          <h2>An AI assistant that answers your customers on WhatsApp</h2>
+          <p class="sub" style="margin-bottom:0">Most customers ask the same questions: timings, prices, "do you deliver?" Your assistant answers instantly, day and night, in English or Hinglish, so you only deal with real orders and bookings.</p>
+          <ul>
+            <li>Replies in seconds, even at 2 am</li>
+            <li>Answers only from your own prices, menu and timings</li>
+            <li>Sends complaints and anything it's unsure about straight to you</li>
+            <li>Works on your existing WhatsApp Business number or on your website</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dark" href="/demos/assistant/">Try the demo</a>
+            <a class="btn wa js-wa" href="#contact" data-msg="Hi Joe, I'm interested in the AI WhatsApp assistant for my business."><svg><use href="#wa"/></svg>Ask about it</a>
+          </div>
+          <div class="ai-price">
+            <div><b>₹4,999 + ₹799/mo</b>On your website</div>
+            <div><b>₹9,999 + ₹1,499/mo</b>On your WhatsApp number</div>
+          </div>
+        </div>
+        <div class="chat" aria-hidden="true">
+          <p class="c">Chocolate cake kitne ki hai? Eggless milega?</p>
+          <p class="b">Chocolate truffle cake is ₹650 for ½ kg 🍫 and yes, it's eggless! Want me to book one for tomorrow?</p>
+          <p class="c">Haan, 1 kg, delivery chahiye</p>
+          <p class="b">Done ✅ 1 kg chocolate truffle, delivery tomorrow. Total ₹1,250 including delivery. Gudiya will confirm with a UPI link shortly.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -232,6 +277,7 @@
         </div>
       </div>
       <div class="addons">
+        <span>+ AI assistant from ₹799/month</span>
         <span>+ Google review requests on WhatsApp</span>
         <span>+ Appointment reminders</span>
         <span>+ Festive offer pages</span>
@@ -248,6 +294,7 @@
       <details><summary>Why should I pay before seeing anything?</summary><p>You don't. I build your site first and send you a link. You pay the setup fee only when you're happy with it.</p></details>
       <details><summary>Who owns the website?</summary><p>You do. The domain is registered in your name. If you ever stop the monthly plan, I hand everything over to you.</p></details>
       <details><summary>What does the monthly fee cover?</summary><p>Keeping the site running and secure, your updates, and keeping your Google listing accurate. There are no extra hosting bills.</p></details>
+      <details><summary>Will the AI assistant say something wrong to my customers?</summary><p>It only answers from the information you give it: your prices, menu, timings and policies. If a question isn't covered, or a customer is upset, it says it's passing the message on and alerts you. You can read every conversation, and I adjust it whenever you want.</p></details>
       <details><summary>Can I cancel the monthly plan?</summary><p>Yes, any time, with one month's notice. No lock-in.</p></details>
       <details><summary>Will I show up on Google?</summary><p>I set up your Google Business Profile and make the site easy for Google to read. Showing up for "near me" searches also depends on reviews and how active your listing is, and I'll help with both.</p></details>
     </div>
