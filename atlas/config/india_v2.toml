@@ -1,0 +1,81 @@
+# Atlas v2-IN: v2 rules adapted to India (pre-registered 2026-11-15, see PREREGISTRATION.md)
+# Currency: INR.
+capital = 1_000_000.0       # Rs 10 lakh
+
+[data]
+source = "india"            # NSE ETFs, index proxies before listing (atlas/india.py)
+start = "2005-01-01"
+min_history = 260
+
+[signals]
+method = "static"           # v2: fixed weights, nothing estimated from data
+[signals.weights]
+trend = 0.6
+ts_momentum = 0.4
+[signals.params.trend]
+speeds = [[8, 32], [16, 64], [32, 128], [64, 256]]
+
+[regime]
+enabled = true
+vol_ratio_start = 1.5       # start de-risking when 20d vol > 1.5x 2y vol
+corr_z_start = 1.5          # ...or average correlation > 1.5 sd above normal
+use_breadth = false         # only for long-biased books
+floor = 0.35
+smooth_span = 5
+
+[risk_model]
+vol_span = 35
+corr_halflife = 126
+shrink = 0.3
+warmup = 60
+
+[portfolio]
+method = "risk_budget"      # "risk_budget" | "mean_variance"
+target_vol = 0.10           # annualised (v2: lower, reachable without leverage)
+vol_ceiling_mult = 1.5      # hard ex-ante ceiling = 18%
+max_weight = 0.25           # per instrument, fraction of equity
+max_gross = 1.0             # v2: NO LEVERAGE (longs + shorts <= 100% of capital)
+long_only = true            # India: no overnight shorts in the cash segment
+max_idm = 2.5
+assumed_ic = 0.05           # mean_variance only
+ridge = 0.1
+
+[risk]
+dd_soft = 0.10              # start cutting exposure
+dd_hard = 0.25              # flatten and halt
+dd_min_scale = 0.30
+halt_days = 21
+dd_kill = 0.35              # from all-time high, permanent until a human resets state
+rearm_scale = 0.5
+vol_window = 21
+vol_breach_mult = 2.0
+max_order_frac = 0.25
+kill_switch_file = "KILL"   # touch atlas/KILL to stop all trading
+
+[execution]
+lag = 1                     # days between signal and trade
+rebalance_every = 1
+buffer = 0.10
+commission_bps = 2.0        # stamp duty, STT, exchange, SEBI, GST, DP charges
+half_spread_bps = 10.0      # NSE ETF spreads, sector ETFs are wider
+impact_k = 0.5
+adv_usd = 5e7               # average daily traded value per ETF, in account currency (Rs 5 crore)
+
+[financing]
+# Idle cash earns the cash rate; leverage pays rate + spread; shorts pay a fee.
+rate_source = "constant"
+rate = 0.06                 # ~average Indian 91-day T-bill since 2009
+# rate_path = "data/rates.csv"  # csv: columns date, rate (annual decimal)
+borrow_spread_bps = 50
+short_fee_bps = 50
+
+[live]
+broker = "paper"            # "paper" | "alpaca"
+state_dir = "paper_india"   # committed to git: the paper-trading record
+max_staleness_days = 5      # ignored for synthetic data
+min_order_notional = 2000.0
+fractional = false
+
+[validation]
+train_years = 5
+test_years = 1

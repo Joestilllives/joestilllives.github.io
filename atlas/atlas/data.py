@@ -94,6 +94,34 @@ def load_yfinance(symbols: list[str], start: str = "2005-01-01") -> pd.DataFrame
     return df.sort_index().astype(float)
 
 
+def _mask_round_trips(px: pd.DataFrame, jump: float = 0.12, back_within: float = 0.03,
+                      max_days: int = 5) -> pd.DataFrame:
+    """Mask bad prints: a jump of more than `jump` after which the price returns
+    to within `back_within` of its pre-jump level inside `max_days` observations.
+    Catches mishandled unit splits (-90% ... +900%) and fat-finger quotes, while
+    keeping genuine moves (which do not snap back to the exact prior level)."""
+    out = px.copy()
+    for col in out.columns:
+        s = out[col].dropna()
+        v = s.to_numpy().copy()
+        bad = np.zeros(len(v), dtype=bool)
+        i = 1
+        while i < len(v):
+            if abs(v[i] / v[i - 1] - 1) > jump:
+                for j in range(1, max_days + 1):
+                    if i + j >= len(v):
+                        break
+                    back = abs(v[i + j] / v[i - 1] - 1) < back_within
+                    # Mishandled split: collapse >80%, then a >4x rebound.
+                    split = v[i] / v[i - 1] < 0.2 and v[i + j] / v[i + j - 1] > 4.0
+                    if back or split:
+                        bad[i:i + j] = True
+                        break
+            i += 1
+        out.loc[s.index[bad], col] = np.nan
+    return out
+
+
 def clean_prices(prices: pd.DataFrame, max_ffill: int = 5, max_abs_ret: float = 0.5,
                  min_history: int = 260) -> pd.DataFrame:
     """Defensive cleaning. Bad data is the #1 killer of automated systems.
@@ -106,6 +134,7 @@ def clean_prices(prices: pd.DataFrame, max_ffill: int = 5, max_abs_ret: float = 
     px = prices.copy().sort_index()
     px = px[~px.index.duplicated(keep="last")]
     px = px.where(px > 0)
+    px = _mask_round_trips(px)
     r = px.pct_change(fill_method=None)
     spike = (r.abs() > max_abs_ret) & (r.shift(-1).abs() > max_abs_ret * 0.5) & (np.sign(r) != np.sign(r.shift(-1)))
     px = px.mask(spike)
@@ -122,6 +151,9 @@ def get_prices(cfg: dict) -> pd.DataFrame:
                               trend_strength=d.get("trend_strength", 0.45))
     elif src == "csv":
         px = load_csv(d["path"])
+    elif src == "india":
+        from .india import build_india_prices
+        px = build_india_prices(d.get("start", "2005-01-01"))
     elif src == "yfinance":
         px = load_yfinance(d["symbols"], d.get("start", "2005-01-01"))
     else:
