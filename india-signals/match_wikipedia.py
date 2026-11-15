@@ -11,7 +11,7 @@ Usage: python3 match_wikipedia.py PANEL.pkl BHAVCOPY.csv EXACT.csv OUT.csv [N]
 import csv, json, re, subprocess, sys, time, urllib.parse
 import pandas as pd
 
-UA = "market-research-script/0.1 (personal research)"
+UA = "market-research-script/0.1 (https://joestilllives.github.io; personal research)"
 STOP = {"LTD", "LTD.", "LIMITED", "THE", "CO", "CO.", "OF", "AND", "&", "CORP", "CORPN", "INDIA", "IND",
         "(I)", "(INDIA)", "COMPANY", "INDUSTRIES", "INDS", "INDUSTRY"}
 COMPANYISH = re.compile(r"compan|bank|conglomerat|manufactur|corporat|\bfirm\b|enterprise|insur|producer|"
