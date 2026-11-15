@@ -94,7 +94,45 @@ What the tests say:
   Small changes in daily P&L shift when it triggers.
 - Survivorship: the ETF lists contain funds that still exist today.
 
-## Atlas v2: pre-registered holdout test → paper trading
+## India: Atlas v2-IN (current target market)
+
+The same pre-registration discipline: rules and criteria were committed before
+any strategy ran on Indian data ([`PREREGISTRATION.md`](PREREGISTRATION.md),
+India section; [`config/india_v2.toml`](config/india_v2.toml)). India forces
+three changes: **long-only** (no overnight shorts in the cash segment),
+**6% cash rate**, and Indian costs. The universe is 15 NSE ETFs
+([`atlas/india.py`](atlas/india.py)) with NSE index history before listing.
+Yahoo's Indian data has mishandled unit splits (−90% … +900%, Dec 2019) and
+bad prints. These are removed by the cleaner.
+
+`python scripts/india_holdout.py`, Jun 2009 – Nov 2026:
+
+| | CAGR | Vol | Sharpe above 6% cash | Max DD |
+| --- | --- | --- | --- | --- |
+| **v2-IN** | **12.4%** | 8.8% | **0.68** | **−13%** |
+| Nifty 50 (NIFTYBEES) | 11.6% | 16.0% | 0.39 | −36% |
+| 80% Nifty + 20% v2-IN | 11.9% | 14.0% | 0.45 | −31% |
+
+**Tier 1 PASS and Tier 2 statistical test PASS** (Deflated Sharpe 0.959, just
+over 0.95). Still Sharpe 0.57 at 3× costs. Profits are spread across all 15
+ETFs, led by gold, Nasdaq 100 and IT. The ten best days give only 9% of the gain.
+
+Before real money:
+- **Taxes are not modelled.** At 3.6× turnover most gains are short-term
+  (20% STCG), while a Nifty holder defers tax. A rough estimate puts v2-IN at
+  ~10% a year after tax against ~11% for buy-and-hold Nifty. The
+  advantage after tax is the much lower risk, not higher return.
+- The 6% cash rate is above what a liquid ETF actually pays (~4% net), so
+  CAGR is overstated by roughly 0.5% a year. Sharpe above cash is not affected.
+- Index proxies before ETF listing exclude dividends. The ETFs are survivors.
+- A Deflated Sharpe of 0.959 passes by a small margin.
+- **3 months of paper trading must track the backtest** (`paper_india/`,
+  `python scripts/paper_report.py config/india_v2.toml`).
+
+Daily run after the NSE close (15:30 IST):
+`python -m atlas rebalance --config config/india_v2.toml --execute`.
+
+## Atlas v2 (US): pre-registered holdout test → paper trading
 
 Rules, universes and pass criteria were committed **before** the holdout run
 ([`PREREGISTRATION.md`](PREREGISTRATION.md), [`config/v2.toml`](config/v2.toml)):
