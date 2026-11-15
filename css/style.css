@@ -108,7 +108,7 @@ min-height:100vh;
  background-position: center;*/
   background:#FF4081;
   display:grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(2, 1fr);
 grid-template-rows: auto;
 grid-auto-rows: minmax(34vh, 1fr);
   grid-gap: 5px;
@@ -138,10 +138,6 @@ grid-row:1/2;
   padding:6px 0;
 }
 .projectlist:hover{ border-color:orange; }
-.one  { background-image:url("https://shots.codepen.io/JoeStillLives/pen/OdvdWv-800.jpg"); }
-.two  { background-image:url("https://shots.codepen.io/JoeStillLives/pen/ErMQeg-800.jpg"); }
-.three{ background-image:url("https://shots.codepen.io/JoeStillLives/pen/Lqadjr-800.jpg"); }
-.four { background-image:url("https://shots.codepen.io/JoeStillLives/pen/YBJwZe-800.jpg"); }
 
 #Contact_me{
   height: 40vh;
@@ -162,6 +158,7 @@ background-color: #42b0e2;
   color:white;
 }
 
+.Contacts .icon{ font-size:3em; }
 .Contacts{
   padding:10px;
   margin:10px;
@@ -234,12 +231,13 @@ h1, h2, h3, .glitch{ line-height:1.15; }
   font-weight:700;
   font-size:1.1em;
 }
-.languages i{
+.icon{ height:1em; fill:currentColor; display:block; flex:none; }
+.languages .icon{
   color:orange;
   font-size:4.5em;
   transition:transform .6s;
 }
-.languages li:hover i{ transform:rotate(360deg); }
+.languages li:hover .icon{ transform:rotate(360deg); }
 .glitch{
   font-size:2em;
   color: black;
@@ -340,6 +338,13 @@ z-index:2;
 .pip { background:radial-gradient(circle at 36% 40%, #ffb43c 0 7%, transparent 8%),
                   radial-gradient(circle at 64% 40%, #ffb43c 0 7%, transparent 8%),
                   #121214; }
+/* Clear Air Check: a dark tile with the app's AQI-colour ring */
+.aqi { background:radial-gradient(circle at 50% 34%, #0f2a1f 0 12%, transparent 12.5% 19%, #0f2a1f 19.5%),
+                  conic-gradient(from 200deg at 50% 34%, #2f9e44, #94c11f, #f2c230, #ef8a24, #d9381e, #8f1d1d, #2f9e44); }
+/* Second Chance Patents: ruled paper with dark ink */
+.patents{ background:repeating-linear-gradient(0deg, transparent 0 27px, rgba(26,107,74,.16) 27px 28px), #f4efe2; }
+.patents span{ color:#13372a; }
+
 
 @media(max-width:900px){
   #projects{ grid-template-columns:repeat(2, 1fr); }
@@ -358,11 +363,11 @@ z-index:2;
   #projects{ grid-auto-rows:auto; }
   .projectlist{ min-height:28vh; }
   #skillset{ min-height:0; }
-  .languages i{ font-size:3em; }
+  .languages .icon{ font-size:3em; }
 }
 
 @media (prefers-reduced-motion: reduce){
   *{ scroll-behavior:auto !important; }
   .arrow-down, .glitch:before, .glitch:after, .Contacts:hover{ animation:none !important; }
-  .languages i{ transition:none; }
+  .languages .icon{ transition:none; }
 }
