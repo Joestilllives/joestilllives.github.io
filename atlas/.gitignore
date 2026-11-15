@@ -3,3 +3,4 @@ reports/
 KILL
 __pycache__/
 *.egg-info/
+data/

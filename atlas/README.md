@@ -65,6 +65,36 @@ to 100%. With `trend_strength = 0` (pure noise) the
 unit tests require the gate to fail on every seed. A system that reports good
 results on noise is broken.
 
+## Real-data backtest: 5 ETFs, Nov 2006 – Aug 2026
+
+Universe: SPY, TLT, IEF, GLD, DBC (dividend-adjusted, built by
+`python scripts/build_etf5.py data/etf5.csv`; then
+`python -m atlas validate --config config/etf5.toml`). The default config
+ran **unchanged**. Nothing was tuned on this data.
+
+| | CAGR | Vol | Sharpe | Max DD |
+| --- | --- | --- | --- | --- |
+| **Atlas** | 5.7% | 11.7% | 0.53 | −27% |
+| Atlas walk-forward out-of-sample | 5.3% | 10.5% | 0.54 | −25% |
+| SPY buy & hold | 11.1% | 19.5% | 0.64 | −55% |
+| 60/40 SPY/IEF | 8.1% | 11.0% | 0.77 | −33% |
+| Equal-weight 5 ETFs | 6.5% | 8.5% | 0.79 | −22% |
+| 50% Atlas + 50% 60/40 | 7.4% | 7.4% | 1.00 | −13% |
+
+The gate **passes**: no look-ahead, Deflated Sharpe 97%, Sharpe 0.50 at
+3× costs, bootstrap 90% CI on Sharpe [0.12, 0.94].
+
+How to read this: on its own, Atlas earned less than simply holding the
+ETFs. Its value is as a **diversifier**: daily correlation with SPY is −0.19,
+and it made +24% in 2008 and +15% in 2022, years when stocks and 60/40 fell
+hard. Trend and time-series momentum carry the result (Sharpe 0.51 and 0.67
+alone). Cross-sectional momentum and low-vol lose money on a 5-asset universe
+and should be dropped for it, but dropping them after seeing these results
+is overfitting until it is confirmed on other data. Caveats: only 5 assets;
+interest on cash and margin is not in the simulation (a rough estimate at
+1.6% T-bills puts its effect at about zero); some IEF dividends are missing
+in 2005–09; the 50/50 blend was chosen after the fact.
+
 ## Going live: checklist
 
 1. **Real data.** Set `[data] source = "csv"` (or `"yfinance"` with a
