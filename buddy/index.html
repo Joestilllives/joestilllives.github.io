@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<title>Pip</title>
-<meta name="description" content="Pip, a pocket companion with a cute face that saves your voice notes in English and Hindi.">
+<title>Pip · Voice notes buddy in English &amp; Hindi</title>
+<meta name="description" content="Pip is a free pocket buddy in your browser that saves voice notes in English and Hindi. Say “Note: …” or “नोट करो …” and Pip remembers it.">
+<link rel="canonical" href="https://joestilllives.github.io/buddy/">
+<meta property="og:title" content="Pip · Voice notes buddy in English &amp; Hindi">
+<meta property="og:description" content="A pocket buddy that saves your voice notes in English and Hindi.">
+<meta property="og:url" content="https://joestilllives.github.io/buddy/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://joestilllives.github.io/buddy/icon-512.png">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#121214">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -115,6 +122,7 @@
   #hello li b { display: block; color: var(--ink); }
   #start { appearance: none; border: 0; width: 100%; padding: 16px; border-radius: 16px; font: inherit; font-weight: 700;
     font-size: 18px; color: #1a1408; background: var(--amber); }
+  .home { display: inline-block; margin-top: 18px; color: var(--soft); font-size: 14px; }
   .hidden { display: none !important; }
 </style>
 </head>
@@ -170,6 +178,7 @@
       <li><b>"Delete last note" · "What time is it?"</b>"आखिरी नोट हटाओ" · "कितने बजे हैं?"</li>
     </ul>
     <button id="start">Wake Pip up</button>
+    <a class="home" href="../">← Back to Joe's site</a>
   </div>
 </div>
 
@@ -215,7 +224,7 @@
       unknown: "Hmm, I only know a few tricks so far. Want me to save that as a note?",
       emptyNote: "What should I note? Say \"note\" and then the note.",
       noMic: "I can't hear on this browser. Type to me instead!",
-      micDenied: "I need the microphone to hear you. Allow it in Chrome's site settings.",
+      micDenied: "I need the microphone to hear you. Allow it in your browser's site settings.",
       noSpeech: "I didn't hear anything. Try again?",
       listening: "Listening…",
       chip: "＋ Save that as a note",
@@ -253,7 +262,7 @@
       unknown: "हम्म, अभी मुझे ज़्यादा नहीं आता। क्या इसे नोट कर लूँ?",
       emptyNote: "क्या नोट करूँ? \"नोट करो\" के बाद बताइए।",
       noMic: "इस ब्राउज़र में मैं सुन नहीं सकता। टाइप करके बताइए!",
-      micDenied: "सुनने के लिए माइक की अनुमति चाहिए। Chrome की साइट सेटिंग में अनुमति दें।",
+      micDenied: "सुनने के लिए माइक की अनुमति चाहिए। ब्राउज़र की साइट सेटिंग में अनुमति दें।",
       noSpeech: "कुछ सुनाई नहीं दिया। फिर से बोलिए?",
       listening: "सुन रहा हूँ…",
       chip: "＋ इसे नोट कर लो",
@@ -272,7 +281,7 @@
   // Works on English, Hindi (Devanagari) and Hinglish in Latin script.
   const NOTE_START = [
     /^(?:note\s*(?:karo|kar lo|karna|kar do)|yaad\s*(?:rakho|rakhna|rakh lo)|likh\s*(?:lo|do))\b\s*[:,.\-–]?\s*(.*)$/i,
-    /^(?:please\s+|pip\s*,?\s*)?(?:take a note|make a note|add a note|save a note|note down|note that|note|remember that|remember to|remember|write down|write that)\b\s*(?:that\s+)?[:,.\-–]?\s*(.*)$/i,
+    /^(?:please\s+|pip\s*,?\s*)?(?:take a note|make a note|add a note|save a note|note down|note that|note|remind me to|remind me that|remind me|remember that|remember to|remember|write down|write that)\b\s*(?:that\s+)?[:,.\-–]?\s*(.*)$/i,
     /^(?:नोट\s*(?:करो|कर लो|कर दो|कीजिए|करना|करें)?|याद\s*(?:रखो|रखना|रख लो|रखिए|रखें)|लिख\s*(?:लो|दो|लीजिए|लें))\s*[:,.\-–।]?\s*(.*)$/,
   ];
   const NOTE_END = [
@@ -280,7 +289,7 @@
     /^(.+?)\s+(?:note\s*(?:karo|kar lo|kar do|karna)|yaad\s*(?:rakho|rakhna|rakh lo)|likh\s*(?:lo|do))[.!]?$/i,
   ];
   const R = {
-    read: /\b(read|show|tell|list|what are|what's in)\b.*\bnotes?\b|\bmy notes\b|notes?\s*(sunao|batao|dikhao|padho)|नोट्?स?\s*(सुनाओ|सुनाइए|बताओ|बताइए|दिखाओ|पढ़ो)|मेरे\s*नोट/i,
+    read: /^notes?[.?!]?$|\b(read|show|tell|list|what are|what's in)\b.*\bnotes?\b|\bmy notes\b|notes?\s*(sunao|batao|dikhao|padho)|नोट्?स?\s*(सुनाओ|सुनाइए|बताओ|बताइए|दिखाओ|पढ़ो)|मेरे\s*नोट/i,
     del: /\b(delete|remove|undo|erase)\b.*\b(last|previous|latest)\b|\blast note\b.*\b(delete|remove)\b|(aakhri|akhri|last)\s*note\s*(hatao|mitao|delete)|आखिरी\s*नोट\s*(हटाओ|हटा दो|मिटाओ|डिलीट)|पिछला\s*नोट\s*(हटाओ|मिटाओ)/i,
     time: /\bwhat(?:'s| is)? the time\b|\bwhat time\b|\btime is it\b|kitne baje|kya time|kya samay|कितने बजे|क्या टाइम|क्या समय|समय क्या|टाइम क्या/i,
     date: /\bwhat(?:'s| is)? (?:the )?(?:date|day)\b|\btoday'?s date\b|aaj kya (?:din|tarikh|date)|आज क्या (?:दिन|तारीख|डेट)|आज की तारीख|आज कौन सा दिन/i,
@@ -846,7 +855,7 @@
   };
   if (store.get('pip.welcomed', false)) $('hello').classList.add('hidden');
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) { checkRems(); try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (_) {} }
+    if (!document.hidden) { checkRems(); if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {}); }
   });
 
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

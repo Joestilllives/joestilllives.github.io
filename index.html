@@ -3,72 +3,92 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Personal Portfolio</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rahul Gupta (Joe) · Web projects, Tilt &amp; Pip</title>
+  <meta name="description" content="Portfolio of Rahul Gupta (Joe): playful web projects including Tilt, an instrument you play by tilting your phone, and Pip, a pocket buddy that saves voice notes in English and Hindi.">
+  <meta name="google-site-verification" content="3dD7kXRSZp0wQfbe3LPW6cKxdOXcNUsVh6HQ3LTdU8A">
+  <link rel="canonical" href="https://joestilllives.github.io/">
+  <meta property="og:site_name" content="Rahul Gupta (Joe)">
+  <meta property="og:title" content="Rahul Gupta (Joe) · Web projects, Tilt &amp; Pip">
+  <meta property="og:description" content="Playful web projects: Tilt, an instrument you play by tilting your phone, and Pip, a pocket buddy for voice notes in English and Hindi.">
+  <meta property="og:url" content="https://joestilllives.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://joestilllives.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hey there! Call me Joe. Rahul Gupta, joestilllives.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Rahul Gupta", "alternateName": "Joe", "url": "https://joestilllives.github.io/", "image": "https://joestilllives.github.io/og-image.png", "sameAs": ["https://github.com/Joestilllives", "https://www.linkedin.com/in/rahul-gupta-bbb35314b/", "https://www.freecodecamp.org/joestilllives", "https://codepen.io/JoeStillLives", "https://joestillwrites.wordpress.com/"]}</script>
+  <meta name="theme-color" content="#020C24">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
   
 </head>
 
 <body>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    
-
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
 <header>
   <nav id="navbar">
-     <h1 class="navname">Rahul Gupta</h1>
-    <a href="#welcome-section">Welcome Section</a>
-    <a href="#skillset">Skills</a>
-        <a href="#projects">Projects</a>
-   <a href="#Contact_me">Contact Me</a>
-    <a href="tilt/">Tilt (phone app)</a>
-    <a href="buddy/">Pip (pocket buddy)</a>
- 
+    <a class="navname" href="#welcome-section">Rahul Gupta</a>
+    <button id="menuBtn" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="navlinks">
+      <a href="#welcome-section">Home</a>
+      <a href="#skillset">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="https://joestillwrites.wordpress.com/" target="_blank" rel="noopener">Writing</a>
+      <a href="#Contact_me">Contact Me</a>
+      <a href="tilt/">Tilt (phone app)</a>
+      <a href="buddy/">Pip (pocket buddy)</a>
+    </div>
   </nav>
   </header>
   <main>
     <section id="welcome-section">
       <div id="section1">
-      <h1 id="Mainh1">Hey there! Call me Joe
-      </h1>
-      <h2 class="glitch">Carry on my wayward son
-      </h2>
-               <a href="#skillset">
-               <div class="arrow-down">
-               </div></a>
-       
-        </div>
-    </section>
-    <section id="skillset">
-    <h1 id="Thirdh1">Skillset</h1>      
-    <h2 class="subheading">The languages I know</h2>
-    <div class="languages">
-      <i data-lang="HTML5" class="fab fa-html5 fa-5x fa-spin langcolor"></i>
-      <i data-lang="CSS3" class="fab fa-css3-alt fa-5x fa-spin langcolor"></i>
-      <i data-lang="SQL" class="fas fa-database fa-4x fa-spin"></i>
-      <i data-lang="Javascript" class="fab fa-js fa-4x fa-spin"></i>
+      <h1 id="Mainh1">Hey there! Call me Joe</h1>
+      <p class="glitch">Carry on my wayward son</p>
+      <p class="tagline">I make playful little things for the web: an instrument you play by tilting your phone, a pocket buddy that keeps your notes, and whatever idea comes next.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#Contact_me">Contact me</a>
+      </div>
+      <a href="#skillset" class="arrow-link" aria-label="Scroll down"><div class="arrow-down"></div></a>
       </div>
     </section>
+    <section id="skillset">
+    <h2 id="Thirdh1">Skillset</h2>      
+    <h3 class="subheading">The languages I work in</h3>
+    <ul class="languages">
+      <li><i class="fab fa-html5" aria-hidden="true"></i><span>HTML5</span></li>
+      <li><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></li>
+      <li><i class="fas fa-database" aria-hidden="true"></i><span>SQL</span></li>
+      <li><i class="fab fa-js" aria-hidden="true"></i><span>JavaScript</span></li>
+      <li><i class="fab fa-python" aria-hidden="true"></i><span>Python</span></li>
+      <li><i class="fas fa-microchip" aria-hidden="true"></i><span>C</span></li>
+    </ul>
+    </section>
     <section id="projects">
-      <h1 id="Gridh1">Here lie a few of my thingamajings</h1>
-    <a class="projectlist one" href="https://codepen.io/JoeStillLives/full/OdvdWv" target="_blank"></a>
-<a class="projectlist two" href="https://codepen.io/JoeStillLives/full/ErMQeg" target="_blank"></a>     
-      <a class="projectlist three" href="https://codepen.io/JoeStillLives/full/Lqadjr" target="_blank"></a>
-        <a class="projectlist four" href="https://codepen.io/JoeStillLives/full/YBJwZe" target="_blank"></a>       
+      <h2 id="Gridh1">Here lie a few of my thingamajings</h2>
+    <a class="projectlist app tilt" href="tilt/"><span><b>Tilt</b>Tilt your phone to play music, shake it for drums.</span></a>
+    <a class="projectlist app pip" href="buddy/"><span><b>Pip</b>A pocket buddy that saves voice notes in English and Hindi.</span></a>
+    <a class="projectlist one" href="https://codepen.io/JoeStillLives/full/OdvdWv" target="_blank" rel="noopener"><span>Project 1</span></a>
+<a class="projectlist two" href="https://codepen.io/JoeStillLives/full/ErMQeg" target="_blank" rel="noopener"><span>Project 2</span></a>     
+      <a class="projectlist three" href="https://codepen.io/JoeStillLives/full/Lqadjr" target="_blank" rel="noopener"><span>Project 3</span></a>
+        <a class="projectlist four" href="https://codepen.io/JoeStillLives/full/YBJwZe" target="_blank" rel="noopener"><span>Project 4</span></a>       
     </section>
   <section id="Contact_me">
-    <h1 id="Thirdh1">Let's discuss trade over coffee?</h1>
+    <h2 id="Secondh1">Let's discuss trade over coffee?</h2>
   <div id="Links">
-    <a id="profile-link" class="Contacts" href="https://www.freecodecamp.org/joestilllives" target="_blank"><i class="fab fa-free-code-camp fa-3x"></i></a>
-   <a class="Contacts" href="https://www.linkedin.com/in/rahul-gupta-bbb35314b/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a> 
+    <a id="profile-link" class="Contacts" href="https://www.freecodecamp.org/joestilllives" target="_blank" rel="noopener" aria-label="freeCodeCamp" title="freeCodeCamp"><i class="fab fa-free-code-camp fa-3x"></i></a>
+   <a class="Contacts" href="https://www.linkedin.com/in/rahul-gupta-bbb35314b/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin fa-3x"></i></a> 
     
-        <a class="Contacts" href="https://github.com/Joestilllives" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-    <a class="Contacts" href="https://joestilllives.wordpress.com/" target="_blank"><i class="fab fa-wordpress fa-3x"></i></a>
+        <a class="Contacts" href="https://github.com/Joestilllives" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github fa-3x"></i></a>
+    <a class="Contacts" href="https://joestillwrites.wordpress.com/" target="_blank" rel="noopener" aria-label="My blog, Something Somewhere" title="My blog, Something Somewhere"><i class="fab fa-wordpress fa-3x"></i></a>
     
     </div>
   </section>
@@ -76,11 +96,20 @@
       <footer>
     
 
-Written&coded by Rahul Gupta
+Written &amp; coded by Rahul Gupta
   </footer>
   
   
 
+<script>
+  // phone menu: toggle the links, close after picking one
+  (function () {
+    var btn = document.getElementById('menuBtn'), nav = document.getElementById('navbar');
+    function set(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+    btn.addEventListener('click', function () { set(!nav.classList.contains('open')); });
+    document.getElementById('navlinks').addEventListener('click', function (e) { if (e.target.tagName === 'A') set(false); });
+  })();
+</script>
 </body>
 
 </html>
