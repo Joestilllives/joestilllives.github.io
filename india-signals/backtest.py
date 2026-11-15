@@ -36,10 +36,17 @@ def prepare(p):
     for h in HORIZONS:  # entry at next day's close, exit h days later
         p[f"fwd{h}"] = g["logidx"].transform(lambda s: s.shift(-(1 + h)) - s.shift(-1))
     p["liquid"] = (p["turn_avg20"] >= MIN_TURNOVER_LACS) & (p["close"] >= MIN_PRICE) & (p["n"] >= 60)
-    # market = average of liquid stocks' forward returns on the same entry day
+    # benchmark = average forward return of liquid stocks of SIMILAR SIZE (same
+    # traded-value quintile) on the same entry day, so a signal can't look good
+    # just because it tends to pick small companies during a small-cap boom
+    liq = p["liquid"]
+    p["size_q"] = np.nan
+    p.loc[liq, "size_q"] = p[liq].groupby("date")["turn_avg20"].transform(
+        lambda s: pd.qcut(s.rank(method="first"), 5, labels=False))
     for h in HORIZONS:
-        mkt = p[p["liquid"]].groupby("date")[f"fwd{h}"].mean()
-        p[f"ex{h}"] = np.expm1(p[f"fwd{h}"]) - np.expm1(p["date"].map(mkt))
+        mkt = p[liq].groupby(["date", "size_q"])[f"fwd{h}"].mean().rename(f"bm{h}")
+        p = p.join(mkt, on=["date", "size_q"])
+        p[f"ex{h}"] = np.expm1(p[f"fwd{h}"]) - np.expm1(p[f"bm{h}"])
     p["vol_x"] = p["volume"] / p["vol_avg20"]
     p["deliv_jump"] = p["deliv_per"] - p["deliv_avg60"]
     return p
@@ -105,14 +112,14 @@ def main(panel_path, out_path="backtest_results.json"):
     with open(out_path, "w") as f:
         json.dump(results, f, indent=1)
     print(f"Universe: liquid NSE stocks {results['period'][0]}..{results['period'][1]}, split at {SPLIT.date()}")
-    print(f"{'signal':22} {'half':6} {'events':>7}  " + "  ".join(f"{'ex'+str(h)+'d':>8} {'hit':>5} {'t':>5}" for h in HORIZONS))
+    print(f"{'signal':22} {'half':6} {'events':>7}  " + "  ".join(f"{'ex'+str(h)+'d':>8} {'med':>6} {'hit':>4} {'t':>5}" for h in HORIZONS))
     for name, r in results["signals"].items():
         for half in ["first_half", "second_half"]:
             s = r[half]
             cells = []
             for h in HORIZONS:
                 v = s.get(f"h{h}")
-                cells.append(f"{v['mean_excess']*100:7.2f}% {v['hit_rate']*100:4.0f}% {v['t_stat']:5.1f}" if v else f"{'—':>8} {'':>5} {'':>5}")
+                cells.append(f"{v['mean_excess']*100:7.2f}% {v['median_excess']*100:5.1f}% {v['hit_rate']*100:3.0f}% {v['t_stat']:5.1f}" if v else f"{'—':>8} {'':>6} {'':>4} {'':>5}")
             print(f"{name:22} {half[:5]:6} {s['events']:>7}  " + "  ".join(cells))
 
 

@@ -13,6 +13,10 @@ COLS = {"SYMBOL": "symbol", "SERIES": "series", "DATE1": "date", "PREV_CLOSE": "
 
 
 def read_day(path):
+    with open(path, "rb") as f:
+        if not f.read(6).startswith(b"SYMBOL"):
+            print(f"skipping {os.path.basename(path)}: not a CSV", file=sys.stderr)
+            return None
     df = pd.read_csv(path, skipinitialspace=True, dtype=str)
     df.columns = [c.strip() for c in df.columns]
     df = df[list(COLS)].rename(columns=COLS)
