@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shiksha Point Classes · Sample coaching website</title>
+  <meta name="description" content="A sample website for a tuition and coaching centre: batches, fees, results and free demo class booking on WhatsApp.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#1e1b4b; --ink:#1f2937; --muted:#5b6475; --yellow:#facc15; --blue:#4338ca; --soft:#eef2ff; --line:#e3e6ef; --bg:#ffffff; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Poppins, system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; }
+    a { color:inherit; }
+    .wrap { max-width:1060px; margin:0 auto; padding:0 16px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 20px; border-radius:12px; font-weight:600; text-decoration:none; border:0; cursor:pointer; font:600 15px Poppins, sans-serif; }
+    .btn.y { background:var(--yellow); color:var(--navy); }
+    .btn.w { background:rgba(255,255,255,.12); color:#fff; border:2px solid rgba(255,255,255,.35); }
+    .btn.b { background:var(--blue); color:#fff; }
+    .btn svg { width:18px; height:18px; fill:currentColor; }
+    .hero { background:radial-gradient(circle at 85% 20%, #3730a3 0, transparent 45%), var(--navy); color:#fff; padding:20px 0 56px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:36px; }
+    .logo { font-weight:800; font-size:21px; text-decoration:none; }
+    .logo span { color:var(--yellow); }
+    .nav nav { display:flex; gap:18px; font-size:14px; }
+    .nav nav a { text-decoration:none; opacity:.85; }
+    .admission { display:inline-block; background:var(--yellow); color:var(--navy); font-weight:600; font-size:13px; padding:5px 12px; border-radius:999px; }
+    h1 { font-size:clamp(32px, 5.4vw, 56px); line-height:1.1; font-weight:800; margin:16px 0 14px; max-width:15em; }
+    h1 em { font-style:normal; color:var(--yellow); }
+    .hero p { font-size:17px; opacity:.85; max-width:36em; }
+    .hero .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .stats { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:40px; }
+    .stats div { background:rgba(255,255,255,.08); border-radius:14px; padding:14px; font-size:13px; opacity:.95; }
+    .stats b { display:block; font-size:26px; color:var(--yellow); }
+    section { padding:56px 0; }
+    h2 { font-size:clamp(26px, 3.8vw, 36px); font-weight:800; color:var(--navy); }
+    .sub { color:var(--muted); margin:4px 0 24px; }
+    .tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+    .tabs button { font:600 14px Poppins, sans-serif; padding:8px 16px; border-radius:999px; border:1px solid var(--line); background:#fff; cursor:pointer; color:var(--ink); }
+    .tabs button[aria-selected="true"] { background:var(--navy); color:#fff; border-color:var(--navy); }
+    .batches { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .batch { border:1px solid var(--line); border-radius:18px; padding:20px; display:flex; flex-direction:column; gap:8px; }
+    .batch h3 { font-size:18px; color:var(--navy); }
+    .tag { align-self:flex-start; font-size:12px; font-weight:600; background:var(--soft); color:var(--blue); padding:3px 10px; border-radius:999px; }
+    .batch ul { list-style:none; font-size:14px; color:var(--muted); display:grid; gap:4px; }
+    .batch .fee { font-size:22px; font-weight:800; color:var(--ink); margin-top:auto; }
+    .batch .fee small { font-size:13px; font-weight:400; color:var(--muted); }
+    .seats { font-size:13px; font-weight:600; color:#b45309; }
+    .soft { background:var(--soft); }
+    .results { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; }
+    .topper { background:#fff; border-radius:18px; padding:18px; text-align:center; }
+    .topper .face { width:64px; height:64px; margin:0 auto 10px; border-radius:50%; background:linear-gradient(135deg, var(--yellow), #fb923c); display:grid; place-items:center; font-weight:800; color:var(--navy); }
+    .topper b { display:block; font-size:28px; color:var(--blue); }
+    .topper span { font-size:13px; color:var(--muted); }
+    .why { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; }
+    .why div { border-left:4px solid var(--yellow); padding:4px 0 4px 14px; }
+    .why h3 { font-size:16px; color:var(--navy); }
+    .why p { font-size:14px; color:var(--muted); }
+    .two { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; }
+    form { border:1px solid var(--line); border-radius:18px; padding:20px; display:grid; gap:12px; background:#fff; box-shadow:0 10px 30px rgba(30,27,75,.08); }
+    label { font-weight:600; font-size:14px; display:grid; gap:6px; }
+    input, select { font:inherit; padding:11px 12px; border:1px solid var(--line); border-radius:10px; width:100%; background:#fafbff; }
+    details { border-bottom:1px solid var(--line); padding:14px 0; }
+    summary { font-weight:600; cursor:pointer; color:var(--navy); }
+    details p { color:var(--muted); margin-top:8px; font-size:15px; }
+    footer { background:var(--navy); color:rgba(255,255,255,.75); padding:28px 0 96px; font-size:14px; }
+    .sticky { position:fixed; left:12px; right:12px; bottom:12px; display:none; gap:8px; z-index:50; }
+    .sticky .btn { flex:1; box-shadow:0 8px 24px rgba(0,0,0,.2); }
+    @media (max-width:860px) {
+      .nav nav { display:none; }
+      .stats, .results, .why { grid-template-columns:repeat(2, 1fr); }
+      .batches, .two { grid-template-columns:1fr; }
+      .sticky { display:flex; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2l-.4-.2z"/></symbol>
+    <symbol id="ph" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+  </svg>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="nav">
+        <a class="logo" href="#">Shiksha<span>Point</span></a>
+        <nav><a href="#batches">Batches</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#demo">Free demo</a></nav>
+      </div>
+      <span class="admission">Admissions open · 2027–28 session</span>
+      <h1>Small batches. <em>Big marks.</em> Classes 6 to 12.</h1>
+      <p>Maths, Science and English for CBSE and ICSE students, plus JEE and NEET foundation. Maximum 15 students per batch, so every child gets attention.</p>
+      <div class="actions">
+        <a class="btn y" href="#demo">Book a free demo class</a>
+        <a class="btn w" href="#" data-call><svg><use href="#ph"/></svg>Call us</a>
+      </div>
+      <div class="stats">
+        <div><b>15</b>students max per batch</div>
+        <div><b>92%</b>average in Class 10 boards</div>
+        <div><b>9 yrs</b>teaching in this area</div>
+        <div><b>Weekly</b>tests with parent reports</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="batches">
+    <div class="wrap">
+      <h2>Batches & fees</h2>
+      <p class="sub">Pick your child's class to see timings and fees.</p>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="batches" id="batchList"></div>
+    </div>
+  </section>
+
+  <section class="soft" id="results">
+    <div class="wrap">
+      <h2>Last year's results</h2>
+      <p class="sub">Sample results. The real site would show the centre's own students, with their permission.</p>
+      <div class="results">
+        <div class="topper"><div class="face">AS</div><b>97%</b><span>Class 10 CBSE</span></div>
+        <div class="topper"><div class="face">RV</div><b>95%</b><span>Class 12 Science</span></div>
+        <div class="topper"><div class="face">PM</div><b>100</b><span>in Maths, Class 10</span></div>
+        <div class="topper"><div class="face">KJ</div><b>AIR 2,140</b><span>JEE Main</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Why parents choose us</h2>
+      <p class="sub">Things parents tell us matter most.</p>
+      <div class="why">
+        <div><h3>Weekly tests</h3><p>Every Sunday, with marks sent to parents on WhatsApp.</p></div>
+        <div><h3>Doubt sessions</h3><p>Free extra hour every Saturday for anyone stuck.</p></div>
+        <div><h3>Notes included</h3><p>Printed chapter notes and past papers, no extra cost.</p></div>
+        <div><h3>Safe & close</h3><p>CCTV, girls' batches available, near the main market.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="demo">
+    <div class="wrap two">
+      <div>
+        <h2>Book a free demo class</h2>
+        <p class="sub">Sit in on a real class before paying anything. Fill this in and we'll confirm the timing on WhatsApp.</p>
+        <div id="faq">
+          <details><summary>Do you teach in Hindi too?</summary><p>Yes. Classes are in English with explanations in Hindi whenever a student needs it.</p></details>
+          <details><summary>Can we pay fees monthly?</summary><p>Yes. Monthly, quarterly (5% off) or yearly (10% off). UPI, cash or bank transfer.</p></details>
+          <details><summary>What if my child misses a class?</summary><p>Notes are shared in the batch group, and they can join the Saturday doubt session to catch up.</p></details>
+          <details><summary>Do you offer home tuition?</summary><p>For Classes 9 to 12, a teacher can visit on weekends. Ask us for availability.</p></details>
+        </div>
+      </div>
+      <form id="demoForm">
+        <label>Parent's name <input name="parent" required autocomplete="name"></label>
+        <label>Student's name <input name="student" required></label>
+        <label>Class
+          <select name="cls" id="clsSelect"></select>
+        </label>
+        <label>Board
+          <select name="board"><option>CBSE</option><option>ICSE</option><option>State board</option></select>
+        </label>
+        <label>Subject needing most help
+          <select name="subject"><option>Maths</option><option>Science</option><option>English</option><option>All subjects</option></select>
+        </label>
+        <button class="btn b" type="submit"><svg><use href="#wa"/></svg>Book demo on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">Shiksha Point Classes is a made-up coaching centre. This is a sample website.</div>
+  </footer>
+
+  <div class="sticky">
+    <a class="btn b" href="#" data-call><svg><use href="#ph"/></svg>Call</a>
+    <a class="btn y" href="#demo">Free demo</a>
+  </div>
+
+  <script src="../demo.js"></script>
+  <script>
+    var DATA = {
+      'Class 6–8': [
+        { name: 'Maths + Science', tag: 'Mon · Wed · Fri', items: ['4:00 – 5:30 pm', 'NCERT + extra practice', 'Monthly parent meeting'], fee: 1800, seats: 4 },
+        { name: 'English + Grammar', tag: 'Tue · Thu', items: ['4:00 – 5:00 pm', 'Writing & speaking practice', 'Olympiad prep option'], fee: 1200, seats: 7 },
+        { name: 'All subjects', tag: 'Mon – Sat', items: ['4:00 – 6:00 pm', 'Homework help included', 'Best value'], fee: 2800, seats: 3 }
+      ],
+      'Class 9–10': [
+        { name: 'Maths', tag: 'Mon · Wed · Fri', items: ['5:30 – 7:00 pm', 'Board pattern tests', 'Past 10 years’ papers'], fee: 2200, seats: 5 },
+        { name: 'Science', tag: 'Tue · Thu · Sat', items: ['5:30 – 7:00 pm', 'Physics, Chemistry, Biology', 'Practical file help'], fee: 2200, seats: 2 },
+        { name: 'Maths + Science', tag: 'Mon – Sat', items: ['5:30 – 7:00 pm', 'Weekly tests + reports', 'Most popular'], fee: 3800, seats: 3 }
+      ],
+      'Class 11–12': [
+        { name: 'Physics', tag: 'Mon · Wed · Fri', items: ['7:00 – 8:30 pm', 'Boards + JEE level', 'Numericals every class'], fee: 2800, seats: 6 },
+        { name: 'Chemistry', tag: 'Tue · Thu · Sat', items: ['7:00 – 8:30 pm', 'Organic made simple', 'NEET MCQ practice'], fee: 2800, seats: 4 },
+        { name: 'Maths', tag: 'Mon · Wed · Fri', items: ['6:00 – 7:00 pm', 'Calculus from scratch', 'JEE Main level'], fee: 2800, seats: 5 }
+      ],
+      'JEE / NEET foundation': [
+        { name: 'Foundation (Class 8–10)', tag: 'Sat · Sun', items: ['10 am – 1 pm', 'Olympiad + NTSE style', 'Builds problem-solving early'], fee: 3000, seats: 6 },
+        { name: 'JEE crash course', tag: 'Daily, Jan – Mar', items: ['3 hrs/day', 'Full mock tests', 'Rank analysis'], fee: 9000, seats: 8 },
+        { name: 'NEET Biology', tag: 'Tue · Thu · Sat', items: ['8:30 – 9:30 pm', 'NCERT line by line', '1,000+ MCQs'], fee: 2500, seats: 5 }
+      ]
+    };
+    var tabs = document.getElementById('tabs'), list = document.getElementById('batchList'), sel = document.getElementById('clsSelect');
+    function render(key) {
+      list.innerHTML = '';
+      DATA[key].forEach(function (b) {
+        var el = document.createElement('div');
+        el.className = 'batch';
+        el.innerHTML = '<span class="tag"></span><h3></h3><ul></ul><div class="seats"></div><div class="fee"></div>';
+        el.querySelector('.tag').textContent = b.tag;
+        el.querySelector('h3').textContent = b.name;
+        b.items.forEach(function (t) { var li = document.createElement('li'); li.textContent = '✓ ' + t; el.querySelector('ul').appendChild(li); });
+        el.querySelector('.seats').textContent = 'Only ' + b.seats + ' seats left';
+        el.querySelector('.fee').innerHTML = '₹' + b.fee.toLocaleString('en-IN') + ' <small>/ month</small>';
+        list.appendChild(el);
+      });
+      [].forEach.call(tabs.children, function (t) { t.setAttribute('aria-selected', t.textContent === key); });
+    }
+    Object.keys(DATA).forEach(function (k, i) {
+      var t = document.createElement('button');
+      t.type = 'button'; t.setAttribute('role', 'tab'); t.textContent = k;
+      t.addEventListener('click', function () { render(k); });
+      tabs.appendChild(t);
+    });
+    ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'].forEach(function (c) {
+      var o = document.createElement('option'); o.textContent = c; sel.appendChild(o);
+    });
+    render('Class 9–10');
+
+    document.getElementById('demoForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(this);
+      Demo.whatsapp('Namaste, I would like to book a free demo class.\n\nParent: ' + f.get('parent') + '\nStudent: ' + f.get('student') + '\nClass: ' + f.get('cls') + ' (' + f.get('board') + ')\nNeeds help with: ' + f.get('subject'));
+    });
+  </script>
+</body>
+</html>
