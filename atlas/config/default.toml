@@ -1,0 +1,81 @@
+# Atlas default configuration. Every knob the system has lives here.
+capital = 1_000_000.0
+
+[data]
+source = "synthetic"        # "synthetic" | "csv" | "yfinance"
+# path = "data/prices.csv"  # for csv: wide (date,SYM...) or long (date,symbol,close)
+# symbols = ["SPY","EFA","EEM","TLT","IEF","LQD","HYG","GLD","DBC","VNQ","UUP","FXY"]
+n_assets = 12
+n_days = 5040
+seed = 7
+trend_strength = 0.45       # synthetic only: 0 = pure noise
+min_history = 260
+
+[signals]
+method = "adaptive"         # "static" | "adaptive" (IC-tilted, 50% shrunk to these priors)
+[signals.weights]
+trend = 0.50
+ts_momentum = 0.20
+xs_momentum = 0.20
+reversal = 0.0              # ~100x/yr turnover: only viable with very low costs
+low_vol = 0.10
+carry = 0.0                 # needs an external carry frame
+[signals.params.trend]
+speeds = [[8, 32], [16, 64], [32, 128], [64, 256]]
+
+[regime]
+enabled = true
+vol_ratio_start = 1.5       # start de-risking when 20d vol > 1.5x 2y vol
+corr_z_start = 1.5          # ...or average correlation > 1.5 sd above normal
+use_breadth = false         # only for long-biased books
+floor = 0.35
+smooth_span = 5
+
+[risk_model]
+vol_span = 35
+corr_halflife = 126
+shrink = 0.3
+warmup = 60
+
+[portfolio]
+method = "risk_budget"      # "risk_budget" | "mean_variance"
+target_vol = 0.12           # annualised
+vol_ceiling_mult = 1.5      # hard ex-ante ceiling = 18%
+max_weight = 0.5            # per instrument, fraction of equity
+max_gross = 3.0
+long_only = false
+max_idm = 2.5
+assumed_ic = 0.05           # mean_variance only
+ridge = 0.1
+
+[risk]
+dd_soft = 0.10              # start cutting exposure
+dd_hard = 0.25              # flatten and halt
+dd_min_scale = 0.30
+halt_days = 21
+dd_kill = 0.35              # from all-time high, permanent until a human resets state
+rearm_scale = 0.5
+vol_window = 21
+vol_breach_mult = 2.0
+max_order_frac = 0.25
+kill_switch_file = "KILL"   # touch this file to stop all live trading
+
+[execution]
+lag = 1                     # days between signal and trade
+rebalance_every = 1
+buffer = 0.10
+commission_bps = 0.5
+half_spread_bps = 1.0
+impact_k = 0.5
+adv_usd = 5e8
+
+[live]
+broker = "paper"            # "paper" | "alpaca"
+state_dir = "state"
+max_staleness_days = 5      # ignored for synthetic data
+min_order_notional = 100.0
+fractional = false
+
+[validation]
+train_years = 5
+test_years = 1

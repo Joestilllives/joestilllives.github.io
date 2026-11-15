@@ -1,0 +1,19 @@
+[project]
+name = "atlas-quant"
+version = "1.0.0"
+description = "End-to-end systematic multi-asset trading framework"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2.0"]
+
+[project.optional-dependencies]
+data = ["yfinance"]
+
+[project.scripts]
+atlas = "atlas.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["atlas"]
