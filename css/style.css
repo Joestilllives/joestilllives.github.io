@@ -342,6 +342,16 @@ z-index:2;
 .pip { background:radial-gradient(circle at 36% 40%, #ffb43c 0 7%, transparent 8%),
                   radial-gradient(circle at 64% 40%, #ffb43c 0 7%, transparent 8%),
                   #121214; }
+/* Clear Air Check: a dark tile with the app's AQI-colour ring */
+.aqi { background:radial-gradient(circle at 50% 34%, #0f2a1f 0 12%, transparent 12.5% 19%, #0f2a1f 19.5%),
+                  conic-gradient(from 200deg at 50% 34%, #2f9e44, #94c11f, #f2c230, #ef8a24, #d9381e, #8f1d1d, #2f9e44); }
+/* Second Chance Patents: ruled paper with dark ink */
+.patents{ background:repeating-linear-gradient(0deg, transparent 0 27px, rgba(26,107,74,.16) 27px 28px), #f4efe2; }
+.patents span{ color:#13372a; }
+@media(min-width:901px){
+  /* 8 tiles in 3 columns: let the last one fill the final row */
+  .projectlist:last-child{ grid-column:span 2; }
+}
 
 @media(max-width:900px){
   #projects{ grid-template-columns:repeat(2, 1fr); }
