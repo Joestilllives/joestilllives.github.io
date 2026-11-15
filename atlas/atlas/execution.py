@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
 
 @dataclass
@@ -109,6 +110,32 @@ class PaperBroker(Broker):
     def mark(self, prices: dict[str, float]) -> None:
         self.state["last_prices"].update({k: float(v) for k, v in prices.items() if np.isfinite(v)})
 
+    def accrue_financing(self, annual_rate: float, as_of: str, short_fee: float = 0.005,
+                         borrow_spread: float = 0.005) -> float:
+        """Accrue interest since the last accrual date, matching the backtest:
+        equity not invested long earns `annual_rate` (or pays rate + spread if
+        negative); short notional pays `short_fee`. Returns the amount accrued."""
+        last = self.state.get("last_accrual")
+        self.state["last_accrual"] = as_of
+        if not last:
+            return 0.0
+        days = (pd.Timestamp(as_of) - pd.Timestamp(last)).days
+        if days <= 0:
+            return 0.0
+        lp = self.state["last_prices"]
+        vals = {s: q * lp.get(s, 0.0) for s, q in self.state["positions"].items()}
+        long_v = sum(v for v in vals.values() if v > 0)
+        short_v = -sum(v for v in vals.values() if v < 0)
+        base = self.equity() - long_v
+        rate = annual_rate if base >= 0 else annual_rate + borrow_spread
+        amt = (base * rate - short_v * short_fee) * days / 365.0
+        self.state["cash"] += amt
+        return amt
+
+    def save(self) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text(json.dumps(self.state, indent=2))
+
     def equity(self) -> float:
         lp = self.state["last_prices"]
         return self.state["cash"] + sum(q * lp.get(s, 0.0) for s, q in self.state["positions"].items())
@@ -124,8 +151,7 @@ class PaperBroker(Broker):
             self.state["positions"][o.symbol] = self.state["positions"].get(o.symbol, 0.0) + o.qty
             fills.append({"symbol": o.symbol, "qty": o.qty, "price": px,
                           "time": datetime.now(timezone.utc).isoformat()})
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(json.dumps(self.state, indent=2))
+        self.save()
         return fills
 
 

@@ -1,0 +1,10 @@
+{
+  "peak": 1000000.0,
+  "halted_days_left": 0,
+  "rearm_scale": 1.0,
+  "last_equity": 1000000.0,
+  "hwm": 1000000.0,
+  "killed": false,
+  "last_as_of": "2026-11-13",
+  "recent_returns": []
+}

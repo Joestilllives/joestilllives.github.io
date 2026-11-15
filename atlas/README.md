@@ -94,6 +94,36 @@ What the tests say:
   Small changes in daily P&L shift when it triggers.
 - Survivorship: the ETF lists contain funds that still exist today.
 
+## Atlas v2: pre-registered holdout test → paper trading
+
+Rules, universes and pass criteria were committed **before** the holdout run
+([`PREREGISTRATION.md`](PREREGISTRATION.md), [`config/v2.toml`](config/v2.toml)):
+no leverage, trend + time-series momentum only, static weights, 10% target
+vol, intended as a 20% sleeve next to 60/40.
+
+| Holdout (never used before) | CAGR | Sharpe above cash | Max DD | Corr. to SPY |
+| --- | --- | --- | --- | --- |
+| A: 35 new ETFs, 2005 – Nov 2026 | 3.9% | 0.42 | −10% | 0.33 |
+| B: 36 ETFs, unseen years 1999 – 2004 | 4.9% | 0.27 | −10% | |
+| 60/40 SPY/IEF, 2005 – 2026 | 8.2% | 0.62 | −31% | |
+| **80% 60/40 + 20% v2 (on A)** | 7.4% | **0.64** | **−24%** | |
+
+**Tier 1 PASS** (all four criteria) → paper trading. **Tier 2 FAIL** so far
+(Deflated Sharpe 86% < 95%): no real money yet. Holdout A shares the same calendar
+years as the earlier tests, so it is not fully independent.
+
+Paper trading runs on the 28-ETF universe after each US close:
+`python -m atlas rebalance --config config/v2.toml --execute`. The record is
+committed in `paper/`. Orders decided at one close fill at the next run's
+close, as in the backtest. Cash earns T-bills, and shorts pay a fee.
+`python scripts/paper_report.py` compares paper with the backtest (target:
+correlation > 0.9, tracking error < 3%, over ≥ 63 trading days).
+
+Known v2 weakness, for a future v3 (needs new holdout data): the no-trade buffer
+has an absolute floor of 2.5% of equity, which is large next to v2's small,
+unlevered positions. Live deployment therefore starts from the backtest's
+current book rather than building up from flat.
+
 ## Going live: checklist
 
 1. **Real data.** Set `[data] source = "csv"` (or `"yfinance"` with a

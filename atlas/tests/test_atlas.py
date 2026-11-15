@@ -120,17 +120,22 @@ class Execution(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             cfg = deep_merge(CFG, {"live": {"max_staleness_days": None},
                                    "risk": {"kill_switch_file": None}})
-            broker = PaperBroker(Path(d) / "acct.json", 1e6)
-            rec = rebalance(PX, cfg, broker, dry_run=False, state_dir=d)
+            acct = Path(d) / "acct.json"
+            rec = rebalance(PX.iloc[:-5], cfg, PaperBroker(acct, 1e6), dry_run=False, state_dir=d)
             self.assertTrue(rec["orders"])
-            self.assertAlmostEqual(broker.equity(), 1e6, delta=1e6 * 0.002)  # only slippage lost
-            # Same data re-run: throttled trades finish, then nothing left to do.
-            for n in range(2, 6):
-                rec = rebalance(PX, cfg, PaperBroker(Path(d) / "acct.json"), dry_run=False, state_dir=d)
-                if not rec["orders"]:
-                    break
-            self.assertEqual(rec["orders"], [])
-            self.assertEqual(len((Path(d) / "journal.jsonl").read_text().splitlines()), n)
+            self.assertEqual(PaperBroker(acct).positions(), {})       # queued, not filled
+            # Same-day re-run must not fill at the decision-day price.
+            rebalance(PX.iloc[:-5], cfg, PaperBroker(acct), dry_run=False, state_dir=d)
+            self.assertEqual(PaperBroker(acct).positions(), {})
+            # Next day: yesterday's orders fill at today's close.
+            rec = rebalance(PX.iloc[:-4], cfg, PaperBroker(acct), dry_run=False, state_dir=d)
+            self.assertTrue(rec["fills"])
+            b = PaperBroker(acct)
+            self.assertTrue(b.positions())
+            self.assertAlmostEqual(b.equity(), 1e6, delta=1e6 * 0.05)
+            for k in range(3, 0, -1):
+                rec = rebalance(PX.iloc[:-k], cfg, PaperBroker(acct), dry_run=False, state_dir=d)
+            self.assertEqual(len((Path(d) / "journal.jsonl").read_text().splitlines()), 6)
 
 
 class Financing(unittest.TestCase):
@@ -150,6 +155,22 @@ class Financing(unittest.TestCase):
         lev_days = long > 1.05
         self.assertTrue(lev_days.any())
         self.assertTrue((res.financing[lev_days] < 0).all())
+
+
+class PaperFinancing(unittest.TestCase):
+    def test_cash_accrues_interest_and_shorts_pay_fee(self):
+        with tempfile.TemporaryDirectory() as d:
+            b = PaperBroker(Path(d) / "a.json", 1000.0)
+            b.mark({"X": 10.0})
+            b.accrue_financing(0.0365, "2026-01-01")
+            self.assertAlmostEqual(b.accrue_financing(0.0365, "2026-01-11"), 1000 * 0.0365 * 10 / 365)
+            from atlas.execution import Order
+            b.submit([Order("X", -50, 10.0)])          # short 500 of X
+            b.slip = 0.0
+            eq = b.equity()
+            amt = b.accrue_financing(0.0365, "2026-01-21", short_fee=0.0365)
+            # base = equity - longs = eq earns; short 500 pays the fee
+            self.assertAlmostEqual(amt, (eq * 0.0365 - 500 * 0.0365) * 10 / 365, places=6)
 
 
 class Metrics(unittest.TestCase):

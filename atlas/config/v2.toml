@@ -64,7 +64,7 @@ rearm_scale = 0.5
 vol_window = 21
 vol_breach_mult = 2.0
 max_order_frac = 0.25
-kill_switch_file = "KILL"   # touch this file to stop all live trading
+kill_switch_file = "KILL"   # touch atlas/KILL to stop all trading
 
 [execution]
 lag = 1                     # days between signal and trade
@@ -85,7 +85,7 @@ short_fee_bps = 50
 
 [live]
 broker = "paper"            # "paper" | "alpaca"
-state_dir = "state"
+state_dir = "paper"         # committed to git: the paper-trading record
 max_staleness_days = 5      # ignored for synthetic data
 min_order_notional = 100.0
 fractional = false
