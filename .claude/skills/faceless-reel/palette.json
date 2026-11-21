@@ -1,0 +1,8 @@
+{
+  "note": "Brand atoms: these colours and the Inter / JetBrains Mono type are fixed. Each world is a full colour set; qa.py script checks every world's contrast. Accent is the 10% colour: the wow number, the highlight word and the progress bar, nothing else.",
+  "worlds": {
+    "navy":  {"bg": "#0E1B3D", "ink": "#F5F7FF", "muted": "#B9C3E6", "accent": "#FFC24B", "panel": "#1A2B57", "line": "#2E4682"},
+    "paper": {"bg": "#F3ECDC", "ink": "#0E1B3D", "muted": "#3F4A6B", "accent": "#A34700", "panel": "#E7DDC7", "line": "#CBBE9F"},
+    "amber": {"bg": "#FFC24B", "ink": "#0E1B3D", "muted": "#2A3352", "accent": "#0E1B3D", "panel": "#F2B23A", "line": "#C98A12"}
+  }
+}

@@ -1,8 +1,8 @@
 """Quality gates for faceless prompt Reels. Every gate prints PASS or FAIL with the number behind it.
 
-    python3 qa.py script posts.json      # before rendering: hook length, save/send ask, spoken pace
+    python3 qa.py script posts.json      # before rendering: hooks, asks, hashtags, colour contrast
     python3 qa.py look OUT               # after `render.js --mode look`: safe zones + grayscale sheet
-    python3 qa.py final OUT              # after rendering: file spec, loudness, Whisper accuracy, frames
+    python3 qa.py final OUT              # after rendering: spec, loudness, Whisper, variety, frames
 
 Exit code 1 if any gate fails.
 """
@@ -18,7 +18,6 @@ from PIL import Image, ImageDraw, ImageOps
 W, H = 1080, 1920
 BOTTOM, RIGHT = 1440, 850          # Instagram caption/audio strip below y=1440, action rail right of x=850
 GRID_TOP, GRID_BOTTOM = 285, 1635  # 4:5 profile-grid crop of a 9:16 Reel
-BG = (14, 27, 61)
 failed = []
 
 
@@ -32,7 +31,26 @@ def words(s):
     return len(s.split())
 
 
+def lum(h):
+    c = [int(h[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    c = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in c]
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+
+
+def contrast(a, b):
+    la, lb = sorted((lum(a), lum(b)), reverse=True)
+    return (la + 0.05) / (lb + 0.05)
+
+
 def script(data):
+    pal = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'palette.json')))['worlds']
+    print('palette')
+    for name, w in pal.items():
+        for fg, need in (('ink', 4.5), ('muted', 4.5), ('accent', 3.0)):
+            r = contrast(w[fg], w['bg'])
+            gate(r >= need, f'{name} {fg} contrast', f'{r:.1f}:1 (need {need}:1)')
+        r = contrast(w['ink'], w['panel'])
+        gate(r >= 4.5, f'{name} ink on panel', f'{r:.1f}:1')
     posts = json.load(open(data))
     for p in posts:
         print(f"day {p['day']}")
@@ -53,6 +71,7 @@ def look(out):
     for f in shots:
         im = Image.open(f).convert('RGB')
         px = im.load()
+        BG = px[4, 4]  # the corner is always background, whatever the colour world
         def ink(x0, y0, x1, y1):
             return sum(1 for y in range(y0, y1, 4) for x in range(x0, x1, 4)
                        if sum(abs(a - b) for a, b in zip(px[x, y], BG)) > 60)
@@ -147,6 +166,12 @@ def final(out):
             sheet.paste(Image.open(png).resize((216, 384)), (i * 216, 0))
             os.remove(png)
         sheet.save(f.replace('.mp4', '.frames.png'))
+    # Anti-sameness: each main Reel must differ from the previous one on at least 4 of 6 axes.
+    mains = sorted(glob.glob(os.path.join(out, 'day-*', '1-main-reel-*.axes.json')))
+    for prev, cur in zip(mains, mains[1:]):
+        a, b = json.load(open(prev)), json.load(open(cur))
+        diff = [k for k in a if a[k] != b.get(k)]
+        gate(len(diff) >= 4, f'variety {os.path.basename(os.path.dirname(cur))}', f'{len(diff)}/6 axes differ: {", ".join(diff) or "none"}')
     print(f'\n{len(reels)} reels checked, {len(failed)} gate failures')
 
 
