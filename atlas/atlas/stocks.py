@@ -79,8 +79,8 @@ def load_panel(path: str, start: str | None = None, end: str | None = None,
         # drop deeper than -45% that matches a standard factor keeps the factor.
         inferred = adj_factor.stack()
         inferred_keys = set(zip(inferred.index.get_level_values(0), inferred.index.get_level_values(1)))
-        deep_glitch = (cv.verdict == "real") & (cv.raw_ret < -0.45) & [
-            (d, s) in inferred_keys for d, s in zip(cv.date, cv.symbol)]
+        deep_glitch = (cv.verdict == "real") & (cv.raw_ret < -0.45) & np.array(
+            [(d, s) in inferred_keys for d, s in zip(cv.date, cv.symbol)], dtype=bool)
         cv = cv[~deep_glitch]
         for v, val in (("corporate_action", "yahoo_ret"), ("real", "raw_ret")):
             sub = cv[cv.verdict == v]
