@@ -143,6 +143,29 @@ trade until the official closes are out and match):
 | Universe selection | Without the foreign and precious-metal ETFs, Sharpe above cash falls from 0.65 to 0.42–0.55. The edge survives, but the realistic forward estimate is ~0.4–0.5, not 0.68. |
 | v2-IN after all fixes | Sharpe above cash 0.68, max DD −13%, both tiers still pass (DSR 0.956). |
 
+### Stock momentum sleeve: pre-registered, tested once, **failed its own gate**
+
+Survivorship-free NSE data: every EQ stock in every daily bhavcopy since
+2005, 4,506 symbols including delisted ones. Bonuses and splits are inferred
+from prices, then every 15%+ drop in any once-liquid stock is checked against
+Yahoo (`atlas/stocks.py`, `scripts/build_nse_stocks.py`, `scripts/verify_ca_yahoo.py`).
+Research 2006–2016 chose "top 30 by momentum ÷ volatility, monthly". It was
+locked before the holdout ([`PREREGISTRATION.md`](PREREGISTRATION.md)).
+
+| Holdout 2017 – Nov 2026 | CAGR | Sharpe above cash | Max DD |
+| --- | --- | --- | --- |
+| Stock momentum | 20.7% | 0.71 | −41% |
+| v2-IN (ETF trend) | 13.1% | 0.82 | −11% |
+| 50/50 | 17.3% | 0.80 | −27% |
+| Nifty 50 | 13.8% | 0.55 | −36% |
+
+Passed: positive at 2× costs (Sharpe 0.63) and beat the Nifty. After tax: 18.7%.
+**Failed: the 50/50 mix does not beat v2-IN alone** (correlation 0.66: both are
+trend-following in Indian equities), and Deflated Sharpe 0.735 < 0.95. It is
+**not paper-traded**. Using it *instead of a Nifty index fund* is a different
+hypothesis. With no unused Indian stock history left, only forward paper trading
+can test it.
+
 ### Framework upgrades for live trading in India
 
 | Added | What it does | What it found |
