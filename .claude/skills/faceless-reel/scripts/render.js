@@ -67,7 +67,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;font-family:'Inter',sans-se
 .unit{font:700 56px/1.1 'Inter Display','Inter'}
 .bars{display:flex;flex-direction:column;gap:7px;width:100%}
 .bars b{display:block;height:12px;border-radius:6px;background:var(--ink);opacity:.85;transform-origin:0 50%}
-.sheets{position:relative;width:360px;height:420px}
+.sheets{position:relative;width:360px;height:420px;margin-top:72px}
 .center .sheets{margin:0 auto}
 .sheets b{position:absolute;inset:0;border-radius:14px;background:var(--panel);border:3px solid var(--ink)}
 .sheets b:after{content:'';position:absolute;left:40px;right:40px;top:60px;height:200px;
@@ -115,12 +115,12 @@ BEATS.forEach((b, i) => {
   }
   if (b.type==='wow') {
     const p = {v:b.from}; proxies.push([p, document.getElementById('w'+i)]);
-    const land = t + 1.6;
+    const land = t + 1.1;                               // expo.out is ~99% done by here: flip as the count lands
     R(s.querySelectorAll('.rv'), t+.05);
     tl.to(p,{v:b.to,duration:1.2,ease:'expo.out'},t+.4);
     if (b.kind==='sheets') {
       const sh = [...s.querySelectorAll('.sheets b')];
-      sh.forEach((e,k)=>tl.set(e,{x:k*14,y:-k*14,rotation:(k%2?1:-1)*k*.8},t));
+      sh.forEach((e,k)=>tl.set(e,{x:k*12,y:-k*8,rotation:(k%2?1:-1)*k*.8},t));  // fans up at most 56 px, inside the 72 px margin
       if (b.to < b.from) tl.to(sh.slice(1),{x:0,y:0,rotation:0,opacity:0,duration:.6,ease:'expo.out',stagger:{each:.05,from:'end'}},t+.5);
       else tl.from(sh.slice(1),{x:0,y:0,rotation:0,opacity:0,duration:.6,ease:'expo.out',stagger:.05},t+.5);
     } else {
