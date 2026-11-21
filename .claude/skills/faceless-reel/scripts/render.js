@@ -24,7 +24,7 @@ const CACHE = path.resolve(arg('voice-cache', path.join(OUT, '..', 'voice-cache'
 const MODELS = process.env.FACELESS_REEL_MODELS || path.join(require('os').homedir(), '.cache', 'faceless-reel');
 const GSAP = fs.readFileSync(path.join(MODELS, 'node_modules', 'gsap', 'dist', 'gsap.min.js'), 'utf8');
 const WORLDS = JSON.parse(fs.readFileSync(path.join(SKILL, 'palette.json'), 'utf8')).worlds;
-const badgeFile = arg('badge');
+const badgeFile = arg('badge', path.join(SKILL, 'assets', 'badge.png'));
 const BADGE = badgeFile && fs.existsSync(badgeFile)
   ? `<img src="data:image/png;base64,${fs.readFileSync(badgeFile).toString('base64')}">` : '';
 const posts = JSON.parse(fs.readFileSync(DATA, 'utf8')).filter(p => !ONLY || String(p.day) === ONLY);

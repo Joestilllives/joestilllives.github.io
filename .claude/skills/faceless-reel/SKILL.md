@@ -23,6 +23,9 @@ bash scripts/setup.sh          # pip packages, GSAP 3.13, Kokoro voice model (~3
 
 Needs ffmpeg, Node and Playwright with Chromium. Set `FACELESS_REEL_MODELS` to keep the model elsewhere.
 
+`assets/badge.png` (the round photo next to the handle, used by default) and `assets/profile-picture.png`
+belong to @hours_back.ai. Pass `--badge` to use another, and `--handle` for the account name.
+
 ## The pipeline (run in this order, never skip a gate)
 
 ```bash
@@ -32,7 +35,7 @@ node $S/render.js --data $D --out $O --mode look --handle @h  # 2. one still per
 python3 $S/qa.py look $O                                      #    safe zones + grayscale sheet; LOOK at it
 node $S/render.js --data $D --out $O --mode dump              # 3. list every spoken line
 python3 $S/tts.py $O/speech.json voice-cache $M               #    voice them (cached, re-runs are cheap)
-node $S/render.js --data $D --out $O --handle @h --badge badge.png   # 4. full render
+node $S/render.js --data $D --out $O --handle @h                   # 4. full render
 python3 $S/qa.py final $O                                     # 5. spec, loudness, Whisper, variety
 ```
 
