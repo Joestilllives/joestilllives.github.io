@@ -69,7 +69,7 @@
         "prompt": "Write a short follow-up to this unanswered email. Restate the ask in one line and suggest a next step. Under 50 words."
       }
     ],
-    "caption": "Stop losing your first hour to email. These 4 prompts clear it.\n\nFour prompts: sort the pile, rewrite the reply, say no nicely, chase the one that never answered. Paste your email under any of them.\n\nSave it for Monday. That's when you'll need it.\n\nDay 2 of 30. Day 3's tomorrow, so follow if you don't want to miss it.\n\n#aitools #productivity #chatgpt\n",
+    "caption": "Your inbox eats your first hour. These 4 prompts give it back.\n\nFour prompts: sort the pile, rewrite the reply, say no nicely, chase the one that never answered. Paste your email under any of them.\n\nSave it for Monday. That's when you'll need it.\n\nDay 2 of 30. Day 3's tomorrow, so follow if you don't want to miss it.\n\n#aitools #productivity #chatgpt\n",
     "singles": [
       {
         "card": 2,
@@ -84,9 +84,9 @@
         "caption": "Stop burying your ask in line 6. This prompt moves it to line 1.\n\nIt's on the screen. Copy it, paste it into Claude or ChatGPT, and you're done.\n\nThere's a new one every day. Follow so you don't miss tomorrow's.\n\n#aitools #productivity #chatgpt\n"
       }
     ],
-    "say": "Stop losing your first hour to email. These 4 prompts clear it.",
+    "say": "Your inbox eats your first hour. These 4 prompts give it back.",
     "wow": {
-      "kind": "bars",
+      "kind": "sheets",
       "from": 40,
       "to": 0,
       "unit": "unread emails",

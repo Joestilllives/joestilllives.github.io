@@ -39,7 +39,7 @@ const vars = w => Object.entries(WORLDS[w]).map(([k, v]) => `--${k}:${v}`).join(
 // Variety defaults rotate by day, so consecutive Reels differ even when the JSON does not say how.
 const defaults = p => ({
   world: p.world || (p.day % 2 ? 'navy' : 'paper'),
-  layout: p.layout || (Math.floor((p.day - 1) / 2) % 2 ? 'center' : 'left'),
+  layout: p.layout || (Math.floor((p.day - 1) / 3) % 2 ? 'center' : 'left'),  // period 3, so it never moves in lockstep with world (period 2)
   ending: p.ending || (p.day % 2 ? 'send' : 'save'),
 });
 

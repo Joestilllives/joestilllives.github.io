@@ -52,12 +52,18 @@ def script(data):
         r = contrast(w['ink'], w['panel'])
         gate(r >= 4.5, f'{name} ink on panel', f'{r:.1f}:1')
     posts = json.load(open(data))
+    for a, b in zip(posts, posts[1:]):  # catch sameness before rendering, not after
+        op = lambda x: x['say'].split()[0].lower().strip('.,!?')
+        gate(op(a) != op(b), f"opener day {b['day']} vs {a['day']}", f'"{op(a)}" then "{op(b)}"')
     for p in posts:
         print(f"day {p['day']}")
         hooks = [('main', p['say'])] + [(f"single {i + 1}", s['say']) for i, s in enumerate(p.get('singles', []))]
         for name, h in hooks:
             n = words(h)
             gate(5 <= n <= 18, f'hook {name} 5-18 words', f'{n} words: "{h}"')
+        for name, h in [('main', p['hook'])] + [(f"single {i + 1}", s['hook']) for i, s in enumerate(p.get('singles', []))]:
+            gate(words(h) <= 6, f'on-screen hook {name} <= 6', f'{words(h)} words: "{h}"')
+        gate(bool(p.get('wow')), 'one wow moment', p['wow']['unit'] if p.get('wow') else 'missing: add a wow block')
         cap = p['caption'].lower()
         gate(bool(re.search(r'\b(save|send)\b', cap)), 'caption save/send ask', 'found' if re.search(r'\b(save|send)\b', cap) else 'missing')
         tags = re.findall(r'#\w+', p['caption'])
