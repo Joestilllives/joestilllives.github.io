@@ -13,6 +13,17 @@ stock does against similar-sized stocks over the next week to three months.
 | `scan.py` | Lists today's frenzy stocks |
 | `match_wikipedia.py`, `wiki_signals.py` | Wikipedia attention signals (blocked by Wikimedia rate limits so far) |
 
+## The combined money signal (`combined.py`)
+
+One score per company, weighing ~30 signals together (trend, money flow, frenzy, IPO history,
+Wikipedia attention, market mood), learned by a gradient-boosted model and tested walk-forward
+(trained only on months already known). Companies only, ETFs excluded (`funds_exclude.txt`),
+no survivorship leaks. Out-of-sample Feb 2023 – Sep 2026 (44 months), buy list = top 20%
+within each size group, after 0.3% costs: **+0.35%/month vs the market (~+4%/yr), t = 2.3,
+correct ranking direction in 86% of months, deepest slide vs market -2.4%.**
+
+Run: `BHAVCOPY=<latest BhavCopy csv> python3 combined.py PANEL.pkl INDUSTRY.csv IPOS.csv VIEWS.pkl OUTDIR`
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
