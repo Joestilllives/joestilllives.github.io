@@ -29,6 +29,7 @@ from .tax import TaxConfig, TaxLedger, financial_year
 
 FACTORS = np.array([1 / 2, 1 / 3, 1 / 4, 1 / 5, 1 / 6, 1 / 8, 1 / 10, 1 / 20, 2 / 3, 2 / 5, 3 / 5, 3 / 10])
 DELIST_HAIRCUT = -0.30
+ETF_PATTERN = r"BEES$|ETF|IETF|^NIFTY|^SENSEX|^GOLD|^SILVER|^LIQUID|^MON100|^MAFANG|^N100|^MASPTOP|^MAKEINDIA|^HDFCNIF|^ICICINIF|^SETF|^LICNETF|^MOM|^MID150|^NEXT50|^BSLNIFTY|^BSLGOLD|^AXISGOLD|^QGOLD|^KOTAKGOLD|^IDFNIFTY|^EBBETF|^CPSE|^BHARATBOND|^SBIETF|^UTINIFTY|^UTISENSETF|^IVZIN|^NV20|^QNIFTY|^SHARIABEES|^INFRABEES|^PSUBNKBEES|^JUNIORBEES|^HNGSNG"
 
 
 @dataclass
@@ -48,6 +49,8 @@ def load_panel(path: str, start: str | None = None, end: str | None = None,
     if end:
         raw = raw[raw.date <= end]
     raw = raw[raw.close > 0].drop_duplicates(["date", "symbol"], keep="last")
+    # ETFs trade in the EQ series too; they are not stocks.
+    raw = raw[~raw.symbol.str.contains(ETF_PATTERN, regex=True, na=False)]
     close = raw.pivot(index="date", columns="symbol", values="close").sort_index()
     value = raw.pivot(index="date", columns="symbol", values="value").reindex_like(close)
 
@@ -72,6 +75,13 @@ def load_panel(path: str, start: str | None = None, end: str | None = None,
         cv = pd.read_csv(corrections, parse_dates=["date"])
         cv = cv[cv.verdict.isin(["corporate_action", "real"]) & cv.symbol.isin(ret.columns)
                 & cv.date.isin(ret.index)]
+        # Yahoo shares some split glitches (e.g. ETFs on 2019-12-19): a "real"
+        # drop deeper than -45% that matches a standard factor keeps the factor.
+        inferred = adj_factor.stack()
+        inferred_keys = set(zip(inferred.index.get_level_values(0), inferred.index.get_level_values(1)))
+        deep_glitch = (cv.verdict == "real") & (cv.raw_ret < -0.45) & [
+            (d, s) in inferred_keys for d, s in zip(cv.date, cv.symbol)]
+        cv = cv[~deep_glitch]
         for v, val in (("corporate_action", "yahoo_ret"), ("real", "raw_ret")):
             sub = cv[cv.verdict == v]
             ri = ret.index.get_indexer(sub.date)
