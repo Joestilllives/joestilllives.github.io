@@ -20,7 +20,7 @@ from kokoro_onnx import Kokoro
 lines, cache, models = json.load(open(sys.argv[1])), sys.argv[2], sys.argv[3]
 os.makedirs(cache, exist_ok=True)
 k = Kokoro(os.path.join(models, 'kokoro.onnx'), os.path.join(models, 'voices.bin'))
-made = 0
+made, pace = 0, []
 for text in dict.fromkeys(lines):
     out = os.path.join(cache, hashlib.sha1(text.encode()).hexdigest() + '.wav')
     if os.path.exists(out):
@@ -30,6 +30,16 @@ for text in dict.fromkeys(lines):
     sf.write(raw, audio, sr)
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', raw, '-af', 'adelay=250',
                     '-ar', '48000', '-ac', '1', out], check=True)
+    n = len(text.split())
+    if n >= 5:  # narration pace on real sentences: 2.2-3.8 words per second
+        pace.append((n / (len(audio) / sr), text))
     os.remove(raw)
     made += 1
 print(f'voiced {made} new lines, {len(set(lines)) - made} already cached')
+bad = [(w, t) for w, t in pace if not 2.2 <= w <= 3.8]
+if pace:
+    print(f"  {'PASS' if not bad else 'FAIL'}  narration pace 2.2-3.8 wps  "
+          f"{min(w for w, _ in pace):.2f}-{max(w for w, _ in pace):.2f} across {len(pace)} new lines")
+for w, t in bad:
+    print(f'        {w:.2f} wps: {t}')
+sys.exit(1 if bad else 0)

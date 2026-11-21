@@ -63,7 +63,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;font-family:'Inter',sans-se
 .copy{font:700 22px 'Inter';letter-spacing:3px;color:var(--muted);margin-bottom:18px}
 .prompt{font:500 33px/1.45 'JetBrains Mono',monospace}
 .prompt span{opacity:0}
-.wow{font:900 300px/0.9 'Inter Display','Inter';letter-spacing:-8px;color:var(--accent);font-variant-numeric:tabular-nums}
+.wow{font:900 300px/0.9 'Inter Display','Inter';letter-spacing:-8px;color:var(--cost);font-variant-numeric:tabular-nums}
 .unit{font:700 56px/1.1 'Inter Display','Inter'}
 .bars{display:flex;flex-direction:column;gap:7px;width:100%}
 .bars b{display:block;height:12px;border-radius:6px;background:var(--ink);opacity:.85;transform-origin:0 50%}
@@ -129,6 +129,7 @@ BEATS.forEach((b, i) => {
       else tl.from(bars.slice(keep),{scaleX:.001,duration:.5,ease:'expo.out',stagger:.03},t+.45);
     }
     world(b.flip, land);                                // the twist: 0 ms colour-world flip
+    tl.set('#w'+i,{color:'var(--gain)'},land);          // problem in coral, result in teal
     tl.fromTo('#w'+i,{scale:1.03},{scale:1,duration:.2,ease:'power3.out'},land);
   }
   if (b.type==='cta') R(s.querySelectorAll('.rv'), t+.05);

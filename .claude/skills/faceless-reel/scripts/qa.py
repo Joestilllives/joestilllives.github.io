@@ -46,7 +46,7 @@ def script(data):
     pal = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'palette.json')))['worlds']
     print('palette')
     for name, w in pal.items():
-        for fg, need in (('ink', 4.5), ('muted', 4.5), ('accent', 3.0)):
+        for fg, need in (('ink', 4.5), ('muted', 4.5), ('accent', 3.0), ('cost', 3.0), ('gain', 3.0)):
             r = contrast(w[fg], w['bg'])
             gate(r >= need, f'{name} {fg} contrast', f'{r:.1f}:1 (need {need}:1)')
         r = contrast(w['ink'], w['panel'])

@@ -91,6 +91,8 @@ Adapted from a faceless-Reel production playbook; only the parts that apply to t
   amber) with Inter and JetBrains Mono. Layout, world and ending vary.
 - **60-30-10.** 60% ground, 30% ink, 10% accent. The accent is reserved for the wow number, the
   highlighted word and the progress bar. Every world passes 4.5:1 for text and 3:1 for accent, checked.
+- **Functional signal colours.** On the wow number only: coral (`cost`) for the problem, teal (`gain`) for
+  the result, switched at the flip. Coral and teal stay distinct with colour blindness; never red vs green.
 - **Motion personality: calm and sharp.** `power3.out` / `expo.out`, 0.35 s base unit, at most 3%
   overshoot, consecutive entrances overlapping 30-50%, blur-to-sharp reveals. No bounce, no slow
   Ken Burns zoom, no generic fade-slide card entrance (boxes open with a clip reveal instead).
@@ -114,6 +116,22 @@ Adapted from a faceless-Reel production playbook; only the parts that apply to t
   transcript.
 - Source-citation gates: only needed when a Reel states figures. If one does, cite the source in the
   caption and in the JSON.
+
+## Repositories from the playbook: what is actually in this pipeline
+
+| In use | Role |
+| --- | --- |
+| greensock/GSAP 3.13 | the timeline every frame is seeked from |
+| thewh1teagle/kokoro-onnx | narrator, `am_fenrir` at 1.12 |
+| SYSTRAN/faster-whisper | per-Reel listen-back check |
+
+The playbook's other picks are not installed. givemotion's role (HTML to deterministic MP4) is done by
+`render.js` with Playwright; Radix/OKLCH's role (guaranteed contrast) is done by the WCAG gate in
+`qa.py`. Not used: three.js, matter-js, zdog, d3 + us-atlas, opentype + flubber, rough (finance and 3D
+visuals); tinysoundfont + GeneralUser-GS and pedalboard (music and vocal chain: needs a human ear);
+pocket-tts (only for voice cloning); remotion (a rewrite with no gain here). lemomo-opuscar,
+heygen/hyperframes, iart motion-skills and openmotion were not read; their rules arrived via the
+playbook text. Read them before claiming otherwise.
 
 ## After posting: the feedback loop
 
