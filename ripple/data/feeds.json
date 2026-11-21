@@ -1,0 +1,30 @@
+{
+  "rss": [
+    "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms",
+    "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+    "https://www.cnbc.com/id/10000664/device/rss/rss.html"
+  ],
+  "google_news_queries": [
+    "crude oil price",
+    "OPEC output",
+    "Strait of Hormuz",
+    "Red Sea shipping",
+    "Federal Reserve rates",
+    "rupee dollar",
+    "FPI outflows India",
+    "US tariffs India",
+    "H-1B visa",
+    "USFDA warning letter",
+    "US drug pricing pharma",
+    "Nvidia AI spending",
+    "TSMC Taiwan",
+    "chip shortage",
+    "Apple iPhone India",
+    "Accenture results",
+    "Jaguar Land Rover",
+    "aluminium tariffs Novelis",
+    "Chinese steel imports India",
+    "gold price",
+    "monsoon India"
+  ]
+}

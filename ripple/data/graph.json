@@ -1,0 +1,1099 @@
+{
+ "_readme": "Ripple link map. Entities are companies, commodities, policies or risks. An edge A -> B with sign +1 means: when A goes up, B tends to benefit / go up. sign -1 means the opposite. sign 0 means B is exposed but the direction is unclear. w (0-1) is how strong/direct the link is. For 'risk' entities, a plain mention means the risk is rising (default_dir 1). Aliases starting with '=' match case-sensitively.",
+ "entities": [
+  {
+   "id": "crude",
+   "name": "Crude oil price",
+   "type": "commodity",
+   "market": "Global",
+   "aliases": [
+    "crude oil",
+    "crude",
+    "Brent",
+    "WTI",
+    "oil prices",
+    "oil price"
+   ]
+  },
+  {
+   "id": "opec",
+   "name": "OPEC+ oil output",
+   "type": "policy",
+   "market": "Global",
+   "aliases": [
+    "=OPEC",
+    "OPEC+",
+    "oil output",
+    "oil production"
+   ]
+  },
+  {
+   "id": "hormuz",
+   "name": "Strait of Hormuz tension",
+   "type": "risk",
+   "market": "Global",
+   "default_dir": 1,
+   "aliases": [
+    "Strait of Hormuz",
+    "Hormuz"
+   ]
+  },
+  {
+   "id": "redsea",
+   "name": "Red Sea shipping disruption",
+   "type": "risk",
+   "market": "Global",
+   "default_dir": 1,
+   "aliases": [
+    "Red Sea",
+    "Houthi",
+    "Houthis",
+    "Suez Canal"
+   ]
+  },
+  {
+   "id": "freight",
+   "name": "Global shipping costs",
+   "type": "commodity",
+   "market": "Global",
+   "aliases": [
+    "freight rates",
+    "shipping costs",
+    "container rates"
+   ]
+  },
+  {
+   "id": "fed",
+   "name": "US interest rates (Fed)",
+   "type": "policy",
+   "market": "US",
+   "aliases": [
+    "=Fed",
+    "Federal Reserve",
+    "=FOMC",
+    "US interest rates",
+    "US rates"
+   ]
+  },
+  {
+   "id": "ust",
+   "name": "US Treasury yields",
+   "type": "macro",
+   "market": "US",
+   "aliases": [
+    "Treasury yields",
+    "Treasury yield",
+    "US bond yields",
+    "10-year yield"
+   ]
+  },
+  {
+   "id": "dxy",
+   "name": "US dollar strength",
+   "type": "macro",
+   "market": "US",
+   "aliases": [
+    "dollar index",
+    "=DXY",
+    "US dollar",
+    "greenback"
+   ]
+  },
+  {
+   "id": "inr",
+   "name": "Indian rupee strength",
+   "type": "macro",
+   "market": "IN",
+   "aliases": [
+    "rupee",
+    "=INR"
+   ]
+  },
+  {
+   "id": "fii",
+   "name": "Foreign investor flows into India",
+   "type": "macro",
+   "market": "IN",
+   "aliases": [
+    "=FII",
+    "=FIIs",
+    "=FPI",
+    "=FPIs",
+    "foreign investors",
+    "foreign portfolio investors",
+    "foreign institutional investors"
+   ]
+  },
+  {
+   "id": "us_slowdown",
+   "name": "US economic slowdown risk",
+   "type": "risk",
+   "market": "US",
+   "default_dir": 1,
+   "aliases": [
+    "US recession",
+    "US slowdown",
+    "recession fears",
+    "US economy slows"
+   ]
+  },
+  {
+   "id": "us_banks",
+   "name": "US banks",
+   "type": "sector",
+   "market": "US",
+   "aliases": [
+    "US banks",
+    "Wall Street banks",
+    "JPMorgan",
+    "Citigroup",
+    "Bank of America",
+    "Wells Fargo",
+    "Goldman Sachs"
+   ]
+  },
+  {
+   "id": "h1b",
+   "name": "US work-visa (H-1B) restrictions",
+   "type": "risk",
+   "market": "US",
+   "default_dir": 1,
+   "aliases": [
+    "H-1B",
+    "H1B",
+    "H-1B visa",
+    "work visa"
+   ]
+  },
+  {
+   "id": "us_fda",
+   "name": "US FDA scrutiny of drug plants",
+   "type": "risk",
+   "market": "US",
+   "default_dir": 1,
+   "aliases": [
+    "USFDA",
+    "=FDA",
+    "warning letter",
+    "import alert",
+    "Form 483"
+   ]
+  },
+  {
+   "id": "drug_pricing",
+   "name": "US drug-pricing / pharma tariff pressure",
+   "type": "risk",
+   "market": "US",
+   "default_dir": 1,
+   "aliases": [
+    "drug pricing",
+    "drug prices",
+    "pharma tariffs",
+    "pharmaceutical tariffs",
+    "most favored nation"
+   ]
+  },
+  {
+   "id": "us_tariffs",
+   "name": "US import tariffs (general)",
+   "type": "risk",
+   "market": "US",
+   "default_dir": 1,
+   "aliases": [
+    "US tariffs",
+    "US tariff",
+    "trade war",
+    "import duties",
+    "reciprocal tariffs",
+    "auto tariffs",
+    "car tariffs"
+   ]
+  },
+  {
+   "id": "us_tariff_india",
+   "name": "US tariffs on Indian goods",
+   "type": "risk",
+   "market": "US",
+   "default_dir": 1,
+   "aliases": [
+    "tariffs on India",
+    "tariff on India",
+    "tariffs on Indian",
+    "India tariffs",
+    "India-US trade",
+    "India US trade deal",
+    "India-US trade deal"
+   ]
+  },
+  {
+   "id": "ai_capex",
+   "name": "AI / data-centre spending",
+   "type": "macro",
+   "market": "Global",
+   "aliases": [
+    "AI spending",
+    "AI capex",
+    "data center",
+    "data centre",
+    "data centers",
+    "data centres",
+    "AI infrastructure"
+   ]
+  },
+  {
+   "id": "taiwan",
+   "name": "Taiwan Strait tension",
+   "type": "risk",
+   "market": "Global",
+   "default_dir": 1,
+   "aliases": [
+    "Taiwan Strait",
+    "China-Taiwan",
+    "Taiwan tensions"
+   ]
+  },
+  {
+   "id": "chip_shortage",
+   "name": "Chip shortage",
+   "type": "risk",
+   "market": "Global",
+   "default_dir": 1,
+   "aliases": [
+    "chip shortage",
+    "semiconductor shortage",
+    "chip crunch"
+   ]
+  },
+  {
+   "id": "chips",
+   "name": "Semiconductor supply",
+   "type": "commodity",
+   "market": "Global",
+   "aliases": [
+    "chip supply",
+    "semiconductor supply",
+    "chip exports",
+    "export controls"
+   ]
+  },
+  {
+   "id": "gold",
+   "name": "Gold price",
+   "type": "commodity",
+   "market": "Global",
+   "aliases": [
+    "gold price",
+    "gold prices",
+    "gold"
+   ]
+  },
+  {
+   "id": "aluminium",
+   "name": "Aluminium price",
+   "type": "commodity",
+   "market": "Global",
+   "aliases": [
+    "aluminium",
+    "aluminum",
+    "=LME aluminium"
+   ]
+  },
+  {
+   "id": "china_steel",
+   "name": "Cheap Chinese steel exports",
+   "type": "risk",
+   "market": "Global",
+   "default_dir": 1,
+   "aliases": [
+    "Chinese steel",
+    "China steel",
+    "steel dumping",
+    "steel imports"
+   ]
+  },
+  {
+   "id": "monsoon",
+   "name": "Indian monsoon strength",
+   "type": "macro",
+   "market": "IN",
+   "aliases": [
+    "monsoon",
+    "rainfall"
+   ]
+  },
+  {
+   "id": "apple",
+   "name": "Apple",
+   "type": "company",
+   "market": "US",
+   "ticker": "AAPL",
+   "aliases": [
+    "Apple",
+    "iPhone",
+    "iPhones"
+   ]
+  },
+  {
+   "id": "nvidia",
+   "name": "Nvidia",
+   "type": "company",
+   "market": "US",
+   "ticker": "NVDA",
+   "aliases": [
+    "Nvidia"
+   ]
+  },
+  {
+   "id": "accenture",
+   "name": "Accenture",
+   "type": "company",
+   "market": "US",
+   "ticker": "ACN",
+   "aliases": [
+    "Accenture"
+   ]
+  },
+  {
+   "id": "tsmc",
+   "name": "TSMC",
+   "type": "company",
+   "market": "Global",
+   "ticker": "TSM",
+   "aliases": [
+    "=TSMC",
+    "Taiwan Semiconductor"
+   ]
+  },
+  {
+   "id": "foxconn",
+   "name": "Foxconn",
+   "type": "company",
+   "market": "Global",
+   "ticker": "2317.TW",
+   "aliases": [
+    "Foxconn",
+    "Hon Hai"
+   ]
+  },
+  {
+   "id": "jlr",
+   "name": "Jaguar Land Rover",
+   "type": "company",
+   "market": "Global",
+   "unlisted": true,
+   "aliases": [
+    "Jaguar Land Rover",
+    "=JLR",
+    "Land Rover",
+    "Range Rover"
+   ]
+  },
+  {
+   "id": "novelis",
+   "name": "Novelis",
+   "type": "company",
+   "market": "US",
+   "unlisted": true,
+   "aliases": [
+    "Novelis"
+   ]
+  },
+  {
+   "id": "tata_elec",
+   "name": "Tata Electronics",
+   "type": "company",
+   "market": "IN",
+   "unlisted": true,
+   "aliases": [
+    "Tata Electronics"
+   ]
+  },
+  {
+   "id": "tcs",
+   "name": "TCS",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:TCS",
+   "aliases": [
+    "=TCS",
+    "Tata Consultancy"
+   ]
+  },
+  {
+   "id": "infosys",
+   "name": "Infosys",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:INFY",
+   "aliases": [
+    "Infosys"
+   ]
+  },
+  {
+   "id": "wipro",
+   "name": "Wipro",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:WIPRO",
+   "aliases": [
+    "Wipro"
+   ]
+  },
+  {
+   "id": "hcltech",
+   "name": "HCLTech",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:HCLTECH",
+   "aliases": [
+    "HCLTech",
+    "HCL Technologies",
+    "HCL Tech"
+   ]
+  },
+  {
+   "id": "techm",
+   "name": "Tech Mahindra",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:TECHM",
+   "aliases": [
+    "Tech Mahindra"
+   ]
+  },
+  {
+   "id": "sunpharma",
+   "name": "Sun Pharma",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:SUNPHARMA",
+   "aliases": [
+    "Sun Pharma",
+    "Sun Pharmaceutical"
+   ]
+  },
+  {
+   "id": "drreddy",
+   "name": "Dr. Reddy's",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:DRREDDY",
+   "aliases": [
+    "Dr Reddy",
+    "Dr. Reddy"
+   ]
+  },
+  {
+   "id": "cipla",
+   "name": "Cipla",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:CIPLA",
+   "aliases": [
+    "Cipla"
+   ]
+  },
+  {
+   "id": "lupin",
+   "name": "Lupin",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:LUPIN",
+   "aliases": [
+    "Lupin"
+   ]
+  },
+  {
+   "id": "aurobindo",
+   "name": "Aurobindo Pharma",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:AUROPHARMA",
+   "aliases": [
+    "Aurobindo"
+   ]
+  },
+  {
+   "id": "ioc",
+   "name": "Indian Oil",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:IOC",
+   "aliases": [
+    "Indian Oil",
+    "=IOC",
+    "=IOCL"
+   ]
+  },
+  {
+   "id": "bpcl",
+   "name": "BPCL",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:BPCL",
+   "aliases": [
+    "=BPCL",
+    "Bharat Petroleum"
+   ]
+  },
+  {
+   "id": "hpcl",
+   "name": "HPCL",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:HINDPETRO",
+   "aliases": [
+    "=HPCL",
+    "Hindustan Petroleum"
+   ]
+  },
+  {
+   "id": "ongc",
+   "name": "ONGC",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:ONGC",
+   "aliases": [
+    "=ONGC"
+   ]
+  },
+  {
+   "id": "reliance",
+   "name": "Reliance Industries",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:RELIANCE",
+   "aliases": [
+    "Reliance Industries",
+    "=RIL"
+   ]
+  },
+  {
+   "id": "asianpaints",
+   "name": "Asian Paints",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:ASIANPAINT",
+   "aliases": [
+    "Asian Paints"
+   ]
+  },
+  {
+   "id": "indigo",
+   "name": "IndiGo (InterGlobe Aviation)",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:INDIGO",
+   "aliases": [
+    "IndiGo",
+    "InterGlobe Aviation"
+   ]
+  },
+  {
+   "id": "titan",
+   "name": "Titan",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:TITAN",
+   "aliases": [
+    "Titan Company",
+    "Tanishq"
+   ]
+  },
+  {
+   "id": "tatamotors",
+   "name": "Tata Motors (JLR parent)",
+   "type": "company",
+   "market": "IN",
+   "aliases": [
+    "Tata Motors"
+   ]
+  },
+  {
+   "id": "maruti",
+   "name": "Maruti Suzuki",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:MARUTI",
+   "aliases": [
+    "Maruti"
+   ]
+  },
+  {
+   "id": "hindalco",
+   "name": "Hindalco",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:HINDALCO",
+   "aliases": [
+    "Hindalco"
+   ]
+  },
+  {
+   "id": "tatasteel",
+   "name": "Tata Steel",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:TATASTEEL",
+   "aliases": [
+    "Tata Steel"
+   ]
+  },
+  {
+   "id": "jswsteel",
+   "name": "JSW Steel",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:JSWSTEEL",
+   "aliases": [
+    "JSW Steel"
+   ]
+  },
+  {
+   "id": "avanti",
+   "name": "Avanti Feeds",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:AVANTIFEED",
+   "aliases": [
+    "Avanti Feeds",
+    "shrimp exports",
+    "shrimp exporters"
+   ]
+  },
+  {
+   "id": "welspun",
+   "name": "Welspun Living",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:WELSPUNLIV",
+   "aliases": [
+    "Welspun"
+   ]
+  },
+  {
+   "id": "hul",
+   "name": "Hindustan Unilever",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:HINDUNILVR",
+   "aliases": [
+    "Hindustan Unilever",
+    "=HUL"
+   ]
+  },
+  {
+   "id": "mm",
+   "name": "Mahindra & Mahindra",
+   "type": "company",
+   "market": "IN",
+   "ticker": "NSE:M&M",
+   "aliases": [
+    "Mahindra & Mahindra",
+    "Mahindra and Mahindra"
+   ]
+  }
+ ],
+ "groups": {
+  "indian_it": [
+   "tcs",
+   "infosys",
+   "wipro",
+   "hcltech",
+   "techm"
+  ],
+  "indian_pharma": [
+   "sunpharma",
+   "drreddy",
+   "cipla",
+   "lupin",
+   "aurobindo"
+  ],
+  "omcs": [
+   "ioc",
+   "bpcl",
+   "hpcl"
+  ],
+  "indian_steel": [
+   "tatasteel",
+   "jswsteel"
+  ],
+  "indian_exporters": [
+   "welspun",
+   "avanti"
+  ]
+ },
+ "edges": [
+  {
+   "from": "opec",
+   "to": "crude",
+   "sign": -1,
+   "w": 0.8,
+   "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+  },
+  {
+   "from": "hormuz",
+   "to": "crude",
+   "sign": 1,
+   "w": 0.8,
+   "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+  },
+  {
+   "from": "redsea",
+   "to": "freight",
+   "sign": 1,
+   "w": 0.7,
+   "why": "Ships avoiding the Red Sea sail around Africa, raising freight costs and transit times"
+  },
+  {
+   "from": "redsea",
+   "to": "crude",
+   "sign": 1,
+   "w": 0.3,
+   "why": "Disruption on a key tanker route adds a risk premium to oil"
+  },
+  {
+   "from": "freight",
+   "to": "@indian_exporters",
+   "sign": -1,
+   "w": 0.4,
+   "why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+  },
+  {
+   "from": "crude",
+   "to": "@omcs",
+   "sign": -1,
+   "w": 0.8,
+   "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+  },
+  {
+   "from": "crude",
+   "to": "ongc",
+   "sign": 1,
+   "w": 0.7,
+   "why": "As an oil producer, ONGC earns more when crude is higher"
+  },
+  {
+   "from": "crude",
+   "to": "asianpaints",
+   "sign": -1,
+   "w": 0.6,
+   "why": "Many paint raw materials are crude-oil derivatives"
+  },
+  {
+   "from": "crude",
+   "to": "indigo",
+   "sign": -1,
+   "w": 0.7,
+   "why": "Jet fuel is an airline's single biggest cost"
+  },
+  {
+   "from": "crude",
+   "to": "inr",
+   "sign": -1,
+   "w": 0.6,
+   "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+  },
+  {
+   "from": "crude",
+   "to": "reliance",
+   "sign": 0,
+   "w": 0.4,
+   "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+  },
+  {
+   "from": "inr",
+   "to": "@indian_it",
+   "sign": -1,
+   "w": 0.5,
+   "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+  },
+  {
+   "from": "inr",
+   "to": "@indian_pharma",
+   "sign": -1,
+   "w": 0.3,
+   "why": "Pharma exporters earn a big share in dollars"
+  },
+  {
+   "from": "inr",
+   "to": "@omcs",
+   "sign": 1,
+   "w": 0.3,
+   "why": "A stronger rupee makes imported crude cheaper"
+  },
+  {
+   "from": "fed",
+   "to": "ust",
+   "sign": 1,
+   "w": 0.6,
+   "why": "Fed policy anchors US bond yields"
+  },
+  {
+   "from": "fed",
+   "to": "dxy",
+   "sign": 1,
+   "w": 0.5,
+   "why": "Higher US rates tend to strengthen the dollar"
+  },
+  {
+   "from": "fed",
+   "to": "fii",
+   "sign": -1,
+   "w": 0.5,
+   "why": "Higher US rates pull foreign money out of emerging markets like India"
+  },
+  {
+   "from": "ust",
+   "to": "fii",
+   "sign": -1,
+   "w": 0.5,
+   "why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+  },
+  {
+   "from": "dxy",
+   "to": "inr",
+   "sign": -1,
+   "w": 0.6,
+   "why": "A stronger dollar usually means a weaker rupee"
+  },
+  {
+   "from": "dxy",
+   "to": "gold",
+   "sign": -1,
+   "w": 0.4,
+   "why": "Gold is priced in dollars and often moves against it"
+  },
+  {
+   "from": "fii",
+   "to": "inr",
+   "sign": 1,
+   "w": 0.5,
+   "why": "Foreign inflows bring dollars in and support the rupee"
+  },
+  {
+   "from": "us_slowdown",
+   "to": "@indian_it",
+   "sign": -1,
+   "w": 0.6,
+   "why": "North America is roughly half of revenue for big Indian IT firms; clients cut tech budgets in a slowdown"
+  },
+  {
+   "from": "us_banks",
+   "to": "@indian_it",
+   "sign": 1,
+   "w": 0.35,
+   "why": "Banking & financial services is Indian IT's largest client vertical"
+  },
+  {
+   "from": "accenture",
+   "to": "@indian_it",
+   "sign": 1,
+   "w": 0.6,
+   "why": "Accenture's results and guidance are a closely watched read-through for Indian IT demand"
+  },
+  {
+   "from": "h1b",
+   "to": "@indian_it",
+   "sign": -1,
+   "w": 0.6,
+   "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
+  },
+  {
+   "from": "ai_capex",
+   "to": "@indian_it",
+   "sign": 0,
+   "w": 0.3,
+   "why": "AI can bring new deals but also shrink traditional services work"
+  },
+  {
+   "from": "us_fda",
+   "to": "@indian_pharma",
+   "sign": -1,
+   "w": 0.6,
+   "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
+  },
+  {
+   "from": "drug_pricing",
+   "to": "@indian_pharma",
+   "sign": -1,
+   "w": 0.5,
+   "why": "US pricing or tariff pressure hits companies with large US generics sales"
+  },
+  {
+   "from": "ai_capex",
+   "to": "nvidia",
+   "sign": 1,
+   "w": 0.8,
+   "why": "Data-centre buildouts run on Nvidia GPUs"
+  },
+  {
+   "from": "ai_capex",
+   "to": "tsmc",
+   "sign": 1,
+   "w": 0.6,
+   "why": "TSMC manufactures most advanced AI chips"
+  },
+  {
+   "from": "nvidia",
+   "to": "tsmc",
+   "sign": 1,
+   "w": 0.6,
+   "why": "TSMC manufactures Nvidia's chips"
+  },
+  {
+   "from": "taiwan",
+   "to": "tsmc",
+   "sign": -1,
+   "w": 0.7,
+   "why": "TSMC's main fabs are in Taiwan"
+  },
+  {
+   "from": "tsmc",
+   "to": "chips",
+   "sign": 1,
+   "w": 0.5,
+   "why": "TSMC is the world's largest contract chipmaker"
+  },
+  {
+   "from": "chip_shortage",
+   "to": "chips",
+   "sign": -1,
+   "w": 0.9,
+   "why": "A shortage means less chip supply"
+  },
+  {
+   "from": "chips",
+   "to": "maruti",
+   "sign": 1,
+   "w": 0.5,
+   "why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+  },
+  {
+   "from": "chips",
+   "to": "tatamotors",
+   "sign": 1,
+   "w": 0.5,
+   "why": "Chip shortages have previously cut JLR and Tata Motors output"
+  },
+  {
+   "from": "chips",
+   "to": "apple",
+   "sign": 1,
+   "w": 0.4,
+   "why": "iPhones depend on a steady supply of advanced chips"
+  },
+  {
+   "from": "apple",
+   "to": "foxconn",
+   "sign": 1,
+   "w": 0.7,
+   "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+  },
+  {
+   "from": "apple",
+   "to": "tata_elec",
+   "sign": 1,
+   "w": 0.5,
+   "why": "Tata Electronics assembles iPhones in India"
+  },
+  {
+   "from": "us_tariffs",
+   "to": "jlr",
+   "sign": -1,
+   "w": 0.5,
+   "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+  },
+  {
+   "from": "jlr",
+   "to": "tatamotors",
+   "sign": 1,
+   "w": 0.8,
+   "why": "JLR is Tata Motors' biggest profit driver"
+  },
+  {
+   "from": "us_tariffs",
+   "to": "apple",
+   "sign": -1,
+   "w": 0.4,
+   "why": "Most iPhones are assembled outside the US"
+  },
+  {
+   "from": "us_tariffs",
+   "to": "novelis",
+   "sign": 0,
+   "w": 0.4,
+   "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+  },
+  {
+   "from": "novelis",
+   "to": "hindalco",
+   "sign": 1,
+   "w": 0.7,
+   "why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
+  },
+  {
+   "from": "aluminium",
+   "to": "hindalco",
+   "sign": 1,
+   "w": 0.5,
+   "why": "Hindalco is a major aluminium producer"
+  },
+  {
+   "from": "us_tariff_india",
+   "to": "welspun",
+   "sign": -1,
+   "w": 0.6,
+   "why": "The US is Welspun's largest market for home textiles"
+  },
+  {
+   "from": "us_tariff_india",
+   "to": "avanti",
+   "sign": -1,
+   "w": 0.6,
+   "why": "The US is a top market for Indian shrimp"
+  },
+  {
+   "from": "us_tariff_india",
+   "to": "@indian_pharma",
+   "sign": 0,
+   "w": 0.3,
+   "why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+  },
+  {
+   "from": "us_tariff_india",
+   "to": "inr",
+   "sign": -1,
+   "w": 0.3,
+   "why": "Trade friction can hit export earnings and sentiment on the rupee"
+  },
+  {
+   "from": "china_steel",
+   "to": "@indian_steel",
+   "sign": -1,
+   "w": 0.6,
+   "why": "Cheap Chinese steel drags down prices for Indian steelmakers"
+  },
+  {
+   "from": "gold",
+   "to": "titan",
+   "sign": 0,
+   "w": 0.4,
+   "why": "Jewellery demand and inventory value both move with gold prices"
+  },
+  {
+   "from": "monsoon",
+   "to": "hul",
+   "sign": 1,
+   "w": 0.5,
+   "why": "Rural demand drives a large share of FMCG sales"
+  },
+  {
+   "from": "monsoon",
+   "to": "mm",
+   "sign": 1,
+   "w": 0.6,
+   "why": "Tractor sales track farm incomes"
+  }
+ ]
+}
