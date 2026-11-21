@@ -34,7 +34,9 @@ UNIVERSE: dict[str, str | None] = {
 
 def build_india_prices(start: str = "2005-01-01") -> pd.DataFrame:
     tickers = list(UNIVERSE) + [p for p in UNIVERSE.values() if p]
-    raw = _mask_round_trips(load_yfinance(tickers, start))
+    raw = load_yfinance(tickers, start)
+    etfs = [t for t in UNIVERSE if t in raw.columns]
+    raw[etfs] = _mask_round_trips(raw[etfs])   # exchange index data is never masked
     out = {}
     for etf, proxy in UNIVERSE.items():
         e = raw[etf].ffill(limit=5).pct_change(fill_method=None)

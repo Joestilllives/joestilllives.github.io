@@ -62,6 +62,26 @@ def apply_buffer(current: np.ndarray, target: np.ndarray, buffer: float,
     return out
 
 
+def cap_gross(current: np.ndarray, new: np.ndarray, cap: float) -> np.ndarray:
+    """Make a rebalance feasible under a gross-exposure cap (e.g. 1.0 = cash
+    account, no margin): trim the *increases* pro rata so total gross stays at
+    the cap. Existing positions are never sold just to make room; if the book
+    is already above the cap (e.g. after a tax payment), everything is scaled."""
+    gross = np.abs(new).sum()
+    if gross <= cap + 1e-12:
+        return new
+    inc = np.clip(np.abs(new) - np.abs(current), 0.0, None)
+    excess = gross - cap
+    out = new.copy()
+    if inc.sum() > 0:
+        f = min(1.0, excess / inc.sum())
+        out = np.sign(new) * (np.abs(new) - inc * f)
+    g2 = np.abs(out).sum()
+    if g2 > cap + 1e-12:
+        out *= cap / g2
+    return out
+
+
 @dataclass
 class Order:
     symbol: str

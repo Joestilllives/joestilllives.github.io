@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from .data import get_rates
-from .execution import CostModel, apply_buffer
+from .execution import CostModel, apply_buffer, cap_gross
 from .metrics import summary
 from .portfolio import RiskModel, target_weights
 from .regime import regime_multiplier
@@ -113,6 +113,7 @@ def run_backtest(prices: pd.DataFrame, cfg: dict, forecasts: pd.DataFrame | None
     def execute(target: np.ndarray, i: int) -> None:
         nonlocal w, equity
         new = apply_buffer(w, target, buf, ecfg.get("buffer_floor", 0.25))
+        new = cap_gross(w, new, pcfg.get("max_gross", 3.0))
         dw = new - w
         if ledger is not None:
             for k in np.nonzero(np.abs(dw) > 1e-12)[0]:

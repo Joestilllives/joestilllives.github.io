@@ -116,6 +116,21 @@ class Execution(unittest.TestCase):
         self.assertAlmostEqual(out[1], 0.27)         # trade to band edge
         self.assertEqual(out[2], 0.0)                # flat target closes fully
 
+    def test_cap_gross_trims_buys_only(self):
+        from atlas.execution import cap_gross
+        cur = np.array([0.5, 0.4, 0.0])
+        new = np.array([0.5, 0.4, 0.3])            # would be 120%
+        out = cap_gross(cur, new, 1.0)
+        self.assertAlmostEqual(np.abs(out).sum(), 1.0)
+        self.assertTrue(np.allclose(out[:2], cur[:2]))   # holdings untouched
+        self.assertAlmostEqual(out[2], 0.1)
+
+    def test_backtest_respects_gross_cap(self):
+        cfg = deep_merge(CFG, {"portfolio": {"max_gross": 1.0, "long_only": True}})
+        res = run_backtest(PX, cfg)
+        # after trades the book never exceeds the cap by more than one day's drift
+        self.assertLess(res.weights.abs().sum(axis=1).max(), 1.0 + 0.06)
+
     def test_paper_cycle(self):
         with tempfile.TemporaryDirectory() as d:
             cfg = deep_merge(CFG, {"live": {"max_staleness_days": None},
@@ -213,6 +228,24 @@ class Tax(unittest.TestCase):
         self.assertIsNone(a.tax)
         self.assertGreaterEqual(b.tax.sum(), 0.0)
         self.assertLessEqual(b.equity.iloc[-1], a.equity.iloc[-1] + 1e-6)
+
+
+class Cleaning(unittest.TestCase):
+    def test_real_crash_that_recovers_is_kept(self):
+        from atlas.data import _mask_round_trips
+        idx = pd.bdate_range("2020-03-16", periods=8)
+        # -13% crash, then recovery to the old level over 3 days: real, keep it
+        px = pd.DataFrame({"X": [100, 100, 87, 90, 95, 99.5, 100, 101]}, index=idx, dtype=float)
+        self.assertEqual(int(_mask_round_trips(px)["X"].isna().sum()), 0)
+
+    def test_split_glitch_and_one_day_quote_removed(self):
+        from atlas.data import _mask_round_trips
+        idx = pd.bdate_range("2019-12-16", periods=8)
+        px = pd.DataFrame({"S": [100, 101, 10.1, 10.2, 102, 103, 104, 105],
+                           "Q": [100, 101, 85, 101.5, 102, 103, 104, 105]}, index=idx, dtype=float)
+        m = _mask_round_trips(px)
+        self.assertEqual(m["S"].isna().sum(), 2)
+        self.assertEqual(m["Q"].isna().sum(), 1)
 
 
 class CrossCheck(unittest.TestCase):

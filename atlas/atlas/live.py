@@ -20,7 +20,7 @@ import pandas as pd
 
 from .backtest import make_risk_model
 from .data import get_rates
-from .execution import Broker, Order, PaperBroker, apply_buffer, make_orders
+from .execution import Broker, Order, PaperBroker, apply_buffer, cap_gross, make_orders
 from .portfolio import ex_ante_vol, target_weights
 from .regime import regime_multiplier
 from .risk import RiskManager, RiskState, pre_trade_checks
@@ -111,6 +111,7 @@ def rebalance(prices: pd.DataFrame, cfg: dict, broker: Broker, dry_run: bool = T
         seeded = True
     else:
         new_w = apply_buffer(cur_w, target, ecfg.get("buffer", 0.1), ecfg.get("buffer_floor", 0.25))
+    new_w = cap_gross(cur_w, new_w, pcfg.get("max_gross", 3.0))
     # Throttle: no single trade above max_order_frac of equity per day. Large
     # moves (first deployment, regime flips) are worked over several days.
     lim = rcfg.get("max_order_frac", 0.25) * 0.98

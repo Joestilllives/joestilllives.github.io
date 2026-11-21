@@ -96,28 +96,31 @@ def load_yfinance(symbols: list[str], start: str = "2005-01-01") -> pd.DataFrame
 
 def _mask_round_trips(px: pd.DataFrame, jump: float = 0.12, back_within: float = 0.03,
                       max_days: int = 5) -> pd.DataFrame:
-    """Mask bad prints: a jump of more than `jump` after which the price returns
-    to within `back_within` of its pre-jump level inside `max_days` observations.
-    Catches mishandled unit splits (-90% ... +900%) and fat-finger quotes, while
-    keeping genuine moves (which do not snap back to the exact prior level)."""
+    """Mask bad prints, narrowly, so genuine crashes are never erased:
+
+    * mishandled unit split: a collapse below 20% of the prior price followed,
+      within `max_days` observations, by a >4x rebound (e.g. -90% ... +900%)
+    * one-day bad quote: a move larger than `jump` that returns to within
+      `back_within` of the prior price on the very next observation
+
+    (An earlier version masked any move that round-tripped within 5 days. That
+    erased real crashes that recovered quickly, such as Nifty -13% on 23 Mar
+    2020, and flattered backtests. tests/ now checks this cannot recur.)
+    """
     out = px.copy()
     for col in out.columns:
         s = out[col].dropna()
         v = s.to_numpy().copy()
         bad = np.zeros(len(v), dtype=bool)
-        i = 1
-        while i < len(v):
-            if abs(v[i] / v[i - 1] - 1) > jump:
+        for i in range(1, len(v)):
+            move = v[i] / v[i - 1]
+            if move < 0.2:
                 for j in range(1, max_days + 1):
-                    if i + j >= len(v):
-                        break
-                    back = abs(v[i + j] / v[i - 1] - 1) < back_within
-                    # Mishandled split: collapse >80%, then a >4x rebound.
-                    split = v[i] / v[i - 1] < 0.2 and v[i + j] / v[i + j - 1] > 4.0
-                    if back or split:
+                    if i + j < len(v) and v[i + j] / v[i + j - 1] > 4.0:
                         bad[i:i + j] = True
                         break
-            i += 1
+            elif abs(move - 1) > jump and i + 1 < len(v) and abs(v[i + 1] / v[i - 1] - 1) < back_within:
+                bad[i] = True
         out.loc[s.index[bad], col] = np.nan
     return out
 
