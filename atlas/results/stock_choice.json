@@ -1,0 +1,70 @@
+{
+  "choice": "2 top30 mom/vol",
+  "config": {
+    "top_liquid": 200,
+    "min_history": 273,
+    "min_price": 20.0,
+    "lookback": 252,
+    "skip": 21,
+    "n_hold": 30,
+    "weighting": "equal",
+    "risk_adjusted": true,
+    "trend_filter": false,
+    "fee_bps": 12.0,
+    "half_spread_bps": 8.0,
+    "impact_k": 0.5,
+    "cash_rate": 0.06,
+    "capital": 1000000.0,
+    "tax": false
+  },
+  "research": {
+    "1 top30 equal": {
+      "cagr": 0.0752,
+      "vol": 0.3026,
+      "sharpe_above_cash": 0.1909,
+      "max_drawdown": -0.7744,
+      "turnover_ann": 7.4922,
+      "cost_drag_ann": 0.0178
+    },
+    "2 top30 mom/vol": {
+      "cagr": 0.1598,
+      "vol": 0.2816,
+      "sharpe_above_cash": 0.4517,
+      "max_drawdown": -0.7472,
+      "turnover_ann": 7.4104,
+      "cost_drag_ann": 0.018
+    },
+    "3 top30 inverse-vol": {
+      "cagr": 0.0946,
+      "vol": 0.2924,
+      "sharpe_above_cash": 0.2485,
+      "max_drawdown": -0.7647,
+      "turnover_ann": 7.7877,
+      "cost_drag_ann": 0.0183
+    },
+    "4 top30 equal + trend filter": {
+      "cagr": 0.0993,
+      "vol": 0.2534,
+      "sharpe_above_cash": 0.2613,
+      "max_drawdown": -0.5077,
+      "turnover_ann": 6.2386,
+      "cost_drag_ann": 0.0152
+    },
+    "5 top20 equal": {
+      "cagr": 0.0493,
+      "vol": 0.331,
+      "sharpe_above_cash": 0.1227,
+      "max_drawdown": -0.7856,
+      "turnover_ann": 8.2032,
+      "cost_drag_ann": 0.0204
+    },
+    "6 top50 equal": {
+      "cagr": 0.1016,
+      "vol": 0.2809,
+      "sharpe_above_cash": 0.2714,
+      "max_drawdown": -0.7478,
+      "turnover_ann": 6.546,
+      "cost_drag_ann": 0.015
+    }
+  }
+}

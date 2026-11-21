@@ -144,3 +144,17 @@ Tier 1, paper trading (all must hold):
 
 Tier 2, real money: Deflated Sharpe of the chosen variant > 95%, counting
 10 trials project-wide. After-tax results are reported, not gated.
+
+### Amendment (2026-11-21, before the holdout run): data corrections only
+
+After the first research-window run, an audit found that missed bonus/split
+adjustments appeared as fake −20% to −30% losses in liquid stocks (e.g.
+CUMMINSIND 2011, AJANTPHARM 2013). Every 15%+ drop in any stock ever among
+the 300 most traded was then checked against Yahoo's adjusted series
+(`scripts/verify_ca_yahoo.py`: 1,444 corporate actions confirmed, 2,106 real
+drops confirmed, 2,384 unverifiable and kept under the conservative rules). ETFs
+trading in the EQ series were removed from the stock universe. No strategy
+rule, variant or criterion changed, and the holdout window was never computed.
+The research choice was the same before and after the correction (variant 2).
+
+**Locked choice: variant 2, top 30 by momentum ÷ volatility** (`results/stock_choice.json`).
