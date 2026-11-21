@@ -1,0 +1,450 @@
+{
+ "mom12_1": {
+  "all": {
+   "months": 70,
+   "excess_per_month": 0.0065,
+   "excess_per_year": 0.0812,
+   "t": 2.83,
+   "months_ahead": 0.614,
+   "top_minus_bottom_per_month": 0.0149,
+   "top_total": 3.503,
+   "bench_total": 1.964,
+   "avg_stocks": 237,
+   "avg_turnover": 0.31
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": 0.0082,
+   "excess_per_year": 0.1034,
+   "t": 2.02,
+   "months_ahead": 0.667,
+   "top_minus_bottom_per_month": 0.0182,
+   "top_total": 1.459,
+   "bench_total": 0.972,
+   "avg_stocks": 200,
+   "avg_turnover": 0.33
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": 0.0052,
+   "excess_per_year": 0.0648,
+   "t": 1.97,
+   "months_ahead": 0.575,
+   "top_minus_bottom_per_month": 0.0125,
+   "top_total": 0.831,
+   "bench_total": 0.503,
+   "avg_stocks": 265,
+   "avg_turnover": 0.3
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.904,
+    "bench": 0.592
+   },
+   "2022": {
+    "top": -0.045,
+    "bench": -0.018
+   },
+   "2023": {
+    "top": 0.875,
+    "bench": 0.642
+   },
+   "2024": {
+    "top": 0.034,
+    "bench": 0.048
+   },
+   "2025": {
+    "top": 0.066,
+    "bench": -0.015
+   },
+   "2026": {
+    "top": 0.197,
+    "bench": 0.118
+   }
+  }
+ },
+ "mom6_1": {
+  "all": {
+   "months": 70,
+   "excess_per_month": 0.0024,
+   "excess_per_year": 0.0288,
+   "t": 1.16,
+   "months_ahead": 0.629,
+   "top_minus_bottom_per_month": 0.0083,
+   "top_total": 2.407,
+   "bench_total": 1.964,
+   "avg_stocks": 237,
+   "avg_turnover": 0.4
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": 0.0046,
+   "excess_per_year": 0.0565,
+   "t": 1.82,
+   "months_ahead": 0.7,
+   "top_minus_bottom_per_month": 0.0137,
+   "top_total": 1.224,
+   "bench_total": 0.972,
+   "avg_stocks": 200,
+   "avg_turnover": 0.41
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": 0.0007,
+   "excess_per_year": 0.0084,
+   "t": 0.23,
+   "months_ahead": 0.575,
+   "top_minus_bottom_per_month": 0.0043,
+   "top_total": 0.532,
+   "bench_total": 0.503,
+   "avg_stocks": 265,
+   "avg_turnover": 0.4
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.701,
+    "bench": 0.592
+   },
+   "2022": {
+    "top": 0.002,
+    "bench": -0.018
+   },
+   "2023": {
+    "top": 0.872,
+    "bench": 0.642
+   },
+   "2024": {
+    "top": -0.011,
+    "bench": 0.048
+   },
+   "2025": {
+    "top": -0.042,
+    "bench": -0.015
+   },
+   "2026": {
+    "top": 0.127,
+    "bench": 0.118
+   }
+  }
+ },
+ "high52": {
+  "all": {
+   "months": 70,
+   "excess_per_month": 0.0026,
+   "excess_per_year": 0.0319,
+   "t": 1.32,
+   "months_ahead": 0.614,
+   "top_minus_bottom_per_month": 0.0093,
+   "top_total": 2.656,
+   "bench_total": 1.964,
+   "avg_stocks": 238,
+   "avg_turnover": 0.52
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": 0.004,
+   "excess_per_year": 0.0489,
+   "t": 1.64,
+   "months_ahead": 0.667,
+   "top_minus_bottom_per_month": 0.0137,
+   "top_total": 1.231,
+   "bench_total": 0.972,
+   "avg_stocks": 200,
+   "avg_turnover": 0.56
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": 0.0016,
+   "excess_per_year": 0.0193,
+   "t": 0.54,
+   "months_ahead": 0.575,
+   "top_minus_bottom_per_month": 0.0059,
+   "top_total": 0.639,
+   "bench_total": 0.503,
+   "avg_stocks": 266,
+   "avg_turnover": 0.5
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.64,
+    "bench": 0.592
+   },
+   "2022": {
+    "top": 0.067,
+    "bench": -0.018
+   },
+   "2023": {
+    "top": 0.539,
+    "bench": 0.642
+   },
+   "2024": {
+    "top": 0.087,
+    "bench": 0.048
+   },
+   "2025": {
+    "top": 0.086,
+    "bench": -0.015
+   },
+   "2026": {
+    "top": 0.15,
+    "bench": 0.118
+   }
+  }
+ },
+ "smooth12": {
+  "all": {
+   "months": 70,
+   "excess_per_month": 0.0058,
+   "excess_per_year": 0.0715,
+   "t": 2.82,
+   "months_ahead": 0.686,
+   "top_minus_bottom_per_month": 0.0143,
+   "top_total": 3.419,
+   "bench_total": 1.964,
+   "avg_stocks": 237,
+   "avg_turnover": 0.32
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": 0.0067,
+   "excess_per_year": 0.084,
+   "t": 2.05,
+   "months_ahead": 0.633,
+   "top_minus_bottom_per_month": 0.0164,
+   "top_total": 1.385,
+   "bench_total": 0.972,
+   "avg_stocks": 200,
+   "avg_turnover": 0.35
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": 0.005,
+   "excess_per_year": 0.0623,
+   "t": 1.92,
+   "months_ahead": 0.725,
+   "top_minus_bottom_per_month": 0.0128,
+   "top_total": 0.853,
+   "bench_total": 0.503,
+   "avg_stocks": 265,
+   "avg_turnover": 0.3
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.865,
+    "bench": 0.592
+   },
+   "2022": {
+    "top": -0.032,
+    "bench": -0.018
+   },
+   "2023": {
+    "top": 0.745,
+    "bench": 0.642
+   },
+   "2024": {
+    "top": 0.108,
+    "bench": 0.048
+   },
+   "2025": {
+    "top": 0.102,
+    "bench": -0.015
+   },
+   "2026": {
+    "top": 0.149,
+    "bench": 0.118
+   }
+  }
+ },
+ "rev1": {
+  "all": {
+   "months": 70,
+   "excess_per_month": -0.0043,
+   "excess_per_year": -0.0508,
+   "t": -2.69,
+   "months_ahead": 0.386,
+   "top_minus_bottom_per_month": -0.0063,
+   "top_total": 1.148,
+   "bench_total": 1.964,
+   "avg_stocks": 237,
+   "avg_turnover": 0.8
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": -0.0074,
+   "excess_per_year": -0.0848,
+   "t": -2.7,
+   "months_ahead": 0.267,
+   "top_minus_bottom_per_month": -0.0104,
+   "top_total": 0.577,
+   "bench_total": 0.972,
+   "avg_stocks": 200,
+   "avg_turnover": 0.8
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": -0.0021,
+   "excess_per_year": -0.0246,
+   "t": -1.09,
+   "months_ahead": 0.475,
+   "top_minus_bottom_per_month": -0.0032,
+   "top_total": 0.362,
+   "bench_total": 0.503,
+   "avg_stocks": 265,
+   "avg_turnover": 0.8
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.415,
+    "bench": 0.592
+   },
+   "2022": {
+    "top": -0.099,
+    "bench": -0.018
+   },
+   "2023": {
+    "top": 0.612,
+    "bench": 0.642
+   },
+   "2024": {
+    "top": -0.022,
+    "bench": 0.048
+   },
+   "2025": {
+    "top": -0.056,
+    "bench": -0.015
+   },
+   "2026": {
+    "top": 0.131,
+    "bench": 0.118
+   }
+  }
+ },
+ "industry6": {
+  "all": {
+   "months": 70,
+   "excess_per_month": 0.0032,
+   "excess_per_year": 0.0395,
+   "t": 1.65,
+   "months_ahead": 0.586,
+   "top_minus_bottom_per_month": 0.0079,
+   "top_total": 3.57,
+   "bench_total": 2.733,
+   "avg_stocks": 139,
+   "avg_turnover": 0.29
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": 0.0081,
+   "excess_per_year": 0.101,
+   "t": 3.1,
+   "months_ahead": 0.7,
+   "top_minus_bottom_per_month": 0.0127,
+   "top_total": 1.616,
+   "bench_total": 1.102,
+   "avg_stocks": 122,
+   "avg_turnover": 0.28
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": -0.0004,
+   "excess_per_year": -0.0046,
+   "t": -0.14,
+   "months_ahead": 0.5,
+   "top_minus_bottom_per_month": 0.0043,
+   "top_total": 0.747,
+   "bench_total": 0.776,
+   "avg_stocks": 152,
+   "avg_turnover": 0.3
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.756,
+    "bench": 0.571
+   },
+   "2022": {
+    "top": 0.051,
+    "bench": 0.032
+   },
+   "2023": {
+    "top": 1.016,
+    "bench": 0.734
+   },
+   "2024": {
+    "top": 0.097,
+    "bench": 0.109
+   },
+   "2025": {
+    "top": 0.03,
+    "bench": 0.066
+   },
+   "2026": {
+    "top": 0.087,
+    "bench": 0.123
+   }
+  }
+ },
+ "combo": {
+  "all": {
+   "months": 70,
+   "excess_per_month": 0.0099,
+   "excess_per_year": 0.1249,
+   "t": 3.9,
+   "months_ahead": 0.643,
+   "top_minus_bottom_per_month": 0.017,
+   "top_total": 6.027,
+   "bench_total": 2.673,
+   "avg_stocks": 102,
+   "avg_turnover": 0.37
+  },
+  "first_half": {
+   "months": 30,
+   "excess_per_month": 0.0127,
+   "excess_per_year": 0.1635,
+   "t": 3.12,
+   "months_ahead": 0.667,
+   "top_minus_bottom_per_month": 0.0195,
+   "top_total": 1.945,
+   "bench_total": 1.073,
+   "avg_stocks": 88,
+   "avg_turnover": 0.37
+  },
+  "second_half": {
+   "months": 40,
+   "excess_per_month": 0.0077,
+   "excess_per_year": 0.0968,
+   "t": 2.42,
+   "months_ahead": 0.625,
+   "top_minus_bottom_per_month": 0.0152,
+   "top_total": 1.386,
+   "bench_total": 0.771,
+   "avg_stocks": 112,
+   "avg_turnover": 0.38
+  },
+  "yearly": {
+   "2021": {
+    "top": 0.966,
+    "bench": 0.582
+   },
+   "2022": {
+    "top": 0.032,
+    "bench": 0.017
+   },
+   "2023": {
+    "top": 1.088,
+    "bench": 0.723
+   },
+   "2024": {
+    "top": 0.166,
+    "bench": 0.106
+   },
+   "2025": {
+    "top": 0.158,
+    "bench": 0.068
+   },
+   "2026": {
+    "top": 0.229,
+    "bench": 0.122
+   }
+  }
+ }
+}

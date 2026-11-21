@@ -1,0 +1,418 @@
+{
+ "wiki_stocks": 322,
+ "signals": {
+  "attention_spike": {
+   "description": "Wikipedia readers 3x+ usual (200+ views), first day",
+   "first_half": {
+    "events": 768,
+    "stocks": 203,
+    "h5": {
+     "mean_excess": -0.0038,
+     "median_excess": -0.0079,
+     "hit_rate": 0.419,
+     "t_stat": -2.11,
+     "after_costs": -0.0068,
+     "n": 768
+    },
+    "h20": {
+     "mean_excess": -0.0071,
+     "median_excess": -0.0216,
+     "hit_rate": 0.398,
+     "t_stat": -1.34,
+     "after_costs": -0.0101,
+     "n": 768
+    },
+    "h60": {
+     "mean_excess": 0.0005,
+     "median_excess": -0.0347,
+     "hit_rate": 0.415,
+     "t_stat": 0.65,
+     "after_costs": -0.0025,
+     "n": 768
+    }
+   },
+   "second_half": {
+    "events": 821,
+    "stocks": 234,
+    "h5": {
+     "mean_excess": -0.0011,
+     "median_excess": -0.0052,
+     "hit_rate": 0.466,
+     "t_stat": -1.61,
+     "after_costs": -0.0041,
+     "n": 815
+    },
+    "h20": {
+     "mean_excess": 0.0032,
+     "median_excess": -0.0013,
+     "hit_rate": 0.494,
+     "t_stat": 0.04,
+     "after_costs": 0.0002,
+     "n": 797
+    },
+    "h60": {
+     "mean_excess": -0.0086,
+     "median_excess": -0.0216,
+     "hit_rate": 0.448,
+     "t_stat": -1.42,
+     "after_costs": -0.0116,
+     "n": 772
+    }
+   }
+  },
+  "spike_price_up": {
+   "description": "Attention spike and price up 5%+ (crowd chasing)",
+   "first_half": {
+    "events": 234,
+    "stocks": 110,
+    "h5": {
+     "mean_excess": -0.0044,
+     "median_excess": -0.0201,
+     "hit_rate": 0.363,
+     "t_stat": -0.94,
+     "after_costs": -0.0074,
+     "n": 234
+    },
+    "h20": {
+     "mean_excess": -0.0024,
+     "median_excess": -0.0405,
+     "hit_rate": 0.402,
+     "t_stat": -0.13,
+     "after_costs": -0.0054,
+     "n": 234
+    },
+    "h60": {
+     "mean_excess": -0.0067,
+     "median_excess": -0.0532,
+     "hit_rate": 0.393,
+     "t_stat": 0.15,
+     "after_costs": -0.0097,
+     "n": 234
+    }
+   },
+   "second_half": {
+    "events": 208,
+    "stocks": 97,
+    "h5": {
+     "mean_excess": -0.013,
+     "median_excess": -0.0202,
+     "hit_rate": 0.359,
+     "t_stat": -3.3,
+     "after_costs": -0.016,
+     "n": 206
+    },
+    "h20": {
+     "mean_excess": -0.0114,
+     "median_excess": -0.0252,
+     "hit_rate": 0.384,
+     "t_stat": -0.98,
+     "after_costs": -0.0144,
+     "n": 203
+    },
+    "h60": {
+     "mean_excess": -0.0372,
+     "median_excess": -0.0645,
+     "hit_rate": 0.388,
+     "t_stat": -2.48,
+     "after_costs": -0.0402,
+     "n": 201
+    }
+   }
+  },
+  "spike_price_down": {
+   "description": "Attention spike and price down 5%+",
+   "first_half": {
+    "events": 104,
+    "stocks": 62,
+    "h5": {
+     "mean_excess": -0.0182,
+     "median_excess": -0.0135,
+     "hit_rate": 0.385,
+     "t_stat": -2.27,
+     "after_costs": -0.0212,
+     "n": 104
+    },
+    "h20": {
+     "mean_excess": -0.0305,
+     "median_excess": -0.0262,
+     "hit_rate": 0.385,
+     "t_stat": -1.73,
+     "after_costs": -0.0335,
+     "n": 104
+    },
+    "h60": {
+     "mean_excess": -0.0225,
+     "median_excess": -0.0381,
+     "hit_rate": 0.413,
+     "t_stat": -1.25,
+     "after_costs": -0.0255,
+     "n": 104
+    }
+   },
+   "second_half": {
+    "events": 108,
+    "stocks": 75,
+    "h5": {
+     "mean_excess": 0.0067,
+     "median_excess": 0.0088,
+     "hit_rate": 0.537,
+     "t_stat": 0.49,
+     "after_costs": 0.0037,
+     "n": 108
+    },
+    "h20": {
+     "mean_excess": 0.0064,
+     "median_excess": 0.0022,
+     "hit_rate": 0.514,
+     "t_stat": 0.61,
+     "after_costs": 0.0034,
+     "n": 107
+    },
+    "h60": {
+     "mean_excess": -0.0063,
+     "median_excess": -0.0027,
+     "hit_rate": 0.5,
+     "t_stat": -0.53,
+     "after_costs": -0.0093,
+     "n": 106
+    }
+   }
+  },
+  "attention_building": {
+   "description": "10-day average readers 2x+ usual, no single big spike",
+   "first_half": {
+    "events": 446,
+    "stocks": 164,
+    "h5": {
+     "mean_excess": 0.0072,
+     "median_excess": -0.0025,
+     "hit_rate": 0.466,
+     "t_stat": 1.76,
+     "after_costs": 0.0042,
+     "n": 446
+    },
+    "h20": {
+     "mean_excess": -0.0021,
+     "median_excess": -0.0114,
+     "hit_rate": 0.442,
+     "t_stat": -0.39,
+     "after_costs": -0.0051,
+     "n": 446
+    },
+    "h60": {
+     "mean_excess": 0.0032,
+     "median_excess": -0.0292,
+     "hit_rate": 0.422,
+     "t_stat": 0.28,
+     "after_costs": 0.0002,
+     "n": 446
+    }
+   },
+   "second_half": {
+    "events": 521,
+    "stocks": 218,
+    "h5": {
+     "mean_excess": 0.0015,
+     "median_excess": -0.0054,
+     "hit_rate": 0.441,
+     "t_stat": 0.78,
+     "after_costs": -0.0015,
+     "n": 517
+    },
+    "h20": {
+     "mean_excess": 0.0009,
+     "median_excess": -0.0059,
+     "hit_rate": 0.47,
+     "t_stat": -0.06,
+     "after_costs": -0.0021,
+     "n": 506
+    },
+    "h60": {
+     "mean_excess": -0.0166,
+     "median_excess": -0.03,
+     "hit_rate": 0.426,
+     "t_stat": -2.08,
+     "after_costs": -0.0196,
+     "n": 481
+    }
+   }
+  },
+  "frenzy_wiki_stocks": {
+   "description": "Frenzy day, stocks with a Wikipedia page (reference)",
+   "first_half": {
+    "events": 2171,
+    "stocks": 245,
+    "h5": {
+     "mean_excess": -0.0054,
+     "median_excess": -0.0132,
+     "hit_rate": 0.391,
+     "t_stat": -2.93,
+     "after_costs": -0.0084,
+     "n": 2171
+    },
+    "h20": {
+     "mean_excess": -0.003,
+     "median_excess": -0.0175,
+     "hit_rate": 0.417,
+     "t_stat": -0.36,
+     "after_costs": -0.006,
+     "n": 2171
+    },
+    "h60": {
+     "mean_excess": -0.0039,
+     "median_excess": -0.0415,
+     "hit_rate": 0.408,
+     "t_stat": -0.66,
+     "after_costs": -0.0069,
+     "n": 2171
+    }
+   },
+   "second_half": {
+    "events": 3391,
+    "stocks": 314,
+    "h5": {
+     "mean_excess": -0.0021,
+     "median_excess": -0.0073,
+     "hit_rate": 0.43,
+     "t_stat": -1.43,
+     "after_costs": -0.0051,
+     "n": 3352
+    },
+    "h20": {
+     "mean_excess": -0.0011,
+     "median_excess": -0.0148,
+     "hit_rate": 0.431,
+     "t_stat": -0.49,
+     "after_costs": -0.0041,
+     "n": 3233
+    },
+    "h60": {
+     "mean_excess": -0.0052,
+     "median_excess": -0.0301,
+     "hit_rate": 0.413,
+     "t_stat": -1.25,
+     "after_costs": -0.0082,
+     "n": 3060
+    }
+   }
+  },
+  "frenzy_with_attention": {
+   "description": "Frenzy day with a Wikipedia spike in the last 3 days",
+   "first_half": {
+    "events": 175,
+    "stocks": 92,
+    "h5": {
+     "mean_excess": -0.0013,
+     "median_excess": -0.0201,
+     "hit_rate": 0.354,
+     "t_stat": -0.15,
+     "after_costs": -0.0043,
+     "n": 175
+    },
+    "h20": {
+     "mean_excess": -0.0138,
+     "median_excess": -0.0381,
+     "hit_rate": 0.349,
+     "t_stat": -1.52,
+     "after_costs": -0.0168,
+     "n": 175
+    },
+    "h60": {
+     "mean_excess": -0.0238,
+     "median_excess": -0.0581,
+     "hit_rate": 0.349,
+     "t_stat": -1.3,
+     "after_costs": -0.0268,
+     "n": 175
+    }
+   },
+   "second_half": {
+    "events": 205,
+    "stocks": 118,
+    "h5": {
+     "mean_excess": -0.0155,
+     "median_excess": -0.0184,
+     "hit_rate": 0.379,
+     "t_stat": -4.16,
+     "after_costs": -0.0185,
+     "n": 203
+    },
+    "h20": {
+     "mean_excess": -0.0185,
+     "median_excess": -0.0278,
+     "hit_rate": 0.375,
+     "t_stat": -2.51,
+     "after_costs": -0.0215,
+     "n": 200
+    },
+    "h60": {
+     "mean_excess": -0.0308,
+     "median_excess": -0.0586,
+     "hit_rate": 0.382,
+     "t_stat": -2.55,
+     "after_costs": -0.0338,
+     "n": 199
+    }
+   }
+  },
+  "frenzy_unnoticed": {
+   "description": "Frenzy day, Wikipedia readers at or below usual",
+   "first_half": {
+    "events": 747,
+    "stocks": 182,
+    "h5": {
+     "mean_excess": -0.0077,
+     "median_excess": -0.0154,
+     "hit_rate": 0.375,
+     "t_stat": -3.9,
+     "after_costs": -0.0107,
+     "n": 747
+    },
+    "h20": {
+     "mean_excess": -0.0041,
+     "median_excess": -0.021,
+     "hit_rate": 0.402,
+     "t_stat": -1.51,
+     "after_costs": -0.0071,
+     "n": 747
+    },
+    "h60": {
+     "mean_excess": -0.0051,
+     "median_excess": -0.036,
+     "hit_rate": 0.408,
+     "t_stat": -0.74,
+     "after_costs": -0.0081,
+     "n": 747
+    }
+   },
+   "second_half": {
+    "events": 1322,
+    "stocks": 270,
+    "h5": {
+     "mean_excess": -0.0009,
+     "median_excess": -0.0065,
+     "hit_rate": 0.432,
+     "t_stat": -0.33,
+     "after_costs": -0.0039,
+     "n": 1299
+    },
+    "h20": {
+     "mean_excess": 0.0027,
+     "median_excess": -0.0133,
+     "hit_rate": 0.433,
+     "t_stat": 0.07,
+     "after_costs": -0.0003,
+     "n": 1238
+    },
+    "h60": {
+     "mean_excess": 0.0041,
+     "median_excess": -0.023,
+     "hit_rate": 0.432,
+     "t_stat": 0.34,
+     "after_costs": 0.0011,
+     "n": 1145
+    }
+   }
+  }
+ }
+}
