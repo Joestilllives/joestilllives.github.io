@@ -13,6 +13,9 @@ rule chosen so that a *mistake hurts* the backtest rather than flattering it:
   * smaller factors (3/4, 4/5: 1:3 and 1:4 bonuses) are NOT adjusted: a missed
     adjustment appears as a fake loss, which only penalises the strategy
   * a stock that disappears for good while held exits 30% below its last price
+  * where a second source exists (scripts/verify_ca_yahoo.py), every drop of
+    15%+ in any stock that was ever among the 300 most traded is checked
+    against Yahoo's adjusted series and that verdict wins
 """
 from __future__ import annotations
 
@@ -37,7 +40,8 @@ class Panel:
     last_day: pd.Series       # last trading date per symbol
 
 
-def load_panel(path: str, start: str | None = None, end: str | None = None) -> Panel:
+def load_panel(path: str, start: str | None = None, end: str | None = None,
+               corrections: str | None = None) -> Panel:
     raw = pd.read_csv(path, parse_dates=["date"])
     if start:
         raw = raw[raw.date >= start]
@@ -63,6 +67,18 @@ def load_panel(path: str, start: str | None = None, end: str | None = None) -> P
     ret = ratio - 1
     ret = ret.where(adj_factor.isna(), ratio / adj_factor - 1)
     ret = ret.where(close.notna())
+    if corrections:
+        # Second-source verdicts (scripts/verify_ca_yahoo.py) override the inference.
+        cv = pd.read_csv(corrections, parse_dates=["date"])
+        cv = cv[cv.verdict.isin(["corporate_action", "real"]) & cv.symbol.isin(ret.columns)
+                & cv.date.isin(ret.index)]
+        for v, val in (("corporate_action", "yahoo_ret"), ("real", "raw_ret")):
+            sub = cv[cv.verdict == v]
+            ri = ret.index.get_indexer(sub.date)
+            ci = ret.columns.get_indexer(sub.symbol)
+            arr = ret.to_numpy(copy=True)
+            arr[ri, ci] = sub[val].to_numpy()
+            ret = pd.DataFrame(arr, index=ret.index, columns=ret.columns)
     last_day = close.apply(lambda c: c.last_valid_index())
     return Panel(close, ret, value, pd.DataFrame(rows, columns=["date", "symbol", "ratio", "factor"]), last_day)
 

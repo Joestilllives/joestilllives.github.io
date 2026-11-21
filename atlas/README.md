@@ -133,6 +133,16 @@ Daily run after NSE publishes its bhavcopy (~18:00 IST; the run refuses to
 trade until the official closes are out and match):
 `python -m atlas rebalance --config config/india_v2.toml --execute`.
 
+### Audit (2026-11-21)
+
+| Check | Result |
+| --- | --- |
+| Independent rebuild of the equity curve from weights, returns, costs, financing and tax | Matches the engine to 1e-15. The P&L accounting is correct. |
+| Data cleaning | **Bias found and fixed.** The cleaner erased any move that round-tripped within 5 days, including real crashes (Nifty −13% on 23 Mar 2020, −12% on 24 Oct 2008). Now only split glitches and one-day bad quotes on ETF prices are masked; exchange index data never is. |
+| No-leverage rule | **Bug found and fixed.** Partial rebalancing let the long-only book reach 110% of capital on 17% of days, which a delivery account can't do. Buys are now trimmed at execution. |
+| Universe selection | Without the foreign and precious-metal ETFs, Sharpe above cash falls from 0.65 to 0.42–0.55. The edge survives, but the realistic forward estimate is ~0.4–0.5, not 0.68. |
+| v2-IN after all fixes | Sharpe above cash 0.68, max DD −13%, both tiers still pass (DSR 0.956). |
+
 ### Framework upgrades for live trading in India
 
 | Added | What it does | What it found |
