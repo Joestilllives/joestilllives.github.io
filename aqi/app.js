@@ -53,7 +53,7 @@
       })
       .catch(function (e) {
         if (e.name === 'AbortError') throw new Error('Request timed out');
-        if (e instanceof TypeError) throw new Error('Network or CORS error');
+        if (e instanceof TypeError) throw new Error('blocked by the browser (network or CORS). This source may need a server-side proxy.');
         throw e;
       })
       .finally(function () { clearTimeout(t); });
@@ -199,6 +199,10 @@
         return A.mean(idx.slice(-hours).map(function (i) { return arr[i]; }));
       }
       var co = avg('carbon_monoxide', 8);
+      // Latest hour vs. the 24h average: shows whether air is improving or worsening right now.
+      var pmNow = avg('pm2_5', 1), pmPrev = A.mean(idx.slice(-4, -1).map(function (i) { return (h.pm2_5 || [])[i]; }));
+      var nowAqi = A.subIndex('pm25', pmNow);
+      var trend = pmNow == null || pmPrev == null ? '' : pmNow < pmPrev * 0.9 ? ' · improving ↓' : pmNow > pmPrev * 1.1 ? ' · worsening ↑' : ' · steady';
       var conc = {
         pm25: avg('pm2_5', 24), pm10: avg('pm10', 24),
         no2: avg('nitrogen_dioxide', 24), so2: avg('sulphur_dioxide', 24),
@@ -209,6 +213,7 @@
         summary: '24h model average',
         conc: conc,
         detail: [
+          { text: 'Right now (PM2.5, latest hour)', meta: (nowAqi == null ? '-' : 'AQI ' + nowAqi + ' · ' + A.category(nowAqi).name) + trend },
           { text: 'Model grid point', meta: round(j.latitude, 2) + ', ' + round(j.longitude, 2) },
           { text: 'PM2.5 (24h avg)', meta: round(conc.pm25, 1) + ' µg/m³' },
           { text: 'PM10 (24h avg)', meta: round(conc.pm10, 1) + ' µg/m³' }
@@ -468,6 +473,7 @@
       if (sel.value === 'me') return;
       var c = CITIES[+sel.value];
       store('aqi.city', c.name);
+      try { history.replaceState(null, '', '?city=' + encodeURIComponent(c.name)); } catch (e) { /* file:// etc. */ }
       load(c);
     });
     load(CITIES[+sel.value]);
