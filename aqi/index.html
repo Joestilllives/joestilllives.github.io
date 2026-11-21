@@ -17,7 +17,7 @@
           <p class="tag">Official AQI vs. independent sources, on one scale</p>
         </div>
       </div>
-      <button id="settingsBtn" class="ghost" type="button">API keys</button>
+      <button id="settingsBtn" class="ghost" type="button">Live keys</button>
     </div>
   </header>
 
@@ -28,6 +28,7 @@
       <button id="locateBtn" type="button" class="ghost">Use my location</button>
       <button id="refreshBtn" type="button">Refresh</button>
     </section>
+    <p id="dataStatus" class="status" aria-live="polite"></p>
 
     <section id="verdict" class="card verdict" aria-live="polite">
       <p class="muted">Pick a city to compare sources.</p>
@@ -37,6 +38,13 @@
       <h2>All sources on the Indian AQI scale</h2>
       <div id="scale" class="scale"></div>
       <ul class="legend" id="legend"></ul>
+    </section>
+
+    <section class="card" id="historyCard">
+      <h2>Last 7 days</h2>
+      <p id="gapStat" class="gap-stat"></p>
+      <div id="history" class="history"></div>
+      <ul class="legend" id="historyLegend"></ul>
     </section>
 
     <section>
@@ -56,6 +64,7 @@
         <li><strong>One scale.</strong> Many apps show the US AQI, which runs much higher than India's for the same air. Wherever we have raw concentrations, we recompute the <em>Indian National AQI</em> (CPCB breakpoints) ourselves.</li>
         <li><strong>Side by side, never blended.</strong> Every source keeps its own number, timestamp and distance so you can judge it.</li>
         <li><strong>Agreement score.</strong> High when sources are within ~20% of each other, Medium within ~40%, Low beyond that.</li>
+        <li><strong>Collected every hour.</strong> A scheduled job fetches every source server-side and saves the results, which builds the history above. If that data is more than 3 hours old, the page checks live from your browser instead.</li>
       </ol>
       <h3>Caveats</h3>
       <ul>
@@ -74,8 +83,8 @@
 
   <dialog id="settings">
     <form method="dialog" class="settings-form">
-      <h2>API keys</h2>
-      <p class="muted small">All free. Keys are stored only in this browser and sent only to their own service.</p>
+      <h2>Your own API keys</h2>
+      <p class="muted small">Optional. The site collects data every hour without these. Add your own free keys only to run live checks, for example for your exact location. Keys stay in this browser and go only to their own service.</p>
       <label>data.gov.in key <span class="muted">(official CPCB data)</span>
         <input id="key-cpcb" autocomplete="off" spellcheck="false">
         <a class="small" href="https://data.gov.in/" target="_blank" rel="noopener">Sign up at data.gov.in → My Account → API key</a>
@@ -83,10 +92,6 @@
       <label>WAQI token
         <input id="key-waqi" autocomplete="off" spellcheck="false">
         <a class="small" href="https://aqicn.org/data-platform/token/" target="_blank" rel="noopener">Get a token at aqicn.org</a>
-      </label>
-      <label>OpenAQ key <span class="muted">(citizen sensors)</span>
-        <input id="key-openaq" autocomplete="off" spellcheck="false">
-        <a class="small" href="https://explore.openaq.org/register" target="_blank" rel="noopener">Register at openaq.org</a>
       </label>
       <div class="row-end">
         <button value="cancel" class="ghost">Cancel</button>
@@ -96,6 +101,7 @@
   </dialog>
 
   <script src="aqi.js"></script>
+  <script src="sources.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
