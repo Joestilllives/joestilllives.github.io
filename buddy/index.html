@@ -111,7 +111,7 @@
   .small { font-size: 14px; padding: 8px 12px; }
 
   /* first-run */
-  #hello { position: fixed; inset: 0; z-index: 6; display: grid; place-items: center; padding: 24px 16px;
+  #hello { position: fixed; inset: 0; z-index: 6; display: grid; place-items: safe center; padding: 24px 16px; overflow-y: auto;
     background: rgba(18,18,20,.94); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
   #hello .card { max-width: 380px; width: 100%; text-align: center; }
   #hello h1 { font-size: 44px; margin: 0 0 6px; }
@@ -214,6 +214,19 @@
       remNow: n => `Hey! Reminder: ${n}`,
       remMissed: n => `While I was away, you missed a reminder: ${n}`,
       remNone: "You have no reminders set.",
+      snoozed: w => `Snoozed. I'll remind you again ${w}.`,
+      noSnooze: "There's nothing to snooze right now.",
+      daily: "every day",
+      clearAsk: n => `Delete all ${n} notes? Say "yes" to confirm.`,
+      cleared: "Done. All notes deleted.",
+      kept: "Okay, I kept your notes.",
+      found: (n, q) => `Found ${n} note${n === 1 ? '' : 's'} about "${q}".`,
+      notFound: q => `I couldn't find any note about "${q}".`,
+      alerts: "🔔 Turn on reminder alerts",
+      alertsOn: "Alerts are on. I'll ping you even from the notification bar.",
+      alertsOff: "Alerts are blocked. You can allow them in Chrome's site settings.",
+      jokes: ["Why did the robot go on holiday? It needed to recharge.", "I told my phone a joke. It didn't laugh. No sense of humour, only a sense of touch.", "What do you call a sleeping robot? A nap-top.", "My battery and I have one thing in common. We both get low by evening."],
+      love: "Aww. I'm just two glowing eyes, but I like you too.",
       remCount: n => `You have ${n} reminder${n === 1 ? '' : 's'}.`,
       remGone: n => `Cancelled the reminder: "${n}"`,
       remWord: "Reminder", timerWord: "Timer is done", alarmWord: "Alarm",
@@ -241,7 +254,7 @@
       latest: "ये रहे सबसे नए वाले।",
       deleted: n => `हटा दिया: "${n}"`,
       nothingDel: "हटाने के लिए कुछ नहीं है।",
-      time: s => `अभी ${s} बजे हैं।`,
+      time: s => `अभी ${s} बजे हैं।`,  // s is like "सुबह 8:47"
       date: s => `आज ${s} है।`,
       how: "मैं बढ़िया हूँ! आपकी जेब में रहकर खुश हूँ।",
       name: "मैं पिप हूँ! आपका छोटा सा दोस्त।",
@@ -252,6 +265,19 @@
       remNow: n => `सुनिए! याद दिला रहा हूँ: ${n}`,
       remMissed: n => `जब मैं बंद था, एक रिमाइंडर छूट गया: ${n}`,
       remNone: "अभी कोई रिमाइंडर नहीं है।",
+      snoozed: w => `ठीक है, ${w} फिर से याद दिलाऊँगा।`,
+      noSnooze: "अभी टालने के लिए कोई रिमाइंडर नहीं है।",
+      daily: "रोज़",
+      clearAsk: n => `सारे ${n} नोट्स हटा दूँ? पक्का हो तो "हाँ" बोलिए।`,
+      cleared: "हो गया। सारे नोट्स हटा दिए।",
+      kept: "ठीक है, नोट्स रहने दिए।",
+      found: (n, q) => `"${q}" के बारे में ${n} नोट मिले।`,
+      notFound: q => `"${q}" के बारे में कोई नोट नहीं मिला।`,
+      alerts: "🔔 रिमाइंडर अलर्ट चालू करें",
+      alertsOn: "अलर्ट चालू हैं। अब नोटिफिकेशन से भी याद दिलाऊँगा।",
+      alertsOff: "अलर्ट बंद हैं। Chrome की साइट सेटिंग में इन्हें चालू कर सकते हैं।",
+      jokes: ["रोबोट छुट्टी पर क्यों गया? उसे रिचार्ज होना था।", "मेरी बैटरी और मुझमें एक बात एक जैसी है, शाम तक दोनों थक जाते हैं।", "टीचर: तुम्हारा होमवर्क कहाँ है? रोबोट: बैटरी ने खा लिया।"],
+      love: "अरे वाह! मैं तो बस दो चमकती आँखें हूँ, पर आप मुझे भी अच्छे लगते हो।",
       remCount: n => `आपके ${n} रिमाइंडर हैं।`,
       remGone: n => `रिमाइंडर हटा दिया: "${n}"`,
       remWord: "रिमाइंडर", timerWord: "टाइमर पूरा हुआ", alarmWord: "अलार्म",
@@ -299,16 +325,24 @@
     thanks: /thank|thanks|shukriya|dhanyavad|धन्यवाद|शुक्रिया|थैंक/i,
     help: /\bhelp\b|what can you do|madad|kya kar sakte|मदद|क्या कर सकते/i,
     sleep: /go to sleep|good ?night|so jao|bye|सो जाओ|गुड नाइट|अलविदा|बाय/i,
+    joke: /\bjoke\b|funny|chutkula|chutkule|mazak|चुटकुला|चुटकुले|मज़ाक|मजाक/i,
+    love: /\blove you\b|\blike you\b|pyaar|pyar|प्यार|अच्छे लगते/i,
   };
+  const RE_SNOOZE = /\bsnooze\b|remind me (again|later)|(baad|bad) mein (yaad|batana)|फिर से याद|बाद में याद|थोड़ी देर में याद/i;
+  const RE_CLEARALL = /\b(delete|clear|remove|erase|wipe)\b.*\b(all|every)\b.*\bnotes?\b|\b(all|every) (my )?notes\b.*\b(delete|clear|remove)\b|(saare|sare|sab) notes? (hatao|delete|mitao)|(सारे|सभी|सब) नोट्?स?\s*(हटाओ|हटा दो|मिटाओ|डिलीट)/i;
+  const RE_FIND = /\b(find|search|look for|look up)\b.*\bnotes?\b|\bnotes? (about|with|on)\b|wal[ae] notes?|वाल[ाे] नोट|नोट\s*(ढूंढो|ढूँढो|खोजो)|(ढूंढो|ढूँढो|खोजो)/i;
 
   function understand(raw) {
     const s = raw.trim().replace(/\s+/g, ' ');
+    if (RE_SNOOZE.test(s)) return { kind: 'snooze', text: s };
+    if (RE_CLEARALL.test(s)) return { kind: 'clearall' };
+    if (RE_FIND.test(s)) return { kind: 'find', text: s };
     if (RE_REMDEL.test(s)) return { kind: 'remdel' };
     if (RE_REMLIST.test(s)) return { kind: 'remlist' };
     if (RE_REMIND.test(s)) return { kind: 'remind', text: s };
     for (const re of NOTE_START) { const m = s.match(re); if (m) return { kind: 'note', text: m[1] }; }
     for (const re of NOTE_END) { const m = s.match(re); if (m) return { kind: 'note', text: m[1] }; }
-    for (const k of ['del', 'read', 'time', 'date', 'how', 'name', 'thanks', 'help', 'sleep', 'hi']) {
+    for (const k of ['del', 'read', 'time', 'date', 'how', 'name', 'thanks', 'help', 'joke', 'love', 'sleep', 'hi']) {
       if (R[k].test(s)) return { kind: k };
     }
     return { kind: 'unknown', text: s };
@@ -339,6 +373,11 @@
   const RE_CLOCK_AT = rx("at\\s+(\\d{1,2})(?:[:.](\\d{2}))?(?:\\s*o'?clock)?");
   const RE_PERIOD = rx('(?:(?:in the|this|aaj|आज)\\s+)?(morning|afternoon|evening|tonight|night|subah|dopahar|shaam|sham|raat|सुबह|दोपहर|शाम|रात)(?:\\s*(?:ko|को|mein|में))?');
   const RE_TOM = rx('tomorrow|kal|कल');
+  const RE_NOON = rx('(?:at\\s+)?(noon|midday|midnight)');
+  const RE_DAILY = rx('every ?day|daily|each day|every (?:morning|evening|night)|roz(?:ana)?|rozana|har din|हर दिन|रोज़ाना|रोजाना|रोज़|रोज');
+  const WDAYS = [['sunday', 'ravivar', 'itvaar', 'रविवार', 'इतवार'], ['monday', 'somvar', 'सोमवार'], ['tuesday', 'mangalvar', 'मंगलवार'],
+    ['wednesday', 'budhvar', 'बुधवार'], ['thursday', 'guruvar', 'brihaspativar', 'गुरुवार', 'बृहस्पतिवार'], ['friday', 'shukravar', 'शुक्रवार'], ['saturday', 'shanivar', 'शनिवार']];
+  const RE_WDAY = rx('(?:on\\s+|next\\s+|this\\s+|agle\\s+|अगले\\s+)?(' + WDAYS.flat().join('|') + ')(?:\\s*(?:ko|को))?');
   const RE_TODAY = rx('today|aaj|आज');
   const PERIODS = { morning: ['am', 9], subah: ['am', 9], 'सुबह': ['am', 9], afternoon: ['pm', 14], dopahar: ['pm', 14], 'दोपहर': ['pm', 14],
     evening: ['pm', 18], shaam: ['pm', 18], sham: ['pm', 18], 'शाम': ['pm', 18], night: ['pm', 21], tonight: ['pm', 21], raat: ['pm', 21], 'रात': ['pm', 21] };
@@ -346,33 +385,46 @@
   function parseWhen(raw, now = new Date()) {
     let s = ' ' + raw.replace(/[०-९]/g, d => '०१२३४५६७८९'.indexOf(d)) + ' ';
     const cut = re => { const m = s.match(re); if (m) s = s.replace(re, ' '); return m; };
-    const done = at => ({ at, rest: s.replace(/\s+/g, ' ').trim() });
     let m;
-    if (cut(RE_HALF)) return done(now.getTime() + 30 * 60000);
-    if ((m = cut(RE_REL))) {
+    const daily = !!cut(RE_DAILY);
+    const done = (at, rep) => ({ at, repeat: rep || (daily ? 'daily' : null), rest: s.replace(/\s+/g, ' ').trim() });
+    // relative: "in 2 hours and 30 minutes", "half an hour"; units add up
+    let rel = cut(RE_HALF) ? 30 * 60000 : 0;
+    while ((m = cut(RE_REL))) {
       const u = m[2].toLowerCase();
-      const ms = /^(s|से)/.test(u) ? 1000 : /^(m|मि)/.test(u) ? 60000 : 3600000;
-      return done(now.getTime() + num(m[1]) * ms);
+      rel += num(m[1]) * (/^(s|से)/.test(u) ? 1000 : /^(m|मि)/.test(u) ? 60000 : 3600000);
     }
+    if (rel) { s = s.replace(/^\s*and\b/i, ' '); return done(now.getTime() + rel, null); }
     let h = null, min = 0, ap = null;
-    if ((m = cut(RE_CLOCK_HI))) { h = num(m[2]); min = +(m[3] || 0) + (m[1] ? 30 : 0); }
+    if ((m = cut(RE_NOON))) { h = 12; ap = m[1].toLowerCase() === 'midnight' ? 'am' : 'pm'; }
+    if (h != null) {}
+    else if ((m = cut(RE_CLOCK_HI))) { h = num(m[2]); min = +(m[3] || 0) + (m[1] ? 30 : 0); }
     else if ((m = cut(RE_CLOCK_AP))) { h = +m[1]; min = +(m[2] || 0); ap = m[3].toLowerCase().replace('.', ''); }
     else if ((m = cut(RE_CLOCK_AT))) { h = +m[1]; min = +(m[2] || 0); }
     const tom = !!cut(RE_TOM);
+    const wm = cut(RE_WDAY);
+    const wd = wm ? WDAYS.findIndex(names => names.includes(wm[1].toLowerCase())) : -1;
     const per = (m = cut(RE_PERIOD)) ? PERIODS[m[1].toLowerCase()] : null;
     cut(RE_TODAY);
-    if (h == null && !tom && !per) return null;
+    if (h == null && !tom && !per && wd < 0 && !daily) return null;
     if (h != null && (h > 23 || min > 59)) return null;
     const d = new Date(now);
-    if (h == null) {                       // "tomorrow", "this evening": pick a sensible hour
+    if (h == null) {                       // "tomorrow", "this evening", "on monday": pick a sensible hour
       d.setHours(per ? per[1] : 9, 0, 0, 0);
-      if (tom || d <= now) d.setDate(d.getDate() + 1);
+      if (wd >= 0) d.setDate(d.getDate() + (((wd - now.getDay() + 7) % 7) || 7));
+      else if (tom || d <= now) d.setDate(d.getDate() + 1);
       return done(d.getTime());
     }
     ap = ap || (per && per[0]);
     if (ap === 'pm' && h < 12) h += 12;
     if (ap === 'am' && h === 12) h = 0;
-    if (tom) {
+    if (wd >= 0) {
+      if (!ap && h < 7) h += 12;
+      d.setHours(h, min, 0, 0);
+      let ahead = (wd - now.getDay() + 7) % 7;
+      if (ahead === 0 && d <= now) ahead = 7;
+      d.setDate(d.getDate() + ahead);
+    } else if (tom) {
       if (!ap && h < 7) h += 12;           // "tomorrow at 5" means the evening
       d.setDate(d.getDate() + 1); d.setHours(h, min, 0, 0);
     } else {
@@ -392,40 +444,60 @@
   function cleanRem(s) {
     s = (' ' + s + ' ').replace(RE_REMIND_G, ' ').replace(/\s+/g, ' ').trim();
     for (let i = 0; i < 3; i++) {
-      s = s.replace(/^(?:to|that|about|for|ki|कि|ko|को|ka|का|ke|के|and|of)(?:\s+|$)/i, '').replace(/\s+(?:ke liye|के लिए|for|at|on|in|ko|को|ki|कि|to)$/i, '');
+      s = s.replace(/^(?:to|that|about|for|ki|कि|ko|को|ka|का|ke|के|and|of|se|से)(?:\s+|$)/i, '').replace(/\s+(?:ke liye|के लिए|for|at|on|in|ko|को|ki|कि|to)$/i, '');
       s = s.replace(/^[\s:,.\-–।]+|[\s:,.\-–।]+$/g, '');
     }
     return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
   }
 
-  const fmtTime = ms => new Date(ms).toLocaleTimeString(lang === 'hi' ? 'hi-IN' : 'en-IN', { hour: 'numeric', minute: '2-digit' });
+  // "8:47 am" in English; "सुबह 8:47" / "शाम 6" in Hindi, the way people say it
+  function clockHi(ms, withBaje) {
+    const d = new Date(ms), h = d.getHours(), mm = d.getMinutes();
+    const per = h < 4 ? 'रात' : h < 12 ? 'सुबह' : h < 16 ? 'दोपहर' : h < 20 ? 'शाम' : 'रात';
+    return `${per} ${h % 12 || 12}${mm ? ':' + String(mm).padStart(2, '0') : ''}${withBaje ? ' बजे' : ''}`;
+  }
+  const fmtTime = ms => lang === 'hi' ? clockHi(ms, true) : new Date(ms).toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit' });
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
   function whenStr(at) {
     const now = new Date(), d = new Date(at), diff = at - now.getTime(), hi = lang === 'hi';
     if (diff < 90000) { const n = Math.max(1, Math.round(diff / 1000)); return hi ? `${n} सेकंड में` : `in ${n} second${n === 1 ? '' : 's'}`; }
     if (diff < 3600000) { const n = Math.round(diff / 60000); return hi ? `${n} मिनट में` : `in ${n} minute${n === 1 ? '' : 's'}`; }
     const days = Math.round((new Date(d).setHours(0, 0, 0, 0) - new Date(now).setHours(0, 0, 0, 0)) / 86400000);
     const tm = fmtTime(at);
-    if (days === 0) return hi ? `${tm} पर` : `at ${tm}`;
-    if (days === 1) return hi ? `कल ${tm} पर` : `tomorrow at ${tm}`;
+    if (days === 0) return hi ? `आज ${tm}` : `at ${tm}`;
+    if (days === 1) return hi ? `कल ${tm}` : `tomorrow at ${tm}`;
+    if (days < 7) {
+      const wdn = d.toLocaleDateString(hi ? 'hi-IN' : 'en-IN', { weekday: 'long' });
+      return hi ? `${wdn} को ${tm}` : `on ${wdn} at ${tm}`;
+    }
     const dt = d.toLocaleDateString(hi ? 'hi-IN' : 'en-IN', { day: 'numeric', month: 'short' });
-    return hi ? `${dt} को ${tm} पर` : `on ${dt} at ${tm}`;
+    return hi ? `${dt} को ${tm}` : `on ${dt} at ${tm}`;
   }
 
-  let pendingRem = null;
-  function addReminder(text, at, kindWord) {
+  // how a reminder's time is said: daily ones skip the date ("every day at 8:00 pm", "रोज़ रात 10 बजे")
+  const remWhen = r => r.repeat ? (lang === 'hi' ? `${t().daily} ${fmtTime(r.at)}` : `${t().daily} at ${fmtTime(r.at)}`) : whenStr(r.at);
+  let pendingRem = null, lastFired = null, pendingConfirm = null;
+  const needsAlerts = () => { try { return 'Notification' in window && Notification.permission === 'default'; } catch (_) { return false; } };
+  // Chrome only shows the permission prompt after a real tap, so ask from a button
+  async function askAlerts() {
+    try { const r = await Notification.requestPermission(); say(r === 'granted' ? t().alertsOn : t().alertsOff, r === 'granted' ? 'happy' : 'oops'); } catch (_) {}
+    renderNotes();
+  }
+  function offerAlerts() { if (needsAlerts()) showChip(t().alerts, askAlerts); }
+  function addReminder(text, at, kindWord, repeat) {
     const label = text || (kindWord === 'timer' ? t().timerWord : kindWord === 'alarm' ? t().alarmWord : t().remWord);
-    reminders.push({ id: Date.now(), text: label, at });
+    reminders.push({ id: Date.now(), text: label, at, repeat: repeat || null });
     saveRems();
-    try { if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission().catch(() => {}); } catch (_) {}
     face.pop();
-    say(t().remSet(whenStr(at), label), 'happy');
+    say(t().remSet(remWhen({ at, repeat }), label), 'happy');
+    offerAlerts();
   }
   function remindFrom(raw) {
     const kindWord = /timer|टाइमर/i.test(raw) ? 'timer' : /alarm|अलार्म/i.test(raw) ? 'alarm' : 'reminder';
     const p = parseWhen(raw);
     const text = cleanRem(p ? p.rest : raw);
     if (!p) { pendingRem = { text, kindWord }; return say(t().remWhen, 'thinking'); }
-    addReminder(text, p.at, kindWord);
+    addReminder(text, p.at, kindWord, p.repeat);
   }
 
   let actx = null;
@@ -453,7 +525,13 @@
     const now = Date.now();
     const due = reminders.filter(r => r.at <= now);
     if (!due.length) return;
-    reminders = reminders.filter(r => r.at > now); saveRems();
+    reminders = reminders.filter(r => r.at > now);
+    for (const r of due) if (r.repeat === 'daily') {   // daily ones come back tomorrow
+      let at = r.at; while (at <= now) at += 86400000;
+      reminders.push({ ...r, at });
+    }
+    saveRems();
+    lastFired = due[due.length - 1];
     const late = due.every(r => now - r.at > 120000);
     const texts = due.map(r => r.text).join(lang === 'hi' ? ' और ' : ' and ');
     beep();
@@ -487,7 +565,12 @@
     chip.classList.remove('show');
     if (pendingRem) {                       // answering "when should I remind you?"
       const pr = pendingRem, p = parseWhen(said); pendingRem = null;
-      if (p) return addReminder(pr.text || cleanRem(p.rest), p.at, pr.kindWord);
+      if (p) return addReminder(pr.text || cleanRem(p.rest), p.at, pr.kindWord, p.repeat);
+    }
+    if (pendingConfirm) {                   // answering "delete all notes?"
+      const c = pendingConfirm; pendingConfirm = null;
+      if (/^(yes|yeah|yep|sure|ok(ay)?|haan?|ha|ji|haan ji|हाँ|हां|हा|जी|हाँ जी|ठीक है)\b/i.test(said)) return c();
+      return say(t().kept, 'idle');
     }
     const r = understand(said);
     const now = new Date();
@@ -495,9 +578,33 @@
     switch (r.kind) {
       case 'note': return addNote(r.text);
       case 'remind': return remindFrom(r.text);
+      case 'snooze': {
+        if (!lastFired) return say(t().noSnooze, 'thinking');
+        const p = parseWhen(r.text);
+        const at = p ? p.at : Date.now() + 10 * 60000;
+        reminders.push({ id: Date.now(), text: lastFired.text, at, repeat: null }); saveRems();
+        lastFired = null;
+        return say(t().snoozed(whenStr(at)), 'happy');
+      }
+      case 'clearall': {
+        if (!notes.length) return say(t().nothingDel, 'thinking');
+        pendingConfirm = () => { notes = []; saveNotes(); say(t().cleared, 'oops'); };
+        return say(t().clearAsk(notes.length), 'thinking');
+      }
+      case 'find': {
+        const q = r.text.replace(/\b(find|search|look for|look up|my|the|a|an|any|notes?|about|with|on|for|wala|wale|wali)\b/gi, ' ')
+          .replace(/(वाल[ाेी]|नोट्?स?|ढूंढो|ढूँढो|खोजो|के बारे में|मेरे|मेरा|वाला)/g, ' ').replace(/\s+/g, ' ').trim();
+        if (!q) return say(t().notFound('…'), 'thinking');
+        const words = q.toLowerCase().split(' ');
+        const hits = notes.filter(n => words.every(w => n.text.toLowerCase().includes(w))).reverse();
+        if (!hits.length) return say(t().notFound(q), 'thinking');
+        return say(`${t().found(hits.length, q)} ${hits.slice(0, 3).map(n => n.text + '.').join(' ')}`, 'talk');
+      }
+      case 'joke': return say(pick(t().jokes), 'happy');
+      case 'love': face.pop(); return say(t().love, 'happy');
       case 'remlist': {
         if (!reminders.length) return say(t().remNone, 'thinking');
-        const body = reminders.slice(0, 5).map(x => `${whenStr(x.at)}: ${x.text}.`).join(' ');
+        const body = reminders.slice(0, 5).map(x => `${cap(remWhen(x))}: ${x.text}.`).join(' ');
         return say(`${t().remCount(reminders.length)} ${body}`, 'talk');
       }
       case 'remdel': {
@@ -519,7 +626,7 @@
         return say(t().deleted(gone.text), 'oops');
       }
       case 'time': {
-        const s = now.toLocaleTimeString(locale, { hour: 'numeric', minute: '2-digit' });
+        const s = lang === 'hi' ? clockHi(now.getTime(), false) : now.toLocaleTimeString(locale, { hour: 'numeric', minute: '2-digit' });
         return say(t().time(s), 'talk');
       }
       case 'date': {
@@ -534,8 +641,7 @@
       case 'sleep': say(t().sleep, 'talk', () => face.set('sleep')); return;
       default:
         lastUnknown = r.text;
-        chip.textContent = t().chip;
-        chip.classList.add('show');
+        showChip(t().chip, () => addNote(lastUnknown));
         return say(t().unknown, 'thinking');
     }
   }
@@ -630,7 +736,9 @@
   $('hiBtn').onclick = () => { setLang('hi'); say(pick(T.hi.hi), 'happy'); };
   mic.onclick = listen;
   $('helpBtn').onclick = () => say(t().help, 'talk');
-  chip.onclick = () => { chip.classList.remove('show'); addNote(lastUnknown); };
+  let chipAction = null;
+  function showChip(label, fn) { chip.textContent = label; chipAction = fn; chip.classList.add('show'); }
+  chip.onclick = () => { chip.classList.remove('show'); const f = chipAction; chipAction = null; f && f(); };
 
   function showType(on) { typeBox.classList.toggle('show', on); if (on) typeIn.focus(); }
   $('kbBtn').onclick = () => showType(!typeBox.classList.contains('show'));
@@ -657,8 +765,13 @@
     };
     if (reminders.length) {
       head(t().remTitle);
-      reminders.forEach(r => row(r.text, '⏰ ' + whenStr(r.at), () => { reminders = reminders.filter(m => m.id !== r.id); saveRems(); }, 'rem'));
+      reminders.forEach(r => row(r.text, (r.repeat ? '🔁 ' : '⏰ ') + remWhen(r), () => { reminders = reminders.filter(m => m.id !== r.id); saveRems(); }, 'rem'));
       const li = document.createElement('li'); li.className = 'hint'; li.textContent = t().remHint; list.append(li);
+      if (needsAlerts()) {
+        const b = document.createElement('li'); b.className = 'hint';
+        const btn = document.createElement('button'); btn.className = 'pill small'; btn.textContent = t().alerts; btn.onclick = askAlerts;
+        b.append(btn); list.append(b);
+      }
       head(t().notesHead);
     }
     if (!notes.length) { const li = document.createElement('li'); li.className = 'empty'; li.innerHTML = t().emptyList; list.append(li); return; }
@@ -861,7 +974,7 @@
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 
   // test hook
-  window.pip = { handle, understand, parseWhen, cleanRem, checkRems, get notes() { return notes; }, get reminders() { return reminders; }, face };
+  window.pip = { handle, understand, parseWhen, cleanRem, checkRems, whenStr, get lastFired() { return lastFired; }, get notes() { return notes; }, get reminders() { return reminders; }, face };
 })();
 </script>
 </body>
