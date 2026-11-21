@@ -1,0 +1,96 @@
+[
+  {
+    "day": 1,
+    "hook": "Stop writing meeting notes.",
+    "sub": "4 prompts that do it for you",
+    "save": "your next meeting",
+    "cards": [
+      {
+        "title": "The 10-line summary",
+        "prompt": "Turn this transcript into: decisions, action items (owner + date), open questions. Max 10 lines."
+      },
+      {
+        "title": "The follow-up email",
+        "prompt": "Write a follow-up email to the attendees from these notes. Decisions first, then action items. Under 120 words."
+      },
+      {
+        "title": "Walk in prepared",
+        "prompt": "I'm meeting [who] about [topic]. Give me the 3 questions they'll most likely ask and a one-line answer to each."
+      },
+      {
+        "title": "The agenda in 10 seconds",
+        "prompt": "Turn this goal into a 30-minute agenda with timings and the one decision we need by the end: [goal]"
+      }
+    ],
+    "caption": "Stop writing meeting notes. Paste the transcript into this prompt instead.\n\nCopy prompt 1, paste your transcript underneath, and that's it. You'll have the summary, the follow-up email and next week's agenda before your coffee's cold.\n\nSave this. You'll want it after your next meeting.\n\nDay 1 of 30. Day 2's tomorrow, so follow if you don't want to miss it.\n\n#aitools #productivity #chatgpt\n",
+    "singles": [
+      {
+        "card": 1,
+        "say": "Never write a follow-up email from scratch again. 1 prompt does it.",
+        "hook": "Never write a follow-up again.",
+        "caption": "Never write a follow-up email from scratch again. 1 prompt does it.\n\nIt's on the screen. Copy it, paste it into Claude or ChatGPT, and you're done.\n\nThere's a new one every day. Follow so you don't miss tomorrow's.\n\n#aitools #productivity #chatgpt\n"
+      },
+      {
+        "card": 2,
+        "say": "Never walk into a meeting without these 3 answers ready.",
+        "hook": "3 answers before every meeting.",
+        "caption": "Never walk into a meeting without these 3 answers ready.\n\nIt's on the screen. Copy it, paste it into Claude or ChatGPT, and you're done.\n\nThere's a new one every day. Follow so you don't miss tomorrow's.\n\n#aitools #productivity #chatgpt\n"
+      }
+    ],
+    "say": "Stop writing meeting notes. Paste the transcript into this prompt instead.",
+    "wow": {
+      "kind": "bars",
+      "from": 47,
+      "to": 10,
+      "unit": "transcript lines",
+      "say": "A forty-seven line transcript. Ten lines out."
+    }
+  },
+  {
+    "day": 2,
+    "hook": "Your inbox eats your first hour.",
+    "sub": "4 email prompts that save an hour a week",
+    "save": "Monday morning",
+    "cards": [
+      {
+        "title": "Triage 20 emails at once",
+        "prompt": "Sort these emails into Reply today / This week / Ignore. Draft a one-line reply for each Reply today."
+      },
+      {
+        "title": "Get a reply, fast",
+        "prompt": "Rewrite this email: lead with the ask, under 80 words, one clear deadline, friendly but direct."
+      },
+      {
+        "title": "Say no without guilt",
+        "prompt": "Help me decline this request politely. Keep the relationship warm and offer one alternative. Under 70 words."
+      },
+      {
+        "title": "The polite nudge",
+        "prompt": "Write a short follow-up to this unanswered email. Restate the ask in one line and suggest a next step. Under 50 words."
+      }
+    ],
+    "caption": "Your inbox eats your first hour. These 4 prompts give it back.\n\nFour prompts: sort the pile, rewrite the reply, say no nicely, chase the one that never answered. Paste your email under any of them.\n\nSave it for Monday. That's when you'll need it.\n\nDay 2 of 30. Day 3's tomorrow, so follow if you don't want to miss it.\n\n#aitools #productivity #chatgpt\n",
+    "singles": [
+      {
+        "card": 2,
+        "say": "Stop saying yes to everything. This prompt writes the no for you.",
+        "hook": "Stop saying yes to everything.",
+        "caption": "Stop saying yes to everything. This prompt writes the no for you.\n\nIt's on the screen. Copy it, paste it into Claude or ChatGPT, and you're done.\n\nThere's a new one every day. Follow so you don't miss tomorrow's.\n\n#aitools #productivity #chatgpt\n"
+      },
+      {
+        "card": 1,
+        "say": "Stop burying your ask in line 6. This prompt moves it to line 1.",
+        "hook": "Your ask belongs in line 1.",
+        "caption": "Stop burying your ask in line 6. This prompt moves it to line 1.\n\nIt's on the screen. Copy it, paste it into Claude or ChatGPT, and you're done.\n\nThere's a new one every day. Follow so you don't miss tomorrow's.\n\n#aitools #productivity #chatgpt\n"
+      }
+    ],
+    "say": "Your inbox eats your first hour. These 4 prompts give it back.",
+    "wow": {
+      "kind": "sheets",
+      "from": 40,
+      "to": 0,
+      "unit": "unread emails",
+      "say": "Forty unread emails. Zero."
+    }
+  }
+]

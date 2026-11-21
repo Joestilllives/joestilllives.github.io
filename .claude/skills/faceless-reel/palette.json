@@ -1,0 +1,35 @@
+{
+  "note": "Brand atoms: these colours and the Inter / JetBrains Mono type are fixed. Each world is a full colour set; qa.py script checks every world's contrast. Accent is the 10% colour: the highlighted word and the progress bar. cost and gain are functional signal colours, used only on the wow number: cost (coral) for the problem, gain (teal) for the result. Coral vs teal stays distinguishable with colour blindness; never red vs green.",
+  "worlds": {
+    "navy": {
+      "bg": "#0E1B3D",
+      "ink": "#F5F7FF",
+      "muted": "#B9C3E6",
+      "accent": "#FFC24B",
+      "panel": "#1A2B57",
+      "line": "#2E4682",
+      "cost": "#FF6A57",
+      "gain": "#2DD4BF"
+    },
+    "paper": {
+      "bg": "#F3ECDC",
+      "ink": "#0E1B3D",
+      "muted": "#3F4A6B",
+      "accent": "#A34700",
+      "panel": "#E7DDC7",
+      "line": "#CBBE9F",
+      "cost": "#C42E1E",
+      "gain": "#0D7A6F"
+    },
+    "amber": {
+      "bg": "#FFC24B",
+      "ink": "#0E1B3D",
+      "muted": "#2A3352",
+      "accent": "#0E1B3D",
+      "panel": "#F2B23A",
+      "line": "#C98A12",
+      "cost": "#8F1D10",
+      "gain": "#0B5F56"
+    }
+  }
+}
