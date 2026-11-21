@@ -88,3 +88,59 @@ Known before running: the history is shorter than the US one (from 2008), so
 Tier 2 is hard to reach. Proxy indices exclude dividends (~1–1.5%/yr),
 which understates long returns before ETFs listed. Taxes (20% short-term
 capital gains) are not modelled.
+
+---
+
+# India stocks: momentum sleeve (pre-registered 2026-11-21, before any strategy run on stock data)
+
+Goal: add a second strategy that is **different** from v2-IN (ETF trend), so the
+combination beats either alone. The best-documented equity anomaly in India
+is cross-sectional momentum in individual stocks.
+
+## Data (no strategy result has been looked at)
+
+Every NSE EQ-series stock in every daily bhavcopy, 2005-01-03 → 2026-11-20:
+4,506 symbols, including delisted, suspended and merged ones (no survivorship
+bias). Built by `scripts/build_nse_stocks.py`, processed by `atlas/stocks.py`.
+Bonuses and splits are inferred from prices (2,905 detected; e.g. RELIANCE
+2017 and 2024, INFY 2018, TCS 2018, HDFCBANK 2019, ITC 2016 verified). Every
+rule is chosen so that mistakes hurt the strategy. Delisted holdings exit 30%
+below their last price.
+
+## Split
+
+- **Research window: 2006-01-01 → 2016-12-31.** Variants may be compared here.
+- **Holdout: 2017-01-01 → 2026-11-20.** Run exactly once, on the single
+  variant chosen in research, with the criteria below.
+
+## Fixed design (all variants)
+
+Monthly rebalance, at the month-end close, trading at the next close. Long-only,
+fully invested (unless trend-filtered). Universe each month: the 200 most
+traded stocks by 63-day median traded value, at least 273 days of history,
+price ≥ ₹20. Signal: 12-1 month momentum. Costs: 12 bps fees per side (STT
+10 bps + stamp/exchange/SEBI/GST/DP), 8 bps half-spread, square-root impact
+on each stock's own traded value. Cash earns 6%.
+
+## Variants compared in research (6, all count as trials)
+
+1. Top 30, equal weight
+2. Top 30, ranked on momentum ÷ volatility
+3. Top 30, inverse-volatility weights
+4. Top 30, equal weight, cash when the stock universe is below its 200-day average
+5. Top 20, equal weight
+6. Top 50, equal weight
+
+Choice rule: highest research-window Sharpe above cash. If two are within
+0.05, take the lower-numbered (simpler) one.
+
+## Holdout criteria (2017-01-01 → 2026-11-20)
+
+Tier 1, paper trading (all must hold):
+- S1. Chosen variant's Sharpe above cash > 0 at 2× costs.
+- S2. Chosen variant's Sharpe above cash > Nifty 50 (NIFTYBEES).
+- S3. 50% chosen variant + 50% v2-IN (daily rebalanced) has a higher Sharpe
+  above cash than v2-IN alone.
+
+Tier 2, real money: Deflated Sharpe of the chosen variant > 95%, counting
+10 trials project-wide. After-tax results are reported, not gated.
