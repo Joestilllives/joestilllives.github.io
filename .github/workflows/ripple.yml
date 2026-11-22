@@ -3,7 +3,7 @@ name: Ripple alerts
 on:
   schedule:
     - cron: "17 */3 * * *"   # news alerts, every 3 hours
-    - cron: "43 2 * * 1-6"   # prices: scorecard + discoveries, daily after US close
+    - cron: "13 1 * * 1-6"   # ~6:45 IST: morning trade signal, prices, trade tests (runs can start late, so early)
   workflow_dispatch:          # lets you run it by hand from the Actions tab
 
 permissions:
@@ -25,10 +25,18 @@ jobs:
         run: python ripple/tests/test_engine.py && python ripple/tests/test_stats.py
       - name: Fetch news and find hidden links
         run: cd ripple && python run.py
+      - name: Morning trade signal
+        if: github.event.schedule == '13 1 * * 1-6' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: cd ripple && python signal_today.py
       - name: Prices, scorecard and discoveries
-        if: github.event.schedule == '43 2 * * 1-6' || github.event_name == 'workflow_dispatch'
+        if: github.event.schedule == '13 1 * * 1-6' || github.event_name == 'workflow_dispatch'
         continue-on-error: true   # a price-site hiccup shouldn't block publishing news alerts
         run: cd ripple && python stats.py
+      - name: Trade tests
+        if: github.event.schedule == '13 1 * * 1-6' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: cd ripple && python backtest.py
       - name: Publish results
         run: |
           git config user.name "ripple-bot"
@@ -36,4 +44,5 @@ jobs:
           git add ripple/output
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Ripple: update alerts"
+          git pull --rebase origin master
           git push
