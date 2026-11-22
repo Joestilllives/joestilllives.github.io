@@ -6,7 +6,7 @@
   var CONFIG = {
     /* Paste the Application (client) ID from the Microsoft app registration here.
        While it is empty, the page runs in demo mode with sample lists. */
-    clientId: '',
+    clientId: '770b0406-86f9-4340-937b-1736f01ee838',
     authority: 'https://login.microsoftonline.com/common',
     scope: 'Tasks.Read'
   };
