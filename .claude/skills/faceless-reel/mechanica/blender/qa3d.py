@@ -10,7 +10,7 @@ Gates (PASS/FAIL with the number behind each; exit 1 on any FAIL):
                       the backdrop colour (read from the corners of the last frame) by more than 0.1
   render-time spikes  no frame takes more than 3x the median (Blender Studio found motion-blurred frames up to 100x).
                       Frame 1 is excluded: it pays one-off setup (BVH build, kernels) and ran 3x the median on the coins
-  fireflies           <= 20 isolated hot pixels per frame (bright specks the denoiser missed)
+  fireflies           <= 20 isolated hot pixels per frame (bright specks the denoiser missed; thin lines excluded)
   flicker             low frame-to-frame noise on parts that are not moving (per-frame denoising can shimmer). Uses the
                       median residual per frame, so a fast object crossing in one frame is not mistaken for flicker
 Also writes sheet.png: 8 frames composited on brand navy, for a human look.
@@ -48,7 +48,12 @@ def main(d, expect=None, edges='lrtb'):
         crop.append(float((b > 0.9).mean()))
         lum = (0.2126 * rgb[..., 0] + 0.7152 * rgb[..., 1] + 0.0722 * rgb[..., 2]) * a
         med = np.asarray(Image.fromarray((lum * 255).astype(np.uint8)).filter(ImageFilter.MedianFilter(5))).astype(np.float32) / 255
-        flies.append(int(((lum > 0.9) & (lum > med * 2.0 + 0.15)).sum()))
+        hot = (lum > 0.9) & (lum > med * 2.0 + 0.15)
+        # A firefly is isolated: at most 1 of its 8 neighbours is even half as bright. Pixels on thin bright lines
+        # (a glowing beam, a bevel highlight) always have 2+, and the median test alone flagged 44 of them on the prism.
+        pad = np.pad(lum, 1); nb = sum((pad[1 + dy:pad.shape[0] - 1 + dy, 1 + dx:pad.shape[1] - 1 + dx] > lum * 0.5).astype(np.int8)
+                                       for dy in (-1, 0, 1) for dx in (-1, 0, 1) if dy or dx)
+        flies.append(int((hot & (nb <= 1)).sum()))
     gate(min(cover) >= 0.005, 'no empty frame', f'smallest subject coverage {min(cover) * 100:.2f}%')
     worst = int(np.argmax(crop))
     gate(max(crop) <= 0.001, 'not cropped', f'edges {edges}{" (opaque backdrop)" if opaque else ""}: worst {files[worst]} {max(crop) * 100:.2f}% of border is solid subject')
