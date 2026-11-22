@@ -61,7 +61,7 @@ def gdelt(query, mode):
         "query": query, "mode": mode, "startdatetime": "20200101000000", "enddatetime": "20261120000000",
         "format": "json"})
     for attempt in range(8):
-        time.sleep(6 + 4 * attempt)
+        time.sleep(15 + 10 * attempt)  # GDELT allows 1 request per 5s, shared by this network
         r = subprocess.run(["curl", "-sS", "-m", "120", url], capture_output=True, text=True)
         if r.stdout.lstrip().startswith("{"):
             try:

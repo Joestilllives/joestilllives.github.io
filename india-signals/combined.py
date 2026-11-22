@@ -21,6 +21,9 @@ import lightgbm as lgb
 from backtest import prepare, COST_ROUND_TRIP
 
 MIN_TRAIN_MONTHS = 24
+# The model has no reliable edge among the most-traded fifth of companies (size group 5,
+# the most watched), so lists and the track record cover size groups 1-4 only.
+BUY_GROUPS = [0, 1, 2, 3]
 RETRAIN_EVERY = 3
 TOP = 0.2
 
@@ -33,6 +36,7 @@ RANKED += ["factor_implied1", "factor_gap1", "factor_r2"]
 # 2-4 years of training the model overfit to them, so they are not used. Per-stock betas
 # to key factors are kept in the table for reference but not used either.
 RANKED += ["fo_oi_chg21", "fo_oi_chg5", "fo_pcr", "fo_pcr_chg21", "fo_optvol_trend", "fo_crowding"]
+RANKED += ["be_days126", "be_days21"]
 RAW = ["mkt1", "mkt3", "breadth", "has_wiki", "recent_ipo", "in_fo"]
 RATE_LIKE = {"US 10-year rate", "US 3-month rate"}  # use changes, not log returns
 
@@ -56,7 +60,8 @@ PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-mont
          "factor_gap1": "unpriced outside-force move", "factor_r2": "how much outside forces explain it",
          "fo_oi_chg21": "growth in futures bets (month)", "fo_oi_chg5": "growth in futures bets (week)",
          "fo_pcr": "puts vs calls", "fo_pcr_chg21": "change in puts vs calls", "fo_optvol_trend": "options activity trend",
-         "fo_crowding": "futures bets vs trading volume",
+         "fo_crowding": "futures bets vs trading volume", "be_days126": "days under NSE surveillance (6 months)",
+         "be_days21": "days under NSE surveillance (month)",
          "beta_oil": "link to oil", "beta_rupee": "link to the rupee", "beta_us_tech": "link to US tech",
          "beta_copper": "link to copper", "beta_gold": "link to gold", "beta_us_rate": "link to US rates",
          "beta_china": "link to China", "beta_steel": "link to steel", "peer_gap3": "gap to peers' move last 3 months", "age": "how long listed", "listing_gain": "IPO listing-day gain",
@@ -97,6 +102,10 @@ def load_fo(fo_dir, dates, symbols):
 def features(m, ind, ipo_gain, fo=None):
     lp, ret = m["lp"], m["ret"]
     f = {}
+    if fo is None:
+        for k in ["fo_oi_chg21", "fo_oi_chg5", "fo_pcr", "fo_pcr_chg21", "fo_optvol_trend", "fo_crowding"]:
+            f[k] = lp * np.nan
+        f["in_fo"] = lp * 0.0
     if fo is not None:
         # What leveraged traders are doing: growth of futures bets, puts vs calls, options activity
         oi = fo["fut_oi"].where(fo["fut_oi"] > 0)
@@ -126,6 +135,13 @@ def features(m, ind, ipo_gain, fo=None):
     f["frenzy63"] = m["frenzy"].rolling(63, min_periods=1).sum()
     f["acc10"] = m["acc"].rolling(10, min_periods=5).sum()
     f["age"] = m["n"].clip(upper=1000)
+    if os.environ.get("BE_DAYS"):
+        # days spent in NSE's trade-for-trade segment (surveillance for speculation)
+        be = pd.read_pickle(os.environ["BE_DAYS"]).reindex(index=lp.index, columns=lp.columns).fillna(0)
+        f["be_days126"] = be.rolling(126, min_periods=1).sum()
+        f["be_days21"] = be.rolling(21, min_periods=1).sum()
+    else:
+        f["be_days126"] = f["be_days21"] = lp * np.nan
     v = m["views"]
     med180 = v.shift(1).rolling(180, min_periods=60).median().clip(lower=5)
     f["wiki_attn30"] = np.log(v.rolling(30, min_periods=15).mean() / med180)
@@ -300,14 +316,15 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     # comparison: the earlier hand-made trend score on the same months
     pred["handmade"] = pred[["mom12_1_r", "high52_r", "sector_mom6_r"]].mean(axis=1, skipna=False)
     pred.loc[pred["frenzy21"] > 0, "handmade"] = np.nan
-    res = {"model": stats(portfolio(pred)), "feature_importance": imp.to_dict()}
+    res = {"model": stats(portfolio(pred[pred["size_q"].isin(BUY_GROUPS)])),
+           "model_all_groups": stats(portfolio(pred)), "feature_importance": imp.to_dict()}
     for sig in ["peer_gap1", "peer_gap3", "peer_ret1", "factor_gap1", "factor_implied1"]:
         if sig + "_r" not in pred:
             continue
         res["alone_" + sig] = stats(portfolio(pred.dropna(subset=[sig + "_r"]), sig + "_r"))
     if pred["handmade"].notna().any():
         res["handmade_trend_score"] = stats(portfolio(pred.dropna(subset=["handmade"]), "handmade"))
-    port = portfolio(pred)
+    port = portfolio(pred[pred["size_q"].isin(BUY_GROUPS)])
     res["monthly"] = port.round(4).to_dict("records")
 
     # today's forward-looking scores (latest month-end, outcome not yet known)
@@ -338,7 +355,8 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
         picks.append({"symbol": r["symbol"], "company": names.get(r["symbol"], r["symbol"]),
                       "score_pct_in_size_group": round(float(r["score_pct"]) * 100, 1),
                       "size_group": int(r["size_q"]) + 1,
-                      "signal": "buy list" if r["score_pct"] >= 1 - TOP else ("avoid list" if r["score_pct"] <= TOP else "neutral"),
+                      "signal": ("not scored (largest companies)" if r["size_q"] not in BUY_GROUPS else
+                                 "buy list" if r["score_pct"] >= 1 - TOP else ("avoid list" if r["score_pct"] <= TOP else "neutral")),
                       "helps": reasons(i, 1), "hurts": reasons(i, -1),
                       "return_12m_pct": round(float(np.expm1(r["mom12_1"] if pd.notna(r["mom12_1"]) else np.nan)) * 100, 1),
                       "below_52w_high_pct": round(float(-np.expm1(r["high52"])) * 100, 1) if pd.notna(r["high52"]) else None,
