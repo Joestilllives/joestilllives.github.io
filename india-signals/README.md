@@ -148,6 +148,24 @@ Odds: share of picked stocks that beat the market stays 47-50% for every variant
 from winners winning by more); share of months ahead 65-77%. A high-conviction basket (both scores
 in the top 20%, ~50 stocks): +15.5%/yr, t 4.5, both halves positive.
 
+## Audit (`audit.py`, ensemble blend, 91 out-of-sample months, corrected returns)
+
+| Check | Result | Verdict |
+|---|---|---|
+| Random picks from the same size groups and filters (20 draws) | -1.2%/yr vs market | No free edge from the universe choice; skill ~ +14%/yr |
+| Placebo: scores shuffled within each month | -1.8%/yr | Pipeline creates no edge by itself |
+| Picks that stop trading mid-month (frozen prices) | 0.25% of picks | Worst case -1.5%/yr if all had crashed; realistically small |
+| Daily moves beyond 25% dropped while held | 62, all inspected: splits, bonuses, a special payout | Rule is correct; widened split/bonus detector (1,147 events) |
+| Costs 0.3% / 0.6% / 1.0% per round trip | +13.0% / +11.0% / +8.5% per yr | Survives triple costs |
+| Basket vs index funds, same months | ~+34%/yr vs Nifty 50 +10.5%, Midcap 150 +18.3%, Smallcap 250 +20.5% | Ahead in 62-70% of months |
+| Scores used one month late | +9.6%/yr | Signal fades slowly: not a timing artifact |
+| All Wikipedia inputs removed (survivor-leak check) | +12.9%/yr | No leak |
+
+Open issues: several design choices (blend, skipping the largest fifth, frenzy threshold, split/bonus
+flag, ensemble) were made after seeing 2019-26 results, and no untouched holdout remains; only months
+after Nov 2026 are truly unseen. Earlier bugs found and fixed: benchmark averaging (log vs simple),
+ETFs counted as stocks, sector-list survivor leak, 893 unadjusted split/bonus days.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by

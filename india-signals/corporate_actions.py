@@ -27,7 +27,10 @@ def main(panel, funds_txt, out):
     for name, v in RATIOS.items():
         hit = raw[(abs(ratio - v) < 0.03 * v) & (raw["n"] > 0)]
         ev.append(hit[["symbol", "date"]].assign(kind=name, liquid_before=False))
-    ev = pd.concat(ev).drop_duplicates(["symbol", "date"])
+    # splits/bonuses mixed with that day's price move miss the exact ratios (a 5-for-1 split
+    # can land at -78%); NSE bands are at most 20%, so any drop beyond 25% is a corporate action
+    other = raw[(ratio < 0.75) & (raw["n"] > 0)][["symbol", "date"]].assign(kind="other split/bonus/demerger", liquid_before=False)
+    ev = pd.concat(ev + [other]).drop_duplicates(["symbol", "date"])
     p = prepare(raw)
     lp = p.pivot_table(index="date", columns="symbol", values="logidx").ffill()
     liq = p.pivot_table(index="date", columns="symbol", values="liquid", aggfunc="first").fillna(False).astype(bool)
