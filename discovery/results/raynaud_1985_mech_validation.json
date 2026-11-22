@@ -1,0 +1,214 @@
+{
+ "top": {
+  "studied_later": 15,
+  "of": 25,
+  "rows": [
+   {
+    "substance": "Nitrendipine",
+    "papers_after": 0
+   },
+   {
+    "substance": "3-Pyridinecarboxylic acid, 1,4-dihydro-2,6-dimethyl-5-nitro-4-(2-(trifluoromethyl)phenyl)-, Methyl ester",
+    "papers_after": 0
+   },
+   {
+    "substance": "Cyclic AMP",
+    "papers_after": 3
+   },
+   {
+    "substance": "Adenosine Diphosphate",
+    "papers_after": 3
+   },
+   {
+    "substance": "Thrombin",
+    "papers_after": 1
+   },
+   {
+    "substance": "Antibodies, Monoclonal",
+    "papers_after": 32
+   },
+   {
+    "substance": "Nimodipine",
+    "papers_after": 1
+   },
+   {
+    "substance": "Dopamine",
+    "papers_after": 2
+   },
+   {
+    "substance": "Nicardipine",
+    "papers_after": 17
+   },
+   {
+    "substance": "Adenosine",
+    "papers_after": 0
+   },
+   {
+    "substance": "SRS-A",
+    "papers_after": 0
+   },
+   {
+    "substance": "Niacinamide",
+    "papers_after": 0
+   },
+   {
+    "substance": "Nisoldipine",
+    "papers_after": 3
+   },
+   {
+    "substance": "Calcimycin",
+    "papers_after": 1
+   },
+   {
+    "substance": "Receptors, Dopamine",
+    "papers_after": 0
+   },
+   {
+    "substance": "Felodipine",
+    "papers_after": 5
+   },
+   {
+    "substance": "Immunoglobulin Idiotypes",
+    "papers_after": 1
+   },
+   {
+    "substance": "SS-A Antigen",
+    "papers_after": 8
+   },
+   {
+    "substance": "RO60 protein, human",
+    "papers_after": 6
+   },
+   {
+    "substance": "RNA, Small Cytoplasmic",
+    "papers_after": 5
+   },
+   {
+    "substance": "Potassium Chloride",
+    "papers_after": 0
+   },
+   {
+    "substance": "Molsidomine",
+    "papers_after": 0
+   },
+   {
+    "substance": "Prostaglandins D",
+    "papers_after": 0
+   },
+   {
+    "substance": "Cardiotonic Agents",
+    "papers_after": 0
+   },
+   {
+    "substance": "Adenylyl Cyclases",
+    "papers_after": 1
+   }
+  ]
+ },
+ "random_rest": {
+  "studied_later": 10,
+  "of": 25,
+  "rows": [
+   {
+    "substance": "Prostaglandin-Endoperoxide Synthases",
+    "papers_after": 0
+   },
+   {
+    "substance": "Apomorphine",
+    "papers_after": 0
+   },
+   {
+    "substance": "Immunoglobulin Fab Fragments",
+    "papers_after": 0
+   },
+   {
+    "substance": "Calmodulin",
+    "papers_after": 1
+   },
+   {
+    "substance": "Azepines",
+    "papers_after": 3
+   },
+   {
+    "substance": "Prostaglandin Endoperoxides, Synthetic",
+    "papers_after": 0
+   },
+   {
+    "substance": "Culture Media",
+    "papers_after": 0
+   },
+   {
+    "substance": "Fibronectins",
+    "papers_after": 4
+   },
+   {
+    "substance": "Anti-Arrhythmia Agents",
+    "papers_after": 0
+   },
+   {
+    "substance": "Ouabain",
+    "papers_after": 0
+   },
+   {
+    "substance": "Hydroxydopamines",
+    "papers_after": 0
+   },
+   {
+    "substance": "Mitomycins",
+    "papers_after": 3
+   },
+   {
+    "substance": "Lactic Acid",
+    "papers_after": 2
+   },
+   {
+    "substance": "Platelet Activating Factor",
+    "papers_after": 0
+   },
+   {
+    "substance": "Prolactin",
+    "papers_after": 0
+   },
+   {
+    "substance": "Arginine Vasopressin",
+    "papers_after": 0
+   },
+   {
+    "substance": "Sydnones",
+    "papers_after": 0
+   },
+   {
+    "substance": "Endorphins",
+    "papers_after": 0
+   },
+   {
+    "substance": "Complement Activating Enzymes",
+    "papers_after": 0
+   },
+   {
+    "substance": "Endotoxins",
+    "papers_after": 1
+   },
+   {
+    "substance": "Cyclic GMP",
+    "papers_after": 2
+   },
+   {
+    "substance": "Naloxone",
+    "papers_after": 0
+   },
+   {
+    "substance": "Platelet Membrane Glycoproteins",
+    "papers_after": 12
+   },
+   {
+    "substance": "Atrial Natriuretic Factor",
+    "papers_after": 2
+   },
+   {
+    "substance": "Epitopes",
+    "papers_after": 15
+   }
+  ]
+ }
+}

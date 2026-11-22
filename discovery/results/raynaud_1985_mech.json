@@ -1,0 +1,959 @@
+{
+ "target": "\"raynaud disease\"[mh]",
+ "cutoff": 1985,
+ "b_topics": [
+  {
+   "topic": "Vibration",
+   "papers_with_target": 163,
+   "lift": 105.6
+  },
+  {
+   "topic": "Cold Temperature",
+   "papers_with_target": 170,
+   "lift": 23.7
+  },
+  {
+   "topic": "Skin Temperature",
+   "papers_with_target": 100,
+   "lift": 107.3
+  },
+  {
+   "topic": "Antibodies, Antinuclear",
+   "papers_with_target": 80,
+   "lift": 73.2
+  },
+  {
+   "topic": "Regional Blood Flow",
+   "papers_with_target": 99,
+   "lift": 18.1
+  },
+  {
+   "topic": "Cryoglobulins",
+   "papers_with_target": 55,
+   "lift": 110.5
+  },
+  {
+   "topic": "Blood Viscosity",
+   "papers_with_target": 47,
+   "lift": 45.9
+  },
+  {
+   "topic": "Vasodilator Agents",
+   "papers_with_target": 52,
+   "lift": 23.3
+  },
+  {
+   "topic": "Vasoconstriction",
+   "papers_with_target": 37,
+   "lift": 44.8
+  },
+  {
+   "topic": "Nifedipine",
+   "papers_with_target": 34,
+   "lift": 41.6
+  },
+  {
+   "topic": "Blood Pressure",
+   "papers_with_target": 85,
+   "lift": 3.6
+  },
+  {
+   "topic": "Microcirculation",
+   "papers_with_target": 36,
+   "lift": 19.3
+  },
+  {
+   "topic": "Epoprostenol",
+   "papers_with_target": 29,
+   "lift": 29.4
+  },
+  {
+   "topic": "Blood Flow Velocity",
+   "papers_with_target": 39,
+   "lift": 11.8
+  },
+  {
+   "topic": "Centromere",
+   "papers_with_target": 18,
+   "lift": 153.4
+  },
+  {
+   "topic": "Reserpine",
+   "papers_with_target": 36,
+   "lift": 10.9
+  },
+  {
+   "topic": "Bleomycin",
+   "papers_with_target": 23,
+   "lift": 22.5
+  },
+  {
+   "topic": "Vasodilation",
+   "papers_with_target": 19,
+   "lift": 30.0
+  },
+  {
+   "topic": "Adrenergic beta-Antagonists",
+   "papers_with_target": 27,
+   "lift": 10.7
+  },
+  {
+   "topic": "Rheumatoid Factor",
+   "papers_with_target": 21,
+   "lift": 19.1
+  },
+  {
+   "topic": "Body Temperature",
+   "papers_with_target": 36,
+   "lift": 4.1
+  },
+  {
+   "topic": "Sweating",
+   "papers_with_target": 16,
+   "lift": 19.1
+  },
+  {
+   "topic": "Pulse",
+   "papers_with_target": 22,
+   "lift": 7.4
+  },
+  {
+   "topic": "Prostaglandins E",
+   "papers_with_target": 19,
+   "lift": 6.7
+  },
+  {
+   "topic": "Fibrinogen",
+   "papers_with_target": 19,
+   "lift": 5.3
+  },
+  {
+   "topic": "Vascular Resistance",
+   "papers_with_target": 20,
+   "lift": 4.8
+  },
+  {
+   "topic": "Autoantibodies",
+   "papers_with_target": 22,
+   "lift": 4.1
+  },
+  {
+   "topic": "Nicotinic Acids",
+   "papers_with_target": 19,
+   "lift": 4.8
+  },
+  {
+   "topic": "Propranolol",
+   "papers_with_target": 20,
+   "lift": 4.2
+  },
+  {
+   "topic": "Blood Circulation",
+   "papers_with_target": 41,
+   "lift": 2.0
+  },
+  {
+   "topic": "Platelet Aggregation",
+   "papers_with_target": 15,
+   "lift": 5.7
+  },
+  {
+   "topic": "Hot Temperature",
+   "papers_with_target": 26,
+   "lift": 2.7
+  },
+  {
+   "topic": "Prostaglandins",
+   "papers_with_target": 16,
+   "lift": 2.1
+  }
+ ],
+ "hidden_links": [
+  {
+   "substance": "Nitrendipine",
+   "score": 0.2706,
+   "b_links": 9,
+   "via": [
+    "Nifedipine",
+    "Nicotinic Acids",
+    "Vasoconstriction",
+    "Vasodilator Agents",
+    "Reserpine"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 306
+  },
+  {
+   "substance": "3-Pyridinecarboxylic acid, 1,4-dihydro-2,6-dimethyl-5-nitro-4-(2-(trifluoromethyl)phenyl)-, Methyl ester",
+   "score": 0.2464,
+   "b_links": 5,
+   "via": [
+    "Nifedipine",
+    "Nicotinic Acids",
+    "Vasoconstriction",
+    "Vascular Resistance",
+    "Blood Pressure"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 128
+  },
+  {
+   "substance": "Cyclic AMP",
+   "score": 0.2288,
+   "b_links": 22,
+   "via": [
+    "Prostaglandins E",
+    "Epoprostenol",
+    "Platelet Aggregation",
+    "Reserpine",
+    "Nifedipine"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 27082
+  },
+  {
+   "substance": "Adenosine Diphosphate",
+   "score": 0.2083,
+   "b_links": 16,
+   "via": [
+    "Platelet Aggregation",
+    "Epoprostenol",
+    "Fibrinogen",
+    "Blood Viscosity",
+    "Prostaglandins E"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 9352
+  },
+  {
+   "substance": "Thrombin",
+   "score": 0.2013,
+   "b_links": 15,
+   "via": [
+    "Fibrinogen",
+    "Platelet Aggregation",
+    "Epoprostenol",
+    "Cryoglobulins",
+    "Prostaglandins E"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 6737
+  },
+  {
+   "substance": "Antibodies, Monoclonal",
+   "score": 0.1848,
+   "b_links": 13,
+   "via": [
+    "Antibodies, Antinuclear",
+    "Rheumatoid Factor",
+    "Cryoglobulins",
+    "Autoantibodies",
+    "Cold Temperature"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 14337
+  },
+  {
+   "substance": "Nimodipine",
+   "score": 0.1771,
+   "b_links": 11,
+   "via": [
+    "Nicotinic Acids",
+    "Nifedipine",
+    "Vasodilator Agents",
+    "Vasoconstriction",
+    "Vasodilation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 192
+  },
+  {
+   "substance": "Dopamine",
+   "score": 0.177,
+   "b_links": 20,
+   "via": [
+    "Reserpine",
+    "Vasodilation",
+    "Vasoconstriction",
+    "Vasodilator Agents",
+    "Vascular Resistance"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 20715
+  },
+  {
+   "substance": "Nicardipine",
+   "score": 0.1602,
+   "b_links": 9,
+   "via": [
+    "Nifedipine",
+    "Vasodilator Agents",
+    "Adrenergic beta-Antagonists",
+    "Vasodilation",
+    "Vascular Resistance"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 192
+  },
+  {
+   "substance": "Adenosine",
+   "score": 0.1471,
+   "b_links": 17,
+   "via": [
+    "Vasodilation",
+    "Vasoconstriction",
+    "Vasodilator Agents",
+    "Regional Blood Flow",
+    "Vascular Resistance"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 13678
+  },
+  {
+   "substance": "SRS-A",
+   "score": 0.1403,
+   "b_links": 16,
+   "via": [
+    "Vasoconstriction",
+    "Epoprostenol",
+    "Microcirculation",
+    "Vasodilation",
+    "Prostaglandins"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 1556
+  },
+  {
+   "substance": "Niacinamide",
+   "score": 0.1321,
+   "b_links": 3,
+   "via": [
+    "Nicotinic Acids",
+    "Vasodilator Agents",
+    "Nifedipine"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3809
+  },
+  {
+   "substance": "Nisoldipine",
+   "score": 0.1121,
+   "b_links": 7,
+   "via": [
+    "Nifedipine",
+    "Vasodilator Agents",
+    "Nicotinic Acids",
+    "Vasoconstriction",
+    "Regional Blood Flow"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 86
+  },
+  {
+   "substance": "Calcimycin",
+   "score": 0.1065,
+   "b_links": 14,
+   "via": [
+    "Epoprostenol",
+    "Prostaglandins E",
+    "Nifedipine",
+    "Platelet Aggregation",
+    "Vasodilation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 2911
+  },
+  {
+   "substance": "Receptors, Dopamine",
+   "score": 0.1046,
+   "b_links": 13,
+   "via": [
+    "Reserpine",
+    "Vasoconstriction",
+    "Vasodilation",
+    "Vasodilator Agents",
+    "Adrenergic beta-Antagonists"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 4372
+  },
+  {
+   "substance": "Felodipine",
+   "score": 0.1022,
+   "b_links": 7,
+   "via": [
+    "Nifedipine",
+    "Vasodilator Agents",
+    "Vascular Resistance",
+    "Regional Blood Flow",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 94
+  },
+  {
+   "substance": "Immunoglobulin Idiotypes",
+   "score": 0.1021,
+   "b_links": 4,
+   "via": [
+    "Rheumatoid Factor",
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Cryoglobulins"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 1653
+  },
+  {
+   "substance": "SS-A Antigen",
+   "score": 0.1011,
+   "b_links": 3,
+   "via": [
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Rheumatoid Factor"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 76
+  },
+  {
+   "substance": "RO60 protein, human",
+   "score": 0.1011,
+   "b_links": 3,
+   "via": [
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Rheumatoid Factor"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 76
+  },
+  {
+   "substance": "RNA, Small Cytoplasmic",
+   "score": 0.1009,
+   "b_links": 3,
+   "via": [
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Rheumatoid Factor"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 78
+  },
+  {
+   "substance": "Potassium Chloride",
+   "score": 0.1001,
+   "b_links": 16,
+   "via": [
+    "Vasoconstriction",
+    "Nifedipine",
+    "Vasodilation",
+    "Vasodilator Agents",
+    "Nicotinic Acids"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 6810
+  },
+  {
+   "substance": "Molsidomine",
+   "score": 0.0973,
+   "b_links": 7,
+   "via": [
+    "Vasodilator Agents",
+    "Nifedipine",
+    "Blood Viscosity",
+    "Vasodilation",
+    "Propranolol"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 162
+  },
+  {
+   "substance": "Prostaglandins D",
+   "score": 0.0962,
+   "b_links": 9,
+   "via": [
+    "Epoprostenol",
+    "Prostaglandins E",
+    "Prostaglandins",
+    "Platelet Aggregation",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 518
+  },
+  {
+   "substance": "Cardiotonic Agents",
+   "score": 0.0958,
+   "b_links": 9,
+   "via": [
+    "Vasodilator Agents",
+    "Adrenergic beta-Antagonists",
+    "Vascular Resistance",
+    "Reserpine",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 1814
+  },
+  {
+   "substance": "Adenylyl Cyclases",
+   "score": 0.0939,
+   "b_links": 16,
+   "via": [
+    "Prostaglandins E",
+    "Epoprostenol",
+    "Reserpine",
+    "Adrenergic beta-Antagonists",
+    "Propranolol"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 8552
+  },
+  {
+   "substance": "Sydnones",
+   "score": 0.0934,
+   "b_links": 8,
+   "via": [
+    "Vasodilator Agents",
+    "Nifedipine",
+    "Blood Viscosity",
+    "Vasodilation",
+    "Propranolol"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 266
+  },
+  {
+   "substance": "Prostaglandin D2",
+   "score": 0.092,
+   "b_links": 9,
+   "via": [
+    "Epoprostenol",
+    "Prostaglandins E",
+    "Prostaglandins",
+    "Platelet Aggregation",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 271
+  },
+  {
+   "substance": "Prostaglandin Endoperoxides, Synthetic",
+   "score": 0.0918,
+   "b_links": 7,
+   "via": [
+    "Epoprostenol",
+    "Platelet Aggregation",
+    "Vasoconstriction",
+    "Prostaglandins",
+    "Prostaglandins E"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 322
+  },
+  {
+   "substance": "Fibronectins",
+   "score": 0.0902,
+   "b_links": 14,
+   "via": [
+    "Cryoglobulins",
+    "Fibrinogen",
+    "Platelet Aggregation",
+    "Cold Temperature",
+    "Microcirculation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 2588
+  },
+  {
+   "substance": "Epitopes",
+   "score": 0.0897,
+   "b_links": 11,
+   "via": [
+    "Cryoglobulins",
+    "Rheumatoid Factor",
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Centromere"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 26209
+  },
+  {
+   "substance": "DNA, Fungal",
+   "score": 0.0884,
+   "b_links": 2,
+   "via": [
+    "Centromere",
+    "Hot Temperature"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 1099
+  },
+  {
+   "substance": "Platelet Activating Factor",
+   "score": 0.0875,
+   "b_links": 12,
+   "via": [
+    "Platelet Aggregation",
+    "Epoprostenol",
+    "Prostaglandins E",
+    "Vasodilation",
+    "Prostaglandins"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 712
+  },
+  {
+   "substance": "Atrial Natriuretic Factor",
+   "score": 0.0806,
+   "b_links": 11,
+   "via": [
+    "Vasodilation",
+    "Vasodilator Agents",
+    "Regional Blood Flow",
+    "Blood Pressure",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 357
+  },
+  {
+   "substance": "Prostaglandin-Endoperoxide Synthases",
+   "score": 0.0778,
+   "b_links": 8,
+   "via": [
+    "Epoprostenol",
+    "Prostaglandins E",
+    "Platelet Aggregation",
+    "Prostaglandins",
+    "Vasodilation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 1074
+  },
+  {
+   "substance": "Naloxone",
+   "score": 0.0777,
+   "b_links": 16,
+   "via": [
+    "Skin Temperature",
+    "Vasodilation",
+    "Reserpine",
+    "Body Temperature",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 6599
+  },
+  {
+   "substance": "Chromatin",
+   "score": 0.0762,
+   "b_links": 6,
+   "via": [
+    "Centromere",
+    "Antibodies, Antinuclear",
+    "Bleomycin",
+    "Hot Temperature",
+    "Rheumatoid Factor"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 12200
+  },
+  {
+   "substance": "Receptors, Prostaglandin",
+   "score": 0.0746,
+   "b_links": 7,
+   "via": [
+    "Epoprostenol",
+    "Platelet Aggregation",
+    "Prostaglandins E",
+    "Vasoconstriction",
+    "Prostaglandins"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 385
+  },
+  {
+   "substance": "Lactic Acid",
+   "score": 0.0724,
+   "b_links": 19,
+   "via": [
+    "Regional Blood Flow",
+    "Nifedipine",
+    "Vascular Resistance",
+    "Adrenergic beta-Antagonists",
+    "Vasodilation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3498
+  },
+  {
+   "substance": "Complement Activating Enzymes",
+   "score": 0.0716,
+   "b_links": 7,
+   "via": [
+    "Cryoglobulins",
+    "Rheumatoid Factor",
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Fibrinogen"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 1040
+  },
+  {
+   "substance": "Ouabain",
+   "score": 0.0709,
+   "b_links": 17,
+   "via": [
+    "Vasoconstriction",
+    "Nifedipine",
+    "Vasodilation",
+    "Reserpine",
+    "Propranolol"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 8961
+  },
+  {
+   "substance": "Anti-Arrhythmia Agents",
+   "score": 0.0702,
+   "b_links": 10,
+   "via": [
+    "Adrenergic beta-Antagonists",
+    "Vasodilator Agents",
+    "Propranolol",
+    "Nifedipine",
+    "Antibodies, Antinuclear"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 5605
+  },
+  {
+   "substance": "Platelet Membrane Glycoproteins",
+   "score": 0.0699,
+   "b_links": 6,
+   "via": [
+    "Platelet Aggregation",
+    "Fibrinogen",
+    "Epoprostenol",
+    "Autoantibodies",
+    "Prostaglandins E"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 396
+  },
+  {
+   "substance": "Complement C1q",
+   "score": 0.0667,
+   "b_links": 5,
+   "via": [
+    "Cryoglobulins",
+    "Rheumatoid Factor",
+    "Antibodies, Antinuclear",
+    "Autoantibodies",
+    "Hot Temperature"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 608
+  },
+  {
+   "substance": "Apomorphine",
+   "score": 0.066,
+   "b_links": 8,
+   "via": [
+    "Reserpine",
+    "Vasoconstriction",
+    "Vasodilation",
+    "Body Temperature",
+    "Prostaglandins E"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3948
+  },
+  {
+   "substance": "Cyclic GMP",
+   "score": 0.0632,
+   "b_links": 13,
+   "via": [
+    "Vasodilation",
+    "Vasodilator Agents",
+    "Vasoconstriction",
+    "Propranolol",
+    "Platelet Aggregation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 4819
+  },
+  {
+   "substance": "Mitomycins",
+   "score": 0.0626,
+   "b_links": 6,
+   "via": [
+    "Bleomycin",
+    "Centromere",
+    "Body Temperature",
+    "Prostaglandins E",
+    "Fibrinogen"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 4605
+  },
+  {
+   "substance": "Arginine Vasopressin",
+   "score": 0.0626,
+   "b_links": 19,
+   "via": [
+    "Vasoconstriction",
+    "Blood Pressure",
+    "Prostaglandins E",
+    "Skin Temperature",
+    "Vasodilation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3427
+  },
+  {
+   "substance": "Endorphins",
+   "score": 0.0608,
+   "b_links": 16,
+   "via": [
+    "Skin Temperature",
+    "Vasodilation",
+    "Cold Temperature",
+    "Prostaglandins E",
+    "Vasoconstriction"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 5911
+  },
+  {
+   "substance": "Hydroxydopamines",
+   "score": 0.0601,
+   "b_links": 7,
+   "via": [
+    "Reserpine",
+    "Vasoconstriction",
+    "Adrenergic beta-Antagonists",
+    "Propranolol",
+    "Vascular Resistance"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3198
+  },
+  {
+   "substance": "Azepines",
+   "score": 0.0576,
+   "b_links": 11,
+   "via": [
+    "Vasoconstriction",
+    "Nifedipine",
+    "Vasodilator Agents",
+    "Reserpine",
+    "Nicotinic Acids"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3971
+  },
+  {
+   "substance": "Calmodulin",
+   "score": 0.0575,
+   "b_links": 15,
+   "via": [
+    "Nifedipine",
+    "Vasoconstriction",
+    "Vasodilator Agents",
+    "Prostaglandins E",
+    "Bleomycin"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 2639
+  },
+  {
+   "substance": "Cimetidine",
+   "score": 0.0552,
+   "b_links": 18,
+   "via": [
+    "Reserpine",
+    "Prostaglandins E",
+    "Vasodilation",
+    "Vasoconstriction",
+    "Prostaglandins"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 4417
+  },
+  {
+   "substance": "Immunoglobulin Fab Fragments",
+   "score": 0.0547,
+   "b_links": 6,
+   "via": [
+    "Rheumatoid Factor",
+    "Antibodies, Antinuclear",
+    "Cryoglobulins",
+    "Fibrinogen",
+    "Platelet Aggregation"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 3509
+  },
+  {
+   "substance": "DNA Restriction Enzymes",
+   "score": 0.0541,
+   "b_links": 5,
+   "via": [
+    "Centromere",
+    "Bleomycin",
+    "Antibodies, Antinuclear",
+    "Hot Temperature",
+    "Fibrinogen"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 11595
+  },
+  {
+   "substance": "Prolactin",
+   "score": 0.0478,
+   "b_links": 15,
+   "via": [
+    "Reserpine",
+    "Nifedipine",
+    "Pulse",
+    "Vasodilation",
+    "Skin Temperature"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 17469
+  },
+  {
+   "substance": "Endotoxins",
+   "score": 0.0466,
+   "b_links": 17,
+   "via": [
+    "Epoprostenol",
+    "Vasoconstriction",
+    "Skin Temperature",
+    "Vasodilation",
+    "Vasodilator Agents"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 14248
+  },
+  {
+   "substance": "Culture Media",
+   "score": 0.0456,
+   "b_links": 12,
+   "via": [
+    "Cold Temperature",
+    "Prostaglandins E",
+    "Epoprostenol",
+    "Centromere",
+    "Hot Temperature"
+   ],
+   "papers_with_target": 0,
+   "papers_total": 45425
+  }
+ ]
+}

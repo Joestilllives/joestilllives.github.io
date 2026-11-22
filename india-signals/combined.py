@@ -26,7 +26,7 @@ TOP = 0.2
 
 RANKED = ["mom12_1", "mom6_1", "mom3", "mom1", "high52", "smooth12", "vol252", "vol21", "maxret21",
           "turnover", "deliv20", "deliv_trend", "volume_trend", "frenzy21", "frenzy63", "acc10",
-          "sector_mom6", "rel_sector", "peer_mom6", "rel_peer", "age", "listing_gain", "wiki_attn30", "wiki_spikes21", "wiki_level"]
+          "sector_mom6", "rel_sector", "peer_mom6", "rel_peer", "peer_ret1", "peer_gap1", "peer_gap3", "age", "listing_gain", "wiki_attn30", "wiki_spikes21", "wiki_level"]
 RAW = ["mkt1", "mkt3", "breadth", "has_wiki", "recent_ipo"]
 PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-month move", "mom1": "last month's move",
          "high52": "distance from 52-week high", "smooth12": "steadiness of the climb", "vol252": "yearly volatility",
@@ -34,7 +34,8 @@ PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-mont
          "deliv20": "delivery %", "deliv_trend": "delivery % trend", "volume_trend": "volume trend",
          "frenzy21": "frenzy days last month", "frenzy63": "frenzy days last 3 months", "acc10": "quiet accumulation days",
          "sector_mom6": "sector trend", "rel_sector": "strength vs sector", "peer_mom6": "peer group trend",
-         "rel_peer": "strength vs peers", "age": "how long listed", "listing_gain": "IPO listing-day gain",
+         "rel_peer": "strength vs peers", "peer_ret1": "peers' move last month",
+         "peer_gap1": "gap to peers' move last month", "peer_gap3": "gap to peers' move last 3 months", "age": "how long listed", "listing_gain": "IPO listing-day gain",
          "wiki_attn30": "Wikipedia attention trend", "wiki_spikes21": "Wikipedia spikes", "wiki_level": "Wikipedia readership"}
 
 
@@ -111,6 +112,11 @@ def month_table(m, f, ind, ipo_gain):
         mom6 = df["mom6_1"].to_numpy()
         df["peer_mom6"] = np.nanmean(mom6[peers], axis=1)
         df["rel_peer"] = df["mom6_1"] - df["peer_mom6"]
+        # Swanson-style link: A has always moved with peers B; B just moved; has A caught up?
+        m1, m3 = df["mom1"].to_numpy(), df["mom3"].to_numpy()
+        df["peer_ret1"] = np.nanmean(m1[peers], axis=1)
+        df["peer_gap1"] = df["peer_ret1"] - df["mom1"]
+        df["peer_gap3"] = np.nanmean(m3[peers], axis=1) - df["mom3"]
         df["listing_gain"] = pd.Series(ipo_gain).reindex(syms)
         df["recent_ipo"] = (df["listing_gain"].notna() & (df["age"] < 500)).astype(float)
         df["has_wiki"] = df["wiki_level"].notna().astype(float)
@@ -209,6 +215,8 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     pred["handmade"] = pred[["mom12_1_r", "high52_r", "sector_mom6_r"]].mean(axis=1, skipna=False)
     pred.loc[pred["frenzy21"] > 0, "handmade"] = np.nan
     res = {"model": stats(portfolio(pred)), "feature_importance": imp.to_dict()}
+    for sig in ["peer_gap1", "peer_gap3", "peer_ret1"]:
+        res["alone_" + sig] = stats(portfolio(pred.dropna(subset=[sig + "_r"]), sig + "_r"))
     if pred["handmade"].notna().any():
         res["handmade_trend_score"] = stats(portfolio(pred.dropna(subset=["handmade"]), "handmade"))
     port = portfolio(pred)
@@ -254,7 +262,7 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     res["as_of"] = str(pd.Timestamp(last).date())
     json.dump(res, open(os.path.join(outdir, "combined_results.json"), "w"), indent=1, default=str)
 
-    for name in [k for k in ["model", "handmade_trend_score"] if k in res]:
+    for name in [k for k in ["model", "handmade_trend_score", "alone_peer_gap1", "alone_peer_gap3", "alone_peer_ret1"] if k in res]:
         s = res[name]
         print(f"{name:22} {s['first']}..{s['last']} ({s['months']} months, all out-of-sample)")
         print(f"   ahead of market {s['excess_per_month']*100:+.2f}%/month ({s['excess_per_year']*100:+.1f}%/yr), t={s['t']}, "
