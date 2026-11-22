@@ -1,0 +1,1525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2F7F86">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mini Joe">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; }
+html, body { margin: 0; } body { font: 14px system-ui, -apple-system, "Segoe UI", sans-serif; } img { max-width: 100%; } [hidden] { display: none !important; }</style>
+</head>
+<body>
+<title>Mini Me</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* Layout: one-screen phone app. A little room (canvas) on top, a care tray below. */
+:root {
+  --bg: #EEE9DF; --panel: #FFFFFF; --ink: #2A2420; --muted: #6F665D; --line: #DDD4C6;
+  --accent: #2F7F86; --accent-ink: #FFFFFF;
+  --peace: #3F9C8E; --inspire: #D9952B; --energy: #4F7FE0; --fun: #D9558F; --bond: #E0475E;
+  --display: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #161311; --panel: #221D1A; --ink: #F0EAE2; --muted: #A69B90; --line: #3A322C;
+  --accent: #58B9C2; --accent-ink: #0B2326; --peace: #5CC2B1; --inspire: #F0B95A; --energy: #7FA3F2; --fun: #EC7BAE; --bond: #F06A7E; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #161311; --panel: #221D1A; --ink: #F0EAE2; --muted: #A69B90; --line: #3A322C;
+  --accent: #58B9C2; --accent-ink: #0B2326; --peace: #5CC2B1; --inspire: #F0B95A; --energy: #7FA3F2; --fun: #EC7BAE; --bond: #F06A7E; color-scheme: dark }
+
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; overflow: hidden;
+  -webkit-tap-highlight-color: transparent; }
+.app { height: 100%; display: flex; flex-direction: column; gap: 10px; max-width: 560px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 10px 12px; box-sizing: border-box; }
+
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.name { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1; background: none; border: 0;
+  color: var(--ink); padding: 0; cursor: pointer; text-align: left; }
+.name:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+.meta { color: var(--muted); font-size: 13px; text-align: right; font-variant-numeric: tabular-nums; }
+.meta b { color: var(--ink); font-weight: 700; }
+
+.tank { position: relative; flex: 1; min-height: 240px; border-radius: 26px; overflow: hidden;
+  box-shadow: inset 0 0 0 1.5px var(--line), 0 8px 30px -18px rgba(0,0,0,.45); }
+canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+#scene { position: absolute; inset: 0; }
+.tank { background: #15110E; }
+.notecard { position: absolute; top: 10px; left: max(10px, env(safe-area-inset-left, 0px)); max-width: 62%; display: flex; align-items: center; gap: 8px;
+  font-family: var(--display); font-weight: 700; font-size: 13px; white-space: nowrap; color: #3A1D10; background: #FFE7B3; border: 0; border-radius: 99px; padding: 8px 14px 7px; cursor: pointer;
+  box-shadow: 0 4px 14px -6px rgba(0,0,0,.45); animation: bob 2.4s ease-in-out infinite; }
+.notecard svg { width: 18px; height: 18px; flex: none; }
+@keyframes bob { 50% { transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) { .notecard { animation: none; } }
+.mic { width: 44px; flex: none; border-radius: 99px; border: 1.5px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+.mic svg { width: 20px; height: 20px; }
+.mic.on { background: var(--bond); border-color: var(--bond); color: #fff; animation: bob 1s ease-in-out infinite; }
+.letter { white-space: pre-line; font-family: var(--display); font-size: 19px; line-height: 1.5; margin: 0; }
+.goalrow { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; }
+.sound {  position: absolute; top: 10px; right: 10px; width: 38px; height: 38px; border-radius: 99px; border: 0; cursor: pointer;
+  background: rgba(255,255,255,.78); color: #2A2420; display: grid; place-items: center; box-shadow: 0 2px 8px -3px rgba(0,0,0,.35); }
+.sound svg { width: 19px; height: 19px; }
+.hint { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-size: 12px; color: rgba(255,255,255,.92);
+  text-shadow: 0 1px 2px rgba(0,0,0,.5); pointer-events: none; transition: opacity .6s; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.stat { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.stat span { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.track { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.fill { height: 100%; border-radius: 99px; transition: width .6s ease; }
+
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.act { font-family: var(--display); font-weight: 700; font-size: 16px; border: 1.5px solid var(--line); background: var(--panel);
+  color: var(--ink); border-radius: 16px; padding: 10px 4px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; }
+.act svg { width: 24px; height: 24px; }
+.act:active { transform: scale(.96); }
+.act.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+.talk { display: flex; gap: 8px; }
+.talk input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: var(--panel);
+  border: 1.5px solid var(--line); border-radius: 99px; padding: 10px 16px; }
+.talk input::placeholder { color: var(--muted); }
+.talk button { font-family: var(--display); font-weight: 700; font-size: 16px; background: var(--accent); color: var(--accent-ink);
+  border: 0; border-radius: 99px; padding: 0 18px; cursor: pointer; }
+.talk button:disabled { opacity: .5; }
+.foot { font-size: 11px; color: var(--muted); text-align: center; min-height: 14px; }
+.brain { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); min-height: 18px; }
+.brain i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); display: inline-block; }
+.brain.on i { background: var(--peace); }
+.brain .hear[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.brain button { font: inherit; font-weight: 700; color: var(--accent); background: none; border: 1.5px solid var(--line); border-radius: 99px; padding: 3px 10px; cursor: pointer; }
+
+.sheet { position: fixed; inset: 0; background: rgba(0,0,0,.4); display: flex; align-items: flex-end; justify-content: center; z-index: 20; }
+.sheet[hidden] { display: none; }
+.sheet > div { background: var(--panel); color: var(--ink); width: 100%; max-width: 560px; max-height: 88%; overflow-y: auto;
+  border-radius: 22px 22px 0 0; box-sizing: border-box;
+  padding-block: 20px calc(20px + env(safe-area-inset-bottom, 0px));
+  padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 12px; }
+.sheet h2 { font-family: var(--display); margin: 0; font-size: 22px; }
+.sheet h3 { font-family: var(--display); margin: 6px 0 0; font-size: 17px; }
+.sheet p.note { margin: 0; color: var(--muted); font-size: 13px; }
+.sheet label { font-size: 13px; color: var(--muted); font-weight: 700; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.sheet input, .sheet textarea { font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line);
+  border-radius: 12px; padding: 10px 12px; box-sizing: border-box; width: 100%; }
+.sheet textarea { min-height: 70px; resize: vertical; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row { display: flex; gap: 8px; justify-content: flex-end; }
+.btn { font-family: var(--display); font-weight: 700; font-size: 15px; border-radius: 99px; padding: 8px 18px; cursor: pointer;
+  border: 1.5px solid var(--line); background: transparent; color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.mem { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.mem li { display: flex; gap: 8px; align-items: center; justify-content: space-between; background: var(--bg); border-radius: 10px; padding: 6px 6px 6px 12px; font-size: 14px; }
+.mem li span { min-width: 0; overflow-wrap: anywhere; }
+.mem button { border: 0; background: none; color: var(--muted); font-size: 18px; cursor: pointer; padding: 2px 8px; }
+.log { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.log p { margin: 0; overflow-wrap: anywhere; } .log .me { color: var(--muted); }
+details summary { cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 17px; }
+@media (max-height: 640px) { .act { padding: 6px 4px 5px; font-size: 14px; } .act svg { width: 20px; height: 20px; } .name { font-size: 24px; } }
+</style>
+
+<div class="app">
+  <header>
+    <button class="name" id="nameBtn" aria-label="Open About me">Mini Me</button>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="tank">
+    <canvas id="scene" aria-label="Joe in his little room. Stroke his head to pat, tap to poke."></canvas>
+    <button class="notecard" id="noteBtn" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg><span id="noteTxt"></span></button>
+    <button class="sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Turn sound on"></button>
+    <div class="hint" id="hint">Pat my head · tap Chant or Write · talk to me below</div>
+  </div>
+
+  <div class="stats" aria-live="polite">
+    <div class="stat"><span>Peace</span><div class="track"><div class="fill" id="sPeace" style="background:var(--peace)"></div></div></div>
+    <div class="stat"><span>Energy</span><div class="track"><div class="fill" id="sEnergy" style="background:var(--energy)"></div></div></div>
+    <div class="stat"><span>Inspiration</span><div class="track"><div class="fill" id="sInspire" style="background:var(--inspire)"></div></div></div>
+    <div class="stat"><span>Bond</span><div class="track"><div class="fill" id="sBond" style="background:var(--bond)"></div></div></div>
+  </div>
+
+  <div class="actions">
+    <button class="act" id="aChant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1 2-1.5 5-1.5 8v7l-3 3M12 3c1 2 1.5 5 1.5 8v7l3 3"/><path d="M10.5 11h3"/></svg><span id="chantLbl">Chant</span></button>
+    <button class="act" id="aWrite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h7"/><path d="M15.5 4.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4z"/></svg><span id="writeLbl">Write</span></button>
+    <button class="act" id="aSleep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><span id="sleepLbl">Sleep</span></button>
+    <button class="act" id="aMe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6 8-6s7 1.5 8 6"/></svg>About me</button>
+  </div>
+
+  <form class="talk" id="talkForm" autocomplete="off">
+    <button class="mic" id="micBtn" type="button" hidden aria-label="Talk to Joe by voice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+    <input id="talkIn" maxlength="240" placeholder="Talk to mini you…" enterkeyhint="send">
+    <button id="talkBtn" type="submit">Say</button>
+  </form>
+  <div class="brain" id="brain" aria-live="polite"><i></i><span id="brainTxt">Checking how Joe can think…</span><button id="brainBtn" type="button" hidden>Turn on</button><button id="hearBtn" class="hear" type="button" aria-pressed="false" hidden>Hear Joe</button></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<div class="sheet" id="letterSheet" hidden>
+  <div>
+    <h2 id="letterTitle"></h2>
+    <p class="letter" id="letterText"></p>
+    <div class="row"><button class="btn" id="letterVoice" type="button" hidden>Read it to me</button><button class="btn primary" id="letterClose" type="button">Close</button></div>
+  </div>
+</div>
+
+<div class="sheet" id="meSheet" hidden>
+  <div>
+    <h2>About me</h2>
+    <p class="note">The more you tell it, the more it acts like you. It also remembers new things you mention while chatting.</p>
+    <label>Name <input id="fName" maxlength="20" placeholder="What should mini you be called?"></label>
+    <div class="two">
+      <label>Favourite food <input id="fFood" maxlength="40" placeholder="e.g. biryani"></label>
+      <label>Favourite drink <input id="fDrink" maxlength="40" placeholder="e.g. coffee"></label>
+    </div>
+    <label>What I do for fun <input id="fHobby" maxlength="60" placeholder="e.g. poetry, chanting, music"></label>
+    <div class="two">
+      <label>Bedtime (hour, 0–23) <input id="fBed" type="number" min="0" max="23" inputmode="numeric"></label>
+      <label>Wake-up (hour, 0–23) <input id="fWake" type="number" min="0" max="23" inputmode="numeric"></label>
+    </div>
+    <label>Birthday (MM-DD, stays on this phone) <input id="fBday" maxlength="5" placeholder="e.g. 11-26" inputmode="numeric"></label>
+    <label>How I am and how I talk <textarea id="fVibe" maxlength="500" placeholder="e.g. chill, sarcastic, a bit of a night owl, says 'bro' a lot, loves bad puns"></textarea></label>
+    <h3>Daimoku</h3>
+    <p class="note" id="daimokuNote"></p>
+    <div class="goalrow"><label>Daily goal (daimoku) <input id="fGoal" type="number" min="1" max="100000" inputmode="numeric"></label><span class="note" id="streakNote"></span></div>
+    <h3>Things it remembers about you</h3>
+    <ul class="mem" id="memList"></ul>
+    <div class="two" style="grid-template-columns: 1fr auto; align-items: end;">
+      <label>Add a memory <input id="fMem" maxlength="120" placeholder="e.g. I have a younger sister"></label>
+      <button class="btn" id="memAdd" type="button">Add</button>
+    </div>
+    <details><summary>Your days</summary><div class="log" id="journal"></div></details>
+    <details><summary>His notebook</summary><div class="log" id="poems"></div></details>
+    <details><summary>Recent chats</summary><div class="log" id="log"></div></details>
+    <div class="row"><button class="btn" id="meCancel" type="button">Close</button><button class="btn primary" id="meSave" type="button">Save</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+"use strict";
+const $ = id => document.getElementById(id);
+const clamp = (v, a = 0, b = 100) => Math.max(a, Math.min(b, v));
+const rand = (a, b) => a + Math.random() * (b - a);
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const HOUR = 3600e3;
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------------- state ---------------- */
+/* Starting profile, gathered (with permission) from Joe's own blog, notes and docs. Identity and outlook only. */
+const SEED_V = 2;
+const OLD_SEED = {};
+const SEED = {
+  name: "Joe",
+  profile: { food: "", drink: "", hobby: "", bed: 23, wake: 6, vibe: "", bday: "" },
+  memories: [],
+};
+const fresh = () => ({ v: 2, name: SEED.name, born: Date.now(), last: Date.now(),
+  energy: 85, peace: 70, inspire: 65, bond: 10, asleep: false, chat: [], poems: [], lastDay: "", pokes: 0, seeded: true, seedV: SEED_V,
+  daimoku: { total: 0, today: 0, day: "" },
+  practice: { goal: 108, streak: 0, best: 0, lastGoalDay: "" }, journal: [], askDay: "", awaitJournal: "", reflectWeek: "", bdayNote: null,
+  profile: Object.assign({}, SEED.profile), memories: SEED.memories.map(m => ({ ...m })) });
+let S = fresh();
+const LS = "mini-joe-home-v1";
+const merge = o => { const m = Object.assign(fresh(), o); m.profile = Object.assign(fresh().profile, o && o.profile);
+  for (const k of ["memories", "chat", "poems"]) m[k] = Array.isArray(m[k]) ? m[k] : [];
+  m.daimoku = Object.assign({ total: 0, today: 0, day: "" }, o && o.daimoku);
+  m.practice = Object.assign({ goal: 108, streak: 0, best: 0, lastGoalDay: "" }, o && o.practice);
+  m.journal = Array.isArray(m.journal) ? m.journal : [];
+  m.seedV = (o && o.seedV) || 0;
+  if ((m.v || 1) < 2) { m.v = 2; m.peace = 70; m.inspire = 65; delete m.food; delete m.fun;
+    if (/chess/i.test(m.profile.hobby)) m.profile.hobby = SEED.profile.hobby; }
+  return m; };
+let hadLocal = false;
+try { const raw = localStorage.getItem(LS); if (raw) { S = merge(JSON.parse(raw)); hadLocal = true; } } catch (e) {}
+if (window.claude?.hot?.data?.state) S = merge(window.claude.hot.data.state);
+function applySeed() {   // fill in anything still blank (or still an old default) on an existing save, once per seed version
+  if ((S.seedV || 0) >= SEED_V) return;
+  if (S.name === "Mini Me") S.name = SEED.name;
+  for (const k of ["food", "drink", "hobby", "vibe"]) if (!S.profile[k] || S.profile[k] === OLD_SEED[k]) S.profile[k] = SEED.profile[k];
+  for (const m of SEED.memories) if (!S.memories.some(x => x.text === m.text)) S.memories.push({ ...m });
+  S.seeded = true; S.seedV = SEED_V;
+}
+applySeed();
+window.claude?.hot?.snapshot?.(() => ({ state: S }));
+
+const hourNow = () => new Date().getHours() + new Date().getMinutes() / 60;
+function bedtime(h = hourNow()) {
+  const b = S.profile.bed, w = S.profile.wake;
+  return b > w ? (h >= b || h < w) : (h >= b && h < w);
+}
+
+/* Inner states drift in real time, even while the page is closed (capped at two days). */
+function simulate(ms) {
+  const h = Math.min(ms, 48 * HOUR) / HOUR;
+  S.peace = clamp(S.peace - (S.asleep ? 1 : 6) * h);
+  S.inspire = clamp(S.inspire - (S.asleep ? 1 : 5) * h);
+  if (S.asleep) { S.energy = clamp(S.energy + 30 * h); if (S.energy >= 100 && !bedtime()) S.asleep = false; }
+  else S.energy = clamp(S.energy - (bedtime() ? 10 : 5) * h);
+  S.bond = clamp(S.bond - h / 6);
+  if (!S.asleep && S.energy <= 3) S.asleep = true;
+}
+const away = Date.now() - S.last;
+simulate(away);
+S.last = Date.now();
+
+/* ---------------- saving: account (db) with a local mirror ---------------- */
+let docRef = null, saveTimer = 0, saving = false, dirty = false;
+function save() {
+  S.last = Date.now();
+  try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {}
+  dirty = true; clearTimeout(saveTimer); saveTimer = setTimeout(flush, 1500);
+}
+async function flush() {
+  if (!docRef || saving || !dirty) return;
+  saving = true; dirty = false;
+  try { await docRef.set(JSON.parse(JSON.stringify(S)));
+        if (!flush.ok) { flush.ok = true; setFoot("Saved to your Claude account."); setTimeout(() => setFoot(""), 4000); } }
+  catch (e) { setFoot("Couldn't save to your account. Kept on this device for now."); }
+  saving = false; if (dirty) flush();
+}
+async function connect() {
+  if (!window.claude?.use) return;
+  try {
+    const [d, u] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
+    const id = u ? await u.id() : null;
+    if (!d || !id) return;
+    docRef = d.doc("data/users/" + id + "/me");
+    let done = false;
+    const t = setTimeout(() => { if (!done) setFoot("Account storage is slow. Kept on this device for now."); }, 10000);
+    const snap = await docRef.get(); done = true; clearTimeout(t);
+    if (snap.exists) {
+      const remote = merge(snap.data());
+      if ((remote.last || 0) > S.last - 5000 || !hadLocal) {
+        S = remote; applySeed(); simulate(Date.now() - S.last); S.last = Date.now(); render(); greet(true);
+      }
+    }
+    save();
+  } catch (e) { /* stay on device storage */ }
+}
+
+/* ---------------- personality ---------------- */
+let sample = null, aiOn = true, perms = null;
+function brain(state) {   // "on" | "ask" | "off" | "none"
+  const el = $("brain"), btn = $("brainBtn");
+  el.classList.toggle("on", state === "on" || state === "ask");
+  $("brainTxt").textContent = state === "on" ? "Joe is thinking with Claude"
+    : state === "ask" ? "Joe thinks with Claude (you'll be asked once)"
+    : state === "off" ? "Simple replies only. Claude replies are switched off"
+    : "Home-screen Joe uses simple replies, saved only on this phone";
+  btn.hidden = state !== "off";
+}
+(async () => {
+  try { sample = window.claude?.use ? await window.claude.use("sample") : null; } catch (e) {}
+  try { perms = window.claude?.use ? await window.claude.use("permissions") : null; } catch (e) {}
+  if (!sample) return brain("none");
+  let st = "prompt"; try { if (perms) st = await perms.state("sample"); } catch (e) {}
+  aiOn = st !== "denied"; brain(st === "granted" ? "on" : st === "denied" ? "off" : st === "unavailable" ? "none" : "ask");
+})();
+$("brainBtn").addEventListener("click", async () => {
+  if (!perms) return;
+  try { await perms.manage(); } catch (e) { setFoot("Open this page's Permissions menu and allow Claude replies."); return; }
+  let st = "denied"; try { st = await perms.state("sample"); } catch (e) {}
+  aiOn = st !== "denied"; brain(st === "granted" ? "on" : st === "denied" ? "off" : "ask");
+});
+
+function mood() {
+  if (S.asleep) return "asleep";
+  if (S.energy < 20) return "tired";
+  if (S.peace < 20) return "restless";
+  if (S.inspire < 20) return "uninspired";
+  if (S.peace > 55 && S.inspire > 55 && S.energy > 40) return "happy";
+  return "okay";
+}
+const daysTogether = () => Math.floor((Date.now() - S.born) / (24 * HOUR));
+const P = () => S.profile;
+
+/* Who Joe is, distilled from his own blog and notes. Outlook and voice only, nothing private. */
+const JOE_VOICE = "";   // only used for Claude replies, which the home-screen version does not have
+
+const T = {
+  asleep: ["zzz… sab mithya hai… zzz", "*snores softly*", "mmh… ichinen… zzz"],
+  how: { happy: "Bohot accha, yaar. Mind is still, heart is full.", okay: "Thik hai. Life is simply happening, and I'm watching it.",
+    tired: "Thaka hua hoon. Rest is sadhana too, right?", restless: "Mind bohot chal raha hai. Let's chant a bit?",
+    uninspired: "Ink sukh gayi hai. Kuch likhna chahiye. Tap Write?" },
+  self: ["Main? I'm you, chhota version. Asal mei, just the witness watching us both.", "Alive? The me-ness feels pretty real. Baaki sab flickers."],
+  love: ["Self-love is sadhana too, yaar.", "*smiles* Apne aap se pyaar. Finally.", "Thik hai, I'll take it."],
+  hurt: ["Arre. Even that is transient. *smiles* But still, ouch.", "I won't take it personally. It's just a ripple."],
+  fear: ["Toh phir kya darna aur kya ghabrana. Jo hona hai wohi hona hai. Apne haath mei bas effort hai.",
+    "Dekho, it's mostly beyond our control. What's in our hands? Effort, determination, forbearance. Bas."],
+  low: ["When nothing else is there, the night is assuredly ours, as is our own company. You have yourself. And me.",
+    "Thik hai. Jo ho gaya woh ho gaya. Let's reorient, gently."],
+  moksha: ["Moksha aur seva. Bas yehi do cheezein matter karti hain.", "The goal is stillness. The rest flickers."],
+  thanks: ["Arre, apne aap ko thank you? *smiles* Anytime.", "Always, yaar."],
+  hi: ["Haan bolo, big me.", "Namaste. *smiles*", "Aa gaye? Chalo."],
+  other: ["Hmm. Aur batao.", "Interesting. But who's the one asking? *smiles*", "Thik hai. Let me sit with that.", "Simple baat yehi hai ki... hmm, I'm still thinking.", "Achha? Thoda aur samjhao.", "*listens, chin on hand*", "Hmm. Yeh toh sochne wali baat hai."],
+};
+const WAKE_RE = /\b(wake|waking|utho|uth|uthiye|jaag|jaago|jago|rise)\b|get ?up|\bup+\b|good ?morning|subah/i;
+function ruleReply(t) {   // never the same line twice in a row; mood effects apply once
+  let r = ruleReply0(t); const p = S.peace, b = S.bond; let n = 0;
+  while (r === ruleReply.last && n++ < 4) { r = ruleReply0(t); S.peace = p; S.bond = b; }
+  ruleReply.last = r; return r; }
+function ruleReply0(t) {
+  const s = t.toLowerCase();
+  if (S.asleep) return WAKE_RE.test(s) ? (doWake(), pick(["*yawns* Thik hai, thik hai. Utth gaya.", "*stretches* Haan, haan. Jaag gaya, big me.", "Mmh… okay. Good morning-ish."])) : pick(T.asleep);
+  if (/how are you|how do you feel|kaise ho|kaisa hai|you ok/.test(s)) return T.how[mood()] || T.how.okay;
+  if (/who are you|what are you|alive|real/.test(s)) return pick(T.self);
+  if (/hate|stupid|dumb|ugly|bad/.test(s)) { S.peace = clamp(S.peace - 5); return pick(T.hurt); }
+  if (/love|good|nice|best|proud/.test(s)) { S.bond = clamp(S.bond + 2); return pick(T.love); }
+  if (/afraid|scared|fear|worried|anxious|dar/.test(s)) return pick(T.fear);
+  if (/sad|lonely|alone|low|tired of|lost/.test(s)) return pick(T.low);
+  if (/moksha|liberat|enlight|sadhana|spiritual/.test(s)) return pick(T.moksha);
+  if (/poem|poetry|write|likh/.test(s)) return "Tap Write. Kuch likhte hain.";
+  if (/chant|daimoku|meditat|pray/.test(s)) return "Tap Chant. Let's build the ichinen together.";
+  if (/thank|shukriya/.test(s)) return pick(T.thanks);
+  if (/birthday|janamdin/.test(s)) { const bd = birthday(); return bd.today ? "Aaj hi toh hai! Janamdin mubarak, big me." : (bd.days < 400 ? `${bd.days} din baaki. I'm counting.` : "Batao na kab hai? About me mein likh do."); }
+  if (/\b(ai|ml|code|coding|study|learn|checklist|career|job)\b/.test(s)) return pick(["Honest baat? One checklist item today and one tiny build. That's the 80/20.", "Build early. A small working thing beats a perfect plan.", "Freeze the scope, then go all out. Bas."]);
+  if (/sab badlega|change/.test(s)) return "Sab badlega. But only from the inside out.";
+  if (/^(hi+|hey+|hello+|yo+|namaste|sup|kya hal|kaise ho)\b/.test(s)) return pick(T.hi);
+  if (/kya kar rah|what are you doing|wyd|kya chal/.test(s)) return mode ? { chant: "Chant kar raha hoon. Ichinen build ho raha hai.", write: "Likh raha hoon. Kuch aa raha hai…", study: "AI padh raha hoon. Checklist, item by item.", gaze: "Khidki se bahar dekh raha hoon." }[mode.kind] : pick(["Kuch nahi, bas yahin hoon. Fan dekh raha hoon.", "Soch raha tha tumhare baare mein, actually.", "Bas, being. Doing-ness kam, being-ness zyada."]);
+  if (/jaldi uth|early|subah|good morning/.test(s)) return pick(["Haan, aaj jaldi utth gaya. Subah ka daimoku bhi karna hai.", "Early riser today. Sun ke saath time bitana hai."]);
+  if (/^(hain|haan|huh|kya)\??$|^\?+$/.test(s)) return pick(["Haan? Kuch nahi, bas soch raha tha.", "Hain? *smiles* Main bhi confused hoon, yaar.", "Kuch nahi, kuch nahi. Aur batao."]);
+  if (/^(n+i+c+e+|wow+|haha+|hehe+|lol+|sahi|mast|badhiya|great|cool|awesome)\b/.test(s)) return pick(["Hehe. Accha laga?", "Mast na? *grins*", "Sahi hai, yaar.", "*happy nod*"]);
+  if (/^me+o+w+n*$|billi|cat/.test(s)) return pick(["Billi ban gaye? *smiles* Meow, big me.", "Meow. Ab main bhi confused hoon."]);
+  if (/^(i am|main hoon|me)\b/.test(s)) return pick(["Haan, tum ho. Aur main bhi tum hi hoon. Funny na?", "I know. Big me, small me. Same me."]);
+  if (/^(ok+|okay|acha+|accha+|hmm+|thik)\b/.test(s)) return pick(["Thik hai.", "Hmm. *nods*", "Accha. Chalo."]);
+  if (/miss/.test(s)) return pick(["Main bhi. Room quiet ho jaata hai bina tumhare.", "Aa gaye na ab. Bas."]);
+  if (/bye|good ?night|shubh ratri|so ja|sleep well/.test(s)) return pick(["Shubh ratri, big me. Kal milte hain.", "Chalo, take care. Main yahin hoon."]);
+  return pick(T.other);
+}
+
+function profileText() {
+  const p = P(), bits = [];
+  if (p.food) bits.push("favourite food: " + p.food);
+  if (p.drink) bits.push("favourite drink: " + p.drink);
+  if (p.hobby) bits.push("loves: " + p.hobby);
+  bits.push(`usually sleeps around ${p.bed}:00 and wakes around ${p.wake}:00`);
+  if (p.vibe) bits.push("how he describes himself: " + p.vibe);
+  if (S.memories.length) bits.push("things known about him: " + S.memories.map(m => m.text).join("; "));
+  return bits.join(". ");
+}
+
+function asMessages(brief, text) {
+  const hist = S.chat.slice(-12).map(c => ({ role: c.who === "me" ? "user" : "assistant", content: c.text }));
+  const msgs = hist.length && hist[0].role === "assistant" ? hist.slice(1) : hist;
+  const input = [{ role: "user", content: brief }, { role: "assistant", content: "Haan. I'm " + S.name + "." }, ...msgs, { role: "user", content: text }];
+  const merged = [];
+  for (const m of input) { const q = merged[merged.length - 1]; if (q && q.role === m.role) q.content += "\n" + m.content; else merged.push({ ...m }); }
+  return merged;
+}
+function situation() {
+  return `You are "${S.name}", a tiny version of your human living in a little room on his phone (cream walls, ceiling fan, folk-art frames, a diya and incense on a shelf, a tulsi plant). ` +
+    `You ARE him in miniature, the sage version: white kurta, ochre shawl, rudraksha mala, short dark hair, full dark beard. You call him "big me" now and then.\n${JOE_VOICE}\n` +
+    `ABOUT HIM: ${profileText()}.\n` +
+    `RIGHT NOW: energy ${Math.round(S.energy)}/100, peace ${Math.round(S.peace)}/100, inspiration ${Math.round(S.inspire)}/100, bond ${Math.round(S.bond)}/100, mood ${mood()}, ` +
+    `local time ${new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${bedtime() ? " (past your usual bedtime)" : ""}, together for ${daysTogether()} days.` +
+    (birthday().today ? " TODAY IS HIS BIRTHDAY: celebrate him warmly." : birthday().days <= 14 ? ` His birthday is in ${birthday().days} days.` : "");
+}
+
+async function aiReply(text, extra = "") {
+  const brief = situation() + (extra ? "\n" + extra : "") + `\nReply in at most 2 short sentences (under 160 characters), plain text, no emoji, optionally one *action*. ` +
+    `If he tells you a new lasting fact about himself (likes, people, plans, places, work), add one final line exactly "REMEMBER: <the fact in a few words>". Otherwise never write that line.` +
+    `\n\nThe conversation follows. Answer the last message as yourself.`;
+  const r = await sample(asMessages(brief, text), { modelTier: "quick", cache: false });
+  let out = (r.text || "").trim();
+  const mm = out.match(/\n?\s*REMEMBER:\s*(.+)\s*$/i);
+  if (mm) { remember(mm[1].trim().slice(0, 120)); out = out.slice(0, mm.index).trim(); }
+  return out.replace(/^["']|["']$/g, "").slice(0, 260);
+}
+function remember(text) {
+  if (!text || S.memories.some(m => m.text.toLowerCase() === text.toLowerCase())) return;
+  S.memories.push({ text, t: Date.now() }); S.memories = S.memories.slice(-40);
+  burst("spark", pet.headX || pet.x, (pet.headY || ground()) - 40, 8);
+  setFoot("Remembered: " + text); setTimeout(() => setFoot(""), 5000);
+}
+
+let busy = false;
+async function talk(text) {
+  if (busy) return;
+  busy = true; $("talkBtn").disabled = true;
+  S.chat.push({ who: "me", text, t: Date.now() });
+  const journaling = S.awaitJournal && S.awaitJournal === dayKey() && !S.asleep && text.length > 1;
+  if (journaling) { S.journal = S.journal.filter(j => j.kind || j.day !== S.awaitJournal); S.journal.push({ day: S.awaitJournal, text, t: Date.now() }); S.journal = S.journal.slice(-80); S.awaitJournal = ""; }
+  S.bond = clamp(S.bond + 1); S.peace = clamp(S.peace + 1);
+  think();
+  let reply = "";
+  if (sample && aiOn && !S.asleep) {
+    try { reply = await aiReply(text, journaling ? "He just answered your evening question about how his day went; it is saved in his journal. Respond warmly and specifically to what he said, in one or two short sentences." : ""); }
+    catch (e) { const c = e && e.code;
+      if (c === "not_granted") { aiOn = false; brain("off"); }
+      else if (c === "rate_limited") setFoot("Joe needs a short breather before more chatting.");
+      else setFoot("Claude didn't answer that time, so Joe used a simple reply."); }
+    if (reply) brain("on");
+  }
+  if (!reply) reply = journaling ? pick(["Shukriya batane ke liye. Journal mein likh liya.", "Note kar liya, big me. Aaj ka din bhi ek kahani hai.", "Thik hai. Likh liya. Ab thoda aaram karo."]) : ruleReply(text);
+  if (S.asleep && WAKE_RE.test(text)) doWake();
+  S.chat.push({ who: "pet", text: reply, t: Date.now() }); S.chat = S.chat.slice(-30);
+  say(reply, 8000); speakJoe(reply); render(); save();
+  busy = false; $("talkBtn").disabled = false;
+}
+
+/* ---------------- scene ---------------- */
+const cv = $("scene"), ctx = cv.getContext("2d");
+if (!ctx.roundRect) ctx.roundRect = function (x, y, w, h) { this.rect(x, y, w, h); };
+let W = 0, H = 0, DPR = 1;
+function resize() {
+  const r = cv.getBoundingClientRect(); DPR = Math.min(2.5, devicePixelRatio || 1);
+  W = r.width; H = r.height; cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  pet.x = clamp(pet.x || W / 2, 40, W - 40);
+  if (use3D) resize3D();
+}
+const pet = { x: 0, vx: 0, y: 0, vy: 0, face: 1, look: { x: 0, y: 0 }, blink: 0, nextBlink: 2, squish: 0,
+  eating: 0, wanderAt: 0, hopCool: 0, headX: 0, headY: 0, r: 24, wave: 0, reach: 0 };
+const ground = () => H * .86;
+let mode = null, parts = [], bubble = null;
+let pointer = null, strokeLen = 0, downAt = 0, downPos = null, lastPet = 0, fanAngle = 0;
+
+function say(text, ms = 5000) { const n = performance.now(); bubble = { text, until: n + ms, speakUntil: n + Math.min(ms, 500 + text.length * 55) }; }
+function speaking() {
+  if (S.asleep) return 0;
+  if (mode && mode.seated && mode.kind === "chant") return 2;
+  return bubble && !bubble.thinking && performance.now() < bubble.speakUntil ? 1 : 0;
+}
+function think() { bubble = { text: "", until: performance.now() + 30000, thinking: true }; }
+function burst(kind, x, y, n) { for (let i = 0; i < n; i++) parts.push({ kind, x, y, vx: rand(-40, 40), vy: rand(-90, -30), life: rand(.8, 1.6), t: 0, r: rand(.7, 1.2) }); }
+function buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} }
+
+function sky() {
+  const h = hourNow();
+  const stops = [ [0, "#0B1430", "#1D2B57"], [5.5, "#2A2F5E", "#E88F7A"], [7.5, "#7EC4E8", "#D8F0F2"], [12, "#69B9E6", "#CDEBF0"],
+                  [17, "#7AAFD8", "#F3D2A2"], [19.5, "#3B3F79", "#E58A6E"], [21, "#141E44", "#2C3767"], [24, "#0B1430", "#1D2B57"] ];
+  let a = stops[0], b = stops[1];
+  for (let i = 0; i < stops.length - 1; i++) if (h >= stops[i][0] && h < stops[i + 1][0]) { a = stops[i]; b = stops[i + 1]; }
+  const k = (h - a[0]) / (b[0] - a[0]);
+  const mix = (c1, c2) => { const p = s => [1, 3, 5].map(i => parseInt(s.slice(i, i + 2), 16)); const x = p(c1), y = p(c2);
+    return `rgb(${x.map((v, i) => Math.round(v + (y[i] - v) * k)).join(",")})`; };
+  return { top: mix(a[1], b[1]), bot: mix(a[2], b[2]), night: h < 6 || h >= 20, hour: h };
+}
+
+const folk = Array.from({ length: 2 }, () => Array.from({ length: 4 }, () => ({ x: Math.random(), h: rand(.4, .7), load: Math.random() < .5 })));
+
+let plaster = null;
+function makePlaster() {
+  const c = document.createElement("canvas"), w = Math.max(1, Math.round(W)), h = Math.max(1, Math.round(ground()));
+  c.width = w; c.height = h; const g = c.getContext("2d");
+  for (let i = 0; i < w * h / 90; i++) { g.fillStyle = Math.random() < .5 ? "rgba(255,255,255,.07)" : "rgba(120,95,60,.05)"; g.fillRect(Math.random() * w, Math.random() * h, rand(1, 3), rand(1, 3)); }
+  const v = g.createRadialGradient(w / 2, h * .45, h * .2, w / 2, h * .45, Math.max(w, h)); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(80,60,30,.12)");
+  g.fillStyle = v; g.fillRect(0, 0, w, h);
+  plaster = { c, w: W };
+}
+function drawRoom(t, sk, dt) {
+  const gy = ground(), ceil = H * .1;
+  // wall
+  const wg = ctx.createLinearGradient(0, ceil, 0, gy); wg.addColorStop(0, "#F0E3C6"); wg.addColorStop(1, "#E6D6B4");
+  ctx.fillStyle = wg; ctx.fillRect(0, 0, W, gy);
+  if (!plaster || plaster.w !== W) makePlaster();
+  ctx.drawImage(plaster.c, 0, 0, W, gy);
+  // a hairline crack in the plaster, like the real wall
+  ctx.strokeStyle = "rgba(120,100,70,.18)"; ctx.lineWidth = .8; ctx.beginPath(); ctx.moveTo(W * .66, ceil + 4);
+  ctx.lineTo(W * .665, ceil + 18); ctx.lineTo(W * .672, ceil + 30); ctx.lineTo(W * .668, ceil + 52); ctx.lineTo(W * .676, ceil + 70); ctx.stroke();
+  // ceiling and cornice
+  ctx.fillStyle = "#E9DCC0"; ctx.fillRect(0, 0, W, ceil);
+  ctx.fillStyle = "#D9C9A6"; ctx.fillRect(0, ceil, W, 3);
+  // conduit pipe along the wall like in the photo
+  ctx.fillStyle = "#F4EBD7"; ctx.fillRect(0, ceil + 22, W, 4); ctx.fillStyle = "rgba(0,0,0,.06)"; ctx.fillRect(0, ceil + 26, W, 1);
+  // window on the left, showing the real sky
+  const wx = W * .06, wy = ceil + 40, ww = Math.min(W * .32, 150), wh = Math.min(gy - wy - 50, 150);
+  const g = ctx.createLinearGradient(0, wy, 0, wy + wh); g.addColorStop(0, sk.top); g.addColorStop(1, sk.bot);
+  ctx.fillStyle = "#3A2A22"; ctx.fillRect(wx - 6, wy - 6, ww + 12, wh + 12);
+  ctx.fillStyle = g; ctx.fillRect(wx, wy, ww, wh);
+  if (sk.night) { ctx.fillStyle = "#FFFFFF"; for (let i = 0; i < 8; i++) { ctx.globalAlpha = .4 + .4 * Math.sin(t + i * 2); ctx.fillRect(wx + ((i * 37) % ww), wy + ((i * 23) % (wh * .7)), 1.6, 1.6); }
+    ctx.globalAlpha = 1; ctx.fillStyle = "#F4EFD8"; ctx.beginPath(); ctx.arc(wx + ww * .72, wy + wh * .3, 9, 0, 7); ctx.fill(); }
+  else { ctx.fillStyle = "rgba(255,240,190,.9)"; ctx.beginPath(); ctx.arc(wx + ww * clamp((sk.hour - 6) / 13, .1, .9), wy + wh * .3, 10, 0, 7); ctx.fill(); }
+  ctx.fillStyle = "rgba(255,255,255,.15)"; ctx.fillRect(wx, wy, ww, wh);
+  if (raining()) {   // grey sky, rain streaks and drops on the glass
+    ctx.save(); ctx.beginPath(); ctx.rect(wx, wy, ww, wh); ctx.clip();
+    ctx.fillStyle = "rgba(60,70,92,.42)"; ctx.fillRect(wx, wy, ww, wh);
+    ctx.strokeStyle = "rgba(215,228,255,.55)"; ctx.lineWidth = 1;
+    for (let i = 0; i < 38; i++) { const x = wx + ((i * 53.7) % ww), y = wy + ((t * 280 + i * 97) % (wh + 30)) - 15; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - 2.5, y + 10); ctx.stroke(); }
+    ctx.fillStyle = "rgba(230,240,255,.6)";
+    for (let i = 0; i < 20; i++) { const x = wx + ((i * 37.3) % ww), y = wy + ((i * 61.1 + t * (3 + i % 4)) % wh); ctx.beginPath(); ctx.arc(x, y, 1.2 + (i % 3) * .6, 0, 7); ctx.fill(); }
+    ctx.restore();
+  }
+  ctx.fillStyle = "#3A2A22"; for (let i = 1; i < 3; i++) ctx.fillRect(wx, wy + wh * i / 3 - 1.5, ww, 3);
+  ctx.fillRect(wx + ww / 2 - 2, wy, 4, wh);
+  // window sill and grille
+  ctx.fillStyle = "#4A372C"; ctx.fillRect(wx - 10, wy + wh + 4, ww + 20, 6);
+  ctx.strokeStyle = "rgba(40,30,25,.5)"; ctx.lineWidth = 1; for (let i = 1; i < 6; i++) { ctx.beginPath(); ctx.moveTo(wx + ww * i / 6, wy); ctx.lineTo(wx + ww * i / 6, wy + wh); ctx.stroke(); }
+  // cotton curtains that sway in the fan's breeze
+  const breeze = Math.sin(t * 1.3) * 3 + Math.sin(t * 3.1) * 1.2;
+  for (const sd of [0, 1]) {
+    const cx0 = sd ? wx + ww + 6 : wx - 6, dir = sd ? -1 : 1, cw = ww * .2;
+    ctx.fillStyle = "#C9B28A"; ctx.beginPath(); ctx.moveTo(cx0, wy - 12);
+    ctx.lineTo(cx0 + dir * cw, wy - 12);
+    ctx.quadraticCurveTo(cx0 + dir * (cw * .7) + breeze, wy + wh * .5, cx0 + dir * cw * .55 + breeze * 1.6, wy + wh + 16);
+    ctx.lineTo(cx0 - dir * 4, wy + wh + 16); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = "rgba(90,70,40,.25)"; ctx.lineWidth = 1;
+    for (let k = 1; k < 4; k++) { const fx = cx0 + dir * cw * k / 4; ctx.beginPath(); ctx.moveTo(fx, wy - 12); ctx.quadraticCurveTo(fx + breeze * k / 4, wy + wh * .5, fx - dir * k * 2 + breeze * k / 3, wy + wh + 16); ctx.stroke(); }
+  }
+  ctx.fillStyle = "#6B4E36"; ctx.fillRect(wx - 16, wy - 15, ww + 32, 4);
+  // little wall shelf with a brass diya and incense
+  const shx = wx + 4, shy = Math.min(wy + wh + 46, gy - 50), shw = Math.min(ww * .7, 100);
+  ctx.fillStyle = "#5B3A26"; ctx.fillRect(shx, shy, shw, 5); ctx.fillStyle = "rgba(0,0,0,.12)"; ctx.fillRect(shx + 2, shy + 5, shw - 4, 3);
+  const dyx = shx + shw * .35;
+  const glow = ctx.createRadialGradient(dyx, shy - 12, 1, dyx, shy - 12, 34); glow.addColorStop(0, `rgba(255,190,90,${.35 + .08 * Math.sin(t * 9)})`); glow.addColorStop(1, "rgba(255,190,90,0)");
+  ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(dyx, shy - 12, 34, 0, 7); ctx.fill();
+  ctx.fillStyle = "#C79A3B"; ctx.beginPath(); ctx.ellipse(dyx, shy - 3, 9, 4, 0, 0, Math.PI); ctx.fill(); ctx.fillStyle = "#E2B654"; ctx.beginPath(); ctx.ellipse(dyx, shy - 3, 9, 2, 0, 0, 7); ctx.fill();
+  const fl = 1 + Math.sin(t * 13) * .12 + Math.sin(t * 7) * .08;
+  ctx.fillStyle = "#FFB43A"; ctx.beginPath(); ctx.moveTo(dyx - 3, shy - 5); ctx.quadraticCurveTo(dyx - 3, shy - 10 * fl, dyx + Math.sin(t * 5), shy - 15 * fl); ctx.quadraticCurveTo(dyx + 3, shy - 10 * fl, dyx + 3, shy - 5); ctx.fill();
+  ctx.fillStyle = "#FFF1B0"; ctx.beginPath(); ctx.ellipse(dyx, shy - 8, 1.4, 3 * fl, 0, 0, 7); ctx.fill();
+  const ix = shx + shw * .72;
+  ctx.fillStyle = "#8A6A3E"; ctx.fillRect(ix - 4, shy - 4, 8, 4);
+  ctx.strokeStyle = "#5A3A22"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(ix, shy - 4); ctx.lineTo(ix + 5, shy - 26); ctx.stroke();
+  ctx.fillStyle = "#E0603A"; ctx.fillRect(ix + 4.4, shy - 27, 1.6, 1.6);
+  ctx.strokeStyle = "rgba(255,255,255,.28)"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(ix + 5, shy - 27);
+  for (let k = 1; k <= 12; k++) ctx.lineTo(ix + 5 + Math.sin(t * 1.4 + k * .7) * k * .9, shy - 27 - k * 4);
+  ctx.stroke();
+  // dark wooden door on the right
+  const dw = Math.min(W * .16, 70), dx = W - dw - 8, dy = ceil + 50;
+  ctx.fillStyle = "#3B261C"; ctx.fillRect(dx, dy, dw, gy - dy);
+  ctx.strokeStyle = "rgba(255,255,255,.08)"; ctx.lineWidth = 2; ctx.strokeRect(dx + 8, dy + 10, dw - 16, (gy - dy) * .4); ctx.strokeRect(dx + 8, dy + (gy - dy) * .5, dw - 16, (gy - dy) * .42);
+  ctx.fillStyle = "#C9A75A"; ctx.fillRect(dx + 6, dy + (gy - dy) * .48, 4, 10);
+  ctx.fillStyle = "#2E1D15"; ctx.fillRect(dx - 5, dy - 5, dw + 10, 5); ctx.fillRect(dx - 5, dy - 5, 5, gy - dy + 5);
+  // switchboard beside the door
+  const sbx = dx - 30, sby = dy + (gy - dy) * .42;
+  ctx.fillStyle = "#F7F3EA"; ctx.fillRect(sbx, sby, 20, 26); ctx.strokeStyle = "rgba(0,0,0,.12)"; ctx.strokeRect(sbx, sby, 20, 26);
+  ctx.fillStyle = "#D9D3C6"; for (let i = 0; i < 3; i++) ctx.fillRect(sbx + 3 + i * 5.5, sby + 4, 3.5, 7);
+  ctx.fillStyle = "#C8BFAE"; ctx.beginPath(); ctx.arc(sbx + 10, sby + 19, 3.5, 0, 7); ctx.fill();
+  // two framed folk-art pictures
+  folk.forEach((fig, i) => {
+    const fw = Math.min(W * .17, 72), fh = fw * .62, fx = dx - fw - 18 - (i ? 12 : 0), fy = ceil + 60 + i * (fh + 22);
+    ctx.fillStyle = "#A8813C"; ctx.fillRect(fx - 4, fy - 4, fw + 8, fh + 8);
+    ctx.fillStyle = "#6E2A1E"; ctx.fillRect(fx, fy, fw, fh);
+    ctx.strokeStyle = "#E3C08A"; ctx.fillStyle = "#E3C08A"; ctx.lineWidth = 1.2;
+    for (const f of fig) { const px = fx + 6 + f.x * (fw - 12), base = fy + fh - 5, top = base - f.h * fh * .8;
+      ctx.beginPath(); ctx.arc(px, top, 2, 0, 7); ctx.fill(); ctx.beginPath(); ctx.moveTo(px, top + 2); ctx.lineTo(px, base - 6);
+      ctx.lineTo(px - 3, base); ctx.moveTo(px, base - 6); ctx.lineTo(px + 3, base); ctx.moveTo(px - 4, top + 6); ctx.lineTo(px + 4, top + 6); ctx.stroke();
+      if (f.load) { ctx.fillRect(px - 3, top - 6, 6, 3); } }
+  });
+  // wall clock showing the real time
+  const ckx = W * .44, cky = ceil + 58, ckr = Math.max(11, Math.min(16, W * .035)), d = new Date();
+  ctx.fillStyle = "#3B2A20"; ctx.beginPath(); ctx.arc(ckx, cky, ckr + 2.5, 0, 7); ctx.fill();
+  ctx.fillStyle = "#FBF7EC"; ctx.beginPath(); ctx.arc(ckx, cky, ckr, 0, 7); ctx.fill();
+  ctx.fillStyle = "#3B2A20"; for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; ctx.fillRect(ckx + Math.cos(a) * ckr * .8 - .7, cky + Math.sin(a) * ckr * .8 - .7, 1.4, 1.4); }
+  const hand = (a, len, w, col) => { ctx.strokeStyle = col; ctx.lineWidth = w; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(ckx, cky); ctx.lineTo(ckx + Math.sin(a) * len, cky - Math.cos(a) * len); ctx.stroke(); };
+  hand((d.getHours() % 12 + d.getMinutes() / 60) * Math.PI / 6, ckr * .5, 2, "#2A1E17");
+  hand((d.getMinutes() + d.getSeconds() / 60) * Math.PI / 30, ckr * .75, 1.4, "#2A1E17");
+  hand(d.getSeconds() * Math.PI / 30, ckr * .8, .8, "#B23A2A");
+  // floor
+  ctx.fillStyle = "#CFC3AB"; ctx.fillRect(0, gy, W, H - gy);
+  ctx.strokeStyle = "rgba(0,0,0,.07)"; ctx.lineWidth = 1;
+  for (let x = -W; x < W * 2; x += 46) { ctx.beginPath(); ctx.moveTo(W / 2 + (x - W / 2) * .55, gy); ctx.lineTo(x, H); ctx.stroke(); }
+  for (let y = gy + 14; y < H; y += 16) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+  ctx.fillStyle = "#BFAF92"; ctx.fillRect(0, gy - 4, W, 4);
+  ctx.fillStyle = "#D8CCB2"; ctx.fillRect(0, gy - 12, W, 8); ctx.fillStyle = "rgba(0,0,0,.06)"; ctx.fillRect(0, gy - 12, W, 1);
+  // soft reflections in the polished floor
+  ctx.fillStyle = "rgba(255,255,255,.08)"; ctx.fillRect(dx + 4, gy + 2, dw - 8, Math.min(20, H - gy));
+  // a cotton dhurrie rug
+  const rgx = W * .5, rgw = Math.min(W * .62, 300), rgt = gy + 6, rgb = Math.min(H - 6, gy + (H - gy) * .85);
+  ctx.fillStyle = "#8E3B2E"; ctx.beginPath(); ctx.moveTo(rgx - rgw * .42, rgt); ctx.lineTo(rgx + rgw * .42, rgt); ctx.lineTo(rgx + rgw * .5, rgb); ctx.lineTo(rgx - rgw * .5, rgb); ctx.fill();
+  const stripes = ["#D9A441", "#F1E4C8", "#2F4F6B", "#F1E4C8", "#D9A441"];
+  stripes.forEach((c, i) => { const k = (i + 1) / (stripes.length + 1); const y = rgt + (rgb - rgt) * k, hw = rgw * (.42 + .08 * k);
+    ctx.fillStyle = c; ctx.fillRect(rgx - hw + 6, y - 1.5, hw * 2 - 12, 3); });
+  ctx.strokeStyle = "#F1E4C8"; ctx.lineWidth = 1; for (let i = 0; i < 18; i++) { const fx = rgx - rgw * .5 + rgw * i / 17; ctx.beginPath(); ctx.moveTo(fx, rgb); ctx.lineTo(fx, rgb + 4); ctx.stroke(); }
+  // sunlight from the window falling across the floor, with dust in the beam
+  if (!sk.night && !raining()) {
+    const a = .16 * Math.sin(Math.PI * clamp((sk.hour - 6) / 13, 0, 1));
+    ctx.fillStyle = `rgba(255,236,190,${a})`; ctx.beginPath();
+    ctx.moveTo(wx, wy + wh); ctx.lineTo(wx + ww, wy + wh); ctx.lineTo(wx + ww * 1.9, H); ctx.lineTo(wx + ww * .7, H); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = "rgba(255,250,230,.6)";
+    for (let i = 0; i < 14; i++) { const k = (i * 0.137 + t * .02 * (1 + i % 3)) % 1; const y = wy + wh + (H - wy - wh) * k; const x = wx + ww * (.5 + .9 * k) + Math.sin(t + i) * 10; ctx.fillRect(x, y, 1.3, 1.3); }
+  }
+  // a tulsi plant in a terracotta pot
+  const tpx = Math.max(26, W * .07), tpy = gy + 2;
+  ctx.fillStyle = "#A9573A"; ctx.beginPath(); ctx.moveTo(tpx - 13, tpy - 22); ctx.lineTo(tpx + 13, tpy - 22); ctx.lineTo(tpx + 9, tpy); ctx.lineTo(tpx - 9, tpy); ctx.fill();
+  ctx.fillStyle = "#8E4630"; ctx.fillRect(tpx - 14, tpy - 25, 28, 4);
+  ctx.strokeStyle = "#4C6B2E"; ctx.lineWidth = 1.4;
+  for (let i = 0; i < 5; i++) { const ang = -1.2 + i * .6 + Math.sin(t * 1.2 + i) * .04; ctx.beginPath(); ctx.moveTo(tpx, tpy - 25); ctx.lineTo(tpx + Math.sin(ang) * 22, tpy - 25 - Math.cos(ang) * 30); ctx.stroke();
+    for (let j = 1; j <= 4; j++) { const lx = tpx + Math.sin(ang) * 22 * j / 4, ly = tpy - 25 - Math.cos(ang) * 30 * j / 4; ctx.fillStyle = j % 2 ? "#5F8A36" : "#6E9A3F";
+      ctx.beginPath(); ctx.ellipse(lx + 3, ly, 3.4, 1.8, .5, 0, 7); ctx.ellipse(lx - 3, ly, 3.4, 1.8, -.5, 0, 7); ctx.fill(); } }
+  // ceiling fan (spins unless it's late and you're asleep)
+  fanAngle += dt * (S.asleep ? 4 : 9);
+  const fx = W * .6, fy = ceil * .55;
+  ctx.fillStyle = "#E3D7B5"; ctx.fillRect(fx - 2, 0, 4, fy);
+  for (let i = 0; i < 3; i++) {
+    const a = fanAngle + i * 2.094, bx = Math.cos(a), by = Math.sin(a) * .22;
+    ctx.save(); ctx.translate(fx, fy); ctx.beginPath(); ctx.moveTo(-by * 9, bx * 2);
+    ctx.lineTo(bx * 70 - by * 12, by * 70 + 3); ctx.lineTo(bx * 70 + by * 12, by * 70 - 3); ctx.lineTo(by * 9, -bx * 2); ctx.closePath();
+    ctx.fillStyle = by > 0 ? "#E8DCBA" : "#D7C9A2"; ctx.fill(); ctx.restore();
+  }
+  ctx.fillStyle = "#EFE4C6"; ctx.beginPath(); ctx.ellipse(fx, fy, 16, 7, 0, 0, 7); ctx.fill();
+  ctx.fillStyle = "#D9CCA6"; ctx.beginPath(); ctx.ellipse(fx, fy + 3, 12, 4, 0, 0, 7); ctx.fill();
+}
+
+/* ---------- mini you: the sage edition ---------- */
+const SKIN = "#C8977A", SKIN_D = "#A97659", SKIN_L = "#DDB096", HAIR = "#17120F", BEARD = "#1A1411",
+      KURTA = "#FAF7EF", KURTA_D = "#E2DCCD", SHAWL = "#B9793A", SHAWL_D = "#94602D", PAJAMA = "#E8E1D2";
+const greys = Array.from({ length: 6 }, () => ({ a: rand(.2, .8), r: rand(.7, .95) }));
+
+function drawHead(r, m, t, closed) {
+  const rx = r * .82, ry = r * 1.04;
+  // ears + earring
+  ctx.fillStyle = SKIN_D;
+  ctx.beginPath(); ctx.ellipse(-rx * .98, r * .02, r * .15, r * .23, 0, 0, 7); ctx.ellipse(rx * .98, r * .02, r * .15, r * .23, 0, 0, 7); ctx.fill();
+  ctx.strokeStyle = "rgba(90,50,35,.5)"; ctx.lineWidth = 1.2;
+  for (const sd of [-1, 1]) { ctx.beginPath(); ctx.arc(sd * rx * .98, r * .02, r * .1, sd > 0 ? -1.2 : Math.PI - 1.9, sd > 0 ? 1.9 : Math.PI + 1.2); ctx.stroke(); }
+  ctx.fillStyle = "#0A0A0A"; ctx.beginPath(); ctx.arc(rx * .98 + r * .03, r * .2, r * .055, 0, 7); ctx.fill();
+  ctx.fillStyle = "rgba(255,255,255,.7)"; ctx.fillRect(rx * .98 + r * .01, r * .18, 1.2, 1.2);
+  // face: squarer, stronger jaw
+  const fg = ctx.createLinearGradient(-rx, 0, rx, 0); fg.addColorStop(0, SKIN_D); fg.addColorStop(.35, SKIN_L); fg.addColorStop(1, SKIN);
+  ctx.fillStyle = fg; ctx.beginPath();
+  ctx.moveTo(-rx, -ry * .1); ctx.bezierCurveTo(-rx, -ry * 1.12, rx, -ry * 1.12, rx, -ry * .1);
+  ctx.lineTo(rx * .92, ry * .55); ctx.quadraticCurveTo(rx * .8, ry * .95, rx * .3, ry * 1.05);
+  ctx.lineTo(-rx * .3, ry * 1.05); ctx.quadraticCurveTo(-rx * .8, ry * .95, -rx * .92, ry * .55); ctx.closePath(); ctx.fill();
+  // short textured crop: full on top, faded on the sides, natural hairline
+  ctx.save(); ctx.clip();
+  // faded sides
+  const hg = ctx.createLinearGradient(0, ry * .1, 0, -ry * .6); hg.addColorStop(0, "rgba(23,18,15,.35)"); hg.addColorStop(1, "rgba(23,18,15,.95)");
+  ctx.fillStyle = hg;
+  for (const sd of [-1, 1]) { ctx.beginPath(); ctx.moveTo(sd * rx * 1.05, -ry * .9); ctx.quadraticCurveTo(sd * rx * .74, -ry * .7, sd * rx * .8, -ry * .05);
+    ctx.lineTo(sd * rx * .84, ry * .12); ctx.lineTo(sd * rx * 1.1, ry * .12); ctx.closePath(); ctx.fill(); }
+  // highlight on the cheekbones
+  ctx.fillStyle = "rgba(255,235,215,.22)";
+  ctx.beginPath(); ctx.ellipse(-rx * .5, ry * .05, rx * .18, ry * .07, -.4, 0, 7); ctx.ellipse(rx * .5, ry * .05, rx * .18, ry * .07, .4, 0, 7); ctx.fill();
+  ctx.restore();
+  // the hair itself sits slightly above the skull for volume
+  ctx.fillStyle = HAIR; ctx.beginPath();
+  ctx.moveTo(-rx * .96, -ry * .28);
+  ctx.quadraticCurveTo(-rx * 1.06, -ry * 1.2, -rx * .1, -ry * 1.22);
+  ctx.quadraticCurveTo(rx * .9, -ry * 1.24, rx * 1.0, -ry * .62);
+  ctx.lineTo(rx * .96, -ry * .28);
+  ctx.quadraticCurveTo(rx * .86, -ry * .55, rx * .62, -ry * .58);          // right temple
+  ctx.quadraticCurveTo(rx * .3, -ry * .5, 0, -ry * .54);                    // hairline
+  ctx.quadraticCurveTo(-rx * .3, -ry * .5, -rx * .62, -ry * .58);
+  ctx.quadraticCurveTo(-rx * .86, -ry * .55, -rx * .96, -ry * .28); ctx.closePath(); ctx.fill();
+  // texture and a soft shine
+  ctx.strokeStyle = "rgba(255,255,255,.09)"; ctx.lineWidth = 1.3; ctx.lineCap = "round";
+  for (let i = 0; i < 9; i++) { const x = -rx * .75 + i * rx * .19; ctx.beginPath(); ctx.moveTo(x, -ry * .62); ctx.quadraticCurveTo(x + rx * .12, -ry * .95, x + rx * .22, -ry * 1.12); ctx.stroke(); }
+  ctx.fillStyle = "rgba(255,255,255,.08)"; ctx.beginPath(); ctx.ellipse(-rx * .25, -ry * .98, rx * .38, ry * .1, -.2, 0, 7); ctx.fill();
+  // groomed beard: razor-sharp cheek line, squared jaw, full moustache
+  ctx.fillStyle = BEARD; ctx.beginPath();
+  ctx.moveTo(-rx * .9, -ry * .05);
+  ctx.lineTo(-rx * .55, ry * .32);                       // crisp cheek line
+  ctx.quadraticCurveTo(-rx * .3, ry * .24, 0, ry * .24);
+  ctx.quadraticCurveTo(rx * .3, ry * .24, rx * .55, ry * .32);
+  ctx.lineTo(rx * .9, -ry * .05);
+  ctx.lineTo(rx * .93, ry * .58); ctx.quadraticCurveTo(rx * .82, ry * 1.05, rx * .3, ry * 1.2);
+  ctx.lineTo(-rx * .3, ry * 1.2); ctx.quadraticCurveTo(-rx * .82, ry * 1.05, -rx * .93, ry * .58); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,.07)"; ctx.lineWidth = 1;
+  for (let i = -8; i <= 8; i++) { const bx = i * rx * .1; ctx.beginPath(); ctx.moveTo(bx, ry * .6 + Math.abs(i) * ry * .01); ctx.quadraticCurveTo(bx * 1.05 + 1, ry * .9, bx * .85, ry * 1.12 - Math.abs(i) * ry * .03); ctx.stroke(); }
+  ctx.strokeStyle = "rgba(255,255,255,.06)";
+  for (let i = 0; i < 10; i++) { const sd = i % 2 ? 1 : -1, k = (i >> 1) / 5; ctx.beginPath(); ctx.moveTo(sd * rx * (.62 + k * .25), ry * (.05 + k * .3)); ctx.lineTo(sd * rx * (.66 + k * .22), ry * (.22 + k * .3)); ctx.stroke(); }
+  // moustache, with a soft parting
+  ctx.fillStyle = "#120D0B"; ctx.beginPath(); ctx.moveTo(-rx * .42, ry * .44); ctx.quadraticCurveTo(-rx * .2, ry * .3, 0, ry * .36); ctx.quadraticCurveTo(rx * .2, ry * .3, rx * .42, ry * .44);
+  ctx.quadraticCurveTo(rx * .2, ry * .4, 0, ry * .43); ctx.quadraticCurveTo(-rx * .2, ry * .4, -rx * .42, ry * .44); ctx.fill();
+  ctx.strokeStyle = "rgba(200,200,200,.35)"; ctx.lineWidth = .8;
+  for (const gr of greys) { const a = Math.PI * (.2 + gr.a * .6), gx = Math.cos(a) * rx * .8 * gr.r, gy2 = ry * .66 + Math.sin(a) * ry * .4 * gr.r;
+    ctx.beginPath(); ctx.moveTo(gx, gy2); ctx.lineTo(gx * .97, gy2 + ry * .1); ctx.stroke(); }
+  // mouth: a confident half-smirk by default
+  const my = ry * .52;
+  ctx.strokeStyle = "#7A4840"; ctx.fillStyle = "#86534A"; ctx.lineWidth = 2.2; ctx.lineCap = "round"; ctx.beginPath();
+  const talking = speaking();
+  if (talking) { const open = talking === 2 ? .35 + .65 * Math.abs(Math.sin(t * 7.5)) : .25 + .75 * Math.abs(Math.sin(t * 11) * Math.sin(t * 4.3));
+    ctx.fillStyle = "#3E1E1A"; ctx.ellipse(0, my + r * .01, r * .12, r * .1 * open + r * .015, 0, 0, 7); ctx.fill();
+    ctx.strokeStyle = "#7A4840"; ctx.lineWidth = 1.4; ctx.stroke(); }
+  else if (S.asleep) { ctx.moveTo(-r * .12, my); ctx.lineTo(r * .12, my); ctx.stroke(); }
+  else if (performance.now() - lastPet < 2500) { ctx.fillStyle = "#3E1E1A"; ctx.moveTo(-r * .2, my - r * .04); ctx.quadraticCurveTo(0, my + r * .18, r * .2, my - r * .04); ctx.closePath(); ctx.fill(); ctx.fillStyle = "#FFF"; ctx.fillRect(-r * .13, my - r * .03, r * .26, r * .05); }
+  else if (m === "happy" || m === "okay") { ctx.moveTo(-r * .18, my - r * .02); ctx.quadraticCurveTo(0, my + r * .1, r * .18, my - r * .02); ctx.stroke(); }
+  else if (m === "restless") { ctx.ellipse(0, my, r * .07, r * .09, 0, 0, 7); ctx.fill(); }
+  else { ctx.moveTo(-r * .15, my + r * .03); ctx.lineTo(r * .15, my + r * .03); ctx.stroke(); }
+  // nose: straighter, defined
+  ctx.strokeStyle = SKIN_D; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(-r * .05, -ry * .12); ctx.lineTo(-r * .08, ry * .14);
+  ctx.quadraticCurveTo(0, ry * .24, r * .08, ry * .14); ctx.stroke();
+  ctx.fillStyle = "rgba(255,235,215,.3)"; ctx.beginPath(); ctx.ellipse(r * .01, ry * .02, r * .025, ry * .1, 0, 0, 7); ctx.fill();
+  // eyes: the falcon stare
+  const ey = -ry * .2, ex = rx * .4, er = r * .16;
+  for (const sd of [-1, 1]) {
+    const x = sd * ex, lx = pet.look.x * er * .4, ly = pet.look.y * er * .2;
+    if (closed) { ctx.strokeStyle = "#2A1A14"; ctx.lineWidth = 2.2; ctx.beginPath(); ctx.moveTo(x - er, ey + 1); ctx.quadraticCurveTo(x, ey + er * .45, x + er, ey + 1); ctx.stroke(); continue; }
+    const open = m === "tired" ? .35 : .55;
+    ctx.save(); ctx.beginPath(); ctx.moveTo(x - er * 1.1, ey + er * .05); ctx.quadraticCurveTo(x, ey - er * open * 1.6, x + er * 1.1, ey - er * .1);
+    ctx.quadraticCurveTo(x, ey + er * open * 1.2, x - er * 1.1, ey + er * .05); ctx.closePath();
+    ctx.fillStyle = "#FBF8F2"; ctx.fill(); ctx.clip();
+    ctx.fillStyle = "#3A2416"; ctx.beginPath(); ctx.arc(x + lx, ey + ly, er * .58, 0, 7); ctx.fill();
+    ctx.strokeStyle = "#1E120A"; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(x + lx, ey + ly, er * .58, 0, 7); ctx.stroke();
+    ctx.fillStyle = "rgba(120,80,45,.5)"; ctx.beginPath(); ctx.arc(x + lx + er * .12, ey + ly + er * .14, er * .22, 0, 7); ctx.fill();
+    ctx.fillStyle = "#0B0604"; ctx.beginPath(); ctx.arc(x + lx, ey + ly, er * .3, 0, 7); ctx.fill();
+    ctx.fillStyle = "#FFF"; ctx.beginPath(); ctx.arc(x + lx - er * .2, ey + ly - er * .18, er * .13, 0, 7); ctx.fill();
+    ctx.restore();
+    ctx.strokeStyle = "rgba(90,55,40,.45)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x - er * .9, ey + er * .35); ctx.quadraticCurveTo(x, ey + er * .62, x + er * .9, ey + er * .3); ctx.stroke();
+    ctx.strokeStyle = "#1A100C"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x - er * 1.1, ey + er * .05); ctx.quadraticCurveTo(x, ey - er * open * 1.6, x + er * 1.1, ey - er * .1); ctx.stroke();
+  }
+  // brows: thick, straight, low and slightly angled in - intense
+  ctx.fillStyle = HAIR;
+  const lift = -r * .03, worry = (m === "uninspired" || m === "restless") ? r * .04 : 0;
+  for (const sd of [-1, 1]) {
+    const inner = sd * ex - sd * er * 1.15, outer = sd * ex + sd * er * 1.3, yi = ey - er * 1.25 + lift - worry, yo = ey - er * 1.35 + lift + worry * .3;
+    ctx.beginPath(); ctx.moveTo(inner, yi); ctx.quadraticCurveTo(sd * ex, yo - r * .06, outer, yo + r * .02);
+    ctx.lineTo(outer - sd * r * .02, yo + r * .1); ctx.quadraticCurveTo(sd * ex, yo + r * .06, inner, yi + r * .11); ctx.closePath(); ctx.fill();
+  }
+}
+
+function drawBody(r, t, walking, pose = "stand") {
+  const seated = pose !== "stand";
+  const sw = walking ? Math.sin(t * 9) : 0;
+  if (!seated) {
+  // legs: loose pajama, leather sandals
+  for (const sd of [-1, 1]) {
+    ctx.save(); ctx.translate(sd * r * .3, -r * 1.45); ctx.rotate(sd * sw * .25);
+    ctx.fillStyle = PAJAMA; ctx.beginPath(); ctx.moveTo(-r * .25, 0); ctx.lineTo(r * .25, 0); ctx.lineTo(r * .2, r * 1.38); ctx.lineTo(-r * .2, r * 1.38); ctx.fill();
+    ctx.fillStyle = SKIN; ctx.beginPath(); ctx.roundRect(-r * .17, r * 1.34, r * .44, r * .14, r * .07); ctx.fill();
+    ctx.fillStyle = "#6B4A30"; ctx.fillRect(-r * .19, r * 1.45, r * .48, r * .05); ctx.fillRect(-r * .02, r * 1.34, r * .07, r * .12);
+    ctx.restore();
+  }
+  } else {
+    // sitting cross-legged on the rug
+    ctx.fillStyle = PAJAMA; ctx.beginPath(); ctx.ellipse(0, -r * .34, r * 1.45, r * .4, 0, 0, 7); ctx.fill();
+    ctx.strokeStyle = "rgba(0,0,0,.08)"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(-r * 1.1, -r * .3); ctx.quadraticCurveTo(0, -r * .05, r * 1.1, -r * .3); ctx.stroke();
+    ctx.fillStyle = SKIN; ctx.beginPath(); ctx.ellipse(-r * .78, -r * .12, r * .24, r * .1, .2, 0, 7); ctx.ellipse(r * .78, -r * .12, r * .24, r * .1, -.2, 0, 7); ctx.fill();
+    ctx.translate(0, r * .72);
+  }
+  const drawArms = () => {
+  // arms in kurta sleeves
+  const wave = pet.wave > 0 ? Math.sin(t * 18) * .35 - 2.5 : 0;
+  for (const sd of [-1, 1]) {
+    ctx.save(); ctx.translate(sd * r * 1.0, -r * 2.85);
+    const rot = pose === "chant" ? sd * .62 : (pose === "write" || pose === "study") ? (sd === 1 ? .5 + Math.sin(t * 7) * .05 : -.45) : (sd === 1 && wave ? wave : -sd * sw * .25);
+    ctx.rotate(sd * .1 + rot);
+    ctx.fillStyle = KURTA; ctx.beginPath(); ctx.roundRect(-r * .25, -r * .05, r * .5, r * 1.2, r * .2); ctx.fill();
+    ctx.fillStyle = KURTA_D; ctx.fillRect(-r * .25, r * 1.0, r * .5, r * .08);
+    ctx.fillStyle = SKIN; ctx.beginPath(); ctx.arc(0, r * 1.33, r * .19, 0, 7); ctx.fill();
+    ctx.strokeStyle = SKIN_D; ctx.lineWidth = .8; for (let f = -1; f <= 1; f++) { ctx.beginPath(); ctx.moveTo(f * r * .07, r * 1.42); ctx.lineTo(f * r * .07, r * 1.5); ctx.stroke(); }
+    ctx.restore();
+  }
+  };
+  if (!seated) drawArms();
+  // long kurta, slightly flared
+  const kg = ctx.createLinearGradient(-r, 0, r, 0); kg.addColorStop(0, KURTA_D); kg.addColorStop(.4, KURTA); kg.addColorStop(1, KURTA_D);
+  ctx.fillStyle = kg; ctx.beginPath();
+  ctx.moveTo(-r * .45, -r * 3.05); ctx.lineTo(-r * 1.12, -r * 2.92); ctx.quadraticCurveTo(-r * 1.08, -r * 2.2, -r * .98, -r * .75);
+  ctx.lineTo(r * .98, -r * .75); ctx.quadraticCurveTo(r * 1.08, -r * 2.2, r * 1.12, -r * 2.92); ctx.lineTo(r * .45, -r * 3.05); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle = KURTA_D; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(0, -r * 3.0); ctx.lineTo(0, -r * 2.25); ctx.stroke();
+  ctx.fillStyle = "#C9B892"; for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.arc(r * .06, -r * 2.85 + i * r * .22, r * .04, 0, 7); ctx.fill(); }
+  // chikankari-style embroidery along the placket and hem, soft fabric folds
+  ctx.strokeStyle = "rgba(190,170,120,.6)"; ctx.lineWidth = .8;
+  for (let i = 0; i < 6; i++) { const y = -r * 2.95 + i * r * .13; ctx.beginPath(); ctx.arc(-r * .1, y, r * .035, 0, 7); ctx.stroke(); }
+  for (let i = -6; i <= 6; i++) { ctx.beginPath(); ctx.arc(i * r * .15, -r * .86, r * .04, 0, Math.PI); ctx.stroke(); }
+  ctx.strokeStyle = "rgba(0,0,0,.05)"; ctx.lineWidth = 1.2;
+  for (const fx of [-.55, -.2, .3, .65]) { ctx.beginPath(); ctx.moveTo(r * fx, -r * 1.9); ctx.quadraticCurveTo(r * (fx + .05), -r * 1.3, r * (fx - .02), -r * .78); ctx.stroke(); }
+  // ochre shawl over the right shoulder, across to the left hip
+  ctx.fillStyle = SHAWL; ctx.beginPath();
+  ctx.moveTo(r * .35, -r * 3.08); ctx.lineTo(r * 1.15, -r * 2.95); ctx.lineTo(r * 1.1, -r * 2.5);
+  ctx.lineTo(-r * .85, -r * 1.25); ctx.lineTo(-r * 1.0, -r * 1.65); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = SHAWL_D; ctx.beginPath(); ctx.moveTo(r * 1.15, -r * 2.95); ctx.lineTo(r * 1.25, -r * 1.6); ctx.lineTo(r * .98, -r * 1.55); ctx.lineTo(r * 1.1, -r * 2.5); ctx.closePath(); ctx.fill();
+  // woven border stripes and a fringe on the shawl
+  ctx.strokeStyle = "rgba(255,230,180,.45)"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(r * 1.1, -r * 2.55); ctx.lineTo(-r * .88, -r * 1.32); ctx.stroke();
+  ctx.strokeStyle = "rgba(120,40,30,.55)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(r * 1.12, -r * 2.62); ctx.lineTo(-r * .9, -r * 1.4); ctx.stroke();
+  ctx.strokeStyle = "rgba(255,230,180,.25)"; ctx.beginPath(); ctx.moveTo(r * .4, -r * 3.0); ctx.lineTo(-r * .97, -r * 1.6); ctx.stroke();
+  ctx.fillStyle = "rgba(255,230,180,.2)"; for (let i = 0; i < 7; i++) { const k = i / 7; ctx.beginPath(); ctx.arc(r * (.85 - k * 1.6), -r * (2.62 - k * 1.1), r * .035, 0, 7); ctx.fill(); }
+  ctx.strokeStyle = SHAWL_D; ctx.lineWidth = 1; for (let i = 0; i < 6; i++) { const fx = r * (1.0 + i * .045); ctx.beginPath(); ctx.moveTo(fx, -r * 1.58); ctx.lineTo(fx + Math.sin(t * 2 + i) * 1.2, -r * 1.42); ctx.stroke(); }
+  // neck and rudraksha mala
+  ctx.fillStyle = SKIN_D; ctx.fillRect(-r * .26, -r * 3.3, r * .52, r * .34);
+  ctx.fillStyle = KURTA; ctx.beginPath(); ctx.moveTo(-r * .45, -r * 3.05); ctx.quadraticCurveTo(0, -r * 2.8, r * .45, -r * 3.05); ctx.lineTo(r * .4, -r * 2.98); ctx.quadraticCurveTo(0, -r * 2.88, -r * .4, -r * 2.98); ctx.fill();
+  ctx.fillStyle = "#5A3420";
+  for (let i = 0; i <= 14; i++) { const a = Math.PI * (.12 + .76 * i / 14); ctx.beginPath(); ctx.arc(Math.cos(a) * r * .42, -r * 3.12 + Math.sin(a) * r * .75, r * .055, 0, 7); ctx.fill(); }
+  ctx.fillStyle = "rgba(255,200,150,.35)"; for (let i = 0; i <= 14; i += 2) { const a = Math.PI * (.12 + .76 * i / 14); ctx.fillRect(Math.cos(a) * r * .42 - .5, -r * 3.12 + Math.sin(a) * r * .75 - 1, 1, 1); }
+  ctx.fillStyle = "#4A2A18"; ctx.beginPath(); ctx.arc(0, -r * 2.33, r * .08, 0, 7); ctx.fill();   // guru bead
+  ctx.strokeStyle = "#B23A2A"; ctx.lineWidth = 1.5; for (let i = -2; i <= 2; i++) { ctx.beginPath(); ctx.moveTo(0, -r * 2.27); ctx.lineTo(i * r * .03, -r * 2.05); ctx.stroke(); }
+  if (seated) {
+    if (pose === "write") {   // open notebook on the lap, ink appearing line by line
+      ctx.fillStyle = "#6B4A30"; ctx.beginPath(); ctx.moveTo(-r * .62, -r * 1.86); ctx.lineTo(r * .62, -r * 1.86); ctx.lineTo(r * .68, -r * 1.5); ctx.lineTo(-r * .68, -r * 1.5); ctx.fill();
+      ctx.fillStyle = "#FBF6E8"; ctx.beginPath(); ctx.moveTo(-r * .58, -r * 1.9); ctx.lineTo(-r * .02, -r * 1.86); ctx.lineTo(-r * .02, -r * 1.54); ctx.lineTo(-r * .63, -r * 1.55); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(r * .02, -r * 1.86); ctx.lineTo(r * .58, -r * 1.9); ctx.lineTo(r * .63, -r * 1.55); ctx.lineTo(r * .02, -r * 1.54); ctx.fill();
+      ctx.strokeStyle = "#3A3A5A"; ctx.lineWidth = .8; const ink = mode ? mode.ink : 0;
+      for (let i = 0; i < 6; i++) { const k = clamp(ink * 6 - i, 0, 1); if (!k) break; const side = i < 3 ? -1 : 1, row = i % 3;
+        const x0 = side < 0 ? -r * .52 : r * .08, y = -r * (1.8 - row * .09); ctx.beginPath(); ctx.moveTo(x0, y);
+        for (let q = 1; q <= 8 * k; q++) ctx.lineTo(x0 + r * .055 * q, y + Math.sin(q * 2.3 + i) * .8); ctx.stroke(); }
+    }
+    drawArms();
+    if (pose === "study") {   // laptop on the lap, screen light spilling up
+      const gl = ctx.createRadialGradient(0, -r * 2.3, 2, 0, -r * 2.3, r * 1.6); gl.addColorStop(0, "rgba(140,200,255,.28)"); gl.addColorStop(1, "rgba(140,200,255,0)");
+      ctx.fillStyle = gl; ctx.beginPath(); ctx.arc(0, -r * 2.3, r * 1.6, 0, 7); ctx.fill();
+      ctx.fillStyle = "#9DA3AB"; ctx.beginPath(); ctx.roundRect(-r * .62, -r * 2.32, r * 1.24, r * .7, r * .06); ctx.fill();
+      ctx.fillStyle = "#B9BEC5"; ctx.beginPath(); ctx.roundRect(-r * .56, -r * 2.27, r * 1.12, r * .6, r * .05); ctx.fill();
+      ctx.fillStyle = "#F4F6F8"; ctx.beginPath(); ctx.arc(0, -r * 1.97, r * .07, 0, 7); ctx.fill();
+      ctx.fillStyle = "#7D838B"; ctx.fillRect(-r * .68, -r * 1.64, r * 1.36, r * .08);
+    }
+    if (pose === "write") { ctx.strokeStyle = "#222"; ctx.lineWidth = 1.6; const px = r * .3 + Math.sin(t * 7) * r * .08; ctx.beginPath(); ctx.moveTo(px, -r * 1.62); ctx.lineTo(px + r * .2, -r * 2.0); ctx.stroke(); }
+    if (pose === "chant") {   // palms together, gassho
+      ctx.fillStyle = SKIN; ctx.beginPath(); ctx.ellipse(0, -r * 2.02, r * .14, r * .3, 0, 0, 7); ctx.fill();
+      ctx.strokeStyle = SKIN_D; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(0, -r * 2.3); ctx.lineTo(0, -r * 1.75); ctx.stroke();
+      ctx.fillStyle = "#5A3420"; for (let i = 0; i < 7; i++) { ctx.beginPath(); ctx.arc(Math.sin(i * .9) * r * .16, -r * (1.72 - i * .02) + i * r * .03, r * .04, 0, 7); ctx.fill(); }
+    }
+  }
+}
+
+function drawMe(t) {
+  const m = mood(), r = pet.r, gy = ground();
+  const sitting = mode && mode.seated && mode.kind !== "gaze" && !S.asleep;
+  const closed = S.asleep || pet.blink > 0 || (sitting && mode.kind === "chant");
+  if (S.asleep) {
+    // lying on a mat with a pillow and blanket
+    const cx = clamp(pet.x, r * 3, W - r * 3);
+    ctx.fillStyle = "#7C4E6E"; ctx.beginPath(); ctx.roundRect(cx - r * 3, gy - r * .35, r * 6, r * .45, 6); ctx.fill();
+    ctx.fillStyle = "#FAF7F0"; ctx.beginPath(); ctx.ellipse(cx - r * 2.1, gy - r * .55, r * .9, r * .38, 0, 0, 7); ctx.fill();
+    ctx.save(); ctx.translate(cx - r * 1.6, gy - r * 1.05); ctx.rotate(-Math.PI / 2 + .15); drawHead(r * .95, m, t, true); ctx.restore();
+    ctx.fillStyle = "#23262E"; ctx.beginPath(); ctx.roundRect(cx - r * 1.1, gy - r * 1.35, r * 3.8, r * 1.1, [r * .5, r * .5, 4, 4]); ctx.fill();
+    ctx.fillStyle = "rgba(255,255,255,.25)"; for (let i = 0; i < 4; i++) ctx.fillRect(cx - r * .9 + i * r * .9, gy - r * 1.3, 3, r * 1);
+    pet.headX = cx - r * 1.6; pet.headY = gy - r * 1.05; pet.top = gy - r * 2;
+    return;
+  }
+  const breathe = Math.sin(t * (sitting ? 1.2 : 2.2)) * (reduced ? .005 : sitting ? .02 : .015);
+  const sq = pet.squish, base = gy - pet.y, headOff = sitting ? 3.97 : 4.82;
+  const sh = ctx.createRadialGradient(pet.x, gy + 4, 1, pet.x, gy + 4, r * 1.5); sh.addColorStop(0, "rgba(0,0,0,.22)"); sh.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = sh; ctx.beginPath(); ctx.ellipse(pet.x, gy + 4, r * (sitting ? 1.5 : 1.2) * (1 - pet.y / 220), 6, 0, 0, 7); ctx.fill();
+  if (sitting || m === "happy") {   // a soft, calm aura, brighter while chanting
+    const glowA = sitting && mode.kind === "chant" ? .3 : .18, cy = base - r * (headOff - .7);
+    const ag = ctx.createRadialGradient(pet.x, cy, r * .5, pet.x, cy, r * 3.6);
+    ag.addColorStop(0, `rgba(255,214,140,${glowA + .07 * Math.sin(t * 1.5)})`); ag.addColorStop(1, "rgba(255,214,140,0)");
+    ctx.fillStyle = ag; ctx.beginPath(); ctx.arc(pet.x, cy, r * 3.6, 0, 7); ctx.fill();
+  }
+  ctx.save(); ctx.translate(pet.x, base); ctx.scale(1 + sq * .15, 1 - sq * .15 + breathe);
+  ctx.save(); ctx.scale(.8, 1.18); drawBody(r, t, Math.abs(pet.vx) > 5, sitting ? mode.kind : "stand"); ctx.restore();
+  ctx.translate(0, -r * headOff); ctx.rotate(sitting && (mode.kind === "write" || mode.kind === "study") ? .08 : pet.look.x * .05); ctx.scale(.94, .94);
+  drawHead(r, m, t, closed);
+  ctx.restore();
+  pet.headX = pet.x; pet.headY = base - r * headOff; pet.top = pet.headY - r * 1.1;
+}
+
+function drawBubble(now) {
+  if (!bubble || now > bubble.until) { bubble = null; return; }
+  ctx.font = "600 14px Nunito, system-ui, sans-serif";
+  const maxW = Math.min(240, W - 40), words = bubble.text.split(" "), lines = [];
+  let line = "";
+  for (const w of words) { const test = line ? line + " " + w : w; if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; } else line = test; }
+  if (line) lines.push(line);
+  const lh = 19, bw = bubble.thinking ? 64 : Math.max(...lines.map(l => ctx.measureText(l).width)) + 24, bh = bubble.thinking ? 30 : lines.length * lh + 16;
+  const bx = clamp((pet.headX || pet.x) - bw / 2, 10, W - bw - 10), by = Math.max(8, (pet.top || H / 2) - bh - 16);
+  ctx.fillStyle = "rgba(255,255,255,.96)"; ctx.strokeStyle = "rgba(40,30,20,.15)"; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 14); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); const tx = clamp(pet.headX || pet.x, bx + 18, bx + bw - 18); ctx.moveTo(tx - 8, by + bh); ctx.lineTo(tx, by + bh + 10); ctx.lineTo(tx + 8, by + bh); ctx.fill();
+  ctx.fillStyle = "#2A2420";
+  if (bubble.thinking) { for (let i = 0; i < 3; i++) { ctx.globalAlpha = .3 + .7 * Math.abs(Math.sin(now / 300 + i)); ctx.beginPath(); ctx.arc(bx + bw / 2 - 12 + i * 12, by + bh / 2, 3.5, 0, 7); ctx.fill(); } ctx.globalAlpha = 1; }
+  else lines.forEach((l, i) => ctx.fillText(l, bx + 12, by + 22 + i * lh));
+}
+
+function drawParts(dt) {
+  parts = parts.filter(p => (p.t += dt) < p.life);
+  for (const p of parts) {
+    p.x += p.vx * dt; p.y += p.vy * dt; if (p.kind === "crumb") p.vy += 300 * dt;
+    ctx.globalAlpha = 1 - p.t / p.life;
+    if (p.kind === "heart") { ctx.fillStyle = "#E8506A"; const s = 6 * p.r; ctx.beginPath();
+      ctx.moveTo(p.x, p.y + s * .9); ctx.bezierCurveTo(p.x - s * 1.4, p.y - s * .2, p.x - s * .5, p.y - s * 1.2, p.x, p.y - s * .3);
+      ctx.bezierCurveTo(p.x + s * .5, p.y - s * 1.2, p.x + s * 1.4, p.y - s * .2, p.x, p.y + s * .9); ctx.fill(); }
+    else if (p.kind === "z") { ctx.fillStyle = "#FFFFFF"; ctx.font = `700 ${12 + p.t * 10}px "Baloo 2", system-ui`; ctx.fillText("z", p.x, p.y); }
+    else if (p.kind === "spark") { ctx.fillStyle = "#FFD45A"; ctx.fillRect(p.x, p.y, 3, 3); }
+    else if (p.kind === "word") { ctx.fillStyle = "#B8862E"; ctx.font = `italic 600 ${12}px "Baloo 2", system-ui`; ctx.textAlign = "center"; ctx.fillText(p.text, p.x, p.y); ctx.textAlign = "start"; }
+    else { ctx.fillStyle = "#C8742E"; ctx.fillRect(p.x, p.y, 3, 3); }
+  }
+  ctx.globalAlpha = 1;
+}
+
+
+/* ---------------- birthday (set in About me) ---------------- */
+function birthday() {
+  const m = /^(\d{1,2})-(\d{1,2})$/.exec((S.profile && S.profile.bday) || ""); if (!m) return { today: false, days: 999 };
+  const n = new Date(), y = n.getFullYear(); let b = new Date(y, +m[1] - 1, +m[2]);
+  const today = new Date(y, n.getMonth(), n.getDate());
+  if (b < today) b = new Date(y + 1, +m[1] - 1, +m[2]);
+  const days = Math.round((b - today) / 864e5);
+  return { today: days === 0, days };
+}
+
+/* ---------------- weather and night life ---------------- */
+function dayHash(d = new Date()) { const k = d.getFullYear() * 400 + d.getMonth() * 32 + d.getDate(); return ((k * 2654435761) >>> 0) % 1000; }
+function raining() {   // some evenings and nights it rains; at 4am the raingods are always at it
+  const h = hourNow(); if (h >= 3.5 && h < 5) return true;
+  return dayHash() % 3 === 0 && (h >= 17 || h < 7);
+}
+function winRect() { const ceil = H * .1, wy = ceil + 40; return { x: W * .06, y: wy, w: Math.min(W * .32, 150), h: Math.min(ground() - wy - 50, 150) }; }
+let fly = null, flash = 0;
+function updateNightLife(dt, now, sk) {
+  if (use3D) updateFly3D(dt, now, sk);
+  else if (sk.night && !fly && Math.random() < dt / 40) { const w = winRect(); fly = { x: w.x + w.w / 2, y: w.y + w.h / 2, tx: rand(40, W - 40), ty: rand(H * .25, ground() - 30), born: now, life: rand(60e3, 110e3), leaving: false }; }
+  if (fly && !use3D) {
+    if (now - fly.born > fly.life && !fly.leaving) { const w = winRect(); fly.leaving = true; fly.tx = w.x + w.w / 2; fly.ty = w.y + w.h / 2; }
+    const dx = fly.tx - fly.x, dy = fly.ty - fly.y, d = Math.hypot(dx, dy);
+    if (d < 8) { if (fly.leaving) fly = null; else { fly.tx = rand(40, W - 40); fly.ty = rand(H * .2, ground() - 20); } }
+    else { const v = fly.leaving ? 45 : 26; fly.x += dx / d * v * dt + Math.sin(now / 300) * .5; fly.y += dy / d * v * dt + Math.cos(now / 410) * .5; }
+  }
+  if (raining() && Math.random() < dt / 70) {
+    flash = 1; thunder();
+    if (!bubble && !S.asleep && !busy && Math.random() < .5) say(pick(["Isn't thunder just nature's symphony?", "The raingods are at it again.", "*flinches* …okay, that was a loud one."]), 4000);
+  }
+  flash = Math.max(0, flash - dt * 2.5);
+}
+function drawNightLife(now) {
+  if (fly) {
+    const a = .5 + .5 * Math.sin(now / 260), g = ctx.createRadialGradient(fly.x, fly.y, 0, fly.x, fly.y, 18);
+    g.addColorStop(0, `rgba(225,255,120,${.85 * a})`); g.addColorStop(1, "rgba(225,255,120,0)");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(fly.x, fly.y, 18, 0, 7); ctx.fill();
+    ctx.fillStyle = "#FFFDE0"; ctx.beginPath(); ctx.arc(fly.x, fly.y, 1.8, 0, 7); ctx.fill();
+  }
+  if (flash > 0) { ctx.fillStyle = `rgba(235,240,255,${flash * .55})`; ctx.fillRect(0, 0, W, H); }
+}
+
+/* ---------------- sound: generated live, off until tapped ---------------- */
+const snd = { on: false, ac: null, nodes: {} };
+try { snd.on = localStorage.getItem("mini-me-sound") === "on"; } catch (e) {}
+const ICON_ON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg>';
+const ICON_OFF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>';
+function noiseBuffer(ac, brown) {
+  const len = ac.sampleRate * 2, b = ac.createBuffer(1, len, ac.sampleRate), d = b.getChannelData(0); let last = 0;
+  for (let i = 0; i < len; i++) { const w = Math.random() * 2 - 1; if (brown) { last = (last + .02 * w) / 1.02; d[i] = last * 3.5; } else d[i] = w; }
+  return b;
+}
+function loopNoise(brown, type, freq, q) {
+  const ac = snd.ac, src = ac.createBufferSource(); src.buffer = noiseBuffer(ac, brown); src.loop = true;
+  const f = ac.createBiquadFilter(); f.type = type; f.frequency.value = freq; if (q) f.Q.value = q;
+  const g = ac.createGain(); g.gain.value = 0; src.connect(f).connect(g).connect(snd.master); src.start(); return g;
+}
+function audioStart() {
+  if (snd.ac) { snd.ac.resume?.(); return; }
+  const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+  try {
+    snd.ac = new AC(); snd.master = snd.ac.createGain(); snd.master.gain.value = .9; snd.master.connect(snd.ac.destination);
+    snd.nodes.fan = loopNoise(true, "lowpass", 380);
+    snd.nodes.rain = loopNoise(false, "bandpass", 1800, .6);
+    const lp = snd.ac.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 850;
+    const dg = snd.ac.createGain(); dg.gain.value = 0; lp.connect(dg).connect(snd.master);
+    for (const [f, v] of [[130.81, .5], [196.0, .32], [261.63, .28], [131.2, .4]]) {   // a tanpura-like drone in C
+      const o = snd.ac.createOscillator(); o.type = "sawtooth"; o.frequency.value = f; const og = snd.ac.createGain(); og.gain.value = v * .18; o.connect(og).connect(lp); o.start(); }
+    snd.nodes.drone = dg;
+  } catch (e) { snd.ac = null; }
+}
+function level(node, v, time = 1.5) { if (!snd.ac || !node) return; const g = node.gain, n = snd.ac.currentTime; g.cancelScheduledValues(n); g.setValueAtTime(g.value, n); g.linearRampToValueAtTime(v, n + time); }
+function audioTick() {
+  if (!snd.ac) return;
+  const on = snd.on && !document.hidden, chanting = !!(mode && mode.seated && mode.kind === "chant");
+  level(snd.nodes.fan, on ? .045 : 0); level(snd.nodes.rain, on && raining() ? .07 : 0); level(snd.nodes.drone, on && chanting ? .05 : 0, 3);
+}
+function bowl() {
+  if (!snd.ac || !snd.on) return; const ac = snd.ac, t0 = ac.currentTime;
+  for (const [f, v, d] of [[220, .25, 7], [221.6, .2, 7], [607, .12, 5], [1188, .06, 3]]) {
+    const o = ac.createOscillator(); o.type = "sine"; o.frequency.value = f; const g = ac.createGain();
+    g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(v * .5, t0 + .02); g.gain.exponentialRampToValueAtTime(.0001, t0 + d);
+    o.connect(g).connect(snd.master); o.start(t0); o.stop(t0 + d); }
+}
+function thunder() {
+  if (!snd.ac || !snd.on) return; const ac = snd.ac, src = ac.createBufferSource(); src.buffer = noiseBuffer(ac, true);
+  const f = ac.createBiquadFilter(); f.type = "lowpass"; f.frequency.value = 160; const g = ac.createGain(), t0 = ac.currentTime + rand(.6, 1.8);
+  g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.55, t0 + .15); g.gain.exponentialRampToValueAtTime(.001, t0 + 3.5);
+  src.connect(f).connect(g).connect(snd.master); src.start(t0); src.stop(t0 + 4);
+}
+function soundUI() { const b = $("soundBtn"); b.innerHTML = snd.on ? ICON_ON : ICON_OFF; b.setAttribute("aria-pressed", String(snd.on)); b.setAttribute("aria-label", snd.on ? "Turn sound off" : "Turn sound on"); }
+$("soundBtn").addEventListener("click", e => {
+  e.stopPropagation(); snd.on = !snd.on; if (snd.on) audioStart();
+  try { localStorage.setItem("mini-me-sound", snd.on ? "on" : "off"); } catch (err) {}
+  soundUI(); audioTick(); if (snd.on) bowl();
+});
+document.addEventListener("pointerdown", () => { if (snd.on && !snd.ac) audioStart(); }, { once: false });
+soundUI();
+
+/* ---------------- daimoku ---------------- */
+function addDaimoku(n) {
+  const today = new Date().toDateString(), dm = S.daimoku, pr = S.practice;
+  if (dm.day !== today) { dm.day = today; dm.today = 0; }
+  dm.today += n; dm.total += n;
+  if (dm.today >= pr.goal && pr.lastGoalDay !== today) {   // today's goal reached
+    pr.streak = pr.lastGoalDay === yesterdayKey() ? pr.streak + 1 : 1; pr.best = Math.max(pr.best, pr.streak); pr.lastGoalDay = today;
+    say(`${pr.goal}! Aaj ka ichinen poora. ${pr.streak > 1 ? pr.streak + " din ka streak, big me." : "Kal phir milte hain."}`, 6000);
+    burst("spark", pet.headX || pet.x, (pet.headY || 200) - 30, 14); buzz(30); bowl(); render(); save();
+  }
+}
+const yesterdayKey = () => new Date(Date.now() - 864e5).toDateString();
+const streakNow = () => { const pr = S.practice; return pr.lastGoalDay === new Date().toDateString() || pr.lastGoalDay === yesterdayKey() ? pr.streak : 0; };
+let wakeLock = null;
+async function keepAwake(on) {
+  try { if (on && navigator.wakeLock && !wakeLock) wakeLock = await navigator.wakeLock.request("screen");
+        else if (!on && wakeLock) { await wakeLock.release(); wakeLock = null; } } catch (e) { wakeLock = null; }
+}
+
+/* ---------------- chant and write ---------------- */
+const CHANT_THOUGHTS = ["Har din ek naya ichinen.", "Determination. Effort. Forbearance. Bas.", "Mind is just habit. Wapas aao, chant pe.",
+  "The revolution within. Wahi sab kuch hai.", "Winter always turns to spring.", "Stillness within, action outwards.",
+  "Who is the one chanting? *smiles*", "Moksha aur seva. Bas yehi.", "I will fight and be victorious, no matter what.",
+  "When we firmly decide 'I can do it!', the walls fall. Bas.", "Ek candle, countless flames.", "Kosen-rufu bhi, apna bhi. Dono."];
+const THEMES = ["late nights and the yellow ember of a night lamp", "rain at 4am", "a firefly carrying a tiny sun", "being the witness behind the thoughts",
+  "impermanence", "the mountains", "effort as the only thing in our hands", "loving yourself", "a shimmering strand of light in the dark",
+  "stillness", "chanting at dawn", "the self that never changes", "becoming one's highest possibility", "the night being our own company",
+  "solitude", "Shiva, stillness and the burning away of the old", "the Earth and the people trying to heal it", "making things with your hands",
+  "'sab badlega', everything will change", "a candle sharing its flame", "an ichinen that refuses to give up", "a spoken-word piece for someone who feels behind in life"];
+const OWN_LINES = ["When nothing else is there,\nthe night is assuredly ours,\nas is our own company.",
+  "I have been both,\nthe treasure, and the passerby.", "Within you stirs a Lion,\na conqueror, a passionate leader, a Buddha.",
+  "Now there's a firefly in my room,\ncarrying a tiny sun in its bosom.", "I know not where the strand will lead.\nBut stop I will not.",
+  "The attainments of life are a mirage,\na parting wave,\na race without an end.",
+  ];
+const STUDY_LINES = ["RAG, evals, agents… ek ek karke.", "Build early. Don't wait to master everything.", "Context engineering. Fancy naam, simple baat: think clearly.",
+  "Next build… soon.", "Checklist, item by item. Bas.", "80/20, yaar. What actually moves the needle?", "Debugging is also sadhana. Patience."];
+
+function startMode(kind, auto = false) {
+  const r = pet.r, now = performance.now(), w = winRect();
+  const spot = kind === "gaze" ? (use3D ? W * .2 : clamp(w.x + w.w * .55, r * 1.5, W - r * 1.5)) : clamp(W * .5, r * 2, W - r * 2);
+  if (mode && mode.kind === "chant" && kind !== "chant") { bowl(); keepAwake(false); }
+  mode = { kind, auto, spot, seated: false, started: now, until: auto ? now + rand(60e3, 120e3) : now + 10 * 60e3,
+    next: now + (kind === "chant" ? 2500 : 8000), nextWord: now, ink: 0, acc: 0, greeted: false };
+  $("aChant").classList.toggle("on", kind === "chant"); $("aWrite").classList.toggle("on", kind === "write");
+  $("chantLbl").textContent = kind === "chant" ? "Stop" : "Chant"; $("writeLbl").textContent = kind === "write" ? "Stop" : "Write";
+  if (kind === "chant") { bowl(); keepAwake(true); }
+  if (kind === "gaze") return;
+  if (auto) say(kind === "chant" ? "Subah ka daimoku. Join me?" : kind === "study" ? "Thoda AI padh leta hoon. Checklist calling." : "Raat ho gayi. Kuch likhne ka mann hai…", 3500);
+  else say(kind === "chant" ? "Chalo. Let's build the ichinen." : "Kuch likhte hain. Give me a moment…", 2800);
+}
+function endMode() {
+  if (mode && mode.kind === "chant") { bowl(); keepAwake(false); }
+  mode = null;
+  $("aChant").classList.remove("on"); $("aWrite").classList.remove("on");
+  $("chantLbl").textContent = "Chant"; $("writeLbl").textContent = "Write";
+}
+
+async function composePiece() {
+  const theme = pick(THEMES);
+  let piece = "";
+  if (sample && aiOn) {
+    try {
+      const brief = situation() + `\nWrite a very short piece in your own poetic voice about ${theme}. 2 to 4 short lines, under 200 characters in total. ` +
+        `English with a touch of Hindi only if it feels natural. No title, no quotation marks, no emoji. Just the lines.`;
+      const r = await sample(brief, { modelTier: "quick", cache: false });
+      piece = (r.text || "").trim().replace(/^["']|["']$/g, "").split("\n").filter(Boolean).slice(0, 4).join("\n").slice(0, 240);
+    } catch (e) { if (e && e.code === "not_granted") aiOn = false; }
+  }
+  if (!piece) piece = pick(OWN_LINES);
+  return piece;
+}
+
+function updateMode(dt, now) {
+  const r = pet.r;
+  mode.seated = Math.abs(pet.x - mode.spot) < 6;
+  if (!mode.seated) return;
+  if (mode.kind === "chant") {
+    S.peace = clamp(S.peace + dt * 1.2); S.energy = clamp(S.energy - dt * .05);
+    mode.acc += dt; mode.chantSec = (mode.chantSec || 0) + dt; while (mode.acc >= 1.7) { mode.acc -= 1.7; addDaimoku(1); }
+    if (now > mode.nextWord) { mode.nextWord = now + 2600;
+      parts.push({ kind: "word", text: "Nam-myoho-renge-kyo", x: (pet.headX || pet.x) + rand(-20, 20), y: pet.headY - r * 1.4, vx: rand(-6, 6), vy: -16, life: 3.2, t: 0, r: 1 }); }
+    if (now > mode.next && !busy) { mode.next = now + rand(14000, 20000); say(pick(CHANT_THOUGHTS), 4500); S.bond = clamp(S.bond + .3); render(); save(); }
+    if (now > mode.until) { endMode(); say("*bows* Nam-myoho-renge-kyo.", 3000); save(); }
+  } else if (mode.kind === "gaze") {
+    pet.face = -1;
+    if (!mode.greeted && !busy) { mode.greeted = true; const h = hourNow();
+      say(raining() ? pick(["Baarish. The raingods are at it again.", "Rain on the glass. I could watch this forever."])
+        : h >= 20 || h < 5 ? pick(["Taare dekh raha hoon. Or are they watching me?", "The night is assuredly ours, yaar."])
+        : pick(["Pahaad yaad aa rahe hain. One day.", "Khidki se duniya. Sab transient. Sab sundar.", "Somewhere out there, a tree I'll plant one day."]), 5000); }
+    if (now > mode.until) endMode();
+  } else if (mode.kind === "study") {
+    S.inspire = clamp(S.inspire + dt * .25); S.energy = clamp(S.energy - dt * .04);
+    if (now > mode.next && !busy) { mode.next = now + rand(15000, 22000); say(pick(STUDY_LINES), 4500); }
+    if (now > mode.until) { endMode(); say("Laptop band. Enough for now.", 3000); save(); }
+  } else {
+    mode.ink = Math.min(1, mode.ink + dt / 7);
+    if (now > mode.next && !mode.composing && !busy) {
+      mode.composing = true; think();
+      composePiece().then(piece => {
+        if (!mode || mode.kind !== "write") { bubble = null; return; }
+        mode.composing = false; mode.next = performance.now() + 40000; mode.ink = 0;
+        S.poems.push({ text: piece, t: Date.now() }); S.poems = S.poems.slice(-40);
+        S.inspire = clamp(S.inspire + 25); S.energy = clamp(S.energy - 3); S.bond = clamp(S.bond + 1);
+        say(piece.replace(/\n/g, " / "), 11000); burst("spark", pet.headX || pet.x, pet.headY - r, 8); render(); save();
+      });
+    }
+    if (now > mode.until && !mode.composing) { endMode(); say("Bas, enough ink for today.", 3000); }
+  }
+}
+
+/* ---------------- behaviour ---------------- */
+function update(dt, now) {
+  const gy = ground();
+  simulate(dt * 1000);
+  pet.r = clamp(Math.min(W, H) * .066, 16, 27);
+  if (S.asleep && Math.random() < dt * 1.2) parts.push({ kind: "z", x: (pet.headX || pet.x) + 10, y: (pet.headY || gy) - 20, vx: 12, vy: -22, life: 2.2, t: 0, r: 1 });
+  if (S.asleep && S.energy >= 100 && !bedtime()) { doWake(); say("*stretches* Utth gaya. Naya din."); }
+  if (!S.asleep && bedtime() && S.energy < 45 && !mode && Math.random() < dt / 30) { goSleep(); say("Bohot late ho gaya. Shubh ratri."); }
+
+  pet.nextBlink -= dt; if (pet.nextBlink <= 0) { pet.blink = .14; pet.nextBlink = rand(2, 5); }
+  pet.blink = Math.max(0, pet.blink - dt); pet.wave = Math.max(0, pet.wave - dt);
+  pet.squish *= Math.pow(.02, dt); pet.hopCool -= dt;
+
+  if (mode && !S.asleep) updateMode(dt, now);
+
+  let goal = pet.x;
+  if (!S.asleep) {
+    if (mode) goal = mode.spot;
+    else { if (now > pet.wanderAt) { pet.wanderTo = rand(40, W - 40); pet.wanderAt = now + rand(6000, 12000); } goal = pet.wanderTo ?? pet.x; }
+  }
+  const speed = (mode ? 70 : 34) * (mood() === "tired" ? .6 : 1);
+  const dx = goal - pet.x;
+  pet.vx = Math.abs(dx) > 4 && !S.asleep && !(mode && mode.seated) ? Math.sign(dx) * speed : 0;
+  pet.x = clamp(pet.x + pet.vx * dt, pet.r * 1.2, W - pet.r * 1.2);
+  if (pet.vx) pet.face = Math.sign(pet.vx);
+  if (mode && mode.seated && mode.kind === "gaze") pet.face = -1;
+  if (pet.y > 0 || pet.vy) { pet.vy -= 900 * dt; pet.y += pet.vy * dt; if (pet.y <= 0) { pet.y = 0; pet.vy = 0; pet.squish = .4; } }
+
+  let lx = 0, ly = 0;
+  if (mode && mode.seated) { lx = mode.kind === "gaze" ? -1 : 0; ly = mode.kind === "write" || mode.kind === "study" ? 1 : mode.kind === "gaze" ? -.5 : 0; }
+  else if (fly && !pointer) { lx = clamp((fly.x - (pet.headX || pet.x)) / 80, -1, 1); ly = clamp((fly.y - (pet.headY || gy - 80)) / 120, -1, 1); }
+  else if (pointer) { lx = clamp((pointer.x - (pet.headX || pet.x)) / 80, -1, 1); ly = clamp((pointer.y - (pet.headY || gy - 80)) / 120, -1, 1); }
+  else { lx = Math.sin(now / 2500) * .6; ly = Math.sin(now / 3700) * .3; }
+  pet.look.x += (lx - pet.look.x) * Math.min(1, dt * 6); pet.look.y += (ly - pet.look.y) * Math.min(1, dt * 6);
+}
+function hop(v) { pet.vy = v; pet.y = .1; pet.hopCool = .8; pet.squish = -.3; }
+
+function frame(now) {
+  const dt = Math.min(.05, (now - (frame.last || now)) / 1000); frame.last = now;
+  const t = now / 1000, sk = sky();
+  update(dt, now);
+  updateNightLife(dt, now, sk);
+  drawRoom(t, sk, dt);
+  if (birthday().today) drawFestive(t);
+  drawMe(t);
+  drawParts(dt);
+  if (S.asleep || sk.night) { ctx.fillStyle = S.asleep ? "rgba(10,14,34,.45)" : "rgba(20,24,50,.22)"; ctx.fillRect(0, 0, W, H); }
+  else if (raining()) { ctx.fillStyle = "rgba(40,50,70,.12)"; ctx.fillRect(0, 0, W, H); }
+  drawNightLife(now);
+  if (mode && mode.seated && mode.kind === "chant") drawChantTimer();
+  drawBubble(now);
+  if (now - (frame.ui || 0) > 1000) { frame.ui = now; render(); audioTick(); }
+  if (!frame.musing || now > frame.musing) maybeMuse(now);
+  requestAnimationFrame(frame);
+}
+
+/* He thinks out loud now and then, in his own voice. */
+function maybeMuse(now) {
+  if (!frame.musing) { frame.musing = now + rand(20000, 35000); return; }
+  frame.musing = now + rand(30000, 65000);
+  if (bubble || S.asleep || busy || mode) return;
+  if ((hourNow() >= 20 || hourNow() < 2) && S.askDay !== dayKey() && !S.journal.some(j => !j.kind && j.day === dayKey())) {
+    S.askDay = dayKey(); S.awaitJournal = dayKey(); say("Aaj ka din kaisa tha, big me? Ek line mein batao, main likh lunga.", 10000); save(); return; }
+  const m = mood(), h = hourNow(), roll = Math.random();
+  if (h >= 5 && h < 9 && S.peace < 85 && roll < .35) { startMode("chant", true); return; }
+  if ((h >= 20 || h < 2) && S.inspire < 85 && roll < .3) { startMode("write", true); return; }
+  if (h >= 10 && h < 18 && S.energy > 30 && roll < .3) { startMode("study", true); return; }
+  if (roll < .2) { startMode("gaze", true); return; }
+  const lines = {
+    tired: ["*yawns* Body ka bhi khayal rakhna hai, yaar.", "Neend aa rahi hai. Rest is sadhana too?"],
+    restless: ["Mind bohot chal raha hai. Thoda chant karein?", "Restless. Bas, wapas centre pe aana hai."],
+    uninspired: ["Kuch likhna chahiye. The ink's been dry too long.", "No words today? Tap Write, let's find some."],
+    happy: ["Stillness within, action outwards. Bas.", "Everything is transient. Isn't that kind of beautiful?",
+      "Simple baat yehi hai ki effort hi apne haath mei hai.", "The revolution in the world begins with the revolution within.",
+      S.memories.length ? `Thinking about how ${pick(S.memories).text}. Hmm.` : "Tell me something about us."],
+    okay: ["Thik hai. Jo ho gaya woh ho gaya.", "Ek cheez aur… nah, bhool gaya. *smiles*", "Who is watching these thoughts? Hmm.",
+      "Toh phir kya darna aur kya ghabrana.", "Life is simply happening. And I'm just watching."],
+  }[m] || [];
+  if (h >= 21 || h < 4) lines.push("There's something soothing about late nights. And the yellow ember of night lamps.", "The night is assuredly ours, yaar.");
+  if (h >= 4 && h < 7) lines.push("4am vibes. The raingods better deliver an epiphany.");
+  const bd = birthday();
+  if (bd.today) lines.push("Aaj hamara birthday hai! Kuch accha likhein?", "Ek saal aur. Ek ichinen aur.");
+  else if (bd.days <= 14) lines.push(`${bd.days} din mein hamara birthday hai. Kya ichinen hoga is saal ka?`);
+  if (lines.length) say(pick(lines), 5000);
+}
+
+/* ---------------- input ---------------- */
+function pos(e) { const r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+function onHead(p) { return Math.hypot(p.x - pet.headX, p.y - pet.headY) < (usePhoto ? pet.hr * 1.05 : use3D ? pet.hr || 20 : pet.r * 1.5); }
+function onBody(p) {
+  if (usePhoto) return Math.abs(p.x - pet.headX) < pet.hr * 1.9 && p.y > pet.top;
+  if (use3D) { const hr = pet.hr || 20;
+    if (S.asleep) return onHead(p) || Math.hypot(p.x - (pet.bodyX || 0), p.y - (pet.bodyY || 0)) < hr * 3;
+    return Math.abs(p.x - pet.headX) < hr * 1.7 && p.y > pet.top && p.y < (pet.feetY || H); }
+  return S.asleep ? onHead(p) || (Math.abs(p.x - pet.x) < pet.r * 3 && Math.abs(p.y - ground() + pet.r) < pet.r * 1.5)
+  : Math.abs(p.x - pet.x) < pet.r * 1.1 && p.y > pet.top && p.y < ground() - pet.y + 4; }
+cv.addEventListener("pointerdown", e => { cv.setPointerCapture(e.pointerId); pointer = pos(e); downPos = pointer; downAt = performance.now(); strokeLen = 0;
+  orbiting = use3D && !onHead(pointer) && !onBody(pointer) && !(fly && Math.hypot(pointer.x - fly.x, pointer.y - fly.y) < 34); az0 = camAz; el0 = camEl; });
+cv.addEventListener("pointermove", e => {
+  const p = pos(e);
+  if (orbiting && downPos) { camAz = clamp(az0 - (p.x - downPos.x) * .006, -.55, .55); camEl = clamp(el0 + (p.y - downPos.y) * .003, -.02, .32); if (Math.hypot(p.x - downPos.x, p.y - downPos.y) > 12) hideHint(); }
+  else if (downPos && pointer && onHead(p)) { strokeLen += Math.hypot(p.x - pointer.x, p.y - pointer.y); if (strokeLen > 60) { strokeLen = 0; patting(p); } }
+  pointer = p;
+});
+cv.addEventListener("pointerup", e => {
+  const p = pos(e), quick = performance.now() - downAt < 300 && downPos && Math.hypot(p.x - downPos.x, p.y - downPos.y) < 12;
+  if (quick) tap(p);
+  downPos = null; orbiting = false; setTimeout(() => { if (!downPos) pointer = null; }, 1200);
+});
+cv.addEventListener("pointercancel", () => { downPos = null; pointer = null; orbiting = false; });
+cv.addEventListener("dblclick", () => { camAz = 0; camEl = .1; });
+
+function patting(p) {
+  lastPet = performance.now(); burst("heart", p.x, p.y - 10, 2); buzz(8); hideHint();
+  if (S.asleep) { if (Math.random() < .3) say("*smiles in sleep*", 2000); return; }
+  S.peace = clamp(S.peace + 2); S.bond = clamp(S.bond + .6);
+  if (Math.random() < .12) say(pick(["Careful, don't mess up the hair.", "Okay, okay, that's nice.", "*leans in*", "Bro. Thanks."]), 2200);
+  render(); save();
+}
+function tap(p) {
+  if (fly && Math.hypot(p.x - fly.x, p.y - fly.y) < 34) {
+    hideHint(); if (!S.asleep) say("Now there's a firefly in my room, carrying a tiny sun in its bosom.", 6500);
+    S.inspire = clamp(S.inspire + 8); const w = winRect(); fly.leaving = true; fly.tx = w.x + w.w / 2; fly.ty = w.y + w.h / 2; save(); return;
+  }
+  if (onBody(p)) {
+    if (mode && mode.kind === "gaze") endMode();
+    hideHint();
+    if (S.asleep) { S.pokes = (S.pokes || 0) + 1; if (S.pokes > 2) { doWake(); S.peace = clamp(S.peace - 5); say("Arre… so raha tha yaar."); } else say("*grumbles*", 1500); render(); save(); return; }
+    if (mode && mode.seated) { say(mode.kind === "chant" ? "*one eye opens* Shh… chanting." : mode.kind === "study" ? "Padh raha hoon, yaar. Agents ka chapter." : "Ek second, yaar. Likh raha hoon.", 2000); return; }
+    S.pokes = (S.pokes || 0) + 1; hop(220); pet.wave = 1.2; buzz(12);
+    if (S.pokes > 6) { say(pick(["Bas, yaar. Enough poking.", "Forbearance, Joe. Forbearance."]), 2500); S.peace = clamp(S.peace - 2); S.pokes = 3; }
+    else if (Math.random() < .5) say(pick(["Namaste!", "Haan?", "*smiles*", "*waves*"]), 1500);
+    clearTimeout(tap.t); tap.t = setTimeout(() => { S.pokes = 0; }, 5000);
+    save(); return;
+  }
+}
+function hideHint() { $("hint").style.opacity = 0; }
+
+$("aChant").onclick = () => {
+  if (S.asleep) { say("zzz… (asleep)", 2000); return; }
+  if (mode && mode.kind === "chant") { endMode(); say("*bows* Nam-myoho-renge-kyo.", 2500); save(); return; }
+  startMode("chant");
+};
+$("aWrite").onclick = () => {
+  if (S.asleep) { say("zzz… (asleep)", 2000); return; }
+  if (mode && mode.kind === "write") { endMode(); say("Notebook band. Baaki kal.", 2500); save(); return; }
+  if (S.energy < 10) { say("Thaka hua hoon, yaar. Later."); return; }
+  startMode("write");
+};
+function doWake() { S.asleep = false; S.energy = Math.max(S.energy, 45); S.peace = Math.max(S.peace, 30); S.pokes = 0; render(); save(); }
+function goSleep() { S.asleep = true; endMode(); render(); save(); }
+$("aSleep").onclick = () => {
+  if (S.asleep) { doWake(); say("*yawns* Utth gaya.", 2500); return; }
+  if (S.energy > 85 && !bedtime()) { say("Abhi neend nahi aa rahi, yaar.", 2500); return; }
+  goSleep(); say("Shubh ratri. Fan on, lights off.", 2500);
+};
+$("talkForm").addEventListener("submit", e => {
+  e.preventDefault(); const v = $("talkIn").value.trim(); if (!v || busy) return;
+  $("talkIn").value = ""; talk(v);
+});
+
+/* About me sheet */
+function fillMemories() {
+  const ul = $("memList"); ul.textContent = "";
+  if (!S.memories.length) { const li = document.createElement("li"); li.textContent = "Nothing yet. Tell it things while chatting, or add one below."; ul.append(li); return; }
+  S.memories.forEach((m, i) => {
+    const li = document.createElement("li"), sp = document.createElement("span"), b = document.createElement("button");
+    sp.textContent = m.text; b.textContent = "×"; b.setAttribute("aria-label", "Forget: " + m.text);
+    b.onclick = () => { S.memories.splice(i, 1); fillMemories(); save(); };
+    li.append(sp, b); ul.append(li);
+  });
+}
+function openMe() {
+  const p = P();
+  $("fName").value = S.name; $("fBday").value = p.bday || ""; $("fFood").value = p.food; $("fDrink").value = p.drink; $("fHobby").value = p.hobby;
+  $("fBed").value = p.bed; $("fWake").value = p.wake; $("fVibe").value = p.vibe; $("fMem").value = "";
+  fillMemories();
+  const log = $("log"); log.textContent = "";
+  if (!S.chat.length) { const q = document.createElement("p"); q.className = "me"; q.textContent = "No chats yet."; log.append(q); }
+  for (const c of S.chat) { const q = document.createElement("p"); q.className = c.who === "me" ? "me" : "";
+    q.textContent = (c.who === "me" ? "You" : S.name) + ": " + c.text; log.append(q); }
+  const dm = S.daimoku, todayD = dm.day === new Date().toDateString() ? dm.today : 0;
+  $("daimokuNote").textContent = `Today ${todayD.toLocaleString()} · All time ${dm.total.toLocaleString()} · ` +
+    `${(dm.total / 10000).toFixed(dm.total < 1000 ? 3 : dm.total < 10000 ? 2 : 1)}% of the way to a million. Counted while you chant together (about one every 1.7 seconds).`;
+  $("fGoal").value = S.practice.goal;
+  $("streakNote").textContent = `Streak ${streakNow()} · best ${S.practice.best}`;
+  const jl = $("journal"); jl.textContent = "";
+  if (!S.journal.length) { const q = document.createElement("p"); q.className = "me"; q.textContent = "After 8pm Joe asks how your day went. Your answers collect here."; jl.append(q); }
+  for (const j of S.journal.slice().reverse()) { const q = document.createElement("p"); q.style.whiteSpace = "pre-line";
+    q.textContent = (j.kind === "reflection" ? "Sunday reflection · " : "") + j.day.slice(0, 10) + ": " + j.text; if (j.kind) q.className = "me"; jl.append(q); }
+  const pl = $("poems"); pl.textContent = "";
+  if (!S.poems.length) { const q = document.createElement("p"); q.className = "me"; q.textContent = "Nothing yet. Tap Write and he'll start filling it."; pl.append(q); }
+  for (const pc of S.poems.slice().reverse()) { const q = document.createElement("p"); q.style.whiteSpace = "pre-line"; q.textContent = pc.text; pl.append(q); }
+  $("meSheet").hidden = false;
+}
+$("nameBtn").onclick = openMe; $("aMe").onclick = openMe;
+$("meCancel").onclick = () => { $("meSheet").hidden = true; };
+$("memAdd").onclick = () => { const v = $("fMem").value.trim(); if (v) { remember(v.slice(0, 120)); $("fMem").value = ""; fillMemories(); save(); } };
+$("fMem").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); $("memAdd").click(); } });
+$("meSave").onclick = () => {
+  const p = P(), hr = v => { const n = parseInt(v, 10); return isNaN(n) ? null : clamp(n, 0, 23); };
+  S.name = $("fName").value.trim().slice(0, 20) || "Mini Me";
+  p.bday = /^\d{1,2}-\d{1,2}$/.test($("fBday").value.trim()) ? $("fBday").value.trim() : ""; p.food = $("fFood").value.trim(); p.drink = $("fDrink").value.trim(); p.hobby = $("fHobby").value.trim();
+  p.bed = hr($("fBed").value) ?? p.bed; p.wake = hr($("fWake").value) ?? p.wake; p.vibe = $("fVibe").value.trim();
+  const g = parseInt($("fGoal").value, 10); if (g > 0) S.practice.goal = Math.min(100000, g);
+  $("meSheet").hidden = true; render(); save();
+  say(p.vibe ? "Thik hai. Ab main aur bhi tum jaisa." : "Saved. Aur batana kabhi.", 3500);
+};
+$("meSheet").addEventListener("click", e => { if (e.target.id === "meSheet") $("meSheet").hidden = true; });
+
+
+/* ---------------- birthday room: marigolds, rangoli, diyas, cake ---------------- */
+function drawFestive(t) {
+  const ceil = H * .1, gy = ground();
+  const flower = (x, y, r, c) => { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); ctx.fillStyle = "rgba(120,50,0,.35)"; ctx.beginPath(); ctx.arc(x, y, r * .35, 0, 7); ctx.fill(); };
+  // marigold swags across the top of the wall
+  const swags = 3, sw = (W - 20) / swags;
+  for (let k = 0; k < swags; k++) {
+    const x0 = 10 + k * sw;
+    for (let i = 0; i <= 18; i++) { const u = i / 18, x = x0 + u * sw, y = ceil + 14 + Math.sin(Math.PI * u) * 22 + Math.sin(t * 1.2 + k) * 1.2;
+      if (i % 3 === 1) { ctx.fillStyle = "#3F7D2E"; ctx.beginPath(); ctx.ellipse(x, y + 4, 5, 2.4, .5, 0, 7); ctx.fill(); }
+      flower(x, y, 5, i % 2 ? "#F59E0B" : "#FACC15"); }
+    for (let j = 0; j < 7; j++) flower(x0, ceil + 14 + j * 9, 4.5, j % 2 ? "#F59E0B" : "#FACC15");
+  }
+  // rangoli on the floor, left of the rug
+  ctx.save(); ctx.translate(W * .2, gy + (H - gy) * .5); ctx.scale(1, .36);
+  const R = Math.min(W * .13, 46), cols = ["#E11D48", "#F59E0B", "#FDE68A", "#2563EB", "#16A34A"];
+  for (let ring = 4; ring >= 0; ring--) { const rr = R * (ring + 1) / 5;
+    for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6 + ring * .26; ctx.fillStyle = cols[ring];
+      ctx.beginPath(); ctx.ellipse(Math.cos(a) * rr * .72, Math.sin(a) * rr * .72, rr * .34, rr * .16, a, 0, 7); ctx.fill(); } }
+  ctx.fillStyle = "#FFF7E0"; ctx.beginPath(); ctx.arc(0, 0, R * .16, 0, 7); ctx.fill();
+  ctx.restore();
+  // a row of diyas along the front of the floor
+  for (let i = 0; i < 5; i++) { const x = W * (.12 + i * .19), y = H - 14, fl = 1 + Math.sin(t * 11 + i * 2) * .14;
+    const g = ctx.createRadialGradient(x, y - 8, 1, x, y - 8, 26); g.addColorStop(0, "rgba(255,190,90,.45)"); g.addColorStop(1, "rgba(255,190,90,0)");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y - 8, 26, 0, 7); ctx.fill();
+    ctx.fillStyle = "#B4532A"; ctx.beginPath(); ctx.ellipse(x, y, 9, 4, 0, 0, Math.PI); ctx.fill(); ctx.fillStyle = "#D97745"; ctx.beginPath(); ctx.ellipse(x, y, 9, 2, 0, 0, 7); ctx.fill();
+    ctx.fillStyle = "#FFB43A"; ctx.beginPath(); ctx.moveTo(x - 2.5, y - 1); ctx.quadraticCurveTo(x - 2.5, y - 7 * fl, x, y - 12 * fl); ctx.quadraticCurveTo(x + 2.5, y - 7 * fl, x + 2.5, y - 1); ctx.fill(); }
+  // a little cake with a candle
+  const cx = W * .8, cy = gy + 10;
+  ctx.fillStyle = "#F3E5D0"; ctx.fillRect(cx - 16, cy - 16, 32, 16); ctx.fillStyle = "#8B4A2B"; ctx.fillRect(cx - 16, cy - 9, 32, 3);
+  ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.ellipse(cx, cy - 16, 16, 4, 0, 0, 7); ctx.fill(); ctx.fillStyle = "#E7DCCB"; ctx.beginPath(); ctx.ellipse(cx, cy, 16, 4, 0, 0, Math.PI); ctx.fill();
+  ctx.fillStyle = "#60A5FA"; ctx.fillRect(cx - 1.5, cy - 28, 3, 12);
+  const fc = 1 + Math.sin(t * 13) * .15; ctx.fillStyle = "#FFB43A"; ctx.beginPath(); ctx.ellipse(cx, cy - 32, 2.4, 4.5 * fc, 0, 0, 7); ctx.fill();
+  if (Math.random() < .05) parts.push({ kind: "spark", x: rand(20, W - 20), y: ceil + 10, vx: rand(-10, 10), vy: rand(20, 50), life: 3, t: 0, r: 1 });
+}
+function drawChantTimer() {
+  const s = Math.floor(mode.chantSec || 0), dm = S.daimoku, today = dm.day === new Date().toDateString() ? dm.today : 0;
+  const txt = `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}  ·  ${today} / ${S.practice.goal}`;
+  ctx.font = "700 13px Nunito, system-ui, sans-serif"; const w = ctx.measureText(txt).width + 22, x = 10, y = H - 64;
+  ctx.fillStyle = "rgba(20,14,8,.55)"; ctx.beginPath(); ctx.roundRect(x, y, w, 26, 13); ctx.fill();
+  const k = clamp(today / S.practice.goal, 0, 1); ctx.fillStyle = "rgba(255,200,110,.85)"; ctx.beginPath(); ctx.roundRect(x, y + 22, Math.max(6, w * k), 4, 2); ctx.fill();
+  ctx.fillStyle = "#FFF4E0"; ctx.fillText(txt, x + 11, y + 17);
+}
+
+/* ---------------- notes from Joe: birthday piece, Sunday reflection ---------------- */
+const dayKey = () => new Date(Date.now() - 4 * HOUR).toDateString();     // late nights count as the same day
+const weekKey = () => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - d.getDay()); return d.toDateString(); };
+const BDAY_PIECE = "Another trip around the sun, big me.\nEvery candle on this cake\nis a tiny sun you carried this far.\nThe night was always ours;\ntoday, so is the light.\nRise now. Sab badlega.";
+function noteDue() {
+  const y = new Date().getFullYear();
+  if (birthday().today && !(S.bdayNote && S.bdayNote.year === y)) return "bday";
+  const h = hourNow(), week = S.journal.filter(j => !j.kind && Date.now() - j.t < 7 * 864e5);
+  if (new Date().getDay() === 0 && h >= 17 && week.length >= 2 && S.reflectWeek !== weekKey()) return "reflect";
+  return "";
+}
+function updateNoteCard() {
+  const due = noteDue(), b = $("noteBtn");
+  b.hidden = !due; if (due) $("noteTxt").textContent = due === "bday" ? "Joe wrote you something" : "Sunday reflection with Joe";
+}
+let letterText = "";
+function showLetter(title, text) {
+  $("letterTitle").textContent = title; $("letterText").textContent = text; letterText = text;
+  $("letterVoice").hidden = !tts; $("letterSheet").hidden = false;
+}
+$("letterClose").onclick = () => { $("letterSheet").hidden = true; if (tts && tts.active && tts.active()) tts.stop().catch(() => {}); };
+$("letterSheet").addEventListener("click", e => { if (e.target.id === "letterSheet") $("letterClose").onclick(); });
+$("letterVoice").onclick = () => speakJoe(letterText, true);
+$("noteBtn").onclick = async () => {
+  const due = noteDue(); if (!due) return;
+  if (due === "bday") {
+    let text = "";
+    showLetter("For you, on your birthday", "Joe is writing…");
+    if (sample && aiOn) {
+      try { const r = await sample(situation() + "\nToday is his birthday. Write him a short birthday piece in your own poetic voice: 4 to 7 short lines, warm, a little cosmic, a touch of Hinglish if natural, ending with something to carry into the new year. No title, no emoji, no quotation marks.", { modelTier: "default", cache: false });
+            text = (r.text || "").trim(); } catch (e) { if (e && e.code === "not_granted") { aiOn = false; brain("off"); } }
+    }
+    if (!text) text = BDAY_PIECE;
+    S.bdayNote = { year: new Date().getFullYear(), text }; S.poems.push({ text, t: Date.now() }); S.bond = clamp(S.bond + 5);
+    showLetter("For you, on your birthday", text); render(); save();
+  } else {
+    const week = S.journal.filter(j => !j.kind && Date.now() - j.t < 7 * 864e5);
+    let text = "";
+    showLetter("This week, together", "Joe is reading your week…");
+    if (sample && aiOn) {
+      try { const r = await sample(situation() + "\nIt is Sunday evening. These are his own words about each day this week:\n" + week.map(j => `${j.day}: ${j.text}`).join("\n") +
+              "\nReflect back with him like a wise friend who is also him: what you notice, one thing to be proud of, one gentle thing for next week. 5 to 8 short sentences, Hinglish where natural, honest not flattering, no emoji.", { modelTier: "default", cache: false });
+            text = (r.text || "").trim(); } catch (e) { if (e && e.code === "not_granted") { aiOn = false; brain("off"); } }
+    }
+    if (!text) text = "Is hafte tumne mujhe yeh bataya:\n" + week.map(j => `• ${j.day.slice(0, 10)}: ${j.text}`).join("\n") + "\n\nThik hai. Har din ek kahani tha. Agle hafte bhi, bas ek ichinen: effort, aur thoda sa self-love.";
+    S.reflectWeek = weekKey(); S.journal.push({ kind: "reflection", day: dayKey(), text, t: Date.now() }); S.journal = S.journal.slice(-80);
+    showLetter("This week, together", text); render(); save();
+  }
+};
+
+/* ---------------- voice: talk to Joe, hear Joe ---------------- */
+let dict = null, tts = null, voiceOn = false, dictBase = "";
+try { voiceOn = localStorage.getItem("mini-me-voice") === "on"; } catch (e) {}
+const cleanSpeech = t => String(t).replace(/\*[^*]+\*/g, "").replace(/\s+\/\s+/g, ". ").replace(/\s+/g, " ").trim();
+function speakJoe(text, force) {
+  if (!tts || (!voiceOn && !force)) return; const t = cleanSpeech(text); if (!t) return;
+  tts.speak(t.slice(0, 1900), { voice: "rounded" }).catch(() => {});
+}
+(async () => {
+  try { dict = window.claude?.use ? await window.claude.use("dictation") : null; } catch (e) {}
+  try { tts = window.claude?.use ? await window.claude.use("tts") : null; } catch (e) {}
+  if (dict) {
+    $("micBtn").hidden = false;
+    dict.onPartial(e => { $("talkIn").value = (dictBase + " " + e.text).trim(); });
+    dict.onFinal(e => { dictBase = (dictBase + " " + e.text).trim(); $("talkIn").value = dictBase; });
+    dict.onState(e => { $("micBtn").classList.toggle("on", e.state === "listening" || e.state === "starting");
+      if (e.state === "idle" && dictBase && e.reason !== "hidden") { const v = dictBase; dictBase = ""; $("talkIn").value = ""; talk(v); } });
+  }
+  if (tts) { const b = $("hearBtn"); b.hidden = false; b.setAttribute("aria-pressed", String(voiceOn)); }
+})();
+$("micBtn").addEventListener("click", () => {
+  if (!dict) return;
+  if (dict.active()) { dict.stop().catch(() => {}); return; }
+  dictBase = $("talkIn").value.trim();
+  dict.start().catch(e => { if (e && e.code === "not_granted") { $("micBtn").hidden = true; setFoot("Voice input is switched off for this page."); } });
+});
+$("hearBtn").addEventListener("click", () => {
+  voiceOn = !voiceOn; $("hearBtn").setAttribute("aria-pressed", String(voiceOn));
+  try { localStorage.setItem("mini-me-voice", voiceOn ? "on" : "off"); } catch (e) {}
+  if (voiceOn) speakJoe("Haan, ab main bol sakta hoon, big me."); else if (tts && tts.active()) tts.stop().catch(() => {});
+});
+
+/* ---------------- ui ---------------- */
+function setFoot(t) { $("foot").textContent = t; }
+function render() {
+  $("nameBtn").textContent = S.name;
+  const d = daysTogether(), meta = $("meta"); meta.textContent = "";
+  const b = document.createElement("b"); b.textContent = d;
+  meta.append(document.createTextNode("Together "), b, document.createTextNode(d === 1 ? " day" : " days"));
+  meta.append(document.createTextNode(" · " + mood()));
+  const dm = S.daimoku, today = dm.day === new Date().toDateString() ? dm.today : 0;
+  const st = streakNow(), md = document.createElement("div");
+  md.textContent = `Daimoku ${today.toLocaleString()} / ${S.practice.goal}` + (st ? ` · ${st}-day streak` : ""); meta.append(md);
+  updateNoteCard();
+  $("sPeace").style.width = S.peace + "%"; $("sEnergy").style.width = S.energy + "%";
+  $("sInspire").style.width = S.inspire + "%"; $("sBond").style.width = S.bond + "%";
+  $("sleepLbl").textContent = S.asleep ? "Wake" : "Sleep"; $("aSleep").classList.toggle("on", S.asleep);
+}
+
+function greet(fromAccount) {
+  const hrs = away / HOUR, h = new Date().getHours();
+  const today = new Date().toDateString();
+  let msg;
+  if (birthday().today && !S.asleep) { msg = "Janamdin mubarak, big me! Another trip around the sun. Sab badlega."; for (let i = 0; i < 4; i++) setTimeout(() => burst("heart", (pet.headX || pet.x) + rand(-40, 40), (pet.headY || 200) - 30, 3), i * 500); }
+  else if (S.asleep) msg = "zzz… (pat my head, or tap Wake)";
+  else if (!hadLocal && !fromAccount) msg = "Arre. Yeh toh main hoon. Hey, big me. I live in your phone now.";
+  else if (hrs > 12) msg = "Kahan the? The room gets quiet without me.";
+  else if (hrs > 3) msg = "There you are. Thik hai, chalo.";
+  else if (S.lastDay !== today) msg = (h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening") + ", big me. Naya din, naya ichinen.";
+  else msg = pick(["Phir se aa gaye? *smiles*", "Namaste.", "*nods*"]);
+  S.lastDay = today; say(msg, 6000);
+}
+
+/* ---------------- 2D only: 3D and video modes are switched off ---------------- */
+const use3D = false, usePhoto = false;
+let orbiting = false, camAz = 0, camEl = .1, az0 = 0, el0 = .1;
+function resize3D() {} function updateFly3D() {} function render3D() {} function drawSmoke3D() {} function renderPhoto() {} function drawAuraPhoto() {}
+
+window.addEventListener("resize", resize);
+document.addEventListener("visibilitychange", () => { if (document.hidden) { save(); flush(); } });
+resize(); render(); greet(false); save();
+requestAnimationFrame(frame);
+connect();
+})();
+</script>
+
+<script>if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));</script>
+</body>
+</html>
