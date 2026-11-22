@@ -1,0 +1,329 @@
+{
+ "HINDUNILVR": {
+  "foreign": "ULVR.L",
+  "relationship": "Unilever owns ~62%",
+  "days": 1692,
+  "corr_next_day": 0.133,
+  "big_moves": 75,
+  "next_day_after_big_up_pct": 0.72,
+  "next_day_after_big_down_pct": -0.72
+ },
+ "NESTLEIND": {
+  "foreign": "NESN.SW",
+  "relationship": "Nestle owns ~63%",
+  "days": 1676,
+  "corr_next_day": 0.08,
+  "big_moves": 73,
+  "next_day_after_big_up_pct": 0.59,
+  "next_day_after_big_down_pct": -0.26
+ },
+ "SIEMENS": {
+  "foreign": "SIE.DE",
+  "relationship": "Siemens owns ~69%",
+  "days": 1708,
+  "corr_next_day": 0.014,
+  "big_moves": 76,
+  "next_day_after_big_up_pct": -0.32,
+  "next_day_after_big_down_pct": -0.02
+ },
+ "ABB": {
+  "foreign": "ABBN.SW",
+  "relationship": "ABB owns 75%",
+  "days": 1676,
+  "corr_next_day": -0.047,
+  "big_moves": 90,
+  "next_day_after_big_up_pct": -0.31,
+  "next_day_after_big_down_pct": 0.14
+ },
+ "CASTROLIND": {
+  "foreign": "BP.L",
+  "relationship": "BP owns ~51%",
+  "days": 1691,
+  "corr_next_day": 0.02,
+  "big_moves": 90,
+  "next_day_after_big_up_pct": -0.67,
+  "next_day_after_big_down_pct": -0.19
+ },
+ "GLAXO": {
+  "foreign": "GSK.L",
+  "relationship": "GSK owns ~75%",
+  "days": 1692,
+  "corr_next_day": 0.077,
+  "big_moves": 72,
+  "next_day_after_big_up_pct": 0.14,
+  "next_day_after_big_down_pct": -0.83
+ },
+ "COLPAL": {
+  "foreign": "CL",
+  "relationship": "Colgate owns ~51%",
+  "days": 1686,
+  "corr_next_day": 0.168,
+  "big_moves": 88,
+  "next_day_after_big_up_pct": 0.59,
+  "next_day_after_big_down_pct": -0.96
+ },
+ "PGHH": {
+  "foreign": "PG",
+  "relationship": "P&G owns ~70%",
+  "days": 1686,
+  "corr_next_day": 0.081,
+  "big_moves": 73,
+  "next_day_after_big_up_pct": 0.6,
+  "next_day_after_big_down_pct": 0.54
+ },
+ "GILLETTE": {
+  "foreign": "PG",
+  "relationship": "P&G owns ~75%",
+  "days": 1686,
+  "corr_next_day": 0.085,
+  "big_moves": 73,
+  "next_day_after_big_up_pct": 0.58,
+  "next_day_after_big_down_pct": -0.31
+ },
+ "HONAUT": {
+  "foreign": "HON",
+  "relationship": "Honeywell owns 75%",
+  "days": 1686,
+  "corr_next_day": 0.02,
+  "big_moves": 79,
+  "next_day_after_big_up_pct": -0.24,
+  "next_day_after_big_down_pct": -0.41
+ },
+ "3MINDIA": {
+  "foreign": "MMM",
+  "relationship": "3M owns 75%",
+  "days": 1686,
+  "corr_next_day": -0.001,
+  "big_moves": 65,
+  "next_day_after_big_up_pct": 0.19,
+  "next_day_after_big_down_pct": 0.03
+ },
+ "CUMMINSIND": {
+  "foreign": "CMI",
+  "relationship": "Cummins owns 51%",
+  "days": 1686,
+  "corr_next_day": 0.051,
+  "big_moves": 79,
+  "next_day_after_big_up_pct": -0.17,
+  "next_day_after_big_down_pct": -1.26
+ },
+ "WHIRLPOOL": {
+  "foreign": "WHR",
+  "relationship": "Whirlpool owns ~51-75%",
+  "days": 1686,
+  "corr_next_day": 0.048,
+  "big_moves": 79,
+  "next_day_after_big_up_pct": 0.32,
+  "next_day_after_big_down_pct": -0.24
+ },
+ "TIMKEN": {
+  "foreign": "TKR",
+  "relationship": "Timken owns ~51%",
+  "days": 1686,
+  "corr_next_day": -0.018,
+  "big_moves": 67,
+  "next_day_after_big_up_pct": -0.28,
+  "next_day_after_big_down_pct": -0.32
+ },
+ "PFIZER": {
+  "foreign": "PFE",
+  "relationship": "Pfizer owns ~64%",
+  "days": 1686,
+  "corr_next_day": 0.125,
+  "big_moves": 94,
+  "next_day_after_big_up_pct": 0.37,
+  "next_day_after_big_down_pct": -0.68
+ },
+ "SANOFI": {
+  "foreign": "SAN.PA",
+  "relationship": "Sanofi owns ~60%",
+  "days": 1718,
+  "corr_next_day": 0.089,
+  "big_moves": 71,
+  "next_day_after_big_up_pct": 0.15,
+  "next_day_after_big_down_pct": -0.53
+ },
+ "ABBOTINDIA": {
+  "foreign": "ABT",
+  "relationship": "Abbott owns ~75%",
+  "days": 1686,
+  "corr_next_day": 0.029,
+  "big_moves": 74,
+  "next_day_after_big_up_pct": -0.36,
+  "next_day_after_big_down_pct": -0.01
+ },
+ "LINDEINDIA": {
+  "foreign": "LIN",
+  "relationship": "Linde owns 75%",
+  "days": 1686,
+  "corr_next_day": 0.012,
+  "big_moves": 94,
+  "next_day_after_big_up_pct": 0.52,
+  "next_day_after_big_down_pct": 0.23
+ },
+ "BASF": {
+  "foreign": "BAS.DE",
+  "relationship": "BASF owns 73%",
+  "days": 1708,
+  "corr_next_day": 0.011,
+  "big_moves": 96,
+  "next_day_after_big_up_pct": -0.3,
+  "next_day_after_big_down_pct": -0.34
+ },
+ "BAYERCROP": {
+  "foreign": "BAYN.DE",
+  "relationship": "Bayer owns ~71%",
+  "days": 1708,
+  "corr_next_day": 0.035,
+  "big_moves": 79,
+  "next_day_after_big_up_pct": 0.11,
+  "next_day_after_big_down_pct": -0.34
+ },
+ "ASTRAZEN": {
+  "foreign": "AZN.L",
+  "relationship": "AstraZeneca owns 75%",
+  "days": 1692,
+  "corr_next_day": 0.063,
+  "big_moves": 87,
+  "next_day_after_big_up_pct": 0.29,
+  "next_day_after_big_down_pct": -0.94
+ },
+ "SCHNEIDER": {
+  "foreign": "SU.PA",
+  "relationship": "Schneider owns ~70%",
+  "days": 1718,
+  "corr_next_day": 0.024,
+  "big_moves": 76,
+  "next_day_after_big_up_pct": -0.22,
+  "next_day_after_big_down_pct": 0.41
+ },
+ "GRINDWELL": {
+  "foreign": "SGO.PA",
+  "relationship": "Saint-Gobain owns ~58%",
+  "days": 1718,
+  "corr_next_day": 0.043,
+  "big_moves": 93,
+  "next_day_after_big_up_pct": -0.04,
+  "next_day_after_big_down_pct": -0.31
+ },
+ "INGERRAND": {
+  "foreign": "IR",
+  "relationship": "Ingersoll Rand owns 75%",
+  "days": 1686,
+  "corr_next_day": 0.006,
+  "big_moves": 81,
+  "next_day_after_big_up_pct": -0.08,
+  "next_day_after_big_down_pct": -0.4
+ },
+ "OFSS": {
+  "foreign": "ORCL",
+  "relationship": "Oracle owns ~73%",
+  "days": 1686,
+  "corr_next_day": 0.101,
+  "big_moves": 86,
+  "next_day_after_big_up_pct": 1.04,
+  "next_day_after_big_down_pct": -0.26
+ },
+ "ITC": {
+  "foreign": "BATS.L",
+  "relationship": "BAT owns ~23-29%",
+  "days": 1692,
+  "corr_next_day": 0.107,
+  "big_moves": 95,
+  "next_day_after_big_up_pct": 0.55,
+  "next_day_after_big_down_pct": -0.23
+ },
+ "SKFINDIA": {
+  "foreign": "SKF-B.ST",
+  "relationship": "SKF owns ~53%",
+  "days": 1686,
+  "corr_next_day": 0.025,
+  "big_moves": 75,
+  "next_day_after_big_up_pct": -0.12,
+  "next_day_after_big_down_pct": -0.02
+ },
+ "ESABINDIA": {
+  "foreign": "ESAB",
+  "relationship": "ESAB owns ~74%",
+  "days": 1161,
+  "corr_next_day": 0.006,
+  "big_moves": 57,
+  "next_day_after_big_up_pct": 0.22,
+  "next_day_after_big_down_pct": 0.68
+ },
+ "VESUVIUS": {
+  "foreign": "VSVS.L",
+  "relationship": "Vesuvius owns ~56%",
+  "days": 1692,
+  "corr_next_day": 0.032,
+  "big_moves": 61,
+  "next_day_after_big_up_pct": 0.19,
+  "next_day_after_big_down_pct": -0.08
+ },
+ "HEIDELBERG": {
+  "foreign": "HEI.DE",
+  "relationship": "Heidelberg owns ~69%",
+  "days": 1708,
+  "corr_next_day": 0.043,
+  "big_moves": 81,
+  "next_day_after_big_up_pct": -0.04,
+  "next_day_after_big_down_pct": -0.82
+ },
+ "INFY": {
+  "foreign": "INFY",
+  "relationship": "ADR of Infosys",
+  "days": 1686,
+  "corr_next_day": 0.315,
+  "big_moves": 102,
+  "next_day_after_big_up_pct": 1.69,
+  "next_day_after_big_down_pct": -2.15
+ },
+ "WIPRO": {
+  "foreign": "WIT",
+  "relationship": "ADR of Wipro",
+  "days": 1686,
+  "corr_next_day": 0.195,
+  "big_moves": 71,
+  "next_day_after_big_up_pct": 0.9,
+  "next_day_after_big_down_pct": -2.13
+ },
+ "HDFCBANK": {
+  "foreign": "HDB",
+  "relationship": "ADR of HDFC Bank",
+  "days": 1686,
+  "corr_next_day": 0.155,
+  "big_moves": 86,
+  "next_day_after_big_up_pct": 0.9,
+  "next_day_after_big_down_pct": -0.8
+ },
+ "ICICIBANK": {
+  "foreign": "IBN",
+  "relationship": "ADR of ICICI Bank",
+  "days": 1686,
+  "corr_next_day": 0.067,
+  "big_moves": 78,
+  "next_day_after_big_up_pct": 1.38,
+  "next_day_after_big_down_pct": 0.03
+ },
+ "DRREDDY": {
+  "foreign": "RDY",
+  "relationship": "ADR of Dr Reddy's",
+  "days": 1686,
+  "corr_next_day": 0.135,
+  "big_moves": 77,
+  "next_day_after_big_up_pct": 0.56,
+  "next_day_after_big_down_pct": -1.17
+ },
+ "_all_pairs_2020-23": {
+  "days": 863,
+  "per_day_pct": 0.074,
+  "t": 5.52,
+  "per_year_before_costs_pct": 18.4
+ },
+ "_all_pairs_2023-26": {
+  "days": 870,
+  "per_day_pct": 0.074,
+  "t": 5.77,
+  "per_year_before_costs_pct": 18.5
+ }
+}
