@@ -94,6 +94,14 @@ UNCLEAR_RE = re.compile(r"\b(choppy|volatile|mixed|steady|flat|unchanged|little 
 BOUNDARY_RE = re.compile(r"\s(?:as|amid|despite|after|while|but|because|on|ahead of|even as)\s|[;:|]|\s[-–—]\s", re.I)
 
 
+RISK_TRIGGER_RE = re.compile(
+    r"\b(tensions?|attacks?|attacked|clos(?:e|ed|es|ure|ing)|shut|strikes?|struck|war|blockade|seiz(?:e|ed|ure)|"
+    r"threats?|threaten\w*|disrupt\w*|sanctions?|bans?|banned|curbs?|restrict\w*|fees?|hikes?|tariffs?|impos\w*|"
+    r"duties|crackdown|conflict|escalat\w*|missiles?|drones?|halt\w*|block\w*|suspend\w*|surge\w*|record|"
+    r"dumping|reroute\w*|diver(?:t|ted|sion)|fears?|risks?|cap|caps|overhaul|tighten\w*|eas(?:e|es|ed|ing)|"
+    r"ceasefire|truce|peace|deal|reopen\w*|lift\w*|scrap\w*|exempt\w*|pause\w*)\b", re.I)
+
+
 def _signs(chunk):
     """Closest-first list of (position, sign) for direction words in chunk."""
     hits = [(m.start(), 1) for m in UP_RE.finditer(chunk)] + [(m.start(), -1) for m in DOWN_RE.finditer(chunk)]
@@ -167,10 +175,17 @@ def analyze(graph, item):
     seeds = []
     for eid, (s, e) in mentions.items():
         d = direction_near(title, s, e, quantity_ok=eid == "opec")
-        if d == 0:
-            d = graph.entities[eid].get("default_dir", 0)
+        if graph.entities[eid]["type"] == "risk":
+            # A risk only counts as an event with a real risk word nearby ("H1B abuse" is not a policy change).
+            near = title[max(0, s - 35):e + 35]
+            if d == 0 and not RISK_TRIGGER_RE.search(near):
+                continue
+            if d == 0:
+                d = graph.entities[eid].get("default_dir", 0)
         seeds.append({"id": eid, "name": graph.entities[eid]["name"], "dir": d})
 
+    if not seeds:
+        return None
     impacts = {}
     for seed in seeds:
         for t, info in propagate(graph, seed["id"], seed["dir"]).items():

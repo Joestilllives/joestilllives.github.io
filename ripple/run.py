@@ -3,7 +3,9 @@
     python ripple/run.py            # live news (used by GitHub Actions)
     python ripple/run.py --sample   # offline demo using data/sample_news.json
 """
+import hashlib
 import json
+import math
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -15,6 +17,32 @@ HERE = Path(__file__).parent
 OUT = HERE / "output"
 KEEP_DAYS = 3
 MAX_ALERTS = 60
+
+
+def cluster(alerts):
+    """Merge alerts about the same event on the same day (same items, same directions).
+    Dozens of outlets repeating one story become one alert with a coverage count."""
+    groups = {}
+    for a in alerts:
+        day = (a.get("published") or "")[:10]
+        key = json.dumps([sorted(f"{s['name']}:{s['dir']}" for s in a["seeds"]), day])
+        groups.setdefault(key, []).append(a)
+    out = []
+    for key, members in groups.items():
+        rep = dict(max(members, key=lambda a: (a.get("base_score", a["score"]), a.get("published") or "")))
+        sources, titles = [], set()
+        for m in members:
+            for src in m.get("sources") or [{"title": m["title"], "source": m.get("source"), "url": m.get("url")}]:
+                if src["title"].lower() not in titles:
+                    titles.add(src["title"].lower())
+                    sources.append(src)
+        rep["base_score"] = rep.get("base_score", rep["score"])
+        rep["coverage"] = len(sources)
+        rep["sources"] = sources[:12]
+        rep["score"] = round(rep["base_score"] * (1 + 0.15 * math.log2(len(sources))), 3)
+        rep["id"] = hashlib.sha1(key.encode()).hexdigest()[:12]
+        out.append(rep)
+    return out
 
 
 def update_log(alerts, now):
@@ -59,6 +87,7 @@ def main():
         if a:
             alerts[a["id"]] = a
 
+    alerts = {a["id"]: a for a in cluster(alerts.values())}
     cutoff = (now - timedelta(days=KEEP_DAYS)).isoformat()
     kept = [a for a in alerts.values() if (a.get("published") or now.isoformat()) >= cutoff]
     kept.sort(key=lambda a: (-a["score"], a.get("published") or ""))

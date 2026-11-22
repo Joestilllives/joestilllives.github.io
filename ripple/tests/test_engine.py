@@ -89,6 +89,16 @@ class ChainTests(unittest.TestCase):
     def test_live_plain_fall(self):
         self.assertEqual(self.seed_dir("Oil Prices fall 5% despite attacks on tankers, rising tensions", "crude"), "falling")
 
+    def test_live_risk_mention_without_event_ignored(self):
+        self.assertIsNone(analyze(G, {"title": "BlazeTV hosts win journalism award for 'dogged investigation of H1B abuse in Texas'"}))
+
+    def test_live_one_company_fda_does_not_hit_rivals(self):
+        a = analyze(G, {"title": "Natco Pharma's Kothur plant receives 7 observations from USFDA"})
+        self.assertFalse(a and any(i["id"] == "sunpharma" for i in a["impacts"]))
+
+    def test_risk_with_event_word_still_fires(self):
+        self.assertEqual(impact("Iran threatens closure of Strait of Hormuz", "ioc")["effect"], "headwind")
+
     def test_unrelated_headline(self):
         self.assertIsNone(analyze(G, {"title": "Local football club wins cup final"}))
 

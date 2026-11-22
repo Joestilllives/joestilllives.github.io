@@ -72,6 +72,8 @@ def fetch_gdelt(timeout=30):
                     sd = a.get("seendate", "")
                     pub = (f"{sd[0:4]}-{sd[4:6]}-{sd[6:8]}T{sd[9:11]}:{sd[11:13]}:{sd[13:15]}+00:00"
                            if len(sd) >= 15 else None)
+                    if a.get("sourcecountry") and a["sourcecountry"] not in cfg.get("gdelt_countries", [a["sourcecountry"]]):
+                        continue
                     items.append({"title": a.get("title", "").strip(), "url": a.get("url"),
                                   "source": a.get("domain"), "published": pub})
                 break
@@ -94,6 +96,9 @@ def fetch_all(timeout=20):
                 items.extend(parse_rss(r.read(), url))
         except Exception as e:  # one bad feed shouldn't stop the run
             errors.append(f"{url[:80]}: {e}")
+    cfg = json.loads((HERE / "data" / "feeds.json").read_text(encoding="utf-8"))
+    skip = re.compile(r"\b(" + "|".join(map(re.escape, cfg.get("skip_if_title_mentions", ["$^"]))) + r")\b", re.I)
+    items = [it for it in items if not skip.search(it["title"])]
     seen, unique = set(), []
     for it in items:
         key = re.sub(r"\W+", " ", it["title"].lower()).strip()
