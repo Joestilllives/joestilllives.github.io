@@ -29,7 +29,8 @@
     { id: 'cpcb', name: 'CPCB (government)', short: 'Govt', kind: 'What the government reports', official: true, keyName: 'cpcb' },
     { id: 'cams', name: 'Open-Meteo · CAMS', short: 'Satellite', kind: 'Independent · satellite model (EU Copernicus)', official: false, independent: true },
     { id: 'waqi', name: 'WAQI (aqicn.org)', short: 'WAQI', kind: 'Relays government stations · not counted', official: false, relay: true, keyName: 'waqi' },
-    { id: 'openaq', name: 'Citizen sensors · OpenAQ', short: 'Citizens', kind: 'Independent · citizen sensors', official: false, independent: true, keyName: 'openaq', serverOnly: true }
+    { id: 'openaq', name: 'Citizen sensors · OpenAQ', short: 'OpenAQ', kind: 'Independent · citizen sensors', official: false, independent: true, keyName: 'openaq', serverOnly: true },
+    { id: 'purpleair', name: 'Citizen sensors · PurpleAir', short: 'PurpleAir', kind: 'Independent · citizen sensors', official: false, independent: true, keyName: 'purpleair' }
   ];
 
   // ---------- helpers ----------
@@ -325,9 +326,57 @@
     });
   }
 
+  // ---------- PurpleAir (citizen sensors) ----------
+  // Uses each outdoor sensor's own 24-hour PM2.5 average, which matches CPCB's 24h method.
+
+  function dropOutliers(items) {
+    // With 4+ sensors, ignore any reading more than 3x away from the group median (likely faulty).
+    if (items.length < 4) return items;
+    var m = A.median(items.map(function (s) { return s.pm; }));
+    return items.filter(function (s) { return s.pm <= m * 3 && s.pm >= m / 3; });
+  }
+
+  function fetchPurpleAir(loc, key) {
+    var d = 0.23; // ~25 km box
+    var url = 'https://api.purpleair.com/v1/sensors?fields=name,latitude,longitude,pm2.5_24hour,pm2.5_60minute,last_seen' +
+      '&location_type=0&max_age=7200' +
+      '&nwlng=' + (loc.lon - d) + '&nwlat=' + (loc.lat + d) + '&selng=' + (loc.lon + d) + '&selat=' + (loc.lat - d);
+    return getJSON(url, { 'X-API-Key': key }).then(function (j) {
+      var f = (j && j.fields) || [];
+      var col = function (n) { return f.indexOf(n); };
+      var all = ((j && j.data) || []).map(function (r) {
+        var lat = num(r[col('latitude')]), lon = num(r[col('longitude')]);
+        return {
+          name: r[col('name')] || ('Sensor ' + r[col('sensor_index')]),
+          pm: num(r[col('pm2.5_24hour')]), pm1h: num(r[col('pm2.5_60minute')]),
+          dist: lat == null || lon == null ? Infinity : A.distanceKm(loc.lat, loc.lon, lat, lon),
+          time: num(r[col('last_seen')]) ? new Date(num(r[col('last_seen')]) * 1000) : null
+        };
+      }).filter(function (s) { return s.pm != null && s.pm > 0 && s.pm < 1000 && s.dist <= NEAR_KM; });
+
+      var ok = dropOutliers(all).sort(function (a, b) { return a.dist - b.dist; });
+      if (!ok.length) return { status: 'empty', detail: [], note: 'No outdoor PurpleAir sensors reporting within ' + NEAR_KM + ' km.' };
+      ok.forEach(function (s) { s.aqi = A.subIndex('pm25', s.pm); });
+
+      var base = {
+        time: latestOf(ok),
+        summary: ok.length === 1 ? '1 sensor' : 'Median of ' + ok.length + ' sensors',
+        detail: ok.slice(0, 8).map(function (s) {
+          return { text: s.name, meta: round(s.dist, 1) + ' km · AQI ' + s.aqi };
+        }),
+        note: 'Each sensor’s 24-hour PM2.5 average.' +
+          (all.length > ok.length ? ' ' + (all.length - ok.length) + ' outlier sensor(s) ignored.' : '') +
+          ' Not corrected for humidity, so may read high on humid days.'
+      };
+      if (ok.length > 8) base.detail.push({ text: '+ ' + (ok.length - 8) + ' more sensors', meta: '' });
+      var res = finish(base, { pm25: Math.round(A.median(ok.map(function (s) { return s.aqi; }))) });
+      return res;
+    });
+  }
+
   root.AQSources = {
     CITIES: CITIES, SOURCES: SOURCES, NEAR_KM: NEAR_KM,
-    fetchers: { cpcb: fetchCpcb, cams: fetchCams, waqi: fetchWaqi, openaq: fetchOpenAq },
+    fetchers: { cpcb: fetchCpcb, cams: fetchCams, waqi: fetchWaqi, openaq: fetchOpenAq, purpleair: fetchPurpleAir },
     clearCache: function () { cpcbCache = null; }
   };
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -314,7 +314,7 @@
   }
 
   function keys() {
-    return { cpcb: store('aqi.key.cpcb') || '', waqi: store('aqi.key.waqi') || '' };
+    return { cpcb: store('aqi.key.cpcb') || '', waqi: store('aqi.key.waqi') || '', purpleair: store('aqi.key.purpleair') || '' };
   }
 
   var current = null, runId = 0;
@@ -411,7 +411,7 @@
     var dlg = $('settings');
     function open() {
       var k = keys();
-      $('key-cpcb').value = k.cpcb; $('key-waqi').value = k.waqi;
+      $('key-cpcb').value = k.cpcb; $('key-waqi').value = k.waqi; $('key-purpleair').value = k.purpleair;
       dlg.showModal();
     }
     $('settingsBtn').addEventListener('click', open);
@@ -423,6 +423,7 @@
       if (dlg.returnValue !== 'save') return;
       store('aqi.key.cpcb', $('key-cpcb').value.trim());
       store('aqi.key.waqi', $('key-waqi').value.trim());
+      store('aqi.key.purpleair', $('key-purpleair').value.trim());
       S.clearCache();
       if (current) load(current, { live: true });
     });

@@ -28,6 +28,7 @@ jobs:
           DATA_GOV_IN_KEY: ${{ secrets.DATA_GOV_IN_KEY }}
           WAQI_TOKEN: ${{ secrets.WAQI_TOKEN }}
           OPENAQ_KEY: ${{ secrets.OPENAQ_KEY }}
+          PURPLEAIR_KEY: ${{ secrets.PURPLEAIR_KEY }}
         run: node scripts/collect-aqi.js
 
       - name: Commit data

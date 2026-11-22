@@ -4,7 +4,7 @@
  * Fetches every source for every city server-side, then writes:
  *   aqi/data/latest.json             full snapshot the page loads instantly
  *   aqi/data/history/YYYY-MM.csv     one row per city per hour (for the history chart)
- * Keys come from env: DATA_GOV_IN_KEY, WAQI_TOKEN, OPENAQ_KEY (all optional).
+ * Keys come from env: DATA_GOV_IN_KEY, WAQI_TOKEN, OPENAQ_KEY, PURPLEAIR_KEY (all optional).
  */
 'use strict';
 const fs = require('fs');
@@ -18,7 +18,8 @@ const S = globalThis.AQSources;
 const KEYS = {
   cpcb: process.env.DATA_GOV_IN_KEY || '',
   waqi: process.env.WAQI_TOKEN || '',
-  openaq: process.env.OPENAQ_KEY || ''
+  openaq: process.env.OPENAQ_KEY || '',
+  purpleair: process.env.PURPLEAIR_KEY || ''
 };
 const OUT = path.join(AQI_DIR, 'data');
 const COLS = S.SOURCES.map((s) => s.id);
@@ -47,8 +48,18 @@ function writeHistory(hourIso, cities) {
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, hourIso.slice(0, 7) + '.csv');
   const header = ['time', 'city', ...COLS].join(',');
-  let lines = fs.existsSync(file) ? fs.readFileSync(file, 'utf8').trim().split('\n').slice(1) : [];
-  lines = lines.filter((l) => l && !l.startsWith(hourIso + ',')); // re-run in the same hour replaces it
+  let lines = [];
+  if (fs.existsSync(file)) {
+    // Re-map old rows to the current columns, so adding a source never breaks history.
+    const old = fs.readFileSync(file, 'utf8').trim().split('\n');
+    const oldCols = old.shift().split(',');
+    lines = old.filter(Boolean).map((l) => {
+      const v = l.split(','), row = {};
+      oldCols.forEach((c, i) => { row[c] = v[i] ?? ''; });
+      return [row.time, row.city, ...COLS.map((c) => row[c] ?? '')].join(',');
+    });
+  }
+  lines = lines.filter((l) => !l.startsWith(hourIso + ',')); // re-run in the same hour replaces it
   for (const [name, c] of Object.entries(cities)) {
     const vals = COLS.map((id) => (c.sources[id].status === 'ok' ? c.sources[id].aqi : ''));
     if (vals.some((v) => v !== '')) lines.push([hourIso, name, ...vals].join(','));

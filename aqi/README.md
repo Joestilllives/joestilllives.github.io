@@ -14,8 +14,9 @@ Compares India's official AQI (CPCB) with independent sources: the Copernicus CA
    - **data.gov.in**: sign up at https://data.gov.in, then My Account → API key
    - **WAQI**: https://aqicn.org/data-platform/token/
    - **OpenAQ**: https://explore.openaq.org/register
+   - **PurpleAir**: https://develop.purpleair.com/ (a "read" key; new accounts get free credits)
 2. In the GitHub repo: **Settings → Secrets and variables → Actions → New repository secret**, add
-   `DATA_GOV_IN_KEY`, `WAQI_TOKEN`, `OPENAQ_KEY`.
+   `DATA_GOV_IN_KEY`, `WAQI_TOKEN`, `OPENAQ_KEY`, `PURPLEAIR_KEY`.
 3. Merge to `master`. Scheduled workflows only run on the default branch.
 4. **Actions → Collect AQI data → Run workflow** for a first run instead of waiting up to an hour.
 
@@ -24,6 +25,6 @@ Any missing key just leaves that source out. Open-Meteo needs no key.
 ## Run locally
 
 ```sh
-DATA_GOV_IN_KEY=... WAQI_TOKEN=... OPENAQ_KEY=... node scripts/collect-aqi.js
+DATA_GOV_IN_KEY=... WAQI_TOKEN=... OPENAQ_KEY=... PURPLEAIR_KEY=... node scripts/collect-aqi.js
 python3 -m http.server   # then open http://localhost:8000/aqi/
 ```
