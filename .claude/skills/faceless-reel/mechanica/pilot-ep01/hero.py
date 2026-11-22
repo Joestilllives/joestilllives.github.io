@@ -1,16 +1,27 @@
 # Blender hero shot: exploded pin stacks assemble into a lock plug. Transparent PNG frames.
 # Run: blender-venv/bin/python hero.py OUTDIR FRAMES [SAMPLES]
-import bpy, math, sys, time
-out, frames = sys.argv[1], int(sys.argv[2]); samples = int(sys.argv[3]) if len(sys.argv) > 3 else 24
+import bpy, math, sys, time, os
+# Defaults = the settings that won the Blender tests (Production standards tab, section 7). Override with HERO_OPTS="key=value,...".
+OPT = {'view': 'Khronos PBR Neutral', 'bevel': '1', 'paths': 'fast', 'denoise': 'full', 'cards': '1', 'mblur': '1', 'catcher': '0'}
+OPT.update(dict(kv.split('=') for kv in os.environ.get('HERO_OPTS', '').split(',') if '=' in kv))
+out, frames = sys.argv[1], int(sys.argv[2]); samples = int(sys.argv[3]) if len(sys.argv) > 3 else 16
 bpy.ops.wm.read_factory_settings(use_empty=True)
 S = bpy.context.scene
 S.render.engine = 'CYCLES'; S.cycles.device = 'CPU'
 S.cycles.samples = samples; S.cycles.use_adaptive_sampling = True; S.cycles.adaptive_threshold = 0.05
 S.cycles.use_denoising = True; S.render.use_persistent_data = True
 S.render.resolution_x = S.render.resolution_y = 760; S.render.film_transparent = True
-S.render.image_settings.file_format = 'PNG'; S.render.image_settings.color_mode = 'RGBA'
+S.render.image_settings.file_format = 'PNG'; S.render.image_settings.color_mode = 'RGBA'; S.render.image_settings.color_depth = '16'  # no banding in dark gradients
 S.frame_start, S.frame_end = 1, frames
-S.view_settings.view_transform = 'Standard'
+S.view_settings.view_transform = OPT.get('view', 'Standard')
+if OPT.get('look'): S.view_settings.look = OPT['look']
+if OPT.get('engine') == 'eevee': S.render.engine = 'BLENDER_EEVEE'
+if OPT.get('paths') == 'fast':          # trimmed light paths: metal needs glossy bounces, little else
+    c = S.cycles; c.max_bounces = 6; c.diffuse_bounces = 2; c.glossy_bounces = 4; c.transmission_bounces = 0; c.volume_bounces = 0
+    c.transparent_max_bounces = 4; c.caustics_reflective = False; c.caustics_refractive = False; c.sample_clamp_indirect = 10
+if OPT.get('mblur') == '1': S.render.use_motion_blur = True; S.render.motion_blur_shutter = 0.5
+if OPT.get('denoise') == 'full':
+    S.cycles.denoiser = 'OPENIMAGEDENOISE'; S.cycles.denoising_input_passes = 'RGB_ALBEDO_NORMAL'; S.cycles.denoising_prefilter = 'ACCURATE'
 
 def mat(name, rgb, metal, rough):
     m = bpy.data.materials.new(name); m.use_nodes = True
@@ -56,6 +67,10 @@ for i, (x, kl) in enumerate(zip(xs, key_len)):
     sp.data.materials.append(SPRING); sp.parent = piv; sp.location = (0, 0, 0)
     parts.append((kp, dp, piv, i))
 
+if OPT.get('bevel') == '1':
+    for o in [plug] + [p for st in parts for p in st[:2]]:
+        bv = o.modifiers.new('bevel', 'BEVEL'); bv.width = 0.025; bv.segments = 3; bv.limit_method = 'ANGLE'
+
 # Animation: everything starts exploded (spread up and outward, slightly rotated), then lands in place.
 # Each stack lands a little after the previous one (staggered 30-50% overlap).
 for kp, dp, piv, i in parts:
@@ -81,6 +96,14 @@ for loc, energy, size, col in (((4, -5, 7), 900, 5, (1, 0.97, 0.92)), ((-6, 4, 5
     bpy.ops.object.light_add(type='AREA', location=loc); L = bpy.context.object
     L.data.energy, L.data.size, L.data.color = energy, size, col
     L.rotation_euler = (math.atan2(math.hypot(loc[0], loc[1]), loc[2]), 0, math.atan2(loc[0], -loc[1]))
+if OPT.get('catcher') == '1':      # invisible floor that only receives shadows: the part sits on the page instead of floating
+    bpy.ops.mesh.primitive_plane_add(size=30, location=(0, 0, -0.95)); fl = bpy.context.object; fl.is_shadow_catcher = True; fl.visible_diffuse = False; fl.visible_glossy = False  # shadows only, no bounce light
+if OPT.get('cards') == '1':        # reflection cards: big soft emitters seen only in reflections, shape the metal like a studio softbox
+    for loc, rot in (((0, -6, 4), (math.radians(60), 0, 0)), ((-6, 2, 3), (math.radians(70), 0, math.radians(-110)))):
+        bpy.ops.mesh.primitive_plane_add(size=6, location=loc, rotation=rot); cd = bpy.context.object
+        em = bpy.data.materials.new('card'); em.use_nodes = True; nt = em.node_tree; nt.nodes.remove(nt.nodes['Principled BSDF'])
+        e = nt.nodes.new('ShaderNodeEmission'); e.inputs['Strength'].default_value = 4; nt.links.new(e.outputs[0], nt.nodes['Material Output'].inputs[0])
+        cd.data.materials.append(em); cd.visible_camera = False; cd.visible_diffuse = False; cd.visible_shadow = False
 w = bpy.data.worlds.new('w'); S.world = w; w.use_nodes = True
 w.node_tree.nodes['Background'].inputs[0].default_value = (0.05, 0.08, 0.18, 1); w.node_tree.nodes['Background'].inputs[1].default_value = 0.6
 
