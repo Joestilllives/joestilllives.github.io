@@ -160,6 +160,7 @@ in the top 20%, ~50 stocks): +15.5%/yr, t 4.5, both halves positive.
 | Basket vs index funds, same months | ~+34%/yr vs Nifty 50 +10.5%, Midcap 150 +18.3%, Smallcap 250 +20.5% | Ahead in 62-70% of months |
 | Scores used one month late | +9.6%/yr | Signal fades slowly: not a timing artifact |
 | All Wikipedia inputs removed (survivor-leak check) | +12.9%/yr | No leak |
+| Picks moved into BE/BZ surveillance while held (`gap2.py`) | 1.74% of picks; recorded +10.6% vs true +7.9% | Overstates the edge by ~0.6 points/yr |
 
 Open issues: several design choices (blend, skipping the largest fifth, frenzy threshold, split/bonus
 flag, ensemble) were made after seeing 2019-26 results, and no untouched holdout remains; only months
