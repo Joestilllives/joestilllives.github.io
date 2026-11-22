@@ -131,6 +131,23 @@ Improvements on the same 94 months (`improve.py`): **blend of steady-climb rank 
 Worst absolute fall of the simple rule over 2016-2026 was -47% (2018 crash into COVID); 50% cash
 when the market is unhealthy cut it to -23% for ~1-2%/yr less excess return.
 
+## Signal factory (`signal_factory.py`) and odds tests (`odds.py`)
+
+115 candidate signals generated from daily open/high/low/close, volume, trades and delivery
+(windows 5-252 days), each judged by its monthly rank correlation with next month's return
+(size groups 1-4). 67 pass |t| >= 3 with the same sign in 2017-19, 2020-22 and 2023-26. They form
+about seven families: delivery level (t 7.8) and delivery rising (6.9); lottery/jumpiness, worse
+(-6.2); closing near the day's high over months (5.1); rising intraday rather than overnight (5.1);
+steady up-days (5.7); large average trade size (4.2).
+
+Honest test (signals chosen on 2017-21 only, model tested on 2022-26): blend +10.7%/yr (t 5.2) vs
++10.3% without them; model alone +9.1% vs +8.1%. Real but overlapping with existing signals.
+(Choosing them on all years showed +13.4%: inflated by look-ahead.)
+
+Odds: share of picked stocks that beat the market stays 47-50% for every variant (the edge comes
+from winners winning by more); share of months ahead 65-77%. A high-conviction basket (both scores
+in the top 20%, ~50 stocks): +15.5%/yr, t 4.5, both halves positive.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
