@@ -31,7 +31,7 @@ FACTORS = {
 
 def fetch(sym):
     url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{sym.replace('=', '%3D').replace('^', '%5E')}"
-           "?period1=1546300800&period2=1800000000&interval=1d")
+           "?period1=1420070400&period2=1800000000&interval=1d")
     for i in range(4):
         r = subprocess.run(["curl", "-sSf", "-m", "60", "-A", UA, url], capture_output=True, text=True)
         if r.returncode == 0:
