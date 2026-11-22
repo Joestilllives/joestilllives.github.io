@@ -27,7 +27,22 @@ TOP = 0.2
 RANKED = ["mom12_1", "mom6_1", "mom3", "mom1", "high52", "smooth12", "vol252", "vol21", "maxret21",
           "turnover", "deliv20", "deliv_trend", "volume_trend", "frenzy21", "frenzy63", "acc10",
           "sector_mom6", "rel_sector", "peer_mom6", "rel_peer", "peer_ret1", "peer_gap1", "peer_gap3", "age", "listing_gain", "wiki_attn30", "wiki_spikes21", "wiki_level"]
+KEY_FACTORS = {"Brent crude": "oil", "Rupee per dollar": "rupee", "Nasdaq": "us_tech", "Copper": "copper", "Gold": "gold", "US 10-year rate": "us_rate", "Shanghai": "china", "Steel (US HRC)": "steel"}
+RANKED += ["factor_implied1", "factor_gap1", "factor_r2"]
+# Raw monthly factor moves (oil last month, etc.) are the same for every stock; with only
+# 2-4 years of training the model overfit to them, so they are not used. Per-stock betas
+# to key factors are kept in the table for reference but not used either.
 RAW = ["mkt1", "mkt3", "breadth", "has_wiki", "recent_ipo"]
+RATE_LIKE = {"US 10-year rate", "US 3-month rate"}  # use changes, not log returns
+
+
+def factor_returns(factors, dates):
+    """Daily factor moves aligned to NSE dates, lagged one day (world markets close after India)."""
+    f = factors.reindex(factors.index.union(dates)).ffill().reindex(dates).shift(1)
+    out = pd.DataFrame(index=dates)
+    for c in f.columns:
+        out[c] = f[c].diff() if c in RATE_LIKE else np.log(f[c].clip(lower=1e-6)).diff()
+    return out.fillna(0.0)
 PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-month move", "mom1": "last month's move",
          "high52": "distance from 52-week high", "smooth12": "steadiness of the climb", "vol252": "yearly volatility",
          "vol21": "recent volatility", "maxret21": "biggest one-day jump last month", "turnover": "trading volume (size)",
@@ -35,7 +50,11 @@ PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-mont
          "frenzy21": "frenzy days last month", "frenzy63": "frenzy days last 3 months", "acc10": "quiet accumulation days",
          "sector_mom6": "sector trend", "rel_sector": "strength vs sector", "peer_mom6": "peer group trend",
          "rel_peer": "strength vs peers", "peer_ret1": "peers' move last month",
-         "peer_gap1": "gap to peers' move last month", "peer_gap3": "gap to peers' move last 3 months", "age": "how long listed", "listing_gain": "IPO listing-day gain",
+         "peer_gap1": "gap to peers' move last month", "factor_implied1": "move implied by outside forces",
+         "factor_gap1": "unpriced outside-force move", "factor_r2": "how much outside forces explain it",
+         "beta_oil": "link to oil", "beta_rupee": "link to the rupee", "beta_us_tech": "link to US tech",
+         "beta_copper": "link to copper", "beta_gold": "link to gold", "beta_us_rate": "link to US rates",
+         "beta_china": "link to China", "beta_steel": "link to steel", "peer_gap3": "gap to peers' move last 3 months", "age": "how long listed", "listing_gain": "IPO listing-day gain",
          "wiki_attn30": "Wikipedia attention trend", "wiki_spikes21": "Wikipedia spikes", "wiki_level": "Wikipedia readership"}
 
 
@@ -87,9 +106,10 @@ def features(m, ind, ipo_gain):
     return f
 
 
-def month_table(m, f, ind, ipo_gain):
+def month_table(m, f, ind, ipo_gain, fac=None):
     lp = m["lp"]
     dates = lp.index
+    fcum = fac.cumsum() if fac is not None else None
     ends = pd.Series(dates, index=dates).groupby(dates.to_period("M")).max().values
     ends = [pd.Timestamp(d) for d in ends if dates.get_loc(d) >= 260]
     ma200 = lp.rolling(200, min_periods=150).mean()
@@ -117,6 +137,29 @@ def month_table(m, f, ind, ipo_gain):
         df["peer_ret1"] = np.nanmean(m1[peers], axis=1)
         df["peer_gap1"] = df["peer_ret1"] - df["mom1"]
         df["peer_gap3"] = np.nanmean(m3[peers], axis=1) - df["mom3"]
+        if fcum is not None:
+            # Which outside forces move this stock? Ridge regression of the stock's weekly
+            # market-adjusted moves on 50 factors' weekly moves over the past year.
+            wk = list(range(k - 260, k + 1, 5))
+            X = fcum.iloc[wk].diff().iloc[1:].to_numpy()
+            sd = X.std(0) + 1e-12
+            Xs = (X - X.mean(0)) / sd
+            Y = lp.iloc[wk][syms].diff().iloc[1:]
+            Y = Y.sub(Y.mean(axis=1), axis=0).fillna(0.0).to_numpy()
+            lam = len(Xs) * 1.0
+            Bm = np.linalg.solve(Xs.T @ Xs + lam * np.eye(Xs.shape[1]), Xs.T @ Y)  # factors x stocks
+            resid = Y - Xs @ Bm
+            df["factor_r2"] = 1 - resid.var(0) / (Y.var(0) + 1e-12)
+            move = (fcum.iloc[k] - fcum.iloc[k - 21]).to_numpy() / sd  # last month, in weekly-std units
+            implied = move @ Bm
+            df["factor_implied1"] = implied
+            df["factor_gap1"] = implied - (df["mom1"] - df["mom1"].mean())
+            cols_f = list(fcum.columns)
+            for name, short in KEY_FACTORS.items():
+                if name in cols_f:
+                    j = cols_f.index(name)
+                    df[f"beta_{short}"] = Bm[j]
+                    df[f"move_{short}"] = move[j]
         df["listing_gain"] = pd.Series(ipo_gain).reindex(syms)
         df["recent_ipo"] = (df["listing_gain"].notna() & (df["age"] < 500)).astype(float)
         df["has_wiki"] = df["wiki_level"].notna().astype(float)
@@ -206,7 +249,10 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     p = prepare(raw[~raw["symbol"].isin(funds)])  # companies only: ETFs are not stocks
     m = matrices(p, pd.read_pickle(views_pkl))
     f = features(m, ind, ipo_gain)
-    tab = month_table(m, f, ind, ipo_gain)
+    fac = None
+    if os.environ.get("FACTORS"):
+        fac = factor_returns(pd.read_pickle(os.environ["FACTORS"]), m["lp"].index)
+    tab = month_table(m, f, ind, ipo_gain, fac)
     tab.to_pickle(os.path.join(outdir, "monthly_table.pkl"))
     pred, imp, model, cols = walk_forward(tab)
     pred.to_pickle(os.path.join(outdir, "predictions.pkl"))
@@ -215,7 +261,9 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     pred["handmade"] = pred[["mom12_1_r", "high52_r", "sector_mom6_r"]].mean(axis=1, skipna=False)
     pred.loc[pred["frenzy21"] > 0, "handmade"] = np.nan
     res = {"model": stats(portfolio(pred)), "feature_importance": imp.to_dict()}
-    for sig in ["peer_gap1", "peer_gap3", "peer_ret1"]:
+    for sig in ["peer_gap1", "peer_gap3", "peer_ret1", "factor_gap1", "factor_implied1"]:
+        if sig + "_r" not in pred:
+            continue
         res["alone_" + sig] = stats(portfolio(pred.dropna(subset=[sig + "_r"]), sig + "_r"))
     if pred["handmade"].notna().any():
         res["handmade_trend_score"] = stats(portfolio(pred.dropna(subset=["handmade"]), "handmade"))
@@ -262,7 +310,7 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     res["as_of"] = str(pd.Timestamp(last).date())
     json.dump(res, open(os.path.join(outdir, "combined_results.json"), "w"), indent=1, default=str)
 
-    for name in [k for k in ["model", "handmade_trend_score", "alone_peer_gap1", "alone_peer_gap3", "alone_peer_ret1"] if k in res]:
+    for name in [k for k in ["model", "handmade_trend_score", "alone_peer_gap1", "alone_peer_gap3", "alone_peer_ret1", "alone_factor_gap1", "alone_factor_implied1"] if k in res]:
         s = res[name]
         print(f"{name:22} {s['first']}..{s['last']} ({s['months']} months, all out-of-sample)")
         print(f"   ahead of market {s['excess_per_month']*100:+.2f}%/month ({s['excess_per_year']*100:+.1f}%/yr), t={s['t']}, "
