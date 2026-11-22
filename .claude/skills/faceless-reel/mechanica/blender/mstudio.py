@@ -186,10 +186,12 @@ def studio(S, hdri=HDRI, hdri_strength=0.5, cards=True, key_energy=900, rim_ener
     else:
         bg.inputs[0].default_value = (0.05, 0.08, 0.18, 1); bg.inputs[1].default_value = 0.6
     if backdrop:   # opaque brand backdrop for the camera only; reflections and lighting still see the HDRI
-        S.render.film_transparent = False
+        S.render.film_transparent = False      # Rays that passed through glass see the backdrop too: otherwise glass shows
         lp = nt.nodes.new('ShaderNodeLightPath'); flat = nt.nodes.new('ShaderNodeBackground'); flat.inputs[0].default_value = (*backdrop, 1)
-        mix = nt.nodes.new('ShaderNodeMixShader'); out = nt.nodes['World Output']
-        nt.links.new(lp.outputs['Is Camera Ray'], mix.inputs['Fac']); nt.links.new(bg.outputs[0], mix.inputs[1]); nt.links.new(flat.outputs[0], mix.inputs[2])
+        mix = nt.nodes.new('ShaderNodeMixShader'); out = nt.nodes['World Output']   # the grey studio and reads as metal (tested)
+        mx = nt.nodes.new('ShaderNodeMath'); mx.operation = 'MAXIMUM'
+        nt.links.new(lp.outputs['Is Camera Ray'], mx.inputs[0]); nt.links.new(lp.outputs['Is Transmission Ray'], mx.inputs[1])
+        nt.links.new(mx.outputs[0], mix.inputs['Fac']); nt.links.new(bg.outputs[0], mix.inputs[1]); nt.links.new(flat.outputs[0], mix.inputs[2])
         nt.links.new(mix.outputs[0], out.inputs['Surface'])
     if cards:
         for loc, rot in (((0, -6, 4), (math.radians(60), 0, 0)), ((-6, 2, 3), (math.radians(70), 0, math.radians(-110)))):
@@ -236,10 +238,10 @@ def camera(S, target=(0, 0, 0), lens=58, distance=10.5, height=3.6, orbit=(-32, 
         cam.data.dof.use_dof = True; cam.data.dof.aperture_fstop = dof; cam.data.dof.focus_object = focus or aim
     return cam
 
-def overflow(S, objs, margin=0.05, step=2, max_pts=600):
+def overflow(S, objs, margin=0.05, step=2, max_pts=600, edges='lrtb'):
     """How far any part leaves the frame (minus a safety margin) across the animation. Projects the evaluated
     mesh's own vertices (not bounding boxes, which overshoot round parts by ~40%) into the camera on every
-    `step`-th frame. No rendering needed."""
+    `step`-th frame. No rendering needed. edges: which borders count ('lrb' lets things fall in from the top)."""
     from bpy_extras.object_utils import world_to_camera_view
     worst, at = -1.0, None
     for f in range(S.frame_start, S.frame_end + 1, step):
@@ -248,14 +250,15 @@ def overflow(S, objs, margin=0.05, step=2, max_pts=600):
             oe = o.evaluated_get(dg); me = oe.to_mesh(); vs = me.vertices; n = len(vs)
             for i in range(0, n, max(1, n // max_pts)):
                 v = world_to_camera_view(S, S.camera, oe.matrix_world @ vs[i].co)
-                over = max(margin - v.x, v.x - (1 - margin), margin - v.y, v.y - (1 - margin))
+                over = max(d for e, d in (('l', margin - v.x), ('r', v.x - (1 - margin)), ('b', margin - v.y), ('t', v.y - (1 - margin))) if e in edges)
                 if over > worst: worst, at = over, f
             oe.to_mesh_clear()
     return worst, at        # > 0: something leaves the frame; < 0: spare room (the tightest gap to the margin)
 
-def fit(S, objs, margin=0.05, lo=0.5, hi=3.0, iters=9):
+def fit(S, objs, margin=0.05, lo=0.5, hi=3.0, iters=9, **kw):
     """Tightest camera distance (scaled along its orbit around the target) that keeps every part inside the
-    margin on every frame: subjects fill the frame and nothing gets cropped. Binary search, framing only."""
+    margin on every frame: subjects fill the frame and nothing gets cropped. Binary search, framing only.
+    Physics scenes: call simulate(S) first so every frame holds the simulated positions. kw goes to overflow."""
     cam = S.camera; ad = cam.animation_data; tgt = cam.constraints['Track To'].target.location
     cb = anim_utils.action_get_channelbag_for_slot(ad.action, ad.action_slot)
     fcs = [fc for fc in cb.fcurves if fc.data_path == 'location']
@@ -266,11 +269,19 @@ def fit(S, objs, margin=0.05, lo=0.5, hi=3.0, iters=9):
                 t = tgt[fc.array_index]; kp.co[1] = t + (base[(fc.array_index, i)] - t) * k; kp.handle_left[1] = kp.handle_right[1] = kp.co[1]
     for _ in range(iters):
         mid = (lo + hi) / 2; apply(mid)
-        if overflow(S, objs, margin)[0] > 0: lo = mid
+        if overflow(S, objs, margin, **kw)[0] > 0: lo = mid
         else: hi = mid
-    apply(hi); o, f = overflow(S, objs, margin)
+    apply(hi); o, f = overflow(S, objs, margin, **kw)
     print(f'MSTUDIO framing: camera distance x{hi:.2f}, ' + (f'overflow {o:.3f} at frame {f}' if o > 0 else f'all parts in frame (tightest margin {-o + margin:.3f})'))
     return o
+
+def simulate(S):
+    """Rigid bodies only simulate frame after frame. Step the whole range once to fill the cache; afterwards any frame
+    (a still, the framing fit) holds the right positions. Cheap: 100 frames of 150 coins took 3-4 s."""
+    if not (S.rigidbody_world and S.rigidbody_world.enabled) or S.get('simulated'): return
+    t = time.time()
+    for f in range(S.frame_start, S.frame_end + 1): S.frame_set(f)
+    S['simulated'] = 1; print(f'MSTUDIO simulated {S.frame_end - S.frame_start + 1} physics frames in {time.time() - t:.0f}s')
 
 # ---------- render, with time logged per frame ----------
 def render(S, out, frames=None):
@@ -278,6 +289,7 @@ def render(S, out, frames=None):
     os.makedirs(out, exist_ok=True); log = []
     env = os.environ.get('MSTUDIO_FRAMES')                   # e.g. "1,45,90": check a look on stills before a full render
     if env and not frames: frames = [int(x) for x in env.split(',')]
+    simulate(S)
     for f in (frames or range(S.frame_start, S.frame_end + 1)):
         S.frame_set(f); S.render.filepath = os.path.join(out, f'f_{f:04d}.png'); t = time.time()
         bpy.ops.render.render(write_still=True); log.append({'frame': f, 'seconds': round(time.time() - t, 2)})
