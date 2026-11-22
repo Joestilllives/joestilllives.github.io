@@ -56,6 +56,16 @@ Run: `BHAVCOPY=<latest BhavCopy csv> python3 combined.py PANEL.pkl INDUSTRY.csv 
 | Thematic fund inflow surges -> market | Market did better after (+12.7% vs +5.7% over 3 months); weak evidence |
 | NSE moves stock into trade-for-trade (`surveillance.py`) | Typical stock lags the market ~15% over 3-6 months; 4,200 events |
 
+## Sentiment and mood
+
+| Signal | Result |
+|---|---|
+| Headline tone (FinBERT on 24,472 Moneycontrol headlines, Sep 2024-Jan 2025; `news_sentiment.py`) | Priced the same day (very positive +0.9%, very negative -0.8% vs market) but no edge after: next-week rank correlation 0.00. Very negative news drifts a little lower (-0.65% next week); very positive fades (-0.5%) |
+| Day's overall headline tone -> next day's market | corr -0.14 over 80 days (weak, contrarian) |
+| Mumbai sunshine (`mood.py`) | Clear days +0.09 to +0.13%/day better than cloudy, both periods; t about 1 |
+| Mumbai air pollution | Clean days +0.25%/day better in 2023-26 (t 1.7); data from Aug 2022 only |
+| Moon phase, pre-holiday | Inconsistent |
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
