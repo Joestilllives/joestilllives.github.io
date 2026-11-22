@@ -178,3 +178,12 @@ ETFs counted as stocks, sector-list survivor leak, 893 unadjusted split/bonus da
   understated it by ~2-3% over 60 days and made buy signals look good. Fixed.
 
 Research on past data, not financial advice.
+
+## Very different signals (Nov 2026)
+
+| Idea | Test | Result |
+|---|---|---|
+| Seasons | Small vs large companies by calendar month, 2016–2026 | Feb: small lagged large 10 of 10 years; Mar 9 of 11. Apr: market up 10 of 11, small ahead 10 of 11 (Indian fiscal year-end selling, then relief). A single stock's own past same-month returns: nothing |
+| Western customers → Indian suppliers (`supplier_chain.py`) | 86 Western firms; each Indian stock linked to its closest co-mover over the past 36 months; partner's move this month vs the stock next month | No edge overall (rank corr +0.007, t 1.1). Auto partners +0.038 (t 2.0) is a hint only |
+| US sector moves overnight (`us_spillover.py`) | Learned beta to 14 US sector funds; previous US session → next Indian day, 2,417 days | Real but priced in at the open: opening-gap rank corr +0.025 (t 11.5) for the largest firms, +0.005 for small. Tradable open→close part: top-minus-bottom fifth +0.055%/day (largest), +0.005%/day (small) — below trading costs |
+| Major industry trends (`industry_trends.py`) | Theme = 20 closest co-movers, point-in-time | Theme trend alone weak (t 1.0). Leader in a hot theme +0.024 (t 2.3), mostly the stock's own trend already in the model. Laggard in a hot theme −0.016 (t −3.0) is a trap, but as a red flag on the money signal it helped to 2021 and hurt after (+13.0 → +13.4%/yr; after 2021 11.6 → 11.0): not adopted |
