@@ -42,6 +42,20 @@ Run: `BHAVCOPY=<latest BhavCopy csv> python3 combined.py PANEL.pkl INDUSTRY.csv 
 - GDELT news tone could not be collected: its 1-request-per-5-seconds limit is shared by this
   environment's network.
 
+## Swanson-style chains tested (A -> B -> C)
+
+| Chain | Result |
+|---|---|
+| US-listed version (ADR) moves overnight -> same Indian stock next day (`leadlag.py`) | Strong but priced in at the open (Infosys gaps +1.9%, then +0.3%) |
+| Foreign parent moves -> Indian subsidiary next day (`leadlag.py`) | Some drift after the open: HUL +0.6% open-to-close after big Unilever moves (65% right); small |
+| Bad results (5%+ drop, 3x volume, results season) -> keeps falling (`results_drift.py`) | Yes, modestly, for about a month |
+| Good results -> keeps rising | No; speculative jumps fade |
+| Hot IPO (40%+ day 1) -> listed sector peers (`ipo_peers.py`) | Peers +0.4-0.6% next week, fading to -1-1.6% over 3 months; small samples |
+| NIFTY 50 additions/removals (`index_changes.py`) | Added stocks lag after (median -3.8% in 3 months); removed ones rebound (+5% next month); only 28 events |
+| Small-cap fund inflows -> small caps beat large (`fund_flows.py`) | No |
+| Thematic fund inflow surges -> market | Market did better after (+12.7% vs +5.7% over 3 months); weak evidence |
+| NSE moves stock into trade-for-trade (`surveillance.py`) | Typical stock lags the market ~15% over 3-6 months; 4,200 events |
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
