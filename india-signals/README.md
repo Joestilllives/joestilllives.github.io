@@ -76,6 +76,18 @@ ahead in 74% of months; 2021-23 +10.7%/yr, 2023-26 +8.4%/yr; deepest slide -7.3%
 Tested pieces: momentum alone +7.7%/yr; global-reversal alone -1.9%/yr (dropped); filtering
 any frenzy day hurt (removes a third of stocks). The final recipe was picked from these tests.
 
+### How to use it (the practical version)
+
+- Hold the **top 25 by score in each of the 4 size groups (~100 stocks), equal amounts**,
+  and **rebalance every month** (about 44 of 100 change). 69 months: **+9.7%/yr vs the
+  average company** (2021-23 +10.0%, 2023-26 +9.5%), t = 3.1, deepest slide -10.4%.
+- Fewer stocks (40-60) kept the average but were far less reliable; rebalancing every
+  3 months roughly halved the edge.
+- NSE momentum / low-volatility / alpha ETFs did NOT capture this: e.g. Nifty200 Momentum 30
+  +1.4%/yr and Alpha Low-Vol 30 +1.2%/yr over their 32 months vs +14.2%/yr for the algorithm.
+- This month's basket: `results/algorithm/basket_2026-11.csv`; removed for heavy frenzy:
+  `results/algorithm/red_flags_2026-11.csv`.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by

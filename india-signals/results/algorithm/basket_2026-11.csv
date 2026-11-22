@@ -1,0 +1,101 @@
+symbol,company,size_group,score,return_12m_pct,below_52w_high_pct,weight_pct
+KAPSTON,Kapston Services Limited,1,99.4,121.1,8.6,1.0
+OMAXAUTO,Omax Autos Ltd,1,99.1,181.8,9.7,1.0
+MWL,Mangalam Worldwide Ltd,1,98.5,87.2,13.0,1.0
+DBOL,Dhampur Bio Organics Ltd,1,97.6,100.0,5.7,1.0
+ZIMLAB,Zim Laboratories Limited,1,97.0,94.6,9.6,1.0
+UNITEDPOLY,United Polyfab Guj. Ltd.,1,96.5,75.0,4.4,1.0
+SONAMLTD,Sonam Limited,1,96.3,78.6,7.8,1.0
+PREMIERPOL,Premier Polyfilm Ltd,1,96.1,134.2,23.1,1.0
+IRISDOREME,Iris Clothings Limited,1,95.4,74.4,14.2,1.0
+MMP,Mmp Industries Limited,1,94.8,81.6,16.2,1.0
+INDOBORAX,Indo Borax & Chemical Ltd,1,94.4,91.3,20.0,1.0
+AAREYDRUGS,Aarey Drugs & Pharm Ltd,1,92.7,73.9,0.3,1.0
+DCI,Dc Infotech And Comun Ltd,1,91.1,72.2,18.6,1.0
+RUBYMILLS,The Ruby Mills Ltd,1,90.8,70.1,13.5,1.0
+AYMSYNTEX,Aym Syntex Limited,1,90.7,67.3,20.9,1.0
+NRAIL,N R Agarwal Inds Ltd,1,89.8,62.4,14.4,1.0
+EIFFL,Euro (I) Fresh Foods Ltd,1,89.2,55.1,12.0,1.0
+DOLPHIN,Dolphin Off Ent (Ind) L,1,89.1,65.7,13.3,1.0
+NGLFINE,Ngl Fine Chem Limited,1,88.4,72.1,13.4,1.0
+STEELCAS,Steelcast Limited,1,88.1,48.6,-0.0,1.0
+SANGAMIND,Sangam (India) Ltd,1,86.6,35.4,6.7,1.0
+ASHIANA,Ashiana Housing Ltd,1,86.5,36.0,13.0,1.0
+PVP,Pvp Ventures Limited,1,86.1,66.1,29.4,1.0
+HMVL,Hindustan Media Vent Ltd,1,85.8,36.3,8.3,1.0
+MUKANDLTD,Mukand Ltd.,1,85.1,35.6,21.9,1.0
+SALSTEEL,S.A.L. Steel Ltd.,2,99.7,130.1,18.7,1.0
+SEAMECLTD,Seamec Limited,2,98.3,89.1,12.2,1.0
+AVADHSUGAR,Avadh Sug & Energy Ltd,2,98.1,111.7,15.9,1.0
+LOKESHMACH,Lokesh Machines Ltd,2,96.9,111.2,25.5,1.0
+SOTL,Savita Oil Technolo. Ltd,2,95.6,98.3,17.6,1.0
+KENNAMET,Kennametal India Limited,2,95.5,70.4,22.3,1.0
+APCOTEXIND,Apcotex Industries Limite,2,94.0,72.6,28.1,1.0
+KINGFA,Kingfa Sci & Tec Ind Ltd.,2,93.3,57.6,8.6,1.0
+GHCLTEXTIL,Ghcl Textiles Limited,2,93.0,66.7,8.3,1.0
+BLUSPRING,Bluspring Enterprises Ltd,2,92.5,104.6,10.0,1.0
+SUNFLAG,Sunflag Iron And Steel Co,2,91.9,71.2,18.6,1.0
+PANAMAPET,Panama Petrochem Ltd,2,91.8,82.5,20.6,1.0
+DIVGIITTS,Divgi Torqtransfer Syst L,2,90.3,64.2,36.0,1.0
+UNIPARTS,Uniparts India Limited,2,90.2,51.2,20.9,1.0
+RML,Rane (Madras) Limited,2,89.7,55.9,11.5,1.0
+QUESS,Quess Corp Limited,2,87.9,42.8,9.8,1.0
+ADOR,Ador Welding Ltd,2,87.8,39.7,16.3,1.0
+KDDL,Kddl Limited,2,86.4,47.4,4.5,1.0
+MANGLMCEM,Mangalam Cement Ltd,2,86.3,31.9,17.0,1.0
+MAYURUNIQ,Mayur Uniquoters Ltd,2,86.2,42.4,21.4,1.0
+IGPL,I G Petrochemicals Ltd,2,86.0,42.9,7.2,1.0
+VISHNU,Vishnu Chemicals Limited,2,85.9,33.2,26.9,1.0
+AEROENTER,Aeroflex Enterprises Ltd,2,85.4,61.1,20.6,1.0
+PASUPTAC,Pasupati Acrylon Limited,2,85.3,51.8,15.0,1.0
+VADILALIND,Vadilal Industries Ltd,2,85.0,35.7,14.1,1.0
+HAPPYFORGE,Happy Forgings Limited,3,98.8,96.7,26.5,1.0
+NITINSPIN,Nitin Spinners Limited,3,98.6,93.5,2.9,1.0
+SAKAR,Sakar Healthcare Limited,3,98.4,164.4,14.8,1.0
+MBAPL,Madhya Bharat Agro P. Ltd,3,98.2,87.1,1.3,1.0
+TMB,Tamilnad Merca Bank Ltd,3,97.5,82.0,5.7,1.0
+KRISHANA,Krishana Phoschem Limited,3,97.3,90.1,1.4,1.0
+MACPOWER,Macpower Cnc Machines Ltd,3,96.8,131.7,3.6,1.0
+ROSSTECH,Rossell Techsys Limited,3,96.6,146.7,7.7,1.0
+NRBBEARING,Nrb Bearing Limited,3,96.4,87.8,24.1,1.0
+RPEL,Raghav Productivity Enh L,3,96.2,109.4,-0.0,1.0
+AKUMS,Akums Drugs And Pharma L,3,95.8,61.2,11.1,1.0
+ONEPOINT,One Point One Sol Ltd,3,95.7,75.3,15.8,1.0
+CEIGALL,Ceigall India Limited,3,95.3,50.7,2.1,1.0
+STYLAMIND,Stylam Industries Limited,3,95.2,59.7,14.1,1.0
+PGIL,Pearl Global Ind Limited,3,95.1,92.8,4.2,1.0
+YASHO,Yasho Industries Limited,3,95.0,134.2,26.6,1.0
+PRECWIRE,Precision Wires India Ltd,3,94.9,121.5,22.5,1.0
+GAEL,Gujarat Ambuja Exports Lt,3,94.3,64.2,20.8,1.0
+MMFL,Mm Forgings Ltd,3,94.2,85.3,5.3,1.0
+SHRIPISTON,Spr Auto Technologies Ltd,3,93.9,66.1,12.0,1.0
+SATIN,Satin Credit Net Ltd,3,93.8,57.8,2.7,1.0
+APOLLOPIPE,Apollo Pipes Limited,3,93.6,85.7,25.2,1.0
+ARFIN,Arfin India Limited,3,93.4,69.1,15.0,1.0
+DEEDEV,Dee Development Eng Ltd,3,93.1,87.8,25.7,1.0
+VINDHYATEL,Vindhya Telelinks Ltd,3,93.1,110.9,13.0,1.0
+SBC,Sbc Exports Limited,4,100.0,163.7,-0.0,1.0
+SHREEJISPG,Shreeji Shipping Global L,4,99.9,182.6,-0.0,1.0
+SHILPAMED,Shilpa Medicare Ltd,4,99.8,173.1,8.7,1.0
+INDSWFTLAB,Ind Swift Laboratories Lt,4,99.6,257.8,9.6,1.0
+SGMART,Sg Mart Limited,4,99.5,131.7,-0.0,1.0
+RPTECH,Rashi Peripherals Limited,4,99.3,161.9,27.9,1.0
+RUBICON,Rubicon Research Limited,4,99.2,135.2,13.6,1.0
+AETHER,Aether Industries Limited,4,99.0,125.7,9.2,1.0
+KTKBANK,Karnataka Bank Limited,4,98.9,91.9,1.1,1.0
+PAISALO,Paisalo Digital Limited,4,98.7,113.5,18.5,1.0
+WHEELS,Wheels India Ltd,4,98.6,151.2,2.7,1.0
+GANDHAR,Gandhar Oil Refine Ind L,4,98.0,137.1,19.5,1.0
+CYIENTDLM,Cyient Dlm Limited,4,97.9,125.6,16.6,1.0
+SBCL,Shivalik Bimetal Con. Ltd,4,97.8,140.5,11.2,1.0
+ATLANTAELE,Atlanta Electricals Ltd,4,97.7,130.3,20.4,1.0
+HONASA,Honasa Consumer Limited,4,97.4,66.4,0.9,1.0
+ALIVUS,Alivus Life Sciences Ltd,4,97.2,56.3,8.8,1.0
+GRWRHITECH,Garware Hi-Tech Films Ltd,4,97.1,115.9,4.8,1.0
+IPCALAB,Ipca Laboratories Ltd,4,96.7,55.3,6.1,1.0
+IOLCP,Iol Chem And Pharma Ltd,4,96.0,112.4,8.9,1.0
+BELRISE,Belrise Industries Ltd,4,95.9,67.9,21.3,1.0
+MANINDS,Man Industries (I) Ltd.,4,95.8,129.8,20.5,1.0
+SGFIN,Sg Finserve Limited,4,94.7,79.8,4.8,1.0
+RAYMOND,Raymond Ltd,4,94.6,95.9,12.2,1.0
+WSTCSTPAPR,West Coast Paper Mills Lt,4,94.5,88.6,28.1,1.0

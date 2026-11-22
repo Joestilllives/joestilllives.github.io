@@ -550,15 +550,6 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "INOXINDIA",
-   "company": "Inox India Limited",
-   "size_group": 4,
-   "score": 94.1,
-   "below_52w_high_pct": 17.1,
-   "return_12m_pct": 74.1,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "APCOTEXIND",
    "company": "Apcotex Industries Limite",
    "size_group": 2,
@@ -586,30 +577,12 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "SENORES",
-   "company": "Senores Pharmaceuticals L",
-   "size_group": 4,
-   "score": 93.7,
-   "below_52w_high_pct": 26.4,
-   "return_12m_pct": 72.6,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "APOLLOPIPE",
    "company": "Apollo Pipes Limited",
    "size_group": 3,
    "score": 93.6,
    "below_52w_high_pct": 25.2,
    "return_12m_pct": 85.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "UNIMECH",
-   "company": "Unimech Aerospace N Mfg L",
-   "size_group": 4,
-   "score": 93.5,
-   "below_52w_high_pct": 2.2,
-   "return_12m_pct": 87.6,
    "as_of": "2026-11-13"
   },
   {
@@ -628,15 +601,6 @@
    "score": 93.3,
    "below_52w_high_pct": 8.6,
    "return_12m_pct": 57.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "BAJAJCON",
-   "company": "Bajaj Consumer Care Ltd",
-   "size_group": 4,
-   "score": 93.2,
-   "below_52w_high_pct": 37.8,
-   "return_12m_pct": 88.6,
    "as_of": "2026-11-13"
   },
   {
@@ -667,24 +631,6 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "ASTRAMICRO",
-   "company": "Astra Microwave Ltd",
-   "size_group": 4,
-   "score": 92.9,
-   "below_52w_high_pct": 11.3,
-   "return_12m_pct": 62.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "UNIVCABLES",
-   "company": "Universal Cables Ltd",
-   "size_group": 3,
-   "score": 92.8,
-   "below_52w_high_pct": 34.8,
-   "return_12m_pct": 111.5,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "AAREYDRUGS",
    "company": "Aarey Drugs & Pharm Ltd",
    "size_group": 1,
@@ -694,66 +640,12 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "DYNAMATECH",
-   "company": "Dynamatic Technologies",
-   "size_group": 3,
-   "score": 92.6,
-   "below_52w_high_pct": 11.3,
-   "return_12m_pct": 74.2,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "BLUSPRING",
    "company": "Bluspring Enterprises Ltd",
    "size_group": 2,
    "score": 92.5,
    "below_52w_high_pct": 10.0,
    "return_12m_pct": 104.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "CRAFTSMAN",
-   "company": "Craftsman Automation Ltd",
-   "size_group": 4,
-   "score": 92.4,
-   "below_52w_high_pct": 7.5,
-   "return_12m_pct": 54.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SPECTRUM",
-   "company": "Spectrum Electric Ind Ltd",
-   "size_group": 3,
-   "score": 92.3,
-   "below_52w_high_pct": 2.1,
-   "return_12m_pct": 82.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MARKSANS",
-   "company": "Marksans Pharma Limited",
-   "size_group": 4,
-   "score": 92.2,
-   "below_52w_high_pct": 8.4,
-   "return_12m_pct": 65.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MARINE",
-   "company": "Marine Electrical (I) Ltd",
-   "size_group": 4,
-   "score": 92.1,
-   "below_52w_high_pct": 13.2,
-   "return_12m_pct": 89.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AVALON",
-   "company": "Avalon Technologies Ltd",
-   "size_group": 4,
-   "score": 92.0,
-   "below_52w_high_pct": 22.4,
-   "return_12m_pct": 95.3,
    "as_of": "2026-11-13"
   },
   {
@@ -775,84 +667,12 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "BBOX",
-   "company": "Black Box Limited",
-   "size_group": 4,
-   "score": 91.7,
-   "below_52w_high_pct": 19.4,
-   "return_12m_pct": 71.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "FCL",
-   "company": "Fineotex Chemical Limited",
-   "size_group": 4,
-   "score": 91.6,
-   "below_52w_high_pct": 13.7,
-   "return_12m_pct": 95.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ARVIND",
-   "company": "Arvind Limited",
-   "size_group": 4,
-   "score": 91.5,
-   "below_52w_high_pct": 14.3,
-   "return_12m_pct": 53.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "CONFIPET",
-   "company": "Confidence Petro Ind Ltd.",
-   "size_group": 3,
-   "score": 91.4,
-   "below_52w_high_pct": 32.0,
-   "return_12m_pct": 107.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "BALRAMCHIN",
-   "company": "Balrampur Chini Mills Ltd",
-   "size_group": 4,
-   "score": 91.3,
-   "below_52w_high_pct": 14.5,
-   "return_12m_pct": 59.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "GNA",
-   "company": "Gna Axles Limited",
-   "size_group": 3,
-   "score": 91.2,
-   "below_52w_high_pct": 6.5,
-   "return_12m_pct": 71.8,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "DCI",
    "company": "Dc Infotech And Comun Ltd",
    "size_group": 1,
    "score": 91.1,
    "below_52w_high_pct": 18.6,
    "return_12m_pct": 72.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SMCGLOBAL",
-   "company": "Smc Global Securities Ltd",
-   "size_group": 3,
-   "score": 91.0,
-   "below_52w_high_pct": 19.1,
-   "return_12m_pct": 79.5,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ACMESOLAR",
-   "company": "Acme Solar Holdings Ltd",
-   "size_group": 4,
-   "score": 90.9,
-   "below_52w_high_pct": 11.6,
-   "return_12m_pct": 54.0,
    "as_of": "2026-11-13"
   },
   {
@@ -874,42 +694,6 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "KOPRAN",
-   "company": "Kopran Ltd",
-   "size_group": 3,
-   "score": 90.6,
-   "below_52w_high_pct": 1.2,
-   "return_12m_pct": 67.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "PTCIL",
-   "company": "Ptc Industries Limited",
-   "size_group": 4,
-   "score": 90.5,
-   "below_52w_high_pct": 5.6,
-   "return_12m_pct": 48.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "JINDALSAW",
-   "company": "Jindal Saw Limited",
-   "size_group": 4,
-   "score": 90.4,
-   "below_52w_high_pct": 18.9,
-   "return_12m_pct": 69.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "CENTUM",
-   "company": "Centum Electronics Ltd",
-   "size_group": 3,
-   "score": 90.3,
-   "below_52w_high_pct": 11.8,
-   "return_12m_pct": 69.0,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "DIVGIITTS",
    "company": "Divgi Torqtransfer Syst L",
    "size_group": 2,
@@ -925,33 +709,6 @@
    "score": 90.2,
    "below_52w_high_pct": 20.9,
    "return_12m_pct": 51.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "NAZARA",
-   "company": "Nazara Technologies Ltd",
-   "size_group": 4,
-   "score": 90.1,
-   "below_52w_high_pct": -0.0,
-   "return_12m_pct": 49.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "NEOGEN",
-   "company": "Neogen Chemicals Limited",
-   "size_group": 4,
-   "score": 90.0,
-   "below_52w_high_pct": 1.7,
-   "return_12m_pct": 71.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "DHAMPURSUG",
-   "company": "Dhampur Sugar Mills Ltd.",
-   "size_group": 3,
-   "score": 89.9,
-   "below_52w_high_pct": 18.5,
-   "return_12m_pct": 52.8,
    "as_of": "2026-11-13"
   },
   {
@@ -973,42 +730,6 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "SHANTIGOLD",
-   "company": "Shanti Gold Internation L",
-   "size_group": 4,
-   "score": 89.6,
-   "below_52w_high_pct": 39.2,
-   "return_12m_pct": 69.5,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "EMCURE",
-   "company": "Emcure Pharmaceuticals L",
-   "size_group": 4,
-   "score": 89.5,
-   "below_52w_high_pct": -0.0,
-   "return_12m_pct": 39.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "TRIVENI",
-   "company": "Triveni Engg. & Inds. Ltd",
-   "size_group": 3,
-   "score": 89.4,
-   "below_52w_high_pct": 17.7,
-   "return_12m_pct": 43.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ANTELOPUS",
-   "company": "Antelopus Selan Enrgy Ltd",
-   "size_group": 4,
-   "score": 89.3,
-   "below_52w_high_pct": 31.6,
-   "return_12m_pct": 101.2,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "EIFFL",
    "company": "Euro (I) Fresh Foods Ltd",
    "size_group": 1,
@@ -1027,60 +748,6 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "DEEPINDS",
-   "company": "Deep Industries Limited",
-   "size_group": 3,
-   "score": 89.0,
-   "below_52w_high_pct": 21.1,
-   "return_12m_pct": 59.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "VENUSPIPES",
-   "company": "Venus Pipes & Tubes Ltd",
-   "size_group": 4,
-   "score": 88.9,
-   "below_52w_high_pct": 21.3,
-   "return_12m_pct": 57.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "LLOYDSME",
-   "company": "Lloyds Metals N Energy L",
-   "size_group": 4,
-   "score": 88.8,
-   "below_52w_high_pct": 15.9,
-   "return_12m_pct": 41.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "DCBBANK",
-   "company": "Dcb Bank Limited",
-   "size_group": 3,
-   "score": 88.7,
-   "below_52w_high_pct": 1.8,
-   "return_12m_pct": 42.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AXISCADES",
-   "company": "Axiscades Tech Ltd",
-   "size_group": 3,
-   "score": 88.6,
-   "below_52w_high_pct": 18.9,
-   "return_12m_pct": 55.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "JAMNAAUTO",
-   "company": "Jamna Auto Ind Ltd",
-   "size_group": 3,
-   "score": 88.5,
-   "below_52w_high_pct": 1.7,
-   "return_12m_pct": 54.3,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "NGLFINE",
    "company": "Ngl Fine Chem Limited",
    "size_group": 1,
@@ -1090,39 +757,12 @@
    "as_of": "2026-11-13"
   },
   {
-   "symbol": "THANGAMAYL",
-   "company": "Thangamayil Jewellery Ltd",
-   "size_group": 4,
-   "score": 88.3,
-   "below_52w_high_pct": 44.0,
-   "return_12m_pct": 68.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "FILATEX",
-   "company": "Filatex India Ltd",
-   "size_group": 3,
-   "score": 88.2,
-   "below_52w_high_pct": 13.8,
-   "return_12m_pct": 59.8,
-   "as_of": "2026-11-13"
-  },
-  {
    "symbol": "STEELCAS",
    "company": "Steelcast Limited",
    "size_group": 1,
    "score": 88.1,
    "below_52w_high_pct": -0.0,
    "return_12m_pct": 48.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "THELEELA",
-   "company": "Leela Palaces Hotel Ltd",
-   "size_group": 4,
-   "score": 88.0,
-   "below_52w_high_pct": 2.7,
-   "return_12m_pct": 35.1,
    "as_of": "2026-11-13"
   },
   {
@@ -1141,69 +781,6 @@
    "score": 87.8,
    "below_52w_high_pct": 16.3,
    "return_12m_pct": 39.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AJANTPHARM",
-   "company": "Ajanta Pharma Limited",
-   "size_group": 4,
-   "score": 87.7,
-   "below_52w_high_pct": 12.5,
-   "return_12m_pct": 26.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "DALMIASUG",
-   "company": "Dalmia Bharat Sug In Ltd",
-   "size_group": 3,
-   "score": 87.6,
-   "below_52w_high_pct": 1.8,
-   "return_12m_pct": 55.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MANORAMA",
-   "company": "Manorama Industries Ltd",
-   "size_group": 3,
-   "score": 87.4,
-   "below_52w_high_pct": 8.4,
-   "return_12m_pct": 49.5,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ESAFSFB",
-   "company": "Esaf Small Finance Bank L",
-   "size_group": 3,
-   "score": 87.2,
-   "below_52w_high_pct": -0.0,
-   "return_12m_pct": 45.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "RISHABH",
-   "company": "Rishabh Instruments Ltd",
-   "size_group": 3,
-   "score": 87.0,
-   "below_52w_high_pct": 23.4,
-   "return_12m_pct": 53.5,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "VIJAYA",
-   "company": "Vijaya Diagnostic Cen Ltd",
-   "size_group": 3,
-   "score": 86.9,
-   "below_52w_high_pct": 10.1,
-   "return_12m_pct": 34.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AURUM",
-   "company": "Aurum Proptech Limited",
-   "size_group": 3,
-   "score": 86.8,
-   "below_52w_high_pct": 14.3,
-   "return_12m_pct": 37.8,
    "as_of": "2026-11-13"
   },
   {
@@ -1321,555 +898,6 @@
    "score": 85.0,
    "below_52w_high_pct": 14.1,
    "return_12m_pct": 35.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "GANESHBE",
-   "company": "Ganesh Benzoplast Limited",
-   "size_group": 3,
-   "score": 84.9,
-   "below_52w_high_pct": 4.6,
-   "return_12m_pct": 41.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "UTTAMSUGAR",
-   "company": "Uttam Sugar Mills Ltd.",
-   "size_group": 3,
-   "score": 84.8,
-   "below_52w_high_pct": 5.7,
-   "return_12m_pct": 55.9,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "OAL",
-   "company": "Oriental Aromatics Ltd",
-   "size_group": 3,
-   "score": 84.7,
-   "below_52w_high_pct": 25.9,
-   "return_12m_pct": 52.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "JNKINDIA",
-   "company": "Jnk India Limited",
-   "size_group": 2,
-   "score": 84.4,
-   "below_52w_high_pct": 35.4,
-   "return_12m_pct": 55.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "IDEAFORGE",
-   "company": "Ideaforge Techno Ltd",
-   "size_group": 3,
-   "score": 84.3,
-   "below_52w_high_pct": 25.5,
-   "return_12m_pct": 51.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "VARROC",
-   "company": "Varroc Engineering Ltd.",
-   "size_group": 3,
-   "score": 84.2,
-   "below_52w_high_pct": 4.6,
-   "return_12m_pct": 32.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "PIXTRANS",
-   "company": "Pix Transmissions Limited",
-   "size_group": 1,
-   "score": 84.0,
-   "below_52w_high_pct": 11.9,
-   "return_12m_pct": 30.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SOMANYCERA",
-   "company": "Somany Ceramics Limited",
-   "size_group": 2,
-   "score": 83.9,
-   "below_52w_high_pct": 17.6,
-   "return_12m_pct": 33.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AVTNPL",
-   "company": "Avt Natural Products Ltd",
-   "size_group": 2,
-   "score": 83.6,
-   "below_52w_high_pct": 4.8,
-   "return_12m_pct": 35.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SILVERTUC",
-   "company": "Silver Touch Techno Ltd",
-   "size_group": 1,
-   "score": 83.3,
-   "below_52w_high_pct": 34.4,
-   "return_12m_pct": 49.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "FINEORG",
-   "company": "Fine Organic Ind. Ltd.",
-   "size_group": 2,
-   "score": 83.0,
-   "below_52w_high_pct": 8.1,
-   "return_12m_pct": 25.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ASAHISONG",
-   "company": "Asahi Songwon Color Ltd",
-   "size_group": 1,
-   "score": 82.9,
-   "below_52w_high_pct": 5.3,
-   "return_12m_pct": 38.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "INNOVACAP",
-   "company": "Innova Captab Limited",
-   "size_group": 2,
-   "score": 82.3,
-   "below_52w_high_pct": 13.6,
-   "return_12m_pct": 29.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "PONNIERODE",
-   "company": "Ponnie Sugars (Erode) Ltd",
-   "size_group": 1,
-   "score": 81.9,
-   "below_52w_high_pct": 21.1,
-   "return_12m_pct": 28.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "GUFICBIO",
-   "company": "Gufic Biosciences Ltd.",
-   "size_group": 2,
-   "score": 81.9,
-   "below_52w_high_pct": 2.9,
-   "return_12m_pct": 28.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "QUADFUTURE",
-   "company": "Quadrant Future Tek Ltd",
-   "size_group": 2,
-   "score": 81.8,
-   "below_52w_high_pct": 22.4,
-   "return_12m_pct": 48.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SUNDRMFAST",
-   "company": "Sundram Fasteners Ltd",
-   "size_group": 2,
-   "score": 81.6,
-   "below_52w_high_pct": 17.3,
-   "return_12m_pct": 20.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ARTEMISMED",
-   "company": "Artemis Med Service Ltd",
-   "size_group": 2,
-   "score": 81.2,
-   "below_52w_high_pct": 15.0,
-   "return_12m_pct": 27.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "RACLGEAR",
-   "company": "Racl Geartech Limited",
-   "size_group": 1,
-   "score": 81.1,
-   "below_52w_high_pct": 18.4,
-   "return_12m_pct": 40.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "TEXINFRA",
-   "company": "Texmaco Infra & Holdg Ltd",
-   "size_group": 2,
-   "score": 81.0,
-   "below_52w_high_pct": 6.5,
-   "return_12m_pct": 21.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "YUKEN",
-   "company": "Yuken India Limited",
-   "size_group": 1,
-   "score": 80.8,
-   "below_52w_high_pct": 11.5,
-   "return_12m_pct": 28.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "HESTERBIO",
-   "company": "Hester Biosciences Ltd",
-   "size_group": 1,
-   "score": 80.7,
-   "below_52w_high_pct": 8.5,
-   "return_12m_pct": 30.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ASIANENE",
-   "company": "Asian Energy Services Ltd",
-   "size_group": 2,
-   "score": 80.6,
-   "below_52w_high_pct": 28.7,
-   "return_12m_pct": 37.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SIS",
-   "company": "Sis Limited",
-   "size_group": 1,
-   "score": 80.5,
-   "below_52w_high_pct": 16.0,
-   "return_12m_pct": 21.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "INDORAMA",
-   "company": "Indo Rama Synthetics Ltd",
-   "size_group": 2,
-   "score": 80.3,
-   "below_52w_high_pct": 31.3,
-   "return_12m_pct": 42.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MANOMAY",
-   "company": "Manomay Tex India Ltd",
-   "size_group": 2,
-   "score": 80.2,
-   "below_52w_high_pct": 2.8,
-   "return_12m_pct": 29.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "VSSL",
-   "company": "Vardhman Spc Steel Ltd",
-   "size_group": 2,
-   "score": 80.0,
-   "below_52w_high_pct": 8.8,
-   "return_12m_pct": 25.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "EIMCOELECO",
-   "company": "Eimco Elecon (India) Ltd",
-   "size_group": 2,
-   "score": 79.8,
-   "below_52w_high_pct": -0.0,
-   "return_12m_pct": 31.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "HIRECT",
-   "company": "Hirect Limited",
-   "size_group": 2,
-   "score": 79.7,
-   "below_52w_high_pct": 32.0,
-   "return_12m_pct": 36.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "NINSYS",
-   "company": "Nintec Systems Limited",
-   "size_group": 1,
-   "score": 79.6,
-   "below_52w_high_pct": 8.0,
-   "return_12m_pct": 27.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "TCPLPACK",
-   "company": "Tcpl Packaging Limited",
-   "size_group": 2,
-   "score": 79.5,
-   "below_52w_high_pct": 2.1,
-   "return_12m_pct": 32.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "FAIRCHEMOR",
-   "company": "Fairchem Organics Limited",
-   "size_group": 1,
-   "score": 79.4,
-   "below_52w_high_pct": 18.2,
-   "return_12m_pct": 24.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "DHANBANK",
-   "company": "Dhanlaxmi Bank Limited",
-   "size_group": 2,
-   "score": 79.1,
-   "below_52w_high_pct": -0.0,
-   "return_12m_pct": 32.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "KMSUGAR",
-   "company": "K M Sugar Mills Ltd",
-   "size_group": 1,
-   "score": 78.4,
-   "below_52w_high_pct": 3.2,
-   "return_12m_pct": 24.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ADFFOODS",
-   "company": "Adf Foods Limited",
-   "size_group": 1,
-   "score": 78.3,
-   "below_52w_high_pct": 25.3,
-   "return_12m_pct": 30.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "PPAP",
-   "company": "Ppap Automotive Limited",
-   "size_group": 2,
-   "score": 77.8,
-   "below_52w_high_pct": 7.1,
-   "return_12m_pct": 31.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "GRINDWELL",
-   "company": "Grindwell Norton Limited",
-   "size_group": 2,
-   "score": 77.7,
-   "below_52w_high_pct": 20.0,
-   "return_12m_pct": 21.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SPAL",
-   "company": "S. P. Apparels Limited",
-   "size_group": 1,
-   "score": 77.4,
-   "below_52w_high_pct": 25.9,
-   "return_12m_pct": 29.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ANDHRSUGAR",
-   "company": "Andhra Sugars Ltd",
-   "size_group": 1,
-   "score": 77.2,
-   "below_52w_high_pct": 17.3,
-   "return_12m_pct": 22.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "INDOTECH",
-   "company": "Indo Tech Transform Ltd.",
-   "size_group": 2,
-   "score": 77.0,
-   "below_52w_high_pct": 41.3,
-   "return_12m_pct": 32.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MONARCH",
-   "company": "Monarch Networth Cap Ltd",
-   "size_group": 1,
-   "score": 76.8,
-   "below_52w_high_pct": 12.8,
-   "return_12m_pct": 18.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AMBIKCO",
-   "company": "Ambika Cotton Mill Ltd.",
-   "size_group": 1,
-   "score": 76.7,
-   "below_52w_high_pct": 20.2,
-   "return_12m_pct": 18.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ORCHPHARMA",
-   "company": "Orchid Pharma Limited",
-   "size_group": 2,
-   "score": 76.5,
-   "below_52w_high_pct": 21.8,
-   "return_12m_pct": 24.5,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SMARTLINK",
-   "company": "Smartlink Holdings Ltd",
-   "size_group": 1,
-   "score": 76.4,
-   "below_52w_high_pct": 21.5,
-   "return_12m_pct": 24.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "GALAPREC",
-   "company": "Gala Precision Eng Ltd",
-   "size_group": 2,
-   "score": 76.3,
-   "below_52w_high_pct": 0.7,
-   "return_12m_pct": 23.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "EMAMIPAP",
-   "company": "Emami Paper Mills Limited",
-   "size_group": 2,
-   "score": 76.2,
-   "below_52w_high_pct": 3.1,
-   "return_12m_pct": 18.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "CENTENKA",
-   "company": "Century Enka Ltd",
-   "size_group": 1,
-   "score": 75.7,
-   "below_52w_high_pct": 25.3,
-   "return_12m_pct": 19.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "OMAXE",
-   "company": "Omaxe Limited",
-   "size_group": 2,
-   "score": 75.6,
-   "below_52w_high_pct": 26.6,
-   "return_12m_pct": 30.6,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "GOKULAGRO",
-   "company": "Gokul Agro Resources Ltd",
-   "size_group": 2,
-   "score": 75.5,
-   "below_52w_high_pct": 10.6,
-   "return_12m_pct": 20.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "KSL",
-   "company": "Kalyani Steels Limited",
-   "size_group": 2,
-   "score": 75.3,
-   "below_52w_high_pct": 13.8,
-   "return_12m_pct": 18.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "CANHLIFE",
-   "company": "Canara Hsbc Life Ins Co L",
-   "size_group": 2,
-   "score": 75.0,
-   "below_52w_high_pct": 13.2,
-   "return_12m_pct": 14.0,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MANCREDIT",
-   "company": "Mangal Credit N Fincorp L",
-   "size_group": 1,
-   "score": 74.9,
-   "below_52w_high_pct": 1.5,
-   "return_12m_pct": 18.2,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "MAXESTATES",
-   "company": "Max Estates Limited",
-   "size_group": 1,
-   "score": 74.4,
-   "below_52w_high_pct": 8.5,
-   "return_12m_pct": 19.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "BIL",
-   "company": "Bhartiya International",
-   "size_group": 1,
-   "score": 73.9,
-   "below_52w_high_pct": 4.8,
-   "return_12m_pct": 20.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "ESABINDIA",
-   "company": "Esab India Ltd",
-   "size_group": 1,
-   "score": 73.5,
-   "below_52w_high_pct": 28.4,
-   "return_12m_pct": 13.3,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "SHANTIGEAR",
-   "company": "Shanthi Gears Ltd",
-   "size_group": 1,
-   "score": 73.3,
-   "below_52w_high_pct": 29.8,
-   "return_12m_pct": 18.1,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "INDOAMIN",
-   "company": "Indo Amines Limited",
-   "size_group": 1,
-   "score": 72.9,
-   "below_52w_high_pct": 23.0,
-   "return_12m_pct": 16.7,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "HARSHA",
-   "company": "Harsha Engineers Int Ltd",
-   "size_group": 1,
-   "score": 72.5,
-   "below_52w_high_pct": 3.6,
-   "return_12m_pct": 13.5,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "THEJO",
-   "company": "Thejo Engineering Limited",
-   "size_group": 1,
-   "score": 72.4,
-   "below_52w_high_pct": 8.0,
-   "return_12m_pct": 13.4,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "5PAISA",
-   "company": "5Paisa Capital Limited",
-   "size_group": 1,
-   "score": 72.0,
-   "below_52w_high_pct": 15.6,
-   "return_12m_pct": 17.8,
-   "as_of": "2026-11-13"
-  },
-  {
-   "symbol": "AAATECH",
-   "company": "Aaa Technologies Limited",
-   "size_group": 1,
-   "score": 71.1,
-   "below_52w_high_pct": 26.1,
-   "return_12m_pct": 15.4,
    "as_of": "2026-11-13"
   }
  ],
