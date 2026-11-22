@@ -1,0 +1,1759 @@
+{
+ "generated": "2026-11-22T00:12:11.929624+00:00",
+ "sample": true,
+ "headlines_scanned": 12,
+ "feed_errors": 0,
+ "alerts": [
+  {
+   "id": "710b0a70e584",
+   "title": "Big Tech lifts AI capex plans again for next year",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "AI / data-centre spending",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "nvidia",
+     "name": "Nvidia",
+     "market": "US",
+     "ticker": "NVDA",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.8,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Nvidia",
+       "why": "Data-centre buildouts run on Nvidia GPUs"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "tsmc",
+     "name": "TSMC",
+     "market": "Global",
+     "ticker": "TSM",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.6,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TCS",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Infosys",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Wipro",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "HCLTech",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Tech Mahindra",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "maruti",
+     "name": "Maruti Suzuki",
+     "market": "IN",
+     "ticker": "NSE:MARUTI",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      },
+      {
+       "from": "TSMC",
+       "to": "Semiconductor supply",
+       "why": "TSMC is the world's largest contract chipmaker"
+      },
+      {
+       "from": "Semiconductor supply",
+       "to": "Maruti Suzuki",
+       "why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.1,
+   "cross_market": true,
+   "post": "🌊 The news: Big Tech lifts AI capex plans again for next year\n\nThe hidden link nobody's talking about:\nAI / data-centre spending → TSMC → Semiconductor supply → Maruti Suzuki\n\n• TSMC manufactures most advanced AI chips.\n• TSMC is the world's largest contract chipmaker.\n• The 2021 chip shortage forced carmakers, including Maruti, to cut production.\n\nAlso in the ripple: Nvidia ▲, TSMC ▲, TCS ◆, Infosys ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Big Tech lifts AI capex plans again for next year\nSource: Sample headline\n\n▲ Nvidia (NVDA) [US] — tailwind, via AI / data-centre spending\n▲ TSMC (TSM) [Global] — tailwind, via AI / data-centre spending\n◆ TCS (NSE:TCS) [IN] — exposed, via AI / data-centre spending\n◆ Infosys (NSE:INFY) [IN] — exposed, via AI / data-centre spending\n◆ Wipro (NSE:WIPRO) [IN] — exposed, via AI / data-centre spending\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "8dff5236e772",
+   "title": "US announces new tariffs on Indian goods including textiles and seafood",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "US tariffs on Indian goods",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "welspun",
+     "name": "Welspun Living",
+     "market": "IN",
+     "ticker": "NSE:WELSPUNLIV",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Welspun Living",
+       "why": "The US is Welspun's largest market for home textiles"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "avanti",
+     "name": "Avanti Feeds",
+     "market": "IN",
+     "ticker": "NSE:AVANTIFEED",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Avanti Feeds",
+       "why": "The US is a top market for Indian shrimp"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "sunpharma",
+     "name": "Sun Pharma",
+     "market": "IN",
+     "ticker": "NSE:SUNPHARMA",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Sun Pharma",
+       "why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "drreddy",
+     "name": "Dr. Reddy's",
+     "market": "IN",
+     "ticker": "NSE:DRREDDY",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Dr. Reddy's",
+       "why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "cipla",
+     "name": "Cipla",
+     "market": "IN",
+     "ticker": "NSE:CIPLA",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Cipla",
+       "why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "lupin",
+     "name": "Lupin",
+     "market": "IN",
+     "ticker": "NSE:LUPIN",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Lupin",
+       "why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "aurobindo",
+     "name": "Aurobindo Pharma",
+     "market": "IN",
+     "ticker": "NSE:AUROPHARMA",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Aurobindo Pharma",
+       "why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.159,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US tariffs on Indian goods",
+       "to": "Indian rupee strength",
+       "why": "Trade friction can hit export earnings and sentiment on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.05,
+   "cross_market": true,
+   "post": "🌊 The news: US announces new tariffs on Indian goods including textiles and seafood\n\nThe hidden link nobody's talking about:\nUS tariffs on Indian goods → Indian rupee strength → TCS\n\n• Trade friction can hit export earnings and sentiment on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Welspun Living ▼, Avanti Feeds ▼, Sun Pharma ◆, Dr. Reddy's ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 US announces new tariffs on Indian goods including textiles and seafood\nSource: Sample headline\n\n▼ Welspun Living (NSE:WELSPUNLIV) [IN] — headwind, via US tariffs on Indian goods\n▼ Avanti Feeds (NSE:AVANTIFEED) [IN] — headwind, via US tariffs on Indian goods\n◆ Sun Pharma (NSE:SUNPHARMA) [IN] — exposed, via US tariffs on Indian goods\n◆ Dr. Reddy's (NSE:DRREDDY) [IN] — exposed, via US tariffs on Indian goods\n◆ Cipla (NSE:CIPLA) [IN] — exposed, via US tariffs on Indian goods\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "abdb952ea232",
+   "title": "US to raise H-1B visa fees for new applications",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "US work-visa (H-1B) restrictions",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US work-visa (H-1B) restrictions",
+       "to": "TCS",
+       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US work-visa (H-1B) restrictions",
+       "to": "Infosys",
+       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US work-visa (H-1B) restrictions",
+       "to": "Wipro",
+       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US work-visa (H-1B) restrictions",
+       "to": "HCLTech",
+       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US work-visa (H-1B) restrictions",
+       "to": "Tech Mahindra",
+       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.0,
+   "cross_market": true,
+   "post": "🌊 The news: US to raise H-1B visa fees for new applications\n\nThe hidden link nobody's talking about:\nUS work-visa (H-1B) restrictions → TCS\n\n• Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs.\n\nAlso in the ripple: Infosys ▼, Wipro ▼, HCLTech ▼, Tech Mahindra ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 US to raise H-1B visa fees for new applications\nSource: Sample headline\n\n▼ TCS (NSE:TCS) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Infosys (NSE:INFY) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Wipro (NSE:WIPRO) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ HCLTech (NSE:HCLTECH) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Tech Mahindra (NSE:TECHM) [IN] — headwind, via US work-visa (H-1B) restrictions\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "ddbfeed7df34",
+   "title": "Accenture cuts full-year revenue guidance as clients delay spending",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "Accenture",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Accenture",
+       "to": "TCS",
+       "why": "Accenture's results and guidance are a closely watched read-through for Indian IT demand"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Accenture",
+       "to": "Infosys",
+       "why": "Accenture's results and guidance are a closely watched read-through for Indian IT demand"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Accenture",
+       "to": "Wipro",
+       "why": "Accenture's results and guidance are a closely watched read-through for Indian IT demand"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Accenture",
+       "to": "HCLTech",
+       "why": "Accenture's results and guidance are a closely watched read-through for Indian IT demand"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Accenture",
+       "to": "Tech Mahindra",
+       "why": "Accenture's results and guidance are a closely watched read-through for Indian IT demand"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.0,
+   "cross_market": true,
+   "post": "🌊 The news: Accenture cuts full-year revenue guidance as clients delay spending\n\nThe hidden link nobody's talking about:\nAccenture → TCS\n\n• Accenture's results and guidance are a closely watched read-through for Indian IT demand.\n\nAlso in the ripple: Infosys ▼, Wipro ▼, HCLTech ▼, Tech Mahindra ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Accenture cuts full-year revenue guidance as clients delay spending\nSource: Sample headline\n\n▼ TCS (NSE:TCS) [IN] — headwind, via Accenture\n▼ Infosys (NSE:INFY) [IN] — headwind, via Accenture\n▼ Wipro (NSE:WIPRO) [IN] — headwind, via Accenture\n▼ HCLTech (NSE:HCLTECH) [IN] — headwind, via Accenture\n▼ Tech Mahindra (NSE:TECHM) [IN] — headwind, via Accenture\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "5371c15f2bde",
+   "title": "Oil jumps 4% as OPEC+ agrees to cut output further",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "OPEC+ oil output",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.595,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.595,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.51,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.255,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.217,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "OPEC+ oil output",
+       "to": "Crude oil price",
+       "why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 0.98,
+   "cross_market": true,
+   "post": "🌊 The news: Oil jumps 4% as OPEC+ agrees to cut output further\n\nThe hidden link nobody's talking about:\nOPEC+ oil output → Crude oil price → Indian rupee strength → TCS\n\n• Less OPEC+ output tightens supply and pushes oil prices up (and vice versa).\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil jumps 4% as OPEC+ agrees to cut output further\nSource: Sample headline\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via OPEC+ oil output → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via OPEC+ oil output → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via OPEC+ oil output → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via OPEC+ oil output → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via OPEC+ oil output → Crude oil price\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "0c5f461be0c2",
+   "title": "Tensions rise in the Strait of Hormuz after tanker seized",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "Strait of Hormuz tension",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.595,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.595,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.51,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.255,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.217,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 0.98,
+   "cross_market": true,
+   "post": "🌊 The news: Tensions rise in the Strait of Hormuz after tanker seized\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Tensions rise in the Strait of Hormuz after tanker seized\nSource: Sample headline\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "748a522302c4",
+   "title": "Chinese steel exports hit record as domestic demand weakens",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "Cheap Chinese steel exports",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "tatasteel",
+     "name": "Tata Steel",
+     "market": "IN",
+     "ticker": "NSE:TATASTEEL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Cheap Chinese steel exports",
+       "to": "Tata Steel",
+       "why": "Cheap Chinese steel drags down prices for Indian steelmakers"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "jswsteel",
+     "name": "JSW Steel",
+     "market": "IN",
+     "ticker": "NSE:JSWSTEEL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Cheap Chinese steel exports",
+       "to": "JSW Steel",
+       "why": "Cheap Chinese steel drags down prices for Indian steelmakers"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 0.85,
+   "cross_market": true,
+   "post": "🌊 The news: Chinese steel exports hit record as domestic demand weakens\n\nThe hidden link nobody's talking about:\nCheap Chinese steel exports → Tata Steel\n\n• Cheap Chinese steel drags down prices for Indian steelmakers.\n\nAlso in the ripple: JSW Steel ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Chinese steel exports hit record as domestic demand weakens\nSource: Sample headline\n\n▼ Tata Steel (NSE:TATASTEEL) [IN] — headwind, via Cheap Chinese steel exports\n▼ JSW Steel (NSE:JSWSTEEL) [IN] — headwind, via Cheap Chinese steel exports\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "a85f8c4fd795",
+   "title": "White House plans 25% auto tariffs on imported cars",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "US import tariffs (general)",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "jlr",
+     "name": "Jaguar Land Rover",
+     "market": "Global",
+     "ticker": null,
+     "unlisted": true,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.5,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Jaguar Land Rover",
+       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "tatamotors",
+     "name": "Tata Motors (JLR parent)",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.425,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Jaguar Land Rover",
+       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+      },
+      {
+       "from": "Jaguar Land Rover",
+       "to": "Tata Motors (JLR parent)",
+       "why": "JLR is Tata Motors' biggest profit driver"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "apple",
+     "name": "Apple",
+     "market": "US",
+     "ticker": "AAPL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.4,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "novelis",
+     "name": "Novelis",
+     "market": "US",
+     "ticker": null,
+     "unlisted": true,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.3,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Novelis",
+       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "foxconn",
+     "name": "Foxconn",
+     "market": "Global",
+     "ticker": "2317.TW",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.238,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      },
+      {
+       "from": "Apple",
+       "to": "Foxconn",
+       "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hindalco",
+     "name": "Hindalco",
+     "market": "IN",
+     "ticker": "NSE:HINDALCO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.223,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Novelis",
+       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+      },
+      {
+       "from": "Novelis",
+       "to": "Hindalco",
+       "why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tata_elec",
+     "name": "Tata Electronics",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": true,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.213,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      },
+      {
+       "from": "Apple",
+       "to": "Tata Electronics",
+       "why": "Tata Electronics assembles iPhones in India"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 0.8,
+   "cross_market": true,
+   "post": "🌊 The news: White House plans 25% auto tariffs on imported cars\n\nThe hidden link nobody's talking about:\nUS import tariffs (general) → Jaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR has no US factory, so US-bound cars are imported from the UK and Europe.\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Jaguar Land Rover ▼, Apple ▼, Novelis ◆, Foxconn ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 White House plans 25% auto tariffs on imported cars\nSource: Sample headline\n\n▼ Jaguar Land Rover (unlisted) [Global] — headwind, via US import tariffs (general)\n▼ Tata Motors (JLR parent) [IN] — headwind, via US import tariffs (general) → Jaguar Land Rover\n▼ Apple (AAPL) [US] — headwind, via US import tariffs (general)\n◆ Novelis (unlisted) [US] — exposed, via US import tariffs (general)\n▼ Foxconn (2317.TW) [Global] — headwind, via US import tariffs (general) → Apple\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "fd98e11342ca",
+   "title": "IMD forecasts above-normal monsoon this year",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "Indian monsoon strength",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "mm",
+     "name": "Mahindra & Mahindra",
+     "market": "IN",
+     "ticker": "NSE:M&M",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.6,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "Indian monsoon strength",
+       "to": "Mahindra & Mahindra",
+       "why": "Tractor sales track farm incomes"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hul",
+     "name": "Hindustan Unilever",
+     "market": "IN",
+     "ticker": "NSE:HINDUNILVR",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.5,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "Indian monsoon strength",
+       "to": "Hindustan Unilever",
+       "why": "Rural demand drives a large share of FMCG sales"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 0.7,
+   "cross_market": false,
+   "post": "🌊 The news: IMD forecasts above-normal monsoon this year\n\nThe hidden link nobody's talking about:\nIndian monsoon strength → Mahindra & Mahindra\n\n• Tractor sales track farm incomes.\n\nAlso in the ripple: Hindustan Unilever ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT\n📰 IMD forecasts above-normal monsoon this year\nSource: Sample headline\n\n▲ Mahindra & Mahindra (NSE:M&M) [IN] — tailwind, via Indian monsoon strength\n▲ Hindustan Unilever (NSE:HINDUNILVR) [IN] — tailwind, via Indian monsoon strength\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "4f8c86d185ac",
+   "title": "Apple shifts more iPhone production to India",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "Apple",
+     "dir": "in the news"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "foxconn",
+     "name": "Foxconn",
+     "market": "Global",
+     "ticker": "2317.TW",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.525,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "Apple",
+       "to": "Foxconn",
+       "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tata_elec",
+     "name": "Tata Electronics",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": true,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.469,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Apple",
+       "to": "Tata Electronics",
+       "why": "Tata Electronics assembles iPhones in India"
+      }
+     ],
+     "effect": "exposed"
+    }
+   ],
+   "score": 0.625,
+   "cross_market": true,
+   "post": "🌊 The news: Apple shifts more iPhone production to India\n\nThe hidden link nobody's talking about:\nApple → Tata Electronics\n\n• Tata Electronics assembles iPhones in India.\n\nAlso in the ripple: Foxconn ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Apple shifts more iPhone production to India\nSource: Sample headline\n\n◆ Foxconn (2317.TW) [Global] — exposed, via Apple\n◆ Tata Electronics (unlisted) [IN] — exposed, via Apple\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "c9661fa627ae",
+   "title": "Red Sea attacks force shipping lines to reroute around Africa",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "Red Sea shipping disruption",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "welspun",
+     "name": "Welspun Living",
+     "market": "IN",
+     "ticker": "NSE:WELSPUNLIV",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.297,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Global shipping costs",
+       "why": "Ships avoiding the Red Sea sail around Africa, raising freight costs and transit times"
+      },
+      {
+       "from": "Global shipping costs",
+       "to": "Welspun Living",
+       "why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "avanti",
+     "name": "Avanti Feeds",
+     "market": "IN",
+     "ticker": "NSE:AVANTIFEED",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.297,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Global shipping costs",
+       "why": "Ships avoiding the Red Sea sail around Africa, raising freight costs and transit times"
+      },
+      {
+       "from": "Global shipping costs",
+       "to": "Avanti Feeds",
+       "why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.255,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Crude oil price",
+       "why": "Disruption on a key tanker route adds a risk premium to oil"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.255,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Crude oil price",
+       "why": "Disruption on a key tanker route adds a risk premium to oil"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.255,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Crude oil price",
+       "why": "Disruption on a key tanker route adds a risk premium to oil"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.223,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Crude oil price",
+       "why": "Disruption on a key tanker route adds a risk premium to oil"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.223,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Crude oil price",
+       "why": "Disruption on a key tanker route adds a risk premium to oil"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.191,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Red Sea shipping disruption",
+       "to": "Crude oil price",
+       "why": "Disruption on a key tanker route adds a risk premium to oil"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 0.597,
+   "cross_market": true,
+   "post": "🌊 The news: Red Sea attacks force shipping lines to reroute around Africa\n\nThe hidden link nobody's talking about:\nRed Sea shipping disruption → Global shipping costs → Welspun Living\n\n• Ships avoiding the Red Sea sail around Africa, raising freight costs and transit times.\n• Higher freight costs squeeze exporters shipping to the US and Europe.\n\nAlso in the ripple: Avanti Feeds ▼, Indian Oil ▼, BPCL ▼, HPCL ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Red Sea attacks force shipping lines to reroute around Africa\nSource: Sample headline\n\n▼ Welspun Living (NSE:WELSPUNLIV) [IN] — headwind, via Red Sea shipping disruption → Global shipping costs\n▼ Avanti Feeds (NSE:AVANTIFEED) [IN] — headwind, via Red Sea shipping disruption → Global shipping costs\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Red Sea shipping disruption → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Red Sea shipping disruption → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Red Sea shipping disruption → Crude oil price\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "cd3e7a897024",
+   "title": "Fed signals rates to stay higher for longer, Treasury yields climb",
+   "url": null,
+   "source": "Sample headline",
+   "published": "2026-11-22T00:12:11.929624+00:00",
+   "sample": true,
+   "seeds": [
+    {
+     "name": "US interest rates (Fed)",
+     "dir": "rising"
+    },
+    {
+     "name": "US Treasury yields",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US interest rates (Fed)",
+       "to": "US dollar strength",
+       "why": "Higher US rates tend to strengthen the dollar"
+      },
+      {
+       "from": "US dollar strength",
+       "to": "Indian rupee strength",
+       "why": "A stronger dollar usually means a weaker rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US interest rates (Fed)",
+       "to": "US dollar strength",
+       "why": "Higher US rates tend to strengthen the dollar"
+      },
+      {
+       "from": "US dollar strength",
+       "to": "Indian rupee strength",
+       "why": "A stronger dollar usually means a weaker rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "Infosys",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US interest rates (Fed)",
+       "to": "US dollar strength",
+       "why": "Higher US rates tend to strengthen the dollar"
+      },
+      {
+       "from": "US dollar strength",
+       "to": "Indian rupee strength",
+       "why": "A stronger dollar usually means a weaker rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "Wipro",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US interest rates (Fed)",
+       "to": "US dollar strength",
+       "why": "Higher US rates tend to strengthen the dollar"
+      },
+      {
+       "from": "US dollar strength",
+       "to": "Indian rupee strength",
+       "why": "A stronger dollar usually means a weaker rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "HCLTech",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US interest rates (Fed)",
+       "to": "US dollar strength",
+       "why": "Higher US rates tend to strengthen the dollar"
+      },
+      {
+       "from": "US dollar strength",
+       "to": "Indian rupee strength",
+       "why": "A stronger dollar usually means a weaker rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "Tech Mahindra",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 0.385,
+   "cross_market": true,
+   "post": "🌊 The news: Fed signals rates to stay higher for longer, Treasury yields climb\n\nThe hidden link nobody's talking about:\nUS interest rates (Fed) → US dollar strength → Indian rupee strength → TCS\n\n• Higher US rates tend to strengthen the dollar.\n• A stronger dollar usually means a weaker rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Infosys ▲, Wipro ▲, HCLTech ▲, Tech Mahindra ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Fed signals rates to stay higher for longer, Treasury yields climb\nSource: Sample headline\n\n▲ TCS (NSE:TCS) [IN] — tailwind, via US interest rates (Fed) → US dollar strength → Indian rupee strength\n▲ Infosys (NSE:INFY) [IN] — tailwind, via US interest rates (Fed) → US dollar strength → Indian rupee strength\n▲ Wipro (NSE:WIPRO) [IN] — tailwind, via US interest rates (Fed) → US dollar strength → Indian rupee strength\n▲ HCLTech (NSE:HCLTECH) [IN] — tailwind, via US interest rates (Fed) → US dollar strength → Indian rupee strength\n▲ Tech Mahindra (NSE:TECHM) [IN] — tailwind, via US interest rates (Fed) → US dollar strength → Indian rupee strength\n\nResearch & education only. Not investment advice."
+  }
+ ]
+}
