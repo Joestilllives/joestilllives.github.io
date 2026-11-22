@@ -88,6 +88,24 @@ any frenzy day hurt (removes a third of stocks). The final recipe was picked fro
 - This month's basket: `results/algorithm/basket_2026-11.csv`; removed for heavy frenzy:
   `results/algorithm/red_flags_2026-11.csv`.
 
+### With only a few holdings
+
+- **10-20 stocks:** 24 variants tested over the model's 44 out-of-sample months (steady score,
+  ML score, both agreeing, larger stocks only, spread across peer groups). Results swung from
+  -1% to +17%/yr with no consistent winner; t-stats mostly below 2. The edge needs breadth.
+- **Index-fund rotation on real NSE ETFs, 70 months (2021-26):**
+
+| Strategy | per year | worst fall | 2021-23 | 2023-26 |
+|---|---|---|---|---|
+| Hold Nifty 50 (NIFTYBEES) | +10.4% | -13.7% | +15.2% | +6.8% |
+| Hold Midcap 150 / Next 50 | +16.2% | -20.2% | +19.0% | +14.0% |
+| Trend filter: best equity ETF, else cash | +13.7% | -9.5% | +16.4% | +11.7% |
+| Trend filter: midcap, else gold | +20.2% | -26.5% | +16.8% | +22.9% |
+| Dual momentum (best of 5 incl. gold, else cash) | +23.3% | -20.8% | +7.8% | +37.3% (gold rally) |
+
+Trend filter = more than half of stocks above their 200-day average and Nifty 50 up over
+3 months. Cash assumed at 6.5%/yr.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
