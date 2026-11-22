@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Order on WhatsApp · Tokri</title>
+  <meta name="description" content="Pick what you want and send your order on WhatsApp. Made free with Tokri.">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Order on WhatsApp">
+  <meta property="og:description" content="See the menu, pick what you want and send your order on WhatsApp.">
+  <meta property="og:image" content="https://joestilllives.github.io/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%BA%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --brand:#e8577e; --ink:#1f1a1c; --muted:#6b6267; --bg:#faf7f5; --card:#fff; --line:#ece6e2; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { -webkit-text-size-adjust:100%; }
+    body { font-family:Nunito, system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.45; padding-bottom:110px; }
+    .wrap { max-width:640px; margin:0 auto; padding:0 16px; }
+    header.shop { background:var(--brand); color:#fff; padding:28px 0 22px; text-align:center; }
+    .logo { width:72px; height:72px; margin:0 auto 10px; border-radius:50%; background:#fff; display:grid; place-items:center; font-size:38px; box-shadow:0 6px 18px rgba(0,0,0,.15); }
+    h1 { font-size:26px; font-weight:800; line-height:1.15; }
+    .tag { opacity:.92; margin-top:4px; }
+    .note { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin:16px 0 0; font-size:14px; color:var(--muted); white-space:pre-wrap; }
+    .cats { display:flex; gap:8px; overflow-x:auto; padding:16px 0 4px; scrollbar-width:none; }
+    .cats::-webkit-scrollbar { display:none; }
+    .cats button { flex:none; font:700 14px Nunito, sans-serif; padding:8px 14px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; }
+    .cats button[aria-pressed="true"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    h2.cat { font-size:15px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 8px; }
+    .item { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:14px; display:flex; gap:12px; align-items:center; margin-bottom:10px; }
+    .item .info { flex:1; min-width:0; }
+    .item b { display:block; font-size:16px; overflow-wrap:anywhere; }
+    .item p { font-size:13px; color:var(--muted); overflow-wrap:anywhere; }
+    .item .price { font-weight:800; margin-top:2px; }
+    .qty { display:flex; align-items:center; gap:2px; flex:none; }
+    .qty button { width:36px; height:36px; border-radius:50%; border:0; font:800 18px Nunito, sans-serif; cursor:pointer; background:var(--bg); color:var(--ink); }
+    .qty .add { width:auto; padding:0 16px; border-radius:999px; background:var(--brand); color:#fff; font-size:14px; }
+    .qty span { min-width:24px; text-align:center; font-weight:800; }
+    .empty { text-align:center; color:var(--muted); padding:48px 16px; }
+    .bar { position:fixed; left:50%; bottom:12px; transform:translate(-50%, 160%); width:min(608px, calc(100% - 24px)); background:var(--ink); color:#fff; border-radius:18px; padding:10px 10px 10px 16px; display:flex; align-items:center; gap:10px; transition:transform .22s ease; z-index:20; box-shadow:0 12px 30px rgba(0,0,0,.25); }
+    .bar.show { transform:translate(-50%, 0); }
+    .bar .sum { flex:1; font-size:13px; }
+    .bar .sum b { display:block; font-size:18px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:12px; padding:12px 18px; font:800 15px Nunito, sans-serif; cursor:pointer; text-decoration:none; }
+    .btn.wa { background:#25d366; color:#063b1c; }
+    .btn.ghost { background:var(--bg); color:var(--ink); }
+    .btn svg { width:18px; height:18px; fill:currentColor; }
+    .sheet { position:fixed; inset:0; background:rgba(0,0,0,.45); display:none; align-items:flex-end; justify-content:center; z-index:30; padding:12px; }
+    .sheet.show { display:flex; }
+    .sheet form { background:var(--card); width:min(560px, 100%); border-radius:20px; padding:18px; display:grid; gap:12px; max-height:92vh; overflow:auto; }
+    .sheet h3 { font-size:20px; }
+    .lines { font-size:14px; display:grid; gap:4px; border-bottom:1px dashed var(--line); padding-bottom:10px; }
+    .lines div { display:flex; justify-content:space-between; gap:12px; }
+    label { font-weight:700; font-size:14px; display:grid; gap:6px; }
+    input, textarea { font:inherit; font-weight:400; padding:11px 12px; border:1px solid var(--line); border-radius:10px; width:100%; background:var(--bg); }
+    .seg { display:flex; gap:8px; }
+    .seg label { flex:1; display:flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:10px; padding:10px; font-weight:600; }
+    .seg input { width:auto; }
+    .made { text-align:center; font-size:13px; color:var(--muted); margin:28px 0 8px; }
+    .made a { color:var(--ink); font-weight:800; }
+    .toast { position:fixed; left:50%; top:16px; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:12px; font-size:14px; z-index:40; display:none; max-width:calc(100% - 32px); text-align:center; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2l-.4-.2z"/></symbol>
+  </svg>
+
+  <header class="shop"><div class="wrap"><div class="logo" id="logo">🧺</div><h1 id="name">Loading…</h1><p class="tag" id="tagline"></p></div></header>
+  <main class="wrap">
+    <div class="note" id="note" hidden></div>
+    <div class="cats" id="cats"></div>
+    <div id="menu"></div>
+    <p class="made">Made free with <a href="/tokri/" target="_blank" rel="noopener">Tokri</a> · <a href="/services/" target="_blank" rel="noopener">Want a full website?</a></p>
+  </main>
+
+  <div class="bar" id="bar" aria-live="polite">
+    <div class="sum"><span id="count"></span><b id="total"></b></div>
+    <button class="btn wa" type="button" id="checkout"><svg><use href="#wa"/></svg>Order on WhatsApp</button>
+  </div>
+
+  <div class="sheet" id="sheet">
+    <form id="orderForm">
+      <h3>Your order</h3>
+      <div class="lines" id="lines"></div>
+      <label>Your name <input name="name" required autocomplete="name"></label>
+      <div class="seg" id="modeSeg">
+        <label><input type="radio" name="mode" value="pickup" checked> Pickup</label>
+        <label><input type="radio" name="mode" value="delivery"> <span id="delLabel">Delivery</span></label>
+      </div>
+      <label id="addrWrap" hidden>Delivery address <textarea name="addr" rows="2" autocomplete="street-address"></textarea></label>
+      <label>Note (optional) <input name="note" placeholder="e.g. less spicy, needed by 7 pm"></label>
+      <button class="btn wa" type="submit"><svg><use href="#wa"/></svg>Send order on WhatsApp</button>
+      <button class="btn ghost" type="button" id="back">Keep shopping</button>
+    </form>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="tokri.js"></script>
+  <script>
+    var PREVIEW = /[?&]preview=1/.test(location.search);
+    var shop = null, cart = {}, filter = 'All';
+    var $ = function (id) { return document.getElementById(id); };
+
+    function toast(msg) { var t = $('toast'); t.textContent = msg; t.style.display = 'block'; clearTimeout(toast.h); toast.h = setTimeout(function () { t.style.display = 'none'; }, 2600); }
+    function cats() { var seen = []; shop.i.forEach(function (it) { var c = it[2] || 'Menu'; if (seen.indexOf(c) < 0) seen.push(c); }); return seen; }
+
+    function render() {
+      document.documentElement.style.setProperty('--brand', shop.c);
+      $('logo').textContent = shop.e || '🧺';
+      $('name').textContent = shop.n || 'My shop';
+      document.title = (shop.n || 'Order') + ' · Order on WhatsApp';
+      $('tagline').textContent = shop.t;
+      $('note').hidden = !shop.o; $('note').textContent = shop.o;
+      var list = cats();
+      if (list.indexOf(filter) < 0) filter = 'All';
+      var cbox = $('cats'); cbox.innerHTML = '';
+      if (list.length > 1) ['All'].concat(list).forEach(function (c) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = c;
+        b.setAttribute('aria-pressed', c === filter);
+        b.addEventListener('click', function () { filter = c; render(); });
+        cbox.appendChild(b);
+      });
+      var menu = $('menu'); menu.innerHTML = '';
+      if (!shop.i.length) { menu.innerHTML = '<p class="empty">No items yet.</p>'; }
+      list.forEach(function (c) {
+        if (filter !== 'All' && filter !== c) return;
+        if (list.length > 1) { var h = document.createElement('h2'); h.className = 'cat'; h.textContent = c; menu.appendChild(h); }
+        shop.i.forEach(function (it, idx) {
+          if ((it[2] || 'Menu') !== c) return;
+          var el = document.createElement('div'); el.className = 'item';
+          el.innerHTML = '<div class="info"><b></b><p></p><div class="price"></div></div><div class="qty"></div>';
+          el.querySelector('b').textContent = it[0];
+          el.querySelector('p').textContent = it[3];
+          el.querySelector('.price').textContent = Tokri.money(it[1]);
+          var q = el.querySelector('.qty'), n = cart[idx] || 0;
+          if (!n) {
+            q.innerHTML = '<button type="button" class="add">Add</button>';
+            q.firstChild.setAttribute('aria-label', 'Add ' + it[0]);
+            q.firstChild.addEventListener('click', function () { change(idx, 1); });
+          } else {
+            q.innerHTML = '<button type="button">−</button><span></span><button type="button">+</button>';
+            q.children[0].setAttribute('aria-label', 'Remove one ' + it[0]);
+            q.children[2].setAttribute('aria-label', 'Add one more ' + it[0]);
+            q.children[1].textContent = n;
+            q.children[0].addEventListener('click', function () { change(idx, -1); });
+            q.children[2].addEventListener('click', function () { change(idx, 1); });
+          }
+          menu.appendChild(el);
+        });
+      });
+      var pickupOnly = shop.d < 0;
+      $('modeSeg').hidden = pickupOnly;
+      $('delLabel').textContent = shop.d > 0 ? 'Delivery +' + Tokri.money(shop.d) : 'Delivery (free)';
+      updateBar();
+    }
+    function picked() { return shop.i.map(function (it, idx) { return { it: it, n: cart[idx] || 0 }; }).filter(function (x) { return x.n; }); }
+    function subtotal() { return picked().reduce(function (s, x) { return s + x.it[1] * x.n; }, 0); }
+    function updateBar() {
+      var count = picked().reduce(function (s, x) { return s + x.n; }, 0);
+      $('count').textContent = count + (count === 1 ? ' item' : ' items');
+      $('total').textContent = Tokri.money(subtotal());
+      $('bar').classList.toggle('show', count > 0);
+    }
+    function change(idx, d) { cart[idx] = Math.max(0, (cart[idx] || 0) + d); if (!cart[idx]) delete cart[idx]; render(); }
+
+    function delivery() { var m = document.querySelector('input[name="mode"]:checked'); return shop.d >= 0 && m && m.value === 'delivery'; }
+    function fillLines() {
+      var box = $('lines'); box.innerHTML = '';
+      var row = function (a, b, bold) { var r = document.createElement('div'); r.innerHTML = bold ? '<b></b><b></b>' : '<span></span><span></span>'; r.children[0].textContent = a; r.children[1].textContent = b; box.appendChild(r); };
+      picked().forEach(function (x) { row(x.n + ' × ' + x.it[0], Tokri.money(x.it[1] * x.n)); });
+      if (delivery() && shop.d > 0) row('Delivery', Tokri.money(shop.d));
+      row('Total', Tokri.money(subtotal() + (delivery() ? Math.max(shop.d, 0) : 0)), true);
+      $('addrWrap').hidden = !delivery();
+      document.querySelector('textarea[name="addr"]').required = delivery();
+    }
+    $('checkout').addEventListener('click', function () { fillLines(); $('sheet').classList.add('show'); });
+    $('back').addEventListener('click', function () { $('sheet').classList.remove('show'); });
+    $('sheet').addEventListener('click', function (e) { if (e.target === $('sheet')) $('sheet').classList.remove('show'); });
+    [].forEach.call(document.querySelectorAll('input[name="mode"]'), function (r) { r.addEventListener('change', fillLines); });
+
+    $('orderForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(this), del = delivery();
+      var msg = 'Hi! I would like to order:\n\n' + picked().map(function (x) { return '• ' + x.n + ' × ' + x.it[0] + ' – ' + Tokri.money(x.it[1] * x.n); }).join('\n');
+      if (del && shop.d > 0) msg += '\n• Delivery – ' + Tokri.money(shop.d);
+      msg += '\n\n*Total: ' + Tokri.money(subtotal() + (del ? Math.max(shop.d, 0) : 0)) + '*';
+      msg += '\nName: ' + f.get('name');
+      msg += '\n' + (del ? 'Delivery to: ' + f.get('addr') : 'Pickup');
+      if (f.get('note')) msg += '\nNote: ' + f.get('note');
+      if (PREVIEW) { toast('Preview only. Customers will see WhatsApp open with their order.'); return; }
+      if (!shop.p) { toast('This shop has no WhatsApp number yet.'); return; }
+      location.href = 'https://wa.me/' + shop.p + '?text=' + encodeURIComponent(msg);
+    });
+
+    function load() {
+      var code = location.hash.slice(1);
+      if (!code) { $('name').textContent = 'No shop here'; $('menu').innerHTML = '<p class="empty">This link has no menu in it. <a href="/tokri/">Make your own free shop link</a>.</p>'; return; }
+      Tokri.decode(code).then(function (s) {
+        if (!s) { $('name').textContent = 'Link looks broken'; $('menu').innerHTML = '<p class="empty">Part of this link may be missing. Ask the shop to send it again.</p>'; return; }
+        var keep = shop && shop.i.length === s.i.length;
+        shop = s; if (!keep) cart = {};
+        render();
+      });
+    }
+    window.addEventListener('hashchange', load);
+    load();
+  </script>
+</body>
+</html>

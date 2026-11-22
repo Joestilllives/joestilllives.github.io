@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<title>Tilt</title>
-<meta name="description" content="A motion instrument: tilt your phone to change the note, touch to sound it, shake to hit a drum.">
+<title>Tilt · Play music by tilting your phone</title>
+<meta name="description" content="Tilt is a free motion instrument in your browser: tilt your phone to change the note, touch to play it, shake it for a drum. No app install needed.">
+<link rel="canonical" href="https://joestilllives.github.io/tilt/">
+<meta property="og:title" content="Tilt · Play music by tilting your phone">
+<meta property="og:description" content="Tilt your phone to change the note, touch to play it, shake it for a drum.">
+<meta property="og:url" content="https://joestilllives.github.io/tilt/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://joestilllives.github.io/tilt/icon-512.png">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0d0b1a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -63,6 +70,7 @@
     background: linear-gradient(90deg, #ffd27a, #ff8a5c);
   }
   #warn { color: #ffb4a0; font-size: 13px; margin-top: 14px; min-height: 1em; }
+  .home { display: inline-block; margin-top: 18px; color: var(--dim); font-size: 14px; }
   .hidden { display: none !important; }
 </style>
 </head>
@@ -88,6 +96,7 @@
     </ul>
     <button id="go">Start playing</button>
     <div id="warn"></div>
+    <a class="home" href="../">← Back to Joe's site</a>
   </div>
 </div>
 
@@ -253,6 +262,7 @@
     st.rawBright = clamp(e.clientX / innerWidth);
   }
   cv.addEventListener('pointerdown', e => {
+    if (!ac) return;
     cv.setPointerCapture(e.pointerId);
     st.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     pointerControl(e);
@@ -278,6 +288,7 @@
     st.degree = -1;
   };
   holdBtn.onclick = () => {
+    if (!ac) return;
     st.hold = !st.hold;
     holdBtn.setAttribute('aria-pressed', st.hold);
     setVoicing(st.pointers.size);
@@ -288,9 +299,11 @@
   };
 
   document.getElementById('go').onclick = async () => {
+    // Ask for motion access first: iOS only shows the prompt while the tap is still "fresh"
+    const sensors = askSensors();
     initAudio();
     await ac.resume();
-    const ok = await askSensors();
+    const ok = await sensors;
     if (!ok) document.getElementById('warn').textContent = 'Motion access was refused, so touch position will control the sound instead.';
     try { if ('wakeLock' in navigator) await navigator.wakeLock.request('screen'); } catch (_) {}
     document.getElementById('intro').classList.add('hidden');
@@ -299,7 +312,7 @@
   };
   document.addEventListener('visibilitychange', () => {
     if (!ac) return;
-    if (document.hidden) ac.suspend(); else { ac.resume(); try { navigator.wakeLock && navigator.wakeLock.request('screen'); } catch (_) {} }
+    if (document.hidden) ac.suspend(); else { ac.resume(); if (navigator.wakeLock) navigator.wakeLock.request('screen').catch(() => {}); }
   });
 
   // ---------- Visuals ----------

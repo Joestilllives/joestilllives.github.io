@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Websites for Local Businesses · Joe</title>
+  <meta name="description" content="Simple, fast websites for clinics, coaching centres, home bakeries and local shops. WhatsApp booking and ordering built in. See your site before you pay.">
+  <link rel="canonical" href="https://joestilllives.github.io/services/">
+  <meta property="og:title" content="Websites for local businesses, ready in a week">
+  <meta property="og:description" content="WhatsApp booking and ordering built in. See your site before you pay anything.">
+  <meta property="og:url" content="https://joestilllives.github.io/services/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://joestilllives.github.io/og-image.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --night:#020C24; --plum:#801357; --rose:#e7627d; --orange:#ff9f1c; --ink:#1c1a27; --muted:#5d5866; --paper:#fbf8f6; --line:#ebe4e0; --wa:#25d366; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Nunito, system-ui, sans-serif; color:var(--ink); background:var(--paper); line-height:1.5; font-size:17px; }
+    a { color:inherit; }
+    .wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 22px; border-radius:12px; font:800 16px Nunito, sans-serif; text-decoration:none; border:2px solid transparent; cursor:pointer; }
+    .btn svg { width:20px; height:20px; fill:currentColor; }
+    .btn.wa { background:var(--wa); color:#063b1c; }
+    .btn.light { background:transparent; color:#fff; border-color:rgba(255,255,255,.5); }
+    .btn.dark { background:var(--night); color:#fff; }
+    .btn:hover { filter:brightness(1.06); }
+
+    nav.top { position:sticky; top:0; z-index:20; background:var(--night); }
+    nav.top .wrap { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:10px; padding-bottom:10px; }
+    nav.top a.name { font-family:Coiny, sans-serif; color:#fff; font-size:22px; text-decoration:none; }
+    nav.top .links { display:flex; gap:18px; }
+    nav.top .links a { color:#fff; text-decoration:none; font-weight:700; font-size:15px; }
+    nav.top .links a:hover { color:var(--orange); }
+
+    .hero { color:#fff; padding:64px 0 72px; background:linear-gradient(to top, #b8235a 0%, #801357 35%, #3d1635 70%, #1c1a27 100%); }
+    .kicker { display:inline-block; font-weight:800; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--orange); margin-bottom:12px; }
+    .hero h1 { font-family:Coiny, sans-serif; font-weight:400; font-size:clamp(36px, 6vw, 64px); line-height:1.08; max-width:14em; }
+    .hero p { font-size:19px; max-width:34em; margin-top:16px; opacity:.92; }
+    .hero .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .promise { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:32px; font-weight:700; font-size:15px; }
+    .promise span::before { content:"\2713  "; color:var(--orange); }
+
+    section { padding:64px 0; scroll-margin-top:56px; }
+    h2 { font-family:Coiny, sans-serif; font-weight:400; font-size:clamp(28px, 4.2vw, 42px); line-height:1.15; }
+    .sub { color:var(--muted); margin:6px 0 28px; max-width:40em; }
+
+    .pains { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .pain { background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px; }
+    .pain b { display:block; font-size:18px; margin-bottom:6px; }
+    .pain p { color:var(--muted); font-size:16px; }
+
+    .demos { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .demo { display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden; text-decoration:none; transition:transform .15s ease, box-shadow .15s ease; }
+    .demo:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(28,26,39,.12); }
+    .demo .shot { height:150px; display:grid; place-items:center; font-size:60px; }
+    .demo .body { padding:18px; display:flex; flex-direction:column; gap:6px; flex:1; }
+    .demo b { font-size:19px; }
+    .demo p { color:var(--muted); font-size:15px; flex:1; }
+    .demo .go { font-weight:800; color:var(--plum); margin-top:8px; }
+    .shot.clinic { background:linear-gradient(160deg, #b9e3dd, #0f766e); }
+    .shot.coach { background:radial-gradient(circle at 80% 20%, #3730a3, #1e1b4b); }
+    .shot.bake { background:radial-gradient(circle, #fff 0 30%, #fde3ea 31% 60%, #fbd0dc 61%); }
+
+    .dark { background:var(--night); color:#fff; }
+    .dark .sub { color:rgba(255,255,255,.75); }
+    .steps { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; counter-reset:s; }
+    .step { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:20px; }
+    .step::before { counter-increment:s; content:counter(s); display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:var(--orange); color:var(--night); font-weight:800; margin-bottom:12px; }
+    .step b { display:block; font-size:18px; margin-bottom:4px; }
+    .step p { font-size:15px; opacity:.8; }
+
+    .plans { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; align-items:stretch; }
+    .plan { background:#fff; border:1px solid var(--line); border-radius:22px; padding:24px; display:flex; flex-direction:column; gap:10px; }
+    .plan.best { border:3px solid var(--plum); position:relative; }
+    .plan.best::before { content:"Most popular"; position:absolute; top:-14px; left:24px; background:var(--plum); color:#fff; font-weight:800; font-size:13px; padding:4px 12px; border-radius:999px; }
+    .plan h3 { font-size:21px; }
+    .plan .for { color:var(--muted); font-size:15px; }
+    .plan .price { font-size:34px; font-weight:800; line-height:1.1; }
+    .plan .price small { display:block; font-size:15px; font-weight:600; color:var(--muted); }
+    .plan ul { list-style:none; display:grid; gap:6px; font-size:15px; margin:6px 0 10px; flex:1; }
+    .plan li::before { content:"\2713  "; color:var(--plum); font-weight:800; }
+    .addons { margin-top:20px; display:flex; flex-wrap:wrap; gap:8px; }
+    .addons span { background:#fff; border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:14px; font-weight:700; }
+    .note { margin-top:14px; font-size:14px; color:var(--muted); }
+
+    .ai { display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:24px; padding:28px; }
+    .ai .new { display:inline-block; background:var(--wa); color:#063b1c; font-weight:800; font-size:13px; padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+    .ai ul { list-style:none; display:grid; gap:8px; margin:16px 0 20px; }
+    .ai li::before { content:"\2713  "; color:var(--plum); font-weight:800; }
+    .ai .actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .chat { background:#efeae2; border-radius:18px; padding:16px; display:grid; gap:8px; font-size:15px; }
+    .chat p { max-width:85%; padding:8px 12px; border-radius:10px; box-shadow:0 1px .5px rgba(0,0,0,.12); }
+    .chat .c { justify-self:end; background:#d9fdd3; }
+    .chat .b { background:#fff; }
+    .ai-price { margin-top:16px; display:flex; flex-wrap:wrap; gap:10px 24px; font-size:15px; color:var(--muted); }
+    .ai-price b { color:var(--ink); font-size:20px; display:block; }
+    .faq { max-width:760px; }
+    details { border-bottom:1px solid var(--line); padding:16px 0; }
+    summary { font-weight:800; font-size:18px; cursor:pointer; }
+    details p { color:var(--muted); margin-top:8px; }
+
+    .contact { text-align:center; background:linear-gradient(to top, #dbdcd7 0%, #e2c9cc 30%, #e7627d 70%, #b8235a 100%); color:var(--ink); }
+    .contact h2 { color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.12); }
+    .contact .sub { margin-left:auto; margin-right:auto; color:#fff; font-weight:700; }
+    .contact .actions { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    footer { background:var(--night); color:rgba(255,255,255,.7); text-align:center; padding:22px 16px; font-size:14px; }
+    footer a { color:#fff; }
+
+    @media (max-width:880px) {
+      nav.top .links a:not(.keep) { display:none; }
+      .pains, .demos, .plans, .ai { grid-template-columns:1fr; }
+      .ai { padding:20px; }
+      .steps { grid-template-columns:1fr 1fr; }
+      .plan.best { margin-top:8px; }
+    }
+    @media (max-width:520px) { .steps { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2l-.4-.2z"/></symbol>
+  </svg>
+
+  <nav class="top">
+    <div class="wrap">
+      <a class="name" href="/">Joe</a>
+      <div class="links">
+        <a href="#examples">Examples</a>
+        <a href="#assistant">AI assistant</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">Questions</a>
+        <a class="keep" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="kicker">Websites for local businesses</span>
+      <h1>Customers search on Google. Let them find you.</h1>
+      <p>I build simple, fast websites for clinics, coaching centres, home bakeries and neighbourhood shops. Customers can book, enquire or order straight to your WhatsApp. You don't need to know anything about computers.</p>
+      <div class="actions">
+        <a class="btn wa js-wa" href="#contact" data-msg="Hi Joe, I saw your website. I'd like a website for my business."><svg><use href="#wa"/></svg>Message me on WhatsApp</a>
+        <a class="btn light" href="#examples">See example sites</a>
+      </div>
+      <div class="promise">
+        <span>See your site before you pay</span>
+        <span>Ready in about a week</span>
+        <span>Works great on phones</span>
+        <span>Hindi or English</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2>Sound familiar?</h2>
+      <p class="sub">Most small businesses lose customers in the same three ways.</p>
+      <div class="pains">
+        <div class="pain"><b>"Are you open right now?"</b><p>People call to ask timings, fees and location. Your site answers before they ask, any time of day.</p></div>
+        <div class="pain"><b>Lost to the place next door</b><p>When someone searches "dentist near me" or "tuition near me", the business with a proper website and reviews gets the call.</p></div>
+        <div class="pain"><b>Orders scattered everywhere</b><p>Calls, DMs and half-typed messages. With a menu or booking form, every enquiry arrives on WhatsApp complete and clear.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples" style="padding-top:0">
+    <div class="wrap">
+      <h2>Example sites</h2>
+      <p class="sub">Try them on your phone. Tap the booking and order buttons to see what your customers would send you.</p>
+      <div class="demos">
+        <a class="demo" href="/demos/clinic/">
+          <div class="shot clinic">🦷</div>
+          <div class="body"><b>Clinic</b><p>"Open now" timings, treatments with fees, and an appointment form that sends straight to WhatsApp.</p><span class="go">Open example &rarr;</span></div>
+        </a>
+        <a class="demo" href="/demos/coaching/">
+          <div class="shot coach">📚</div>
+          <div class="body"><b>Coaching centre</b><p>Batches and fees by class, results, parents' FAQs, and free demo class booking.</p><span class="go">Open example &rarr;</span></div>
+        </a>
+        <a class="demo" href="/demos/bakery/">
+          <div class="shot bake">🎂</div>
+          <div class="body"><b>Home bakery</b><p>A menu customers order from like a food app, and the full order lands on your WhatsApp. No commission.</p><span class="go">Open example &rarr;</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="assistant" style="padding-top:0">
+    <div class="wrap">
+      <div class="ai">
+        <div>
+          <span class="new">New</span>
+          <h2>An AI assistant that answers your customers on WhatsApp</h2>
+          <p class="sub" style="margin-bottom:0">Most customers ask the same questions: timings, prices, "do you deliver?" Your assistant answers instantly, day and night, in English or Hinglish, so you only deal with real orders and bookings.</p>
+          <ul>
+            <li>Replies in seconds, even at 2 am</li>
+            <li>Answers only from your own prices, menu and timings</li>
+            <li>Sends complaints and anything it's unsure about straight to you</li>
+            <li>Works on your existing WhatsApp Business number or on your website</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dark" href="/demos/assistant/">Try the demo</a>
+            <a class="btn wa js-wa" href="#contact" data-msg="Hi Joe, I'm interested in the AI WhatsApp assistant for my business."><svg><use href="#wa"/></svg>Ask about it</a>
+          </div>
+          <div class="ai-price">
+            <div><b>₹4,999 + ₹799/mo</b>On your website</div>
+            <div><b>₹9,999 + ₹1,499/mo</b>On your WhatsApp number</div>
+          </div>
+        </div>
+        <div class="chat" aria-hidden="true">
+          <p class="c">Chocolate cake kitne ki hai? Eggless milega?</p>
+          <p class="b">Chocolate truffle cake is ₹650 for ½ kg 🍫 and yes, it's eggless! Want me to book one for tomorrow?</p>
+          <p class="c">Haan, 1 kg, delivery chahiye</p>
+          <p class="b">Done ✅ 1 kg chocolate truffle, delivery tomorrow. Total ₹1,250 including delivery. Gudiya will confirm with a UPI link shortly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">About 20 minutes of your time, in total.</p>
+      <div class="steps">
+        <div class="step"><b>We talk</b><p>A 15-minute call or visit. You tell me about your business and send a few photos.</p></div>
+        <div class="step"><b>I build it</b><p>Within about a week you get a link to your new site to try on your phone.</p></div>
+        <div class="step"><b>You check it</b><p>Ask for any changes. You pay only once you're happy with it.</p></div>
+        <div class="step"><b>It goes live</b><p>Your own address (like yourname.in), listed on Google Maps and Search.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Simple pricing</h2>
+      <p class="sub">One setup fee, then a small monthly fee so your site stays up to date and someone is always there to fix things.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Basic</h3>
+          <div class="for">For getting found online</div>
+          <div class="price">₹6,999<small>one time + ₹499 / month</small></div>
+          <ul>
+            <li>One-page site, phone-friendly</li>
+            <li>Timings, services, photos, map</li>
+            <li>Call and WhatsApp buttons</li>
+            <li>Google Business Profile set up</li>
+            <li>1 update a month</li>
+          </ul>
+          <a class="btn dark js-wa" href="#contact" data-msg="Hi Joe, I'm interested in the Basic website plan.">Ask about Basic</a>
+        </div>
+        <div class="plan best">
+          <h3>Business</h3>
+          <div class="for">For getting bookings and orders</div>
+          <div class="price">₹12,999<small>one time + ₹999 / month</small></div>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Booking form or order menu to WhatsApp</li>
+            <li>Fees / menu / batches section</li>
+            <li>Reviews section</li>
+            <li>Hindi + English</li>
+            <li>Unlimited small updates</li>
+          </ul>
+          <a class="btn wa js-wa" href="#contact" data-msg="Hi Joe, I'm interested in the Business website plan."><svg><use href="#wa"/></svg>Ask about Business</a>
+        </div>
+        <div class="plan">
+          <h3>Custom</h3>
+          <div class="for">For something bigger</div>
+          <div class="price">From ₹20,000<small>+ monthly care, quoted to fit</small></div>
+          <ul>
+            <li>Multiple pages or branches</li>
+            <li>Online payments (UPI / cards)</li>
+            <li>Student or patient portals</li>
+            <li>Billing or stock tools</li>
+          </ul>
+          <a class="btn dark js-wa" href="#contact" data-msg="Hi Joe, I'd like a custom website or tool. Here's what I need:">Tell me what you need</a>
+        </div>
+      </div>
+      <div class="addons">
+        <span>+ AI assistant from ₹799/month</span>
+        <span>+ Google review requests on WhatsApp</span>
+        <span>+ Appointment reminders</span>
+        <span>+ Festive offer pages</span>
+        <span>+ Instagram setup</span>
+      </div>
+      <p class="note">Just need orders on WhatsApp, today, for free? Try <a href="/tokri/"><b>Tokri</b></a>: type your menu and get an order link and QR code in 2 minutes.</p>
+      <p class="note">Domain name (yourname.in) is about ₹700–900 a year, paid at cost and registered in your name. No hidden charges.</p>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap faq">
+      <h2>Questions</h2>
+      <details><summary>I'm not good with computers. Is that a problem?</summary><p>Not at all. You never have to log in to anything. If you want a change, like new timings, prices or a festival offer, send me a WhatsApp message and it's done.</p></details>
+      <details><summary>Why should I pay before seeing anything?</summary><p>You don't. I build your site first and send you a link. You pay the setup fee only when you're happy with it.</p></details>
+      <details><summary>Who owns the website?</summary><p>You do. The domain is registered in your name. If you ever stop the monthly plan, I hand everything over to you.</p></details>
+      <details><summary>What does the monthly fee cover?</summary><p>Keeping the site running and secure, your updates, and keeping your Google listing accurate. There are no extra hosting bills.</p></details>
+      <details><summary>Will the AI assistant say something wrong to my customers?</summary><p>It only answers from the information you give it: your prices, menu, timings and policies. If a question isn't covered, or a customer is upset, it says it's passing the message on and alerts you. You can read every conversation, and I adjust it whenever you want.</p></details>
+      <details><summary>Can I cancel the monthly plan?</summary><p>Yes, any time, with one month's notice. No lock-in.</p></details>
+      <details><summary>Will I show up on Google?</summary><p>I set up your Google Business Profile and make the site easy for Google to read. Showing up for "near me" searches also depends on reviews and how active your listing is, and I'll help with both.</p></details>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's get your business online</h2>
+      <p class="sub">Send a message with your business name. I'll reply the same day.</p>
+      <div class="actions">
+        <a class="btn wa js-wa" href="#" data-msg="Hi Joe, I'd like a website for my business."><svg><use href="#wa"/></svg>WhatsApp me</a>
+        <a class="btn dark" href="https://www.linkedin.com/in/rahul-gupta-bbb35314b/" target="_blank" rel="noopener">Message on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Built by <a href="/">Joe</a>. This page is one of my websites too.</footer>
+
+  <script>
+    /* Put your WhatsApp number here, with country code and no + or spaces, e.g. '919812345678'.
+       Until it's set, the WhatsApp buttons open LinkedIn instead. */
+    var WHATSAPP = '918826157444';
+    var FALLBACK = 'https://www.linkedin.com/in/rahul-gupta-bbb35314b/';
+    document.querySelectorAll('.js-wa').forEach(function (a) {
+      a.href = WHATSAPP ? 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(a.dataset.msg || '') : FALLBACK;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carryover · Move your Microsoft To Do lists before it shuts down</title>
+  <meta name="description" content="Microsoft To Do retires on 30 June 2027. Carryover exports your lists, steps, notes and due dates for Todoist, Notion, Obsidian, Excel and more. Free, read-only, and it runs in your browser.">
+  <link rel="canonical" href="https://joestilllives.github.io/carryover/">
+  <meta property="og:title" content="Carryover · Take your Microsoft To Do lists with you">
+  <meta property="og:description" content="Microsoft To Do retires on 30 June 2027. Export your lists for Todoist, Notion, Obsidian and more. Free and private.">
+  <meta property="og:url" content="https://joestilllives.github.io/carryover/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://joestilllives.github.io/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23143d33'/%3E%3Cpath d='M18 33l9 9 19-21' stroke='%23f3c969' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Carryover","url":"https://joestilllives.github.io/carryover/","applicationCategory":"ProductivityApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Export Microsoft To Do lists, steps, notes and due dates for Todoist, Notion, Obsidian and other apps before To Do retires on 30 June 2027."}</script>
+  <style>
+    /* Layout: a deep-green band carries the message and the tool card; guides and questions follow on paper. */
+    :root {
+      --bg: #f7f6f2; --card: #ffffff; --ink: #172420; --muted: #56635e; --line: #e2e0d8;
+      --band: #143d33; --band-ink: #eef4f0; --band-muted: #b7cbc3; --gold: #f3c969; --accent: #1f7a62; --accent-ink: #ffffff;
+      --code-bg: #f1f0ea; --ok: #1f7a62; --warn: #9a5b00;
+      --display: ui-rounded, "SF Pro Rounded", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+      --body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      --mono: ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) { :root {
+      --bg: #0f1513; --card: #17201d; --ink: #e6ede9; --muted: #9fb0a9; --line: #2a3632;
+      --band: #0c2b23; --band-ink: #eef4f0; --band-muted: #9fbbb0; --gold: #f3c969; --accent: #3fb18f; --accent-ink: #062018;
+      --code-bg: #111a17; --ok: #5fd0ac; --warn: #f0b25a; color-scheme: dark; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--body); }
+    a { color: var(--accent); }
+    h1, h2, h3 { font-family: var(--display); line-height: 1.12; margin: 0; text-wrap: balance; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    nav.top { background: var(--band); }
+    nav.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--band-ink); text-decoration: none; font: 800 21px var(--display); }
+    .brand svg { width: 28px; height: 28px; }
+    nav.top .links { display: flex; gap: 18px; }
+    nav.top .links a { color: var(--band-muted); text-decoration: none; font-weight: 500; font-size: 15px; }
+    nav.top .links a:hover { color: var(--gold); }
+
+    .band { background: var(--band); color: var(--band-ink); padding: 36px 0 56px; }
+    .hero { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; align-items: start; }
+    .hero > * { min-width: 0; }
+    .deadline { display: inline-flex; align-items: center; gap: 8px; font: 600 13px var(--body); color: var(--band); background: var(--gold); padding: 5px 12px; border-radius: 999px; }
+    .hero h1 { font-size: clamp(34px, 5vw, 58px); margin: 16px 0 16px; }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p.lead { color: var(--band-muted); font-size: 18px; max-width: 34em; margin: 0; }
+    .days { margin-top: 22px; display: flex; align-items: baseline; gap: 10px; }
+    .days b { font: 800 44px var(--display); color: var(--gold); font-variant-numeric: tabular-nums; }
+    .days span { color: var(--band-muted); }
+    ul.trust { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 10px; }
+    ul.trust li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; color: var(--band-ink); font-size: 15px; }
+    ul.trust li svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 2.2; margin-top: 2px; }
+    ul.trust li span { color: var(--band-muted); }
+    ul.trust li b { color: var(--band-ink); font-weight: 600; }
+
+    .tool { background: var(--card); color: var(--ink); border-radius: 18px; padding: 24px; box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+    .tool h2 { font-size: 24px; }
+    .tool .sub { color: var(--muted); margin: 6px 0 18px; font-size: 15px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 600 16px var(--body); border: 2px solid transparent; border-radius: 12px; padding: 13px 20px; cursor: pointer; text-decoration: none; }
+    .btn:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .btn.primary { background: var(--accent); color: var(--accent-ink); }
+    .btn.primary:disabled { opacity: .55; cursor: not-allowed; }
+    .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn.full { width: 100%; }
+    .stack { display: grid; gap: 10px; }
+    .fine { font-size: 13px; color: var(--muted); margin: 0; }
+    .steps-mini { counter-reset: s; list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; font-size: 14px; color: var(--muted); }
+    .steps-mini li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; }
+    .steps-mini li::before { counter-increment: s; content: counter(s); width: 22px; height: 22px; border-radius: 50%; background: var(--code-bg); color: var(--ink); display: grid; place-items: center; font-size: 12px; font-weight: 600; }
+    .spinner { width: 34px; height: 34px; border-radius: 50%; border: 4px solid var(--line); border-top-color: var(--accent); animation: spin 0.9s linear infinite; margin: 10px auto 14px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .spinner { animation-duration: 3s; } }
+    #viewLoading { text-align: center; padding: 30px 0; }
+    .demo-note { background: #fff6dc; color: #5b4300; border-radius: 10px; padding: 8px 12px; font-size: 13px; }
+    @media (prefers-color-scheme: dark) { .demo-note { background: #3a2f0f; color: #f6dc9a; } }
+    .summary { font-weight: 600; margin: 4px 0 12px; }
+    fieldset { border: 0; padding: 0; margin: 0 0 14px; min-width: 0; }
+    legend { font: 600 13px var(--body); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; padding: 0; }
+    .lists { display: grid; gap: 6px; max-height: 210px; overflow: auto; }
+    .listrow { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+    .listrow .lname { overflow-wrap: anywhere; font-weight: 500; }
+    .listrow .lcount { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .formats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+    .formats label { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; cursor: pointer; display: grid; gap: 2px; font-size: 14px; }
+    .formats label:has(input:checked) { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+    .formats input { position: absolute; opacity: 0; }
+    .formats label:has(input:focus-visible) { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .formats b { font-weight: 600; }
+    .formats small { color: var(--muted); }
+    .toggle { display: flex; gap: 10px; align-items: center; font-size: 14px; margin-bottom: 14px; }
+    .preview { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-bottom: 14px; }
+    .preview .ph { font-size: 12px; color: var(--muted); padding: 6px 10px; border-bottom: 1px solid var(--line); background: var(--code-bg); overflow-wrap: anywhere; }
+    .preview pre { margin: 0; padding: 10px; font: 12px/1.5 var(--mono); max-height: 170px; overflow: auto; white-space: pre; background: var(--code-bg); }
+    .hint { font-size: 14px; color: var(--muted); margin: 0 0 12px; }
+    .saved { color: var(--ok); font-weight: 600; font-size: 14px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .row .btn { flex: 1; }
+
+    main section { padding: 64px 0 8px; }
+    main h2 { font-size: clamp(28px, 4vw, 38px); }
+    .kicker { font: 600 13px var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .intro { color: var(--muted); max-width: 40em; margin: 10px 0 26px; }
+    .what { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .what > div { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; min-width: 0; }
+    .what h3 { font-size: 18px; margin-bottom: 8px; }
+    .what ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    .guides { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .guide { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+    .guide h3 { font-size: 19px; }
+    .guide .fmt { font: 12px var(--mono); color: var(--accent); }
+    .guide ol { margin: 0; padding-left: 20px; color: var(--muted); font-size: 15px; display: grid; gap: 4px; }
+    .guide .soon { color: var(--warn); font-size: 14px; font-weight: 600; }
+    details { border-bottom: 1px solid var(--line); padding: 16px 0; max-width: 46em; }
+    summary { font-weight: 600; cursor: pointer; font-size: 17px; }
+    details p { color: var(--muted); margin: 8px 0 0; }
+    footer { margin-top: 64px; border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: grid; gap: 6px; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 28px; }
+      .guides { grid-template-columns: 1fr 1fr; }
+      nav.top .links { display: none; }
+    }
+    @media (max-width: 600px) { .guides, .what { grid-template-columns: 1fr; } .tool { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <nav class="top"><div class="wrap">
+    <a class="brand" href="/carryover/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f7a62"/><path d="M18 33l9 9 19-21" stroke="#f3c969" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Carryover</a>
+    <div class="links"><a href="#what">What moves</a><a href="#guides">Guides</a><a href="#questions">Questions</a></div>
+  </div></nav>
+
+  <header class="band"><div class="wrap hero">
+    <div>
+      <span class="deadline">Microsoft To Do retires on 30 June 2027</span>
+      <h1>Your lists deserve <em>a new home</em>.</h1>
+      <p class="lead">Microsoft is shutting down To Do and asking personal users to choose another app. Carryover copies your lists, steps, notes, due dates and reminders into files that Todoist, Notion, Obsidian, Excel and other apps can import.</p>
+      <div class="days" id="days" hidden><b id="daysLeft"></b><span>days left to move</span></div>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg><div><b>Read-only.</b> <span>Carryover can look at your tasks but can never change or delete them.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><div><b>Stays on your device.</b> <span>Your lists go from Microsoft straight to this browser tab. There is no Carryover server.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg><div><b>Free.</b> <span>No account, no sign-up, no catch.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><div><b>Open code.</b> <span>Anyone can read exactly what it does <a href="https://github.com/Joestilllives/joestilllives.github.io/tree/master/carryover" target="_blank" rel="noopener" style="color:var(--gold)">on GitHub</a>.</span></div></li>
+      </ul>
+    </div>
+
+    <div class="tool" id="tool">
+      <div id="viewStart">
+        <h2>Export your lists</h2>
+        <p class="sub">Sign in with the Microsoft account you use for To Do. You choose what to export before anything is downloaded.</p>
+        <div class="stack">
+          <button class="btn primary full" type="button" id="signIn">
+            <svg width="18" height="18" viewBox="0 0 21 21" aria-hidden="true"><rect x="1" y="1" width="9" height="9" fill="#f25022"/><rect x="11" y="1" width="9" height="9" fill="#7fba00"/><rect x="1" y="11" width="9" height="9" fill="#00a4ef"/><rect x="11" y="11" width="9" height="9" fill="#ffb900"/></svg>
+            Sign in with Microsoft
+          </button>
+          <p class="fine" id="signInNote" hidden>Sign-in is being set up and opens soon. Meanwhile, try the demo to see exactly how it works.</p>
+          <button class="btn ghost full" type="button" id="tryDemo">Try it with sample lists</button>
+        </div>
+        <ol class="steps-mini">
+          <li>Sign in and allow read-only access to your tasks.</li>
+          <li>Pick your lists and the app you’re moving to.</li>
+          <li>Download the file and import it into your new app.</li>
+        </ol>
+      </div>
+
+      <div id="viewLoading" hidden>
+        <div class="spinner" role="status" aria-label="Working"></div>
+        <p id="progress">Working…</p>
+      </div>
+
+      <div id="viewReady" hidden>
+        <p class="demo-note" id="demoNote" hidden>These are sample lists. Sign in to export your own.</p>
+        <p class="summary" id="summary"></p>
+        <fieldset>
+          <legend>Lists to export</legend>
+          <div class="lists" id="lists"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Moving to</legend>
+          <div class="formats">
+            <label><input type="radio" name="format" value="todoist" id="fmt-todoist" checked><b>Todoist</b><small>CSV per list</small></label>
+            <label><input type="radio" name="format" value="csv" id="fmt-csv"><b>Notion, Excel, Sheets</b><small>One spreadsheet</small></label>
+            <label><input type="radio" name="format" value="markdown" id="fmt-md"><b>Obsidian and notes apps</b><small>Markdown checklist</small></label>
+            <label><input type="radio" name="format" value="ics" id="fmt-ics"><b>Thunderbird, Nextcloud</b><small>Calendar tasks (.ics)</small></label>
+            <label><input type="radio" name="format" value="json" id="fmt-json"><b>Just a backup</b><small>Everything, as JSON</small></label>
+          </div>
+        </fieldset>
+        <label class="toggle"><input type="checkbox" id="includeCompleted"> Include completed tasks</label>
+        <p class="hint" id="guideHint"></p>
+        <div class="preview"><div class="ph" id="previewName"></div><pre id="previewBody"></pre></div>
+        <div class="row">
+          <button class="btn primary" type="button" id="download">Download</button>
+          <button class="btn ghost" type="button" id="startOver">Start over</button>
+        </div>
+        <p class="saved" id="saved" hidden>Saved to your downloads. Next, follow the guide below for your new app.</p>
+      </div>
+
+      <div id="viewError" hidden>
+        <h2>That didn’t work</h2>
+        <p class="sub" id="errorText"></p>
+        <button class="btn primary full" type="button" id="retry">Try again</button>
+      </div>
+    </div>
+  </div></header>
+
+  <main class="wrap">
+    <section id="what">
+      <p class="kicker">What moves</p>
+      <h2>Everything you typed, in a file you own</h2>
+      <p class="intro">Carryover reads your lists through Microsoft’s official To Do connection, the same one other apps use, and turns them into ordinary files.</p>
+      <div class="what">
+        <div>
+          <h3>Copied</h3>
+          <ul>
+            <li>Every list, including the default Tasks list</li>
+            <li>Task titles and notes</li>
+            <li>Steps, as sub-tasks or checklist items</li>
+            <li>Due dates, reminders and importance</li>
+            <li>Repeating tasks (“every month”, “every Mon, Thu”)</li>
+            <li>Completed tasks, if you want them</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Not copied</h3>
+          <ul>
+            <li>File attachments</li>
+            <li>Who a shared list is shared with</li>
+            <li>My Day suggestions, which are temporary</li>
+          </ul>
+          <p class="fine" style="margin-top:10px">Shared lists you belong to are exported like your own lists.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides">
+      <p class="kicker">Guides</p>
+      <h2>Moving to your new app</h2>
+      <p class="intro">Download the matching format above, then follow the steps. Each guide has the full details, and there is also a guide to <a href="export/">exporting and backing up your lists</a>. Menu names can change as apps update.</p>
+      <div class="guides">
+        <article class="guide">
+          <h3><a href="todoist/">Todoist</a></h3><span class="fmt">Format: Todoist</span>
+          <ol><li>Download. You get a zip with one CSV per list.</li><li>In Todoist, create a project for each list.</li><li>Open the project menu and choose Import from CSV, then pick that list’s file.</li></ol>
+        </article>
+        <article class="guide">
+          <h3><a href="notion/">Notion</a></h3><span class="fmt">Format: Notion, Excel, Sheets</span>
+          <ol><li>Download the spreadsheet.</li><li>In Notion, choose Import, then CSV.</li><li>Your tasks become a table you can filter by list or due date.</li></ol>
+        </article>
+        <article class="guide">
+          <h3><a href="obsidian/">Obsidian</a></h3><span class="fmt">Format: Markdown</span>
+          <ol><li>Download the Markdown file.</li><li>Move it into your vault folder.</li><li>Each list is a heading with checkboxes, steps nested underneath.</li></ol>
+        </article>
+        <article class="guide">
+          <h3><a href="excel/">Excel or Google Sheets</a></h3><span class="fmt">Format: Notion, Excel, Sheets</span>
+          <ol><li>Download the spreadsheet.</li><li>Open it directly, or use File, then Import in Sheets.</li></ol>
+        </article>
+        <article class="guide">
+          <h3>Thunderbird and Nextcloud</h3><span class="fmt">Format: Calendar tasks (.ics)</span>
+          <ol><li>Download the .ics file.</li><li>Use the app’s import option for calendars or tasks.</li></ol>
+        </article>
+        <article class="guide">
+          <h3><a href="google-tasks/">Google Tasks and Apple Reminders</a></h3><span class="fmt">Direct transfer</span>
+          <p class="soon">Coming soon.</p>
+          <ol><li>These apps can’t import files, so Carryover will send tasks straight to them.</li><li>Until then, download a backup so your lists are safe.</li></ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="questions">
+      <p class="kicker">Questions</p>
+      <h2>Before you sign in</h2>
+      <details><summary>When does Microsoft To Do shut down?</summary><p>Microsoft has said the To Do app will be retired on 30 June 2027 and has asked personal users to choose another app. It has promised its own export but has not said how it will work or whether other apps can read it. Sources: <a href="https://windowslatest.com/2026/11/19/microsoft-is-killing-to-do-and-telling-you-to-choose-another-app-after-it-reportedly-paid-up-to-200-million-for-wunderlist-and-killed-it-for-to-do" target="_blank" rel="noopener">Windows Latest</a>, <a href="https://www.thurrott.com/?p=344071" target="_blank" rel="noopener">Thurrott</a>.</p></details>
+      <details><summary>Can Carryover change or delete my tasks?</summary><p>No. It asks Microsoft only for permission to read your tasks (“Tasks.Read”). Microsoft shows you exactly that before you agree, and you can remove the permission any time from your Microsoft account’s privacy settings.</p></details>
+      <details><summary>Where do my tasks go?</summary><p>From Microsoft directly into this browser tab, then into the file you download. Carryover has no server and keeps no copy. The sign-in token lives only in this tab and is gone when you close it.</p></details>
+      <details><summary>Does it work with work or school accounts?</summary><p>It can, if your organisation allows apps to read tasks. Some organisations block this; your IT team can tell you. Microsoft is moving business users to Planner, so check what your organisation recommends.</p></details>
+      <details><summary>Is Carryover made by Microsoft?</summary><p>No. Carryover is an independent, free tool. Microsoft and Microsoft To Do are trademarks of Microsoft Corporation.</p></details>
+      <details><summary>I found a problem or my new app isn’t listed</summary><p>Tell us which app you’re moving to and what went wrong, and we’ll add or fix it: <a href="https://github.com/Joestilllives/joestilllives.github.io/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.</p></details>
+    </section>
+  </main>
+
+  <footer><div class="wrap">
+    <span>Carryover is a free tool by <a href="/">Joe</a>. Not affiliated with or endorsed by Microsoft.</span>
+    <span>Microsoft and Microsoft To Do are trademarks of Microsoft Corporation.</span>
+  </div></footer>
+
+  <script src="formats.js"></script>
+  <script src="zip.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      var end = Date.UTC(2027, 5, 30), now = Date.now();
+      var d = Math.ceil((end - now) / 864e5);
+      if (d > 0) { document.getElementById('daysLeft').textContent = d; document.getElementById('days').hidden = false; }
+    })();
+  </script>
+</body>
+</html>
