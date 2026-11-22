@@ -62,33 +62,38 @@
   function renderVerdict(loc, results) {
     var ok = results.filter(function (r) { return r.status === 'ok'; });
     var pending = results.some(function (r) { return r.status === 'loading'; });
-    var off = results.filter(function (r) { return r.src.official; })[0];
-    var ag = A.agreement(ok.map(function (r) { return { aqi: r.aqi, official: r.src.official }; }));
+    var off = results.filter(function (r) { return r.src.official && r.status === 'ok'; })[0];
+    var ind = ok.filter(function (r) { return r.src.independent; });
+    var indAqi = ind.length ? Math.round(A.median(ind.map(function (r) { return r.aqi; }))) : null;
+    var agInd = A.agreement(ind.map(function (r) { return { aqi: r.aqi }; }));
 
-    var html = '<div class="verdict-head"><div><p class="eyebrow">' + esc(loc.name) + '</p>';
-    var headline = off && off.status === 'ok' ? off : ok[0];
-    if (headline) {
-      var c = catOf(headline.aqi);
-      html += '<div class="big"><span class="big-num ' + c.key + '">' + headline.aqi + '</span>' +
-        '<span class="big-cat">' + c.name + '<small>' + esc(headline.src.official ? 'Official CPCB AQI' : headline.src.name) + '</small></span></div>';
+    // Headline = the independent (non-government) estimate. Government figure sits beside it.
+    var html = '<div class="verdict-head"><div><p class="eyebrow">' + esc(loc.name) + ' · Independent estimate</p>';
+    if (indAqi != null) {
+      var c = catOf(indAqi);
+      html += '<div class="big"><span class="big-num ' + c.key + '">' + indAqi + '</span>' +
+        '<span class="big-cat">' + c.name + '<small>From ' + ind.length + ' non-government source' + (ind.length > 1 ? 's' : '') +
+        (agInd ? ' · ' + agInd.level.toLowerCase() + ' agreement' : '') + '</small></span></div>';
     } else {
       html += '<div class="big"><span class="big-num none">' + (pending ? '…' : '-') + '</span></div>';
     }
     html += '</div>';
-    if (ag) {
-      html += '<div class="agree ' + ag.level.toLowerCase() + '"><span class="agree-label">Agreement</span><strong>' + ag.level + '</strong>' +
-        '<span class="muted small">' + ag.count + ' sources · range ' + ag.lo + '–' + ag.hi + '</span></div>';
+    if (off) {
+      var oc = catOf(off.aqi);
+      html += '<div class="agree"><span class="agree-label">Government says</span><strong><span class="chip ' + oc.key + '">' + off.aqi + '</span> ' + oc.name + '</strong>' +
+        '<span class="muted small">CPCB official AQI</span></div>';
     }
     html += '</div>';
 
     var msg;
-    if (ag && ag.gap && ag.gap.pct != null) {
-      var p = ag.gap.pct, pair = ' (' + Math.round(ag.gap.independent) + ' vs ' + Math.round(ag.gap.official) + ').';
-      if (p >= 25) msg = 'Independent sources read <strong>' + p + '% higher</strong> than the official figure' + pair;
-      else if (p <= -25) msg = 'Independent sources read <strong>' + Math.abs(p) + '% lower</strong> than the official figure' + pair;
-      else msg = 'Independent sources broadly <strong>match</strong> the official figure (within ' + Math.abs(p) + '%).';
-    } else if (off && (off.status === 'nokey' || off.status === 'error')) {
-      msg = 'The official CPCB reading isn’t available right now, so only independent sources are shown.';
+    if (off && indAqi != null && off.aqi > 0) {
+      var p = Math.round((indAqi - off.aqi) / off.aqi * 100);
+      if (p >= 25) msg = 'The government figure is <strong>' + Math.round((1 - off.aqi / indAqi) * 100) + '% lower</strong> than what independent sources measure (' + off.aqi + ' vs ' + indAqi + ').';
+      else if (p <= -25) msg = 'The government figure is <strong>higher</strong> than independent sources (' + off.aqi + ' vs ' + indAqi + ').';
+      else msg = 'The government figure broadly <strong>matches</strong> independent sources (within ' + Math.abs(p) + '%).';
+      if (catOf(off.aqi).key !== catOf(indAqi).key) msg += ' That puts it in a different health category: <strong>' + catOf(off.aqi).name + '</strong> instead of <strong>' + catOf(indAqi).name + '</strong>.';
+    } else if (indAqi != null && !off && !pending) {
+      msg = 'The government (CPCB) reading isn’t available right now, so there’s nothing to compare against yet.';
     } else if (pending) {
       msg = 'Checking sources…';
     } else if (!ok.length) {
@@ -196,7 +201,7 @@
     var gaps = [];
     rows.forEach(function (r) {
       if (r.cpcb == null || r.cpcb <= 0) return;
-      var ind = A.median(SOURCES.filter(function (s) { return !s.official; }).map(function (s) { return r[s.id]; }));
+      var ind = A.median(SOURCES.filter(function (s) { return s.independent; }).map(function (s) { return r[s.id]; }));
       if (ind != null) gaps.push((ind - r.cpcb) / r.cpcb * 100);
     });
     if (!rows.length) return 'History builds up hour by hour once the collector is running.';
@@ -204,8 +209,8 @@
     var avg = Math.round(A.mean(gaps));
     var higherShare = Math.round(gaps.filter(function (g) { return g > 0; }).length / gaps.length * 100);
     var dir = avg >= 0 ? '<strong>' + avg + '% higher</strong>' : '<strong>' + Math.abs(avg) + '% lower</strong>';
-    return 'Over the last ' + gaps.length + ' hours in ' + esc(cityName) + ', independent sources read on average ' + dir +
-      ' than the official CPCB figure, and higher in ' + higherShare + '% of hours.';
+    return 'Over the last ' + gaps.length + ' hours in ' + esc(cityName) + ', non-government sources read on average ' + dir +
+      ' than the government (CPCB) figure, and higher in ' + higherShare + '% of hours.';
   }
 
   function renderHistory(rows, cityName) {

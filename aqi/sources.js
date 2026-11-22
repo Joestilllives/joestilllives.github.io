@@ -26,10 +26,10 @@
   var FALLBACK_KM = 75;  // widen if nothing is nearby
 
   var SOURCES = [
-    { id: 'cpcb', name: 'CPCB (official)', short: 'CPCB', kind: 'Government stations', official: true, keyName: 'cpcb' },
-    { id: 'cams', name: 'Open-Meteo · CAMS', short: 'Model', kind: 'Satellite-assisted model', official: false },
-    { id: 'waqi', name: 'WAQI (aqicn.org)', short: 'WAQI', kind: 'Global aggregator', official: false, keyName: 'waqi' },
-    { id: 'openaq', name: 'Citizen sensors · OpenAQ', short: 'Sensors', kind: 'Low-cost sensors', official: false, keyName: 'openaq', serverOnly: true }
+    { id: 'cpcb', name: 'CPCB (government)', short: 'Govt', kind: 'What the government reports', official: true, keyName: 'cpcb' },
+    { id: 'cams', name: 'Open-Meteo · CAMS', short: 'Satellite', kind: 'Independent · satellite model (EU Copernicus)', official: false, independent: true },
+    { id: 'waqi', name: 'WAQI (aqicn.org)', short: 'WAQI', kind: 'Relays government stations · not counted', official: false, relay: true, keyName: 'waqi' },
+    { id: 'openaq', name: 'Citizen sensors · OpenAQ', short: 'Citizens', kind: 'Independent · citizen sensors', official: false, independent: true, keyName: 'openaq', serverOnly: true }
   ];
 
   // ---------- helpers ----------

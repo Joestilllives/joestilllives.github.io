@@ -62,6 +62,7 @@
       <h2>How this works</h2>
       <ol>
         <li><strong>One scale.</strong> Many apps show the US AQI, which runs much higher than India's for the same air. Wherever we have raw concentrations, we recompute the <em>Indian National AQI</em> (CPCB breakpoints) ourselves.</li>
+        <li><strong>Independent first.</strong> The headline number comes only from sources the government doesn't control: the EU's Copernicus satellite model and citizen-owned sensors. The government (CPCB) figure is shown beside it for comparison. WAQI is shown for reference but not counted, because it mostly republishes the government's own stations.</li>
         <li><strong>Side by side, never blended.</strong> Every source keeps its own number, timestamp and distance so you can judge it.</li>
         <li><strong>Agreement score.</strong> High when sources are within ~20% of each other, Medium within ~40%, Low beyond that.</li>
         <li><strong>Collected every hour.</strong> A scheduled job fetches every source server-side and saves the results, which builds the history above. If that data is more than 3 hours old, the page checks live from your browser instead.</li>
