@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clear Air Check</title>
-  <meta name="description" content="Cross-check India's official AQI against independent sources: satellite models, global aggregators and citizen sensors, all recalculated on the Indian AQI scale.">
+  <meta name="description" content="Independent air quality for Indian cities from satellite models and citizen sensors, checked against the official CPCB AQI on the Indian scale.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,10 +14,10 @@
         <span class="logo" aria-hidden="true"></span>
         <div>
           <h1>Clear Air Check</h1>
-          <p class="tag">Official AQI vs. independent sources, on one scale</p>
+          <p class="tag">Air quality from non-government sources, checked against the official number</p>
         </div>
       </div>
-      <button id="settingsBtn" class="ghost" type="button">API keys</button>
+      <button id="settingsBtn" class="ghost" type="button">Live keys</button>
     </div>
   </header>
 
@@ -28,6 +28,7 @@
       <button id="locateBtn" type="button" class="ghost">Use my location</button>
       <button id="refreshBtn" type="button">Refresh</button>
     </section>
+    <p id="dataStatus" class="status" aria-live="polite"></p>
 
     <section id="verdict" class="card verdict" aria-live="polite">
       <p class="muted">Pick a city to compare sources.</p>
@@ -37,6 +38,13 @@
       <h2>All sources on the Indian AQI scale</h2>
       <div id="scale" class="scale"></div>
       <ul class="legend" id="legend"></ul>
+    </section>
+
+    <section class="card" id="historyCard">
+      <h2>Last 7 days</h2>
+      <p id="gapStat" class="gap-stat"></p>
+      <div id="history" class="history"></div>
+      <ul class="legend" id="historyLegend"></ul>
     </section>
 
     <section>
@@ -54,8 +62,10 @@
       <h2>How this works</h2>
       <ol>
         <li><strong>One scale.</strong> Many apps show the US AQI, which runs much higher than India's for the same air. Wherever we have raw concentrations, we recompute the <em>Indian National AQI</em> (CPCB breakpoints) ourselves.</li>
+        <li><strong>Independent first.</strong> The headline number comes only from sources the government doesn't control: the EU's Copernicus satellite model and citizen-owned sensors (OpenAQ and PurpleAir). The government (CPCB) figure is shown beside it for comparison. WAQI is shown for reference but not counted, because it mostly republishes the government's own stations.</li>
         <li><strong>Side by side, never blended.</strong> Every source keeps its own number, timestamp and distance so you can judge it.</li>
         <li><strong>Agreement score.</strong> High when sources are within ~20% of each other, Medium within ~40%, Low beyond that.</li>
+        <li><strong>Collected every hour.</strong> A scheduled job fetches every source server-side and saves the results, which builds the history above. If that data is more than 3 hours old, the page checks live from your browser instead.</li>
       </ol>
       <h3>Caveats</h3>
       <ul>
@@ -63,19 +73,20 @@
         <li><strong>Open-Meteo / CAMS</strong> is a satellite-assisted model at ~40 km resolution. It's good for regional trends but can miss local hotspots. We average its last 24 hours to match CPCB's method.</li>
         <li><strong>WAQI</strong> mostly republishes government stations, so it's a cross-check of the data pipeline, not a fully independent measurement. Its values are back-converted from the US scale and are approximate.</li>
         <li><strong>Citizen sensors (OpenAQ)</strong> are latest readings, not 24-hour averages, and low-cost sensors tend to read high in humid air.</li>
+        <li><strong>PurpleAir</strong> uses each sensor's own 24-hour average. With 4 or more sensors nearby, readings more than 3× away from the group are dropped as likely faulty.</li>
       </ul>
     </section>
   </main>
 
   <footer class="wrap foot">
-    <p>Data: CPCB via data.gov.in · Copernicus CAMS via Open-Meteo · World Air Quality Index Project · OpenAQ. Not a medical or official advisory.</p>
+    <p>Data: Copernicus CAMS via Open-Meteo · OpenAQ · PurpleAir · World Air Quality Index Project · CPCB via data.gov.in. Not a medical or official advisory.</p>
     <p><a href="../">← Back to portfolio</a></p>
   </footer>
 
   <dialog id="settings">
     <form method="dialog" class="settings-form">
-      <h2>API keys</h2>
-      <p class="muted small">All free. Keys are stored only in this browser and sent only to their own service.</p>
+      <h2>Your own API keys</h2>
+      <p class="muted small">Optional. The site collects data every hour without these. Add your own free keys only to run live checks, for example for your exact location. Keys stay in this browser and go only to their own service.</p>
       <label>data.gov.in key <span class="muted">(official CPCB data)</span>
         <input id="key-cpcb" autocomplete="off" spellcheck="false">
         <a class="small" href="https://data.gov.in/" target="_blank" rel="noopener">Sign up at data.gov.in → My Account → API key</a>
@@ -84,9 +95,9 @@
         <input id="key-waqi" autocomplete="off" spellcheck="false">
         <a class="small" href="https://aqicn.org/data-platform/token/" target="_blank" rel="noopener">Get a token at aqicn.org</a>
       </label>
-      <label>OpenAQ key <span class="muted">(citizen sensors)</span>
-        <input id="key-openaq" autocomplete="off" spellcheck="false">
-        <a class="small" href="https://explore.openaq.org/register" target="_blank" rel="noopener">Register at openaq.org</a>
+      <label>PurpleAir read key <span class="muted">(citizen sensors)</span>
+        <input id="key-purpleair" autocomplete="off" spellcheck="false">
+        <a class="small" href="https://develop.purpleair.com/" target="_blank" rel="noopener">Get a key at develop.purpleair.com</a>
       </label>
       <div class="row-end">
         <button value="cancel" class="ghost">Cancel</button>
@@ -96,6 +107,7 @@
   </dialog>
 
   <script src="aqi.js"></script>
+  <script src="sources.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
