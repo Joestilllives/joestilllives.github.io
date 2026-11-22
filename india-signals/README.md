@@ -66,6 +66,16 @@ Run: `BHAVCOPY=<latest BhavCopy csv> python3 combined.py PANEL.pkl INDUSTRY.csv 
 | Mumbai air pollution | Clean days +0.25%/day better in 2023-26 (t 1.7); data from Aug 2022 only |
 | Moon phase, pre-holiday | Inconsistent |
 
+## The simple algorithm (`algorithm.py`)
+
+Monthly, no machine learning: liquid companies listed 1+ year, ETFs out, most-traded fifth out;
+remove stocks with 3+ frenzy days last month; rank by steadiness of the 12-month climb
+(12-month return / daily volatility); buy the top 20% in each size group; hold one month.
+69 months (Mar 2021-Oct 2026), after 0.3% costs: **+9.4%/yr vs the average company, t = 3.8,
+ahead in 74% of months; 2021-23 +10.7%/yr, 2023-26 +8.4%/yr; deepest slide -7.3%.**
+Tested pieces: momentum alone +7.7%/yr; global-reversal alone -1.9%/yr (dropped); filtering
+any frenzy day hurt (removes a third of stocks). The final recipe was picked from these tests.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
