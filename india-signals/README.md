@@ -24,6 +24,24 @@ correct ranking direction in 86% of months, deepest slide vs market -2.4%.**
 
 Run: `BHAVCOPY=<latest BhavCopy csv> python3 combined.py PANEL.pkl INDUSTRY.csv IPOS.csv VIEWS.pkl OUTDIR`
 
+## Data sources tested and what they added (44 months out-of-sample, after costs)
+
+| Added to the model | Ahead/yr | t | Verdict |
+|---|---|---|---|
+| Base model (trend, flow, frenzy, IPO, Wikipedia company attention) | +4.2% | 2.3 | |
+| + peers that move together (Swanson-style links) | +5.1% | 2.9 | helps a little |
+| + 50 global outside forces, per-stock links only (`FACTORS`) | **+5.6%** | **3.3** | **best; main model** |
+| + raw monthly factor moves | +2.2% | 1.1 | overfits, removed |
+| + NSE futures & options (`FO_DIR`) | +4.9% | 3.0 | no gain; large caps price it in |
+| + Wikipedia topic attention and weather (`TOPIC_VIEWS`, `WEATHER`) | +4.5% | 2.4 | no gain |
+
+- Indian stocks overreact to global factor moves (oil, metals, US tech): the factor-driven part of
+  last month's move reverses next month (top-bottom -0.81%/month, t = -2.9).
+- Rising Wikipedia attention to inflation, trade war, tariffs, layoffs and the Fed comes before weaker
+  Indian market weeks in both periods, but too weakly to time the market (`wiki_market.py`).
+- GDELT news tone could not be collected: its 1-request-per-5-seconds limit is shared by this
+  environment's network.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by

@@ -32,7 +32,8 @@ RANKED += ["factor_implied1", "factor_gap1", "factor_r2"]
 # Raw monthly factor moves (oil last month, etc.) are the same for every stock; with only
 # 2-4 years of training the model overfit to them, so they are not used. Per-stock betas
 # to key factors are kept in the table for reference but not used either.
-RAW = ["mkt1", "mkt3", "breadth", "has_wiki", "recent_ipo"]
+RANKED += ["fo_oi_chg21", "fo_oi_chg5", "fo_pcr", "fo_pcr_chg21", "fo_optvol_trend", "fo_crowding"]
+RAW = ["mkt1", "mkt3", "breadth", "has_wiki", "recent_ipo", "in_fo"]
 RATE_LIKE = {"US 10-year rate", "US 3-month rate"}  # use changes, not log returns
 
 
@@ -41,7 +42,8 @@ def factor_returns(factors, dates):
     f = factors.reindex(factors.index.union(dates)).ffill().reindex(dates).shift(1)
     out = pd.DataFrame(index=dates)
     for c in f.columns:
-        out[c] = f[c].diff() if c in RATE_LIKE else np.log(f[c].clip(lower=1e-6)).diff()
+        level_like = c in RATE_LIKE or c.startswith(("Rain", "Heat"))
+        out[c] = f[c].diff() if level_like else np.log(f[c].clip(lower=1e-6)).diff()
     return out.fillna(0.0)
 PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-month move", "mom1": "last month's move",
          "high52": "distance from 52-week high", "smooth12": "steadiness of the climb", "vol252": "yearly volatility",
@@ -52,6 +54,9 @@ PLAIN = {"mom12_1": "12-month trend", "mom6_1": "6-month trend", "mom3": "3-mont
          "rel_peer": "strength vs peers", "peer_ret1": "peers' move last month",
          "peer_gap1": "gap to peers' move last month", "factor_implied1": "move implied by outside forces",
          "factor_gap1": "unpriced outside-force move", "factor_r2": "how much outside forces explain it",
+         "fo_oi_chg21": "growth in futures bets (month)", "fo_oi_chg5": "growth in futures bets (week)",
+         "fo_pcr": "puts vs calls", "fo_pcr_chg21": "change in puts vs calls", "fo_optvol_trend": "options activity trend",
+         "fo_crowding": "futures bets vs trading volume",
          "beta_oil": "link to oil", "beta_rupee": "link to the rupee", "beta_us_tech": "link to US tech",
          "beta_copper": "link to copper", "beta_gold": "link to gold", "beta_us_rate": "link to US rates",
          "beta_china": "link to China", "beta_steel": "link to steel", "peer_gap3": "gap to peers' move last 3 months", "age": "how long listed", "listing_gain": "IPO listing-day gain",
@@ -78,9 +83,32 @@ def matrices(p, views):
     return m
 
 
-def features(m, ind, ipo_gain):
+def load_fo(fo_dir, dates, symbols):
+    """Per stock per day: futures open interest, put/call open interest, options volume."""
+    import glob
+    fo = pd.concat([pd.read_csv(x) for x in sorted(glob.glob(os.path.join(fo_dir, "*.csv")))], ignore_index=True)
+    fo["date"] = pd.to_datetime(fo["date"])
+    out = {}
+    for c in ["fut_oi", "put_oi", "call_oi", "opt_vol"]:
+        out[c] = fo.pivot_table(index="date", columns="symbol", values=c).reindex(index=dates, columns=symbols)
+    return out
+
+
+def features(m, ind, ipo_gain, fo=None):
     lp, ret = m["lp"], m["ret"]
     f = {}
+    if fo is not None:
+        # What leveraged traders are doing: growth of futures bets, puts vs calls, options activity
+        oi = fo["fut_oi"].where(fo["fut_oi"] > 0)
+        f["fo_oi_chg21"] = np.log(oi / oi.shift(21))
+        f["fo_oi_chg5"] = np.log(oi / oi.shift(5))
+        pcr = np.log((fo["put_oi"] + 1) / (fo["call_oi"] + 1)).where(oi.notna())
+        f["fo_pcr"] = pcr
+        f["fo_pcr_chg21"] = pcr - pcr.shift(21)
+        ov = fo["opt_vol"].where(oi.notna())
+        f["fo_optvol_trend"] = np.log((ov.rolling(20, min_periods=10).mean() + 1) / (ov.rolling(120, min_periods=60).mean() + 1))
+        f["fo_crowding"] = np.log(oi / m["vol"].rolling(20, min_periods=10).mean())
+        f["in_fo"] = oi.notna().astype(float)
     f["mom12_1"] = lp.shift(21) - lp.shift(252)
     f["mom6_1"] = lp.shift(21) - lp.shift(126)
     f["mom3"] = lp - lp.shift(63)
@@ -248,7 +276,8 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     funds = {l.strip() for l in open(funds_file) if l.strip() and not l.startswith("#")}
     p = prepare(raw[~raw["symbol"].isin(funds)])  # companies only: ETFs are not stocks
     m = matrices(p, pd.read_pickle(views_pkl))
-    f = features(m, ind, ipo_gain)
+    fo = load_fo(os.environ["FO_DIR"], m["lp"].index, m["lp"].columns) if os.environ.get("FO_DIR") else None
+    f = features(m, ind, ipo_gain, fo)
     fac = None
     if os.environ.get("FACTORS"):
         factors = pd.read_pickle(os.environ["FACTORS"])
@@ -259,6 +288,9 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
             tv = tv.rolling(7, min_periods=4).mean()  # smooth weekday swings
             tv.columns = ["Wikipedia: " + c[2:] for c in tv.columns]
             factors = factors.join(tv, how="outer")
+        if os.environ.get("WEATHER"):
+            # rain and heat vs normal across 13 Indian regions as outside forces
+            factors = factors.join(pd.read_pickle(os.environ["WEATHER"]), how="outer")
         fac = factor_returns(factors, m["lp"].index)
     tab = month_table(m, f, ind, ipo_gain, fac)
     tab.to_pickle(os.path.join(outdir, "monthly_table.pkl"))
