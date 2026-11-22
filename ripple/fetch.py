@@ -4,6 +4,7 @@ import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from datetime import timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -22,7 +23,7 @@ def feed_urls():
 
 def _iso(date_text):
     try:
-        return parsedate_to_datetime(date_text).isoformat()
+        return parsedate_to_datetime(date_text).astimezone(timezone.utc).isoformat()
     except Exception:
         return None
 

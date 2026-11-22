@@ -2,7 +2,8 @@ name: Ripple alerts
 
 on:
   schedule:
-    - cron: "17 */3 * * *"   # every 3 hours
+    - cron: "17 */3 * * *"   # news alerts, every 3 hours
+    - cron: "43 2 * * 1-6"   # prices: scorecard + discoveries, daily after US close
   workflow_dispatch:          # lets you run it by hand from the Actions tab
 
 permissions:
@@ -20,10 +21,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Test engine
-        run: python ripple/tests/test_engine.py
+      - name: Test
+        run: python ripple/tests/test_engine.py && python ripple/tests/test_stats.py
       - name: Fetch news and find hidden links
         run: cd ripple && python run.py
+      - name: Prices, scorecard and discoveries
+        if: github.event.schedule == '43 2 * * 1-6' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true   # a price-site hiccup shouldn't block publishing news alerts
+        run: cd ripple && python stats.py
       - name: Publish results
         run: |
           git config user.name "ripple-bot"

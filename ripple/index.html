@@ -55,6 +55,30 @@
                 padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; }
   button.copy:hover { border-color: var(--accent); }
   .empty { color: var(--muted); text-align: center; padding: 40px 0; }
+  .tabs { display: flex; gap: 4px; margin-top: 20px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  .tab { background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted);
+         padding: 10px 14px; font-size: 15px; cursor: pointer; white-space: nowrap; }
+  .tab.on { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
+  .view[hidden] { display: none; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .stat .k { font-size: 12.5px; color: var(--muted); }
+  .stat .v { font-size: 26px; font-weight: 700; margin-top: 2px; }
+  .stat .s { font-size: 12.5px; color: var(--muted); }
+  h3 { font-size: 16px; margin: 26px 0 8px; }
+  .note { color: var(--muted); font-size: 13.5px; margin: 6px 0 0; }
+  .tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .tbl th, .tbl td { text-align: left; padding: 8px 6px; border-top: 1px solid var(--line); vertical-align: top; }
+  .tbl th { color: var(--muted); font-weight: 600; font-size: 12.5px; border-top: 0; }
+  .tblwrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 4px 10px; }
+  .good { color: var(--up); } .bad { color: var(--down); } .meh { color: var(--muted); }
+  .badge { font-size: 11.5px; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+  .badge.new { background: #10324a; color: var(--accent); }
+  .badge.known { background: var(--panel2); color: var(--muted); }
+  .badge.confirmed { background: #10331f; color: var(--up); }
+  .badge.contradicted { background: #3a1616; color: var(--down); }
+  .badge.weak { background: var(--panel2); color: var(--muted); }
+  .badge.dir { background: #352a10; color: var(--flat); }
   footer { margin-top: 36px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 16px; }
   footer a { color: var(--accent); }
 </style>
@@ -65,9 +89,16 @@
     <h1>🌊 <span>Ripple</span></h1>
     <p>News hits one company. Ripple finds who else gets hit — across US and Indian markets.</p>
     <div class="meta" id="meta">Loading…</div>
-    <div class="banner" id="banner" hidden>Showing <b>sample headlines</b> to demo the engine. Live alerts appear here after the first scheduled run.</div>
+    <div class="banner" id="banner" hidden>The Alerts tab is showing <b>sample headlines</b> to demo the engine. Live alerts appear after the first scheduled run.</div>
   </header>
 
+  <nav class="tabs" id="tabs">
+    <button class="tab on" data-v="alerts">⚡ Alerts</button>
+    <button class="tab" data-v="score">🎯 Scorecard</button>
+    <button class="tab" data-v="disc">🔭 Discoveries</button>
+  </nav>
+
+  <section class="view" id="v-alerts">
   <div class="controls" id="controls">
     <button class="chip on" data-f="all">All</button>
     <button class="chip" data-f="cross">🌍 Cross-market</button>
@@ -79,6 +110,17 @@
   </div>
 
   <main id="list"></main>
+  </section>
+
+  <section class="view" id="v-score" hidden>
+    <p class="note">Did the flagged companies really beat (▲) or lag (▼) their own market — Nifty or S&amp;P 500 — after the alert? Checked 1, 3 and 7 trading days later, starting from the last close before the news. 50% is a coin flip.</p>
+    <div id="score"><div class="empty">The scorecard updates once a day.</div></div>
+  </section>
+
+  <section class="view" id="v-disc" hidden>
+    <p class="note">Found from 2 years of daily prices, no AI: “when X moves, Y beats or lags its market the next trading day”. Only links that are statistically strong <b>and</b> hold in both the older and newer halves of the data are shown. These are leads to research, not certainties.</p>
+    <div id="disc"><div class="empty">Discoveries update once a day.</div></div>
+  </section>
 
   <footer>
     <p><b>How it works.</b> Ripple reads market news every few hours, spots events (oil, rates, tariffs, visas, chips…) and follows a hand-built map of real business links — suppliers, customers, costs, currencies — to find companies affected second- or third-hand that the headline never mentions.</p>
@@ -168,6 +210,79 @@ document.getElementById("list").addEventListener("click", async e => {
   }
   const old = b.textContent; b.textContent = "✓ Copied"; setTimeout(() => b.textContent = old, 1500);
 });
+
+document.getElementById("tabs").addEventListener("click", e => {
+  const b = e.target.closest(".tab"); if (!b) return;
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t === b));
+  document.querySelectorAll(".view").forEach(v => v.hidden = v.id !== "v-" + b.dataset.v);
+});
+
+const pct = x => (x * 100).toFixed(0) + "%";
+const sgn = x => (x > 0 ? "+" : "") + x.toFixed(2) + "%";
+const cls = (rate, enough) => !enough ? "meh" : rate >= 0.55 ? "good" : rate <= 0.45 ? "bad" : "meh";
+
+function statBox(label, s) {
+  if (!s) return `<div class="stat"><div class="k">${label}</div><div class="v meh">—</div><div class="s">waiting for data</div></div>`;
+  return `<div class="stat"><div class="k">${label}</div>
+    <div class="v ${cls(s.hit_rate, s.enough_data)}">${pct(s.hit_rate)}</div>
+    <div class="s">right on ${s.n} calls · avg ${sgn(s.avg_edge_pct)}${s.enough_data ? "" : " · small sample"}</div></div>`;
+}
+
+function renderScore(sc) {
+  const H = sc.horizons, o = sc.overall;
+  let html = `<div class="stats">${H.map(h => statBox(h + "-day hit rate", o[h])).join("")}</div>`;
+  if (!o[H[0]]) {
+    html += `<div class="empty">${sc.alerts_logged} live alerts logged so far. Results appear once a few trading days have passed after them.</div>`;
+    document.getElementById("score").innerHTML = html; return;
+  }
+  const row = (name, s) => `<tr><td>${esc(name)}</td>${H.map(h => s[h]
+      ? `<td class="${cls(s[h].hit_rate, s[h].enough_data)}">${pct(s[h].hit_rate)} <span class="meh">(${s[h].n})</span></td>` : "<td class=meh>—</td>").join("")}</tr>`;
+  const head = `<tr><th></th>${H.map(h => `<th>${h} day</th>`).join("")}</tr>`;
+  html += `<h3>By type</h3><div class="tblwrap"><table class="tbl">${head}
+    ${row("▲ Tailwind calls", sc.by_effect.tailwind)}${row("▼ Headwind calls", sc.by_effect.headwind)}${row("🌍 Cross-market calls", sc.cross_market)}</table></div>`;
+  html += `<h3>By link — keep what works, drop what doesn't</h3><div class="tblwrap"><table class="tbl">${head}
+    ${sc.by_link.map(l => row(l.link, l.stats)).join("")}</table></div>
+    <p class="note">Numbers in brackets = how many calls. Below ${sc.min_sample} calls, treat a hit rate as noise.</p>`;
+  html += `<h3>Latest checked calls</h3><div class="tblwrap"><table class="tbl"><tr><th>Call</th><th>News</th><th>1 day vs market</th></tr>
+    ${sc.recent.map(r => { const x = r.results["1"]; return `<tr><td>${r.effect === "tailwind" ? "▲" : "▼"} ${esc(r.company)}</td>
+      <td>${esc(r.alert)}</td><td class="${x ? (x.hit ? "good" : "bad") : "meh"}">${x ? sgn(x.excess * 100) + (x.hit ? " ✓" : " ✗") : "pending"}</td></tr>`; }).join("")}
+    </table></div>`;
+  document.getElementById("score").innerHTML = html;
+}
+
+function renderDisc(d) {
+  const fresh = d.discoveries.filter(x => !x.in_map);
+  const known = d.discoveries.filter(x => x.in_map);
+  const counts = s => d.map_check.filter(m => m.status === s).length;
+  let html = `<div class="stats">
+    <div class="stat"><div class="k">New links found</div><div class="v good">${fresh.length}</div><div class="s">not in the map yet</div></div>
+    <div class="stat"><div class="k">Map links confirmed</div><div class="v">${counts("confirmed")}</div><div class="s">of ${d.map_check.length} measurable</div></div>
+    <div class="stat"><div class="k">Map links contradicted</div><div class="v ${counts("contradicted") ? "bad" : ""}">${counts("contradicted")}</div><div class="s">prices disagree</div></div>
+  </div>`;
+  const card = x => `<article class="card">
+      <div class="who"><b>${esc(x.leader)}</b><span class="arrow">→ next day →</span><b>${esc(x.follower)}</b>
+        <span class="badge ${x.in_map ? "known" : "new"}">${x.in_map ? "already in map" : "new link"}</span>
+        ${x.same_sector ? '<span class="badge known">same sector</span>' : ""}
+        ${x.leader_market !== x.follower_market ? '<span class="tag x">cross-market</span>' : ""}</div>
+      <p class="note" style="color:var(--text)">${esc(x.sentence)}</p>
+      <p class="note">Strength t = ${x.t} over ${x.n} days · older half t = ${x.halves_t[0]}, newer half t = ${x.halves_t[1]}</p>
+    </article>`;
+  html += `<h3>🔭 New candidate links</h3>` + (fresh.length ? fresh.map(card).join("")
+    : `<div class="empty">No strong new links this time. That's normal: the bar is set high on purpose.</div>`);
+  if (known.length) html += `<h3>Strong links already in the map</h3>` + known.map(card).join("");
+  html += `<h3>Checking the map against real prices</h3><div class="tblwrap"><table class="tbl">
+    <tr><th>Link</th><th>Map says</th><th>Prices say</th><th></th></tr>
+    ${d.map_check.map(m => `<tr><td>${esc(m.from)} → ${esc(m.to)}</td>
+      <td>${m.expected > 0 ? "moves with" : m.expected < 0 ? "moves against" : "exposed"}</td>
+      <td>${m.measured > 0 ? "with" : "against"} <span class="meh">(t ${m.t}, ${m.timing})</span></td>
+      <td><span class="badge ${m.status === "direction found" ? "dir" : m.status}">${m.status}</span></td></tr>`).join("")}
+  </table></div>
+  <p class="note">“Weak” doesn't mean the link is wrong: many links only matter on big news days, not every day.</p>`;
+  document.getElementById("disc").innerHTML = html;
+}
+
+fetch("output/scorecard.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(d => d && renderScore(d)).catch(() => {});
+fetch("output/discoveries.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(d => d && renderDisc(d)).catch(() => {});
 
 fetch("output/alerts.json?t=" + Date.now())
   .then(r => r.json())

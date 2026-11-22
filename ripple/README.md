@@ -16,10 +16,24 @@ driver*), so **C** (Tata Motors) is flagged even though the headline never names
 - Results go to `output/alerts.json` (shown on `index.html`) and `output/posts.md`
   (ready-to-post social and Telegram text).
 
+Once a day, `stats.py` also downloads 2 years of daily prices (Yahoo Finance) and:
+
+- **Scorecard** (`outcomes.py` → `output/scorecard.json`): every live alert is kept in
+  `output/alert_log.json`. Each ▲/▼ call is checked 1, 3 and 7 trading days later:
+  did the company beat / lag its own market (Nifty or S&P 500), starting from the last
+  close before the news? Shown overall, by type and by link.
+- **Discoveries** (`discover.py` → `output/discoveries.json`): tests every pair for
+  "when X moves, Y beats/lags its market the next trading day". Only links that are
+  strong (t ≥ 3.5) **and** hold in both halves of the history are shown; on pure
+  random data this finds about one false link every two runs. It also checks every
+  link already in the map against real prices (confirmed / weak / contradicted).
+
 ```bash
 python ripple/tests/test_engine.py   # tests
+python ripple/tests/test_stats.py
 cd ripple && python run.py --sample   # offline demo
-cd ripple && python run.py            # live (needs internet)
+cd ripple && python run.py            # live news (needs internet)
+cd ripple && python stats.py          # prices, scorecard, discoveries
 ```
 
 ## Growing the link map

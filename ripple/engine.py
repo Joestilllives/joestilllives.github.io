@@ -11,7 +11,7 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 MAX_HOPS = 3
-MIN_SCORE = 0.12
+MIN_SCORE = 0.08
 
 UP_WORDS = [
     "surge", "surges", "surged", "soar", "soars", "soared", "jump", "jumps", "jumped",
@@ -53,6 +53,8 @@ class Graph:
         raw = json.loads(Path(path).read_text(encoding="utf-8"))
         self.entities = {e["id"]: e for e in raw["entities"]}
         groups = raw.get("groups", {})
+        self.groups = groups
+        self.benchmarks = raw.get("benchmarks", {})
         self.out = {eid: [] for eid in self.entities}
         for e in raw["edges"]:
             targets = groups[e["to"][1:]] if e["to"].startswith("@") else [e["to"]]

@@ -17,6 +17,23 @@ KEEP_DAYS = 3
 MAX_ALERTS = 60
 
 
+def update_log(alerts, now):
+    """Permanent record of live alerts, so the scorecard can check them later (#1)."""
+    path = OUT / "alert_log.json"
+    log = {a["id"]: a for a in (json.loads(path.read_text(encoding="utf-8")) if path.exists() else [])}
+    for a in alerts:
+        if a.get("sample") or a["id"] in log:
+            continue
+        log[a["id"]] = {
+            "id": a["id"], "title": a["title"], "url": a.get("url"),
+            "published": a.get("published") or now.isoformat(), "logged": now.isoformat(),
+            "impacts": [{k: i[k] for k in ("id", "name", "effect", "cross_market", "path")} for i in a["impacts"]],
+        }
+    cutoff = (now - timedelta(days=400)).isoformat()
+    kept = sorted((a for a in log.values() if a["published"] >= cutoff), key=lambda a: a["published"])
+    path.write_text(json.dumps(kept, indent=0, ensure_ascii=False), encoding="utf-8")
+
+
 def main():
     sample = "--sample" in sys.argv
     now = datetime.now(timezone.utc)
@@ -48,6 +65,8 @@ def main():
     kept = kept[:MAX_ALERTS]
 
     OUT.mkdir(exist_ok=True)
+    if not sample:
+        update_log(alerts.values(), now)
     payload = {
         "generated": now.isoformat(), "sample": sample, "headlines_scanned": len(items),
         "feed_errors": len(errors), "alerts": kept,

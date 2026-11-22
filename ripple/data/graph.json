@@ -13,7 +13,8 @@
     "WTI",
     "oil prices",
     "oil price"
-   ]
+   ],
+   "price": "BZ=F"
   },
   {
    "id": "opec",
@@ -85,7 +86,8 @@
     "Treasury yield",
     "US bond yields",
     "10-year yield"
-   ]
+   ],
+   "price": "^TNX"
   },
   {
    "id": "dxy",
@@ -97,7 +99,8 @@
     "=DXY",
     "US dollar",
     "greenback"
-   ]
+   ],
+   "price": "DX-Y.NYB"
   },
   {
    "id": "inr",
@@ -107,7 +110,9 @@
    "aliases": [
     "rupee",
     "=INR"
-   ]
+   ],
+   "price": "INR=X",
+   "invert": true
   },
   {
    "id": "fii",
@@ -285,7 +290,8 @@
     "gold price",
     "gold prices",
     "gold"
-   ]
+   ],
+   "price": "GC=F"
   },
   {
    "id": "aluminium",
@@ -296,7 +302,8 @@
     "aluminium",
     "aluminum",
     "=LME aluminium"
-   ]
+   ],
+   "price": "ALI=F"
   },
   {
    "id": "china_steel",
@@ -1095,5 +1102,10 @@
    "w": 0.6,
    "why": "Tractor sales track farm incomes"
   }
- ]
+ ],
+ "benchmarks": {
+  "IN": "^NSEI",
+  "US": "^GSPC",
+  "TW": "^TWII"
+ }
 }

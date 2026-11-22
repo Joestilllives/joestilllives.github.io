@@ -1,4 +1,4 @@
-# Ripple posts — 2026-11-21 23:53 UTC
+# Ripple posts — 2026-11-22 00:12 UTC
 
 ## Big Tech lifts AI capex plans again for next year
 
@@ -7,11 +7,13 @@
 🌊 The news: Big Tech lifts AI capex plans again for next year
 
 The hidden link nobody's talking about:
-AI / data-centre spending → Nvidia
+AI / data-centre spending → TSMC → Semiconductor supply → Maruti Suzuki
 
-• Data-centre buildouts run on Nvidia GPUs.
+• TSMC manufactures most advanced AI chips.
+• TSMC is the world's largest contract chipmaker.
+• The 2021 chip shortage forced carmakers, including Maruti, to cut production.
 
-Also in the ripple: TSMC ▲, TCS ◆, Infosys ◆, Wipro ◆
+Also in the ripple: Nvidia ▲, TSMC ▲, TCS ◆, Infosys ◆
 
 ▲ possible tailwind ▼ possible headwind ◆ exposed
 Research & education only. Not investment advice.
