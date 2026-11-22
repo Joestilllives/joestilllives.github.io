@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tokri · Free WhatsApp order link for your menu</title>
+  <meta name="description" content="Turn your menu into a link customers can order from on WhatsApp. Free, no sign-up, no app, no commission. For home bakers, tiffin services, cafes and small shops.">
+  <link rel="canonical" href="https://joestilllives.github.io/tokri/">
+  <meta property="og:title" content="Tokri · Free WhatsApp order link for your menu">
+  <meta property="og:description" content="Customers pick from your menu and the full order arrives on your WhatsApp. Free, no sign-up, no commission.">
+  <meta property="og:url" content="https://joestilllives.github.io/tokri/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://joestilllives.github.io/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%BA%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#1f1a1c; --muted:#6b6267; --bg:#fbf6f1; --card:#fff; --line:#ece3dc; --brand:#e8577e; --accent:#ff9f1c; --night:#020C24; --wa:#25d366; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Nunito, system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+    a { color:inherit; }
+    .wrap { max-width:1120px; margin:0 auto; padding:0 16px; }
+    nav.top { background:var(--night); }
+    nav.top .wrap { display:flex; justify-content:space-between; align-items:center; padding-top:10px; padding-bottom:10px; }
+    nav.top a { color:#fff; text-decoration:none; font-weight:700; font-size:15px; }
+    nav.top a.logo { font-family:Coiny, sans-serif; font-size:22px; font-weight:400; }
+    .hero { padding:44px 0 28px; display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; }
+    .kicker { font-weight:800; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--brand); }
+    h1 { font-family:Coiny, sans-serif; font-weight:400; font-size:clamp(34px, 5.6vw, 58px); line-height:1.08; margin:10px 0 14px; }
+    h1 span { color:var(--brand); }
+    .lead { font-size:18px; color:var(--muted); max-width:34em; }
+    .ticks { display:flex; flex-wrap:wrap; gap:8px 18px; margin:18px 0 22px; font-weight:700; font-size:15px; }
+    .ticks span::before { content:"\2713  "; color:var(--wa); font-weight:800; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:2px solid transparent; border-radius:12px; padding:12px 18px; font:800 15px Nunito, sans-serif; cursor:pointer; text-decoration:none; }
+    .btn.pri { background:var(--brand); color:#fff; }
+    .btn.dark { background:var(--night); color:#fff; }
+    .btn.wa { background:var(--wa); color:#063b1c; }
+    .btn.line { background:#fff; color:var(--ink); border-color:var(--line); }
+    .btn svg { width:18px; height:18px; fill:currentColor; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .how { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px; display:grid; gap:14px; }
+    .how div { display:grid; grid-template-columns:36px 1fr; gap:10px; align-items:start; }
+    .how b.n { width:32px; height:32px; border-radius:50%; background:var(--accent); color:var(--night); display:grid; place-items:center; }
+    .how p { color:var(--muted); font-size:15px; }
+    .how p b { color:var(--ink); }
+
+    .builder { display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:start; padding:20px 0 56px; }
+    .builder > * { min-width:0; }
+    .panel { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px; margin-bottom:16px; }
+    .panel h2 { font-size:20px; font-weight:800; margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+    .panel h2 i { font-style:normal; width:28px; height:28px; border-radius:50%; background:var(--night); color:#fff; display:grid; place-items:center; font-size:14px; }
+    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    label { display:grid; gap:6px; font-weight:700; font-size:14px; }
+    label small { font-weight:400; color:var(--muted); }
+    input, textarea, select { font:inherit; font-weight:400; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); width:100%; min-width:0; color:var(--ink); }
+    input:focus, textarea:focus, select:focus { outline:2px solid var(--brand); outline-offset:1px; }
+    .pick { display:flex; flex-wrap:wrap; gap:6px; }
+    .pick button { width:40px; height:40px; border-radius:10px; border:1px solid var(--line); background:var(--bg); font-size:20px; cursor:pointer; }
+    .pick button[aria-pressed="true"] { outline:3px solid var(--ink); outline-offset:1px; }
+    .pick.colors button { border:0; }
+    .items { display:grid; gap:8px; }
+    .row { display:grid; grid-template-columns:1.6fr 90px 1fr 36px; gap:6px; align-items:center; }
+    .row.head { font-size:12px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+    .row .desc { grid-column:1 / 4; font-size:14px; padding:7px 10px; }
+    .row .x { width:36px; height:36px; border-radius:10px; border:1px solid var(--line); background:#fff; cursor:pointer; font-size:18px; color:var(--muted); }
+    .item-block { border-bottom:1px dashed var(--line); padding-bottom:8px; display:grid; gap:6px; }
+    details.paste { margin-top:14px; background:var(--bg); border-radius:12px; padding:12px 14px; }
+    details.paste summary { font-weight:800; cursor:pointer; }
+    details.paste textarea { margin:10px 0; min-height:140px; font-family:ui-monospace, Menlo, monospace; font-size:14px; }
+    .hint { font-size:13px; color:var(--muted); }
+    .warn { font-size:13px; color:#b42318; font-weight:700; }
+
+    .side { position:sticky; top:16px; }
+    .phone { background:#111; border-radius:34px; padding:9px; box-shadow:0 24px 50px rgba(0,0,0,.2); }
+    .phone iframe { display:block; width:100%; height:560px; border:0; border-radius:26px; background:#fff; }
+    .caption { text-align:center; font-size:13px; color:var(--muted); margin:8px 0 16px; }
+    .result { background:var(--card); border:2px solid var(--brand); border-radius:20px; padding:18px; display:grid; gap:10px; }
+    .result h2 { font-size:20px; }
+    .result .link { font-size:13px; font-family:ui-monospace, Menlo, monospace; background:var(--bg); padding:10px; border-radius:10px; word-break:break-all; max-height:76px; overflow:auto; }
+    .result .actions .btn { flex:1; padding:10px 12px; font-size:14px; }
+    #qr { display:grid; place-items:center; background:#fff; padding:10px; border-radius:12px; border:1px solid var(--line); }
+    #qr canvas { width:200px; height:200px; image-rendering:pixelated; }
+    .save { font-size:13px; color:var(--muted); background:#fff8e6; border-radius:10px; padding:10px 12px; }
+    .toast { position:fixed; left:50%; bottom:20px; transform:translateX(-50%); background:var(--night); color:#fff; padding:10px 16px; border-radius:12px; font-weight:700; display:none; z-index:50; }
+    footer { background:var(--night); color:rgba(255,255,255,.75); padding:28px 0; font-size:14px; text-align:center; }
+    footer a { color:#fff; font-weight:800; }
+    .faq { padding:8px 0 48px; max-width:760px; }
+    .faq h2 { font-family:Coiny, sans-serif; font-weight:400; font-size:32px; margin-bottom:6px; }
+    details.q { border-bottom:1px solid var(--line); padding:14px 0; }
+    details.q summary { font-weight:800; cursor:pointer; }
+    details.q p { color:var(--muted); margin-top:6px; }
+
+    @media (max-width:940px) {
+      .hero, .builder { grid-template-columns:1fr; }
+      .side { position:static; }
+      .phone iframe { height:520px; }
+    }
+    @media (max-width:560px) {
+      .grid2 { grid-template-columns:1fr; }
+      .row { grid-template-columns:1fr 78px 36px; }
+      .row .cat { grid-column:1 / 3; }
+      .row.head span:nth-child(3) { display:none; }
+      .row .desc { grid-column:1 / 3; }
+      .row .x { grid-row:1; grid-column:3; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2l-.4-.2z"/></symbol>
+  </svg>
+
+  <nav class="top"><div class="wrap"><a class="logo" href="/tokri/">🧺 Tokri</a><a href="/services/">Need a full website?</a></div></nav>
+
+  <header class="wrap hero">
+    <div>
+      <span class="kicker">Free for small sellers</span>
+      <h1>Your menu, as a <span>WhatsApp order link</span>.</h1>
+      <p class="lead">Customers tap what they want, and the complete order lands on your WhatsApp with quantities, total, name and address. No more "how much is this?" back and forth.</p>
+      <div class="ticks"><span>Free forever</span><span>No sign-up</span><span>No app to install</span><span>No commission</span></div>
+      <div class="actions">
+        <a class="btn pri" href="#build">Make my link</a>
+        <a class="btn line" id="exampleLink" href="#build" target="_blank" rel="noopener">See an example shop</a>
+      </div>
+    </div>
+    <div class="how">
+      <div><b class="n">1</b><p><b>Type or paste your menu.</b> Items and prices, that's all.</p></div>
+      <div><b class="n">2</b><p><b>Get your link and QR code.</b> Put it in your Instagram bio, WhatsApp status, or print the QR for your counter.</p></div>
+      <div><b class="n">3</b><p><b>Orders arrive on WhatsApp.</b> Neat, complete and ready to confirm.</p></div>
+    </div>
+  </header>
+
+  <main class="wrap builder" id="build">
+    <div>
+      <section class="panel">
+        <h2><i>1</i>Your shop</h2>
+        <div class="grid2">
+          <label>Shop name <input id="fName" maxlength="60" placeholder="e.g. Meera's Kitchen"></label>
+          <label>Your WhatsApp number <input id="fPhone" inputmode="tel" maxlength="16" placeholder="10-digit mobile number"><span class="warn" id="phoneWarn" hidden>Enter your 10-digit number so orders can reach you.</span></label>
+        </div>
+        <label style="margin-top:12px">One line about you <small>(optional)</small><input id="fTag" maxlength="120" placeholder="e.g. Home-cooked tiffin, delivered hot in Sector 21"></label>
+        <div class="grid2" style="margin-top:12px">
+          <label>Icon <span class="pick" id="emojiPick"></span></label>
+          <label>Colour <span class="pick colors" id="colorPick"></span></label>
+        </div>
+        <div class="grid2" style="margin-top:12px">
+          <label>Delivery
+            <select id="fDel">
+              <option value="pickup">Pickup only</option>
+              <option value="free">Free delivery</option>
+              <option value="fee">Delivery with a fee</option>
+            </select>
+          </label>
+          <label id="feeWrap" hidden>Delivery fee (₹) <input id="fFee" type="number" min="0" step="1" value="40"></label>
+        </div>
+        <label style="margin-top:12px">Note for customers <small>(optional: timings, order cut-off, payment)</small><textarea id="fNote" rows="2" maxlength="300" placeholder="e.g. Order by 11 am for lunch. UPI or cash accepted."></textarea></label>
+      </section>
+
+      <section class="panel">
+        <h2><i>2</i>Your menu</h2>
+        <div class="items" id="items"></div>
+        <div class="actions" style="margin-top:12px">
+          <button class="btn line" type="button" id="addItem">+ Add item</button>
+        </div>
+        <details class="paste">
+          <summary>Faster: paste your whole menu</summary>
+          <p class="hint" style="margin-top:8px">One item per line with its price. A line ending in ":" starts a new section.</p>
+          <textarea id="pasteBox" placeholder="Thali:&#10;Veg thali - 120&#10;Special thali - 180&#10;Snacks:&#10;Samosa (2 pcs) 30&#10;Poha ₹40"></textarea>
+          <div class="actions"><button class="btn dark" type="button" id="pasteGo">Add these items</button></div>
+          <p class="hint" id="pasteMsg"></p>
+        </details>
+      </section>
+    </div>
+
+    <aside class="side">
+      <div class="phone"><iframe id="preview" title="Live preview of your shop" src="shop.html?preview=1"></iframe></div>
+      <p class="caption">Live preview. Try adding items to the cart.</p>
+      <div class="result" id="result">
+        <h2>Your shop link</h2>
+        <div class="link" id="linkOut">Fill in your shop name, number and at least one item.</div>
+        <div class="actions">
+          <button class="btn dark" type="button" id="copy">Copy link</button>
+          <a class="btn wa" id="shareWa" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Share</a>
+          <a class="btn line" id="openShop" href="#" target="_blank" rel="noopener">Open</a>
+        </div>
+        <div id="qr" aria-label="QR code for your shop link"></div>
+        <div class="actions"><button class="btn line" type="button" id="poster">Download QR poster</button></div>
+        <p class="save"><b>Save your link.</b> Your menu lives inside it, and nothing is stored on any server. To change prices later, use <a id="editLink" href="#">this edit link</a> (bookmark it), or just come back on this phone.</p>
+        <p class="warn" id="longWarn" hidden>Your menu is very long, so the QR code may be hard to scan. The link still works. Try shorter descriptions.</p>
+      </div>
+    </aside>
+  </main>
+
+  <section class="wrap faq">
+    <h2>Questions</h2>
+    <details class="q"><summary>Is it really free?</summary><p>Yes. There's no server and no database: your whole menu is packed inside the link itself, so it costs nothing to run. That's also why there's no sign-up.</p></details>
+    <details class="q"><summary>How do I change my prices later?</summary><p>Open your edit link (or come back to this page on the same phone), make changes, and share the new link. Old links keep showing the old menu, so update the link in your bio too.</p></details>
+    <details class="q"><summary>Do customers need an app?</summary><p>No. The link opens in any phone browser, and the order goes through the WhatsApp they already have.</p></details>
+    <details class="q"><summary>Who can see my number?</summary><p>Anyone you share the link with, the same as giving them your WhatsApp number. Use your business number if you have one.</p></details>
+    <details class="q"><summary>Can I get online payments, photos or my own website?</summary><p>Tokri is kept simple on purpose. For a full website with photos, UPI payments or a booking system, <a href="/services/">see what I build for businesses</a>.</p></details>
+  </section>
+
+  <footer>Tokri is a free tool by <a href="/">Joe</a>. Need a website or WhatsApp assistant for your business? <a href="/services/">See services</a>.</footer>
+  <div class="toast" id="toast"></div>
+
+  <script src="qrcode.js"></script>
+  <script src="tokri.js"></script>
+  <script>
+    var $ = function (id) { return document.getElementById(id); };
+    var BASE = location.origin + location.pathname.replace(/index\.html$/, '');
+    var EMOJIS = ['🧺', '🎂', '🍱', '🍛', '☕', '🍕', '🥘', '🍪', '🧁', '🥗', '🌸', '👗', '🛍️', '🥭'];
+    var COLORS = ['#e8577e', '#ef6c00', '#d4a017', '#2e7d32', '#00897b', '#1e88e5', '#5e35b1', '#6d4c41', '#37474f'];
+    var state = { n: '', t: '', p: '', e: '🧺', c: '#e8577e', d: -1, o: '', i: [['', '', '', '']] };
+    var STORE = 'tokri-draft-v1';
+    var code = '', timer;
+
+    function toast(msg) { var t = $('toast'); t.textContent = msg; t.style.display = 'block'; clearTimeout(toast.h); toast.h = setTimeout(function () { t.style.display = 'none'; }, 2200); }
+
+    function picker(box, list, key, isColor) {
+      box.innerHTML = '';
+      list.forEach(function (v) {
+        var b = document.createElement('button'); b.type = 'button';
+        if (isColor) { b.style.background = v; b.setAttribute('aria-label', 'Colour ' + v); } else { b.textContent = v; b.setAttribute('aria-label', 'Icon ' + v); }
+        b.setAttribute('aria-pressed', state[key] === v);
+        b.addEventListener('click', function () { state[key] = v; picker(box, list, key, isColor); changed(); });
+        box.appendChild(b);
+      });
+    }
+
+    function itemsUI() {
+      var box = $('items'); box.innerHTML = '<div class="row head"><span>Item</span><span>Price ₹</span><span>Section</span><span></span></div>';
+      state.i.forEach(function (it, idx) {
+        var blk = document.createElement('div'); blk.className = 'item-block';
+        blk.innerHTML = '<div class="row"><input class="nm" maxlength="80" placeholder="Item name"><input class="pr" type="number" min="0" step="any" inputmode="decimal" placeholder="0"><input class="cat" maxlength="30" placeholder="e.g. Cakes"><button type="button" class="x" aria-label="Remove item">×</button><input class="desc" maxlength="140" placeholder="Short description (optional)"></div>';
+        var nm = blk.querySelector('.nm'), pr = blk.querySelector('.pr'), cat = blk.querySelector('.cat'), desc = blk.querySelector('.desc');
+        nm.value = it[0]; pr.value = it[1]; cat.value = it[2]; desc.value = it[3];
+        nm.addEventListener('input', function () { it[0] = nm.value; changed(); });
+        pr.addEventListener('input', function () { it[1] = pr.value; changed(); });
+        cat.addEventListener('input', function () { it[2] = cat.value; changed(); });
+        desc.addEventListener('input', function () { it[3] = desc.value; changed(); });
+        blk.querySelector('.x').addEventListener('click', function () { state.i.splice(idx, 1); if (!state.i.length) state.i.push(['', '', '', '']); itemsUI(); changed(); });
+        box.appendChild(blk);
+      });
+    }
+
+    function shopData() {
+      return Tokri.clean({
+        n: state.n.trim(), t: state.t.trim(), p: Tokri.phone(state.p), e: state.e, c: state.c, d: state.d, o: state.o.trim(),
+        i: state.i.filter(function (it) { return String(it[0]).trim(); }).map(function (it) { return [String(it[0]).trim(), Number(it[1]) || 0, String(it[2]).trim(), String(it[3]).trim()]; })
+      });
+    }
+
+    function changed() {
+      try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {}
+      clearTimeout(timer);
+      timer = setTimeout(build, 250);
+    }
+
+    function build() {
+      var s = shopData();
+      Tokri.encode(s).then(function (c) {
+        code = c;
+        var url = BASE + 'shop.html#' + c;
+        try { $('preview').contentWindow.location.replace('shop.html?preview=1#' + c); } catch (e) { $('preview').src = 'shop.html?preview=1#' + c; }
+        var phoneOk = s.p.length >= 11;
+        $('phoneWarn').hidden = phoneOk || !state.p;
+        var ready = s.n && phoneOk && s.i.length;
+        $('result').style.opacity = ready ? 1 : .55;
+        $('linkOut').textContent = ready ? url : 'Fill in your shop name, WhatsApp number and at least one item.';
+        $('openShop').href = ready ? url : '#';
+        $('shareWa').href = ready ? 'https://wa.me/?text=' + encodeURIComponent('Order from ' + s.n + ' on WhatsApp 👉 ' + url) : '#';
+        $('editLink').href = BASE + '#edit=' + c;
+        var q = $('qr'); q.innerHTML = '';
+        $('longWarn').hidden = url.length < 1600;
+        if (ready) {
+          try { q.appendChild(qrCanvas(url)); }
+          catch (e) { q.textContent = 'Menu too long for a QR code. Share the link instead.'; }
+        }
+        build.ready = ready; build.url = url; build.shop = s;
+      });
+    }
+
+    /* Draws the QR code for a link onto a canvas, with a white quiet zone. */
+    function qrCanvas(text) {
+      var qr = qrcode(0, text.length > 900 ? 'L' : 'M');
+      qr.addData(text, 'Byte'); qr.make();
+      var n = qr.getModuleCount(), quiet = 4, scale = Math.max(2, Math.floor(720 / (n + quiet * 2)));
+      var size = (n + quiet * 2) * scale, cv = document.createElement('canvas');
+      cv.width = cv.height = size;
+      var g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, size, size); g.fillStyle = '#000';
+      for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (qr.isDark(r, c)) g.fillRect((c + quiet) * scale, (r + quiet) * scale, scale, scale);
+      return cv;
+    }
+    function guard(e) { if (!build.ready) { e.preventDefault(); toast('Add your shop name, WhatsApp number and an item first.'); return false; } return true; }
+    $('openShop').addEventListener('click', guard);
+    $('shareWa').addEventListener('click', guard);
+    $('copy').addEventListener('click', function (e) {
+      if (!guard(e)) return;
+      var done = function () { toast('Link copied!'); };
+      if (navigator.clipboard) navigator.clipboard.writeText(build.url).then(done, fallback); else fallback();
+      function fallback() { var t = document.createElement('textarea'); t.value = build.url; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (err) { toast('Select the link and copy it.'); } t.remove(); }
+    });
+    $('poster').addEventListener('click', function (e) {
+      if (!guard(e)) return;
+      var src = $('qr').querySelector('canvas');
+      if (!src) { toast('No QR code to put on a poster.'); return; }
+      var W = 1240, H = 1754, cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+      var g = cv.getContext('2d'), s = build.shop;
+      g.fillStyle = s.c; g.fillRect(0, 0, W, H);
+      g.fillStyle = '#fff'; roundRect(g, 90, 90, W - 180, H - 180, 60); g.fill();
+      g.textAlign = 'center'; g.fillStyle = '#1f1a1c';
+      g.font = '160px serif'; g.fillText(s.e || '🧺', W / 2, 330);
+      g.font = '800 92px Nunito, sans-serif'; fitText(g, s.n, W / 2, 470, W - 300);
+      if (s.t) { g.fillStyle = '#6b6267'; g.font = '44px Nunito, sans-serif'; fitText(g, s.t, W / 2, 545, W - 300); }
+      g.imageSmoothingEnabled = false; g.drawImage(src, (W - 760) / 2, 620, 760, 760);
+      g.fillStyle = s.c; g.font = '800 76px Nunito, sans-serif'; g.fillText('Scan to order on WhatsApp', W / 2, 1490);
+      g.fillStyle = '#6b6267'; g.font = '36px Nunito, sans-serif'; g.fillText('Made free with Tokri', W / 2, 1580);
+      var a = document.createElement('a'); a.download = (s.n || 'shop').replace(/[^\w\- ]+/g, '').trim().replace(/\s+/g, '-') + '-qr-poster.png';
+      a.href = cv.toDataURL('image/png'); document.body.appendChild(a); a.click(); a.remove();
+      toast('Poster downloaded. Print it on A4.');
+    });
+    function roundRect(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+    function fitText(g, t, x, y, max) { var size = parseInt(g.font.match(/(\d+)px/)[1], 10); while (g.measureText(t).width > max && size > 20) { size -= 4; g.font = g.font.replace(/\d+px/, size + 'px'); } g.fillText(t, x, y); }
+
+    $('addItem').addEventListener('click', function () {
+      var last = state.i[state.i.length - 1];
+      state.i.push(['', '', last ? last[2] : '', '']); itemsUI(); changed();
+      var rows = document.querySelectorAll('#items .nm'); rows[rows.length - 1].focus();
+    });
+    $('pasteGo').addEventListener('click', function () {
+      var section = '', added = 0, skipped = [];
+      $('pasteBox').value.split(/\n/).forEach(function (line) {
+        var l = line.trim(); if (!l) return;
+        if (/:$/.test(l) && !Tokri.parseLine(l.slice(0, -1))) { section = l.slice(0, -1).trim().slice(0, 30); return; }
+        var p = Tokri.parseLine(l);
+        if (p) { state.i.push([p[0].slice(0, 80), p[1], section, '']); added++; } else skipped.push(l);
+      });
+      state.i = state.i.filter(function (it) { return String(it[0]).trim() || state.i.length === 1; });
+      if (!state.i.length) state.i.push(['', '', '', '']);
+      $('pasteMsg').textContent = added ? 'Added ' + added + ' item' + (added > 1 ? 's' : '') + '.' + (skipped.length ? ' Skipped (no price found): ' + skipped.slice(0, 3).join(', ') + (skipped.length > 3 ? '…' : '') : '') : 'No prices found. Put a price at the end of each line, like "Samosa - 20".';
+      if (added) { $('pasteBox').value = ''; itemsUI(); changed(); }
+    });
+
+    function bindField(id, key, fn) { var el = $(id); el.value = state[key]; el.addEventListener('input', function () { state[key] = el.value; if (fn) fn(); changed(); }); }
+    function delUI() {
+      var v = state.d < 0 ? 'pickup' : state.d === 0 ? 'free' : 'fee';
+      $('fDel').value = v; $('feeWrap').hidden = v !== 'fee';
+      if (v === 'fee') $('fFee').value = state.d;
+    }
+    $('fDel').addEventListener('change', function () {
+      var v = $('fDel').value;
+      state.d = v === 'pickup' ? -1 : v === 'free' ? 0 : Math.max(1, Number($('fFee').value) || 40);
+      delUI(); changed();
+    });
+    $('fFee').addEventListener('input', function () { state.d = Math.max(1, Number($('fFee').value) || 1); changed(); });
+
+    function start() {
+      bindField('fName', 'n'); bindField('fPhone', 'p'); bindField('fTag', 't'); bindField('fNote', 'o');
+      picker($('emojiPick'), EMOJIS, 'e'); picker($('colorPick'), COLORS, 'c', true);
+      delUI(); itemsUI(); build();
+    }
+
+    /* Load order: an edit link in the address, else the saved draft on this phone, else blank. */
+    var m = location.hash.match(/^#edit=(.+)$/);
+    var loaded = m ? Tokri.decode(m[1]).then(function (s) {
+      if (!s) return;
+      state = { n: s.n, t: s.t, p: s.p.replace(/^91(?=\d{10}$)/, ''), e: s.e || '🧺', c: s.c, d: s.d, o: s.o, i: s.i.length ? s.i.map(function (it) { return it.slice(); }) : [['', '', '', '']] };
+      if (EMOJIS.indexOf(state.e) < 0) EMOJIS.unshift(state.e);
+      if (COLORS.indexOf(state.c) < 0) COLORS.unshift(state.c);
+      try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {}
+      toast('Your shop is loaded. Edit away!');
+      setTimeout(function () { $('build').scrollIntoView(); }, 50);
+    }) : Promise.resolve().then(function () {
+      try { var d = JSON.parse(localStorage.getItem(STORE)); if (d && Array.isArray(d.i)) state = Object.assign(state, d); } catch (e) {}
+    });
+    loaded.then(start, start);
+
+    /* Example shop for the "See an example" button. Made-up, with no phone number. */
+    Tokri.encode({ n: 'Sample Tiffin Service', t: 'Home-style lunch, delivered hot (example shop)', p: '', e: '🍱', c: '#ef6c00', d: 30,
+      o: 'This is an example shop made with Tokri. Make your own free at joestilllives.github.io/tokri',
+      i: [['Veg thali', 120, 'Thali', 'Dal, sabzi, 4 rotis, rice, salad'], ['Special thali', 180, 'Thali', 'Paneer, dal makhani, 4 rotis, rice, sweet'],
+          ['Rajma chawal', 100, 'Rice bowls', ''], ['Kadhi chawal', 90, 'Rice bowls', ''], ['Aloo paratha (2)', 80, 'Breakfast', 'With curd and pickle'], ['Poha', 40, 'Breakfast', '']] })
+      .then(function (c) { $('exampleLink').href = 'shop.html#' + c; });
+  </script>
+</body>
+</html>
