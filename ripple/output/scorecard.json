@@ -1,18 +1,978 @@
 {
- "overall": {},
- "by_effect": {
-  "tailwind": {},
-  "headwind": {}
+ "overall": {
+  "1": {
+   "n": 43,
+   "hit_rate": 0.581,
+   "avg_edge_pct": 0.09,
+   "enough_data": true
+  },
+  "3": {
+   "n": 14,
+   "hit_rate": 0.571,
+   "avg_edge_pct": 0.29,
+   "enough_data": false
+  }
  },
- "cross_market": {},
- "by_link": [],
- "recent": [],
+ "by_effect": {
+  "tailwind": {
+   "1": {
+    "n": 20,
+    "hit_rate": 0.35,
+    "avg_edge_pct": -0.71,
+    "enough_data": true
+   },
+   "3": {
+    "n": 7,
+    "hit_rate": 0.286,
+    "avg_edge_pct": -0.44,
+    "enough_data": false
+   }
+  },
+  "headwind": {
+   "1": {
+    "n": 23,
+    "hit_rate": 0.783,
+    "avg_edge_pct": 0.78,
+    "enough_data": true
+   },
+   "3": {
+    "n": 7,
+    "hit_rate": 0.857,
+    "avg_edge_pct": 1.01,
+    "enough_data": false
+   }
+  }
+ },
+ "cross_market": {
+  "1": {
+   "n": 19,
+   "hit_rate": 0.579,
+   "avg_edge_pct": -0.1,
+   "enough_data": false
+  },
+  "3": {
+   "n": 14,
+   "hit_rate": 0.571,
+   "avg_edge_pct": 0.29,
+   "enough_data": false
+  }
+ },
+ "by_link": [
+  {
+   "link": "Indian rupee strength → TCS",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.333,
+     "avg_edge_pct": -0.1,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → Infosys",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.667,
+     "avg_edge_pct": 0.19,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → Wipro",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.667,
+     "avg_edge_pct": 0.05,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → HCLTech",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.667,
+     "avg_edge_pct": 0.09,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → Tech Mahindra",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.333,
+     "avg_edge_pct": -0.07,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → Sun Pharma",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.667,
+     "avg_edge_pct": 0.64,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → Dr. Reddy's",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.667,
+     "avg_edge_pct": 0.63,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Indian rupee strength → Cipla",
+   "stats": {
+    "1": {
+     "n": 3,
+     "hit_rate": 0.667,
+     "avg_edge_pct": 0.46,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → Indian Oil",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 1.0,
+     "avg_edge_pct": 0.76,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 1.0,
+     "avg_edge_pct": 1.25,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → BPCL",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": 1.11,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 1.0,
+     "avg_edge_pct": 1.11,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → HPCL",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 1.0,
+     "avg_edge_pct": 1.0,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": 0.26,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → ONGC",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 1.0,
+     "avg_edge_pct": 1.37,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": 0.59,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → IndiGo (InterGlobe Aviation)",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 1.0,
+     "avg_edge_pct": 0.75,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": -0.46,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → Asian Paints",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": 0.25,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -1.58,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "Crude oil price → Indian rupee strength → TCS",
+   "stats": {
+    "1": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": -0.25,
+     "enough_data": false
+    },
+    "3": {
+     "n": 2,
+     "hit_rate": 0.5,
+     "avg_edge_pct": 0.83,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → TCS",
+   "stats": {
+    "1": {
+     "n": 1,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -2.68,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Infosys",
+   "stats": {
+    "1": {
+     "n": 1,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -2.66,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Wipro",
+   "stats": {
+    "1": {
+     "n": 1,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -1.79,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → HCLTech",
+   "stats": {
+    "1": {
+     "n": 1,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -2.01,
+     "enough_data": false
+    }
+   }
+  },
+  {
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Tech Mahindra",
+   "stats": {
+    "1": {
+     "n": 1,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -2.68,
+     "enough_data": false
+    }
+   }
+  }
+ ],
+ "recent": [
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "TCS",
+   "symbol": "TCS.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → TCS",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.00308,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "Infosys",
+   "symbol": "INFY.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Infosys",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00563,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "Wipro",
+   "symbol": "WIPRO.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Wipro",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.0016,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "HCLTech",
+   "symbol": "HCLTECH.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → HCLTech",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00259,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "Tech Mahindra",
+   "symbol": "TECHM.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Tech Mahindra",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.00224,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "Sun Pharma",
+   "symbol": "SUNPHARMA.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Sun Pharma",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01917,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "Dr. Reddy's",
+   "symbol": "DRREDDY.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Dr. Reddy's",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01886,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Sharp rupee appreciation may cut IT firms' FY27 earnings by up to 13%: Report",
+   "published": "2026-11-20T09:36:14+00:00",
+   "company": "Cipla",
+   "symbol": "CIPLA.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Cipla",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01369,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "TCS",
+   "symbol": "TCS.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → TCS",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.00308,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "Infosys",
+   "symbol": "INFY.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Infosys",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00563,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "Wipro",
+   "symbol": "WIPRO.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Wipro",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.0016,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "HCLTech",
+   "symbol": "HCLTECH.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → HCLTech",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00259,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "Tech Mahindra",
+   "symbol": "TECHM.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Tech Mahindra",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.00224,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "Sun Pharma",
+   "symbol": "SUNPHARMA.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Sun Pharma",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01917,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "Dr. Reddy's",
+   "symbol": "DRREDDY.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Dr. Reddy's",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01886,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee rises past 93 vs USD as portfolio inflows, bear retreat fuel rally",
+   "published": "2026-11-20T05:08:53+00:00",
+   "company": "Cipla",
+   "symbol": "CIPLA.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Cipla",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01369,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "TCS",
+   "symbol": "TCS.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → TCS",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.00308,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "Infosys",
+   "symbol": "INFY.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Infosys",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00563,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "Wipro",
+   "symbol": "WIPRO.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Wipro",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.0016,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "HCLTech",
+   "symbol": "HCLTECH.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → HCLTech",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00259,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "Tech Mahindra",
+   "symbol": "TECHM.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Tech Mahindra",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.00224,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "Sun Pharma",
+   "symbol": "SUNPHARMA.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Sun Pharma",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01917,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "Dr. Reddy's",
+   "symbol": "DRREDDY.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Dr. Reddy's",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01886,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee strengthens 17 paise to 93.15 against US dollar in early trade",
+   "published": "2026-11-20T04:54:03+00:00",
+   "company": "Cipla",
+   "symbol": "CIPLA.NS",
+   "effect": "headwind",
+   "link": "Indian rupee strength → Cipla",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01369,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "published": "2026-11-18T19:41:59+00:00",
+   "company": "TCS",
+   "symbol": "TCS.NS",
+   "effect": "tailwind",
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → TCS",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.02682,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "published": "2026-11-18T19:41:59+00:00",
+   "company": "Infosys",
+   "symbol": "INFY.NS",
+   "effect": "tailwind",
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Infosys",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.02659,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "published": "2026-11-18T19:41:59+00:00",
+   "company": "Wipro",
+   "symbol": "WIPRO.NS",
+   "effect": "tailwind",
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Wipro",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.01789,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "published": "2026-11-18T19:41:59+00:00",
+   "company": "HCLTech",
+   "symbol": "HCLTECH.NS",
+   "effect": "tailwind",
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → HCLTech",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.02013,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "published": "2026-11-18T19:41:59+00:00",
+   "company": "Tech Mahindra",
+   "symbol": "TECHM.NS",
+   "effect": "tailwind",
+   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Tech Mahindra",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.02678,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "Indian Oil",
+   "symbol": "IOC.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → Indian Oil",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00682,
+     "hit": true
+    },
+    "3": {
+     "excess": 0.01735,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "BPCL",
+   "symbol": "BPCL.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → BPCL",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.00217,
+     "hit": false
+    },
+    "3": {
+     "excess": 0.00035,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "HPCL",
+   "symbol": "HINDPETRO.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → HPCL",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00291,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.00094,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "ONGC",
+   "symbol": "ONGC.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → ONGC",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.01909,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.01971,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "IndiGo (InterGlobe Aviation)",
+   "symbol": "INDIGO.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → IndiGo (InterGlobe Aviation)",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00828,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.02127,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "Asian Paints",
+   "symbol": "ASIANPAINT.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → Asian Paints",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01644,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.00024,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "published": "2026-11-16T22:19:02+00:00",
+   "company": "TCS",
+   "symbol": "TCS.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → Indian rupee strength → TCS",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.00314,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.03473,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
+   "published": "2026-11-13T00:01:19+00:00",
+   "company": "Indian Oil",
+   "symbol": "IOC.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → Indian Oil",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.00844,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.00765,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
+   "published": "2026-11-13T00:01:19+00:00",
+   "company": "BPCL",
+   "symbol": "BPCL.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → BPCL",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.02437,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.02178,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
+   "published": "2026-11-13T00:01:19+00:00",
+   "company": "HPCL",
+   "symbol": "HINDPETRO.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → HPCL",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": -0.01717,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.00617,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
+   "published": "2026-11-13T00:01:19+00:00",
+   "company": "ONGC",
+   "symbol": "ONGC.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → ONGC",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00836,
+     "hit": true
+    },
+    "3": {
+     "excess": -0.00785,
+     "hit": false
+    }
+   }
+  }
+ ],
  "min_sample": 20,
  "horizons": [
   1,
   3,
   7
  ],
- "generated": "2026-11-22T14:19:22.758987+00:00",
- "alerts_logged": 0
+ "generated": "2026-11-22T15:11:37.099086+00:00",
+ "alerts_logged": 398
 }
