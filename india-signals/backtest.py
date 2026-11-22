@@ -23,7 +23,10 @@ COST_ROUND_TRIP = 0.0030                 # ~0.3%: STT, exchange fees, stamp duty
 def prepare(p):
     p = p.copy()
     r = p["close"] / p["prev_close"] - 1          # PREV_CLOSE is adjusted for splits/bonuses
-    r[(r.abs() > 0.5)] = np.nan                    # broken rows (relistings, errors)
+    # NSE files are NOT adjusted for splits and bonuses: an ex-date shows as a fake crash
+    # (a 1:1 bonus = -50%, 1:2 = -33%). NSE price bands are at most 20%, so any daily move
+    # beyond 25% is treated as a corporate action or relisting, not a return.
+    r[(r.abs() > 0.25)] = np.nan
     p["ret"] = r.fillna(0.0)
     g = p.groupby("symbol", sort=False)
     p["n"] = g.cumcount()

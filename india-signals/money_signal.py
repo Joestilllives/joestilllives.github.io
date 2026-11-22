@@ -9,7 +9,8 @@ Run once a month, after the last trading day of the month.
                most-traded group (no edge among the most-watched stocks).
  2. RED FLAG   Drop stocks with 3+ frenzy days in the last 21 trading days
                (frenzy day = volume >= 3x its 20-day average AND delivery % at least
-               15 points below its 60-day average).
+               15 points below its 60-day average), and stocks whose split or bonus
+               ex-date fell in the last 6 months (they lag ~7% over 6 months).
  3. SCORE      a) Steady climb = (12-month return skipping the last month) / daily volatility
                   over the last year, as a percentile rank among all stocks that month.
                b) Model score = the gradient-boosted model in combined.py (about 30 signals:
@@ -26,7 +27,8 @@ Run once a month, after the last trading day of the month.
                keep only half the money in the basket and the rest in a liquid fund.
 
 Tested out-of-sample Feb 2019-Sep 2026 (94 months), after 0.3% costs:
-+11.9%/yr vs the average company, t = 5.2, ahead in 72% of months, ~31% turnover.
++13.3%/yr vs the average company (ensemble model, corrected for splits/bonuses),
+t = 5.6, ahead in 78% of months.
 
 Usage: python3 money_signal.py OUTDIR TABLE.pkl PREDICTIONS.pkl PANEL.pkl FUNDS.txt BHAVCOPY.csv [PREVIOUS_HOLDINGS.csv]
 """
@@ -47,7 +49,12 @@ def main(outdir, table, preds, panel, funds_txt, bhav, prev=None):
     g["steady_r"] = g["smooth12"].rank(pct=True)
     g["ml_r"] = g["ml"].rank(pct=True)
     g["blend"] = (g["steady_r"] + g["ml_r"]) / 2
-    g = g[g["size_q"].isin(GROUPS) & (g["frenzy21"] < 3)].dropna(subset=["blend"]).copy()
+    ca = os.environ.get("CORP_ACTIONS")
+    recent = set()
+    if ca:
+        ev = pd.read_csv(ca, parse_dates=["date"])
+        recent = set(ev.loc[(ev["date"] > last - pd.Timedelta(days=182)) & (ev["date"] <= last), "symbol"])
+    g = g[g["size_q"].isin(GROUPS) & (g["frenzy21"] < 3) & ~g["symbol"].isin(recent)].dropna(subset=["blend"]).copy()
     g["rank_in_group"] = g.groupby("size_q")["blend"].rank(pct=True)
     held = set(pd.read_csv(prev)["symbol"]) if prev else set()
     g["action"] = np.select(

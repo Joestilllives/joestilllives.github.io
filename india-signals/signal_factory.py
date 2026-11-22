@@ -61,11 +61,11 @@ def build_signals(a, month_ends):
     """Daily matrices -> month-end values of each candidate signal (month-ends x symbols)."""
     close, prev, op, hi, lo = P(a, "close"), P(a, "prev"), P(a, "open"), P(a, "high"), P(a, "low")
     vol, turn, trades, deliv = P(a, "volume"), P(a, "turnover"), P(a, "trades"), P(a, "deliv")
-    ret = (close / prev - 1).where(lambda r: r.abs() < 0.5)
+    ret = (close / prev - 1).where(lambda r: r.abs() <= 0.25)  # beyond 25% = split/bonus, not a return
     lr = np.log1p(ret.fillna(0))
     lidx = lr.cumsum()
-    on = np.log((op / prev).where(lambda r: (r > 0.5) & (r < 2)))            # overnight move
-    intra = np.log((close / op).where(lambda r: (r > 0.5) & (r < 2)))         # open to close
+    on = np.log((op / prev).where(lambda r: (r > 0.75) & (r < 1.33)))            # overnight move
+    intra = np.log((close / op).where(lambda r: (r > 0.75) & (r < 1.33)))         # open to close
     clv = ((close - lo) / (hi - lo)).where(hi > lo)                          # where it closes in the day's range
     rng = (hi - lo) / close
     mkt = ret.mean(axis=1)
