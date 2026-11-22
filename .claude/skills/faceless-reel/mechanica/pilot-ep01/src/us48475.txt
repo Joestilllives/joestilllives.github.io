@@ -1,0 +1,514 @@
+
+ US48475A - Improvement in locks - Google Patents
+ Improvement in locks 
+ Download PDF
+ Info
+ Publication number
+ US48475A
+ US48475A
+ US48475DA
+ US48475A
+ US 48475 A
+ US48475 A
+ US 48475A
+ US 48475D A
+ US48475D A
+ US 48475DA
+ US 48475 A
+ US48475 A
+ US 48475A
+ Authority
+ US
+ United States
+ Prior art keywords
+ cylinder
+ lock
+ key
+ wing
+ tumblers
+ Prior art date
+ 1865-06-27
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+ Expired - Lifetime
+ Application number
+ Publication date
+ 1865-06-27
+ 1865-06-27
+ Application granted
+ granted
+ Critical
+ 1865-06-27
+ Publication of US48475A
+ publication
+ Critical
+ patent/US48475A/en
+ 1882-06-27
+ Anticipated expiration
+ legal-status
+ Critical
+ Status
+ Expired - Lifetime
+ legal-status
+ Critical
+ Current
+ Links
+ USPTO
+ USPTO PatentCenter
+ USPTO Assignment
+ Espacenet
+ Global Dossier
+ Discuss
+ MJBPUQUGJNAPAZ-AWEZNQCLSA-N
+ butin
+ Chemical compound
+ C1([C@@H]2CC(=O)C3=CC=C(C=C3O2)O)=CC=C(O)C(O)=C1
+ MJBPUQUGJNAPAZ-AWEZNQCLSA-N
+ 0.000
+ description
+ 2
+ 241000507564
+ Aplanes
+ Species
+ 0.000
+ description
+ 1
+ MJBPUQUGJNAPAZ-UHFFFAOYSA-N
+ Butine
+ Natural products
+ O1C2=CC(O)=CC=C2C(=O)CC1C1=CC=C(O)C(O)=C1
+ MJBPUQUGJNAPAZ-UHFFFAOYSA-N
+ 0.000
+ description
+ 1
+ 241001052209
+ Cylinder
+ Species
+ 0.000
+ description
+ 1
+ 241000283986
+ Lepus
+ Species
+ 0.000
+ description
+ 1
+ 241000234435
+ Lilium
+ Species
+ 0.000
+ description
+ 1
+ 101100532451
+ Rattus norvegicus Slc22a17 gene
+ Proteins
+ 0.000
+ description
+ 1
+ 229910000831
+ Steel
+ Inorganic materials
+ 0.000
+ description
+ 1
+ 230000006978
+ adaptation
+ Effects
+ 0.000
+ description
+ 1
+ 238000010276
+ construction
+ Methods
+ 0.000
+ description
+ 1
+ 230000000694
+ effects
+ Effects
+ 0.000
+ description
+ 1
+ 238000007689
+ inspection
+ Methods
+ 0.000
+ description
+ 1
+ 238000000034
+ method
+ Methods
+ 0.000
+ description
+ 1
+ 238000009877
+ rendering
+ Methods
+ 0.000
+ description
+ 1
+ 229940101201
+ ringl
+ Drugs
+ 0.000
+ description
+ 1
+ 239000010959
+ steel
+ Substances
+ 0.000
+ description
+ 1
+ 238000010257
+ thawing
+ Methods
+ 0.000
+ description
+ 1
+ Images
+ Classifications
+ E—FIXED CONSTRUCTIONS
+ E05—LOCKS; KEYS; WINDOW OR DOOR FITTINGS; SAFES
+ E05B—LOCKS; ACCESSORIES THEREFOR; HANDCUFFS
+ E05B27/00—Cylinder locks or other locks with tumbler pins or balls that are set by pushing the key in
+ Y—GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10—TECHNICAL SUBJECTS COVERED BY FORMER USPC
+ Y10S—TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10S292/00—Closure fasteners
+ Y10S292/51—Bolt guides
+ Y—GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10—TECHNICAL SUBJECTS COVERED BY FORMER USPC
+ Y10S—TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10S70/00—Locks
+ Y10S70/42—Lost motion devices
+ Y—GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10—TECHNICAL SUBJECTS COVERED BY FORMER USPC
+ Y10T—TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION
+ Y10T70/00—Locks
+ Y10T70/70—Operating mechanism
+ Y10T70/7441—Key
+ Y10T70/7486—Single key
+ Y10T70/7508—Tumbler type
+ Y10T70/7559—Cylinder type
+ Y10T70/7588—Rotary plug
+ Y10T70/7593—Sliding tumblers
+ Y10T70/7599—Transverse of plug
+ Y10T70/7605—Pin tumblers
+ Y—GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10—TECHNICAL SUBJECTS COVERED BY FORMER USPC
+ Y10T—TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION
+ Y10T70/00—Locks
+ Y10T70/70—Operating mechanism
+ Y10T70/7441—Key
+ Y10T70/7486—Single key
+ Y10T70/7508—Tumbler type
+ Y10T70/7559—Cylinder type
+ Y10T70/7667—Operating elements, parts and adjuncts
+ Y10T70/7689—Tumblers
+ Y10T70/7701—Pin
+ Y—GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS
+ Y10—TECHNICAL SUBJECTS COVERED BY FORMER USPC
+ Y10T—TECHNICAL SUBJECTS COVERED BY FORMER US CLASSIFICATION
+ Y10T70/00—Locks
+ Y10T70/70—Operating mechanism
+ Y10T70/7441—Key
+ Y10T70/7486—Single key
+ Y10T70/7508—Tumbler type
+ Y10T70/7559—Cylinder type
+ Y10T70/7667—Operating elements, parts and adjuncts
+ Y10T70/7706—Operating connections
+ Y10T70/7712—Rollbacks
+ Definitions
+ Fig.- 9
+ is aplnn ofthe elastic bolt
+ Fig; 6
+ is section through the tumf bler-case and cylinder 'on .linefzz of Fig. 4.
+ Fig. 10
+ is as ection through the same on n plane perpendicular Ito the lock-case.
+ l'ig. 11
+ is an elevationzof the cylinder, and Figs. 12, 13, and lflare Vsections through the same.
+ Figs. 15
+ is an elevationzof the cylinder, and Figs. 12, 13, and lflare Vsections through the same.
+ Figs. 17 and 18
+ are sections through the cylinder nud lazy-arm'.
+ Figs. 17 and 18
+ are aplan and elevation of one section of the tumblers and thekey.
+ Fig, 19
+ is an elevation of both sections of a. tumblerand their spring; and
+ Fig. 20
+ is a. plan of the4 tumbler-case, lazy-arm, Sec., from the inside of the lock.
+ a oase, C
+ contains the tuinbiers andare-ing
+ the wing or lazy-arm E
+ which actnatcs the bolt, is 'very tliinwonly :is thick es the slit shown in Eig. 11 at Sn-nn'd it can act over any pnrt of the talons from p to q, Fig. 7,.
+ tumbler-cese
+ may he screwed in to different' depths, thus making the lock suit-able for doors of various thickness, and stilllenvingtlcend' of the tumblenoase-which in the present-in# stanceforms theescutcheonf-iiush with thefacej of the door.
+ the tumbler-onse
+ when set in to the right depth, may be fastened by'ajam-nut 1 set up through the bolt-opening before the 'boltV is in position; but Ik prefer to secure the case in the lock by n pointed screw, II, which screws ,into either of two bosses cast' oil-the insidcof screw is n little'ojutof pnrallelwith the side by n. screw-driver inserted through the bolt thicknessesofV doo'rs,lor both, is ot my invention. 7 ⁇ The tumbler-case Gis, es before stated, cy-
+ the pieces I and J
+ are of di'erent lengths, and mustall be arrangedv by the key, so that the various lines of division between the two parts of the tumblers are all inthe same line before the cylinder D caribe turned.- ⁇ (See Fig.
+ The' key K
+ is a thin slip ofsteel properly shaped to bring the lilies f division between the tumblers into the saine line andllnsli with.l the peripheryfof they cylinder D, and the key- ⁇ hole is a narrowl slit passing through the cylinder D in a plane parallel to its axis.
+ the holes for the reception of both parts of the tumblers
+ have ascrew-thread tapped in them, or are cut full of notches, and both parts of the tumblers are notchedperpendicular to-their length, or nearly so, or have screws cut on their periphery, butin such mannerthat the greatest diameter of the tumblers is less than the least diameter of theircontaining-holes.
+ the cylinder Dl
+ has a notch or ring-recess cut nearly around it, as ats, Figs. 11 and 12,
+ a wing or lazy-arm, as I term it, E,
+ is stamped or otherwise formed ont of a thin piece of steel. It has an aperture through it of the same diameter as the-cylinder in al1 places' but one, as at 1:, where a knob projects into the opening. This knob is a counterpart of the groove t; From the outside of the wing projects an arm, W, which is, properly speak ing, the wing itself, as it acts on the bolt-talons. Two other projections'are formed, one on each sifttlg of W, whose use will be explained herein a ru A slhiW, as wide as the wing is thick, is
+ the key
+ in the class ot' pin-locks the key, as before stated, can be removed and inserted only when both parts of the pins are in line, and it is useful to have some guideor stop which always causes the cylinder to' come to rest in the po sition w'here the pins are ,in line.v
+ I.
+ have formed upon thewingtwo knobs, one on each iside of the wing W, and
+ wing
+ might be a mere ringl with aukn'ob, such as o, and'in that case it would prevent removal of thecylinder, Whileanother arm secured to -the cylinder and moving withit might shoot the bolt, and some other stop might be used,'or
+ the cylindrical tumbler- -chamber
+ might contain other kinds of tumblers and still be useful as a means of making a lock either left ⁇ or right hand, or applicable to dierent thicknesses ofdoors.
+ Notched pintnmblers
+ in combination with a key-hole slit narrower than the diameter of O the pins, and'also notched containing-recesses, in combination with a key-hole slit narrower than their diameter, the combination being substantially such as described and operating substantially asset forth.
+ Landscapes
+ Preliminary Treatment Of Fibers
+ (AREA)
+ Description
+PatentedJune 2 7-, 1865 -L. YALE, Jr. 
+LOCK. 
+lmmlllmnwng mmesse f )UNITED STATES. 
+LI'- iM-Pn'oveMEN-r iN Locks. 
+Specification forming'pnrt of Letters Patent No. &8,475, dntcd June 27,1865. 
+Toall crhom-.i-tlmay concern.- 
+Be it knownfthnt, LINUS YALE, Jr.,- of 
+ Shelburne Fullsdntliefcountyof Franklin and Y YState of Massachusetts, :hereinvented`- certain new lcud useful Improvements in L'ocks-g and I dol hereby declare that the,',fol'lo'winfgy'` tn-ken in' connection withthe'drawin'gs, is n full, clear, andexlact description thereof, 1 v 
+ In the drawings, Figure l-s n side elevation of the lock; Fig.l 2,"n front elevation-:thereof Figa :3e-'section on line .fr a: of' Fig. 2; Fig. 4, 
+a section on line y y ofFigs. 1 and 3. Figs. 5, 7, andS. are an. elevation ofthe holt andthe contrivance for securing it, 'und a. section through the former. Fig.- 9 is aplnn ofthe elastic bolt;-V 
+securer. Fig; 6 is section through the tumf bler-case and cylinder 'on .linefzz of Fig. 4. 
+Fig. 10 is as ection through the same on n plane perpendicular Ito the lock-case.' l'ig. 11 is an elevationzof the cylinder, and Figs. 12, 13, and lflare Vsections through the same. Figs. 15 
+ and 16 are sections through the cylinder nud lazy-arm'. Figs. 17 and 18 are aplan and elevation of one section of the tumblers and thekey. Fig, 19 is an elevation of both sections of a. tumblerand their spring; and Fig. 20 is a. plan of the4 tumbler-case, lazy-arm, Sec., from the inside of the lock. 
+ Theimprovementsherein described areclii'etly applicable in that class of tumbler-locks'known as pin-1ocks; but 'some of them are useful in other classes of locks, and the improvements may he used either together, as I have shown thei'n, or separately in `connection with `locks which are wanting in some or all others of the improvements invented'by me. Y 
+ 4".llhe improvements relate partly to lthe security of locks against picking, partly to methods of construction, rendering the lock easy of adaptation to doors, either right vor left hand, 
+orof variousdegrees of thickness. I -will proi ceed to describe .the latter, first premising that` the lock4 shown in the drawings is e mortise-lock and that theimprovement's nre equally applicable to rimslocks. f 
+ rIn fthe drawings, the case ofthe lock is shown lat A A, vhaving two sides Yand e plate, as usual in mortise-locks. In each side of the'cnse isaJ hole, O, having a. screwfthread cut in it, so ns' l to form 1a.' nut, and in the case'works the bolt B, 
+provided with talons, as shown. as usual, and 
+pininnd thecase is securednnelnsticplaite liar-login it a hole, F, as lon'g'asthefgpin-and be forced andheld.dcwmvard-by thescrew G, 
+in the position shownii1'Fi;,-...`.` 4 be shoved into pince, the pin passing below the to he screwed home, thus forcing'thc plete down and preventing `the -boltfroinfbeing Wholly withdrawn 4from the lock, while at the same time it cnn be shot and retracted; and 
+'which enables ine to insert the holt through the bolt-hole,and, if desired, after4 the lock is -in place on the door, is the first feature oi' my invention.v 
+A oase, C, contains the tuinbiers andare-ing, 
+E, moved by the key. lThis ense has a. thread cui; ou its outside corresponding with thelscrewthreads in O, andV the tumbler-caso can be screwed into either side of theloclccnse, thus making it n. right orlei't lin-nd lock. The wing or lazy-arm E, which actnatcs the bolt, is 'very tliinwonly :is thick es the slit shown in Eig. 11 at Sn-nn'd it can act over any pnrt of the talons from p to q, Fig. 7,. It is therefore clear that the tumbler-cese may he screwed in to different' depths, thus making the lock suit-able for doors of various thickness, and stilllenvingtlcend' of the tumblenoase-which in the present-in# stanceforms theescutcheonf-iiush with thefacej of the door. 4The tumbler-onse, when set in to the right depth, may be fastened by'ajam-nut 1 set up through the bolt-opening before the 'boltV is in position; but Ik prefer to secure the case in the lock by n pointed screw, II, which screws ,into either of two bosses cast' oil-the insidcof screw is n little'ojutof pnrallelwith the side by n. screw-driver inserted through the bolt thicknessesofV doo'rs,lor both, is ot my invention. 7 `The tumbler-case Gis, es before stated, cy- 
+lindric'sheand hase cylindrical bore throughit, 
+the play of the holt. v".lhep,elastic. 'plate tendsthe ense, yone `on each side of the." lock.- This Anlsowith n pinorproiectioin'F. Between this always to spring upward, ns in Fig. 8,'hut may? Theboltisto elastic plete, and'when inplucethescrew Gis i this `contrimnce for holding n. holt in-pluce, 
+ of the lock-case, and ,is` toebe setup so ns to.' 'hold the tumbler'case iii-'any desired position. 
+4 and' J, and each is provided with .a spring, L. The pieces I and J are of di'erent lengths, and mustall be arrangedv by the key, so that the various lines of division between the two parts of the tumblers are all inthe same line before the cylinder D caribe turned.- `(See Fig. 17.) The' key K is a thin slip ofsteel properly shaped to bring the lilies f division between the tumblers into the saine line andllnsli with.l the peripheryfof they cylinder D, and the key-` hole is a narrowl slit passing through the cylinder D in a plane parallel to its axis.- The holes for the reception of both parts of the tumblers have ascrew-thread tapped in them, or are cut full of notches, and both parts of the tumblers are notchedperpendicular to-their length, or nearly so, or have screws cut on their periphery, butin such mannerthat the greatest diameter of the tumblers is less than the least diameter of theircontaining-holes. These notches therefore, either on the tum-t blers or their recesses, or on both, as preferred, serve the purpose of the racking on vibrating or rotating tnmblers,fpreventing to a certain `extent picking of thelock, and it is clear that the tumblers would, if their ends' that pro-g jected into the key-hole were unsupported, he liable to jam in their recesses when an attempt was madeto set them by the key. VBy observation of the drawings ,and examination of the preceding description, it will be perceived that tliekey-hole "only cuts away a small portion of l the top. and bottom: of each tumbler-recess, 
+(see specially Figs. 13 and 14,-) and that 'the parts of the tumblers projecting into the keyhole are therefore supported by nearly the whole of the circumference of their containing holes or cavities against the thrust of the key. This -plan of a thin-key and narrow key hole, in connection with comparatively large cavities for tumblers, enables me to use racked tumblers in this class of lock, and racked pin-tum ,blers of greater diameter than the width of the key are of my invention. 
+ The cylinder Dl has a notch or ring-recess cut nearly around it, as ats, Figs. 11 and 12, 
+and out of this notch leads a groove parallel with the cylinders airis.v vas at t, Figs. 11, 12, 
+' 13, and 20, which extends to the inside end of'- the cylinder. A wing or lazy-arm, as I term it, E, is stamped or otherwise formed ont of a thin piece of steel. It has an aperture through it of the same diameter as the-cylinder in al1 places' but one, as at 1:, where a knob projects into the opening. This knob is a counterpart of the groove t; From the outside of the wing projects an arm, W, which is, properly speak ing, the wing itself, as it acts on the bolt-talons. Two other projections'are formed, one on each sifttlg of W, whose use will be explained herein a ru A slhiW, as wide as the wing is thick, is 
+out into the'tumbler-case perpendicularto its axis, and this slit extends around from z to z, Fig. 20, soA that the wing may be turned completely within the tumbler-case when the latter is screwed into the lock-case. 
+ The manner in which' the parts are put tov--y gether is as follows: All the parts J J and I I .are inserted in their cavities, the parts I I being shoved intoV theirrecesses as far as possible, 'and the wing is inserted in its' slot W.- 'Th'e cylinderis then shoved into the'tumblercase with its groove t in line with the knob v, 
+.the parts IIbeing shoved back in succession to permit its passage. The groovet willthen pass over the knob fu, andthe wingwll then occupy its proper place in relation to the cylinder. If ,the cylinder `beinowrturned till the parts I IJ J are in a line, the springs will then, cause J J to enterinto the cylinder, and as one of them'passes nearer the end of the cylinder than thawing, thus filling the notch' t, the cylin der cannot be retracted. In all other positions'of the cylinder in its revolution the key j inust'be in and the key must hold the innermost tumbler, I, over the groove t, or else the cylinder cannot revolve, and as long as it so -holdsitthe cylinder cannot be withdrawn from the case. lThe wing therefore holds the cylinder that contains the keyhole iii-place, and this is one of 'i'ts offices. e 
+, By observation of Figs. 15 and 16 it will be perceived that the key-hole cylinder can turn. nearly a whole revolution without moving the Y wing, which I therefore call a ,lazyLarn7 and as the key in pin-locks cannot be removed, except when both parts of the pins or tumblers are inline, the key-hole cylinder must move a whole revolution at bothl locking and unlock. in g, unless the key is to be left in the lock. It the wing moved with the cylinder, it would have to make a whole revolution, and would, of necessity, beout of 'contact with the holttalons both when the lock was locked and nnlocked. By making it move less than awhole' revolution Iam enabled to keep the wing W in contact with a talonv both when the lock is locked andunlocked(see Fig.v 3,) andthus make 'the wing'itself aA stop, preventing forcing the bolts. This function of the wingyis' due' to its ymoving through a less angle than' the key-hole cylinder does. 
+ In the class ot' pin-locks the key, as before stated, can be removed and inserted only when both parts of the pins are in line, and it is useful to have some guideor stop which always causes the cylinder to' come to rest in the po sition w'here the pins are ,in line.v For this purpose I. have formed upon thewingtwo knobs, one on each iside of the wing W, and 
+ by inspection of Fig.3 it will be perceived that one or other of these knobs will strike against the talons when the lock is either/locked or unlocked, 'thus preventing further rotation of the cylinder and forcing it tocome to rest with both parts of the pins inline, so that the key may either be inserted or withdrawn when the lock is .either locked orunlooked. The same effect might be produced by providing proper stops for the wing W to strike against, and I intend to use this planasan equivalent u for the other in some cases. This isth'ethird functionyof the winger lazyarrn, and it is clear `'that oneof these functions might be performed Wilthou'tfthe others. For instance, the 
+ wing might be a mere ringl with aukn'ob, such as o, and'in that case it would prevent removal of thecylinder, Whileanother arm secured to -the cylinder and moving withit might shoot the bolt, and some other stop might be used,'or 
+nostp at all; or thewing might be so made :isto possess its' function as a lazy-arm, thus moving the. boltand ohviating the use of 'a separate bolt-stop,'wl1ile it neither held the cylinder in placenor operated to prevent its revolution when thepins were in line; or it. 
+might merely act tol stop the revolution of t eV cylinder containing the key, and act' neither to 'shoot the bolt nor hold the key-containing cylinder in place. The cylindrical tumbler- -chamber might contain other kinds of tumblers and still be useful as a means of making a lock either left `or right hand, or applicable to dierent thicknesses ofdoors. 
+I claim as my invention- 1.. The contrivance, substantially as de-` scribed, for holding a bolt in place. 
+.` 2. The combinationof a'lock-case containing a boit with a cylindrical-chamber containing tumblers, all constructed and arranged with reference to each` other substantially as described, whereby 'the lock may be made right or left hand. or iitted to either thick` or thin doors, the combination bein g substantiallyl as set forth. g 
+ 3. The combination of a cylinder containing tnmblers and having` a screw out thereon with a lock-case having a nut attached to or making part thereof, and a screw-pin or its equivalent, arranged as described, whereby the .former may be attached to theicase so as to` t doors ot'` different thickness, and secured in position by a device which is so arranged as to be acted upon through the bolt-hole, A 
+d. Notched pintnmblers, in combination with a key-hole slit narrower than the diameter of O the pins, and'also notched containing-recesses, in combination with a key-hole slit narrower than their diameter, the combination being substantially such as described and operating substantially asset forth. 
+5. vIn combination with acylinder containing a key-hole and pin-tumblers, a wing or lazyarm, constructed and operated as specitied. 'LINUS YALE,'JR. 
+In presence of- ARTHUR MATXWELL, HENRY WINN. 
+ US48475D
+ Improvement in locks 
+ Expired - Lifetime
+ US48475A
+ (en)
+ Publications (1)
+ Publication Number
+ Publication Date
+ US48475A
+ true
+ US48475A
+ (en)
+ 1865-06-27
+ Family
+ ID=2118030
+ Family Applications (1)
+ Application Number
+ Title
+ Priority Date
+ Filing Date
+ US48475D
+ Expired - Lifetime
+ US48475A
+ (en)
+ Improvement in locks 
+ Country Status (1)
+ Country
+ Link
+ US
+ (1)
+ US48475A
+ (en)
+ Cited By (3)
+ * Cited by examiner, † Cited by third party
+ Publication number
+ Priority date
+ Publication date
+ Assignee
+ Title
+ US2629249A
+ (en)
+ *
+ 1950-08-23
+ 1953-02-24
+ Bernard E Mendelsohn
+ Cylinder lock 
+ US20070131005A1
+ (en)
+ *
+ 2005-12-14
+ 2007-06-14
+ Checkpoint Systems, Inc.
+ Systems and methods for providing universal security for items 
+ US20070296545A1
+ (en)
+ *
+ 2005-12-14
+ 2007-12-27
+ Checkpoint Systems, Inc.
+ System for management of ubiquitously deployed intelligent locks 
+ 0
+ US
+ US48475D
+ patent/US48475A/en
+ not_active
+ Expired - Lifetime
+ Cited By (3)
+ * Cited by examiner, † Cited by third party
+ Publication number
+ Priority date
+ Publication date
+ Assignee
+ Title
+ US2629249A
+ (en)
+ *
+ 1950-08-23
+ 1953-02-24
+ Bernard E Mendelsohn
+ Cylinder lock 
+ US20070131005A1
+ (en)
+ *
+ 2005-12-14
+ 2007-06-14
+ Checkpoint Systems, Inc.
+ Systems and methods for providing universal security for items 
+ US20070296545A1
+ (en)
+ *
+ 2005-12-14
+ 2007-12-27
+ Checkpoint Systems, Inc.
+ System for management of ubiquitously deployed intelligent locks 
+ Similar Documents
+ Publication
+ Publication Date
+ Title
+ US2426104A
+ (en)
+ 1947-08-19
+ Lock 
+ US2113007A
+ (en)
+ 1938-04-05
+ Cylinder lock 
+ US2524696A
+ (en)
+ 1950-10-03
+ Lock for safety deposit boxes 
+ US1707922A
+ (en)
+ 1929-04-02
+ Lock 
+ US31278A
+ (en)
+ 1861-01-29
+ Linus yale 
+ US570032A
+ (en)
+ 1896-10-27
+ John luebbers 
+ US2199165A
+ (en)
+ 1940-04-30
+ Pin-tumbler lock 
+ US1526047A
+ (en)
+ 1925-02-10
+ Lock 
+ US1568579A
+ (en)
+ 1926-01-05
+ of new haven 
+ GB2224071A
+ (en)
+ 1990-04-25
+ Padlock with removable cylinder and re-inforced shackle 
+ US1022268A
+ (en)
+ 1912-04-02
+ Combination-lock. 
+ US960421A
+ (en)
+ 1910-06-07
+ Interchangeable-key lock. 
+ US864743A
+ (en)
+ 1907-08-27
+ Padlock. 
+ US1456838A
+ (en)
+ 1923-05-29
+ Lock 
+ US1689875A
+ (en)
+ 1928-10-30
+ Handle lock 
+ US945276A
+ (en)
+ 1910-01-04
+ Door-lock. 
+ US315307A
+ (en)
+ 1885-04-07
+ ludlow 
+ US36946A
+ (en)
+ 1862-11-18
+ Improvement in locks 
+ US971340A
+ (en)
+ 1910-09-27
+ Entrance-door lock. 
+ US565622A
+ (en)
+ 1896-08-11
+ Cylinder-lock 
+ US762051A
+ (en)
+ 1904-06-07
+ Lock. 
+ US200319A
+ (en)
+ 1878-02-12
+ Improvement in locks for drawers 
+ USRE12716E
+ (en)
+ 1907-11-05
+ Charles e 
+ USRE8158E
+ (en)
+ 1878-04-02
+ Improvement in locks 
+ US2690665A
+ (en)
+ 1954-10-05
+ Cylinder lock 

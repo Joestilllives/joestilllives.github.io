@@ -1,0 +1,136 @@
+{
+ "id": "ep01-key-lock",
+ "title": "How a key actually opens a lock",
+ "handle": "@mechanica.explained",
+ "structure_options_considered": [
+  "history-first: start in 1865 and build to the mechanism (dropped: the opening is a date, no curiosity gap)",
+  "myth teardown: 'your key does not push the bolt' (dropped: needs claims about cams and bolts we have not sourced)",
+  "password metaphor, then the hidden line (chosen: concrete hook, one clear twist, all claims sourced)"
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "role": "hook",
+   "say": "Those bumps on your key are a password, written in metal.",
+   "labels": [
+    "a password"
+   ],
+   "mute_proof": "Key slides in from the left; its five cuts light up one by one as amber code bars.",
+   "speed": 0.88
+  },
+  {
+   "id": "parts",
+   "role": "and",
+   "say": "Inside the lock is a plug that has to turn, and stacks of pins pushed down by springs.",
+   "labels": [
+    "plug",
+    "pins",
+    "springs"
+   ],
+   "mute_proof": "Exploded pin stacks fly together into the cutaway; plug, pins and springs get labels as they land."
+  },
+  {
+   "id": "split",
+   "role": "and",
+   "say": "Each stack is split in two, and every stack splits at a different height.",
+   "labels": [
+    "split"
+   ],
+   "mute_proof": "Each pin stack separates at its split; amber ticks mark five different split heights."
+  },
+  {
+   "id": "jam",
+   "role": "but",
+   "say": "With the wrong key, those splits stay scattered, and the plug is jammed.",
+   "labels": [
+    "jammed"
+   ],
+   "mute_proof": "Wrong key pushes pins to uneven heights; plug shakes against them and cannot rotate; coral shear line."
+  },
+  {
+   "id": "turn",
+   "role": "therefore",
+   "say": "The right key lifts every split to one exact line. Now the plug turns.",
+   "labels": [
+    "one line"
+   ],
+   "mute_proof": "Right key lifts all splits onto a single line that flashes teal; the plug rotates 90 degrees."
+  },
+  {
+   "id": "receipt",
+   "role": "receipt",
+   "say": "Linus Yale Junior described exactly this in his 1865 patent.",
+   "labels": [
+    "US patent 48,475 (1865)"
+   ],
+   "mute_proof": "Patent page slides up; the sentence about lines of division gets an amber underline drawn across it.",
+   "tts": "Linus Yale Junior described exactly this in his eighteen sixty-five patent.",
+   "speed": 1.1
+  },
+  {
+   "id": "send",
+   "role": "ask",
+   "say": "Send this to the friend who is always losing their keys.",
+   "labels": [],
+   "mute_proof": "Key spins and drops onto a keyring with the Mechanica mark; follow line appears."
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Pins sit in drilled holes with drivers above them and springs that push them",
+   "beat": "parts",
+   "source": "Linus Yale Jr., US Patent 31,278, published 1861-01-29",
+   "url": "https://patents.google.com/patent/US31278A/en",
+   "file": "src/us31278.txt",
+   "quote": [
+    "the pistons",
+    "their drivers",
+    "and their actuating springs",
+    "which are placed in cylindrical holes",
+    "drilled for that purpose"
+   ],
+   "quote_display": "\"...the pistons..., their drivers..., and their actuating springs..., which are placed in cylindrical holes..., drilled for that purpose in the pin-chamber...\""
+  },
+  {
+   "claim": "Each pin stack has two parts with a line of division between them",
+   "beat": "split",
+   "source": "Linus Yale Jr., US Patent 48,475 'Improvement in locks', published 1865-06-27",
+   "url": "https://patents.google.com/patent/US48475A/en",
+   "file": "src/us48475.txt",
+   "quote": "lines of division between the two parts of the tumblers",
+   "quote_display": "\"...the various lines of division between the two parts of the tumblers...\""
+  },
+  {
+   "claim": "The stacks are different lengths, and the key must line up every division before the cylinder can turn",
+   "beat": "turn",
+   "source": "Linus Yale Jr., US Patent 48,475, published 1865-06-27",
+   "url": "https://patents.google.com/patent/US48475A/en",
+   "file": "src/us48475.txt",
+   "quote": "of different lengths, and must all be arranged by the key, so that the various lines of division between the two parts of the tumblers are all in the same line before the cylinder D can be turned",
+   "quote_display": "\"[The tumblers] are of different lengths, and must all be arranged by the key, so that the various lines of division between the two parts of the tumblers are all in the same line before the cylinder D can be turned.\""
+  },
+  {
+   "claim": "Linus Yale Jr. described this in a patent published in 1865",
+   "beat": "receipt",
+   "source": "Linus Yale Jr., US Patent 48,475, published 1865-06-27",
+   "url": "https://patents.google.com/patent/US48475A/en",
+   "file": "src/us48475.txt",
+   "quote": [
+    "Publication date",
+    "1865-06-27",
+    "LINUS YALE"
+   ],
+   "quote_display": "Patent record: L. Yale Jr., publication date 1865-06-27."
+  }
+ ],
+ "not_claimed": [
+  "That most locks today use this design (only secondary sources found)",
+  "How many pins a typical lock has (only secondary sources found)",
+  "Who invented the pin tumbler first (history is disputed; Stansbury 1805 and Yale Sr. 1848 precede this patent)"
+ ],
+ "simplifications": [
+  "The video says 'each stack is split in two'. In the patent the 'two parts of the tumblers' are what are now called the key pin and driver pin. Accurate.",
+  "The video shows one plug rotating 90 degrees. Real locks connect the plug to a cam that moves the bolt; we do not show or claim that step."
+ ],
+ "caption": "Those bumps on your key are a password, written in metal.\n\nInside the lock, every pin stack is split in two. The right key lifts every split to the same line, and only then can the plug turn. Linus Yale Jr. put it in writing in 1865: the tumblers \"must all be arranged by the key, so that the various lines of division ... are all in the same line before the cylinder ... can be turned.\"\n\nSend this to the friend who is always losing their keys.\n\nSources: US Patent 48,475 (L. Yale Jr., 1865), US Patent 31,278 (L. Yale Jr., 1861). Full source sheet in bio.\n\n#howthingswork #engineering #locks #science #mechanica\n"
+}
