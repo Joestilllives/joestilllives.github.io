@@ -29,7 +29,7 @@ def mat(name, rgb, metal, rough):
     p.inputs['Base Color'].default_value = (*rgb, 1); p.inputs['Metallic'].default_value = metal
     p.inputs['Roughness'].default_value = rough
     return m
-BRASS = mat('brass', (0.83, 0.60, 0.22), 1.0, 0.28)      # close to the brand amber, as metal
+BRASS = mat('brass', (0.80, 0.58, 0.21), 1.0, 0.28)  # keep colours <= 0.8 (manual: less noise)      # close to the brand amber, as metal
 STEEL = mat('steel', (0.72, 0.75, 0.80), 1.0, 0.22)
 SPRING = mat('spring', (0.55, 0.58, 0.64), 1.0, 0.35)
 NAVY = mat('navy', (0.05, 0.09, 0.22), 0.2, 0.5)
@@ -106,6 +106,9 @@ if OPT.get('cards') == '1':        # reflection cards: big soft emitters seen on
         cd.data.materials.append(em); cd.visible_camera = False; cd.visible_diffuse = False; cd.visible_shadow = False
 w = bpy.data.worlds.new('w'); S.world = w; w.use_nodes = True
 w.node_tree.nodes['Background'].inputs[0].default_value = (0.05, 0.08, 0.18, 1); w.node_tree.nodes['Background'].inputs[1].default_value = 0.6
+if OPT.get('hdri'):                # CC0 studio HDRI from Poly Haven lights the scene and fills the metal's reflections; background stays transparent
+    nt = w.node_tree; env = nt.nodes.new('ShaderNodeTexEnvironment'); env.image = bpy.data.images.load(OPT['hdri'])
+    nt.links.new(env.outputs['Color'], nt.nodes['Background'].inputs['Color']); nt.nodes['Background'].inputs[1].default_value = float(OPT.get('hdri_strength', '0.8'))
 
 S.render.filepath = out.rstrip('/') + '/f_'
 t = time.time()
