@@ -23,8 +23,10 @@ bash scripts/setup.sh          # pip packages, GSAP 3.13, Kokoro voice model (~3
 
 Needs ffmpeg, Node and Playwright with Chromium. Set `FACELESS_REEL_MODELS` to keep the model elsewhere.
 
-`assets/badge.png` (the round photo next to the handle, used by default) and `assets/profile-picture.png`
-belong to @hours_back.ai. Pass `--badge` to use another, and `--handle` for the account name.
+`assets/badge.png` (the round mark next to the handle, used by default), `assets/profile-picture.png` and
+the vector `assets/mark.svg` belong to Mechanica (@mechanica.explained): an "exploded" M of four amber
+parts on navy. The account is fully faceless, so never put a person's photo in the badge. Pass `--badge`
+to use another, and `--handle` for the account name.
 
 ## The pipeline (run in this order, never skip a gate)
 
