@@ -251,7 +251,15 @@ def main(panel, industry_csv, ipos_csv, views_pkl, outdir):
     f = features(m, ind, ipo_gain)
     fac = None
     if os.environ.get("FACTORS"):
-        fac = factor_returns(pd.read_pickle(os.environ["FACTORS"]), m["lp"].index)
+        factors = pd.read_pickle(os.environ["FACTORS"])
+        if os.environ.get("TOPIC_VIEWS"):
+            # Wikipedia attention to topics (inflation, EVs, monsoon, ...) as extra outside forces:
+            # the model learns which companies move with which theme's attention
+            tv = pd.read_pickle(os.environ["TOPIC_VIEWS"]).pivot_table(index="date", columns="symbol", values="views")
+            tv = tv.rolling(7, min_periods=4).mean()  # smooth weekday swings
+            tv.columns = ["Wikipedia: " + c[2:] for c in tv.columns]
+            factors = factors.join(tv, how="outer")
+        fac = factor_returns(factors, m["lp"].index)
     tab = month_table(m, f, ind, ipo_gain, fac)
     tab.to_pickle(os.path.join(outdir, "monthly_table.pkl"))
     pred, imp, model, cols = walk_forward(tab)
