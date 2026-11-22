@@ -2,7 +2,7 @@
 # Run: blender-venv/bin/python hero.py OUTDIR FRAMES [SAMPLES]
 import bpy, math, sys, time, os
 # Defaults = the settings that won the Blender tests (Production standards tab, section 7). Override with HERO_OPTS="key=value,...".
-OPT = {'view': 'Khronos PBR Neutral', 'bevel': '1', 'paths': 'fast', 'denoise': 'full', 'cards': '1', 'mblur': '1', 'catcher': '0'}
+OPT = {'view': 'Khronos PBR Neutral', 'bevel': '1', 'paths': 'fast', 'denoise': 'full', 'cards': '1', 'mblur': '1', 'catcher': '0', 'vary': '1'}
 OPT.update(dict(kv.split('=') for kv in os.environ.get('HERO_OPTS', '').split(',') if '=' in kv))
 out, frames = sys.argv[1], int(sys.argv[2]); samples = int(sys.argv[3]) if len(sys.argv) > 3 else 16
 bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -29,10 +29,21 @@ def mat(name, rgb, metal, rough):
     p.inputs['Base Color'].default_value = (*rgb, 1); p.inputs['Metallic'].default_value = metal
     p.inputs['Roughness'].default_value = rough
     return m
+def vary(m, scale=18.0, rough=(0.25, 0.32), tint=0.03):
+    # Surface variation: real metal is never one flat value. Noise drives roughness and a +-6% colour shift.
+    nt = m.node_tree; p = nt.nodes['Principled BSDF']; base = p.inputs['Base Color'].default_value[:]
+    n = nt.nodes.new('ShaderNodeTexNoise'); n.inputs['Scale'].default_value = scale; n.inputs['Detail'].default_value = 6
+    r = nt.nodes.new('ShaderNodeMapRange'); r.inputs['To Min'].default_value, r.inputs['To Max'].default_value = rough
+    nt.links.new(n.outputs['Fac'], r.inputs['Value']); nt.links.new(r.outputs['Result'], p.inputs['Roughness'])
+    c = nt.nodes.new('ShaderNodeMix'); c.data_type = 'RGBA'; c.inputs['Factor'].default_value = 1.0
+    nt.links.new(n.outputs['Fac'], c.inputs['Factor'])
+    c.inputs['A'].default_value = tuple(v * (1 - tint) for v in base[:3]) + (1,); c.inputs['B'].default_value = tuple(min(0.8, v * (1 + tint)) for v in base[:3]) + (1,)
+    nt.links.new(c.outputs['Result'], p.inputs['Base Color'])
 BRASS = mat('brass', (0.80, 0.58, 0.21), 1.0, 0.28)  # keep colours <= 0.8 (manual: less noise)      # close to the brand amber, as metal
 STEEL = mat('steel', (0.72, 0.75, 0.80), 1.0, 0.22)
 SPRING = mat('spring', (0.55, 0.58, 0.64), 1.0, 0.35)
 NAVY = mat('navy', (0.05, 0.09, 0.22), 0.2, 0.5)
+if OPT.get('vary') == '1': vary(BRASS); vary(STEEL, scale=30, rough=(0.19, 0.26)); vary(SPRING, scale=40, rough=(0.28, 0.36))
 
 def ease(t):  # expo-out, matching the 2D motion personality
     return 1 - pow(2, -10 * t) if t < 1 else 1
@@ -85,6 +96,8 @@ for kp, dp, piv, i in parts:
 # Camera: a slow 3/4 orbit so the shot is never still.
 bpy.ops.object.empty_add(location=(0, 0, 0.75)); aim = bpy.context.object
 bpy.ops.object.camera_add(); cam = bpy.context.object; S.camera = cam; cam.data.lens = 58
+if OPT.get('dof'):                 # shallow focus on the pins: guides the eye, reads as a real lens
+    cam.data.dof.use_dof = True; cam.data.dof.focus_object = aim; cam.data.dof.aperture_fstop = float(OPT['dof'])
 tr = cam.constraints.new('TRACK_TO'); tr.target = aim; tr.track_axis = 'TRACK_NEGATIVE_Z'; tr.up_axis = 'UP_Y'
 for f in (1, frames):
     a = math.radians(-32 + 10 * (f - 1) / max(1, frames - 1))
