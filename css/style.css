@@ -344,6 +344,8 @@ z-index:2;
 /* Second Chance Patents: ruled paper with dark ink */
 .patents{ background:repeating-linear-gradient(0deg, transparent 0 27px, rgba(26,107,74,.16) 27px 28px), #f4efe2; }
 .patents span{ color:#13372a; }
+/* Carryover: deep green with a gold check */
+.carryover{ background:radial-gradient(circle at 50% 38%, #f3c969 0 7%, transparent 7.5%), linear-gradient(135deg, #1f7a62, #143d33); grid-column:1 / -1; }
 /* Tokri: a woven-basket pattern in warm pink */
 .tokri{ background:repeating-linear-gradient(45deg, rgba(255,255,255,.12) 0 10px, transparent 10px 20px), repeating-linear-gradient(-45deg, rgba(0,0,0,.08) 0 10px, transparent 10px 20px), #e8577e; grid-column:1 / -1; }
 
