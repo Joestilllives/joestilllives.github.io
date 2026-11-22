@@ -19,7 +19,7 @@ UP_WORDS = [
     "spike", "spikes", "spiked", "hike", "hikes", "hiked", "raise", "raises", "raised",
     "boost", "boosts", "boosted", "record high", "beat", "beats", "strong", "strengthens",
     "strengthened", "gain", "gains", "gained", "expand", "expands", "increase", "increases",
-    "higher", "tighten", "tightens", "tougher", "escalate", "escalates", "escalation",
+    "higher", "tighten", "tightens", "settle higher", "firm", "firms", "advances", "advance", "tougher", "escalate", "escalates", "escalation",
     "impose", "imposes", "imposed", "above normal", "above-normal", "upgrade", "upbeat",
     "accelerate", "accelerates", "doubles", "fee hike", "inflows", "lift", "lifts", "lifted",
     "ramps up", "boom", "booms", "record", "shoots up", "shot up", "skyrockets",
@@ -32,7 +32,7 @@ DOWN_WORDS = [
     "calm", "ceasefire", "truce", "reopen", "reopens", "deficient", "below normal",
     "below-normal", "delayed", "scrap", "scraps", "removes", "rollback", "rolls back",
     "pause", "pauses", "exempt", "exempts", "exemption", "downgrade", "warns", "warning",
-    "slash", "slashes", "reduce", "reduces", "outflows", "sell-off", "selloff", "record low",
+    "slash", "slashes", "reduce", "reduces", "outflows", "loss", "losses", "slips", "slipped", "dips", "dipped", "sink", "sinks", "retreat", "retreats", "sell-off", "selloff", "record low",
     "shrinks", "contracts", "halts", "halt", "strike", "recall", "probe", "slowdown",
 ]
 
@@ -86,18 +86,49 @@ class Graph:
         return found
 
 
-def direction_near(text, start, end):
-    """Look for up/down words close to the mention; prefer words right after it."""
-    best = None
-    windows = [(text[end:end + 45], 0), (text[max(0, start - 30):start], 1)]
-    for chunk, side in windows:
-        for regex, sign in ((UP_RE, 1), (DOWN_RE, -1)):
-            for m in regex.finditer(chunk):
-                dist = m.start() if side == 0 else len(chunk) - m.end()
-                cand = (side, dist, sign)
-                if best is None or cand < best:
-                    best = cand
-    return best[2] if best else 0
+QUANTITY_WORDS = {"export", "exports", "import", "imports", "output", "production", "demand", "supply",
+                  "supplies", "inventories", "inventory", "stockpiles", "flows", "flow", "shipments",
+                  "consumption", "volumes", "sales", "reserves"}
+UNCLEAR_RE = re.compile(r"\b(choppy|volatile|mixed|steady|flat|unchanged|little changed|range-bound|rangebound)\b", re.I)
+# Words after these usually describe a different thing ("X falls AS Y rises").
+BOUNDARY_RE = re.compile(r"\s(?:as|amid|despite|after|while|but|because|on|ahead of|even as)\s|[;:|]|\s[-–—]\s", re.I)
+
+
+def _signs(chunk):
+    """Closest-first list of (position, sign) for direction words in chunk."""
+    hits = [(m.start(), 1) for m in UP_RE.finditer(chunk)] + [(m.start(), -1) for m in DOWN_RE.finditer(chunk)]
+    return sorted(hits)
+
+
+def direction_near(text, start, end, quantity_ok=False):
+    """Direction (+1 up, -1 down, 0 unclear) of the thing mentioned at text[start:end]."""
+    before = text[max(0, start - 40):start]
+    after = text[end:end + 60]
+    # 1. An adjective right before the mention wins: "Easing oil prices", "Rising crude".
+    prev = re.search(r"([\w-]+)\s*$", before)
+    if prev:
+        s = _signs(prev.group(1))
+        if s:
+            return s[0][1]
+    # 2. "crude exports hit record" is about volumes, not price.
+    nxt = re.match(r"\s*([\w-]+)", after)
+    if nxt and nxt.group(1).lower() in QUANTITY_WORDS and not quantity_ok \
+            and not re.match(r"\s*imports?\s+(bill|costs?)\b", after, re.I):
+        return 0
+    # 3. Only read the same clause.
+    cut = BOUNDARY_RE.search(after)
+    clause = after[:cut.start()] if cut else after
+    if UNCLEAR_RE.search(clause):
+        return 0
+    s = _signs(clause)
+    if s:
+        return 0 if len({sign for _, sign in s}) > 1 else s[0][1]
+    # 4. Otherwise look back within the same clause: "US to raise H-1B fees".
+    parts = BOUNDARY_RE.split(before)
+    s = _signs(parts[-1] if parts else before)
+    if s:
+        return 0 if len({sign for _, sign in s}) > 1 else s[-1][1]
+    return 0
 
 
 def propagate(graph, seed, seed_dir):
@@ -135,7 +166,7 @@ def analyze(graph, item):
         return None
     seeds = []
     for eid, (s, e) in mentions.items():
-        d = direction_near(title, s, e)
+        d = direction_near(title, s, e, quantity_ok=eid == "opec")
         if d == 0:
             d = graph.entities[eid].get("default_dir", 0)
         seeds.append({"id": eid, "name": graph.entities[eid]["name"], "dir": d})
@@ -172,7 +203,8 @@ def analyze(graph, item):
         "id": hashlib.sha1(title.lower().encode()).hexdigest()[:12],
         "title": title, "url": item.get("url"), "source": item.get("source"),
         "published": item.get("published"), "sample": item.get("sample", False),
-        "seeds": [{"name": s["name"], "dir": {1: "rising", -1: "falling"}.get(s["dir"], "in the news")} for s in seeds],
+        "seeds": [{"id": s["id"], "name": s["name"], "dir": {1: "rising", -1: "falling"}.get(s["dir"], "in the news")}
+                  for s in seeds],
         "impacts": ranked[:8],
         "score": round(ranked[0]["score"] + 0.05 * min(len(ranked), 6), 3),
         "cross_market": any(r["cross_market"] for r in ranked),
