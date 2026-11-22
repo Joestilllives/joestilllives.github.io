@@ -11,14 +11,14 @@ and then together, over all months of the monthly table.
 
 Usage: python3 improve.py MONTHLY_TABLE.pkl PREDICTIONS.pkl PANEL.pkl FUNDS.txt
 """
-import sys
+import os, sys
 import numpy as np
 import pandas as pd
 from backtest import prepare
 
 COST, TOP, KEEP, CASH = 0.003, 0.2, 0.4, (1.065) ** (1 / 12) - 1
 GROUPS = [0, 1, 2, 3]
-SPLIT = pd.Timestamp("2023-07-01")
+SPLIT = pd.Timestamp(os.environ.get("SPLIT", "2023-07-01"))
 
 
 def breadth_by_month(panel, funds_txt, months):

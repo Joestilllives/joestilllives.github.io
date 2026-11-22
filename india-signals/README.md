@@ -106,6 +106,31 @@ any frenzy day hurt (removes a third of stocks). The final recipe was picked fro
 Trend filter = more than half of stocks above their 200-day average and Nifty 50 up over
 3 months. Cash assumed at 6.5%/yr.
 
+## Ten-year test (2016-2026, `download_old.py` adds 2016-2019 prices + delivery)
+
+Combined model, 92 out-of-sample months (Feb 2019-Sep 2026): **+8.4%/yr vs the average
+company, t = 3.9, beat the market in all 8 years**, deepest slide vs market -3.7%.
+Simple algorithm, 117 months (2017-2026): +9.0%/yr, t = 3.8, beat the market 9 of 10 years
+(2018 crash: -22% vs market -30%; lost only in 2022, -5.4%).
+
+| Year | Market | Model vs market | Algorithm vs market |
+|---|---|---|---|
+| 2017 | +42% | (training) | +16.6% |
+| 2018 | -30% | (training) | +7.6% |
+| 2019 | -2% | +7.5% | +4.2% |
+| 2020 | +24% | +21.7% | +10.1% |
+| 2021 | +67% | +11.0% | +39.1% |
+| 2022 | 0% | +7.1% | -5.4% |
+| 2023 | +68% | +2.5% | +15.2% |
+| 2024 | +5% | +8.9% | +7.2% |
+| 2025 | -6% | +11.3% | +10.6% |
+| 2026 (9 mo) | +9% | +7.9% | +12.6% |
+
+Improvements on the same 94 months (`improve.py`): **blend of steady-climb rank and model rank
++12.6%/yr (t 5.0); with the buffer rule +11.9%/yr, t 5.2, ahead 72% of months, turnover 31%**.
+Worst absolute fall of the simple rule over 2016-2026 was -47% (2018 crash into COVID); 50% cash
+when the market is unhealthy cut it to -23% for ~1-2%/yr less excess return.
+
 ## Findings so far (data to 13 Nov 2026)
 
 - **Frenzy days** (volume 3x+ usual, delivery % 15+ points below usual) are followed by
