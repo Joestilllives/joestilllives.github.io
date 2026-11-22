@@ -1,0 +1,9 @@
+{
+ "as_of": "2026-11-13",
+ "stocks": 210,
+ "sell": [],
+ "share_above_200d": 0.488,
+ "avg_stock_3m": -0.0498,
+ "market_healthy": false,
+ "overlay": "50% basket, 50% liquid fund"
+}
