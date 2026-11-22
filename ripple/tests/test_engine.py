@@ -60,6 +60,11 @@ class ChainTests(unittest.TestCase):
     def test_case_sensitive_alias(self):
         self.assertIsNone(analyze(G, {"title": "Fans are fed up with the weather"}))
 
+    def test_real_headline_oil_import_bill(self):
+        # Real GDELT headline the first version missed
+        i = impact("India oil & gas import bill shoots up $6 billion in Oct as global prices surge", "bpcl")
+        self.assertEqual(i["effect"], "headwind")
+
     def test_unrelated_headline(self):
         self.assertIsNone(analyze(G, {"title": "Local football club wins cup final"}))
 

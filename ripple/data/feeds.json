@@ -26,5 +26,12 @@
     "Chinese steel imports India",
     "gold price",
     "monsoon India"
+  ],
+  "gdelt_queries": [
+    "(\"crude oil\" OR OPEC OR Hormuz OR \"Red Sea\" OR \"oil prices\")",
+    "(\"Federal Reserve\" OR \"Treasury yields\" OR rupee OR \"dollar index\" OR FPI OR FII)",
+    "(tariffs OR \"H-1B\" OR USFDA OR \"drug pricing\" OR \"trade deal\")",
+    "(Nvidia OR TSMC OR \"chip shortage\" OR \"AI spending\" OR \"data center\" OR Accenture OR Apple)",
+    "(\"Jaguar Land Rover\" OR Novelis OR aluminium OR \"Chinese steel\" OR monsoon OR \"gold price\")"
   ]
 }

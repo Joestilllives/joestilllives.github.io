@@ -22,7 +22,7 @@ UP_WORDS = [
     "higher", "tighten", "tightens", "tougher", "escalate", "escalates", "escalation",
     "impose", "imposes", "imposed", "above normal", "above-normal", "upgrade", "upbeat",
     "accelerate", "accelerates", "doubles", "fee hike", "inflows", "lift", "lifts", "lifted",
-    "ramps up", "boom", "booms", "record",
+    "ramps up", "boom", "booms", "record", "shoots up", "shot up", "skyrockets",
 ]
 DOWN_WORDS = [
     "fall", "falls", "fell", "drop", "drops", "dropped", "plunge", "plunges", "plunged",

@@ -1,6 +1,7 @@
 """Fetch headlines from public RSS feeds (standard library only)."""
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -52,8 +53,40 @@ def parse_rss(xml_bytes, feed_url):
     return items
 
 
-def fetch_all(timeout=20):
+GDELT = ("https://api.gdeltproject.org/api/v2/doc/doc?query={q}&mode=artlist&format=json"
+         "&maxrecords=75&timespan=1d&sort=datedesc")
+
+
+def fetch_gdelt(timeout=30):
+    """GDELT: free global news index. Rate limit is ~1 request per 5 seconds."""
+    cfg = json.loads((HERE / "data" / "feeds.json").read_text(encoding="utf-8"))
     items, errors = [], []
+    for q in cfg.get("gdelt_queries", []):
+        url = GDELT.format(q=urllib.parse.quote(q + " sourcelang:english"))
+        for attempt in range(3):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA})
+                with urllib.request.urlopen(req, timeout=timeout) as r:
+                    data = json.loads(r.read().decode("utf-8", "replace"), strict=False)
+                for a in data.get("articles", []):
+                    sd = a.get("seendate", "")
+                    pub = (f"{sd[0:4]}-{sd[4:6]}-{sd[6:8]}T{sd[9:11]}:{sd[11:13]}:{sd[13:15]}+00:00"
+                           if len(sd) >= 15 else None)
+                    items.append({"title": a.get("title", "").strip(), "url": a.get("url"),
+                                  "source": a.get("domain"), "published": pub})
+                break
+            except Exception as e:
+                if attempt == 2:
+                    errors.append(f"gdelt {q[:40]}: {e}")
+                time.sleep(8 * (attempt + 1))
+        else:
+            break  # GDELT is throttling us; skip the rest instead of waiting minutes
+        time.sleep(6)
+    return [i for i in items if i["title"]], errors
+
+
+def fetch_all(timeout=20):
+    items, errors = fetch_gdelt()
     for url in feed_urls():
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
