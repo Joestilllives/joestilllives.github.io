@@ -28,6 +28,11 @@
   function randomString(n) { var a = new Uint8Array(n); crypto.getRandomValues(a); return b64url(a); }
   function show(view) {
     ['viewStart', 'viewLoading', 'viewReady', 'viewError'].forEach(function (v) { $(v).hidden = v !== view; });
+    /* On phones the tool sits below the introduction; bring progress and results into view. */
+    if (view !== 'viewStart') {
+      var top = $('tool').getBoundingClientRect().top;
+      if (top > window.innerHeight * 0.6 || top < 0) $('tool').scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }
   }
   function fail(msg) { $('errorText').textContent = msg; show('viewError'); }
   function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
@@ -150,6 +155,10 @@
     var open = 0, done = 0;
     state.lists.forEach(function (l) { l.tasks.forEach(function (t) { if (t.done) done++; else open++; }); });
     $('summary').textContent = state.lists.length + (state.lists.length === 1 ? ' list' : ' lists') + ' · ' + open + ' open tasks · ' + done + ' completed';
+    /* Signed in, but nothing to export: most often the wrong Microsoft account. */
+    var empty = !demo && open + done === 0;
+    $('emptyNote').hidden = !empty;
+    $('readyBody').hidden = empty;
     var box = $('lists'); box.innerHTML = '';
     state.lists.forEach(function (l, i) {
       var o = l.tasks.filter(function (t) { return !t.done; }).length;
@@ -213,9 +222,10 @@
   });
   $('includeCompleted').addEventListener('change', function (e) { state.includeCompleted = e.target.checked; preview(); });
   $('signIn').addEventListener('click', signIn);
+  $('switchAccount').addEventListener('click', signIn);
   $('tryDemo').addEventListener('click', loadDemo);
   $('download').addEventListener('click', download);
-  [$('startOver'), $('retry')].forEach(function (b) { b.addEventListener('click', function () { state = { raw: null, lists: null, demo: false, format: state.format, includeCompleted: state.includeCompleted, chosen: {} }; $('saved').hidden = true; show('viewStart'); }); });
+  [$('startOver'), $('retry'), $('emptyStartOver')].forEach(function (b) { b.addEventListener('click', function () { state = { raw: null, lists: null, demo: false, format: state.format, includeCompleted: state.includeCompleted, chosen: {} }; $('saved').hidden = true; show('viewStart'); }); });
 
   if (!CONFIG.clientId) {
     $('signIn').textContent = 'Sign in with Microsoft (coming soon)';
