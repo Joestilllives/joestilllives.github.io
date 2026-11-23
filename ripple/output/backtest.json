@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-22T21:02:28.544318+00:00",
+ "generated": "2026-11-23T05:45:08.116527+00:00",
  "cost_round_trip_pct": 0.06,
  "note": "Days where Yahoo's Indian open equals the previous close are excluded as possibly stale.",
  "errors": [],
  "strategies": [
   {
    "name": "Accenture move \u2192 Indian IT basket",
-   "days": 927,
+   "days": 928,
    "from": "2021-11-24",
-   "to": "2026-11-20",
+   "to": "2026-11-23",
    "corr_gap": 0.51,
    "corr_intraday": 0.1,
    "variants": [
@@ -33,20 +33,20 @@
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 690,
-       "win_rate": 0.526,
-       "avg_net_pct": 0.065,
-       "total_pct": 49.7,
+       "trades": 691,
+       "win_rate": 0.527,
+       "avg_net_pct": 0.066,
+       "total_pct": 50.6,
        "max_drawdown_pct": -15.1,
-       "t_stat": 1.45
+       "t_stat": 1.47
       },
       "1%": {
-       "trades": 488,
-       "win_rate": 0.531,
-       "avg_net_pct": 0.092,
-       "total_pct": 50.8,
+       "trades": 489,
+       "win_rate": 0.532,
+       "avg_net_pct": 0.093,
+       "total_pct": 51.8,
        "max_drawdown_pct": -11.9,
-       "t_stat": 1.63
+       "t_stat": 1.66
       },
       "1.5%": {
        "trades": 345,
@@ -95,20 +95,20 @@
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 690,
-       "win_rate": 0.546,
-       "avg_net_pct": 0.084,
-       "total_pct": 72.3,
+       "trades": 691,
+       "win_rate": 0.547,
+       "avg_net_pct": 0.086,
+       "total_pct": 75.5,
        "max_drawdown_pct": -14.3,
-       "t_stat": 2.23
+       "t_stat": 2.3
       },
       "1%": {
-       "trades": 488,
-       "win_rate": 0.547,
-       "avg_net_pct": 0.12,
-       "total_pct": 74.9,
+       "trades": 489,
+       "win_rate": 0.548,
+       "avg_net_pct": 0.123,
+       "total_pct": 78.2,
        "max_drawdown_pct": -8.2,
-       "t_stat": 2.62
+       "t_stat": 2.7
       },
       "1.5%": {
        "trades": 345,
@@ -141,11 +141,11 @@
   },
   {
    "name": "Accenture beyond the US market \u2192 Indian IT basket",
-   "days": 927,
+   "days": 928,
    "from": "2021-11-24",
-   "to": "2026-11-20",
-   "corr_gap": 0.319,
-   "corr_intraday": 0.104,
+   "to": "2026-11-23",
+   "corr_gap": 0.321,
+   "corr_intraday": 0.106,
    "variants": [
     {
      "trade": "open \u2192 close",
@@ -159,53 +159,53 @@
       "t_stat": 1.46
      },
      "newer_half": {
-      "trades": 167,
-      "win_rate": 0.599,
-      "avg_net_pct": 0.308,
-      "total_pct": 64.5,
+      "trades": 168,
+      "win_rate": 0.601,
+      "avg_net_pct": 0.31,
+      "total_pct": 65.6,
       "max_drawdown_pct": -6.4,
-      "t_stat": 2.84
+      "t_stat": 2.88
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 584,
-       "win_rate": 0.536,
-       "avg_net_pct": 0.073,
-       "total_pct": 46.2,
+       "trades": 585,
+       "win_rate": 0.537,
+       "avg_net_pct": 0.074,
+       "total_pct": 47.2,
        "max_drawdown_pct": -17.1,
-       "t_stat": 1.42
+       "t_stat": 1.44
       },
       "1%": {
-       "trades": 345,
-       "win_rate": 0.565,
-       "avg_net_pct": 0.183,
-       "total_pct": 83.0,
+       "trades": 346,
+       "win_rate": 0.566,
+       "avg_net_pct": 0.185,
+       "total_pct": 84.2,
        "max_drawdown_pct": -8.3,
-       "t_stat": 2.69
+       "t_stat": 2.72
       },
       "1.5%": {
-       "trades": 222,
-       "win_rate": 0.581,
-       "avg_net_pct": 0.287,
-       "total_pct": 85.1,
+       "trades": 223,
+       "win_rate": 0.583,
+       "avg_net_pct": 0.288,
+       "total_pct": 86.3,
        "max_drawdown_pct": -6.4,
-       "t_stat": 3.19
+       "t_stat": 3.22
       },
       "2%": {
-       "trades": 144,
-       "win_rate": 0.576,
-       "avg_net_pct": 0.29,
-       "total_pct": 49.6,
+       "trades": 145,
+       "win_rate": 0.579,
+       "avg_net_pct": 0.292,
+       "total_pct": 50.6,
        "max_drawdown_pct": -6.2,
-       "t_stat": 2.54
+       "t_stat": 2.57
       },
       "3%": {
-       "trades": 80,
-       "win_rate": 0.588,
-       "avg_net_pct": 0.384,
-       "total_pct": 34.6,
+       "trades": 81,
+       "win_rate": 0.593,
+       "avg_net_pct": 0.387,
+       "total_pct": 35.4,
        "max_drawdown_pct": -10.7,
-       "t_stat": 2.22
+       "t_stat": 2.27
       }
      }
     },
@@ -221,53 +221,53 @@
       "t_stat": 1.32
      },
      "newer_half": {
-      "trades": 167,
-      "win_rate": 0.587,
-      "avg_net_pct": 0.258,
-      "total_pct": 51.9,
+      "trades": 168,
+      "win_rate": 0.589,
+      "avg_net_pct": 0.268,
+      "total_pct": 54.8,
       "max_drawdown_pct": -8.2,
-      "t_stat": 2.74
+      "t_stat": 2.84
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 584,
-       "win_rate": 0.527,
-       "avg_net_pct": 0.046,
-       "total_pct": 26.7,
+       "trades": 585,
+       "win_rate": 0.528,
+       "avg_net_pct": 0.049,
+       "total_pct": 29.0,
        "max_drawdown_pct": -20.5,
-       "t_stat": 1.07
+       "t_stat": 1.14
       },
       "1%": {
-       "trades": 345,
-       "win_rate": 0.568,
-       "avg_net_pct": 0.147,
-       "total_pct": 62.8,
+       "trades": 346,
+       "win_rate": 0.569,
+       "avg_net_pct": 0.152,
+       "total_pct": 65.8,
        "max_drawdown_pct": -8.2,
-       "t_stat": 2.51
+       "t_stat": 2.59
       },
       "1.5%": {
-       "trades": 222,
-       "win_rate": 0.595,
-       "avg_net_pct": 0.236,
-       "total_pct": 66.3,
+       "trades": 223,
+       "win_rate": 0.596,
+       "avg_net_pct": 0.243,
+       "total_pct": 69.4,
        "max_drawdown_pct": -8.2,
-       "t_stat": 3.04
+       "t_stat": 3.13
       },
       "2%": {
-       "trades": 144,
-       "win_rate": 0.597,
-       "avg_net_pct": 0.28,
-       "total_pct": 47.9,
+       "trades": 145,
+       "win_rate": 0.6,
+       "avg_net_pct": 0.291,
+       "total_pct": 50.7,
        "max_drawdown_pct": -7.7,
-       "t_stat": 2.73
+       "t_stat": 2.84
       },
       "3%": {
-       "trades": 80,
-       "win_rate": 0.6,
-       "avg_net_pct": 0.412,
-       "total_pct": 37.9,
+       "trades": 81,
+       "win_rate": 0.605,
+       "avg_net_pct": 0.429,
+       "total_pct": 40.4,
        "max_drawdown_pct": -11.5,
-       "t_stat": 2.7
+       "t_stat": 2.83
       }
      }
     }
@@ -276,11 +276,11 @@
   },
   {
    "name": "Control: S&P 500 move \u2192 Indian IT basket",
-   "days": 927,
+   "days": 928,
    "from": "2021-11-24",
-   "to": "2026-11-20",
-   "corr_gap": 0.438,
-   "corr_intraday": 0.016,
+   "to": "2026-11-23",
+   "corr_gap": 0.432,
+   "corr_intraday": 0.013,
    "variants": [
     {
      "trade": "open \u2192 close",
@@ -294,53 +294,53 @@
       "t_stat": 0.53
      },
      "newer_half": {
-      "trades": 54,
-      "win_rate": 0.593,
-      "avg_net_pct": 0.049,
-      "total_pct": 2.3,
+      "trades": 55,
+      "win_rate": 0.582,
+      "avg_net_pct": 0.035,
+      "total_pct": 1.5,
       "max_drawdown_pct": -7.7,
-      "t_stat": 0.29
+      "t_stat": 0.2
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 553,
-       "win_rate": 0.467,
-       "avg_net_pct": -0.075,
-       "total_pct": -36.3,
+       "trades": 554,
+       "win_rate": 0.466,
+       "avg_net_pct": -0.076,
+       "total_pct": -36.8,
        "max_drawdown_pct": -40.9,
-       "t_stat": -1.54
+       "t_stat": -1.57
       },
       "1%": {
-       "trades": 292,
-       "win_rate": 0.5,
-       "avg_net_pct": -0.03,
-       "total_pct": -10.3,
+       "trades": 293,
+       "win_rate": 0.498,
+       "avg_net_pct": -0.033,
+       "total_pct": -11.0,
        "max_drawdown_pct": -19.5,
-       "t_stat": -0.45
+       "t_stat": -0.48
       },
       "1.5%": {
-       "trades": 146,
-       "win_rate": 0.582,
-       "avg_net_pct": 0.058,
-       "total_pct": 7.7,
+       "trades": 147,
+       "win_rate": 0.578,
+       "avg_net_pct": 0.052,
+       "total_pct": 6.9,
        "max_drawdown_pct": -7.7,
-       "t_stat": 0.59
+       "t_stat": 0.53
       },
       "2%": {
-       "trades": 69,
-       "win_rate": 0.536,
-       "avg_net_pct": -0.105,
-       "total_pct": -7.5,
-       "max_drawdown_pct": -9.7,
-       "t_stat": -0.69
+       "trades": 70,
+       "win_rate": 0.529,
+       "avg_net_pct": -0.115,
+       "total_pct": -8.2,
+       "max_drawdown_pct": -10.4,
+       "t_stat": -0.76
       },
       "3%": {
-       "trades": 15,
-       "win_rate": 0.733,
-       "avg_net_pct": 0.31,
-       "total_pct": 4.6,
+       "trades": 16,
+       "win_rate": 0.688,
+       "avg_net_pct": 0.242,
+       "total_pct": 3.8,
        "max_drawdown_pct": -4.0,
-       "t_stat": 0.77
+       "t_stat": 0.63
       }
      }
     },
@@ -356,53 +356,53 @@
       "t_stat": 0.53
      },
      "newer_half": {
-      "trades": 20,
-      "win_rate": 0.6,
-      "avg_net_pct": 0.212,
-      "total_pct": 4.2,
+      "trades": 21,
+      "win_rate": 0.571,
+      "avg_net_pct": 0.105,
+      "total_pct": 2.1,
       "max_drawdown_pct": -3.5,
-      "t_stat": 0.94
+      "t_stat": 0.44
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 553,
-       "win_rate": 0.472,
-       "avg_net_pct": -0.042,
-       "total_pct": -22.7,
+       "trades": 554,
+       "win_rate": 0.471,
+       "avg_net_pct": -0.046,
+       "total_pct": -24.3,
        "max_drawdown_pct": -27.7,
-       "t_stat": -1.05
+       "t_stat": -1.14
       },
       "1%": {
-       "trades": 292,
-       "win_rate": 0.493,
-       "avg_net_pct": -0.002,
-       "total_pct": -1.8,
+       "trades": 293,
+       "win_rate": 0.491,
+       "avg_net_pct": -0.009,
+       "total_pct": -3.8,
        "max_drawdown_pct": -14.2,
-       "t_stat": -0.03
+       "t_stat": -0.16
       },
       "1.5%": {
-       "trades": 146,
-       "win_rate": 0.575,
-       "avg_net_pct": 0.069,
-       "total_pct": 9.8,
+       "trades": 147,
+       "win_rate": 0.571,
+       "avg_net_pct": 0.055,
+       "total_pct": 7.6,
        "max_drawdown_pct": -8.7,
-       "t_stat": 0.83
+       "t_stat": 0.65
       },
       "2%": {
-       "trades": 69,
-       "win_rate": 0.565,
-       "avg_net_pct": 0.116,
-       "total_pct": 8.0,
+       "trades": 70,
+       "win_rate": 0.557,
+       "avg_net_pct": 0.085,
+       "total_pct": 5.8,
        "max_drawdown_pct": -6.5,
-       "t_stat": 0.95
+       "t_stat": 0.69
       },
       "3%": {
-       "trades": 15,
-       "win_rate": 0.8,
-       "avg_net_pct": 0.702,
-       "total_pct": 10.9,
+       "trades": 16,
+       "win_rate": 0.75,
+       "avg_net_pct": 0.53,
+       "total_pct": 8.7,
        "max_drawdown_pct": -2.2,
-       "t_stat": 2.23
+       "t_stat": 1.57
       }
      }
     }
@@ -411,11 +411,11 @@
   },
   {
    "name": "Infosys US shares (ADR) \u2192 Infosys in India",
-   "days": 1156,
+   "days": 1157,
    "from": "2021-11-24",
-   "to": "2026-11-20",
-   "corr_gap": 0.612,
-   "corr_intraday": 0.061,
+   "to": "2026-11-23",
+   "corr_gap": 0.613,
+   "corr_intraday": 0.06,
    "variants": [
     {
      "trade": "open \u2192 close",
@@ -429,53 +429,53 @@
       "t_stat": 1.17
      },
      "newer_half": {
-      "trades": 69,
-      "win_rate": 0.58,
-      "avg_net_pct": 0.018,
-      "total_pct": 0.1,
+      "trades": 70,
+      "win_rate": 0.571,
+      "avg_net_pct": 0.012,
+      "total_pct": -0.3,
       "max_drawdown_pct": -16.5,
-      "t_stat": 0.08
+      "t_stat": 0.05
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 835,
-       "win_rate": 0.509,
-       "avg_net_pct": 0.06,
-       "total_pct": 53.2,
+       "trades": 836,
+       "win_rate": 0.508,
+       "avg_net_pct": 0.059,
+       "total_pct": 52.6,
        "max_drawdown_pct": -20.1,
-       "t_stat": 1.32
-      },
-      "1%": {
-       "trades": 590,
-       "win_rate": 0.529,
-       "avg_net_pct": 0.08,
-       "total_pct": 51.9,
-       "max_drawdown_pct": -16.1,
-       "t_stat": 1.46
-      },
-      "1.5%": {
-       "trades": 407,
-       "win_rate": 0.545,
-       "avg_net_pct": 0.091,
-       "total_pct": 39.3,
-       "max_drawdown_pct": -18.3,
        "t_stat": 1.31
       },
+      "1%": {
+       "trades": 591,
+       "win_rate": 0.528,
+       "avg_net_pct": 0.079,
+       "total_pct": 51.2,
+       "max_drawdown_pct": -16.1,
+       "t_stat": 1.45
+      },
+      "1.5%": {
+       "trades": 408,
+       "win_rate": 0.544,
+       "avg_net_pct": 0.09,
+       "total_pct": 38.7,
+       "max_drawdown_pct": -18.3,
+       "t_stat": 1.3
+      },
       "2%": {
-       "trades": 258,
-       "win_rate": 0.574,
-       "avg_net_pct": 0.123,
-       "total_pct": 33.6,
+       "trades": 259,
+       "win_rate": 0.571,
+       "avg_net_pct": 0.121,
+       "total_pct": 33.0,
        "max_drawdown_pct": -17.7,
-       "t_stat": 1.34
+       "t_stat": 1.32
       },
       "3%": {
-       "trades": 105,
-       "win_rate": 0.59,
-       "avg_net_pct": 0.118,
-       "total_pct": 11.3,
+       "trades": 106,
+       "win_rate": 0.585,
+       "avg_net_pct": 0.113,
+       "total_pct": 10.9,
        "max_drawdown_pct": -16.5,
-       "t_stat": 0.69
+       "t_stat": 0.66
       }
      }
     },
@@ -491,53 +491,53 @@
       "t_stat": 1.36
      },
      "newer_half": {
-      "trades": 69,
-      "win_rate": 0.565,
-      "avg_net_pct": 0.067,
-      "total_pct": 3.8,
+      "trades": 70,
+      "win_rate": 0.571,
+      "avg_net_pct": 0.077,
+      "total_pct": 4.6,
       "max_drawdown_pct": -13.3,
-      "t_stat": 0.35
+      "t_stat": 0.41
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 835,
+       "trades": 836,
        "win_rate": 0.513,
-       "avg_net_pct": 0.091,
-       "total_pct": 102.0,
+       "avg_net_pct": 0.092,
+       "total_pct": 103.6,
        "max_drawdown_pct": -12.1,
-       "t_stat": 2.25
+       "t_stat": 2.28
       },
       "1%": {
-       "trades": 590,
-       "win_rate": 0.537,
-       "avg_net_pct": 0.121,
-       "total_pct": 96.1,
+       "trades": 591,
+       "win_rate": 0.538,
+       "avg_net_pct": 0.122,
+       "total_pct": 97.7,
        "max_drawdown_pct": -11.4,
-       "t_stat": 2.52
+       "t_stat": 2.55
       },
       "1.5%": {
-       "trades": 407,
-       "win_rate": 0.536,
-       "avg_net_pct": 0.103,
-       "total_pct": 47.3,
+       "trades": 408,
+       "win_rate": 0.537,
+       "avg_net_pct": 0.105,
+       "total_pct": 48.5,
        "max_drawdown_pct": -15.0,
-       "t_stat": 1.68
-      },
-      "2%": {
-       "trades": 258,
-       "win_rate": 0.562,
-       "avg_net_pct": 0.138,
-       "total_pct": 39.6,
-       "max_drawdown_pct": -13.5,
        "t_stat": 1.71
       },
+      "2%": {
+       "trades": 259,
+       "win_rate": 0.564,
+       "avg_net_pct": 0.14,
+       "total_pct": 40.7,
+       "max_drawdown_pct": -13.5,
+       "t_stat": 1.75
+      },
       "3%": {
-       "trades": 105,
-       "win_rate": 0.581,
-       "avg_net_pct": 0.155,
-       "total_pct": 16.2,
+       "trades": 106,
+       "win_rate": 0.585,
+       "avg_net_pct": 0.161,
+       "total_pct": 17.1,
        "max_drawdown_pct": -13.3,
-       "t_stat": 1.03
+       "t_stat": 1.08
       }
      }
     }
@@ -546,10 +546,10 @@
   },
   {
    "name": "Wipro US shares (ADR) \u2192 Wipro in India",
-   "days": 1107,
+   "days": 1108,
    "from": "2021-11-24",
-   "to": "2026-11-20",
-   "corr_gap": 0.55,
+   "to": "2026-11-23",
+   "corr_gap": 0.551,
    "corr_intraday": 0.007,
    "variants": [
     {
@@ -573,20 +573,20 @@
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 802,
-       "win_rate": 0.49,
-       "avg_net_pct": 0.016,
-       "total_pct": 4.0,
+       "trades": 803,
+       "win_rate": 0.489,
+       "avg_net_pct": 0.015,
+       "total_pct": 3.9,
        "max_drawdown_pct": -29.0,
        "t_stat": 0.3
       },
       "1%": {
-       "trades": 596,
-       "win_rate": 0.497,
+       "trades": 597,
+       "win_rate": 0.496,
        "avg_net_pct": 0.022,
-       "total_pct": 6.6,
+       "total_pct": 6.4,
        "max_drawdown_pct": -24.8,
-       "t_stat": 0.36
+       "t_stat": 0.35
       },
       "1.5%": {
        "trades": 402,
@@ -635,20 +635,20 @@
      },
      "all_thresholds_full_period": {
       "0.5%": {
-       "trades": 802,
-       "win_rate": 0.52,
-       "avg_net_pct": 0.044,
-       "total_pct": 33.9,
+       "trades": 803,
+       "win_rate": 0.521,
+       "avg_net_pct": 0.046,
+       "total_pct": 35.4,
        "max_drawdown_pct": -20.9,
-       "t_stat": 1.0
+       "t_stat": 1.03
       },
       "1%": {
-       "trades": 596,
-       "win_rate": 0.53,
-       "avg_net_pct": 0.078,
-       "total_pct": 51.4,
+       "trades": 597,
+       "win_rate": 0.531,
+       "avg_net_pct": 0.08,
+       "total_pct": 53.0,
        "max_drawdown_pct": -18.0,
-       "t_stat": 1.46
+       "t_stat": 1.49
       },
       "1.5%": {
        "trades": 402,
@@ -682,21 +682,21 @@
   {
    "name": "Brent crude \u2192 Indian fuel retailers (inverse)",
    "days": 941,
-   "from": "2021-11-24",
-   "to": "2026-11-20",
-   "corr_gap": 0.182,
-   "corr_intraday": 0.032,
+   "from": "2021-11-29",
+   "to": "2026-11-23",
+   "corr_gap": 0.183,
+   "corr_intraday": 0.033,
    "variants": [
     {
      "trade": "open \u2192 close",
      "picked_threshold_pct": 1.5,
      "older_half": {
-      "trades": 231,
-      "win_rate": 0.511,
-      "avg_net_pct": 0.148,
-      "total_pct": 34.9,
+      "trades": 230,
+      "win_rate": 0.513,
+      "avg_net_pct": 0.152,
+      "total_pct": 36.1,
       "max_drawdown_pct": -20.7,
-      "t_stat": 1.19
+      "t_stat": 1.23
      },
      "newer_half": {
       "trades": 218,
@@ -709,43 +709,43 @@
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 758,
-       "win_rate": 0.488,
-       "avg_net_pct": 0.006,
-       "total_pct": -6.4,
+       "win_rate": 0.489,
+       "avg_net_pct": 0.01,
+       "total_pct": -3.1,
        "max_drawdown_pct": -42.2,
-       "t_stat": 0.09
+       "t_stat": 0.17
       },
       "1%": {
-       "trades": 597,
-       "win_rate": 0.482,
-       "avg_net_pct": 0.049,
-       "total_pct": 23.4,
+       "trades": 596,
+       "win_rate": 0.483,
+       "avg_net_pct": 0.051,
+       "total_pct": 24.5,
        "max_drawdown_pct": -33.7,
-       "t_stat": 0.72
+       "t_stat": 0.75
       },
       "1.5%": {
-       "trades": 449,
-       "win_rate": 0.477,
-       "avg_net_pct": 0.033,
-       "total_pct": 8.0,
+       "trades": 448,
+       "win_rate": 0.478,
+       "avg_net_pct": 0.035,
+       "total_pct": 9.0,
        "max_drawdown_pct": -32.5,
-       "t_stat": 0.39
+       "t_stat": 0.42
       },
       "2%": {
-       "trades": 322,
-       "win_rate": 0.494,
-       "avg_net_pct": 0.064,
-       "total_pct": 16.7,
+       "trades": 321,
+       "win_rate": 0.495,
+       "avg_net_pct": 0.067,
+       "total_pct": 17.8,
        "max_drawdown_pct": -22.9,
-       "t_stat": 0.65
+       "t_stat": 0.68
       },
       "3%": {
-       "trades": 183,
-       "win_rate": 0.459,
-       "avg_net_pct": -0.02,
-       "total_pct": -7.1,
+       "trades": 182,
+       "win_rate": 0.462,
+       "avg_net_pct": -0.015,
+       "total_pct": -6.2,
        "max_drawdown_pct": -21.4,
-       "t_stat": -0.14
+       "t_stat": -0.1
       }
      }
     },
@@ -753,12 +753,12 @@
      "trade": "open \u2192 close, Nifty-hedged",
      "picked_threshold_pct": 2.0,
      "older_half": {
-      "trades": 166,
-      "win_rate": 0.59,
-      "avg_net_pct": 0.213,
-      "total_pct": 39.3,
+      "trades": 165,
+      "win_rate": 0.594,
+      "avg_net_pct": 0.224,
+      "total_pct": 41.8,
       "max_drawdown_pct": -10.2,
-      "t_stat": 1.73
+      "t_stat": 1.82
      },
      "newer_half": {
       "trades": 156,
@@ -771,43 +771,43 @@
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 758,
-       "win_rate": 0.525,
-       "avg_net_pct": 0.004,
-       "total_pct": -5.1,
+       "win_rate": 0.526,
+       "avg_net_pct": 0.008,
+       "total_pct": -2.2,
        "max_drawdown_pct": -42.5,
-       "t_stat": 0.08
+       "t_stat": 0.15
       },
       "1%": {
-       "trades": 597,
-       "win_rate": 0.526,
-       "avg_net_pct": 0.04,
-       "total_pct": 19.4,
+       "trades": 596,
+       "win_rate": 0.527,
+       "avg_net_pct": 0.043,
+       "total_pct": 21.4,
        "max_drawdown_pct": -34.6,
-       "t_stat": 0.67
+       "t_stat": 0.72
       },
       "1.5%": {
-       "trades": 449,
-       "win_rate": 0.51,
-       "avg_net_pct": 0.058,
-       "total_pct": 23.3,
+       "trades": 448,
+       "win_rate": 0.511,
+       "avg_net_pct": 0.062,
+       "total_pct": 25.4,
        "max_drawdown_pct": -32.0,
-       "t_stat": 0.82
+       "t_stat": 0.87
       },
       "2%": {
-       "trades": 322,
-       "win_rate": 0.522,
-       "avg_net_pct": 0.092,
-       "total_pct": 29.8,
+       "trades": 321,
+       "win_rate": 0.523,
+       "avg_net_pct": 0.098,
+       "total_pct": 32.1,
        "max_drawdown_pct": -21.9,
-       "t_stat": 1.11
+       "t_stat": 1.18
       },
       "3%": {
-       "trades": 183,
-       "win_rate": 0.486,
-       "avg_net_pct": -0.002,
-       "total_pct": -2.8,
+       "trades": 182,
+       "win_rate": 0.489,
+       "avg_net_pct": 0.008,
+       "total_pct": -1.1,
        "max_drawdown_pct": -20.3,
-       "t_stat": -0.01
+       "t_stat": 0.06
       }
      }
     }
