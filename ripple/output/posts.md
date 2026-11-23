@@ -1,4 +1,4 @@
-# Ripple posts — 2026-11-22 21:04 UTC
+# Ripple posts — 2026-11-23 01:45 UTC
 
 ## Global crude exports hit record high despite Hormuz closure
 
@@ -252,6 +252,42 @@ Research & education only. Not investment advice.
 
 ---
 
+## Sensex, Nifty open lower amid rising crude oil prices, West Asia tensions
+
+### Post
+
+🌊 The news: Sensex, Nifty open lower amid rising crude oil prices, West Asia tensions
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Sensex, Nifty open lower amid rising crude oil prices, West Asia tensions
+Source: DD News
+
+▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
+▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
+▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
+▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
+▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMingFBVV95cUxPRk5iWW81dnVxU0tJbW1SazVxMG5XdlVWeEprYm1EbTB4VjJVbHNMRUV1a1h0SlNObk9vakNBS29BRmlaT09LcUs1eGlpV2RCdVRNTW5UZ0U4aDhyRmJlZHFCbnpaTnBSbVp1VlhnX1hicXY5UkhXU2lydWN5Z2t1Yld4a3o4T3JWc0tYNGRjWVVURUlra3NLWTktTHVwUQ?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
 ## Gasoline and oil prices today, November 22nd: Week of deep drop in world oil prices
 
 ### Post
@@ -319,42 +355,6 @@ Source: Vartha Bharati
 ▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
 
 https://news.google.com/rss/articles/CBMivgFBVV95cUxQMXoxV1hCLW1DbElkNXVSWV9WTnFfM21hRHgyS0RZQll3anZESmlSdzkzTzM5Z0FiSFpkYy1NZ2Zod3BhSzZ6Q0o2NVR0OTJOdV84MEx1RFZpUmItSkMtTG9VTEdmamFfc2Zmc3F0RTR0ellhaEwtY05hQUNkUHhERGk0RmZXbjJLcVU2b3d2OGxHQ3RSRmZpTWFTVnF0U09WMGNySy1KVlY5WmZfQWxFMGtHaHBaSVJBSWJDbkpB0gHDAUFVX3lxTE9ZVHl5eVJBTTRUQ3RzM1RTLThCbzVweHJKazYwbHp2Uzd2bkMxRk1YaGFid2lUejdIVkRpLU1qY3N2UXRWYkx1VGt0NmhWdThvMDNtM2wwSnBNZXZpa0VyX0JaMFdnMXVCSDl6dURKaFFYR0pBbnduZ28zWjRYVUtWWk1BWmlNZVJMcDRFbEF5NE4wSldwNTliWmkzeWFuOWdGWUFzbG1OVG9YSWJiYkd3MXNXT2o1SUhfMDIwQlF1djRYTQ?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## Oil, gas import bill up 60% in Oct as Brent surges, LPG use declines
-
-### Post
-
-🌊 The news: Oil, gas import bill up 60% in Oct as Brent surges, LPG use declines
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Oil, gas import bill up 60% in Oct as Brent surges, LPG use declines
-Source: Business Standard
-
-▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
-▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
-▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
-▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
-▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
-
-https://news.google.com/rss/articles/CBMizAFBVV95cUxOZm5ueWI0VFl1WVJrVUF1SGw5Sy1WU3hmdFotOU5Ld2toSVBnYlBXYVlPMk1GYm9fcXJFSnRJYnBtVGdiMkN5VDYzUnE0RTR5M19hdGwyTUFtaHExYlJxcjFmTFdYOV9kYlRMOS1WUzNnb1lZY2dHVHB0MWhEVmFkVDlsRE01Q1ZQQmMyOWItQUtVZTNBTjNDOVRwTWdqTVhYY2FFdEFuY3ZmOURlZnZpZkdQaEVMTEx3dlZNNFBPbzlvSjNfMkd4LXdHRVrSAdIBQVVfeXFMTnZhMkQxTHBaN2ZQd0R5ODFFc3JmWEZTbzlMTGx1eXZ0NWhtbG0zWGxXYTdnZTg5ajFmU1k3cy10eDJfdHk3Rm5rMS12aGRpQlB0M0lJbUVWU0U5anZtem1FZVZVSzFmdmxuR2puQWJlVWR2cEtvNjhUSnltSURZclJwMlNfeFdHX0lySU4tVHcxUEdVNk55YVBLUmVfUnp1VmpKRjdnMi03UF9CU2FJTHZhNXBzdFNfUHp6elV1UktsV1pIaDBtUWgyYUdtb0NLSHNR?oc=5
 
 Research & education only. Not investment advice.
 

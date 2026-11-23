@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-22T21:04:32.873478+00:00",
+ "generated": "2026-11-23T01:45:24.639680+00:00",
  "sample": false,
- "headlines_scanned": 670,
+ "headlines_scanned": 692,
  "feed_errors": 1,
  "alerts": [
   {
@@ -1250,6 +1250,183 @@
    "cross_market": true,
    "post": "🌊 The news: Sensex, Nifty slide nearly 1% as crude oil prices surge amid Iran conflict\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Sensex, Nifty slide nearly 1% as crude oil prices surge amid Iran conflict\nSource: DD News\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMinwFBVV95cUxPS1BCT3dwVkVjQ2QyVU8xQ2VFYkVIV1RhUnUzeDY1R01OUzBJSGd3cmdPZVdsajN2WHRWQ2VKaEtJU1V2Tmd0dklfSXl2QkQ5OGk1dEEzZGo3YUJqRHBiUDl1bENkZHlWbXR4RzRqQ2F2SlM2Sm41SXV5MmtNUUk4WTU3bzg4M1U3TEZRWjBXX0hFMXBZYTUweUxRTXhaVDA?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "199685f6a939",
+   "title": "Sensex, Nifty open lower amid rising crude oil prices, West Asia tensions",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRk5iWW81dnVxU0tJbW1SazVxMG5XdlVWeEprYm1EbTB4VjJVbHNMRUV1a1h0SlNObk9vakNBS29BRmlaT09LcUs1eGlpV2RCdVRNTW5UZ0U4aDhyRmJlZHFCbnpaTnBSbVp1VlhnX1hicXY5UkhXU2lydWN5Z2t1Yld4a3o4T3JWc0tYNGRjWVVURUlra3NLWTktTHVwUQ?oc=5",
+   "source": "DD News",
+   "published": "2026-11-22T03:20:40+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Sensex, Nifty open lower amid rising crude oil prices, West Asia tensions\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Sensex, Nifty open lower amid rising crude oil prices, West Asia tensions\nSource: DD News\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMingFBVV95cUxPRk5iWW81dnVxU0tJbW1SazVxMG5XdlVWeEprYm1EbTB4VjJVbHNMRUV1a1h0SlNObk9vakNBS29BRmlaT09LcUs1eGlpV2RCdVRNTW5UZ0U4aDhyRmJlZHFCbnpaTnBSbVp1VlhnX1hicXY5UkhXU2lydWN5Z2t1Yld4a3o4T3JWc0tYNGRjWVVURUlra3NLWTktTHVwUQ?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
    "id": "c84b00be13a3",
@@ -2665,183 +2842,6 @@
    "cross_market": true,
    "post": "🌊 The news: Oil Prices Fall For Third Straight Week Over Supply Glut\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Fall For Third Straight Week Over Supply Glut\nSource: WE News English\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiiwFBVV95cUxOX3FwTW1mOUhGUTM3NVRVZFlYWThwMHhHNm5GVHNieTY3Q1VxM3dTN0QxVE1DZVM1aXlJclhJeTFGanVCNDF0Q0piMFZIYWtIdVczMmdoR1NmOXZscFNwaHZsUkxfRmkySXcydkpHZ0VTXzl1S0E1b1UzeFh6ZjlxaGNxWUFSeUo3N0w4?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "76b757670c1a",
-   "title": "Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5",
-   "source": "EnergyNow.com",
-   "published": "2026-11-22T09:47:36+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "Crude oil price",
-     "dir": "falling"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.319,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.3,
-   "cross_market": true,
-   "post": "🌊 The news: Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal\nSource: EnergyNow.com\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
    "id": "895f461e65a4",
@@ -4260,6 +4260,183 @@
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Import Bill: India's Oil and Gas Import Bill Jumps 60% to $16 Billion in October\nSource: theopenpress.in\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMif0FVX3lxTFAxTm9zY0tvcE1EMlZHRnZwQ3BEZ25JVEtXR1JWc19ma2JTeTFWbUtJTWRpcXVmZUZ0SUVIeXlDZV9JRG54LUZPa0h2d0ZLS3VaMGhoSHFDY29hTWZQSEZXZ0MybGJlRGZ0ejZPU2lIT2EybHJpRUp1LVB5aURTcW8?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
+   "id": "62fb7feac316",
+   "title": "Oil and gas import bill jumps to $16 billion over high global crude oil prices; LPG usage declines 12% in October",
+   "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOZmpVeWp3NDZjcXNEbTlncUE5TTRSV29FX01RejdZX1BXLTdFNUJtTk91anlrN3plbkdyX3JjMzVTeDFldXU0VVltN2hONG0xZmMtLWF6UE4zSjItLWw2cUt3Q1NHV1I0Y3BsVWV4bkJZMzd4TXdVUzllNmlrMmo3V05hYWM3TE82TXI2YXNnWGZnU0YzcVB6NHZWeW9WcDMyZXAtalFzcHpkYkQ5ZGR3M0o2NGNkTUVUdG1tMkxjYmJVc3g0ZFZTeUNGU2lSYmNhTjJJdHhkMllJVUFEV1NyN2VLcnhIcm1LSVcxa3JGRXJpRHZfTkJBV3pRSmVBay15VUVwRGo2RVJ6Y3JJWXlVUHVqZW4tZThvNU9B?oc=5",
+   "source": "Dailyhunt",
+   "published": "2026-11-22T15:32:49+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Oil and gas import bill jumps to $16 billion over high global crude oil prices; LPG usage declines 12% in October\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil and gas import bill jumps to $16 billion over high global crude oil prices; LPG usage declines 12% in October\nSource: Dailyhunt\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMimwJBVV95cUxOZmpVeWp3NDZjcXNEbTlncUE5TTRSV29FX01RejdZX1BXLTdFNUJtTk91anlrN3plbkdyX3JjMzVTeDFldXU0VVltN2hONG0xZmMtLWF6UE4zSjItLWw2cUt3Q1NHV1I0Y3BsVWV4bkJZMzd4TXdVUzllNmlrMmo3V05hYWM3TE82TXI2YXNnWGZnU0YzcVB6NHZWeW9WcDMyZXAtalFzcHpkYkQ5ZGR3M0o2NGNkTUVUdG1tMkxjYmJVc3g0ZFZTeUNGU2lSYmNhTjJJdHhkMllJVUFEV1NyN2VLcnhIcm1LSVcxa3JGRXJpRHZfTkJBV3pRSmVBay15VUVwRGo2RVJ6Y3JJWXlVUHVqZW4tZThvNU9B?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
    "id": "2af837742740",
    "title": "Oman Crude Oil Price Increases by USD 0.57",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE02T1JhenhLQWEtNV9NaVJpUzFZbDBvT1FFZkpqMXNTQS1FaTA5dTVpR0ZZeGdRMjNHaEMySGF0blFoeFJVNTVCd3R3cWNWcThGNXNkdnM0bjRNOHEx?oc=5",
@@ -4612,6 +4789,545 @@
    "cross_market": true,
    "post": "🌊 The news: Oman Crude Oil Price Drops by $3.93\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oman Crude Oil Price Drops by $3.93\nSource: وكالة الأنباء العمانية (العمانية)\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiXEFVX3lxTE01el85NnJqcEYyMkNFOGRiU05kdHR6VHlUbnVMeFlKQkttbGFNcVRVV2hzb0lfOXVXTG9qdFRQZ3BNQUNkUTQxdzJzUlIyZHdyNWppQ0dyN0JwaGtx?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "d0a70d35993e",
+   "title": "Oil Prices Jump 6% as Iran Sets UAE Oil Port Ablaze, Strikes Vessels in Strait of Hormuz",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMDkwVmRyeVVoMDB2N3dYVFFmeERKajZmVWJLWWRaM2ZKMV8zODdGSGFEOHpqWEpHSG1wM1JpOW5CMUV3angxLUtSNzRTMGFwSmJPQUNuUzFnZWUwTlIwRFNpcWk4OE9nZ1l0N2ZvamxZVl9zSE1lVWpyNWthdmJEUXlpeDQtaWd0R0lTbXZ5OWhzbTBNbVd5bC1sTVk2T3dvazFMWTZvUzlybTNOTmRGYWlTM280Ynl5?oc=5",
+   "source": "EnergyNow.com",
+   "published": "2026-11-22T16:17:45+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "rising"
+    },
+    {
+     "name": "Strait of Hormuz tension",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Oil Prices Jump 6% as Iran Sets UAE Oil Port Ablaze, Strikes Vessels in Strait of Hormuz\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Jump 6% as Iran Sets UAE Oil Port Ablaze, Strikes Vessels in Strait of Hormuz\nSource: EnergyNow.com\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiuAFBVV95cUxPMDkwVmRyeVVoMDB2N3dYVFFmeERKajZmVWJLWWRaM2ZKMV8zODdGSGFEOHpqWEpHSG1wM1JpOW5CMUV3angxLUtSNzRTMGFwSmJPQUNuUzFnZWUwTlIwRFNpcWk4OE9nZ1l0N2ZvamxZVl9zSE1lVWpyNWthdmJEUXlpeDQtaWd0R0lTbXZ5OWhzbTBNbVd5bC1sTVk2T3dvazFMWTZvUzlybTNOTmRGYWlTM280Ynl5?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "76b757670c1a",
+   "title": "Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5",
+   "source": "EnergyNow.com",
+   "published": "2026-11-22T16:21:11+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal\nSource: EnergyNow.com\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "d8c7f2d72562",
+   "title": "Goldman Lowers Oil Price Forecasts on Deal to Reopen Strait of Hormuz",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjhVM2FKUElUMkRPM2ZESFZ6ZTFrMnYxSy1Qc3VyU2Y2VmcydXF2NDM4Vk11RjNJVnpqVGNDYzdJWVR0VjM0REQ2eWF3ZkJSZXpwMTcyOHN4VDdLMlJuUVdJbElRZXlFRmlWSEZDMjdmdmp1andOMFl2ekE3U2ZuUVFOM0JBbjhDRlB2b2dtMkhFMUVSVVNFdzFGSWY5c1YwdHc?oc=5",
+   "source": "EnergyNow.com",
+   "published": "2026-11-22T16:32:21+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "falling"
+    },
+    {
+     "name": "Strait of Hormuz tension",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Goldman Lowers Oil Price Forecasts on Deal to Reopen Strait of Hormuz\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Goldman Lowers Oil Price Forecasts on Deal to Reopen Strait of Hormuz\nSource: EnergyNow.com\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiogFBVV95cUxQYjhVM2FKUElUMkRPM2ZESFZ6ZTFrMnYxSy1Qc3VyU2Y2VmcydXF2NDM4Vk11RjNJVnpqVGNDYzdJWVR0VjM0REQ2eWF3ZkJSZXpwMTcyOHN4VDdLMlJuUVdJbElRZXlFRmlWSEZDMjdmdmp1andOMFl2ekE3U2ZuUVFOM0JBbjhDRlB2b2dtMkhFMUVSVVNFdzFGSWY5c1YwdHc?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
    "id": "80fbf3c01e95",
@@ -4970,6 +5686,541 @@
    "cross_market": true,
    "post": "🌊 The news: Oil prices fall despite Strait of Hormuz tension\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil prices fall despite Strait of Hormuz tension\nSource: Fox News\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiVkFVX3lxTE5wV2hfcTNFS0ljcTY2ZnM3dnV0REJYRnNKckp3Q0JLRXJLY0kySWxCUDlKeDFYd2lOOFpzM1lrX0lLRjlYbkFybzhHM1Npb1hURkNWc2N3?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "00fbbf358055",
+   "title": "WTI crude oil prices may trend lower",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2N2SEg1NS1QZUloUmJ3T1A1NGhOMFlTcEt1QVdrQnF0Mm43RG90MWRvYjVvbnVVNXFMX2RtUlQ5RUhPSWFiRTkySmVRUjA4RlA0VzZEM0VoMlkzV3NocjdOcEl2WHlXSWdmVEJrbExoUXZRYXhoRHVZdmh3ZHppaWFsWllRd0FaaEpIZW1kNm4?oc=5",
+   "source": "The Business Times",
+   "published": "2026-11-22T23:00:00+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: WTI crude oil prices may trend lower\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 WTI crude oil prices may trend lower\nSource: The Business Times\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2N2SEg1NS1QZUloUmJ3T1A1NGhOMFlTcEt1QVdrQnF0Mm43RG90MWRvYjVvbnVVNXFMX2RtUlQ5RUhPSWFiRTkySmVRUjA4RlA0VzZEM0VoMlkzV3NocjdOcEl2WHlXSWdmVEJrbExoUXZRYXhoRHVZdmh3ZHppaWFsWllRd0FaaEpIZW1kNm4?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "707771919ee0",
+   "title": "Crude Oil Prices Slide as Bessent Challenges Fed’s Hawkish Rate Expectations",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNd0NhUDVibWNTc3gtOEFMV1VrR3VaMm5weTg3TGY5X3NXVDZUVVN4R3U3cEUzVHlzSmdST2s0c1NLb0hUdGRDcmpPWEVmXzhxUXpUTDg1VHJsUDY5cWJDYU52d0FEYVE1Q18xTDFiMVBsekljLXZlWUhfTm9fNnBKT3Zjd3lwNmE4WDJUUUpwdVdoeHNRTVZzcnJ3OUNMV1NFZDBZU2VET0hJWmpVNEdvbDVReGNtc1Bpc1E?oc=5",
+   "source": "FXLeaders",
+   "published": "2026-11-22T23:34:28+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "falling"
+    },
+    {
+     "name": "US interest rates (Fed)",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Crude Oil Prices Slide as Bessent Challenges Fed’s Hawkish Rate Expectations\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Crude Oil Prices Slide as Bessent Challenges Fed’s Hawkish Rate Expectations\nSource: FXLeaders\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiugFBVV95cUxNd0NhUDVibWNTc3gtOEFMV1VrR3VaMm5weTg3TGY5X3NXVDZUVVN4R3U3cEUzVHlzSmdST2s0c1NLb0hUdGRDcmpPWEVmXzhxUXpUTDg1VHJsUDY5cWJDYU52d0FEYVE1Q18xTDFiMVBsekljLXZlWUhfTm9fNnBKT3Zjd3lwNmE4WDJUUUpwdVdoeHNRTVZzcnJ3OUNMV1NFZDBZU2VET0hJWmpVNEdvbDVReGNtc1Bpc1E?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "98f7228cb035",
+   "title": "Oil Falls as Oversupply Fears Outweigh Middle East Tensions; Brent Drops Below $92",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1FZFNMNHJOTkJTdkJtTElpT0lGdFhoMXg2SFhlRVlEZ0hyY1E3Ty02eVR3dk1FZzZVam85V2JiZW1CSWR1Y1pzY3ZyMlZBWlBmODhTdQ?oc=5",
+   "source": "bloomingbit",
+   "published": "2026-11-23T01:07:19+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Oil Falls as Oversupply Fears Outweigh Middle East Tensions; Brent Drops Below $92\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Falls as Oversupply Fears Outweigh Middle East Tensions; Brent Drops Below $92\nSource: bloomingbit\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiVEFVX3lxTE1FZFNMNHJOTkJTdkJtTElpT0lGdFhoMXg2SFhlRVlEZ0hyY1E3Ty02eVR3dk1FZzZVam85V2JiZW1CSWR1Y1pzY3ZyMlZBWlBmODhTdQ?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
    "id": "6f313eb9ddf3",
@@ -5698,6 +6949,188 @@
    "cross_market": true,
    "post": "🌊 The news: Anthropic's record IPO fails to calm investor fears over AI spending boom\n\nThe hidden link nobody's talking about:\nAI / data-centre spending → TSMC → Semiconductor supply → Maruti Suzuki\n\n• TSMC manufactures most advanced AI chips.\n• TSMC is the world's largest contract chipmaker.\n• The 2021 chip shortage forced carmakers, including Maruti, to cut production.\n\nAlso in the ripple: Nvidia ▲, TSMC ▲, TCS ◆, Infosys ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Anthropic's record IPO fails to calm investor fears over AI spending boom\nSource: Business Standard\n\n▲ Nvidia (NVDA) [US] — tailwind, via AI / data-centre spending\n▲ TSMC (TSM) [Global] — tailwind, via AI / data-centre spending\n◆ TCS (NSE:TCS) [IN] — exposed, via AI / data-centre spending\n◆ Infosys (NSE:INFY) [IN] — exposed, via AI / data-centre spending\n◆ Wipro (NSE:WIPRO) [IN] — exposed, via AI / data-centre spending\n\nhttps://news.google.com/rss/articles/CBMi2gFBVV95cUxPTUozSWxNUGJNeFl5cTYzT3V6Sm1HTjZlclpRYTNOMldkVzFsWVVVbGV0YW5jOU9qUUFwZV8zZHdaQW5jT3ptN2dLVlJncUNMWUxUZm1zRU5oN1BEaHUxRnU5Qm04cTh3emhPclplSUFuaWZNVXRUZEE0a3hQNWprMy01TWhlSC1MUGw1VmQzOFdTVmhnTDczS0s4d2FfZnBaeEpySTluQ2pEeWNGU2NNWlJ1WjBIRTNsM09zdkMtbkFHbUV1NHE4SGp2dm4waUZpOENTamdZek56Z9IB2gFBVV95cUxPTUozSWxNUGJNeFl5cTYzT3V6Sm1HTjZlclpRYTNOMldkVzFsWVVVbGV0YW5jOU9qUUFwZV8zZHdaQW5jT3ptN2dLVlJncUNMWUxUZm1zRU5oN1BEaHUxRnU5Qm04cTh3emhPclplSUFuaWZNVXRUZEE0a3hQNWprMy01TWhlSC1MUGw1VmQzOFdTVmhnTDczS0s4d2FfZnBaeEpySTluQ2pEeWNGU2NNWlJ1WjBIRTNsM09zdkMtbkFHbUV1NHE4SGp2dm4waUZpOENTamdZek56Zw?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "03f22b95aef0",
+   "title": "Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
+   "source": "Business Insider",
+   "published": "2026-11-22T17:49:00+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "AI / data-centre spending",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "nvidia",
+     "name": "Nvidia",
+     "market": "US",
+     "ticker": "NVDA",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.8,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Nvidia",
+       "why": "Data-centre buildouts run on Nvidia GPUs"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "tsmc",
+     "name": "TSMC",
+     "market": "Global",
+     "ticker": "TSM",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.6,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TCS",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Infosys",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Wipro",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "HCLTech",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Tech Mahindra",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "maruti",
+     "name": "Maruti Suzuki",
+     "market": "IN",
+     "ticker": "NSE:MARUTI",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      },
+      {
+       "from": "TSMC",
+       "to": "Semiconductor supply",
+       "why": "TSMC is the world's largest contract chipmaker"
+      },
+      {
+       "from": "Semiconductor supply",
+       "to": "Maruti Suzuki",
+       "why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.1,
+   "cross_market": true,
+   "post": "🌊 The news: Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'\n\nThe hidden link nobody's talking about:\nAI / data-centre spending → TSMC → Semiconductor supply → Maruti Suzuki\n\n• TSMC manufactures most advanced AI chips.\n• TSMC is the world's largest contract chipmaker.\n• The 2021 chip shortage forced carmakers, including Maruti, to cut production.\n\nAlso in the ripple: Nvidia ▼, TSMC ▼, TCS ◆, Infosys ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'\nSource: Business Insider\n\n▼ Nvidia (NVDA) [US] — headwind, via AI / data-centre spending\n▼ TSMC (TSM) [Global] — headwind, via AI / data-centre spending\n◆ TCS (NSE:TCS) [IN] — exposed, via AI / data-centre spending\n◆ Infosys (NSE:INFY) [IN] — exposed, via AI / data-centre spending\n◆ Wipro (NSE:WIPRO) [IN] — exposed, via AI / data-centre spending\n\nhttps://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
    "id": "371c24ed19d7",
@@ -6772,6 +8205,183 @@
    "cross_market": true,
    "post": "🌊 The news: Week ahead: NIFTY monthly expiry, crude oil prices and FIIs activity among key market triggers to watch\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Week ahead: NIFTY monthly expiry, crude oil prices and FIIs activity among key market triggers to watch\nSource: Upstox\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMi9AFBVV95cUxOa18zM1lDbGk0SHhyWVE3eFRKRVlRMTdhZG41cWhTbTZFc2h3b3IzaUFaQjhhZjlxT3QwRmZPQ2xZRDJQQWp6YzloTnpZYjB1enRsSGlxTkdhaElTTmI3S01UWTRDTG9haXlPMDY2aVlfazZhaW1rRkUydzBfa19xbWt4S1J5dHNpeDh0R1h6ajlzTmJualJoWjFrcjdKcjdSSy1DZ0l4YlhpT0pkVHpWQy1UeGxYOW51R0k1RmtlNlk0bmZuZkNDUUV6d1VsazJYWGptNjM1dDM1X2RjT1MyNjFVZUJVeFd0Mk11ZWNaTVY1Qy16?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
+   "id": "d80e69e347a9",
+   "title": "WTI Crude Oil Forecast: Can $85 Break Before Thanksgiving?",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZUVoa0REaHpFVndCVGNSX0lINTJDX2c5TTQ0bzVsZHZjZmdkMDVnc1pNR0otVjlORkJPbVMtQmtYa0tOMFV5MTB0Wm11SjgwaTVxWjU3NTV3MDBZVnl5UUtvZDlSU3JqQWY5RlJtSG9nVXZzZVJxMk13V3NBNWlRa2llTkhpLTBYeHhIaTlB?oc=5",
+   "source": "Menafn",
+   "published": "2026-11-22T07:09:14+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "in the news"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.656,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.656,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.562,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.239,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "exposed"
+    }
+   ],
+   "score": 1.05,
+   "cross_market": true,
+   "post": "🌊 The news: WTI Crude Oil Forecast: Can $85 Break Before Thanksgiving?\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 WTI Crude Oil Forecast: Can $85 Break Before Thanksgiving?\nSource: Menafn\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMijgFBVV95cUxQZUVoa0REaHpFVndCVGNSX0lINTJDX2c5TTQ0bzVsZHZjZmdkMDVnc1pNR0otVjlORkJPbVMtQmtYa0tOMFV5MTB0Wm11SjgwaTVxWjU3NTV3MDBZVnl5UUtvZDlSU3JqQWY5RlJtSG9nVXZzZVJxMk13V3NBNWlRa2llTkhpLTBYeHhIaTlB?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
    "id": "58e49a3754f6",
@@ -8255,6 +9865,187 @@
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Stock Markets This Week: FPI Flows, Crude Oil, Global Trends To Dictate Trend, Say Analysts\nSource: NDTV Profit\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiywFBVV95cUxOVEFEaEdNMmk1S09Sa1NoQTh0M0ZPeEtGRFRmaEtXS3M2ZWxYWmVzbUhmTEdVVGtjcEQxWXZtOTZ1ajlYd25iSmVWWEFhN2d4VXRfX1A4RkcyenFLT0dMMnhjWnpza2M4RjQ3MkNDVVJVOFN3OVNUOGNUZHMzMDVRQlJWN1FSeXIyRVJiLWh1YU5RWDVRZXl4LS02S3N0TVh6a2w2TGpjb2c1QWFhMU90MFhPaEx4REZKU0hhR2tMNWZJTEtRTnM2VjRkRdIB0wFBVV95cUxPMTY0dk1HNmp3SVBvUmQwaEdnZ0hIVnUwUG96VVQzOWswU25MNTNFUHE3SnIxMEcxMDZ4OWNvczhlUUNwRUlCaWdyMHNhdFNxald6Tk1XN2xCd2tTaVJJVVJzbkc1UVhJU25XZmdwQjQ4X2NiWC1XTUxKZE5aSFdTc3dQREliUzFTdTEyLW5fcFRJZDY5d0h3RTBkek5xaFNyaE9zVDA1ek8xMUl5UlBFbjEyQzVxSUlPWmZ5NFFJZGpfWnpvaVJVTm5ZSGUyQXg1OUFV?oc=5\n\nResearch & education only. Not investment advice."
   },
   {
+   "id": "7cc239b9ac86",
+   "title": "Crude Oil Price Outlook: Brent Eyes OPEC+ After Three Weekly Losses",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeHBCaTYtOHBDcUtKUkZfQVQ4WlRTbEdWY1c3OFAyNk93YmxnX1VkZzliT0hGZlMzR2dHeU9ReDFmcE00eDU4dnhBa3BNcDNmcVpkN0ZlUGdhVmdfeXBtYnhDWTNSVjg5ZnRRdlg3RF9QcVlQTEpFeldLNXN2UUI2eFo1RHVDMWpFTEZOY29R?oc=5",
+   "source": "Discovery Alert",
+   "published": "2026-11-22T13:26:16+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "name": "Crude oil price",
+     "dir": "in the news"
+    },
+    {
+     "name": "OPEC+ oil output",
+     "dir": "in the news"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.656,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.656,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.562,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.239,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "exposed"
+    }
+   ],
+   "score": 1.05,
+   "cross_market": true,
+   "post": "🌊 The news: Crude Oil Price Outlook: Brent Eyes OPEC+ After Three Weekly Losses\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Crude Oil Price Outlook: Brent Eyes OPEC+ After Three Weekly Losses\nSource: Discovery Alert\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMijgFBVV95cUxNeHBCaTYtOHBDcUtKUkZfQVQ4WlRTbEdWY1c3OFAyNk93YmxnX1VkZzliT0hGZlMzR2dHeU9ReDFmcE00eDU4dnhBa3BNcDNmcVpkN0ZlUGdhVmdfeXBtYnhDWTNSVjg5ZnRRdlg3RF9QcVlQTEpFeldLNXN2UUI2eFo1RHVDMWpFTEZOY29R?oc=5\n\nResearch & education only. Not investment advice."
+  },
+  {
    "id": "f0ed5beba20e",
    "title": "Update on gasoline and oil prices on November 22nd: Simultaneous sharp decrease",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORGoyeWROSXUzSDZTVDlrZ1JLTWdyXzdmWDBhYnFQM0lvTzBZODNJWlNtanVld3R4dGVGSFZKem10b1RBWUxHZ2RMN2E4ajJPSUxNaEJ2S2s5YnRMMkszWU9wTnUxUHBidDNBZ2xUQWRyaVo3MEhPOThYYkJKa05MVUpoMXlSZzNpdjNhX1JNcnllVzlmOUdMVU1mVEpvQm8?oc=5",
@@ -8788,1346 +10579,6 @@
    "cross_market": true,
    "post": "🌊 The news: India-US trade deal negotiations nearing completion, signing awaits clarity on US tariff structure\n\nThe hidden link nobody's talking about:\nUS import tariffs (general) → Jaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR has no US factory, so US-bound cars are imported from the UK and Europe.\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Welspun Living ▼, Avanti Feeds ▼, Jaguar Land Rover ▼, Apple ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 India-US trade deal negotiations nearing completion, signing awaits clarity on US tariff structure\nSource: Prop News Time\n\n▼ Welspun Living (NSE:WELSPUNLIV) [IN] — headwind, via US tariffs on Indian goods\n▼ Avanti Feeds (NSE:AVANTIFEED) [IN] — headwind, via US tariffs on Indian goods\n▼ Jaguar Land Rover (unlisted) [Global] — headwind, via US import tariffs (general)\n▼ Tata Motors (JLR parent) [IN] — headwind, via US import tariffs (general) → Jaguar Land Rover\n▼ Apple (AAPL) [US] — headwind, via US import tariffs (general)\n\nhttps://news.google.com/rss/articles/CBMi4wFBVV95cUxQb2RfaXJ3aHlpYWt3T2pJRldJalM0V19iZHpkSGFvM01rWGRjd0o5NHhUTnduYkJZR2VjUWF3Z3pJQ2hEX2o0cnMtSkUwUkVSU2RiVm5vTGR2MjFaMVFPc1VLdndDNFVIbV9zSGRPTjR4UHRLeldsdTFIX2V4c2tfT1c3R09PU3RteWVfeENMbU9fREQzbGEwd1M2Y2ZoZ3RFckJZZm5VRW1DMS1mcmlfOU54dVhYQjdCak5zbjJpYnd1ZU1ySGRJbUczX2xUX1NHVVVFU3JJZkJCNEpyUnRsYkw5SQ?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "9a2626f62509",
-   "title": "Morgan Stanley Maintains Oil Price Forecasts and Predicts Slow Recovery in Supply",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcVY3RWdLY082Q013ZXJCODVJdGV2NnpfZWlNT2hlZWsxR3Z5WktpNUkyN0lBd0pmNFd2dUxmTDAzQWNkMGY1RnBkT1JRcUkwQUQ0VHN2VjVIM21mTDBXVk9ha19obWRBSHdsX05NbnNWcEVxVXI0Y2ZfVHFLcm9sdDRtUFAyZkJGMXpLX0FRUUZrMUdrVmJONmdTMTF6UXNHcUQ0dDRxVVRmZlQyZkhmcmln?oc=5",
-   "source": "EnergyNow.com",
-   "published": "2026-11-22T15:56:41+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "Crude oil price",
-     "dir": "in the news"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.562,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.239,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "exposed"
-    }
-   ],
-   "score": 1.05,
-   "cross_market": true,
-   "post": "🌊 The news: Morgan Stanley Maintains Oil Price Forecasts and Predicts Slow Recovery in Supply\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Morgan Stanley Maintains Oil Price Forecasts and Predicts Slow Recovery in Supply\nSource: EnergyNow.com\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMisgFBVV95cUxOcVY3RWdLY082Q013ZXJCODVJdGV2NnpfZWlNT2hlZWsxR3Z5WktpNUkyN0lBd0pmNFd2dUxmTDAzQWNkMGY1RnBkT1JRcUkwQUQ0VHN2VjVIM21mTDBXVk9ha19obWRBSHdsX05NbnNWcEVxVXI0Y2ZfVHFLcm9sdDRtUFAyZkJGMXpLX0FRUUZrMUdrVmJONmdTMTF6UXNHcUQ0dDRxVVRmZlQyZkhmcmln?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "7e5324943c42",
-   "title": "Dalal Street Week Ahead: US GDP, FIIs mood, oil prices, PMI flash numbers among 10 key factors to watch",
-   "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNSzR6VzNLbnVxS2RQb3NZOWhrTGs2NzE5N1M3VVctRGpWQlRVbTJBSHZaQ0RaUHZtUlFTMDNtSW9zTDlZUlo2elA4bzJUNnZwc1lTam9nZmt6eF9jZG9TNllRQmN2WklhbU54VHlrdTNaUTExdENkUnZjOWg2emo3QkNLemFaX2Jyc0lMRldxazhPZzlybUxWMGhwV0NtRF9XU19lSzE0cTE0NFhzLXdNcl9oX09MQ1J6THNpdk9VZm9XMFhpSTM2VFZGaUtUVTg0aEx3SUtrZ05xZURkaDd5OWV2UklEOFZmMmhudXdyY3ZZSVMtRi000gH8AUFVX3lxTFB5Ukhfb1VXWTNGOGNCU2FHcTBCUG9nRjdLYk1IREJ0OHdEX2RnaWQzdmp4TEFQS2dkQl93cEFNdmJVYlRDZ25OS2tPQ1BCUVJNSW90TWtBWVAzSjl4VFVXSU96dFVSTTkzY2I0SUp4dER6VW90MjdMaDMwSDlTcDE4TXVrUFgxb1BNZ01wY0dPV3RncS1aRVdiOUdlaThkaTNtSzVpbzJ2TnRvSG5MSldJTWc3X3c4Rk80MmJPU2ZxemdJSXdUdE1CR3BTN3Z0RnMyRmcwOUFLN3hodlZoaWFvWFZYTjgzeEp0SzB3eEk0c2NxSWw5T1laUl9CRQ?oc=5",
-   "source": "Moneycontrol.com",
-   "published": "2026-11-22T17:16:39+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "Foreign investor flows into India",
-     "dir": "in the news"
-    },
-    {
-     "name": "Crude oil price",
-     "dir": "in the news"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.562,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.239,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "exposed"
-    }
-   ],
-   "score": 1.05,
-   "cross_market": true,
-   "post": "🌊 The news: Dalal Street Week Ahead: US GDP, FIIs mood, oil prices, PMI flash numbers among 10 key factors to watch\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Dalal Street Week Ahead: US GDP, FIIs mood, oil prices, PMI flash numbers among 10 key factors to watch\nSource: Moneycontrol.com\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMi9wFBVV95cUxNSzR6VzNLbnVxS2RQb3NZOWhrTGs2NzE5N1M3VVctRGpWQlRVbTJBSHZaQ0RaUHZtUlFTMDNtSW9zTDlZUlo2elA4bzJUNnZwc1lTam9nZmt6eF9jZG9TNllRQmN2WklhbU54VHlrdTNaUTExdENkUnZjOWg2emo3QkNLemFaX2Jyc0lMRldxazhPZzlybUxWMGhwV0NtRF9XU19lSzE0cTE0NFhzLXdNcl9oX09MQ1J6THNpdk9VZm9XMFhpSTM2VFZGaUtUVTg0aEx3SUtrZ05xZURkaDd5OWV2UklEOFZmMmhudXdyY3ZZSVMtRi000gH8AUFVX3lxTFB5Ukhfb1VXWTNGOGNCU2FHcTBCUG9nRjdLYk1IREJ0OHdEX2RnaWQzdmp4TEFQS2dkQl93cEFNdmJVYlRDZ25OS2tPQ1BCUVJNSW90TWtBWVAzSjl4VFVXSU96dFVSTTkzY2I0SUp4dER6VW90MjdMaDMwSDlTcDE4TXVrUFgxb1BNZ01wY0dPV3RncS1aRVdiOUdlaThkaTNtSzVpbzJ2TnRvSG5MSldJTWc3X3c4Rk80MmJPU2ZxemdJSXdUdE1CR3BTN3Z0RnMyRmcwOUFLN3hodlZoaWFvWFZYTjgzeEp0SzB3eEk0c2NxSWw5T1laUl9CRQ?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "effa6d40bacf",
-   "title": "Oil Prices Retreat as Market Digests Global Surplus Expectations",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUDJZaXFhY1pnSUd1OEp5V2NtbWc2Z2ZvUW41OU1pOGdBWVRPbllCZWhHMExvNWlsSjR3cmFsNFpjV0d1WkRGTEdUcEZNMUNfZ19lS1oxQTlDanlUMXZxZzV4NVhNd29tZWJ6bUI2a0E2SnhPSmJZRVViNUgtREpsZmVUOWN3TFFoU1BTRURIOUZCOGlkNkc0TU41TlNMeTB6b09XSk9MSE92YXBtOFh4WXd5ajFRR3Nna3YxdmxPdEg?oc=5",
-   "source": "WSJ",
-   "published": "2026-11-22T18:21:12+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "Crude oil price",
-     "dir": "in the news"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.562,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.239,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "exposed"
-    }
-   ],
-   "score": 1.05,
-   "cross_market": true,
-   "post": "🌊 The news: Oil Prices Retreat as Market Digests Global Surplus Expectations\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Retreat as Market Digests Global Surplus Expectations\nSource: WSJ\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiwAFBVV95cUxQUDJZaXFhY1pnSUd1OEp5V2NtbWc2Z2ZvUW41OU1pOGdBWVRPbllCZWhHMExvNWlsSjR3cmFsNFpjV0d1WkRGTEdUcEZNMUNfZ19lS1oxQTlDanlUMXZxZzV4NVhNd29tZWJ6bUI2a0E2SnhPSmJZRVViNUgtREpsZmVUOWN3TFFoU1BTRURIOUZCOGlkNkc0TU41TlNMeTB6b09XSk9MSE92YXBtOFh4WXd5ajFRR3Nna3YxdmxPdEg?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "4a0a4aceed22",
-   "title": "Maharashtra FDA Tightens Rules for Pharmacies, Gyms Selling Supplements, Seizes Rs 1.38 Crore Stock",
-   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNaEIzYXBZU3BORzFlcFQzR0JQV0Q1WDJxQWIwLVFnSTR0VTBDOVB3Q3FlT2VHVzg4aGtOVVY1QlRHc3dRMmQtLUEwc2FadkJPOHNMRUtzLWJKdU5kQVFLM2Z2UVRTbjlvWTRCNjljQ1ozOFVLUUF6WVA2eDhQc2t1eHFpYXNYRjk5eEdDNWdybmo3QVFxWU0xeERkRUVvOUo1VWh4dktBNVVfQVo0SDBjMkppa0tmSV9DODdjdjloaHlNRU5wdmRGMXRZZ193WlRkQTgzblp3dDFrOWxfUzBrZWVLdUl0STB6RU1BRNIB7AFBVV95cUxNaEIzYXBZU3BORzFlcFQzR0JQV0Q1WDJxQWIwLVFnSTR0VTBDOVB3Q3FlT2VHVzg4aGtOVVY1QlRHc3dRMmQtLUEwc2FadkJPOHNMRUtzLWJKdU5kQVFLM2Z2UVRTbjlvWTRCNjljQ1ozOFVLUUF6WVA2eDhQc2t1eHFpYXNYRjk5eEdDNWdybmo3QVFxWU0xeERkRUVvOUo1VWh4dktBNVVfQVo0SDBjMkppa0tmSV9DODdjdjloaHlNRU5wdmRGMXRZZ193WlRkQTgzblp3dDFrOWxfUzBrZWVLdUl0STB6RU1BRA?oc=5",
-   "source": "Medical Dialogues",
-   "published": "2026-11-21T16:50:22+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US FDA scrutiny of drug plants",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "sunpharma",
-     "name": "Sun Pharma",
-     "market": "IN",
-     "ticker": "NSE:SUNPHARMA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Sun Pharma",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "drreddy",
-     "name": "Dr. Reddy's",
-     "market": "IN",
-     "ticker": "NSE:DRREDDY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Dr. Reddy's",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "cipla",
-     "name": "Cipla",
-     "market": "IN",
-     "ticker": "NSE:CIPLA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Cipla",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "lupin",
-     "name": "Lupin",
-     "market": "IN",
-     "ticker": "NSE:LUPIN",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Lupin",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "aurobindo",
-     "name": "Aurobindo Pharma",
-     "market": "IN",
-     "ticker": "NSE:AUROPHARMA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Aurobindo Pharma",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: Maharashtra FDA Tightens Rules for Pharmacies, Gyms Selling Supplements, Seizes Rs 1.38 Crore Stock\n\nThe hidden link nobody's talking about:\nUS FDA scrutiny of drug plants → Sun Pharma\n\n• The US is the biggest market for Indian generics; FDA actions can block exports from a plant.\n\nAlso in the ripple: Dr. Reddy's ▼, Cipla ▼, Lupin ▼, Aurobindo Pharma ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Maharashtra FDA Tightens Rules for Pharmacies, Gyms Selling Supplements, Seizes Rs 1.38 Crore Stock\nSource: Medical Dialogues\n\n▼ Sun Pharma (NSE:SUNPHARMA) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Dr. Reddy's (NSE:DRREDDY) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Cipla (NSE:CIPLA) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Lupin (NSE:LUPIN) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Aurobindo Pharma (NSE:AUROPHARMA) [IN] — headwind, via US FDA scrutiny of drug plants\n\nhttps://news.google.com/rss/articles/CBMi7AFBVV95cUxNaEIzYXBZU3BORzFlcFQzR0JQV0Q1WDJxQWIwLVFnSTR0VTBDOVB3Q3FlT2VHVzg4aGtOVVY1QlRHc3dRMmQtLUEwc2FadkJPOHNMRUtzLWJKdU5kQVFLM2Z2UVRTbjlvWTRCNjljQ1ozOFVLUUF6WVA2eDhQc2t1eHFpYXNYRjk5eEdDNWdybmo3QVFxWU0xeERkRUVvOUo1VWh4dktBNVVfQVo0SDBjMkppa0tmSV9DODdjdjloaHlNRU5wdmRGMXRZZ193WlRkQTgzblp3dDFrOWxfUzBrZWVLdUl0STB6RU1BRNIB7AFBVV95cUxNaEIzYXBZU3BORzFlcFQzR0JQV0Q1WDJxQWIwLVFnSTR0VTBDOVB3Q3FlT2VHVzg4aGtOVVY1QlRHc3dRMmQtLUEwc2FadkJPOHNMRUtzLWJKdU5kQVFLM2Z2UVRTbjlvWTRCNjljQ1ozOFVLUUF6WVA2eDhQc2t1eHFpYXNYRjk5eEdDNWdybmo3QVFxWU0xeERkRUVvOUo1VWh4dktBNVVfQVo0SDBjMkppa0tmSV9DODdjdjloaHlNRU5wdmRGMXRZZ193WlRkQTgzblp3dDFrOWxfUzBrZWVLdUl0STB6RU1BRA?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "b808a43cec7d",
-   "title": "US H-1B Crisis Worsens: NRIs Abandon American Tech Jobs",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWDJMZ1pJUFRiTzZFYzB0elBJVlZrNUp6Wlg0Z2FUYUNMSzhXcHlwZlFYcjk5cmJWQXJzbUFyTnBnTHRHWnNXVms1TkVYQ3ZGeHNaWXhMdnBJbzBDVUJ5YzdPZ1NVVVNRZlRPMGQ4S1Jvb3gtMnMwTFN0ZFN2TUNXYmxqY9IBiAFBVV95cUxNaGRWSE1pQVV5MkZjUXMyb3g3anFUNHYtUF9KVkR5RElXX2JsRWJKTWpaVEdDbFNMWkxrZzdwTVRmdDdHWWZFcGQtY0ducWJHR3J0cnJNNEt3dGMzUFZnd0NDeGxEcWlvVlNtanZVMXJJeDRXbEVFenUzQWNIaG53ZzJlLTFjSU5l?oc=5",
-   "source": "M9.news",
-   "published": "2026-11-21T18:52:58+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US work-visa (H-1B) restrictions",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "TCS",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "infosys",
-     "name": "Infosys",
-     "market": "IN",
-     "ticker": "NSE:INFY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Infosys",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "wipro",
-     "name": "Wipro",
-     "market": "IN",
-     "ticker": "NSE:WIPRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Wipro",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hcltech",
-     "name": "HCLTech",
-     "market": "IN",
-     "ticker": "NSE:HCLTECH",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "HCLTech",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "techm",
-     "name": "Tech Mahindra",
-     "market": "IN",
-     "ticker": "NSE:TECHM",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Tech Mahindra",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: US H-1B Crisis Worsens: NRIs Abandon American Tech Jobs\n\nThe hidden link nobody's talking about:\nUS work-visa (H-1B) restrictions → TCS\n\n• Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs.\n\nAlso in the ripple: Infosys ▼, Wipro ▼, HCLTech ▼, Tech Mahindra ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 US H-1B Crisis Worsens: NRIs Abandon American Tech Jobs\nSource: M9.news\n\n▼ TCS (NSE:TCS) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Infosys (NSE:INFY) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Wipro (NSE:WIPRO) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ HCLTech (NSE:HCLTECH) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Tech Mahindra (NSE:TECHM) [IN] — headwind, via US work-visa (H-1B) restrictions\n\nhttps://news.google.com/rss/articles/CBMigwFBVV95cUxNWDJMZ1pJUFRiTzZFYzB0elBJVlZrNUp6Wlg0Z2FUYUNMSzhXcHlwZlFYcjk5cmJWQXJzbUFyTnBnTHRHWnNXVms1TkVYQ3ZGeHNaWXhMdnBJbzBDVUJ5YzdPZ1NVVVNRZlRPMGQ4S1Jvb3gtMnMwTFN0ZFN2TUNXYmxqY9IBiAFBVV95cUxNaGRWSE1pQVV5MkZjUXMyb3g3anFUNHYtUF9KVkR5RElXX2JsRWJKTWpaVEdDbFNMWkxrZzdwTVRmdDdHWWZFcGQtY0ducWJHR3J0cnJNNEt3dGMzUFZnd0NDeGxEcWlvVlNtanZVMXJJeDRXbEVFenUzQWNIaG53ZzJlLTFjSU5l?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "6c39610140d5",
-   "title": "H-1B Workers Leaving U.S.: The Rules That Decide What They Keep - immigration-analytics.com",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4N1RNTHpNNDdjblh3MXZrLWRSS1VyTDBDZFBRRDFpeTRKeElGcW50MDdyRHNYV2d0QVZkUmhGSDZNLWExc1JhYnF6aEZRSVdMdVFzTnc2b0ExZ01QT3ZPZGV0cExtSkI3U2VGV1dta3RraDU5Ukxvaw?oc=5",
-   "source": "immigration-analytics.com",
-   "published": "2026-11-21T20:19:01+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US work-visa (H-1B) restrictions",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "TCS",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "infosys",
-     "name": "Infosys",
-     "market": "IN",
-     "ticker": "NSE:INFY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Infosys",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "wipro",
-     "name": "Wipro",
-     "market": "IN",
-     "ticker": "NSE:WIPRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Wipro",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hcltech",
-     "name": "HCLTech",
-     "market": "IN",
-     "ticker": "NSE:HCLTECH",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "HCLTech",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "techm",
-     "name": "Tech Mahindra",
-     "market": "IN",
-     "ticker": "NSE:TECHM",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Tech Mahindra",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: H-1B Workers Leaving U.S.: The Rules That Decide What They Keep - immigration-analytics.com\n\nThe hidden link nobody's talking about:\nUS work-visa (H-1B) restrictions → TCS\n\n• Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs.\n\nAlso in the ripple: Infosys ▼, Wipro ▼, HCLTech ▼, Tech Mahindra ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 H-1B Workers Leaving U.S.: The Rules That Decide What They Keep - immigration-analytics.com\nSource: immigration-analytics.com\n\n▼ TCS (NSE:TCS) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Infosys (NSE:INFY) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Wipro (NSE:WIPRO) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ HCLTech (NSE:HCLTECH) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Tech Mahindra (NSE:TECHM) [IN] — headwind, via US work-visa (H-1B) restrictions\n\nhttps://news.google.com/rss/articles/CBMieEFVX3lxTFB4N1RNTHpNNDdjblh3MXZrLWRSS1VyTDBDZFBRRDFpeTRKeElGcW50MDdyRHNYV2d0QVZkUmhGSDZNLWExc1JhYnF6aEZRSVdMdVFzTnc2b0ExZ01QT3ZPZGV0cExtSkI3U2VGV1dta3RraDU5Ukxvaw?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "7016563d305d",
-   "title": "Bloomberg: H-1B delays and Trump’s rule changes push tech workers to leave the US",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9zMEZENEw5d2tpUV9hbnI1S1VfUG5saTRwdlFGdXpXUFlwZ2pVcXkzd3o2SGQxWTBxQXQ2SXd3MjVmNVlLWDhtdUxadWIyY3RLZHc?oc=5",
-   "source": "Digg",
-   "published": "2026-11-22T00:08:09+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US work-visa (H-1B) restrictions",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "TCS",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "infosys",
-     "name": "Infosys",
-     "market": "IN",
-     "ticker": "NSE:INFY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Infosys",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "wipro",
-     "name": "Wipro",
-     "market": "IN",
-     "ticker": "NSE:WIPRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Wipro",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hcltech",
-     "name": "HCLTech",
-     "market": "IN",
-     "ticker": "NSE:HCLTECH",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "HCLTech",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "techm",
-     "name": "Tech Mahindra",
-     "market": "IN",
-     "ticker": "NSE:TECHM",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Tech Mahindra",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: Bloomberg: H-1B delays and Trump’s rule changes push tech workers to leave the US\n\nThe hidden link nobody's talking about:\nUS work-visa (H-1B) restrictions → TCS\n\n• Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs.\n\nAlso in the ripple: Infosys ▼, Wipro ▼, HCLTech ▼, Tech Mahindra ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Bloomberg: H-1B delays and Trump’s rule changes push tech workers to leave the US\nSource: Digg\n\n▼ TCS (NSE:TCS) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Infosys (NSE:INFY) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Wipro (NSE:WIPRO) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ HCLTech (NSE:HCLTECH) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Tech Mahindra (NSE:TECHM) [IN] — headwind, via US work-visa (H-1B) restrictions\n\nhttps://news.google.com/rss/articles/CBMiUkFVX3lxTE9zMEZENEw5d2tpUV9hbnI1S1VfUG5saTRwdlFGdXpXUFlwZ2pVcXkzd3o2SGQxWTBxQXQ2SXd3MjVmNVlLWDhtdUxadWIyY3RLZHc?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "536281da5f5f",
-   "title": "​Natco Pharma Gets Form 483 With Seven Observations After USFDA Audit in Hyderabad",
-   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMllyelRIbkZrS2taV3RFanFZYTRRbXllcVpFcDU3MFlIWXB2NW9uZVFsUmhVTjdxbzRDczNuUXZiNTZ0a1FIWjNNTUl0OVhWV2huckNMOG5GSVNuR1FSTktqNDlWY0VBTDZSUGxBdkdmMHRXTVRyaUFWZnJSemRRb0kxM2g4VnN5Q0FVWUN3NmFLSjR4MVR4cEdNcG1la20tMlE?oc=5",
-   "source": "The 420.in",
-   "published": "2026-11-22T02:06:48+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US FDA scrutiny of drug plants",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "sunpharma",
-     "name": "Sun Pharma",
-     "market": "IN",
-     "ticker": "NSE:SUNPHARMA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Sun Pharma",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "drreddy",
-     "name": "Dr. Reddy's",
-     "market": "IN",
-     "ticker": "NSE:DRREDDY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Dr. Reddy's",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "cipla",
-     "name": "Cipla",
-     "market": "IN",
-     "ticker": "NSE:CIPLA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Cipla",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "lupin",
-     "name": "Lupin",
-     "market": "IN",
-     "ticker": "NSE:LUPIN",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Lupin",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "aurobindo",
-     "name": "Aurobindo Pharma",
-     "market": "IN",
-     "ticker": "NSE:AUROPHARMA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Aurobindo Pharma",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: ​Natco Pharma Gets Form 483 With Seven Observations After USFDA Audit in Hyderabad\n\nThe hidden link nobody's talking about:\nUS FDA scrutiny of drug plants → Sun Pharma\n\n• The US is the biggest market for Indian generics; FDA actions can block exports from a plant.\n\nAlso in the ripple: Dr. Reddy's ▼, Cipla ▼, Lupin ▼, Aurobindo Pharma ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 ​Natco Pharma Gets Form 483 With Seven Observations After USFDA Audit in Hyderabad\nSource: The 420.in\n\n▼ Sun Pharma (NSE:SUNPHARMA) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Dr. Reddy's (NSE:DRREDDY) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Cipla (NSE:CIPLA) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Lupin (NSE:LUPIN) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Aurobindo Pharma (NSE:AUROPHARMA) [IN] — headwind, via US FDA scrutiny of drug plants\n\nhttps://news.google.com/rss/articles/CBMiogFBVV95cUxQMllyelRIbkZrS2taV3RFanFZYTRRbXllcVpFcDU3MFlIWXB2NW9uZVFsUmhVTjdxbzRDczNuUXZiNTZ0a1FIWjNNTUl0OVhWV2huckNMOG5GSVNuR1FSTktqNDlWY0VBTDZSUGxBdkdmMHRXTVRyaUFWZnJSemRRb0kxM2g4VnN5Q0FVWUN3NmFLSjR4MVR4cEdNcG1la20tMlE?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "46454fcbbe12",
-   "title": "USFDA Sets Up New Safety Council to Strengthen Post-Market Monitoring of Biologics",
-   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPTHdpQTREQmFUcDJlYktwbEUxakpoZmhVbVFDMVQ2SWVTbGZCbjJIVDNvSWNGbFdDbDVTOXo0dndjbHNSTHFoX25sakZsWXVWLTg1d01SNmo1SlI5bjVBa2xST1hNS2w0SWtqLUdBV2lBelI3cUc4SDViYzlpcmllNVFDU01wZlZZSzR2V29yeWIyVEV2NWlHVDlqU1E5bXU4VnVjUzIyOTBJZFAyWnkzVnBzYmYtTWw5bWxnSmFlSGlESmJaeF90bEM0SmRQakhURUVyMnVBYW1mZ9IB2gFBVV95cUxPTHdpQTREQmFUcDJlYktwbEUxakpoZmhVbVFDMVQ2SWVTbGZCbjJIVDNvSWNGbFdDbDVTOXo0dndjbHNSTHFoX25sakZsWXVWLTg1d01SNmo1SlI5bjVBa2xST1hNS2w0SWtqLUdBV2lBelI3cUc4SDViYzlpcmllNVFDU01wZlZZSzR2V29yeWIyVEV2NWlHVDlqU1E5bXU4VnVjUzIyOTBJZFAyWnkzVnBzYmYtTWw5bWxnSmFlSGlESmJaeF90bEM0SmRQakhURUVyMnVBYW1mZw?oc=5",
-   "source": "Medical Dialogues",
-   "published": "2026-11-22T05:30:54+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US FDA scrutiny of drug plants",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "sunpharma",
-     "name": "Sun Pharma",
-     "market": "IN",
-     "ticker": "NSE:SUNPHARMA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Sun Pharma",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "drreddy",
-     "name": "Dr. Reddy's",
-     "market": "IN",
-     "ticker": "NSE:DRREDDY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Dr. Reddy's",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "cipla",
-     "name": "Cipla",
-     "market": "IN",
-     "ticker": "NSE:CIPLA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Cipla",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "lupin",
-     "name": "Lupin",
-     "market": "IN",
-     "ticker": "NSE:LUPIN",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Lupin",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "aurobindo",
-     "name": "Aurobindo Pharma",
-     "market": "IN",
-     "ticker": "NSE:AUROPHARMA",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US FDA scrutiny of drug plants",
-       "to": "Aurobindo Pharma",
-       "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: USFDA Sets Up New Safety Council to Strengthen Post-Market Monitoring of Biologics\n\nThe hidden link nobody's talking about:\nUS FDA scrutiny of drug plants → Sun Pharma\n\n• The US is the biggest market for Indian generics; FDA actions can block exports from a plant.\n\nAlso in the ripple: Dr. Reddy's ▼, Cipla ▼, Lupin ▼, Aurobindo Pharma ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 USFDA Sets Up New Safety Council to Strengthen Post-Market Monitoring of Biologics\nSource: Medical Dialogues\n\n▼ Sun Pharma (NSE:SUNPHARMA) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Dr. Reddy's (NSE:DRREDDY) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Cipla (NSE:CIPLA) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Lupin (NSE:LUPIN) [IN] — headwind, via US FDA scrutiny of drug plants\n▼ Aurobindo Pharma (NSE:AUROPHARMA) [IN] — headwind, via US FDA scrutiny of drug plants\n\nhttps://news.google.com/rss/articles/CBMi2gFBVV95cUxPTHdpQTREQmFUcDJlYktwbEUxakpoZmhVbVFDMVQ2SWVTbGZCbjJIVDNvSWNGbFdDbDVTOXo0dndjbHNSTHFoX25sakZsWXVWLTg1d01SNmo1SlI5bjVBa2xST1hNS2w0SWtqLUdBV2lBelI3cUc4SDViYzlpcmllNVFDU01wZlZZSzR2V29yeWIyVEV2NWlHVDlqU1E5bXU4VnVjUzIyOTBJZFAyWnkzVnBzYmYtTWw5bWxnSmFlSGlESmJaeF90bEM0SmRQakhURUVyMnVBYW1mZ9IB2gFBVV95cUxPTHdpQTREQmFUcDJlYktwbEUxakpoZmhVbVFDMVQ2SWVTbGZCbjJIVDNvSWNGbFdDbDVTOXo0dndjbHNSTHFoX25sakZsWXVWLTg1d01SNmo1SlI5bjVBa2xST1hNS2w0SWtqLUdBV2lBelI3cUc4SDViYzlpcmllNVFDU01wZlZZSzR2V29yeWIyVEV2NWlHVDlqU1E5bXU4VnVjUzIyOTBJZFAyWnkzVnBzYmYtTWw5bWxnSmFlSGlESmJaeF90bEM0SmRQakhURUVyMnVBYW1mZw?oc=5\n\nResearch & education only. Not investment advice."
-  },
-  {
-   "id": "f6334592c0a7",
-   "title": "‘Golden Prison’: Indian Google engineer leaves US after six years on H-1B visa",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRVl6dDhjazhnSEtpNDUxeDNjYV9BbHJoeDZUUUxFSGlOUHY3cmplX2YtSldyclNLR3ZDNTF1TVFaNUU3c2hZaUgzemwyTVFTR0daLWxrRkJ5TWpVZDRJRk1uNEYyaE1heExVMkx4dUVmNzV6WFVseDBoWS15UUEzUV9hS0hfakRtazloRVhwOTBBZ24tT0ZNT2ZTcndjNU1JLXg5aS04YWV0WmdXLUdraS1IUVoyOWltNmxWXzZsTmvSAccBQVVfeXFMUEN5Njc0Z2RYUXpuckstcFNhNldoWjFzcmpqUGlBVWdWVkY2bVhvZG03NkZHdlJ4c0QwSjFEUzFRRlVSdnVKelNES2ZyMnFhNzVlN1FUMk9MbnpVR01ZSm1qZ0lCVVNrcGFGQWY2RURyZmdTNU1tOVg2dnE4NGlESXUzVlBRel9LZ3lLeWl5NGktMVNXM0VnMWppMDR6eFpEdjllQlVSMFZRUUo0M0MtUW8zQ2d5RTFsaFBFMXUyLUxKaFJERF8zMA?oc=5",
-   "source": "The Indian Express",
-   "published": "2026-11-22T07:27:01+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "name": "US work-visa (H-1B) restrictions",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "TCS",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "infosys",
-     "name": "Infosys",
-     "market": "IN",
-     "ticker": "NSE:INFY",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Infosys",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "wipro",
-     "name": "Wipro",
-     "market": "IN",
-     "ticker": "NSE:WIPRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Wipro",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hcltech",
-     "name": "HCLTech",
-     "market": "IN",
-     "ticker": "NSE:HCLTECH",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "HCLTech",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "techm",
-     "name": "Tech Mahindra",
-     "market": "IN",
-     "ticker": "NSE:TECHM",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US work-visa (H-1B) restrictions",
-       "to": "Tech Mahindra",
-       "why": "Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.0,
-   "cross_market": true,
-   "post": "🌊 The news: ‘Golden Prison’: Indian Google engineer leaves US after six years on H-1B visa\n\nThe hidden link nobody's talking about:\nUS work-visa (H-1B) restrictions → TCS\n\n• Indian IT uses H-1B visas to staff US projects; tighter rules or higher fees raise costs.\n\nAlso in the ripple: Infosys ▼, Wipro ▼, HCLTech ▼, Tech Mahindra ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 ‘Golden Prison’: Indian Google engineer leaves US after six years on H-1B visa\nSource: The Indian Express\n\n▼ TCS (NSE:TCS) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Infosys (NSE:INFY) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Wipro (NSE:WIPRO) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ HCLTech (NSE:HCLTECH) [IN] — headwind, via US work-visa (H-1B) restrictions\n▼ Tech Mahindra (NSE:TECHM) [IN] — headwind, via US work-visa (H-1B) restrictions\n\nhttps://news.google.com/rss/articles/CBMiwAFBVV95cUxQRVl6dDhjazhnSEtpNDUxeDNjYV9BbHJoeDZUUUxFSGlOUHY3cmplX2YtSldyclNLR3ZDNTF1TVFaNUU3c2hZaUgzemwyTVFTR0daLWxrRkJ5TWpVZDRJRk1uNEYyaE1heExVMkx4dUVmNzV6WFVseDBoWS15UUEzUV9hS0hfakRtazloRVhwOTBBZ24tT0ZNT2ZTcndjNU1JLXg5aS04YWV0WmdXLUdraS1IUVoyOWltNmxWXzZsTmvSAccBQVVfeXFMUEN5Njc0Z2RYUXpuckstcFNhNldoWjFzcmpqUGlBVWdWVkY2bVhvZG03NkZHdlJ4c0QwSjFEUzFRRlVSdnVKelNES2ZyMnFhNzVlN1FUMk9MbnpVR01ZSm1qZ0lCVVNrcGFGQWY2RURyZmdTNU1tOVg2dnE4NGlESXUzVlBRel9LZ3lLeWl5NGktMVNXM0VnMWppMDR6eFpEdjllQlVSMFZRUUo0M0MtUW8zQ2d5RTFsaFBFMXUyLUxKaFJERF8zMA?oc=5\n\nResearch & education only. Not investment advice."
   }
  ]
 }
