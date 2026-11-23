@@ -1,5 +1,19 @@
 # 🌊 Ripple — hidden market links
 
+> **Goal (from the owner):** use this for my own trading in Indian and US markets.
+> Social content is a maybe-later. Prioritise accuracy, tradable timing (before the
+> 9:15 IST open) and honest tests over reach.
+
+## Morning trade signal
+
+`signal_today.py` runs ~6:45 IST on weekdays. Rule, from `backtest.py`: if Accenture
+beat (or lagged) the S&P 500 by ≥ 1.5% at the last US close, go long (or intraday
+short) the Indian IT basket — TCS, Infosys, Wipro, HCLTech, Tech Mahindra — at the
+9:15 open and exit by the close. On the unseen newer half of 5 years of data this
+made about +0.3% per trade after ~0.06% costs. `backtest.py` re-tests it daily
+alongside controls and ideas that failed (crude → fuel retailers, ADR gaps).
+Paper-trade before using real money; edges fade.
+
 News hits one company. Ripple finds who else gets hit, across US and Indian markets.
 
 It applies the "A → B → C" idea (literature-based discovery) to market news:

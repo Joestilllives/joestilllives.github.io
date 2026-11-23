@@ -1,0 +1,19 @@
+{
+ "us_session": "2026-11-20",
+ "accenture_pct": 1.18,
+ "sp500_pct": -3.7,
+ "excess_pct": 4.88,
+ "threshold_pct": 1.5,
+ "action": "LONG",
+ "strong": false,
+ "basket": [
+  "TCS",
+  "Infosys",
+  "Wipro",
+  "HCLTech",
+  "Tech Mahindra"
+ ],
+ "explanation": "Accenture moved +4.88% beyond the S&P 500 (Accenture +1.18%, S&P -3.70%). Rule: buy the Indian IT basket at the 9:15 open, exit by the close.",
+ "generated": "2026-11-22T21:02:25.141721+00:00",
+ "disclaimer": "Based on past prices; edges fade. Paper-trade first. Not investment advice."
+}

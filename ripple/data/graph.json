@@ -918,13 +918,6 @@
    "why": "AI can bring new deals but also shrink traditional services work"
   },
   {
-   "from": "us_fda",
-   "to": "@indian_pharma",
-   "sign": -1,
-   "w": 0.6,
-   "why": "The US is the biggest market for Indian generics; FDA actions can block exports from a plant"
-  },
-  {
    "from": "drug_pricing",
    "to": "@indian_pharma",
    "sign": -1,

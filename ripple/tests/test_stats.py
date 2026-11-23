@@ -129,5 +129,21 @@ class OutcomeTests(unittest.TestCase):
         self.assertGreater(sc["overall"]["3"]["avg_edge_pct"], 0)
 
 
+class SignalTests(unittest.TestCase):
+    def test_long_short_none(self):
+        from signal_today import compute
+        spx = {"2026-01-01": 100.0, "2026-01-02": 101.0}          # S&P +1%
+        self.assertEqual(compute({"2026-01-01": 100.0, "2026-01-02": 103.0}, spx)["action"], "LONG")   # +2% beyond
+        self.assertEqual(compute({"2026-01-01": 100.0, "2026-01-02": 99.0}, spx)["action"], "SHORT")   # -2% beyond
+        self.assertEqual(compute({"2026-01-01": 100.0, "2026-01-02": 101.5}, spx)["action"], "NONE")   # +0.5% beyond
+
+
+class StaleOpenTests(unittest.TestCase):
+    def test_drops_open_equal_to_previous_close(self):
+        from backtest import drop_stale_opens
+        o = {"2026-01-01": (100.0, 101.0), "2026-01-02": (101.0, 103.0), "2026-01-05": (102.0, 104.0)}
+        self.assertEqual(sorted(drop_stale_opens(o)), ["2026-01-01", "2026-01-05"])
+
+
 if __name__ == "__main__":
     unittest.main()

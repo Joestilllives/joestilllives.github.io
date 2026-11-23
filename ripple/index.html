@@ -79,6 +79,12 @@
   .badge.contradicted { background: #3a1616; color: var(--down); }
   .badge.weak { background: var(--panel2); color: var(--muted); }
   .badge.dir { background: #352a10; color: var(--flat); }
+  .sig { margin-top: 18px; border-radius: 14px; padding: 14px 16px; border: 1px solid var(--line); background: var(--panel); }
+  .sig .lbl { font-size: 12.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+  .sig .act { font-size: 24px; font-weight: 800; margin: 2px 0 4px; }
+  .sig.LONG { border-color: #1f6b45; } .sig.LONG .act { color: var(--up); }
+  .sig.SHORT { border-color: #7a2c2c; } .sig.SHORT .act { color: var(--down); }
+  .sig.NONE .act { color: var(--muted); }
   footer { margin-top: 36px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 16px; }
   footer a { color: var(--accent); }
 </style>
@@ -92,10 +98,13 @@
     <div class="banner" id="banner" hidden>The Alerts tab is showing <b>sample headlines</b> to demo the engine. Live alerts appear after the first scheduled run.</div>
   </header>
 
+  <div id="signal" class="sig" hidden></div>
+
   <nav class="tabs" id="tabs">
     <button class="tab on" data-v="alerts">⚡ Alerts</button>
     <button class="tab" data-v="score">🎯 Scorecard</button>
     <button class="tab" data-v="disc">🔭 Discoveries</button>
+    <button class="tab" data-v="bt">🧪 Trade tests</button>
   </nav>
 
   <section class="view" id="v-alerts">
@@ -115,6 +124,11 @@
   <section class="view" id="v-score" hidden>
     <p class="note">Did the flagged companies really beat (▲) or lag (▼) their own market — Nifty or S&amp;P 500 — after the alert? Checked 1, 3 and 7 trading days later, starting from the last close before the news. 50% is a coin flip.</p>
     <div id="score"><div class="empty">The scorecard updates once a day.</div></div>
+  </section>
+
+  <section class="view" id="v-bt" hidden>
+    <p class="note">Can you make money from last night's US move at the next Indian session? Each idea trades at the <b>9:15 open</b> (the first price you can really get) and exits at the close, after costs. The threshold is chosen on the <b>older</b> half of 5 years of data and judged on the <b>newer</b> half it never saw. Days where Yahoo's Indian open looks stale are excluded.</p>
+    <div id="bt"><div class="empty">Trade tests update once a day.</div></div>
   </section>
 
   <section class="view" id="v-disc" hidden>
@@ -281,6 +295,32 @@ function renderDisc(d) {
   document.getElementById("disc").innerHTML = html;
 }
 
+function renderSignal(g) {
+  const el = document.getElementById("signal");
+  const label = { LONG: "▲ LONG Indian IT at the open", SHORT: "▼ SHORT Indian IT at the open (intraday)", NONE: "No trade today" }[g.action];
+  el.className = "sig " + g.action; el.hidden = false;
+  el.innerHTML = `<div class="lbl">Morning signal · from US close of ${esc(g.us_session)}</div>
+    <div class="act">${label}${g.strong ? " · strong" : ""}</div>
+    <div class="note" style="color:var(--text)">${esc(g.explanation)}</div>
+    <div class="note">Basket: ${g.basket.map(esc).join(", ")} · exit by the close · ${esc(g.disclaimer)}</div>`;
+}
+
+function renderBT(b) {
+  const verdictCls = v => v.startsWith("Promising") ? "good" : v.startsWith("No tradable") ? "bad" : "meh";
+  const fmt = n => n ? `${n.trades} trades · ${pct(n.win_rate)} wins · <b>${n.avg_net_pct > 0 ? "+" : ""}${n.avg_net_pct.toFixed(2)}%</b>/trade · total ${n.total_pct > 0 ? "+" : ""}${n.total_pct}% · worst drop ${n.max_drawdown_pct}%` : "—";
+  document.getElementById("bt").innerHTML = b.strategies.map(r => `<article class="card">
+      <h2>${esc(r.name)}</h2>
+      <div class="sub"><span>${r.days} sessions, ${esc(r.from)} → ${esc(r.to)}</span>
+        <span>signal vs opening gap r=${r.corr_gap} · vs open→close r=${r.corr_intraday}</span></div>
+      <p class="note ${verdictCls(r.verdict)}" style="font-weight:600;margin-top:10px">${esc(r.verdict)}</p>
+      ${r.variants.map(v => `<div style="margin-top:10px"><div class="note"><b style="color:var(--text)">${esc(v.trade)}</b> · trade when the move ≥ ${v.picked_threshold_pct ?? "—"}%</div>
+        <div class="note">Older half (used to pick): ${fmt(v.older_half)}</div>
+        <div class="note">Newer half (unseen): ${fmt(v.newer_half)}</div></div>`).join("")}
+    </article>`).join("") + `<p class="note">Costs assumed: ${b.cost_round_trip_pct.toFixed(2)}% per round trip (discount-broker intraday). Past results don't guarantee future ones; edges fade as others find them.</p>`;
+}
+
+fetch("output/signal.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(d => d && renderSignal(d)).catch(() => {});
+fetch("output/backtest.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(d => d && renderBT(d)).catch(() => {});
 fetch("output/scorecard.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(d => d && renderScore(d)).catch(() => {});
 fetch("output/discoveries.json?t=" + Date.now()).then(r => r.ok ? r.json() : null).then(d => d && renderDisc(d)).catch(() => {});
 

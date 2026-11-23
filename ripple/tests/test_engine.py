@@ -65,6 +65,40 @@ class ChainTests(unittest.TestCase):
         i = impact("India oil & gas import bill shoots up $6 billion in Oct as global prices surge", "bpcl")
         self.assertEqual(i["effect"], "headwind")
 
+    # Real headlines from the first live run that were misread
+    def seed_dir(self, title, eid):
+        a = analyze(G, {"title": title})
+        return {s["id"]: s["dir"] for s in a["seeds"]}.get(eid) if a else None
+
+    def test_live_exports_are_not_price(self):
+        self.assertEqual(self.seed_dir("Global crude exports hit record high despite Hormuz closure", "crude"), "in the news")
+
+    def test_live_adjective_before_wins(self):
+        self.assertEqual(self.seed_dir("Easing oil prices fail to lift PSX", "crude"), "falling")
+
+    def test_live_mixed_is_unclear(self):
+        self.assertEqual(self.seed_dir("Oil prices settle higher, Brent set for 4% weekly loss", "crude"), "in the news")
+
+    def test_live_choppy_is_unclear(self):
+        self.assertEqual(self.seed_dir(
+            "Crude Oil Choppy as Strait of Hormuz Flows Fall and Traders Price In Renewed US-Iran Strikes", "crude"), "in the news")
+
+    def test_live_clause_after_as_ignored(self):
+        self.assertEqual(self.seed_dir("Sensex, Nifty slide nearly 1% as crude oil prices surge amid Iran conflict", "crude"), "rising")
+
+    def test_live_plain_fall(self):
+        self.assertEqual(self.seed_dir("Oil Prices fall 5% despite attacks on tankers, rising tensions", "crude"), "falling")
+
+    def test_live_risk_mention_without_event_ignored(self):
+        self.assertIsNone(analyze(G, {"title": "BlazeTV hosts win journalism award for 'dogged investigation of H1B abuse in Texas'"}))
+
+    def test_live_one_company_fda_does_not_hit_rivals(self):
+        a = analyze(G, {"title": "Natco Pharma's Kothur plant receives 7 observations from USFDA"})
+        self.assertFalse(a and any(i["id"] == "sunpharma" for i in a["impacts"]))
+
+    def test_risk_with_event_word_still_fires(self):
+        self.assertEqual(impact("Iran threatens closure of Strait of Hormuz", "ioc")["effect"], "headwind")
+
     def test_unrelated_headline(self):
         self.assertIsNone(analyze(G, {"title": "Local football club wins cup final"}))
 
