@@ -187,3 +187,20 @@ Research on past data, not financial advice.
 | Western customers → Indian suppliers (`supplier_chain.py`) | 86 Western firms; each Indian stock linked to its closest co-mover over the past 36 months; partner's move this month vs the stock next month | No edge overall (rank corr +0.007, t 1.1). Auto partners +0.038 (t 2.0) is a hint only |
 | US sector moves overnight (`us_spillover.py`) | Learned beta to 14 US sector funds; previous US session → next Indian day, 2,417 days | Real but priced in at the open: opening-gap rank corr +0.025 (t 11.5) for the largest firms, +0.005 for small. Tradable open→close part: top-minus-bottom fifth +0.055%/day (largest), +0.005%/day (small) — below trading costs |
 | Major industry trends (`industry_trends.py`) | Theme = 20 closest co-movers, point-in-time | Theme trend alone weak (t 1.0). Leader in a hot theme +0.024 (t 2.3), mostly the stock's own trend already in the model. Laggard in a hot theme −0.016 (t −3.0) is a trap, but as a red flag on the money signal it helped to 2021 and hurt after (+13.0 → +13.4%/yr; after 2021 11.6 → 11.0): not adopted |
+
+### New tape signals (`new_signals.py`)
+Monthly rank corr with next month vs the average company, size groups 1–4, 117 months:
+
+| Signal | Rank corr (t) | To 2021 / after | Smallest group |
+|---|---|---|---|
+| Delivery % on up days minus down days (63d) | +0.044 (6.0) | +0.057 / +0.031 | +0.051 (t 4.9) |
+| Close position in day's range (21d) | +0.032 (3.5) | +0.038 / +0.026 | +0.027 (t 2.5) |
+| Close vs day's average price (21d) | +0.026 (2.0) | +0.012 / +0.032 | +0.021 (t 1.3) |
+| Upper-circuit days (21d) | −0.024 (−3.6) | −0.026 / −0.022 | median next month −2.6% |
+| Lower-circuit days (21d) | −0.019 (−2.1) | −0.016 / −0.022 | |
+| Rupees per trade, change | +0.008 (1.3) | | |
+| Low share price | −0.041 (−2.9) | −0.062 / −0.019 | |
+
+Delivery up/down and close position stay significant after removing delivery level, trend and volatility (t 4.1, 3.5).
+But added to the 5-seed model: +13.0%/yr → +11.8% (all 7) or +13.0% (best 2; after 2021 11.6 → 10.8). The model
+already captures them through existing features. Not adopted.
