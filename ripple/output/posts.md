@@ -1,10 +1,10 @@
-# Ripple posts — 2026-11-24 10:55 UTC
+# Ripple posts — 2026-11-24 13:46 UTC
 
-## Brent Crude Posts 3rd Weekly Loss, Falls Below $89 for First Time Since August
+## Global crude oil prices fall to three-month lows amid rising supply
 
 ### Post
 
-🌊 The news: Brent Crude Posts 3rd Weekly Loss, Falls Below $89 for First Time Since August
+🌊 The news: Global crude oil prices fall to three-month lows amid rising supply
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -21,8 +21,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Brent Crude Posts 3rd Weekly Loss, Falls Below $89 for First Time Since August
-Source: https://houseofsaud.com/
+📰 Global crude oil prices fall to three-month lows amid rising supply
+Source: УкрАгроКонсалт
 
 ▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
 ▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
@@ -30,17 +30,17 @@ Source: https://houseofsaud.com/
 ▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
 ▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
 
-https://news.google.com/rss/articles/CBMiZEFVX3lxTE44LUwxb3RpMm15ay1iLW8tOFl4b2RPRnl0X3NkSVdDUzcwaWJESzRHaWtTZjVJdDlLVl9ueXBUYjh4WVBXMDc3cllRQlR1NHZGdFplWDVkTWI0SVh2RHNiQzhnTTM?oc=5
+https://news.google.com/rss/articles/CBMipgFBVV95cUxOY0UweGVDZzhCOFUxRWlwTURQWnNUT092eF9FTjQ4dUh4LXBjNkRsc2VyMGk5Y3otYzRHZy0wbVRfNzRTMEdPOEJTTXRhb0RaX0VzMlNvQVppRzZVbVNsTUdUUGIxSjk1SlA0SF9aTjJIbWtNY1hrZXhxaDBTRlJLM2Q5VUFfM1BpZDBMdHAyU0pHVEFmS0JmMG5sbTFWcHVvaFU4U2lB?oc=5
 
 Research & education only. Not investment advice.
 
 ---
 
-## Crude oil prices extend losses, drop 23% in November; Brent crude drops 3%; WTI dips below $80 per barrel
+## Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
 
 ### Post
 
-🌊 The news: Crude oil prices extend losses, drop 23% in November; Brent crude drops 3%; WTI dips below $80 per barrel
+🌊 The news: Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -57,8 +57,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Crude oil prices extend losses, drop 23% in November; Brent crude drops 3%; WTI dips below $80 per barrel
-Source: Upstox
+📰 Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
+Source: EnergyNow.com
 
 ▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
 ▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
@@ -66,7 +66,7 @@ Source: Upstox
 ▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
 ▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
 
-https://news.google.com/rss/articles/CBMi9gFBVV95cUxNSlNuWWtpaTllU0dvTmo1Zk5TdVdnZ3BBLUFNakhwMVNkMFRQeUR0LVMzLTg1bUkyT0RRZkFWcUNJXzBVSEE4SUM5TFowREc3aTRhV1ZsUFc3ck1CSU5JZU8wS3ZtYlhlLXFsRlo0S3dfcVFHbEJUSGdiMUtNVk1jN05mYmRwZlBhR1BJTzRyclIzcnk0NVpGMmVfV1hybVZON1dTZ2VXZ0hicDJkekdPQThVcnBIaWNSckRUUGpzZjFsWUFsQ3BqTTcxcmRuM2ttZ0pnX2RfQ3pkaWJRNnIxVjd0Y293UTZYUDRjajYxMU5vSXFQWUE?oc=5
+https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5
 
 Research & education only. Not investment advice.
 
@@ -180,11 +180,11 @@ Research & education only. Not investment advice.
 
 ---
 
-## Oil prices hover near three-month lows on rising supply concerns
+## Oil prices swing with focus on Iran war diplomacy
 
 ### Post
 
-🌊 The news: Oil prices hover near three-month lows on rising supply concerns
+🌊 The news: Oil prices swing with focus on Iran war diplomacy
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -201,8 +201,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Oil prices hover near three-month lows on rising supply concerns
-Source: سانا
+📰 Oil prices swing with focus on Iran war diplomacy
+Source: Transport Topics
 
 ◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price
 ◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price
@@ -210,7 +210,7 @@ Source: سانا
 ◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price
 ◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
 
-https://news.google.com/rss/articles/CBMiTEFVX3lxTE1SUmJUVXRnQUFwaGdIZkRncExpeHY2M3hmU2N1T0R6c2xYMzJyaUhVXzBBOXpXVllWb2p3WWxsYVpJLXhEQ0ROZ1c5X18?oc=5
+https://news.google.com/rss/articles/CBMiaEFVX3lxTFBDR2d2TGotdnpxSEhyMmp3X2MydzFUcVFxRmIzWENEWTdhYVVfWE5ZSDJSN2trMEhRT1ZLMVFuNW9GN3VZV3ZES3dNWXRGNFU0M1U2ZkZYaDVsVmRJQTVVT2V0ZkhOeTJ1?oc=5
 
 Research & education only. Not investment advice.
 
@@ -247,6 +247,43 @@ Source: EnergyNow.com
 ◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
 
 https://news.google.com/rss/articles/CBMilgFBVV95cUxQc043cHk1ZjIxLWc2RVJUX2p1NnRHMmpRamNpNkVJNTBkNjliR1Z4amtCdkdVUzkzUnBRQ2ZpWFhHdGRUUWtybzFieTY2ek9qazdPaG5Ec0d3akx6a24wMlYzaDdnbjZrbmNVdTdZdXZSYlhGTVFUOHJoTGZhQ1RJR2tyaDNGckF0OWM0QW1ta2lVbnFoOFE?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
+## Hormuz: Mine Warfare or War of Nerves?
+
+### Post
+
+🌊 The news: Hormuz: Mine Warfare or War of Nerves?
+
+The hidden link nobody's talking about:
+Strait of Hormuz tension → Crude oil price → Indian rupee strength → TCS
+
+• About a fifth of the world's oil passes through the Strait of Hormuz.
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Hormuz: Mine Warfare or War of Nerves?
+Source: marketscreener.com
+
+▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
+▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
+▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
+▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price
+▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
+
+https://news.google.com/rss/articles/CBMikwFBVV95cUxOeEFPQmE2WlY1M2Rya0NVdXhyWHh5Vi1kSG0wdHNpM0EtY0dnNzNGWlBrZnBkaS02LTA3NHJQREkwdXNNTW85QkE4V2dhNGZ1eFlxYkdJTEhGcERNU0ZsZkZxVm5EQW1JbUZoaGJmMVE1cVUwVE5yYkoxMXFQMDFKdmFKdnRPMFdwNUdWY2dvd2JUSjg?oc=5
 
 Research & education only. Not investment advice.
 
@@ -320,43 +357,6 @@ Source: EnergyNow
 ◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
 
 https://news.google.com/rss/articles/CBMisAFBVV95cUxOWUVFbXlwMlkxTDJjOEZMcHFaNkNxamJzVFhhOUx2cEdQYzhVSVdKMHlmbzdfdUo5ZW1BRlhLXzR2bDVPU2FDYnAxSlpYMmVzYXBlYjVQeloyVXp2Rk1fTjJCcEpYMlYyeGRCSWRCSVVOeUw1UXZtbkxyWjZRSXB6Ym0tTllrTFBPMXZQaVR5STl0VTdGcGVaRkdwbWk0UVRxMW5qZnlFLWFDNERYNDZRSQ?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## Iran orders Hormuz shut 'further' as Qatar seeks to revive peace talks
-
-### Post
-
-🌊 The news: Iran orders Hormuz shut 'further' as Qatar seeks to revive peace talks
-
-The hidden link nobody's talking about:
-Strait of Hormuz tension → Crude oil price → Indian rupee strength → TCS
-
-• About a fifth of the world's oil passes through the Strait of Hormuz.
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Iran orders Hormuz shut 'further' as Qatar seeks to revive peace talks
-Source: Euronews.com
-
-▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price
-▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-
-https://news.google.com/rss/articles/CBMiuAFBVV95cUxPN3ljTzNTZTlBc1VpcGZrb2ZGVmtfZW9GYXJPLXAxZGtLdTZUVGM4ZWtWWERMTGxSZnZYN0NZbUYtdHd6MDJMT0h0QmNJcHptblRTeU50Wkw3eHJZZFVfUU1FOW9Sc21lekZhX2tIUDNKZ1IxVXVuLW1mSGtpNFg1dGNRTXd1bUR6VkQyeUhzWmlmOFVYOHVEMkNrd0N1ZnlQckZnTDhLcFRQVUNaVFRqVlhMMGZLQnZo?oc=5
 
 Research & education only. Not investment advice.
 
