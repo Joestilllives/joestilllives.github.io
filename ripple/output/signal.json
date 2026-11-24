@@ -1,10 +1,10 @@
 {
- "us_session": "2026-11-20",
- "accenture_pct": 1.18,
- "sp500_pct": -3.7,
- "excess_pct": 4.88,
+ "us_session": "2026-11-23",
+ "accenture_pct": 0.51,
+ "sp500_pct": 4.73,
+ "excess_pct": -4.22,
  "threshold_pct": 1.5,
- "action": "LONG",
+ "action": "SHORT",
  "strong": false,
  "basket": [
   "TCS",
@@ -13,7 +13,7 @@
   "HCLTech",
   "Tech Mahindra"
  ],
- "explanation": "Accenture moved +4.88% beyond the S&P 500 (Accenture +1.18%, S&P -3.70%). Rule: buy the Indian IT basket at the 9:15 open, exit by the close.",
- "generated": "2026-11-23T05:44:39.743057+00:00",
+ "explanation": "Accenture moved -4.22% beyond the S&P 500 (Accenture +0.51%, S&P +4.73%). Rule: short (intraday) the Indian IT basket at the 9:15 open, exit by the close.",
+ "generated": "2026-11-24T10:57:47.043182+00:00",
  "disclaimer": "Based on past prices; edges fade. Paper-trade first. Not investment advice."
 }

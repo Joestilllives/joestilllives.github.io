@@ -5,5 +5,12 @@
 "sp500_pct": -3.7,
 "excess_pct": 4.88,
 "action": "LONG"
+},
+{
+"us_session": "2026-11-23",
+"accenture_pct": 0.51,
+"sp500_pct": 4.73,
+"excess_pct": -4.22,
+"action": "SHORT"
 }
 ]
