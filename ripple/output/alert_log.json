@@ -72208,6 +72208,159 @@
 ]
 },
 {
+"id": "cb60586388a5",
+"title": "Equity LTCG tax abolition: Will scrapping capital gains tax boost FPI inflows, mutual fund investments? CA explains",
+"url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOb29Lc1JxOXl6Uk54TXhSNkRPUW1UOU1OMzVidjZkdGhSMVlEVngxQnprd0xvWXpncV9RVnF1ejRPck1vVHViT3FWX3FsQlE4QkhZT2g3a2FMVm12ekJRVnRpQ0cyOTdTdVBTRVFxUVNRWlA0Q3poNjFPcUNPSXFKYnYwNmRTLWRsaVJLeXAxZkV2MjlRNTNxMEpwcFpLS0ZiUkhtVnFERXFQdmU5SmFsSW5wY1FMMXJqa1ZRODFoTGR5ZWRQS3ozOUg5YzhzdU5CSFRuYVJkS2xtYURaOE9hQ0tFR1V6NUM3QlJ2QUNB?oc=5",
+"published": "2026-11-23T03:08:01+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
 "id": "207edf9e5053",
 "title": "Treasury Yields Fall, German Bunds’ Tick Higher",
 "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPT0dsM2ttY3ctRTRCZzZPRzE4aG1RNzBCeUQzUEFRbGk1VzRqZGF4Z2J6NFFXVExyX0xROFU1bWFGc3U5ZXpWR21YQmh6S096RXVFS25wcjY4QmxDTUJhdkh5eG51UjVrRVlfZHBpX0pKZkJMOFI4eVVvV1BvSWxIOWQ3aFZId2xOcXJXeGI2SlZvd0RqUUhzT2NVck1jQ3VKLUNXSEFaYXhuNzVtbm1vaQ?oc=5",
@@ -75794,6 +75947,159 @@
 ]
 },
 {
+"id": "55848bf18ee4",
+"title": "Canadian Dollar holds steady against US Dollar as US PCE week begins",
+"url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPYkpYalhYQ1hJWTRRM1ptRjJ0TmxvMkt1R3VOZFV6b25TZGp6SkY4VWk0Umh0amw5a1ltRmc2ejF2OVNZU0k1c1NvaEd3TGdlTlBCcGJwY3U5ckpIcGpZTlZVYV9icXI4YjFEQ1VJUlFyWDM1T0dHb1EzcTVkM1FDRTQ0RndKbnBoSmlGWURaTlR3MHVXNWJ5SEhyNGhQZ3lrWDV6RVZIa3U3V2JxOERBd1Z3WG5ZdzZQYmpic1E1cDlsampYeDZsRUFyYzFrd0x6OWxvRWVnMmNKZllnY2dv?oc=5",
+"published": "2026-11-23T07:30:28+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
 "id": "c938c58be990",
 "title": "NVDA (NASDAQ:NVDA) Data Center Surge and Vera Rubin Launch Reinforce AI Hardware Lead",
 "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPaFBTWTN4NjlvQVNaRzZYU01DU3Y0RktiS244T0lvUFgzRzJNTm5EYTZvbkFKYzFPSTlqdTVWQ0NfSkxkMDdwVXM4OTUxREhpUElRU0JPdEtmMlFLa1B4OWtBb2lUN1NWZjJMbzAwU1dScFQtdnN1bkRIdGVwTEo2VWdUSlI4ZGJWb2hiRjNvSkF5dlZWbHhIeVhFdi1HNEliQ1RtcjFnX0tna0lFZHJSQ0lxcVpYQng3c0tfdURhZEFja0stdlFSSkNxcUhtNmhyZ0VmcEp5dHM?oc=5",
@@ -77841,6 +78147,119 @@
 ]
 },
 {
+"id": "a1b50be1cb59",
+"title": "Rupee Falls 30 Paise To Close At 92.92 Against US Dollar, Snaps Five-Day Winning Streak Amid Massive Stock",
+"url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQd1ktMmU1cnRpaVRheFF6T2RseDdXODRTNjJ3NlY1ODFVR3I1UmNRYXFDTTU5Wm12MFB6NVA1VEtFQ0FmRW4zU245cll5M3lVNV9vS0dFazlUY01GenU1LW5ZVHlzUkpnUGhKaFF6X0k2RkZNNTRaRWhqS3I1NElua3Z0VUYzTGZWNkFhMTRaOElabS1CYk1GTjA2UFl6dk9rOEhjV3h6cFFvdl8wanMwbURMYzVNTWI5VU90U3hwYnVSekt3Q2VKanBFMC12b2U5VzhuRFY0VzFhWlNwUHFsUGJIbW1yQU9ZLXAwbFBBMFFxbjTSAfgBQVVfeXFMTmhTWU5LYTVUTWNlX2hxUEx0Q0hGNldfcmVzMDBlSE9Jd2FvTlR5dTNoLU5sSXR5QkJ5MURxUU5QaUMzSkN0UXJSSmVsVzRSU0RhdDFfWEdXYlloZTlsNDJid0dWWEFtZEZBQWVqMno1bjhWbU5EM3lsNjBoZnNMMWFUYjdqZi1XVWtTUzV6ZGJaa3pjSVNqSFRTOGJjRGJiOEl4ZnZ6V0dqN2RoZ2tJVjh0aUcycm9Oc2tlUzdBdjlwN2EzRXJWeDg0ejhMMDd4T0ZvSjQ1clg0MlgxYnRMdGRtaE5vT3lwOXItLTFtdjBQdEdwdjVKZEY?oc=5",
+"published": "2026-11-23T12:15:21+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
 "id": "aa37f2e4148e",
 "title": "Anthropic, Nvidia shares rise in premarket trading after major tech sell-off",
 "url": "https://www.cnbc.com/2026/11/23/anthropic-nvidia-shares.html",
@@ -78044,6 +78463,4325 @@
 "from": "Global shipping costs",
 "to": "Welspun Living",
 "why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+}
+]
+}
+]
+},
+{
+"id": "bca6b5d04c81",
+"title": "U.S. Stocks Stage Pre-Market Rally: Nvidia Jumps Nearly 9%, TSMC ADR Rebounds Over 7%",
+"url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4yeHdkNWhGT2paa21aQ0dJYjJrbk84aDFWZTJrNkR5MFFnekZqakdkZWxFRXVrazVDeTYyVGN0Q2ZGMDU3M0Z1V0VfZW03WEhtcGQxRE56dno3dXJ6bFhUbVZYeGVQVm9GV1dGSWZkTGdkVF94NHc?oc=5",
+"published": "2026-11-23T13:05:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+},
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+},
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+}
+]
+},
+{
+"id": "517fb6292a87",
+"title": "US Dollar: Fed rate hike bets support Dollar outlook - BBH",
+"url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUFNQRlBqSzhvZjNIUWtpR1NWOVgyTU9vQmRhWGQzMkVKV2p5R2xGcGtZN2tqZkpqeW84WHZnZnQtVzU0QUNvVWRlVEl1azNFbENMM0Jqd3FFLVRkRVpnUEhSRGhVcnRaNi1MLTlzWHlDTDRPUDBDaTZueXJobHpuTVcwUi15QTh2YURfZVJkNkduSkxwTXhrU2x3MjhEVlE?oc=5",
+"published": "2026-11-23T13:17:27+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "c85912d735e9",
+"title": "Iraq Reduces Oil Output, More Cuts to Come if Hormuz Disruptions Persist, Iraqi Oil Officials Say",
+"url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRmh6ZW9tdWRwQnktYnVYak5qdXVnZFNROFBNMkExcUFCQnFKMjhDWWRFNGZhcmdMc3JuVWh1Wlp0Ykowak1sU1Z2MlhNX3JXT1BjcExHbUZNaGllTzZ0ejFwY2dXV0FBSnRzcDJmbkdNR2lsVTM4aERYZ3BlbjJ1MDRLc2RuOC1tc2lIaGJBZWpvMnh5bGVpR2IySU9aSDQ0cG9yUXVWM0RtY3pNRVR6SkxpSDI2VWh6NWJrR2p5dllpNklD?oc=5",
+"published": "2026-11-23T13:25:28+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "ioc",
+"name": "Indian Oil",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "Indian Oil",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "bpcl",
+"name": "BPCL",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "BPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "hpcl",
+"name": "HPCL",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "HPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "ongc",
+"name": "ONGC",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "ONGC",
+"why": "As an oil producer, ONGC earns more when crude is higher"
+}
+]
+},
+{
+"id": "indigo",
+"name": "IndiGo (InterGlobe Aviation)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "IndiGo (InterGlobe Aviation)",
+"why": "Jet fuel is an airline's single biggest cost"
+}
+]
+},
+{
+"id": "asianpaints",
+"name": "Asian Paints",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "Asian Paints",
+"why": "Many paint raw materials are crude-oil derivatives"
+}
+]
+},
+{
+"id": "reliance",
+"name": "Reliance Industries",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "Reliance Industries",
+"why": "A refining and petrochemicals giant: the effect depends on refining margins"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "OPEC+ oil output",
+"to": "Crude oil price",
+"why": "Less OPEC+ output tightens supply and pushes oil prices up (and vice versa)"
+},
+{
+"from": "Crude oil price",
+"to": "Indian rupee strength",
+"why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "774264c29bd0",
+"title": "Indian Rupee Surrenders Gains Amid Stock Market Sell-Off and Dollar Index Strength, Closes 23 Paise Lower at 92.91",
+"url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdWVEU1JQOG9uai1mOFRpYk9UU1ZiajlIOHp1cGxyNXZuakVvUnJLd2NZS1FDMFpreFlDcTh4S25kb19oWTVIVDZmVTJBVWRKWjkyWEJ0aHh1R3NrVEotVW5CZ01fbVU0ZWM4SDF0QTFUTm9qNnBCR3dwczVVMHZDZHkyb29CdnhnSjBCZExR?oc=5",
+"published": "2026-11-23T13:31:12+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "3ef950c602a5",
+"title": "Boockvar Says AI Capex Peaks in 2027 — and the Fed Can't Cut Rates to Rescue It",
+"url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Ca1czZjUyNldDRFEtMWlHM2VZUVdWS1EwTEdpUmNKRXZVSnVQc0t6WnJ0ZEVxeHBkVFRDbDVUOWppQk96QUVpc0FSdUJYT1E2WE9xY0lTVm05cU0?oc=5",
+"published": "2026-11-23T14:08:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "nvidia",
+"name": "Nvidia",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Nvidia",
+"why": "Data-centre buildouts run on Nvidia GPUs"
+}
+]
+},
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TCS",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Infosys",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Wipro",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "HCLTech",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Tech Mahindra",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+}
+]
+},
+{
+"id": "0f8ea026a729",
+"title": "TSMC and Samsung Suspend Chip Shipments to Chinese Customers as Trump Threatens Overseas Data Center Tax",
+"url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR3cyUzFMUDhwOUhOV0JHdF9UYUxieGdVaGR4bkJEU0tlaHpJaFNFeWNjdWlmSlR1VWx0Zk9HRkV1TnpFUXQ1bDBNenJ0aFE2dW9NSW16cnpTVklSMWV2S1hibVhqZi1xNWtlMjFzOC12bk5WUmNsNndPeUlSYVY5c2xieGhvS1hNSU9QMmZpTWZleWR1ZnZ3eWY3cU4ycjNuVHdSdkplajJrV2FDRTh3WDVuejUxajRDb1dFeE0tNExpWnNXa0NrSQ?oc=5",
+"published": "2026-11-23T14:14:55+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "nvidia",
+"name": "Nvidia",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Nvidia",
+"why": "Data-centre buildouts run on Nvidia GPUs"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TCS",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Infosys",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Wipro",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "HCLTech",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Tech Mahindra",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+}
+]
+},
+{
+"id": "79faa3a99b31",
+"title": "Gold price rallies above $3,600 as AI selloff reshapes Fed outlook - Kitco AM Report",
+"url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPenF6LTV0TWdncXg5WDBQNS1Dc2lSVEUwNmpsRzR0UGg4a0VOM21NN2hTNnN1Mk1fZDhmcWs1WU41UW9qcUFieEJnemYyRTdhZy1hakhLbHRXemltSTFVTnBFaEhLdDR5LTYyeElnTjBKdEVNeUFXRnFEQlh5bWllNU1vOEw3eHlaRXZBZzV1WlNXUWd6R3BHdmlTajdyZUJueU5vNTlCUmhvclZtLVRlamJyel9USGM?oc=5",
+"published": "2026-11-23T14:18:04+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "ab3a746d5a1d",
+"title": "Asia–US East Coast ocean freight rates top $10,000, up 300% from a year ago",
+"url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOb2p4MFduR0pmX25iWjI2bFFnYXRBZHZOYXNOaGxZYWs5RXFveWFFd1pCUlhtY0hINkRBS0pQQ0VsMWxlNFBULUZ5MXdhN3p6NWNqUl8taWVqMFlGeWVHclNIN1o2Sno4Z0I4RkdHZnRkckFXNGF3bVF5czQ5WUdqa19TQURzUkpTRG1sem1CRkpMLWxyekxXU082VFF0T180a1p5YUZ0QnU?oc=5",
+"published": "2026-11-23T14:35:03+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "welspun",
+"name": "Welspun Living",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Global shipping costs",
+"to": "Welspun Living",
+"why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+}
+]
+},
+{
+"id": "avanti",
+"name": "Avanti Feeds",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Global shipping costs",
+"to": "Avanti Feeds",
+"why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+}
+]
+}
+]
+},
+{
+"id": "98e74663ba29",
+"title": "US Seeks International Help to Reopen Strait of Hormuz as Crude Prices Surge",
+"url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMGg3dFpSNUlCN00xMC15bTY0TDFKZjJ4Y1Vyb0k0ME9mWXk5VkRXcVBoYVZvdEgtVkxPWmNvWl9VUkFWSHVlRGVqakVGSHBscEhxNmt5LUc1bkM1TEpvTTE1MFJuMzZYeUV1SURMWDJzUmxQajFNMWtuWGRJU0QtX1daQXVsUDk0RVpCLUNnME5WUEtoMjZlUGNzYTRjLTRsN3Q4U0JJVWh4Zw?oc=5",
+"published": "2026-11-23T15:30:54+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "ioc",
+"name": "Indian Oil",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian Oil",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "bpcl",
+"name": "BPCL",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "BPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "hpcl",
+"name": "HPCL",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "HPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "ongc",
+"name": "ONGC",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "ONGC",
+"why": "As an oil producer, ONGC earns more when crude is higher"
+}
+]
+},
+{
+"id": "indigo",
+"name": "IndiGo (InterGlobe Aviation)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "IndiGo (InterGlobe Aviation)",
+"why": "Jet fuel is an airline's single biggest cost"
+}
+]
+},
+{
+"id": "asianpaints",
+"name": "Asian Paints",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Asian Paints",
+"why": "Many paint raw materials are crude-oil derivatives"
+}
+]
+},
+{
+"id": "reliance",
+"name": "Reliance Industries",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Reliance Industries",
+"why": "A refining and petrochemicals giant: the effect depends on refining margins"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian rupee strength",
+"why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "70856bcc724c",
+"title": "iPhone 18 Pro Gets Faster 5G and Lower Delays, Ookla Finds",
+"url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUExZaW1ibnRoRkFsZGRzd1c1M29QVkM4c2ZxYnJUSkkzeXNoLUVacVFoVFIzZkltTDVIdS0zUi11czdOV1Fab1pPNk1oS3FGZnc4NEJMeEFGSExPS05odWI5UjZMYzh0QUszN0dYQ1VtMFprN2JfSlQ4RWZXbTk2bUtlUXhRVUpxdjdQQk93d1JZZEVqUmRDcXRmY9IBqAFBVV95cUxNc0tuaWRQb1A5SXFLcVBncG44UE1qM0Vzd1cyMG1ZYnktbk1kN1RBQS1QYXl4NmN1UEI4Um1CUUZzM1R6LTVjVVJXU2ZxcVFDQy1wNEV1dGE0bzhvamx1N2VqcWZJOER4N2Vycjlpbno4T2M0cThBRE1obG80RWhCbkxqUDc4dmczSHhsU3dkNnBMQTdyM3hfZUpGLXI0bnduTHVDQUpyQlI?oc=5",
+"published": "2026-11-23T16:20:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+},
+{
+"id": "tata_elec",
+"name": "Tata Electronics",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Apple",
+"to": "Tata Electronics",
+"why": "Tata Electronics assembles iPhones in India"
+}
+]
+}
+]
+},
+{
+"id": "e10b208d7a07",
+"title": "Taiwan Semiconductor Stocks Jump 13.84% as Nvidia CEO Return Revives AI Foundry Bets",
+"url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZ25SdmM3b0RBMEdGUkpZc0RqaloyVnBWdjI2cFhfV0lhQ3VGOHJ5RjliQzBqbVB1aHpnZVl6TmFsVkd4UnExaDdVMTVXUEpNX0tLMUhtN2FIVUJNUUNHQW1adE0zcERfd2JXOTgxRzJMaU9EX1ZVRUdBM2VMcjVmc3VQUDE3TXgxWFVsV0VuaVpXYmdETnRDZWJfbkJXZ2ZBb0ZNMlE0cmhLYWRVX3FsVnA5WVU3eFBvR0NENXNsVFhhQUt0N1JVWjNaaEZsS1hrRjBHYUpHUGl0T2M?oc=5",
+"published": "2026-11-23T16:59:20+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+},
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+},
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+}
+]
+},
+{
+"id": "c93430105aa7",
+"title": "Fed Rate-Hike Odds Jump As Nvidia, 'Central Bank Of AI,' Saves The Day",
+"url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPekVNZHhlOGE4S1J0b1d5cjhBUWp2WVkzdEhZaWZRcVc5WU95cktFRXhGbVkwaGxNR1YyM3VnR2hkdkktRHU1UTJZZnBVUjVuWXp5VDB3NGk3XzNGT19KTTdpSHJZeXJISHBJRHVTQXdYWldEZlRhNUI1XzlvSXlSM1I2eERFVzRTR0pmc2JMRGM3UQ?oc=5",
+"published": "2026-11-23T17:38:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+}
+]
+},
+{
+"id": "f72dbed0cb3b",
+"title": "Bentley flags limited luxury EV volumes in pitch for lower India tariffs",
+"url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOakVIWVBvQmtmVWxLdHc4OE55bzRNLWdxWGRLeFAyMC1MU2U2cVlUT0J1NWR5OFhtRUIxYlQ5WXFQMVU4M19CRmRLMHNPajJubW9oSDBINl96Y3phbVNrRWxHNGlONklGeWNGa3hyOGQtaldPQXFZQWw1UU5MdHhVNG1paUw3SFdSekZ4Qjk5b2RJX1F5U1FuM2dEOW1vWGxrR2pXVy1mYjFKd25GTlB0QVJwS2swd19qYXFqdkF5UWNUeDJhanpoc0NDanBBRDN2NExlbGd5QTYtLXdtUlBRUzJHdDl3aWdqUUHSAeoBQVVfeXFMTmpFSFlQb0JrZlVsS3R3ODhOeW80TS1ncVhkS3hQMjAtTFNlNnFZVE9CdTVkeThYbUVCMWJUOVlxUDFVODNfQkZkSzBzT2oybm1vaEgwSDZfemN6YW1Ta0VsRzRpTjZJRnljRmt4cjhkLWpXT0FxWUFsNVFOTHR4VTRtaWlMN0hXUnpGeEI5OW9kSV9ReVNRbjNnRDltb1hsa0dqV1ctZmIxSnduRk5QdEFScEtrMHdfamFxanZBeVFjVHgyYWp6aHNDQ2pwQUQzdjRMZWxneUE2LS13bVJQUVMyR3Q5d2lnalFB?oc=5",
+"published": "2026-11-23T18:57:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "welspun",
+"name": "Welspun Living",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Welspun Living",
+"why": "The US is Welspun's largest market for home textiles"
+}
+]
+},
+{
+"id": "avanti",
+"name": "Avanti Feeds",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Avanti Feeds",
+"why": "The US is a top market for Indian shrimp"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Sun Pharma",
+"why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Dr. Reddy's",
+"why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Cipla",
+"why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+}
+]
+},
+{
+"id": "lupin",
+"name": "Lupin",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Lupin",
+"why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+}
+]
+},
+{
+"id": "aurobindo",
+"name": "Aurobindo Pharma",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Aurobindo Pharma",
+"why": "Generic drugs have often been exempted, but they are India's biggest export to the US"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US tariffs on Indian goods",
+"to": "Indian rupee strength",
+"why": "Trade friction can hit export earnings and sentiment on the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "d3dd5660877b",
+"title": "Nvidia leads AI chip market with strong growth; TSMC faces geopolitical risks but remains key manufacturer.",
+"url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVkQ0Y1kwaGQyWXFLajYtRDh1bnNOUnB3THN5ajhGdXNCVURlNEIxRERYWlliTW01YmNJT2E1M0RjTXZQNmVlUkdCV2RzcXhhMDlGSXBlTUZSYURMcFlEM2ttTWhUcUNWS2F0dC00Vm9aRjFoYm9kQ3BZZGZqbjMzU0RB?oc=5",
+"published": "2026-11-23T19:19:49+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+},
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+},
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+}
+]
+},
+{
+"id": "e10d11ea2c9a",
+"title": "The US Dollar's four-week winning streak meets Bessent's warning to the Fed",
+"url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNkFqaU03ay1OLWNqRDZWbmZRTUdfb3RObEFHVHZyTExmUkVoLUdHOVpDS0k2bEtJTWw2WHlycVBDUlYxQjVLQjZ4NzNjdEdDYVMtTFhQOEZ2OVpDWldyblJNVDFqNnRPcmc2YzJiRG16ZzNHeXV4QlhzSkJxekZidExkZFdBdjJmejhnUm9qY3hUTWRTN3c2WDJVTEprX0dXd3dubHg1WElVSk5XbUl5dVlXUGltZ2pKZFN4Qg?oc=5",
+"published": "2026-11-23T19:21:56+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "40a0f17f13c5",
+"title": "Gold Futures Rebound as Nvidia News Lifts Markets",
+"url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQ1lDUDJKYnppMTFtNDdCYUoyWkVjdTBJYWpOaWY3OHFRUTMxT0VSUTR0UWN4SEFQVVZJUlhqNjU4OFlDeXdHZkh4ZUFFSTNzWXhEcWpRQ0h0eVk3Q1ZmU2I5OURqdnhEc1hlQmRDcGVVLXZ5YW8yTWQ4dWYwRHE4V0dLTGZhd0p2S3A1V0l6MUs4M3RXaFh0TlJDZUdQYkdPRWNoclFEMl9sY2JTQzNZcDJn?oc=5",
+"published": "2026-11-23T20:10:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+}
+]
+},
+{
+"id": "70b9e43b97f6",
+"title": "Jensen Huang's Return Just Added About $500 Billion to Micron, Dell, TSMC and the AI Stocks That Depend on Nvidia",
+"url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNaExNcUVvVGhSOEk5Yld4cWgyWWh3NTV0cUowSnpNX2FMLTJENVZ6VFJoMzVsc25wc2F6V0NDcXh1c0ppRnVZMkhKTWF6WGhmVjFybFp2OGE2ckhzV1pxdVRNZkM0T05HbXItRjh5N016NzV5NUd4Mm5xTkZXc0pTMWpjMWlVMWZyT1V2Vmg2RmVtQ09wQWVlZlEwdFFSTE01MVR1LVBXRWp1czNNdGt3cVVTYTg5eTlPQzJxRWhvdUpqaGdobi1VaUZhSVBtdnA3SmpGS3RYN0VKQi1TaXRFQkNwLVJVQkJs?oc=5",
+"published": "2026-11-23T20:13:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+},
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+},
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+}
+]
+},
+{
+"id": "794677ad2322",
+"title": "Nvidia Sell-Off Puts AI CapEx Funding and Treasury Yields in Focus",
+"url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUDV2azZBTzc3bG40ejg2SGlUTHRZeGItYXpXRG1tYjVxUFV1NERZeU9wN2wzcEwyTnZESkx2cy11aFc4UkIyRzhCV1BYSXhacWxIdm4zQVJsTGFlemFLTE10a1dFMElRQkpmNWVzWVVKYlRWOXRfQXVrbWJsanJHd2kwMnFmMU56TFVad2tmeXpFM1hvSV9EV0xSUWJONWFWeDhhTA?oc=5",
+"published": "2026-11-23T20:55:56+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TCS",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Infosys",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Wipro",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "HCLTech",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Tech Mahindra",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+}
+]
+},
+{
+"id": "6651f78b4729",
+"title": "US drug prices leave patients facing impossible choices",
+"url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOamNFVHBtV1lpTFMzQzBTVTZtQ0hjcFpwVy1ETUlqMFJlc3ZzMHV4SlozNjdvNFJuMUFGSmk5OTZkZnU2eC11Z0VsQmk3QWlyakJsbkd0SGxhNjF1MGRabkdZZHlMUUdXRmgtR2x1ZlF3ZjczZnllY0xIYW5MV1dzQkNFeElUUGk5cU83ZWN4VE5saGJ1a0o0a0xvb2Vsd9IBowFBVV95cUxPMm9xbDJFNEIxZDJzQk9CWGRhVkFNbk1nZU8wQXRfU1FZSzhWRVBwWEdQcjMxdzBNZkpJYUY1MDFsbEUyR2ZfR083dTF4cHFzdE9LWm1tbTBMdHBOOGlkQkM0SmNNTVhIVENZRHFocXAtam02OG5qUlhMMWpsNVZLbHBYWnFxQVFVM0RscXIyUFk0RmR4V2h0a21NVlNiWHNwajI0?oc=5",
+"published": "2026-11-23T21:08:29+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US drug-pricing / pharma tariff pressure",
+"to": "Sun Pharma",
+"why": "US pricing or tariff pressure hits companies with large US generics sales"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US drug-pricing / pharma tariff pressure",
+"to": "Dr. Reddy's",
+"why": "US pricing or tariff pressure hits companies with large US generics sales"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US drug-pricing / pharma tariff pressure",
+"to": "Cipla",
+"why": "US pricing or tariff pressure hits companies with large US generics sales"
+}
+]
+},
+{
+"id": "lupin",
+"name": "Lupin",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US drug-pricing / pharma tariff pressure",
+"to": "Lupin",
+"why": "US pricing or tariff pressure hits companies with large US generics sales"
+}
+]
+},
+{
+"id": "aurobindo",
+"name": "Aurobindo Pharma",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US drug-pricing / pharma tariff pressure",
+"to": "Aurobindo Pharma",
+"why": "US pricing or tariff pressure hits companies with large US generics sales"
+}
+]
+}
+]
+},
+{
+"id": "a788772d09be",
+"title": "Gold Rebounds as Huang’s Return to Nvidia Revives Risk Appetite",
+"url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQnVYWFozdkRWaVRaOTlkRHZjZWlodnV4di1uU0k0VU5PdmRDbG9pRkpOcklGaE1Za21GUFlXU210Q1g5OEZWOVhpbXp6ZFpHY3VmekdxVncxTklZOXFBYXBQc0JiQnBERjY0cndzWlZRdS05b0RVRG5zb3FTWnZKWXZkOUpzZEVBZjdtOHliVERMcno0ZlVOd1B0ZUM1Y1BtUUVrZGRTV1p5bUJ1b0w0SzJPWWlHQdIBuwFBVV95cUxQa0tXNnlzTktLUFJyZnJUZ2lqN21fSDNzZnE1Z2JQVmlvVVpZOG1FSzNRR0RJbGxLN01xY0lsWUw2RWJpaE1pVzczNXlZdXBrcURudmlLV2trYURkOHNVX29yNGkyZmhFa0xQbEZJMW5KamlrcThuMDBxWF82aXFFckliUjU2MXV2QTU3aC1WaHkyQ21WZ0pKZkZlcVl6d19DUlR3UzBBZVBpQWdSR1hGM291YXM3MjJaVmVB?oc=5",
+"published": "2026-11-23T21:23:42+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+}
+]
+},
+{
+"id": "8a59d6c73a8c",
+"title": "Chinese Stocks Rise with TSMC (TSM) Leading Gains",
+"url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQR2VHZ2lSSUpyM1BlTUdTSndnZmlkWmtUWnNsdFN0SVcxZXhSNU41UGRNbS1aa2FvZ2ZtODA3TkNpaVVfVElDbXdySDZRQlhiOWpLR2Q4UHpoOGFfMHhndHoyU20tamlyM1lmRUp4YjBJbTAzZENFZm1NZ05SdXI0SjB6RWZJUi1hRExVUzllcw?oc=5",
+"published": "2026-11-23T23:15:39+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+},
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+},
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+}
+]
+},
+{
+"id": "53801784b0ec",
+"title": "Gold rebounds above $3,600 as CEO Nvidia returns, markets trim Fed hike",
+"url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZDZsZHFtWWUtQWMxZ1hMRzhsdFVndExaNEw1Vk45MU9ZdWtTRExYYzJOMVdNMWJzMktaT0ZwSWNubzBMeExScF81OW5JbXBESjdQMExiakdIdmFJM0VkNVBOUmhzZlVkT1h2ZlEtOGJ0cmZoT0hFU0dGalViVC10M0VIS3dPQ2pnd3Q3RUFocUxVZmViaHdIMXRGZlN1QlNpNno4dEttWnlFNHFLOXlDUmpn?oc=5",
+"published": "2026-11-23T23:26:45+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "71487155b12a",
+"title": "Gold, Silver, Platinum Forecasts – Gold Soars 3% As Jensen Huang Is Reinstated As Nvidia CEO",
+"url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPaEtDNVNEbzFTWldSVFYxdEtSQTBkNWFiLWRvWUFoaGNZQmtZTHBiSnBxVTlxOGgyRE1DVXNDdUhkeWhPUW92anBwelRMM1ZyUWUtZXJPc1VmQXZrTkRJbXBnZi1kNVBNeEdSU0V6cWZveFpWbVZMOE9nR3FnaFk2RkJVTmJKOE9Vc18wa2RiS0lWMDBNUzVHX2ZGSHM3TlBhdnZnZHA1aE8yUUpJenRVaktiSXdjbnctWmpWVS1vaWdCdVJreU5WeWdHdHFRX0hPUlJNZw?oc=5",
+"published": "2026-11-24T00:08:05+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+}
+]
+},
+{
+"id": "268a3f45b613",
+"title": "Fed's Williams says inflation remains too high, signals further rate hikes possible",
+"url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQN0JYdEtwNFdSRnZMcFpDMmZJM0tYaVpzOUlNQm1HbVJPN2k2aURQSHpmQ3BqaUs1V0k5Z3NhNm1oWWJMNkQ1ZjV0M1ZUS1NIRk45WHBtQWZyaThqWVNmOFAyMkxFczhCenE4b1VKZnNtdmZWS0hablpPRDRmNzIwRjRBZllvOGdvdjh4aTIyM25qbXVMYTk3UTVKbHB4WXVJeGI4dl9QRXZtTWVGczd1bUVfNnByTGVHeG9F0gHAAUFVX3lxTE4wU2NlUXdqTHBVU0V5Y1BhQ1BCb25aVE9ZVFZKYVBmd2xOSGs3NkZHbkZYTXJMN0Y2eDdhNU1WeXg3WmUxbjI0NWxzeE1Ra0lLcHlQRThFUzgteGlWQ2JacW1hRjVIaUVqSHV6dk5MUkVIUzVyQXRUWmtxRU1vRnRzQUZyTENKem8ydzB5QXVHSXlfdUFfQm51NFh6MGxTNEdnUUZRRF9ldktvU2I5c1VUTWhzSHpDUXk3WXNfQlUxSQ?oc=5",
+"published": "2026-11-24T00:41:36+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "31ee1c45eb41",
+"title": "Oil retreat offers limited relief as ringgit weakens against firmer US dollar",
+"url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdHY0SFdXYUVaTXZrTEZTc1ZXRDdubXJzWF9ZVFIwS25nVFF4b2RvQ29kTnQzNVlCa00tWTBrZHVYelNEMUpFSTUxdFZjNlNITzIwUzJ4Z2RURUdFRnlVX0ZCaUdlb3hJWFJFYk1FZFhxUjZwenNUdHVyUm9sbkRiSFRXZWxzckExX1VsOWRINVZlYWx0Tjl5dklZdm90NElGWk5fZk1QRVBFeEtqMFVtbkRxUEwzMTI2eEUxY2dDaDZLYkZMeWc?oc=5",
+"published": "2026-11-24T00:51:00+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "981230cd0cb1",
+"title": "Wall Street soars on Huang's return to Nvidia, Treasury yields rise",
+"url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-wall-street-soars-on-huangs-return-to-nvidia-treasury-yields-rise/articleshow/136116751.cms",
+"published": "2026-11-24T00:54:33+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "2892e6cd3327",
+"title": "Why FIIs Are Selling Indian Stocks in 2026: 5 Factors",
+"url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVWs1ZHdDYUk5WmVYNUg0M3RYX0FLTVI2bGZKSHRYM2JZTEcxakg0VTUwVzk3U2ozT1hZU05TTDBEZlJFQ1NDaUdTMUMydHotRUxTVkhGTzNrdTh4eGdveDFhS0hCTzdtX0NYU29nYkZzZjFXU2k1UVBEWXlqWmJqUDRjQ0t4WG1zQUE5Nnp5WE5hei1CWVFucEFBdkRvQQ?oc=5",
+"published": "2026-11-24T01:06:29+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "90868ffe87d5",
+"title": "US Stock Selloff Revives Question of a Fed ‘Put,’ This Time Under Warsh",
+"url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOamhQcGtONXo1SHNRdHRjWHRPZ3gzaHJCUTdNbW1BdUJ3ZUhLTjZ6X1F2dVo3SDdmZHZlWFIwMHVOX3RSZ3lFaE9vRzFDdUE0YlhFbXVTOWxuM2J3dkVwYjE0VE5JV0ZIaHNVLVp3d1dIMGxlX3JvVTNkNnRsRldmeUsyVk9IYldqbTFsU3RZUXpWclpybnhaei1CU2U5WDdQb1ZfcHpZdm5TdldRUlVfMVNnV0dDMG56eWRfNEhCbw?oc=5",
+"published": "2026-11-24T01:31:19+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "eaa2f12fea91",
+"title": "Houthi Warnings Move Insurers and Airlines Without a Strike on Jeddah",
+"url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNd3M5YVRHSWp0cVZhdlk3YmpWdUItWENkVFM0WC1pV2dUcjRZRm1RSmwyZ3Z4TlJCVmZaNWhyYlRCYjdnZG8tbmpyNTNtbGhJNDNrVmtnTkVoWnVpUS05M0xtMWlsY3ZtaDBpcDdQRUpqM3VWSzB2UEU1SFlua0oxeEt3?oc=5",
+"published": "2026-11-24T01:32:49+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "welspun",
+"name": "Welspun Living",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Global shipping costs",
+"why": "Ships avoiding the Red Sea sail around Africa, raising freight costs and transit times"
+},
+{
+"from": "Global shipping costs",
+"to": "Welspun Living",
+"why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+}
+]
+},
+{
+"id": "avanti",
+"name": "Avanti Feeds",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Global shipping costs",
+"why": "Ships avoiding the Red Sea sail around Africa, raising freight costs and transit times"
+},
+{
+"from": "Global shipping costs",
+"to": "Avanti Feeds",
+"why": "Higher freight costs squeeze exporters shipping to the US and Europe"
+}
+]
+},
+{
+"id": "ioc",
+"name": "Indian Oil",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Crude oil price",
+"why": "Disruption on a key tanker route adds a risk premium to oil"
+},
+{
+"from": "Crude oil price",
+"to": "Indian Oil",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "bpcl",
+"name": "BPCL",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Crude oil price",
+"why": "Disruption on a key tanker route adds a risk premium to oil"
+},
+{
+"from": "Crude oil price",
+"to": "BPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "hpcl",
+"name": "HPCL",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Crude oil price",
+"why": "Disruption on a key tanker route adds a risk premium to oil"
+},
+{
+"from": "Crude oil price",
+"to": "HPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "ongc",
+"name": "ONGC",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Crude oil price",
+"why": "Disruption on a key tanker route adds a risk premium to oil"
+},
+{
+"from": "Crude oil price",
+"to": "ONGC",
+"why": "As an oil producer, ONGC earns more when crude is higher"
+}
+]
+},
+{
+"id": "indigo",
+"name": "IndiGo (InterGlobe Aviation)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Crude oil price",
+"why": "Disruption on a key tanker route adds a risk premium to oil"
+},
+{
+"from": "Crude oil price",
+"to": "IndiGo (InterGlobe Aviation)",
+"why": "Jet fuel is an airline's single biggest cost"
+}
+]
+},
+{
+"id": "asianpaints",
+"name": "Asian Paints",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Red Sea shipping disruption",
+"to": "Crude oil price",
+"why": "Disruption on a key tanker route adds a risk premium to oil"
+},
+{
+"from": "Crude oil price",
+"to": "Asian Paints",
+"why": "Many paint raw materials are crude-oil derivatives"
+}
+]
+}
+]
+},
+{
+"id": "997b9551eea7",
+"title": "Bitcoin Bottom Signal? BTC Prints 4th Straight Higher Low Against Gold",
+"url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPLWNIWGVvOXctOUZYWThCcksxLXl3OUxZRGE1WEd4djFpZW93RkxLMGRubEJleldJcko5THhpdHMzUG9fZzRLVnJySjc5WXZCZ3pDWTRDaEY3ZnhLLW15Z1pkYkxYLVl3MW5fa2hjWVFRcHZNS2ZOU0N5dDAxLXAyUi1uYm9rU1Zrc3VVVTNfRmR0dGJIdDFyTVZfV0szUdIBowFBVV95cUxQNmpEY01VbUJkZ01qS2tFNGU2RzU2dk5pQ3B1T19WcXd0LW5rN25idXA4Z2U4ZVlaMUtFcFhyUXJWSFF3S3RuTHBWLWp6U2VwMWE0YkxLR2daY0NuTzNsaU5ya2UtNUNqZWpQQ1FORzB3SVBEX2NsNGx5REdJZ040TS1qR0tsdWZOWUM5QUhFbmRLVEw3OFlSZHZJdlBJby1iRlFz?oc=5",
+"published": "2026-11-24T01:36:50+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+}
+]
+},
+{
+"id": "6c2c068509ec",
+"title": "Ringgit Finds Little Relief As US Treasury Yields Strengthen Dollar",
+"url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOVzljcDh2cTVYUVc4bzdTUHBfcDZXYkVjMDRXTUF5cF9hR2ZDNlo3Y0dYbHRCcENDeG9JZDliTGcyNlI0alBmcnY5UjdxbUhzOEZ4MFc1b2NlNllrMDBldmREMkNDMGtOUFlwRFVOWWRvWjUtSkJYMGR6ck1qdzJrcW1PTnd3d1BzcmdWNWJ6eS0zWjZkM1NjMFBfYmt2dUQxaEZPVlpxZFZXZU5PRTFTTDE4SFl2cjhrR0o1c1hyY0Z5aTdjM0laNmtMU05kZXNtUkxNZUVxSmhSVS1QTVF0dW5yS0RTaExscXN1bTNFWUU5di1DNFY5UHJIOXRMM0xVd2pDTlNZbjRUTlU5bDhMc01ueFNQSWRQUTVnZnhOZHRtQ1hTZWNEVWR0dUtLUGlWRlo5Q2ZmN2o5UWIzZzdJM1daQ2RyUQ?oc=5",
+"published": "2026-11-24T01:38:21+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US Treasury yields",
+"to": "Foreign investor flows into India",
+"why": "Higher safe US yields make Indian equities less attractive to foreign funds"
+},
+{
+"from": "Foreign investor flows into India",
+"to": "Indian rupee strength",
+"why": "Foreign inflows bring dollars in and support the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "a6f80ed0fa75",
+"title": "India’s rupee has become an accidental carry star",
+"url": "https://economictimes.indiatimes.com/markets/stocks/news/indias-rupee-has-become-an-accidental-carry-star/articleshow/136117132.cms",
+"published": "2026-11-24T01:43:12+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "sunpharma",
+"name": "Sun Pharma",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Sun Pharma",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "drreddy",
+"name": "Dr. Reddy's",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Dr. Reddy's",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+},
+{
+"id": "cipla",
+"name": "Cipla",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian rupee strength",
+"to": "Cipla",
+"why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "1f72e794bd27",
+"title": "Oil News: WTI and Brent Hit August Lows as Supply Outlook Pressures Crude",
+"url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNa2hGRG1adWVqdUFtQ0xmYnd3THc5dk10a2RyZWoya2YwaU1NMnFNWXNvV0dtRW11cHpZcWtfV0piZ3RjajhWM2dxdjhpYlhBbUpZT0t6clZlVmRxM3VFZzFMTzRsYzFLM2pNNHRoMkJlRkJuT2VNbFpzclZuUXF0bFpJSkdGcVNrMHlBbmtObE1KOTJhWVZXd1hweVBfcFZXNHNyVEpHMVRMcFdDVUFMTUdlR1plSS1fWUpvazd5Rmk?oc=5",
+"published": "2026-11-24T01:52:48+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "ioc",
+"name": "Indian Oil",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian Oil",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "bpcl",
+"name": "BPCL",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "BPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "hpcl",
+"name": "HPCL",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "HPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "ongc",
+"name": "ONGC",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "ONGC",
+"why": "As an oil producer, ONGC earns more when crude is higher"
+}
+]
+},
+{
+"id": "indigo",
+"name": "IndiGo (InterGlobe Aviation)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "IndiGo (InterGlobe Aviation)",
+"why": "Jet fuel is an airline's single biggest cost"
+}
+]
+},
+{
+"id": "asianpaints",
+"name": "Asian Paints",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Asian Paints",
+"why": "Many paint raw materials are crude-oil derivatives"
+}
+]
+},
+{
+"id": "reliance",
+"name": "Reliance Industries",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Reliance Industries",
+"why": "A refining and petrochemicals giant: the effect depends on refining margins"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian rupee strength",
+"why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "f1dcb5a0f2ef",
+"title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy",
+"url": "https://www.cnbc.com/2026/11/24/us-adds-megaspeed-to-trade-blacklist-over-export-control-concerns-.html",
+"published": "2026-11-24T01:56:28+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+}
+]
+},
+{
+"id": "f59d2b146c96",
+"title": "Dollar climbs as renewed AI euphoria fuels Fed rate hike bets",
+"url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUDRObnU4TWFqVFA1QmFiVnB5NjdpOWRqWllubk96T01tM3dsS1hFWllmWEJFVkZWV25sNzRCRnpEVDAzQ1ZEMXlTa0Yyd1RiellkVnZ5WHphb2l4enkwZUtOdFZMYzROX2xyN2RjUEdHMmg0d3Q0RDBsNWMxQzVwdXc5cE5ZRXRoelJHLUlvenluMHhlWElvYlRuTk5ISXZucnRHN0prMkZOajRnVllJRU8wUlpQVlHSAbwBQVVfeXFMTVFMTUtjbDFGMy1oanZPVW11RnNnYnIwb09ZOFRjWmlrVWMxa01YZkhmMjhOMU52TmZQTUNibkJkeGtYZTNkZS1kTm54X18wYkcxQzNDVDNLdWJjc1dSdU12TEU4NnpQV0Mwc1cxdWE2U3NELWYxTHRpaXpFZGxld2tJeFhYTnB1aWhqd3dDWGJ4aHgtTV9BNThqcUZrTExjd1BubWVrNldEdXp4bTg3blU3Q0cyYkRuclFNU28?oc=5",
+"published": "2026-11-24T01:59:20+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
+},
+{
+"id": "a0025af927f3",
+"title": "Gold Price Today: Gold Rebounds to ₹1.23 Lakh, Silver Surges ₹3,090 Per Kg After Massive Market Crash",
+"url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNYWthZjN5OWpQX3NyVk54eHh6YU14TEJnTVBaWFBERFM3eFUyVEh0MnJPS0VLRThCZ2ItUzBKaHIyYThGSzE0N01ndVBxUUU1czlucnNwaVNOUkxaaUtzZURyNk81MmJiNVFwUExnMHBocWdTck5QelBJNVRJZFRTTEhYVUdNd1BYQzJmb1Bn?oc=5",
+"published": "2026-11-24T02:06:21+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+}
+]
+},
+{
+"id": "71be28fc1170",
+"title": "BYD to fight JLR over Ti7 sales ban in Land Rover Defender copycat case",
+"url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTFAySzVLNllyVzVRZ2x2Z0F4ZFEtQW8xaVM4NEdVSFQwbW1GVWcxNXpiTWgwejdlUFpPUnFUTlZ3dGwweFVSb2RBZlZndEY4VEVmOTAtT1o3X1lESVRFbHVoTXV2S2RZNEd6Z2RRSjc4dmJ2LUxNejJENHpxTUNJZTVwNGZHdXNFaFl5SHZsdm5PbUJaVlpYYTlFWjkzVmdvYzRlY3VhbTlSSkk?oc=5",
+"published": "2026-11-24T02:07:19+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Jaguar Land Rover",
+"to": "Tata Motors (JLR parent)",
+"why": "JLR is Tata Motors' biggest profit driver"
+}
+]
+}
+]
+},
+{
+"id": "dac7011685e5",
+"title": "Gold extends gain after Jensen Huang's return to Nvidia helm sparks rally",
+"url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPaWdBTl9EREtKbXJ1c2lxcGpMSXAyNERwaUNxbnR0RV9pUVB5OTNycGNTUXM5Tnh6M0VOLTZrVUtYODMweUdldVJqRldjVmtyNW1PY1VCZ2d2T2tIZ0JjUkFBS3JqaWxUQ29xT3ptNW5fS2dic0hjSDdVRlg4eFJtZkN0cHFWN3gwVWpyOHhremNuNlItaVdhWEVzVklELURjVVhicTR3Ny1aWE5pMkpVZ0xzVmdvVGtFVnlyNVVKN0FKa1Z3dVMyTzU1YjHSAcwBQVVfeXFMT2lnQU5fRERLSm1ydXNpcXBqTElwMjREcGlDcW50dEVfaVFQeTkzcnBjU1FzOU54ejNFTi02a1VLWDgzMHlHZXVSakZXY1ZrcjVtT2NVQmdndk9rSGdCY1JBQUtyamlsVENvcU96bTVuX0tnYnNIY0g3VUZYOHhSbWZDdHBxVjd4MFVqcjh4a3pjbjZSLWlXYVhFc1ZJRC1EY1VYYnE0dzctWlhOaTJKVWdMc1Znb1RrRVZ5cjVVSjdBSmtWd3VTMk81NWIx?oc=5",
+"published": "2026-11-24T02:10:29+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Apple",
+"why": "iPhones depend on a steady supply of advanced chips"
+}
+]
+}
+]
+},
+{
+"id": "b9b76b8335a0",
+"title": "WTI Crude Oil Drops Below $80 as Concerns Over Supply Surplus Weigh Down Prices",
+"url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQ01PSVhqWThSN0VacjhWMWE4Q1FfT1hxUzJFSkkwNXBRd1FvcWNiNUxqcVNpdWV1UklfNEpZODhJY1dFNElTTkFGaHpmM05NX0FiRjVSUmVYbExoY1pvbDZQTVpqblE1aVI4bkZiZWVpMHBRdk9CeWFITVJIRFF5bXhrUmc1QmREMFhBR2JhZzV6bjMzcWxXXzhR?oc=5",
+"published": "2026-11-24T02:12:46+00:00",
+"logged": "2026-11-24T02:14:27.215832+00:00",
+"impacts": [
+{
+"id": "ioc",
+"name": "Indian Oil",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian Oil",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "bpcl",
+"name": "BPCL",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "BPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "hpcl",
+"name": "HPCL",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "HPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "ongc",
+"name": "ONGC",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "ONGC",
+"why": "As an oil producer, ONGC earns more when crude is higher"
+}
+]
+},
+{
+"id": "indigo",
+"name": "IndiGo (InterGlobe Aviation)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "IndiGo (InterGlobe Aviation)",
+"why": "Jet fuel is an airline's single biggest cost"
+}
+]
+},
+{
+"id": "asianpaints",
+"name": "Asian Paints",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Asian Paints",
+"why": "Many paint raw materials are crude-oil derivatives"
+}
+]
+},
+{
+"id": "reliance",
+"name": "Reliance Industries",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Reliance Industries",
+"why": "A refining and petrochemicals giant: the effect depends on refining margins"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian rupee strength",
+"why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
 }
 ]
 }
