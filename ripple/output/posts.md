@@ -1,10 +1,10 @@
-# Ripple posts — 2026-11-25 08:38 UTC
+# Ripple posts — 2026-11-25 09:51 UTC
 
-## Oil prices fall over 1% as concerns mount over excess supply
+## How Lower Oil Prices Saw International Petroleum Corporation (TSX:IPCO) Ease Even as the S&P/TSX Composite Posted Its Biggest Gain Since April (23 Nov 2026)
 
 ### Post
 
-🌊 The news: Oil prices fall over 1% as concerns mount over excess supply
+🌊 The news: How Lower Oil Prices Saw International Petroleum Corporation (TSX:IPCO) Ease Even as the S&P/TSX Composite Posted Its Biggest Gain Since April (23 Nov 2026)
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -21,8 +21,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Oil prices fall over 1% as concerns mount over excess supply
-Source: سانا
+📰 How Lower Oil Prices Saw International Petroleum Corporation (TSX:IPCO) Ease Even as the S&P/TSX Composite Posted Its Biggest Gain Since April (23 Nov 2026)
+Source: kalkine.ca
 
 ▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
 ▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
@@ -30,17 +30,17 @@ Source: سانا
 ▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
 ▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
 
-https://news.google.com/rss/articles/CBMiTEFVX3lxTE9YTDZuZWJpLTBGS1I1MU5FQWxIQ0p1WmZxWUg5d2puLTRPazU2SGZMcS1KNGs2bkVycXVQZjdrRm8tWkpqVkR5NzVXYUI?oc=5
+https://news.google.com/rss/articles/CBMijAJBVV95cUxNWjlBVmJkSkxKOG0taWM4Y0ItbkdEQ1hJVzJXTGRnUXphU1JMWUk1ekFTOXJNRkwzajBqMll5OW5XNzl6RHlFbndRbFRqNlFtZ3lFNzBlR3ozVW9kWFNwY2tYUTI2SHM1VmZaNURfX3ZFOUhOVkctT01STS1zTEFGVG1tcUJ0UW5WYzFnbU1FMGkyMEdENmdFRjUzYm42WUd4U2ZCRXVPcXB4YjdrUDhSMGk2aUNHUlc0MVpocjVTeXR0dVU1ZU9UVnVXZDRxbnlrbTFpUVdkRkk1ZC1hOHJiV2RRcDB1cjRxeFV2bk1WeWxSTlBZMXhiaEN2RDdUdlBMZVg3V0JIejZYSkp6?oc=5
 
 Research & education only. Not investment advice.
 
 ---
 
-## Oil prices falls to 3-month low due to supply
+## Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
 
 ### Post
 
-🌊 The news: Oil prices falls to 3-month low due to supply
+🌊 The news: Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -57,8 +57,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Oil prices falls to 3-month low due to supply
-Source: Inspenet
+📰 Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
+Source: EnergyNow.com
 
 ▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
 ▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
@@ -66,7 +66,7 @@ Source: Inspenet
 ▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
 ▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
 
-https://news.google.com/rss/articles/CBMieEFVX3lxTFB4UlpjWTVrMVU1QmxOT2xpNlkwSnRfcjd6Y3dFQ3AwMHZWa0RJRUIwcFhtVWVZeURQSUFmTTI5cTVqV2FjcTJpMEdibFc3SzZlY0xFaGdxNFY4OHlDcWRKUENDdFI1VHZSM2ZKaC0yYTNXY0o3aUpWdw?oc=5
+https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5
 
 Research & education only. Not investment advice.
 

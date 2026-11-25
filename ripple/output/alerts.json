@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-25T08:38:55.167969+00:00",
+ "generated": "2026-11-25T09:51:35.828132+00:00",
  "sample": false,
- "headlines_scanned": 1073,
+ "headlines_scanned": 1017,
  "feed_errors": 1,
  "alerts": [
   {
    "id": "ee3a447b6c4e",
-   "title": "Oil prices fall over 1% as concerns mount over excess supply",
-   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9YTDZuZWJpLTBGS1I1MU5FQWxIQ0p1WmZxWUg5d2puLTRPazU2SGZMcS1KNGs2bkVycXVQZjdrRm8tWkpqVkR5NzVXYUI?oc=5",
-   "source": "سانا",
-   "published": "2026-11-25T07:56:57+00:00",
+   "title": "How Lower Oil Prices Saw International Petroleum Corporation (TSX:IPCO) Ease Even as the S&P/TSX Composite Posted Its Biggest Gain Since April (23 Nov 2026)",
+   "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNWjlBVmJkSkxKOG0taWM4Y0ItbkdEQ1hJVzJXTGRnUXphU1JMWUk1ekFTOXJNRkwzajBqMll5OW5XNzl6RHlFbndRbFRqNlFtZ3lFNzBlR3ozVW9kWFNwY2tYUTI2SHM1VmZaNURfX3ZFOUhOVkctT01STS1zTEFGVG1tcUJ0UW5WYzFnbU1FMGkyMEdENmdFRjUzYm42WUd4U2ZCRXVPcXB4YjdrUDhSMGk2aUNHUlc0MVpocjVTeXR0dVU1ZU9UVnVXZDRxbnlrbTFpUVdkRkk1ZC1hOHJiV2RRcDB1cjRxeFV2bk1WeWxSTlBZMXhiaEN2RDdUdlBMZVg3V0JIejZYSkp6?oc=5",
+   "source": "kalkine.ca",
+   "published": "2026-11-25T09:33:00+00:00",
    "sample": false,
    "seeds": [
     {
@@ -177,12 +177,12 @@
      "effect": "headwind"
     }
    ],
-   "score": 2.113,
+   "score": 2.157,
    "cross_market": true,
-   "post": "🌊 The news: Oil prices fall over 1% as concerns mount over excess supply\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil prices fall over 1% as concerns mount over excess supply\nSource: سانا\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiTEFVX3lxTE9YTDZuZWJpLTBGS1I1MU5FQWxIQ0p1WmZxWUg5d2puLTRPazU2SGZMcS1KNGs2bkVycXVQZjdrRm8tWkpqVkR5NzVXYUI?oc=5\n\nResearch & education only. Not investment advice.",
+   "post": "🌊 The news: How Lower Oil Prices Saw International Petroleum Corporation (TSX:IPCO) Ease Even as the S&P/TSX Composite Posted Its Biggest Gain Since April (23 Nov 2026)\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 How Lower Oil Prices Saw International Petroleum Corporation (TSX:IPCO) Ease Even as the S&P/TSX Composite Posted Its Biggest Gain Since April (23 Nov 2026)\nSource: kalkine.ca\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMijAJBVV95cUxNWjlBVmJkSkxKOG0taWM4Y0ItbkdEQ1hJVzJXTGRnUXphU1JMWUk1ekFTOXJNRkwzajBqMll5OW5XNzl6RHlFbndRbFRqNlFtZ3lFNzBlR3ozVW9kWFNwY2tYUTI2SHM1VmZaNURfX3ZFOUhOVkctT01STS1zTEFGVG1tcUJ0UW5WYzFnbU1FMGkyMEdENmdFRjUzYm42WUd4U2ZCRXVPcXB4YjdrUDhSMGk2aUNHUlc0MVpocjVTeXR0dVU1ZU9UVnVXZDRxbnlrbTFpUVdkRkk1ZC1hOHJiV2RRcDB1cjRxeFV2bk1WeWxSTlBZMXhiaEN2RDdUdlBMZVg3V0JIejZYSkp6?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.3,
-   "coverage": 18,
+   "coverage": 21,
    "sources": [
     {
      "title": "Markets rally in early trade on foreign fund inflows , lower crude oil",
@@ -248,10 +248,10 @@
   },
   {
    "id": "b9b76b8335a0",
-   "title": "Oil prices falls to 3-month low due to supply",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4UlpjWTVrMVU1QmxOT2xpNlkwSnRfcjd6Y3dFQ3AwMHZWa0RJRUIwcFhtVWVZeURQSUFmTTI5cTVqV2FjcTJpMEdibFc3SzZlY0xFaGdxNFY4OHlDcWRKUENDdFI1VHZSM2ZKaC0yYTNXY0o3aUpWdw?oc=5",
-   "source": "Inspenet",
-   "published": "2026-11-24T15:31:33+00:00",
+   "title": "Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5",
+   "source": "EnergyNow.com",
+   "published": "2026-11-24T16:37:35+00:00",
    "sample": false,
    "seeds": [
     {
@@ -419,12 +419,12 @@
      "effect": "headwind"
     }
    ],
-   "score": 2.062,
+   "score": 2.097,
    "cross_market": true,
-   "post": "🌊 The news: Oil prices falls to 3-month low due to supply\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil prices falls to 3-month low due to supply\nSource: Inspenet\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMieEFVX3lxTFB4UlpjWTVrMVU1QmxOT2xpNlkwSnRfcjd6Y3dFQ3AwMHZWa0RJRUIwcFhtVWVZeURQSUFmTTI5cTVqV2FjcTJpMEdibFc3SzZlY0xFaGdxNFY4OHlDcWRKUENDdFI1VHZSM2ZKaC0yYTNXY0o3aUpWdw?oc=5\n\nResearch & education only. Not investment advice.",
+   "post": "🌊 The news: Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal\nSource: EnergyNow.com\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.3,
-   "coverage": 15,
+   "coverage": 17,
    "sources": [
     {
      "title": "WTI Crude Oil Drops Below $80 as Concerns Over Supply Surplus Weigh Down Prices",
@@ -1856,12 +1856,12 @@
      "effect": "exposed"
     }
    ],
-   "score": 1.772,
+   "score": 1.781,
    "cross_market": true,
    "post": "🌊 The news: Oversupply Expectations Weigh on Market as International Oil Prices Break Key Thresholds; China's Domestic Refined Fuel Prices Poised for Synchronized Cut\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oversupply Expectations Weigh on Market as International Oil Prices Break Key Thresholds; China's Domestic Refined Fuel Prices Poised for Synchronized Cut\nSource: BigGo Finance\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMidkFVX3lxTE52eDB4cVpodVhYeEdWNFp3bmc2cmdaVGpCTk4yMGhoYktrNE5MX2FpeHhFa3NlYm40WU5fT0UzTHZmNXRsbVFHSFlRNHg2UEY4NFNfVy1jbVdIejVHUG9Va1Uxbl9yd3hMMkUyQ1VfVFB6emstdXc?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.05,
-   "coverage": 24,
+   "coverage": 25,
    "sources": [
     {
      "title": "Oil News: WTI and Brent Hit August Lows as Supply Outlook Pressures Crude",
@@ -2864,12 +2864,12 @@
      "effect": "tailwind"
     }
    ],
-   "score": 1.663,
+   "score": 1.636,
    "cross_market": true,
    "post": "🌊 The news: Oil Edges Lower as Expanding Supply Vies With Hormuz Attacks\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Edges Lower as Expanding Supply Vies With Hormuz Attacks\nSource: Bloomberg.com\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMingFBVV95cUxOenJ4V3FnWU1IVG94dUxRcE1YeTd1Y0Y0U1RWdkg4b1QwS2pPbFNhLUtmdGhwcE5XZWhnVXgzNVo2RkE2azdqdU53cW5KdDNVdWR3Z2JKc1RHX0Z2OWl0YjJsN3ZUTk9UbXhLNzR1Q19wOHVzVi00QmVxbUVWbVpJTk5rZldoalJRbW1hNmh2dnhqR216UlRpUTZDV1RZQQ?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 0.98,
-   "coverage": 25,
+   "coverage": 22,
    "sources": [
     {
      "title": "Oil touches three-month lows as rising supply offsets Hormuz threat",
@@ -3576,6 +3576,288 @@
      "title": "Oil Prices Fall Despite Hormuz Tensions as Supply Glut Fears Overwhelm Geopolitical Risk",
      "source": "BigGo Finance",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBqdlVCMWZRTGdzSW9Ta3R6V2ZnejQwOTN6Wl96LWZYdkpyVlI3c2pxbW9xc3hnMk9wVVVVcWkyUHJWUi1ZWHFtWUk5U3NzMFNhOXB1Y3lrOTNOUzU0Z19KVFhxV0c0QUQxUVVvbEItclFLeUhUZ3c?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "bf62702f4f6a",
+   "title": "Iran Reports Fresh Tanker Explosions as Hormuz Attacks Intensify",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObXVCeG5tc1dtTi1CRVJxVEZ1dktYdHJ5cEN1LVhPUVoxTHJIWUhwYk5PbnQ4XzRhRHF3R0I5Wll4VlpmQlgwZGo0dDRXVkhJLWcxcFdrdmlEVjJaWDlRX1lYcU10VXZELUdiLTc2WnpyLW5kMzcyYjJlX1J3R2VvVTAzWnFxcVlMMl9DN0hKN3hoTG9NbjJhTE9EQVFzRU52NTlwaXNRSXpobkhwY3ZzN0lCeWJZV2o1WDBNNtIBwgFBVV95cUxNbnBHRGdlSTRjQnZhbk9RUEc4eXFpRTNYN1YwN2hleWwyVW02bVhJbjkyTWZPUUdsR2NEVFlZMmtjRzJEdlNnOGYzVEZvV1NPVi1hY3d2UGZoWENvTnNOcnRkZmFiMktaQ2ZNWDM2ZFk2LXotdWxsVEstVkQxNkZRRWgyNnlUR19aVm9JOE9jWmhzY1QtaEM1cXMzMk1PV3VmbkZkd1Y0ZkJvVUhhVlpwRk9XVVNpblJfY3RNck1hVTZEZw?oc=5",
+   "source": "Crude Oil Prices Today | OilPrice.com",
+   "published": "2026-11-25T09:30:00+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "hormuz",
+     "name": "Strait of Hormuz tension",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.68,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.595,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.595,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.51,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.255,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.217,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Strait of Hormuz tension",
+       "to": "Crude oil price",
+       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
+      },
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.593,
+   "cross_market": true,
+   "post": "🌊 The news: Iran Reports Fresh Tanker Explosions as Hormuz Attacks Intensify\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Iran Reports Fresh Tanker Explosions as Hormuz Attacks Intensify\nSource: Crude Oil Prices Today | OilPrice.com\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMivAFBVV95cUxObXVCeG5tc1dtTi1CRVJxVEZ1dktYdHJ5cEN1LVhPUVoxTHJIWUhwYk5PbnQ4XzRhRHF3R0I5Wll4VlpmQlgwZGo0dDRXVkhJLWcxcFdrdmlEVjJaWDlRX1lYcU10VXZELUdiLTc2WnpyLW5kMzcyYjJlX1J3R2VvVTAzWnFxcVlMMl9DN0hKN3hoTG9NbjJhTE9EQVFzRU52NTlwaXNRSXpobkhwY3ZzN0lCeWJZV2o1WDBNNtIBwgFBVV95cUxNbnBHRGdlSTRjQnZhbk9RUEc4eXFpRTNYN1YwN2hleWwyVW02bVhJbjkyTWZPUUdsR2NEVFlZMmtjRzJEdlNnOGYzVEZvV1NPVi1hY3d2UGZoWENvTnNOcnRkZmFiMktaQ2ZNWDM2ZFk2LXotdWxsVEstVkQxNkZRRWgyNnlUR19aVm9JOE9jWmhzY1QtaEM1cXMzMk1PV3VmbkZkd1Y0ZkJvVUhhVlpwRk9XVVNpblJfY3RNck1hVTZEZw?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 0.98,
+   "coverage": 18,
+   "sources": [
+    {
+     "title": "Iran claims downing of US MQ - 9 , Lucas drones over Strait of Hormuz",
+     "source": "aninews.in",
+     "url": "https://aninews.in/news/world/middle-east/iran-claims-downing-of-us-mq-9-lucas-drones-over-strait-of-hormuz20261125101519/"
+    },
+    {
+     "title": "Iran Claims It Shot Down Two US Drones Over Strait of Hormuz",
+     "source": "Open Magazine",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOGRoRWZLVk44aEtPWnB0NHhoVkpLY2ttNGtqVTF3RjFVM2NzNUFHRGswRWx6clQ3MENod2dzWldfcVJnQjZSV2dGNWRWa2dQVW91Y3JtbEg0NFBoNXZfQTJfOVI2SktXZXV1aUc0QWw4dGRlU3htVmIzWi1FUkNlMlJtblpZWFlaTTYtbG5URi1PR2daRDIxMkZ3?oc=5"
+    },
+    {
+     "title": "Who Owns the Strait of Hormuz Now? How the Iran War Turned a Chokepoint into a Customs House",
+     "source": "Modern Diplomacy",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMnhfUEVPU0FoY2lJSFJyQ3dETWJfeWRpYVZyS21BLXVxSHdLRkRaUmhfY01MZW1YRVpJX1IyRU5nNjBGWUd4MFdwSk5oOXhWX2VnWWZTNFl6bHZfZUx5N2tTUTlQaDBZeFNZZTY4dXRfdWhVZC1iamN4ZkFfcDkyMFJlS19wQnJlTlVTWko0MEJCN1o3TjduUmdIM0dyR2Q3Rk1QZHI0XzJUaVFjQlFTcGgtNTQwUkE0dDhlZDhsYWo5Z2ZrSlVkbmVn?oc=5"
+    },
+    {
+     "title": "Oil Declines as Rising Supply Offsets Escalating Hormuz Attacks",
+     "source": "Energy Connects",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYVZVUVRxVjhBYnBoMjJqNHdGQTFKNTJXb3ZyRHZKQUFwMjBEM3NNRFp2Z1dIdWs3N0hXXzZfVTBhbXpRdlZ1ZERDRHRub250WXA5RWR3ZFo2TnlTVlgzbm45WW9zVVVOWnVfRFNiWUY2OHZYSW1PY1RMMmRrRTF3bk9reDhDQVNNMC1nYVMtSVdDQ0JkMjdDUGtlN0thRGtEUFRMMF9OMjVWNjJGeTBWNnhPMFdxWkxpSWc?oc=5"
+    },
+    {
+     "title": "Oil Edges Lower as Expanding Supply Vies With Hormuz Attacks",
+     "source": "Bloomberg.com",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOenJ4V3FnWU1IVG94dUxRcE1YeTd1Y0Y0U1RWdkg4b1QwS2pPbFNhLUtmdGhwcE5XZWhnVXgzNVo2RkE2azdqdU53cW5KdDNVdWR3Z2JKc1RHX0Z2OWl0YjJsN3ZUTk9UbXhLNzR1Q19wOHVzVi00QmVxbUVWbVpJTk5rZldoalJRbW1hNmh2dnhqR216UlRpUTZDV1RZQQ?oc=5"
+    },
+    {
+     "title": "Three Sinokor VLCCs hit in latest Strait of Hormuz attacks",
+     "source": "Riviera Maritime Media",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeW45d3ZlcGhlbTZWdkt5aDlKUnJkMmdPTFFhQ2o0V1lOVW52TjdnT3o4X0JPOEtSdTJ6bEdtd3YtUkc4NFZWM19WVl9SWHZhSnhvbDlSMExVbFRpT3pBalZhc1dCT1lRQ0trblJyU083UERjSXhGckdGNktBSnN6enhnRTdKckY1Zy16WmFpNXAxZlZIWjg0anlLdWZXZ1pCZTZkM0lmaUxZVW8?oc=5"
+    },
+    {
+     "title": "Washington Post. . Lewis Pugh, the patron of the oceans for the United Nations, swam through the Strait of Hormuz, witnessing attacks on ships. Pugh said the swim’s purpose was to highlight the immense environmental cost of the Iran war. https://wapo.st/4C4",
+     "source": "Facebook",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYUl3TURfLVZLSkw1blpLWGNSZlB4WUJZWFE2V0pLTk01TlVfak9WYlJ4SnJLa0dEdXBiN0N4dGc5V2xNRG53c3JlanFhU1R2NFpMVU9TS01McndKU2s0R1ZqV3NsanBtRUlIYVA1dF8wU3JON2JPYjFfbld2VGNMNWE0dzk2U0h5Q08yWnhkOVo1Y2ppRjhxMTdBYVFRX0lvZXN4MVRxOWlNVWduZGxhTGg0Nm9MTENwR0pzTkRuV19hT3JYNko0?oc=5"
+    },
+    {
+     "title": "Iran Claims Downing US Drones in Strait of Hormuz Amid Rising Tensions",
+     "source": "Ratopati",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ21GMU5HUVliNDBlOGtDSVMtQ2Fya0VwT190UXkzZWVqa3dDYnAtbk1ZbWNRNDhORHZVcFFZMXlmYW9ONVBlZUl5OXZHaUZ5WUZvX2FqcEgzdWxTTmQ5N1VLZ1p1SGE4UmVLOWJFNjVmNGd1VWN0VS15bmFZSEpwLXJYSTFKOXBZRDVubVF2b0o3a2hyRGdrM29hQjRGMXpNZlBhbXFUSzQxQk1W?oc=5"
+    },
+    {
+     "title": "Iranian army claims downing of MQ-9 drone over Hormuz Strait",
+     "source": "Middle East Eye",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb0lSZmp3SmVESzFVWjJfMXVZUThweUJfeFJWTVl2TGkyOTRLWGVWNl9NMzcydFI5S1JxTVZ2Y1R4a3FmWGl1VDZFdG54V1ZwRTR6UlRIYk1aN0llUHFxM3gzVVJaOEFHY1Y4Y0owTGtlTmJVaTVOYmpTaTZfYWtRd2ZGNktzU3ZsdmxwYVpMaTNKYmhlSFVsWUR0N29EcFJYSHNQLUs4S3U2S2RFWjVFc2MteFE?oc=5"
+    },
+    {
+     "title": "Trump warns of war funding fight as tanker attacks raise Hormuz tension",
+     "source": "The National",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUjBtM2VZQ1NnZ0p1QUNSOGtVZ1BFcVA4OV9WYzF1VHVXMXQzV2Zqc01kQ09aMEhLZUlHR2djQ194Ynk5UTFVeGhtMzRWMFc3VFlNdEtJNnEwZ0xQYnNsazhyd0NUNlRORDc4eU5UbVdhRTVVdWtxQTVycXhHSkdub2xDR0ZvQUhNVWMtMjM2bENpTGZITFhQV2JOaVRhQmhVUW9McFdHN2ZyQlp1YkdLN3lYRmlwUGFtVWw3ZTBicmtoQnM?oc=5"
+    },
+    {
+     "title": "Iran Reports Fresh Tanker Explosions as Hormuz Attacks Intensify",
+     "source": "Crude Oil Prices Today | OilPrice.com",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObXVCeG5tc1dtTi1CRVJxVEZ1dktYdHJ5cEN1LVhPUVoxTHJIWUhwYk5PbnQ4XzRhRHF3R0I5Wll4VlpmQlgwZGo0dDRXVkhJLWcxcFdrdmlEVjJaWDlRX1lYcU10VXZELUdiLTc2WnpyLW5kMzcyYjJlX1J3R2VvVTAzWnFxcVlMMl9DN0hKN3hoTG9NbjJhTE9EQVFzRU52NTlwaXNRSXpobkhwY3ZzN0lCeWJZV2o1WDBNNtIBwgFBVV95cUxNbnBHRGdlSTRjQnZhbk9RUEc4eXFpRTNYN1YwN2hleWwyVW02bVhJbjkyTWZPUUdsR2NEVFlZMmtjRzJEdlNnOGYzVEZvV1NPVi1hY3d2UGZoWENvTnNOcnRkZmFiMktaQ2ZNWDM2ZFk2LXotdWxsVEstVkQxNkZRRWgyNnlUR19aVm9JOE9jWmhzY1QtaEM1cXMzMk1PV3VmbkZkd1Y0ZkJvVUhhVlpwRk9XVVNpblJfY3RNck1hVTZEZw?oc=5"
+    },
+    {
+     "title": "Reopening of Strait of Hormuz may not automatically restore normal shipping operations: Report",
+     "source": "www.indiagazette.com",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOX1F3eGJSTXVvU0d5Y0RRVHVNLV9ZWFJLRU9EQy12VlQwOVhIMlFXeEVEc1A4eFJPb0RnMXJ5NjJVZHA1NHlhQ01XQ25hazIyRnRsdkpKZ0hLbjhFWU9LQ09WVlYyMk84ODE3bmFsUC1JbnBjRTNoWGUydjBvTFotVGxjdndwUGx1X1EtY0pOOFZzNjRvX2hfQ3BGd2tkRHY0QUJFeXB2TndUb0xvOWstaENYeWd1ekJhNVk1SzNQLWlzWVBMMFhqaHBjbVYtNmhjV1JV?oc=5"
     }
    ]
   },
@@ -6491,278 +6773,6 @@
    ]
   },
   {
-   "id": "bf62702f4f6a",
-   "title": "Iran Claims Downing US Drones in Strait of Hormuz Amid Rising Tensions",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ21GMU5HUVliNDBlOGtDSVMtQ2Fya0VwT190UXkzZWVqa3dDYnAtbk1ZbWNRNDhORHZVcFFZMXlmYW9ONVBlZUl5OXZHaUZ5WUZvX2FqcEgzdWxTTmQ5N1VLZ1p1SGE4UmVLOWJFNjVmNGd1VWN0VS15bmFZSEpwLXJYSTFKOXBZRDVubVF2b0o3a2hyRGdrM29hQjRGMXpNZlBhbXFUSzQxQk1W?oc=5",
-   "source": "Ratopati",
-   "published": "2026-11-25T08:26:19+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "hormuz",
-     "name": "Strait of Hormuz tension",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.68,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.68,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.68,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.595,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.595,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.51,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.255,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.217,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Strait of Hormuz tension",
-       "to": "Crude oil price",
-       "why": "About a fifth of the world's oil passes through the Strait of Hormuz"
-      },
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "tailwind"
-    }
-   ],
-   "score": 1.468,
-   "cross_market": true,
-   "post": "🌊 The news: Iran Claims Downing US Drones in Strait of Hormuz Amid Rising Tensions\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Iran Claims Downing US Drones in Strait of Hormuz Amid Rising Tensions\nSource: Ratopati\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMirAFBVV95cUxQQ21GMU5HUVliNDBlOGtDSVMtQ2Fya0VwT190UXkzZWVqa3dDYnAtbk1ZbWNRNDhORHZVcFFZMXlmYW9ONVBlZUl5OXZHaUZ5WUZvX2FqcEgzdWxTTmQ5N1VLZ1p1SGE4UmVLOWJFNjVmNGd1VWN0VS15bmFZSEpwLXJYSTFKOXBZRDVubVF2b0o3a2hyRGdrM29hQjRGMXpNZlBhbXFUSzQxQk1W?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 0.98,
-   "coverage": 10,
-   "sources": [
-    {
-     "title": "Iran claims downing of US MQ - 9 , Lucas drones over Strait of Hormuz",
-     "source": "aninews.in",
-     "url": "https://aninews.in/news/world/middle-east/iran-claims-downing-of-us-mq-9-lucas-drones-over-strait-of-hormuz20261125101519/"
-    },
-    {
-     "title": "Iran Claims It Shot Down Two US Drones Over Strait of Hormuz",
-     "source": "Open Magazine",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOGRoRWZLVk44aEtPWnB0NHhoVkpLY2ttNGtqVTF3RjFVM2NzNUFHRGswRWx6clQ3MENod2dzWldfcVJnQjZSV2dGNWRWa2dQVW91Y3JtbEg0NFBoNXZfQTJfOVI2SktXZXV1aUc0QWw4dGRlU3htVmIzWi1FUkNlMlJtblpZWFlaTTYtbG5URi1PR2daRDIxMkZ3?oc=5"
-    },
-    {
-     "title": "Who Owns the Strait of Hormuz Now? How the Iran War Turned a Chokepoint into a Customs House",
-     "source": "Modern Diplomacy",
-     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMnhfUEVPU0FoY2lJSFJyQ3dETWJfeWRpYVZyS21BLXVxSHdLRkRaUmhfY01MZW1YRVpJX1IyRU5nNjBGWUd4MFdwSk5oOXhWX2VnWWZTNFl6bHZfZUx5N2tTUTlQaDBZeFNZZTY4dXRfdWhVZC1iamN4ZkFfcDkyMFJlS19wQnJlTlVTWko0MEJCN1o3TjduUmdIM0dyR2Q3Rk1QZHI0XzJUaVFjQlFTcGgtNTQwUkE0dDhlZDhsYWo5Z2ZrSlVkbmVn?oc=5"
-    },
-    {
-     "title": "Oil Declines as Rising Supply Offsets Escalating Hormuz Attacks",
-     "source": "Energy Connects",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYVZVUVRxVjhBYnBoMjJqNHdGQTFKNTJXb3ZyRHZKQUFwMjBEM3NNRFp2Z1dIdWs3N0hXXzZfVTBhbXpRdlZ1ZERDRHRub250WXA5RWR3ZFo2TnlTVlgzbm45WW9zVVVOWnVfRFNiWUY2OHZYSW1PY1RMMmRrRTF3bk9reDhDQVNNMC1nYVMtSVdDQ0JkMjdDUGtlN0thRGtEUFRMMF9OMjVWNjJGeTBWNnhPMFdxWkxpSWc?oc=5"
-    },
-    {
-     "title": "Oil Edges Lower as Expanding Supply Vies With Hormuz Attacks",
-     "source": "Bloomberg.com",
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOenJ4V3FnWU1IVG94dUxRcE1YeTd1Y0Y0U1RWdkg4b1QwS2pPbFNhLUtmdGhwcE5XZWhnVXgzNVo2RkE2azdqdU53cW5KdDNVdWR3Z2JKc1RHX0Z2OWl0YjJsN3ZUTk9UbXhLNzR1Q19wOHVzVi00QmVxbUVWbVpJTk5rZldoalJRbW1hNmh2dnhqR216UlRpUTZDV1RZQQ?oc=5"
-    },
-    {
-     "title": "Three Sinokor VLCCs hit in latest Strait of Hormuz attacks",
-     "source": "Riviera Maritime Media",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeW45d3ZlcGhlbTZWdkt5aDlKUnJkMmdPTFFhQ2o0V1lOVW52TjdnT3o4X0JPOEtSdTJ6bEdtd3YtUkc4NFZWM19WVl9SWHZhSnhvbDlSMExVbFRpT3pBalZhc1dCT1lRQ0trblJyU083UERjSXhGckdGNktBSnN6enhnRTdKckY1Zy16WmFpNXAxZlZIWjg0anlLdWZXZ1pCZTZkM0lmaUxZVW8?oc=5"
-    },
-    {
-     "title": "Washington Post. . Lewis Pugh, the patron of the oceans for the United Nations, swam through the Strait of Hormuz, witnessing attacks on ships. Pugh said the swim’s purpose was to highlight the immense environmental cost of the Iran war. https://wapo.st/4C4",
-     "source": "Facebook",
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYUl3TURfLVZLSkw1blpLWGNSZlB4WUJZWFE2V0pLTk01TlVfak9WYlJ4SnJLa0dEdXBiN0N4dGc5V2xNRG53c3JlanFhU1R2NFpMVU9TS01McndKU2s0R1ZqV3NsanBtRUlIYVA1dF8wU3JON2JPYjFfbld2VGNMNWE0dzk2U0h5Q08yWnhkOVo1Y2ppRjhxMTdBYVFRX0lvZXN4MVRxOWlNVWduZGxhTGg0Nm9MTENwR0pzTkRuV19hT3JYNko0?oc=5"
-    },
-    {
-     "title": "Iran Claims Downing US Drones in Strait of Hormuz Amid Rising Tensions",
-     "source": "Ratopati",
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ21GMU5HUVliNDBlOGtDSVMtQ2Fya0VwT190UXkzZWVqa3dDYnAtbk1ZbWNRNDhORHZVcFFZMXlmYW9ONVBlZUl5OXZHaUZ5WUZvX2FqcEgzdWxTTmQ5N1VLZ1p1SGE4UmVLOWJFNjVmNGd1VWN0VS15bmFZSEpwLXJYSTFKOXBZRDVubVF2b0o3a2hyRGdrM29hQjRGMXpNZlBhbXFUSzQxQk1W?oc=5"
-    },
-    {
-     "title": "Iranian army claims downing of MQ-9 drone over Hormuz Strait",
-     "source": "Middle East Eye",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb0lSZmp3SmVESzFVWjJfMXVZUThweUJfeFJWTVl2TGkyOTRLWGVWNl9NMzcydFI5S1JxTVZ2Y1R4a3FmWGl1VDZFdG54V1ZwRTR6UlRIYk1aN0llUHFxM3gzVVJaOEFHY1Y4Y0owTGtlTmJVaTVOYmpTaTZfYWtRd2ZGNktzU3ZsdmxwYVpMaTNKYmhlSFVsWUR0N29EcFJYSHNQLUs4S3U2S2RFWjVFc2MteFE?oc=5"
-    },
-    {
-     "title": "Trump warns of war funding fight as tanker attacks raise Hormuz tension",
-     "source": "The National",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUjBtM2VZQ1NnZ0p1QUNSOGtVZ1BFcVA4OV9WYzF1VHVXMXQzV2Zqc01kQ09aMEhLZUlHR2djQ194Ynk5UTFVeGhtMzRWMFc3VFlNdEtJNnEwZ0xQYnNsazhyd0NUNlRORDc4eU5UbVdhRTVVdWtxQTVycXhHSkdub2xDR0ZvQUhNVWMtMjM2bENpTGZITFhQV2JOaVRhQmhVUW9McFdHN2ZyQlp1YkdLN3lYRmlwUGFtVWw3ZTBicmtoQnM?oc=5"
-    }
-   ]
-  },
-  {
    "id": "d040ca1cb43c",
    "title": "Oil prices up as traders await OPEC output decision",
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQR19wbF9vb3F0VzZFbFpvanpwTzJsdjN4Yl9xMGIzR25Nc2NVd0Y0bVRJd0NoUUY0YmpoNWYtOEREaXhpUFdWd2xySUxzU0liRXltX2JSdHJ6OGR0NXdhNG1NeG9QLWRFaU5VR3RiMjFSRGtYci01VTJqWFNKMmc0OXdMbDhrako2bl91ckhOcklldGZRbzRR?oc=5",
@@ -7221,12 +7231,12 @@
      "effect": "exposed"
     }
    ],
-   "score": 1.371,
+   "score": 1.383,
    "cross_market": true,
    "post": "🌊 The news: I Drove A Range Rover Classic With A Chevy V8—It's Delightfully Wrong\n\nThe hidden link nobody's talking about:\nJaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR is Tata Motors' biggest profit driver.\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 I Drove A Range Rover Classic With A Chevy V8—It's Delightfully Wrong\nSource: Motor1.com\n\n◆ Tata Motors (JLR parent) [IN] — exposed, via Jaguar Land Rover\n\nhttps://news.google.com/rss/articles/CBMigAFBVV95cUxNbDR5RU1KZGFGZjRzWlgxcmJHVU5RWjFLM24yemtJZzgyakx3Rm5IV2ZJVGdPeWtsUTl4N0ZDYkNoZ3JpTS1FQXJ4TnZSUDU5NDd5V19hLWJSUWU2QzVvUnhGUkpCYjdSd3ZKZ0FqbFJ2R05jenBNMnZoM2E2Z1lZRw?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 0.8,
-   "coverage": 27,
+   "coverage": 29,
    "sources": [
     {
      "title": "Land Rover vows to 'protect' designs after EU halt of rival BYD model",
@@ -7287,6 +7297,213 @@
      "title": "Nearly 400 Range Rover and Volkswagen vehicles recalled over safety defects",
      "source": "The Citizen",
      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObUhPZ3l2UVNqLXhFYy16S25mOVdrU1pQel85cmFlbURNMHhVZ08xU2ItUWtCMEh2bkRCTk5aczR3TVVTZUx1VTNPbVNvd05Yb2hCdVdiVnEyTWQ5YW9YYUcyWWhKWDhoRFdabndCbGtVSnNuNkFwNDZHdHV3bDlvb1NkYlhzUENGWV9xRDJOdThMOXpnelg3aFducUkxUFBEb2dQdE15RkoyOHBzRU1fYjd5ck9hZkdkRWQ0TjladkRpVG95NGFDUGcxdDk0UGww?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "1fb41cdd779e",
+   "title": "Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz",
+   "url": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-despite-attacks-on-vessels-in-strait-of-hormuz/article71741053.ece",
+   "source": "thehindubusinessline.com",
+   "published": "2026-11-25T05:15:00+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "crude",
+     "name": "Crude oil price",
+     "dir": "in the news"
+    },
+    {
+     "id": "hormuz",
+     "name": "Strait of Hormuz tension",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.656,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.656,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.562,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.239,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "exposed"
+    }
+   ],
+   "score": 1.365,
+   "cross_market": true,
+   "post": "🌊 The news: Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz\nSource: thehindubusinessline.com\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-despite-attacks-on-vessels-in-strait-of-hormuz/article71741053.ece\n\nResearch & education only. Not investment advice.",
+   "base_score": 1.05,
+   "coverage": 4,
+   "sources": [
+    {
+     "title": "Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz",
+     "source": "thehindubusinessline.com",
+     "url": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-despite-attacks-on-vessels-in-strait-of-hormuz/article71741053.ece"
+    },
+    {
+     "title": "Brent below $91; Oil slips as supply surplus hopes offset Strait of Hormuz worries amid renewed escalation",
+     "source": "CNBC TV18",
+     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNbUVuZ0h6azA4blZMRzdFYnk0cW1vbldwRUlLN2ZGZDJ2Qk1qNTU2d2dEdmw3OU5JdHhRaks5LVhhWVNJaVdwcXNnMi1FVFZiSmw1TnZtUWZIUnRpSVFhZHdqbkllajR3b0VRUTRqWVRoc1o1Y3JIMWIydldZYmpTeUlhQTdTSjNBRTdzNzM3UkRSRTQ5ejNhZmRIQ1F1ZUExVDJzYnhBenYzWFpZbUhzVmdBVnJ6SV91OTRRQXB1bHdzOUliaWtqaHZwcGJxb0VYSDItU3lWRWVBZmN6aGxJUk90NVprNjAtY0kyTUtBODJKUdIB9wFBVV95cUxQN2VDVGFOamx1MmNqNkVVOWlUTzJ1eGtpZTAza2E4cmtyTTJIblJ4WmRCbkVJYzVzOWpOSFVFN0cyeTZPWmljM1NOWjBwdUw0TzVIUmRRdkpwT1p2R28xblVaeWk1ODZ2NHVhOU12bjFFSTFKQlBCaGt4cXJKUkJGRVI2dDhXVTJBa0k2S0pCMXFsUVdLenFoT3BFMklCcEZSX0poRXdQdEZTcktwNjBLdUtwUE9YTHhWQVN1T29YZXlsNTNLWFR0dWdrdWw5NnlOSElYckVDOHVia1dwbWVQdXlnN1RQWXRmRHJFOGlHdDgyUkhSVmVV?oc=5"
+    },
+    {
+     "title": "Brent crude near $91 amid Hormuz supply fears | Tap to know more | Inshorts",
+     "source": "Inshorts",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNd1NxS1d1WUlVM1VGWTNaa2Y5aFNvQlBpdnFYaXB6ZTNRUWlNeXVCRmFyMFp5TmRFd0NaeUNOMmFkazNOcjJrbEgzNG1oZE9QQjQ0NkI3SlNfRWFkVnpTVHFwLUtOdXo5ODRXZmlvZ1R2MlkwSWJqZGhfSHRhZnk4ZVN1cFZCdUxPLXNHelBEZFJGaEJxUnZR0gGXAUFVX3lxTE13U3FLV3VZSVUzVUZZM1prZjloU29CUGl2cVhpcHplM1FRaU15dUJGYXIwWnlOZEV3Q1p5Q04yYWRrM05yMmtsSDM0bWhkT1BCNDQ2QjdKU19FYWRWelNUcXAtS051ejk4NFdmaW9nVHYyWTBJYmpkaF9IdGFmeThlU3VwVkJ1TE8tc0d6UERkUkZoQnFSdlE?oc=5"
+    },
+    {
+     "title": "3 Oil And Gas Stocks Screening For Price Upside As Hormuz Risks Rise",
+     "source": "Yahoo Finance",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVVdRVTNMZ2V1Mm9UMDZsVGlTQVN6Y0RBSXBfZXZXQnhwRnpjT1JvY1pld05OdmJDUkRGQ2ZRNENMUXYyd2ZRcFQtWXFTRDVBdXhPRTZuUHlHa2tXYVdsckZWZTJTa1J5WmF6REpMd1gzQ0p3ZkctRjZoczZzTXJOTWwwN1c4TlZIellz?oc=5"
     }
    ]
   },
@@ -7973,6 +8190,244 @@
      "title": "Alphabet Projects 48 Billion More for AI Spending in 2027",
      "source": "SuaraGarut.ID",
      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1maGV0c2VYVFJvcnVkUEdfS0c4ZXdFUFlOQWtCbjBQYWN5Q29aMGgxcmNCWDFwNVY5TDlPcHdCRXoyRnZaOVE3OEFWU0dXU1gzOHh6bnBLUnEyakJZOFJj?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "56368164c52e",
+   "title": "‘No one benefits...’: China responds to US tariff plans, calls ‘overcapacity’ claims false premise",
+   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPcTMtWWRIeHNPUGlPQ0NhUk9Bb1lVaVppWUw2c081SXQxSXN2X2hCQ1hkLVRoaUs5cl9mSnJBY2w4T0xJTzk5aUpBcERfdDRfNmZPdU1YVmdnU3hEb0l6MWQ3T09DZW5yVHlOTS1RcWI3RnE1eGhmNUlDMk1nSmZrbTVRenVoV1owODEyRGNZZGluTThuT1J3aGxYcDM1OXRtN0tOdWxNVU5GUkJvbkVhNmk5cDREZFVYTmpES3B0TE8zbVJOaDVVYllHSnVkemQzUVEzVDNmNURpMzNkc2Z5bUlZbWFvam5WODJNbC0temhjS3o2VExNeWhWOV9nMU1y?oc=5",
+   "source": "The Economic Times",
+   "published": "2026-11-25T09:11:15+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "us_tariffs",
+     "name": "US import tariffs (general)",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "jlr",
+     "name": "Jaguar Land Rover",
+     "market": "Global",
+     "ticker": null,
+     "unlisted": true,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.5,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Jaguar Land Rover",
+       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "tatamotors",
+     "name": "Tata Motors (JLR parent)",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.425,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Jaguar Land Rover",
+       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+      },
+      {
+       "from": "Jaguar Land Rover",
+       "to": "Tata Motors (JLR parent)",
+       "why": "JLR is Tata Motors' biggest profit driver"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "apple",
+     "name": "Apple",
+     "market": "US",
+     "ticker": "AAPL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.4,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "novelis",
+     "name": "Novelis",
+     "market": "US",
+     "ticker": null,
+     "unlisted": true,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.3,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Novelis",
+       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "foxconn",
+     "name": "Foxconn",
+     "market": "Global",
+     "ticker": "2317.TW",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.238,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      },
+      {
+       "from": "Apple",
+       "to": "Foxconn",
+       "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hindalco",
+     "name": "Hindalco",
+     "market": "IN",
+     "ticker": "NSE:HINDALCO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.223,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Novelis",
+       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+      },
+      {
+       "from": "Novelis",
+       "to": "Hindalco",
+       "why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tata_elec",
+     "name": "Tata Electronics",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": true,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.213,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      },
+      {
+       "from": "Apple",
+       "to": "Tata Electronics",
+       "why": "Tata Electronics assembles iPhones in India"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.319,
+   "cross_market": true,
+   "post": "🌊 The news: ‘No one benefits...’: China responds to US tariff plans, calls ‘overcapacity’ claims false premise\n\nThe hidden link nobody's talking about:\nUS import tariffs (general) → Jaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR has no US factory, so US-bound cars are imported from the UK and Europe.\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Jaguar Land Rover ▼, Apple ▼, Novelis ◆, Foxconn ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 ‘No one benefits...’: China responds to US tariff plans, calls ‘overcapacity’ claims false premise\nSource: The Economic Times\n\n▼ Jaguar Land Rover (unlisted) [Global] — headwind, via US import tariffs (general)\n▼ Tata Motors (JLR parent) [IN] — headwind, via US import tariffs (general) → Jaguar Land Rover\n▼ Apple (AAPL) [US] — headwind, via US import tariffs (general)\n◆ Novelis (unlisted) [US] — exposed, via US import tariffs (general)\n▼ Foxconn (2317.TW) [Global] — headwind, via US import tariffs (general) → Apple\n\nhttps://news.google.com/rss/articles/CBMigAJBVV95cUxPcTMtWWRIeHNPUGlPQ0NhUk9Bb1lVaVppWUw2c081SXQxSXN2X2hCQ1hkLVRoaUs5cl9mSnJBY2w4T0xJTzk5aUpBcERfdDRfNmZPdU1YVmdnU3hEb0l6MWQ3T09DZW5yVHlOTS1RcWI3RnE1eGhmNUlDMk1nSmZrbTVRenVoV1owODEyRGNZZGluTThuT1J3aGxYcDM1OXRtN0tOdWxNVU5GUkJvbkVhNmk5cDREZFVYTmpES3B0TE8zbVJOaDVVYllHSnVkemQzUVEzVDNmNURpMzNkc2Z5bUlZbWFvam5WODJNbC0temhjS3o2VExNeWhWOV9nMU1y?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 0.8,
+   "coverage": 20,
+   "sources": [
+    {
+     "title": "Asian stocks tumble as AI rebound stumbles , US tariff threats loom",
+     "source": "business-standard.com",
+     "url": "https://www.business-standard.com/markets/news/asian-stocks-tumble-as-ai-rebound-stumbles-us-tariff-threats-loom-126112500066_1.html"
+    },
+    {
+     "title": "US Tariffs on India : Why Is Donald Trump Planning Fresh Import Duties on 16 Economies , and How Will They Affect India ?",
+     "source": "jagranjosh.com",
+     "url": "https://www.jagranjosh.com/general-knowledge/us-tariffs-on-india-why-is-donald-trump-planning-fresh-import-duties-on-16-economies-and-how-will-they-affect-india-1820014113-1"
+    },
+    {
+     "title": "India Among Nations On Team Trump's Hit List For New US Tariffs: Report",
+     "source": "NDTV",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTUNxWWcycGx3dFF6NWR3SlJCRE9XSGVtMkxCNVAxTjJ1bVZVeGc1eHEtR2d4UTVjaTkyWTdfMHNTNW1XbWUtRGdvYVlONU5sWmE5THpRLTZvZEUwRGRDdkgwS0Z4QnJlMkFrSklTN2F3dUVIY0E2SmVlek9XM3ZMemNrS3dHWU5nVTY4Y09ReXhaNmNsVFo4Z0ZDWUtGU2lCYkVlaE13Y1JpVFc1VUpqWNIBuAFBVV95cUxPdDBKZEhEMEdkZjkydWxTTWVFak1ERUU2ekVlY1NuMjRrTjI0a09WdklCZXR4bHFUUzAxV3Y4SXVackJtQlJYR1JyWU5Bd3V2UG1sOWZmcDE4cEhDX211N0t2QU4wVk1uOVBTZmxpTGRSbjBwNTR5TDFYRGh1TjVxWnZmemtrMFNjaU5aekxXRUtMeUg5dGdnbWZyMERLYlhzN0UtUWR0SUtHVjVXQTNCUjA0dkd6TmZq?oc=5"
+    },
+    {
+     "title": "India faces fresh US tariff risk as Trump weighs duties on 16 economies",
+     "source": "The Federal",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOM1lfQXdsNEFURHdoUUhuTjdxR3hITlA5UExqbzRKUXNYQmRfMUswdjFteGZreUh2Y3hCUGFCSUtsTXdDdWtQX1hZS2ZKSjE0ZURvX09BQ0szU1QxTEgwREVwRDUzYWUtN3VuZ3A0Um1VMmFaUnByV0lqNEpOeVd4LTRWMzZkdDdKYV9waEMzd2N0b1FlLU14TmZSaS1QOWRfS1VIRXExeXN3amVTRTh3OUpMT1Q3YzJIcFRN?oc=5"
+    },
+    {
+     "title": "India faces fresh US tariff threat as Trump administration targets 16 economies",
+     "source": "PGurus",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaWxTR3RTTWlXUWRxOGMtbnBEcl95cjlzaGJkZC0ycXdWcEJ5UjZXMlFfd2FKZGV2akFsaGxmbng3TDhSdjJmM3JGMUNsTWlhTjYyYWNpYnpab0p1UVhyN1FCZnZaeVlKVzM4b1pLVUJxNE5RRldxZ3hwZUU4NmdqNkE3ZDlpMmxBV1lRdFFlY0h5R21OcW8yc0QxRm1iQTZmVG1Qdk5KZ1RIeDA?oc=5"
+    },
+    {
+     "title": "Trump Administration Weighs Fresh Trade Action That Could Raise US Tariffs on India, Others",
+     "source": "Deshabhimani",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVkdmaGRZSEQ5X2hKVjN4QjJvTld3YURCV0xSQUtMQzRIWDhOdDhhWHpORF9BYlhDYm9yS2JmejFHRjhMa19rRVBLOEFLS0ZBYzl3cm5vMDBFMjFOM2JyR0cwLUJGcW50MXY3Zk1EaFlONHZKZ0MzN2Rtb1pyLXI1OTJZUld0R0UwV2ZlSHBabUI0M0x0ZzRjUEdSUVRZb3VTcW41TXpWS19scWFEVzN1OG5VMkpnLXFPMTlyZGQtU2pNZ2JoM1c4X3BVLVkwM045?oc=5"
+    },
+    {
+     "title": "India among dozens facing fresh US tariffs over industrial subsidies",
+     "source": "Daily Observer",
+     "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5GbTVCN3h4VjJCRTVmUkN5YkhELWdteC1lRWpvWktCcFlUaXVISElXTUdiTWFJdVkzdXlyWml1cW5xdk1VM2QzZ2pB?oc=5"
+    },
+    {
+     "title": "US Tariffs On India, China: Trump Plans Fresh Duties On 16 Countries Under Section 301",
+     "source": "Outlook India",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQUlRTlpBa084MnEzWlBaS0tyTEliajRaUjlCTHpjc0lpZlZJWnRQY29sOFNsM3FHdmtXZHVla2hnOWI1NFRSSHBieXFrTzRSZ0tLdnFpLUFtRTQyRHdtdllXSDFmaG5ySHV2WDR5NWczdUhhb2RMWU12SW10MnJhU05lVmVfdjlVQ0NfY2NHNXhrNGZPRXNBZWsxTUdlMVZRMzRiWDJ3ZFU3WkhHbE9n0gG8AUFVX3lxTFBXRjB3MUpZQ19kQVBYOFpKNWFWeV9fb0Y4TWxRQXlUbVJrSmJCZWk3TkVOXzhvYXFtSUFUMzFUQXhaY0dPYjJRWXhNYmw1UnRuNFVlSmFiM3M0MnZOendoN1U3SmVFS1VFRmdwb1lEeU1ObkhITE1ROUxBeS1oNnpTZlNtMHdFQ1ZtU0pMVDY5ZnVjdlFmM2xZV3N1N1hEUkEycjBNYVQ4ajdiSjVVMHgwWGhlZW5NV0JjcjM5?oc=5"
+    },
+    {
+     "title": "US Tariffs on India: Trump Weighs Fresh Duties on 15 Economies",
+     "source": "Siliconindia",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbVJJakMwLUVvdGtNaTlYZzZRaFdYSnJ4YTE1RVpOODZZUjNfUkN2Y3ZMZVI1NXNCcXBkc3pxME1odUI1cTU2ZktFYUdXczc1QkJnZldDTVE3UXd2eVcyQUN4SkZqV1ptbGdOdW1CQ3gyck5fV0pZbldnSFVXOW5tMEtaN084empnb2FOV3l6aUJPU2ZtS1dpRGpEVzVRUUdqcEJyZVhRZC1mcWtPVERCT2JNMHJvSnVxVE95Tm03anFEUkk?oc=5"
+    },
+    {
+     "title": "Trump Turns Up Tariff Pressure On India As Washington Prepares New Import Duties | News18",
+     "source": "News18",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOYTkzM2dQM2ZldDltVTg5OXdnaFctLXpCNHhSNjFaS3hCNVpLVFhBb2FIa2RldnpMS3llY2Y3WUtXNmZ2cEN6akI4anJpZGVtZDQtbnNQVmtETzZGSnNlUUtDZHdXeFFLYjhjenhRM1VhWk1zSUdOeXF2T2prRjQxVWdoNVJobUJFQUlLV2ZWZ2Zjc0txcElWYUxLaVI0bHkyblRFdVI0Sjk2UkQyeFRHRmhkRkRwVTZPa2MyRUlIWnBBUHhVeThGMml2c0llOERIYUQ00gHYAUFVX3lxTE5fY2N1NG5RcnNLN0ZyZWl0ZjlDWV9mcUt5VXBmNWhTSzFwR3N0QjhHRjRwOUxBWXU0SG1jYzBnQWZpNGdhX1AwM3htZ08tUUUwWk9sQTZYbE9jZlZqalBoLWtTeEpkdmhNalQ4SEVYQTBhYy1Wd2JxMVRvMGJCMHpvTWV6QV9WRHNwUV84SjlqZEw4WFBEcEdNbUZLNXRGY2htWW1qUjQ4VHRLak0wQUxjTmxQck9ycFA4Vk1oS05ubTN3WFVVRjd3WHlKNGoxYkpyQWNDQVBBTQ?oc=5"
+    },
+    {
+     "title": "US Tariff Threat: Trump Readies Higher Duties on India and 15 Nations Over Subsidies",
+     "source": "theopenpress.in",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPLXFIRlp1a1N1TExOcVl1STVDdHZvTVF4d1Y5LVhxdnY3UmFldFhaQ3VpYnpDNXVRbkxMUHIxandQcDZQLWxrWV9jcXByNEZsS3V5OG9kRkJycmJHVk5JY092dFBjbmFBSU5Pb1R3YmRTbFlOTFRkUl9XQk14ZGpGLXZhWWpqQk00V0s2MHdkVzhkM21lSzlyUk5rVQ?oc=5"
+    },
+    {
+     "title": "India Faces Fresh US Tariff Threat As Trump Targets Countries Over Industrial Subsidies",
+     "source": "ABP Live English",
+     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSDhWVFdtc244cW5OVHpfQlA2Q0w5RTNCTWxkQjhqeHl3aXFPZmQxclRnUnRUZ0lRa1U2UjFEMlpkZ2hCOXBLQmJqbG5TM1NFUTNuWUh0Z2U4bjhQOFMtOUVVMVZCT1J6MC1fSFowaTJGYWZJMHhXN2FQQlQ4bzlXVTBEQmI3b19JVjNfTUptNFkzaGVQbzl3RGxTTkp1aWNZdEtTaFB6ZGMwMC1jMGp3bnV2SDRDVzVWV3FxbmNOb2xUS2xORzhjSEp5dkFyRUU2Tkd6VnJIRFlZclHSAdsBQVVfeXFMT0g4VlRXbXNuOHFuTlR6X0JQNkNMOUUzQk1sZEI4anh5d2lxT2ZkMXJUZ1J0VGdJUWtVNlIxRDJaZGdoQjlwS0JiamxuUzNTRVEzbllIdGdlOG44UDhTLTlFVTFWQk9SejAtX0haMGkyRmFmSTB4VzdhUEJUOG85V1UwREJiN29fSVYzX01KbTRZM2hlUG85d0RsU05KdWljWXRLU2hQemRjMDAtYzBqd251dkg0Q1c1VldxcW5jTm9sVEtsTkc4Y0hKeXZBckVFNk5HelZySERZWXJR?oc=5"
     }
    ]
   },
@@ -10705,208 +11160,6 @@
    ]
   },
   {
-   "id": "1fb41cdd779e",
-   "title": "Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz",
-   "url": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-despite-attacks-on-vessels-in-strait-of-hormuz/article71741053.ece",
-   "source": "thehindubusinessline.com",
-   "published": "2026-11-25T05:15:00+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "crude",
-     "name": "Crude oil price",
-     "dir": "in the news"
-    },
-    {
-     "id": "hormuz",
-     "name": "Strait of Hormuz tension",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.656,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.562,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.239,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "exposed"
-    }
-   ],
-   "score": 1.3,
-   "cross_market": true,
-   "post": "🌊 The news: Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz\nSource: thehindubusinessline.com\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-despite-attacks-on-vessels-in-strait-of-hormuz/article71741053.ece\n\nResearch & education only. Not investment advice.",
-   "base_score": 1.05,
-   "coverage": 3,
-   "sources": [
-    {
-     "title": "Crude oil price today : Brent futures fall despite attacks on vessels in Strait of Hormuz",
-     "source": "thehindubusinessline.com",
-     "url": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-despite-attacks-on-vessels-in-strait-of-hormuz/article71741053.ece"
-    },
-    {
-     "title": "Brent below $91; Oil slips as supply surplus hopes offset Strait of Hormuz worries amid renewed escalation",
-     "source": "CNBC TV18",
-     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNbUVuZ0h6azA4blZMRzdFYnk0cW1vbldwRUlLN2ZGZDJ2Qk1qNTU2d2dEdmw3OU5JdHhRaks5LVhhWVNJaVdwcXNnMi1FVFZiSmw1TnZtUWZIUnRpSVFhZHdqbkllajR3b0VRUTRqWVRoc1o1Y3JIMWIydldZYmpTeUlhQTdTSjNBRTdzNzM3UkRSRTQ5ejNhZmRIQ1F1ZUExVDJzYnhBenYzWFpZbUhzVmdBVnJ6SV91OTRRQXB1bHdzOUliaWtqaHZwcGJxb0VYSDItU3lWRWVBZmN6aGxJUk90NVprNjAtY0kyTUtBODJKUdIB9wFBVV95cUxQN2VDVGFOamx1MmNqNkVVOWlUTzJ1eGtpZTAza2E4cmtyTTJIblJ4WmRCbkVJYzVzOWpOSFVFN0cyeTZPWmljM1NOWjBwdUw0TzVIUmRRdkpwT1p2R28xblVaeWk1ODZ2NHVhOU12bjFFSTFKQlBCaGt4cXJKUkJGRVI2dDhXVTJBa0k2S0pCMXFsUVdLenFoT3BFMklCcEZSX0poRXdQdEZTcktwNjBLdUtwUE9YTHhWQVN1T29YZXlsNTNLWFR0dWdrdWw5NnlOSElYckVDOHVia1dwbWVQdXlnN1RQWXRmRHJFOGlHdDgyUkhSVmVV?oc=5"
-    },
-    {
-     "title": "Brent crude near $91 amid Hormuz supply fears | Tap to know more | Inshorts",
-     "source": "Inshorts",
-     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNd1NxS1d1WUlVM1VGWTNaa2Y5aFNvQlBpdnFYaXB6ZTNRUWlNeXVCRmFyMFp5TmRFd0NaeUNOMmFkazNOcjJrbEgzNG1oZE9QQjQ0NkI3SlNfRWFkVnpTVHFwLUtOdXo5ODRXZmlvZ1R2MlkwSWJqZGhfSHRhZnk4ZVN1cFZCdUxPLXNHelBEZFJGaEJxUnZR0gGXAUFVX3lxTE13U3FLV3VZSVUzVUZZM1prZjloU29CUGl2cVhpcHplM1FRaU15dUJGYXIwWnlOZEV3Q1p5Q04yYWRrM05yMmtsSDM0bWhkT1BCNDQ2QjdKU19FYWRWelNUcXAtS051ejk4NFdmaW9nVHYyWTBJYmpkaF9IdGFmeThlU3VwVkJ1TE8tc0d6UERkUkZoQnFSdlE?oc=5"
-    }
-   ]
-  },
-  {
    "id": "49715972ba29",
    "title": "Shafaq News..Oil prices sink ahead of OPEC+ meeting",
    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9md3FNQTJqcVhRRXRISVdRVW5YRndrZUNQRi02dGwyN01pdzJJSlRfdUZpQjhHdWFUcG5pbXB6U2F6bzM2aVY4NkNjak1FcTlWTFpVNTFSVC1xV3lkeEc3T2VXNEw3WURUVnY5dFlNekhVVlN0bm5vd0t0MA?oc=5",
@@ -11858,244 +12111,6 @@
      "title": "Rupee rises 23 paise to 92.62 against US dollar as Sensex, Nifty rally; falling crude oil prices boost gains",
      "source": "IBTimes India",
      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOai16ZTJOOWxrSnpZSTM5SkNqbVFVczZhUDR5Q0pEUWdKcW5QczY2dDU3dUx1SWtzVXBrd3NqTjF0dEczVE9yZmYxTWpjcFNHQXpnZkl4aF9iMGltZFVLcTQxVmRHTWRicmRDNzloeWdlVmVOUmJlZHktdEdXb0h5TzBVRXp5cEJnYk82eW9nRmJyaG1YMmxCUDNTeGdfMGw2TjBPaDQtOU5VUlJPb2FldDN1REtNWFFxeUdIRzFzN3FQdEtOZHc?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "56368164c52e",
-   "title": "Trump administration set to unveil new US tariffs",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWRUQngtdlMyQ2lGVHFsVzNNOFhoVWRYOS1SOHc0VlNEcGNER1BmVGpJUlJxVDdOODloM0Fta2FzNTBJUEczYnNZVWdqUEJISzBDcndtMEhfVFZoMXNBQVM2MWNTeVVUVVBpUURNU2V3US1EMXA4V2hwa1R0NWpQbGNMV1RMcmZ5?oc=5",
-   "source": "https://aapnews.aap.com.au/",
-   "published": "2026-11-25T07:12:54+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "us_tariffs",
-     "name": "US import tariffs (general)",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "jlr",
-     "name": "Jaguar Land Rover",
-     "market": "Global",
-     "ticker": null,
-     "unlisted": true,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.5,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Jaguar Land Rover",
-       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "tatamotors",
-     "name": "Tata Motors (JLR parent)",
-     "market": "IN",
-     "ticker": null,
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.425,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Jaguar Land Rover",
-       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
-      },
-      {
-       "from": "Jaguar Land Rover",
-       "to": "Tata Motors (JLR parent)",
-       "why": "JLR is Tata Motors' biggest profit driver"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "apple",
-     "name": "Apple",
-     "market": "US",
-     "ticker": "AAPL",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.4,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Apple",
-       "why": "Most iPhones are assembled outside the US"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "novelis",
-     "name": "Novelis",
-     "market": "US",
-     "ticker": null,
-     "unlisted": true,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.3,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Novelis",
-       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "foxconn",
-     "name": "Foxconn",
-     "market": "Global",
-     "ticker": "2317.TW",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.238,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Apple",
-       "why": "Most iPhones are assembled outside the US"
-      },
-      {
-       "from": "Apple",
-       "to": "Foxconn",
-       "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hindalco",
-     "name": "Hindalco",
-     "market": "IN",
-     "ticker": "NSE:HINDALCO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.223,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Novelis",
-       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
-      },
-      {
-       "from": "Novelis",
-       "to": "Hindalco",
-       "why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tata_elec",
-     "name": "Tata Electronics",
-     "market": "IN",
-     "ticker": null,
-     "unlisted": true,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.213,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Apple",
-       "why": "Most iPhones are assembled outside the US"
-      },
-      {
-       "from": "Apple",
-       "to": "Tata Electronics",
-       "why": "Tata Electronics assembles iPhones in India"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.269,
-   "cross_market": true,
-   "post": "🌊 The news: Trump administration set to unveil new US tariffs\n\nThe hidden link nobody's talking about:\nUS import tariffs (general) → Jaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR has no US factory, so US-bound cars are imported from the UK and Europe.\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Jaguar Land Rover ▼, Apple ▼, Novelis ◆, Foxconn ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Trump administration set to unveil new US tariffs\nSource: https://aapnews.aap.com.au/\n\n▼ Jaguar Land Rover (unlisted) [Global] — headwind, via US import tariffs (general)\n▼ Tata Motors (JLR parent) [IN] — headwind, via US import tariffs (general) → Jaguar Land Rover\n▼ Apple (AAPL) [US] — headwind, via US import tariffs (general)\n◆ Novelis (unlisted) [US] — exposed, via US import tariffs (general)\n▼ Foxconn (2317.TW) [Global] — headwind, via US import tariffs (general) → Apple\n\nhttps://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWRUQngtdlMyQ2lGVHFsVzNNOFhoVWRYOS1SOHc0VlNEcGNER1BmVGpJUlJxVDdOODloM0Fta2FzNTBJUEczYnNZVWdqUEJISzBDcndtMEhfVFZoMXNBQVM2MWNTeVVUVVBpUURNU2V3US1EMXA4V2hwa1R0NWpQbGNMV1RMcmZ5?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 0.8,
-   "coverage": 15,
-   "sources": [
-    {
-     "title": "Asian stocks tumble as AI rebound stumbles , US tariff threats loom",
-     "source": "business-standard.com",
-     "url": "https://www.business-standard.com/markets/news/asian-stocks-tumble-as-ai-rebound-stumbles-us-tariff-threats-loom-126112500066_1.html"
-    },
-    {
-     "title": "US Tariffs on India : Why Is Donald Trump Planning Fresh Import Duties on 16 Economies , and How Will They Affect India ?",
-     "source": "jagranjosh.com",
-     "url": "https://www.jagranjosh.com/general-knowledge/us-tariffs-on-india-why-is-donald-trump-planning-fresh-import-duties-on-16-economies-and-how-will-they-affect-india-1820014113-1"
-    },
-    {
-     "title": "India Among Nations On Team Trump's Hit List For New US Tariffs: Report",
-     "source": "NDTV",
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTUNxWWcycGx3dFF6NWR3SlJCRE9XSGVtMkxCNVAxTjJ1bVZVeGc1eHEtR2d4UTVjaTkyWTdfMHNTNW1XbWUtRGdvYVlONU5sWmE5THpRLTZvZEUwRGRDdkgwS0Z4QnJlMkFrSklTN2F3dUVIY0E2SmVlek9XM3ZMemNrS3dHWU5nVTY4Y09ReXhaNmNsVFo4Z0ZDWUtGU2lCYkVlaE13Y1JpVFc1VUpqWNIBuAFBVV95cUxPdDBKZEhEMEdkZjkydWxTTWVFak1ERUU2ekVlY1NuMjRrTjI0a09WdklCZXR4bHFUUzAxV3Y4SXVackJtQlJYR1JyWU5Bd3V2UG1sOWZmcDE4cEhDX211N0t2QU4wVk1uOVBTZmxpTGRSbjBwNTR5TDFYRGh1TjVxWnZmemtrMFNjaU5aekxXRUtMeUg5dGdnbWZyMERLYlhzN0UtUWR0SUtHVjVXQTNCUjA0dkd6TmZq?oc=5"
-    },
-    {
-     "title": "India faces fresh US tariff risk as Trump weighs duties on 16 economies",
-     "source": "The Federal",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOM1lfQXdsNEFURHdoUUhuTjdxR3hITlA5UExqbzRKUXNYQmRfMUswdjFteGZreUh2Y3hCUGFCSUtsTXdDdWtQX1hZS2ZKSjE0ZURvX09BQ0szU1QxTEgwREVwRDUzYWUtN3VuZ3A0Um1VMmFaUnByV0lqNEpOeVd4LTRWMzZkdDdKYV9waEMzd2N0b1FlLU14TmZSaS1QOWRfS1VIRXExeXN3amVTRTh3OUpMT1Q3YzJIcFRN?oc=5"
-    },
-    {
-     "title": "India faces fresh US tariff threat as Trump administration targets 16 economies",
-     "source": "PGurus",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaWxTR3RTTWlXUWRxOGMtbnBEcl95cjlzaGJkZC0ycXdWcEJ5UjZXMlFfd2FKZGV2akFsaGxmbng3TDhSdjJmM3JGMUNsTWlhTjYyYWNpYnpab0p1UVhyN1FCZnZaeVlKVzM4b1pLVUJxNE5RRldxZ3hwZUU4NmdqNkE3ZDlpMmxBV1lRdFFlY0h5R21OcW8yc0QxRm1iQTZmVG1Qdk5KZ1RIeDA?oc=5"
-    },
-    {
-     "title": "Trump Administration Weighs Fresh Trade Action That Could Raise US Tariffs on India, Others",
-     "source": "Deshabhimani",
-     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVkdmaGRZSEQ5X2hKVjN4QjJvTld3YURCV0xSQUtMQzRIWDhOdDhhWHpORF9BYlhDYm9yS2JmejFHRjhMa19rRVBLOEFLS0ZBYzl3cm5vMDBFMjFOM2JyR0cwLUJGcW50MXY3Zk1EaFlONHZKZ0MzN2Rtb1pyLXI1OTJZUld0R0UwV2ZlSHBabUI0M0x0ZzRjUEdSUVRZb3VTcW41TXpWS19scWFEVzN1OG5VMkpnLXFPMTlyZGQtU2pNZ2JoM1c4X3BVLVkwM045?oc=5"
-    },
-    {
-     "title": "India among dozens facing fresh US tariffs over industrial subsidies",
-     "source": "Daily Observer",
-     "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5GbTVCN3h4VjJCRTVmUkN5YkhELWdteC1lRWpvWktCcFlUaXVISElXTUdiTWFJdVkzdXlyWml1cW5xdk1VM2QzZ2pB?oc=5"
-    },
-    {
-     "title": "US Tariffs On India, China: Trump Plans Fresh Duties On 16 Countries Under Section 301",
-     "source": "Outlook India",
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQUlRTlpBa084MnEzWlBaS0tyTEliajRaUjlCTHpjc0lpZlZJWnRQY29sOFNsM3FHdmtXZHVla2hnOWI1NFRSSHBieXFrTzRSZ0tLdnFpLUFtRTQyRHdtdllXSDFmaG5ySHV2WDR5NWczdUhhb2RMWU12SW10MnJhU05lVmVfdjlVQ0NfY2NHNXhrNGZPRXNBZWsxTUdlMVZRMzRiWDJ3ZFU3WkhHbE9n0gG8AUFVX3lxTFBXRjB3MUpZQ19kQVBYOFpKNWFWeV9fb0Y4TWxRQXlUbVJrSmJCZWk3TkVOXzhvYXFtSUFUMzFUQXhaY0dPYjJRWXhNYmw1UnRuNFVlSmFiM3M0MnZOendoN1U3SmVFS1VFRmdwb1lEeU1ObkhITE1ROUxBeS1oNnpTZlNtMHdFQ1ZtU0pMVDY5ZnVjdlFmM2xZV3N1N1hEUkEycjBNYVQ4ajdiSjVVMHgwWGhlZW5NV0JjcjM5?oc=5"
-    },
-    {
-     "title": "US Tariffs on India: Trump Weighs Fresh Duties on 15 Economies",
-     "source": "Siliconindia",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbVJJakMwLUVvdGtNaTlYZzZRaFdYSnJ4YTE1RVpOODZZUjNfUkN2Y3ZMZVI1NXNCcXBkc3pxME1odUI1cTU2ZktFYUdXczc1QkJnZldDTVE3UXd2eVcyQUN4SkZqV1ptbGdOdW1CQ3gyck5fV0pZbldnSFVXOW5tMEtaN084empnb2FOV3l6aUJPU2ZtS1dpRGpEVzVRUUdqcEJyZVhRZC1mcWtPVERCT2JNMHJvSnVxVE95Tm03anFEUkk?oc=5"
-    },
-    {
-     "title": "Trump Turns Up Tariff Pressure On India As Washington Prepares New Import Duties | News18",
-     "source": "News18",
-     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOYTkzM2dQM2ZldDltVTg5OXdnaFctLXpCNHhSNjFaS3hCNVpLVFhBb2FIa2RldnpMS3llY2Y3WUtXNmZ2cEN6akI4anJpZGVtZDQtbnNQVmtETzZGSnNlUUtDZHdXeFFLYjhjenhRM1VhWk1zSUdOeXF2T2prRjQxVWdoNVJobUJFQUlLV2ZWZ2Zjc0txcElWYUxLaVI0bHkyblRFdVI0Sjk2UkQyeFRHRmhkRkRwVTZPa2MyRUlIWnBBUHhVeThGMml2c0llOERIYUQ00gHYAUFVX3lxTE5fY2N1NG5RcnNLN0ZyZWl0ZjlDWV9mcUt5VXBmNWhTSzFwR3N0QjhHRjRwOUxBWXU0SG1jYzBnQWZpNGdhX1AwM3htZ08tUUUwWk9sQTZYbE9jZlZqalBoLWtTeEpkdmhNalQ4SEVYQTBhYy1Wd2JxMVRvMGJCMHpvTWV6QV9WRHNwUV84SjlqZEw4WFBEcEdNbUZLNXRGY2htWW1qUjQ4VHRLak0wQUxjTmxQck9ycFA4Vk1oS05ubTN3WFVVRjd3WHlKNGoxYkpyQWNDQVBBTQ?oc=5"
-    },
-    {
-     "title": "US Tariff Threat: Trump Readies Higher Duties on India and 15 Nations Over Subsidies",
-     "source": "theopenpress.in",
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPLXFIRlp1a1N1TExOcVl1STVDdHZvTVF4d1Y5LVhxdnY3UmFldFhaQ3VpYnpDNXVRbkxMUHIxandQcDZQLWxrWV9jcXByNEZsS3V5OG9kRkJycmJHVk5JY092dFBjbmFBSU5Pb1R3YmRTbFlOTFRkUl9XQk14ZGpGLXZhWWpqQk00V0s2MHdkVzhkM21lSzlyUk5rVQ?oc=5"
-    },
-    {
-     "title": "India Faces Fresh US Tariff Threat As Trump Targets Countries Over Industrial Subsidies",
-     "source": "ABP Live English",
-     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSDhWVFdtc244cW5OVHpfQlA2Q0w5RTNCTWxkQjhqeHl3aXFPZmQxclRnUnRUZ0lRa1U2UjFEMlpkZ2hCOXBLQmJqbG5TM1NFUTNuWUh0Z2U4bjhQOFMtOUVVMVZCT1J6MC1fSFowaTJGYWZJMHhXN2FQQlQ4bzlXVTBEQmI3b19JVjNfTUptNFkzaGVQbzl3RGxTTkp1aWNZdEtTaFB6ZGMwMC1jMGp3bnV2SDRDVzVWV3FxbmNOb2xUS2xORzhjSEp5dkFyRUU2Tkd6VnJIRFlZclHSAdsBQVVfeXFMT0g4VlRXbXNuOHFuTlR6X0JQNkNMOUUzQk1sZEI4anh5d2lxT2ZkMXJUZ1J0VGdJUWtVNlIxRDJaZGdoQjlwS0JiamxuUzNTRVEzbllIdGdlOG44UDhTLTlFVTFWQk9SejAtX0haMGkyRmFmSTB4VzdhUEJUOG85V1UwREJiN29fSVYzX01KbTRZM2hlUG85d0RsU05KdWljWXRLU2hQemRjMDAtYzBqd251dkg0Q1c1VldxcW5jTm9sVEtsTkc4Y0hKeXZBckVFNk5HelZySERZWXJR?oc=5"
     }
    ]
   },

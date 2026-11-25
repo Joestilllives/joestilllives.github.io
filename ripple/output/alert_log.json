@@ -93880,6 +93880,129 @@
 ]
 },
 {
+"id": "953d10818ded",
+"title": "AI spending slowdown could hit memory companies as Goldman Sachs flags 2028 risks",
+"url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOQlZWYy1rZmRQU0RhVDRMLVFqUkNOWmp0enN5LWI3elRJaEFiYkREdFgwXy0xNUJ3S0pidzZsTTdhSl91NHR3dEE3bko4ZkRidGhObzliSTFxLUx2dk0zNjN0M0VncWZ4OWFMdkxrRWwydE5GT051SDRPcnFTZ01FUm51NzJoSTlPTXpGRXk2WFhWYk0td2tQUnJ2LW1PQXRFalEyYWdkTlJZY2I4aW5JT0VLeDkzUTZ5S3lvVDd5d0VoMENLNldBM1NlU1pnWmtuWFV6NlhUNmNqOEM2MHNhc21yQWtjenRvX0F0Y1pRUDNQTDNmc2g00gH8AUFVX3lxTE9mYW53SXJuM0JYcDFBRkVHZWpoa2M3S0xualIwRlRWWThWNVFVNS1oVExIam5wNGFEVVZ1cHJ3Y204T1dvTlRjRkF3ZThUbUxnRFF2cUhCcEVldUlTdUFYb2VwQWR5aE9zTEppOGxmemxoNVR3eWQ0MEc5NkxfQTZLdXlOTUEySUZZSjdjWUVSaEtoQ3hCU0pQUFlwNGFsUm9hTFhPaDZ5TGwzanBpWTNiODdPbVowaFhtcDlMOG1SbzNMY2ExdU12TG1LU1JPMVJLQjNPS1VKUE82eUlrVnk3Q29QdWxyLTgxblVfRXFDUlpYdC1nbmJrdWJjSg?oc=5",
+"published": "2026-11-25T05:57:10+00:00",
+"logged": "2026-11-25T09:51:35.828132+00:00",
+"impacts": [
+{
+"id": "nvidia",
+"name": "Nvidia",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Nvidia",
+"why": "Data-centre buildouts run on Nvidia GPUs"
+}
+]
+},
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "TCS",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "Infosys",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "Wipro",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "HCLTech",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "Tech Mahindra",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+}
+]
+},
+{
 "id": "af7d61dae7b7",
 "title": "11:11 | Oil below $91; US weighs higher India tariffs; Nvidia’s Huang rejects succession plan",
 "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNHo4QUpwdExjemFxaExhMGhRd05pVlV5WU1vSnl4RjJuaTNxYnJLNGQ0c2RsaVdvVTFCVnZ6X2Y3WWptakZ5VG1xUy1fSGdZWVREQTh2aHJVNUdtbm1kUWVwNXdLOVBIS0NuVDRKVHpxZ3JRd2JvbXBERTFOQ0JXVXVRZGNtZkwxVHVzNzZwMmlycHgwMmpwSXpZTGpja0lYT2JfY0NtTTBpMVNWRERZQWpvcUNOdw?oc=5",
@@ -96982,6 +97105,41 @@
 ]
 },
 {
+"id": "fd0d5a4c580e",
+"title": "iPhone 17 Price Cut – Rs 10,000 Flat Discount on Flipkart, EMI Starts At ₹30,545",
+"url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbmdTNVROUGFJYlI2M2NFdjNlRHJnQ1d5cHAzMEl2cC1UTUdoclJHZG9HRGpwSHNyd3QzSmtERzRtOTBzT0tadlNpSk1teHFJMkhjdnJWanZTdjc4MkJib21HNG9TSXd3ckZ1Q3N3aVJFY1ZOU2kzaTdKWWRQNl9BTE9CMURPaFZ3RWRjekE4bGlKUTAtbnM2VVQwMllod2pNMTBNR2o2OGdWQWljRUxV?oc=5",
+"published": "2026-11-25T08:16:52+00:00",
+"logged": "2026-11-25T09:51:35.828132+00:00",
+"impacts": [
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "headwind",
+"cross_market": false,
+"path": [
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+},
+{
+"id": "tata_elec",
+"name": "Tata Electronics",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Apple",
+"to": "Tata Electronics",
+"why": "Tata Electronics assembles iPhones in India"
+}
+]
+}
+]
+},
+{
 "id": "fd9724281552",
 "title": "Red Sea shipping risks rise as Houthis threaten to attack Saudi ports",
 "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ05kRnJMNk5fRVRmYU45V3paWmhHZzNvOUtpTTk5cjRTMElzYVdOZ29wMGg3eUptVXZfdmsybjZoc2dhaG0tSHEyOEhjVTlKN2VUWE1KMEhmMnlnT0lNcl9uNHZaeTlZYnFQYS1vZ2JhdGtZN0EyM2lHX1FrODB5SkZNNEhvbkFlTkZsLUVXdlhSdzQ?oc=5",
@@ -98291,6 +98449,126 @@
 "from": "Indian rupee strength",
 "to": "Cipla",
 "why": "Pharma exporters earn a big share in dollars"
+}
+]
+}
+]
+},
+{
+"id": "4da169fa3dca",
+"title": "China calls fresh US tariff plans ‘political maneuvering’, urges trade truce",
+"url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQd2FmaXpZM3J6UXZHYUhCZ2lITVZ1Z2FScVFSZ01DNTdnV1BHb3NJZnZqZTN6eVZQbHB3WXo1Xy05TzBCNElCWmNFMFhmcWNTMVhsTVFXMllaZVA4Z1RLWXlCaFlwSmNIUC1sRTRlMy1MNm5PVVNxTmthWWhrUUhtQjNOVXdkSC1sOTFpbmd4c2lGUEs2cnQ3OEp0S3UwUmZaUFNiYUtNX0NPd1ZHamZFZzY4V1FzLWhwMS1nMzhaVE9qbnRaUUhFcmNNUHFXNDdWMXZzLWs4eHRfQ3VDRXo2V0NBS3pla1BrZGhld3I2aWhCN3l4d2NPWUR30gH_AUFVX3lxTE9qWUs4ejVYRnZIS2hDUm83RFRwYTEwM016d2RRUjhZV0x4bEdienNacWhybnJhME9SMkFZOGdza1lkTC1WS3Nrejc2dU1TbURacW1jMTk0c1E2bmQwOFJtRDJTUnUwSWo5RnllZDZCWjRDT0ZiaVlwOTRSTTJSWG9zb2RvZ1p4TW8xRXhrYTZDTmxyNzUxb3NjZnVESVdqeTJCMG8yam4wWm5Ra2x2NnFpdE1fcWtzMXQ2WTM3OF9makdBbGRBNjhNS040MzFDTzZXdlJLaUdmaWVzUWVacTVkcE9EbkI4QWUyaVFXVEhnYmozQ2U5MjJjUHE2VVVCcw?oc=5",
+"published": "2026-11-25T08:56:46+00:00",
+"logged": "2026-11-25T09:51:35.828132+00:00",
+"impacts": [
+{
+"id": "jlr",
+"name": "Jaguar Land Rover",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Jaguar Land Rover",
+"why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Jaguar Land Rover",
+"why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+},
+{
+"from": "Jaguar Land Rover",
+"to": "Tata Motors (JLR parent)",
+"why": "JLR is Tata Motors' biggest profit driver"
+}
+]
+},
+{
+"id": "apple",
+"name": "Apple",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Apple",
+"why": "Most iPhones are assembled outside the US"
+}
+]
+},
+{
+"id": "novelis",
+"name": "Novelis",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Novelis",
+"why": "US aluminium tariffs change Novelis' input costs and US pricing"
+}
+]
+},
+{
+"id": "foxconn",
+"name": "Foxconn",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Apple",
+"why": "Most iPhones are assembled outside the US"
+},
+{
+"from": "Apple",
+"to": "Foxconn",
+"why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+},
+{
+"id": "hindalco",
+"name": "Hindalco",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Novelis",
+"why": "US aluminium tariffs change Novelis' input costs and US pricing"
+},
+{
+"from": "Novelis",
+"to": "Hindalco",
+"why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
+}
+]
+},
+{
+"id": "tata_elec",
+"name": "Tata Electronics",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "US import tariffs (general)",
+"to": "Apple",
+"why": "Most iPhones are assembled outside the US"
+},
+{
+"from": "Apple",
+"to": "Tata Electronics",
+"why": "Tata Electronics assembles iPhones in India"
 }
 ]
 }
