@@ -1,10 +1,10 @@
-# Ripple posts — 2026-11-25 19:19 UTC
+# Ripple posts — 2026-11-26 03:35 UTC
 
-## Oil Prices Fall as Traders Weigh Supply Surplus, Gulf Attacks
+## Oil prices fall amid forecasts of global oversupply
 
 ### Post
 
-🌊 The news: Oil Prices Fall as Traders Weigh Supply Surplus, Gulf Attacks
+🌊 The news: Oil prices fall amid forecasts of global oversupply
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -21,8 +21,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Oil Prices Fall as Traders Weigh Supply Surplus, Gulf Attacks
-Source: WSJ
+📰 Oil prices fall amid forecasts of global oversupply
+Source: Inspenet
 
 ▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
 ▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
@@ -30,7 +30,43 @@ Source: WSJ
 ▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
 ▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
 
-https://news.google.com/rss/articles/CBMitgFBVV95cUxPVkRJdUt0LVhZdzVhR0RpSnN6RWh6cDdGQVhOUU9vNENLN0hnSXB1YXJFU01rMzZBaXhuelM3ODlra1hKdnRxcnYweGNRSmFmSEpnMzJSQWxkOXZqZVM3NjBrZ2UwQS1PQS12di1uaHFUQWJRZHE2aHhxMnlLcVJ5Z3owcXd2WTV4NFJQSUM0SWplUVA5bW80ZU9fdDYzV1Z5QnFvcW1kdlhPMW8xc2JRQnVJc19mZw?oc=5
+https://news.google.com/rss/articles/CBMibkFVX3lxTE9kbXp4QVBITlRyOGw3ZVNPSzhPZ0c4LWpBdTFrbDhBTU91d29KUVRXN3Z3NTkzZTBJVEx1NWFnb3JJYkJnZmZ6QWRYd1RfRTBORHpqeVoyM0xoTFAybnBHNHNNOWt3dWpINkNGbVp3?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
+## Crude Prices Push Higher on Concerns Over Global Supply Disruptions
+
+### Post
+
+🌊 The news: Crude Prices Push Higher on Concerns Over Global Supply Disruptions
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Crude Prices Push Higher on Concerns Over Global Supply Disruptions
+Source: Yahoo Finance
+
+▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
+▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
+▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
+▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
+▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMilAFBVV95cUxQb0tKZlBTMHpvUTJRVmZ2dm1taDRnVy15N1R1d2pQUzNDZmZaOWNXMWgtbEdiM0o1WTEtWFBGUWhEcFVuXzFST0c5NHZiSnlRYVUxRjZYVmltTTdpTTd4MHlfZ2Y0NC1SVnEzSndkSERzNzcxOVQ4elVLT0xQck1IcnhXTElrREczWTE1alBkS0JqWGJu?oc=5
 
 Research & education only. Not investment advice.
 
@@ -144,42 +180,6 @@ Research & education only. Not investment advice.
 
 ---
 
-## WTI crude oil prices may trend lower
-
-### Post
-
-🌊 The news: WTI crude oil prices may trend lower
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 WTI crude oil prices may trend lower
-Source: The Business Times
-
-▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
-▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
-▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price
-▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
-▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
-
-https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2N2SEg1NS1QZUloUmJ3T1A1NGhOMFlTcEt1QVdrQnF0Mm43RG90MWRvYjVvbnVVNXFMX2RtUlQ5RUhPSWFiRTkySmVRUjA4RlA0VzZEM0VoMlkzV3NocjdOcEl2WHlXSWdmVEJrbExoUXZRYXhoRHVZdmh3ZHppaWFsWllRd0FaaEpIZW1kNm4?oc=5
-
-Research & education only. Not investment advice.
-
----
-
 ## Oil Prices Reportedly Rise Over 2% As Brent Settles At $91.40
 
 ### Post
@@ -216,120 +216,11 @@ Research & education only. Not investment advice.
 
 ---
 
-## Oil Prices Rise As US Crude Stockpiles Slip
+## US Proposes Up to 25% Tariff on India Citing ‘Excess Manufacturing Capacity’
 
 ### Post
 
-🌊 The news: Oil Prices Rise As US Crude Stockpiles Slip
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Oil Prices Rise As US Crude Stockpiles Slip
-Source: Finimize
-
-▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
-▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
-▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
-▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
-▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
-
-https://news.google.com/rss/articles/CBMifEFVX3lxTE9qQWdhZzQzUDUtVUF5TmRaYTdLOFUtbktFZ2ZXTXZCa28wb25Gc19ranhuMkR6VURqZnR0WW4yeHZnV1RDcVhOVXBtMnZXZm9mV2FWTC1VVU9iczNpbWpMWEtaNFkwN0JRY2tDdnRGUzZzbnNxRG1qNlhOc1c?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## Eni and Repsol Commit $2 Billion to Venezuela Oil and Gas Expansion
-
-### Post
-
-🌊 The news: Eni and Repsol Commit $2 Billion to Venezuela Oil and Gas Expansion
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Eni and Repsol Commit $2 Billion to Venezuela Oil and Gas Expansion
-Source: Crude Oil Prices Today | OilPrice.com
-
-◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price
-◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price
-◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price
-◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price
-◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
-
-https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNXZOaWFWcEhwSmI1N005RjZjTDVWeGY1aExxbE1qSnpaU2pxeUpCT2tNZ3E0dEdQNHkyMk9kOS1GWEZuX0NUU1JHZTIxbDJiaHRuYjMteWFGbEdXVUFmWVUxb2JDNGdyZVhCOUU0S1N6MHhidEpBRnRfeXpRLXExYUxPdThKUUlUWnVXc25oZ0lzTEowbzF1N2hoNGpPSEgyY2pPcDNPUzLSAa4BQVVfeXFMUGhkOVZkQ0JBUHgyeVhNZ2d1eTBkYkhwSnRLbmR6cXhCYzhSU1REUzk5VUVGNXd4R2lfOFlXTGNwSElYUlZ3NjU5SXdsRkgtOGMwcDNoVEZ5cEdGNFhQY2dDX3pnWW5mUVA1SWo3TFVtcHFmUF9rbFhUbWk4Yi1fRXZYVkppRjdlbmhLcDZubjFKaDgtTm5IcGloSnl3anpkSDNPY1VObmZ0UE5YTVZ3?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## On Cam: IRGC Blows Up Two More Vessels In Hormuz As Attacks Spike Dramatically
-
-### Post
-
-🌊 The news: On Cam: IRGC Blows Up Two More Vessels In Hormuz As Attacks Spike Dramatically
-
-The hidden link nobody's talking about:
-Strait of Hormuz tension → Crude oil price → Indian rupee strength → TCS
-
-• About a fifth of the world's oil passes through the Strait of Hormuz.
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 On Cam: IRGC Blows Up Two More Vessels In Hormuz As Attacks Spike Dramatically
-Source: The Times of India
-
-▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price
-▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price
-
-https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZmhFc0RHM1pBZUlVNm1SdGl1SjliZGJQcnVIZXBYSXBHRk5ucVFSdnJqQm5mZkVFT2RaUDh5M0lkQUlUMlNic19VWk1Xa2dKWE9iVXZ3XzRqc1ZuMlJXX2lMR3had2FhRm13TGh2WW1PdkdINTYwVWticXpBN3N3NWY4QjBZVjVmZzE1aDZZd1k3NUFKSTRZRFBmNzdfR1ZvNElzR1dhamd0T2hYYkloOW9WclNjZHozVmxaT3RsMnFKeTc5V0NzRDBzU01LR1ROSXRycHF3dExYM0FsSDU4TVZSa2hJWmpOeTlqcDI3d9IB9AFBVV95cUxORFRqNDVxWU8ta1RHUW5oRGRObWVoLVFhUXpiSkNvZDRNYzczUWRhelBRUWR6dUN6XzhsRFVaTHdHZmNHT1luWENIbmVpMUxCYmNXU3UxUmNOSURvRmhTR2Y0VkRDV1FoRmQxV0dfbFpicXgwbVdsTkVfUHVDMGRieEZsSWxaYXRrRWRfVEtWR1h4QVcxQXRBN09JWG9sempMbG00U3o2SWlULTRlS1RlX3dxMHN4WFpFblhQaGxnUE1NX2h3Z0UwN3B3OTU5RVF0ejFBbVkyc1ljVnNlSlFTdEZFSWtCdzZaSGs4ZnQwaHlpQUE3?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## US proposes 25 pc tariffs on Indian imports; rate to fall to 17 pc if trade deal is signed
-
-### Post
-
-🌊 The news: US proposes 25 pc tariffs on Indian imports; rate to fall to 17 pc if trade deal is signed
+🌊 The news: US Proposes Up to 25% Tariff on India Citing ‘Excess Manufacturing Capacity’
 
 The hidden link nobody's talking about:
 US tariffs on Indian goods → Indian rupee strength → TCS
@@ -346,8 +237,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 US proposes 25 pc tariffs on Indian imports; rate to fall to 17 pc if trade deal is signed
-Source: Mathrubhumi English
+📰 US Proposes Up to 25% Tariff on India Citing ‘Excess Manufacturing Capacity’
+Source: TheWire.in
 
 ▼ Welspun Living (NSE:WELSPUNLIV) [IN] — headwind, via US tariffs on Indian goods
 ▼ Avanti Feeds (NSE:AVANTIFEED) [IN] — headwind, via US tariffs on Indian goods
@@ -355,7 +246,115 @@ Source: Mathrubhumi English
 ◆ Dr. Reddy's (NSE:DRREDDY) [IN] — exposed, via US tariffs on Indian goods
 ◆ Cipla (NSE:CIPLA) [IN] — exposed, via US tariffs on Indian goods
 
-https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdkJNTUMyN3RncjlzUVhoWlZDX3EyWWhpSEJPSmpOWGVRTU1LME5idk5sc193c2ZRVnVlRlREUTQ5MExDcjNNdGQ2NmxROWZWaVBtZkhFeTdLbG14QmE0QUJHOEZHNV9UQnVUR0I4MVB0a1Y2OElrc0lMZGtPWnB3bUFrUHZ5ZWtYTUJ5aDNpeExUMGlDSjdJZE9ySk4tcjlhTnM3Zmtoemxla1HSAasBQVVfeXFMT3ZCTU1DMjd0Z3I5c1FYaFpWQ19xMlloaUhCT0pqTlhlUU1NSzBOYnZObHNfd3NmUVZ1ZUZURFE0OTBMQ3IzTXRkNjZsUTlmVmlQbWZIRXk3S2xteEJhNEFCRzhGRzVfVEJ1VEdCODFQdGtWNjhJa3NJTGRrT1pwd21Ba1B2eWVrWE1CeWgzaXhMVDBpQ0o3SWRPckpOLXI5YU5zN2ZraHpsZWtR?oc=5
+https://news.google.com/rss/articles/CBMirAFBVV95cUxOa2VKdWRwR0xSZjEzc1lMUWN0OU1acWZKU1h3Tzg5cmxhVGNDaXllejR1QmZUWnNtWmtIYVFlQmxqaHcyMV94S3RmanVEVG13SmNFQnNkWi1tNHljNC1LemxzNDdqbXJlVGp6Um5RQmJlZ1QtSWF0aHZJTzRQcm5HdVhIY3ZQQ1p4TmZYaXBmMVNHdjdrR2VnQ3B5UlZQeUl5eFlpbmhTa3BqVGhl0gGyAUFVX3lxTE5NaG02VlRRWlU0LUgyM0k1a1JKeHNfMTdHX2hjWUtTYm9pSkNYOFREZVFhdmpHTnN0S2RPTFpYOGZhVTVPSkZCbWxJc2tyZ1hyY0NCUlY2QXVjWDVVYmExSTJObnlBVFFrcUtzVHN3dm9UUURiUWc0Q042d2RQRElyZVMyZlFXYW9nU0hKaENEUWNVQnRlU2Z1NzZPbFhTOFNtSkdWQnRRYmhYRUdCWllPaFE?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
+## Oil Prices Jump After Houthis Claim Attack On Ras Tanura
+
+### Post
+
+🌊 The news: Oil Prices Jump After Houthis Claim Attack On Ras Tanura
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Oil Prices Jump After Houthis Claim Attack On Ras Tanura
+Source: Finimize
+
+▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
+▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
+▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
+▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
+▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMijgFBVV95cUxPR0puM0NyYm9QRmE4OEppTXVzclcwQTYwWGtMNG5GQlUwYnkySkh0QzZ1WXB5eklXWkE3a0M0QkIxMXNuTjlSWGtWRU9MZ1JmREJIQmJMTjdEaHVDUXotaFZJWTUzWkRXdDlYc3h4QXMzaDlqTGh1aHU2akR5Y1gzcFFxUTMwRDZ3dHNHRDN3?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
+## Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso
+
+### Post
+
+🌊 The news: Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso
+Source: EnergyNow.com
+
+◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price
+◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price
+◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price
+◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price
+◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
+
+https://news.google.com/rss/articles/CBMikAFBVV95cUxQekw1WFJNUFRkc2k0UVUyRWEzSXJLV25ldkdCcC1hTDM4Y3N5amZGV3NXUWN1VHZUMVVMS3ktejJTbkJBQmoyMHFkeER4Y0E3b2VFYzlLY1lPaW5NZzY4U3BQUjNMR1duQVJoNTVpMXhJQnBuUGx6by1EWnYzOXNpY1FYSG16VXlISFh3NXlGcWs?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
+## Oil prices rise over 1pc
+
+### Post
+
+🌊 The news: Oil prices rise over 1pc
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Oil prices rise over 1pc
+Source: Investify
+
+▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
+▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
+▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
+▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
+▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMidkFVX3lxTE00TlFxWlROT2JMdTlNcVRrdXIyd3BrekNIeXZWRWFxLVVjcUNXcU1RcERNdHNvUGJmY01oNWV6U1MydndPa2xETEhxeEVpSUw0R1hpSElOMjdZTFcwY0tVN3dmVUpzV0pRQU5oS04yNmVhN3A2alE?oc=5
 
 Research & education only. Not investment advice.
 
