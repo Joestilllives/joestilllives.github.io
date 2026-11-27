@@ -1,4 +1,40 @@
-# Ripple posts — 2026-11-27 09:40 UTC
+# Ripple posts — 2026-11-27 12:25 UTC
+
+## Profit Booking, Rising Crude Prices Drag Sensex Down 989 Points
+
+### Post
+
+🌊 The news: Profit Booking, Rising Crude Prices Drag Sensex Down 989 Points
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Profit Booking, Rising Crude Prices Drag Sensex Down 989 Points
+Source: Rediff.com
+
+▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
+▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
+▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
+▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
+▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMi3gFBVV95cUxOWWdoVkhZekpfalN0czctWm5ERENvTlM3TnotWTNtRER4OUhtczNWMXVVZ0ZpWkpvdkEzTFQzNmI1dkx4ek11Y09pUUxucmxQaWtQVWJlcUlEc09qNC1YelBYQjdwbXJpelBLcG51NE5MNjJ6ZGFQZkJjeGlaaG5nRGJ2NHlPOFVfSFFQUHZqR3l6MHd5RXJ3R0VKdmN0bEY1dTlTYmllelRvWnlmdEU1M3ZhLURCU3VFMzd1TnRQTVpfRDdLV0F1TzFpUG1ValUtbHpQWlE2V25nUnFsZUHSAeABQVVfeXFMTUplel9ZNWhheWI3dFgxZWdxTTI5dGtvYlBPRmZveC1GQkpkcWFhYjBmb0ZxZnR4ZTRyb2RpOWJzR0hWNF9xRE5mcGkzUG4wWHZTZDVyRDRuRGlUZVFINHh0Xzc0UkQ4NEdreEtYN21aUExVWXBwZDFEZG9lN2t1dEdWSURJTUcwQ1lCUWh3czI2R0VIS1RDenFDS2pqNlNhU0RmTjZXc2NTdXhQWEtqRWhxdlpwM25iWFIzdUlvUkYyLWxoSm5rb2thR2ItR0pVQjdTM2ItUV9kUHdyWmhmTl8?oc=5
+
+Research & education only. Not investment advice.
+
+---
 
 ## Discount on Western Canada Select Widens as US Crude Soars
 
@@ -31,42 +67,6 @@ Source: EnergyNow
 ▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
 
 https://news.google.com/rss/articles/CBMikgFBVV95cUxNYlpNQXNjRDBUUU0yVVVuMXpVZmtNT3JUXzI3UnB5ejJoa3ZDeXVVcVVRV2lUeTk0R3Q3c3RRcV9tM0Z5NWNsQ2wtR2IxTmp0RWRsQzJZcFZ1SXJjQnMxcXlpUEVrSmk4ZGg4TUN6MWVrYko0WWtMWEZyUVZIS3A1azdERVdzaDlqT25wMnNwVTZXUQ?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## Will Brent crude oil price extend gains amid ongoing buyer support?
-
-### Post
-
-🌊 The news: Will Brent crude oil price extend gains amid ongoing buyer support?
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Will Brent crude oil price extend gains amid ongoing buyer support?
-Source: Traders Union
-
-▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
-▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
-▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
-▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
-▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
-
-https://news.google.com/rss/articles/CBMikwFBVV95cUxQY0c3a1JCLUROYU1DQXJhUVNqRldzMkJfZzVyZ25Hd2FTYTAybXF4LTFmeXJ5dE9jQXNhS2lXakhReUR5N1VvT3AxaTJvbURLUUVyQXpHR0JITktDcVJFZGI5M2hqWEplQ3N5YmpOaTU5NWE0LUNMWGxoT3BDY2JvNEhqOXVHZ2dnaVNwMFQ4ZFV4RDQ?oc=5
 
 Research & education only. Not investment advice.
 
@@ -288,11 +288,11 @@ Research & education only. Not investment advice.
 
 ---
 
-## THE BIG TURNAROUND: Alberta Sees $3.8B Surplus Due to High Oil Prices, Economist Estimates
+## 2027 oil price forecast: Where BofA thinks Brent is headed next
 
 ### Post
 
-🌊 The news: THE BIG TURNAROUND: Alberta Sees $3.8B Surplus Due to High Oil Prices, Economist Estimates
+🌊 The news: 2027 oil price forecast: Where BofA thinks Brent is headed next
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -309,8 +309,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 THE BIG TURNAROUND: Alberta Sees $3.8B Surplus Due to High Oil Prices, Economist Estimates
-Source: EnergyNow
+📰 2027 oil price forecast: Where BofA thinks Brent is headed next
+Source: Investing.com
 
 ◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price
 ◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price
@@ -318,7 +318,7 @@ Source: EnergyNow
 ◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price
 ◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
 
-https://news.google.com/rss/articles/CBMinwFBVV95cUxNM0NZMlF6QkZOeTRXeklQSHpSTlplOUZMdDYtZ2hhbHlqdGItMktncERSeXFONThMMjBHVkxhNUFHRnYyVG9EQVdseTFhZU9FenRNWmpSeE02MzVab200dWNGa1ZaMjc0VWpOcTZnMzdnRUN4bWIxUWE2aWc5ZE9MMUwzNDI3RHhFVUpJNVM0MjJMVDIyeTJnT2g5NzRSQm8?oc=5
+https://news.google.com/rss/articles/CBMiugFBVV95cUxOMUxLelk3cUJpUDNnOFJaTXJRa2ZqNUg4Z1lRLTIwWTNDd0pDMGppbjd5TE5FV1pQR0Z1Y2F1cWF1SWQzOVZqcmRfQTQ3MU1ab2JSSktyd19uS2JjanB0M3RibkxPeXpXbk9IU2VqT203cXpRMHVUeUVSREpZT1Zzb01VSTg1cks2aVFIRkpsaFpzMENySGdEdEpWWU8xVDJsUHdJdkw0b3huUDZPQ1g3SVN6WUtiZXVWdXc?oc=5
 
 Research & education only. Not investment advice.
 
