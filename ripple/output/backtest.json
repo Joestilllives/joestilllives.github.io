@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T09:35:10.734641+00:00",
+ "generated": "2026-11-27T09:42:53.185915+00:00",
  "cost_round_trip_pct": 0.06,
  "note": "Days where Yahoo's Indian open equals the previous close are excluded as possibly stale.",
  "errors": [],
@@ -10,7 +10,7 @@
    "from": "2021-12-01",
    "to": "2026-11-26",
    "corr_gap": 0.513,
-   "corr_intraday": 0.105,
+   "corr_intraday": 0.106,
    "variants": [
     {
      "trade": "open \u2192 close",
@@ -26,51 +26,51 @@
      "newer_half": {
       "trades": 75,
       "win_rate": 0.64,
-      "avg_net_pct": 0.407,
-      "total_pct": 34.3,
+      "avg_net_pct": 0.413,
+      "total_pct": 34.8,
       "max_drawdown_pct": -8.1,
-      "t_stat": 2.11
+      "t_stat": 2.13
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 691,
        "win_rate": 0.527,
        "avg_net_pct": 0.071,
-       "total_pct": 55.1,
+       "total_pct": 55.7,
        "max_drawdown_pct": -15.1,
-       "t_stat": 1.56
+       "t_stat": 1.57
       },
       "1%": {
        "trades": 490,
        "win_rate": 0.533,
-       "avg_net_pct": 0.101,
-       "total_pct": 58.2,
+       "avg_net_pct": 0.102,
+       "total_pct": 58.8,
        "max_drawdown_pct": -11.9,
-       "t_stat": 1.8
+       "t_stat": 1.81
       },
       "1.5%": {
        "trades": 346,
        "win_rate": 0.555,
-       "avg_net_pct": 0.151,
-       "total_pct": 63.9,
+       "avg_net_pct": 0.152,
+       "total_pct": 64.6,
        "max_drawdown_pct": -12.2,
-       "t_stat": 2.19
+       "t_stat": 2.2
       },
       "2%": {
        "trades": 232,
        "win_rate": 0.573,
-       "avg_net_pct": 0.168,
-       "total_pct": 44.2,
+       "avg_net_pct": 0.17,
+       "total_pct": 44.8,
        "max_drawdown_pct": -15.8,
-       "t_stat": 1.83
+       "t_stat": 1.84
       },
       "3%": {
        "trades": 118,
        "win_rate": 0.627,
-       "avg_net_pct": 0.312,
-       "total_pct": 42.6,
+       "avg_net_pct": 0.316,
+       "total_pct": 43.2,
        "max_drawdown_pct": -8.5,
-       "t_stat": 2.28
+       "t_stat": 2.29
       }
      }
     },
@@ -88,51 +88,51 @@
      "newer_half": {
       "trades": 75,
       "win_rate": 0.613,
-      "avg_net_pct": 0.467,
-      "total_pct": 40.8,
+      "avg_net_pct": 0.473,
+      "total_pct": 41.4,
       "max_drawdown_pct": -6.2,
-      "t_stat": 2.87
+      "t_stat": 2.88
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 691,
        "win_rate": 0.547,
-       "avg_net_pct": 0.092,
-       "total_pct": 82.5,
+       "avg_net_pct": 0.093,
+       "total_pct": 83.3,
        "max_drawdown_pct": -14.3,
-       "t_stat": 2.44
+       "t_stat": 2.45
       },
       "1%": {
        "trades": 490,
        "win_rate": 0.549,
-       "avg_net_pct": 0.132,
-       "total_pct": 86.2,
+       "avg_net_pct": 0.133,
+       "total_pct": 87.0,
        "max_drawdown_pct": -8.2,
-       "t_stat": 2.87
+       "t_stat": 2.88
       },
       "1.5%": {
        "trades": 346,
        "win_rate": 0.546,
-       "avg_net_pct": 0.155,
-       "total_pct": 67.8,
+       "avg_net_pct": 0.157,
+       "total_pct": 68.5,
        "max_drawdown_pct": -8.0,
-       "t_stat": 2.72
+       "t_stat": 2.73
       },
       "2%": {
        "trades": 232,
        "win_rate": 0.547,
-       "avg_net_pct": 0.177,
-       "total_pct": 48.4,
+       "avg_net_pct": 0.179,
+       "total_pct": 49.1,
        "max_drawdown_pct": -8.8,
-       "t_stat": 2.33
+       "t_stat": 2.35
       },
       "3%": {
        "trades": 118,
        "win_rate": 0.602,
-       "avg_net_pct": 0.375,
-       "total_pct": 54.1,
+       "avg_net_pct": 0.379,
+       "total_pct": 54.8,
        "max_drawdown_pct": -6.2,
-       "t_stat": 3.19
+       "t_stat": 3.2
       }
      }
     }
@@ -145,7 +145,7 @@
    "from": "2021-12-01",
    "to": "2026-11-26",
    "corr_gap": 0.325,
-   "corr_intraday": 0.109,
+   "corr_intraday": 0.11,
    "variants": [
     {
      "trade": "open \u2192 close",
@@ -161,51 +161,51 @@
      "newer_half": {
       "trades": 170,
       "win_rate": 0.6,
-      "avg_net_pct": 0.321,
-      "total_pct": 69.5,
+      "avg_net_pct": 0.323,
+      "total_pct": 70.2,
       "max_drawdown_pct": -6.6,
-      "t_stat": 2.97
+      "t_stat": 2.98
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 586,
        "win_rate": 0.536,
        "avg_net_pct": 0.076,
-       "total_pct": 48.8,
+       "total_pct": 49.4,
        "max_drawdown_pct": -17.1,
-       "t_stat": 1.47
+       "t_stat": 1.48
       },
       "1%": {
        "trades": 348,
        "win_rate": 0.566,
-       "avg_net_pct": 0.191,
-       "total_pct": 88.6,
+       "avg_net_pct": 0.192,
+       "total_pct": 89.4,
        "max_drawdown_pct": -8.3,
-       "t_stat": 2.79
+       "t_stat": 2.8
       },
       "1.5%": {
        "trades": 225,
        "win_rate": 0.582,
-       "avg_net_pct": 0.296,
-       "total_pct": 90.7,
+       "avg_net_pct": 0.298,
+       "total_pct": 91.5,
        "max_drawdown_pct": -6.6,
-       "t_stat": 3.3
+       "t_stat": 3.31
       },
       "2%": {
        "trades": 147,
        "win_rate": 0.578,
-       "avg_net_pct": 0.305,
-       "total_pct": 54.2,
+       "avg_net_pct": 0.307,
+       "total_pct": 54.8,
        "max_drawdown_pct": -6.2,
-       "t_stat": 2.67
+       "t_stat": 2.69
       },
       "3%": {
        "trades": 83,
        "win_rate": 0.59,
-       "avg_net_pct": 0.407,
-       "total_pct": 38.7,
+       "avg_net_pct": 0.412,
+       "total_pct": 39.3,
        "max_drawdown_pct": -10.7,
-       "t_stat": 2.39
+       "t_stat": 2.4
       }
      }
     },
@@ -223,51 +223,51 @@
      "newer_half": {
       "trades": 170,
       "win_rate": 0.588,
-      "avg_net_pct": 0.28,
-      "total_pct": 58.8,
+      "avg_net_pct": 0.283,
+      "total_pct": 59.5,
       "max_drawdown_pct": -8.2,
-      "t_stat": 2.93
+      "t_stat": 2.95
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 586,
        "win_rate": 0.527,
        "avg_net_pct": 0.053,
-       "total_pct": 31.8,
+       "total_pct": 32.4,
        "max_drawdown_pct": -20.5,
-       "t_stat": 1.22
+       "t_stat": 1.23
       },
       "1%": {
        "trades": 348,
        "win_rate": 0.569,
-       "avg_net_pct": 0.159,
-       "total_pct": 70.2,
+       "avg_net_pct": 0.16,
+       "total_pct": 70.9,
        "max_drawdown_pct": -8.2,
-       "t_stat": 2.68
+       "t_stat": 2.69
       },
       "1.5%": {
        "trades": 225,
        "win_rate": 0.596,
-       "avg_net_pct": 0.253,
-       "total_pct": 73.8,
+       "avg_net_pct": 0.255,
+       "total_pct": 74.6,
        "max_drawdown_pct": -8.2,
-       "t_stat": 3.21
+       "t_stat": 3.22
       },
       "2%": {
        "trades": 147,
        "win_rate": 0.599,
-       "avg_net_pct": 0.305,
-       "total_pct": 54.6,
+       "avg_net_pct": 0.308,
+       "total_pct": 55.3,
        "max_drawdown_pct": -7.7,
-       "t_stat": 2.93
+       "t_stat": 2.95
       },
       "3%": {
        "trades": 83,
        "win_rate": 0.602,
-       "avg_net_pct": 0.451,
-       "total_pct": 44.1,
+       "avg_net_pct": 0.457,
+       "total_pct": 44.7,
        "max_drawdown_pct": -11.5,
-       "t_stat": 2.93
+       "t_stat": 2.94
       }
      }
     }
@@ -415,7 +415,7 @@
    "from": "2021-11-30",
    "to": "2026-11-26",
    "corr_gap": 0.615,
-   "corr_intraday": 0.063,
+   "corr_intraday": 0.064,
    "variants": [
     {
      "trade": "open \u2192 close",
@@ -431,51 +431,51 @@
      "newer_half": {
       "trades": 72,
       "win_rate": 0.569,
-      "avg_net_pct": 0.02,
-      "total_pct": 0.2,
+      "avg_net_pct": 0.026,
+      "total_pct": 0.7,
       "max_drawdown_pct": -16.5,
-      "t_stat": 0.09
+      "t_stat": 0.12
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 835,
        "win_rate": 0.51,
-       "avg_net_pct": 0.065,
-       "total_pct": 60.3,
+       "avg_net_pct": 0.066,
+       "total_pct": 61.0,
        "max_drawdown_pct": -20.1,
-       "t_stat": 1.44
+       "t_stat": 1.45
       },
       "1%": {
        "trades": 591,
        "win_rate": 0.53,
        "avg_net_pct": 0.083,
-       "total_pct": 54.8,
+       "total_pct": 55.4,
        "max_drawdown_pct": -16.1,
-       "t_stat": 1.52
+       "t_stat": 1.53
       },
       "1.5%": {
        "trades": 409,
        "win_rate": 0.545,
-       "avg_net_pct": 0.092,
-       "total_pct": 40.0,
+       "avg_net_pct": 0.093,
+       "total_pct": 40.6,
        "max_drawdown_pct": -18.3,
-       "t_stat": 1.33
+       "t_stat": 1.34
       },
       "2%": {
        "trades": 261,
        "win_rate": 0.571,
-       "avg_net_pct": 0.123,
-       "total_pct": 33.8,
+       "avg_net_pct": 0.124,
+       "total_pct": 34.4,
        "max_drawdown_pct": -17.7,
-       "t_stat": 1.33
+       "t_stat": 1.35
       },
       "3%": {
        "trades": 108,
        "win_rate": 0.583,
-       "avg_net_pct": 0.116,
-       "total_pct": 11.5,
+       "avg_net_pct": 0.12,
+       "total_pct": 12.0,
        "max_drawdown_pct": -16.5,
-       "t_stat": 0.69
+       "t_stat": 0.71
       }
      }
     },
@@ -493,51 +493,51 @@
      "newer_half": {
       "trades": 72,
       "win_rate": 0.569,
-      "avg_net_pct": 0.087,
-      "total_pct": 5.5,
+      "avg_net_pct": 0.093,
+      "total_pct": 5.9,
       "max_drawdown_pct": -13.3,
-      "t_stat": 0.46
+      "t_stat": 0.49
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 835,
        "win_rate": 0.515,
        "avg_net_pct": 0.097,
-       "total_pct": 111.5,
+       "total_pct": 112.4,
        "max_drawdown_pct": -12.1,
-       "t_stat": 2.39
+       "t_stat": 2.4
       },
       "1%": {
        "trades": 591,
        "win_rate": 0.54,
        "avg_net_pct": 0.126,
-       "total_pct": 101.6,
+       "total_pct": 102.5,
        "max_drawdown_pct": -11.4,
-       "t_stat": 2.61
+       "t_stat": 2.62
       },
       "1.5%": {
        "trades": 409,
        "win_rate": 0.538,
-       "avg_net_pct": 0.107,
-       "total_pct": 50.3,
+       "avg_net_pct": 0.108,
+       "total_pct": 51.0,
        "max_drawdown_pct": -15.0,
-       "t_stat": 1.75
+       "t_stat": 1.77
       },
       "2%": {
        "trades": 261,
        "win_rate": 0.563,
-       "avg_net_pct": 0.142,
-       "total_pct": 41.8,
+       "avg_net_pct": 0.144,
+       "total_pct": 42.4,
        "max_drawdown_pct": -13.5,
-       "t_stat": 1.77
+       "t_stat": 1.79
       },
       "3%": {
        "trades": 108,
        "win_rate": 0.583,
-       "avg_net_pct": 0.166,
-       "total_pct": 18.0,
+       "avg_net_pct": 0.17,
+       "total_pct": 18.6,
        "max_drawdown_pct": -13.3,
-       "t_stat": 1.11
+       "t_stat": 1.13
       }
      }
     }
@@ -566,8 +566,8 @@
      "newer_half": {
       "trades": 158,
       "win_rate": 0.468,
-      "avg_net_pct": 0.05,
-      "total_pct": 5.4,
+      "avg_net_pct": 0.051,
+      "total_pct": 5.6,
       "max_drawdown_pct": -18.1,
       "t_stat": 0.35
      },
@@ -575,42 +575,42 @@
       "0.5%": {
        "trades": 804,
        "win_rate": 0.49,
-       "avg_net_pct": 0.02,
-       "total_pct": 8.1,
+       "avg_net_pct": 0.021,
+       "total_pct": 8.3,
        "max_drawdown_pct": -29.0,
-       "t_stat": 0.39
+       "t_stat": 0.4
       },
       "1%": {
        "trades": 597,
        "win_rate": 0.497,
        "avg_net_pct": 0.03,
-       "total_pct": 11.9,
+       "total_pct": 12.1,
        "max_drawdown_pct": -24.8,
        "t_stat": 0.49
       },
       "1.5%": {
        "trades": 402,
        "win_rate": 0.5,
-       "avg_net_pct": 0.047,
-       "total_pct": 14.9,
+       "avg_net_pct": 0.048,
+       "total_pct": 15.1,
        "max_drawdown_pct": -22.6,
-       "t_stat": 0.59
+       "t_stat": 0.6
       },
       "2%": {
        "trades": 282,
        "win_rate": 0.493,
-       "avg_net_pct": 0.056,
-       "total_pct": 12.5,
+       "avg_net_pct": 0.057,
+       "total_pct": 12.7,
        "max_drawdown_pct": -22.1,
        "t_stat": 0.56
       },
       "3%": {
        "trades": 117,
        "win_rate": 0.436,
-       "avg_net_pct": -0.025,
-       "total_pct": -5.0,
+       "avg_net_pct": -0.023,
+       "total_pct": -4.9,
        "max_drawdown_pct": -20.2,
-       "t_stat": -0.14
+       "t_stat": -0.13
       }
      }
     },
@@ -628,25 +628,25 @@
      "newer_half": {
       "trades": 211,
       "win_rate": 0.493,
-      "avg_net_pct": 0.128,
-      "total_pct": 27.8,
+      "avg_net_pct": 0.129,
+      "total_pct": 28.0,
       "max_drawdown_pct": -14.4,
-      "t_stat": 1.21
+      "t_stat": 1.22
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 804,
        "win_rate": 0.521,
        "avg_net_pct": 0.051,
-       "total_pct": 41.2,
+       "total_pct": 41.5,
        "max_drawdown_pct": -20.9,
-       "t_stat": 1.14
+       "t_stat": 1.15
       },
       "1%": {
        "trades": 597,
        "win_rate": 0.533,
        "avg_net_pct": 0.09,
-       "total_pct": 62.4,
+       "total_pct": 62.7,
        "max_drawdown_pct": -18.0,
        "t_stat": 1.68
       },
@@ -654,25 +654,25 @@
        "trades": 402,
        "win_rate": 0.52,
        "avg_net_pct": 0.106,
-       "total_pct": 47.3,
+       "total_pct": 47.6,
        "max_drawdown_pct": -14.4,
-       "t_stat": 1.53
+       "t_stat": 1.54
       },
       "2%": {
        "trades": 282,
        "win_rate": 0.507,
        "avg_net_pct": 0.1,
-       "total_pct": 28.3,
+       "total_pct": 28.5,
        "max_drawdown_pct": -11.7,
        "t_stat": 1.12
       },
       "3%": {
        "trades": 117,
        "win_rate": 0.47,
-       "avg_net_pct": 0.064,
-       "total_pct": 5.9,
+       "avg_net_pct": 0.065,
+       "total_pct": 6.0,
        "max_drawdown_pct": -14.4,
-       "t_stat": 0.39
+       "t_stat": 0.4
       }
      }
     }
@@ -701,8 +701,8 @@
      "newer_half": {
       "trades": 219,
       "win_rate": 0.443,
-      "avg_net_pct": -0.084,
-      "total_pct": -19.1,
+      "avg_net_pct": -0.083,
+      "total_pct": -18.9,
       "max_drawdown_pct": -31.8,
       "t_stat": -0.78
      },
@@ -711,7 +711,7 @@
        "trades": 759,
        "win_rate": 0.49,
        "avg_net_pct": 0.013,
-       "total_pct": -1.4,
+       "total_pct": -1.2,
        "max_drawdown_pct": -42.2,
        "t_stat": 0.21
       },
@@ -719,15 +719,15 @@
        "trades": 597,
        "win_rate": 0.484,
        "avg_net_pct": 0.052,
-       "total_pct": 25.8,
+       "total_pct": 26.0,
        "max_drawdown_pct": -33.7,
-       "t_stat": 0.77
+       "t_stat": 0.78
       },
       "1.5%": {
        "trades": 449,
        "win_rate": 0.479,
        "avg_net_pct": 0.037,
-       "total_pct": 10.1,
+       "total_pct": 10.3,
        "max_drawdown_pct": -32.5,
        "t_stat": 0.45
       },
@@ -735,15 +735,15 @@
        "trades": 322,
        "win_rate": 0.497,
        "avg_net_pct": 0.07,
-       "total_pct": 19.0,
+       "total_pct": 19.2,
        "max_drawdown_pct": -22.9,
-       "t_stat": 0.71
+       "t_stat": 0.72
       },
       "3%": {
        "trades": 182,
        "win_rate": 0.467,
-       "avg_net_pct": -0.005,
-       "total_pct": -4.4,
+       "avg_net_pct": -0.004,
+       "total_pct": -4.2,
        "max_drawdown_pct": -21.4,
        "t_stat": -0.03
       }
@@ -764,16 +764,16 @@
       "trades": 158,
       "win_rate": 0.449,
       "avg_net_pct": -0.035,
-      "total_pct": -6.8,
+      "total_pct": -6.7,
       "max_drawdown_pct": -21.9,
-      "t_stat": -0.33
+      "t_stat": -0.32
      },
      "all_thresholds_full_period": {
       "0.5%": {
        "trades": 759,
        "win_rate": 0.527,
        "avg_net_pct": 0.01,
-       "total_pct": -0.7,
+       "total_pct": -0.5,
        "max_drawdown_pct": -42.5,
        "t_stat": 0.19
       },
@@ -781,7 +781,7 @@
        "trades": 597,
        "win_rate": 0.528,
        "avg_net_pct": 0.046,
-       "total_pct": 23.5,
+       "total_pct": 23.7,
        "max_drawdown_pct": -34.6,
        "t_stat": 0.77
       },
@@ -789,7 +789,7 @@
        "trades": 449,
        "win_rate": 0.512,
        "avg_net_pct": 0.066,
-       "total_pct": 27.6,
+       "total_pct": 27.8,
        "max_drawdown_pct": -32.0,
        "t_stat": 0.93
       },
@@ -797,17 +797,17 @@
        "trades": 322,
        "win_rate": 0.525,
        "avg_net_pct": 0.103,
-       "total_pct": 34.4,
+       "total_pct": 34.6,
        "max_drawdown_pct": -21.9,
-       "t_stat": 1.24
+       "t_stat": 1.25
       },
       "3%": {
        "trades": 182,
        "win_rate": 0.495,
-       "avg_net_pct": 0.018,
-       "total_pct": 0.9,
+       "avg_net_pct": 0.019,
+       "total_pct": 1.0,
        "max_drawdown_pct": -20.3,
-       "t_stat": 0.15
+       "t_stat": 0.16
       }
      }
     }
