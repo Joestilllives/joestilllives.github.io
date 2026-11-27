@@ -112389,5 +112389,123 @@
 ]
 }
 ]
+},
+{
+"id": "3765f221241d",
+"title": "Global Market Today: Asian stocks rise for second day, crude oil gains",
+"url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-today-asian-stocks-rise-for-second-day-crude-oil-gains/articleshow/136206178.cms",
+"published": "2026-11-27T00:50:49+00:00",
+"logged": "2026-11-27T01:44:59.657828+00:00",
+"impacts": [
+{
+"id": "ioc",
+"name": "Indian Oil",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian Oil",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "bpcl",
+"name": "BPCL",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "BPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "hpcl",
+"name": "HPCL",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "HPCL",
+"why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+}
+]
+},
+{
+"id": "ongc",
+"name": "ONGC",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "ONGC",
+"why": "As an oil producer, ONGC earns more when crude is higher"
+}
+]
+},
+{
+"id": "indigo",
+"name": "IndiGo (InterGlobe Aviation)",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "IndiGo (InterGlobe Aviation)",
+"why": "Jet fuel is an airline's single biggest cost"
+}
+]
+},
+{
+"id": "asianpaints",
+"name": "Asian Paints",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Asian Paints",
+"why": "Many paint raw materials are crude-oil derivatives"
+}
+]
+},
+{
+"id": "reliance",
+"name": "Reliance Industries",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Reliance Industries",
+"why": "A refining and petrochemicals giant: the effect depends on refining margins"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Crude oil price",
+"to": "Indian rupee strength",
+"why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+}
+]
 }
 ]
