@@ -1,15 +1,15 @@
 {
  "overall": {
   "1": {
-   "n": 3505,
+   "n": 3567,
    "hit_rate": 0.562,
-   "avg_edge_pct": 0.42,
+   "avg_edge_pct": 0.38,
    "enough_data": true
   },
   "3": {
-   "n": 2934,
+   "n": 2950,
    "hit_rate": 0.574,
-   "avg_edge_pct": 1.14,
+   "avg_edge_pct": 1.1,
    "enough_data": true
   },
   "7": {
@@ -22,15 +22,15 @@
  "by_effect": {
   "tailwind": {
    "1": {
-    "n": 1462,
-    "hit_rate": 0.698,
-    "avg_edge_pct": 1.48,
+    "n": 1485,
+    "hit_rate": 0.696,
+    "avg_edge_pct": 1.39,
     "enough_data": true
    },
    "3": {
-    "n": 1195,
-    "hit_rate": 0.549,
-    "avg_edge_pct": 2.82,
+    "n": 1207,
+    "hit_rate": 0.562,
+    "avg_edge_pct": 2.7,
     "enough_data": true
    },
    "7": {
@@ -42,14 +42,14 @@
   },
   "headwind": {
    "1": {
-    "n": 2043,
-    "hit_rate": 0.464,
-    "avg_edge_pct": -0.34,
+    "n": 2082,
+    "hit_rate": 0.467,
+    "avg_edge_pct": -0.33,
     "enough_data": true
    },
    "3": {
-    "n": 1739,
-    "hit_rate": 0.591,
+    "n": 1743,
+    "hit_rate": 0.582,
     "avg_edge_pct": -0.02,
     "enough_data": true
    },
@@ -63,15 +63,15 @@
  },
  "cross_market": {
   "1": {
-   "n": 3021,
+   "n": 3039,
    "hit_rate": 0.586,
-   "avg_edge_pct": 0.57,
+   "avg_edge_pct": 0.53,
    "enough_data": true
   },
   "3": {
    "n": 2601,
-   "hit_rate": 0.6,
-   "avg_edge_pct": 1.47,
+   "hit_rate": 0.601,
+   "avg_edge_pct": 1.43,
    "enough_data": true
   },
   "7": {
@@ -86,9 +86,9 @@
    "link": "Strait of Hormuz tension → Crude oil price → Indian Oil",
    "stats": {
     "1": {
-     "n": 169,
-     "hit_rate": 0.923,
-     "avg_edge_pct": 1.62,
+     "n": 170,
+     "hit_rate": 0.918,
+     "avg_edge_pct": 1.61,
      "enough_data": true
     },
     "3": {
@@ -103,9 +103,9 @@
    "link": "Strait of Hormuz tension → Crude oil price → BPCL",
    "stats": {
     "1": {
-     "n": 169,
-     "hit_rate": 0.923,
-     "avg_edge_pct": 0.88,
+     "n": 170,
+     "hit_rate": 0.918,
+     "avg_edge_pct": 0.86,
      "enough_data": true
     },
     "3": {
@@ -120,9 +120,9 @@
    "link": "Strait of Hormuz tension → Crude oil price → HPCL",
    "stats": {
     "1": {
-     "n": 169,
-     "hit_rate": 0.923,
-     "avg_edge_pct": 0.95,
+     "n": 170,
+     "hit_rate": 0.918,
+     "avg_edge_pct": 0.94,
      "enough_data": true
     },
     "3": {
@@ -137,9 +137,9 @@
    "link": "Strait of Hormuz tension → Crude oil price → ONGC",
    "stats": {
     "1": {
-     "n": 169,
-     "hit_rate": 0.923,
-     "avg_edge_pct": 1.23,
+     "n": 170,
+     "hit_rate": 0.924,
+     "avg_edge_pct": 1.24,
      "enough_data": true
     },
     "3": {
@@ -154,9 +154,9 @@
    "link": "Strait of Hormuz tension → Crude oil price → IndiGo (InterGlobe Aviation)",
    "stats": {
     "1": {
-     "n": 169,
-     "hit_rate": 0.089,
-     "avg_edge_pct": -0.47,
+     "n": 170,
+     "hit_rate": 0.088,
+     "avg_edge_pct": -0.48,
      "enough_data": true
     },
     "3": {
@@ -171,8 +171,8 @@
    "link": "Strait of Hormuz tension → Crude oil price → Asian Paints",
    "stats": {
     "1": {
-     "n": 169,
-     "hit_rate": 0.089,
+     "n": 170,
+     "hit_rate": 0.088,
      "avg_edge_pct": -0.53,
      "enough_data": true
     },
@@ -205,15 +205,15 @@
    "link": "Crude oil price → ONGC",
    "stats": {
     "1": {
-     "n": 106,
-     "hit_rate": 0.566,
-     "avg_edge_pct": 0.13,
+     "n": 107,
+     "hit_rate": 0.57,
+     "avg_edge_pct": 0.14,
      "enough_data": true
     },
     "3": {
      "n": 75,
      "hit_rate": 0.493,
-     "avg_edge_pct": 0.04,
+     "avg_edge_pct": 0.03,
      "enough_data": true
     },
     "7": {
@@ -228,15 +228,15 @@
    "link": "Crude oil price → IndiGo (InterGlobe Aviation)",
    "stats": {
     "1": {
-     "n": 105,
-     "hit_rate": 0.495,
-     "avg_edge_pct": -0.04,
+     "n": 106,
+     "hit_rate": 0.491,
+     "avg_edge_pct": -0.08,
      "enough_data": true
     },
     "3": {
      "n": 75,
      "hit_rate": 0.493,
-     "avg_edge_pct": -0.06,
+     "avg_edge_pct": -0.07,
      "enough_data": true
     },
     "7": {
@@ -251,8 +251,8 @@
    "link": "Crude oil price → Asian Paints",
    "stats": {
     "1": {
-     "n": 105,
-     "hit_rate": 0.505,
+     "n": 106,
+     "hit_rate": 0.5,
      "avg_edge_pct": 0.12,
      "enough_data": true
     },
@@ -276,7 +276,7 @@
     "1": {
      "n": 97,
      "hit_rate": 0.505,
-     "avg_edge_pct": 0.03,
+     "avg_edge_pct": 0.02,
      "enough_data": true
     },
     "3": {
@@ -299,7 +299,7 @@
     "1": {
      "n": 96,
      "hit_rate": 0.51,
-     "avg_edge_pct": 0.13,
+     "avg_edge_pct": 0.1,
      "enough_data": true
     },
     "3": {
@@ -322,7 +322,7 @@
     "1": {
      "n": 95,
      "hit_rate": 0.495,
-     "avg_edge_pct": 0.02,
+     "avg_edge_pct": 0.01,
      "enough_data": true
     },
     "3": {
@@ -345,13 +345,13 @@
     "1": {
      "n": 85,
      "hit_rate": 0.694,
-     "avg_edge_pct": 1.61,
+     "avg_edge_pct": 1.6,
      "enough_data": true
     },
     "3": {
      "n": 73,
      "hit_rate": 0.74,
-     "avg_edge_pct": 4.0,
+     "avg_edge_pct": 3.97,
      "enough_data": true
     }
    }
@@ -362,13 +362,13 @@
     "1": {
      "n": 85,
      "hit_rate": 0.694,
-     "avg_edge_pct": 0.79,
+     "avg_edge_pct": 0.78,
      "enough_data": true
     },
     "3": {
      "n": 73,
      "hit_rate": 0.712,
-     "avg_edge_pct": 2.81,
+     "avg_edge_pct": 2.77,
      "enough_data": true
     }
    }
@@ -385,7 +385,7 @@
     "3": {
      "n": 73,
      "hit_rate": 0.74,
-     "avg_edge_pct": 1.98,
+     "avg_edge_pct": 1.97,
      "enough_data": true
     }
    }
@@ -402,7 +402,7 @@
     "3": {
      "n": 73,
      "hit_rate": 0.74,
-     "avg_edge_pct": 3.28,
+     "avg_edge_pct": 3.3,
      "enough_data": true
     }
    }
@@ -413,13 +413,13 @@
     "1": {
      "n": 84,
      "hit_rate": 0.583,
-     "avg_edge_pct": 0.96,
+     "avg_edge_pct": -0.22,
      "enough_data": true
     },
     "3": {
      "n": 72,
-     "hit_rate": 0.736,
-     "avg_edge_pct": 2.1,
+     "hit_rate": 0.708,
+     "avg_edge_pct": 0.63,
      "enough_data": true
     }
    }
@@ -430,7 +430,7 @@
     "1": {
      "n": 81,
      "hit_rate": 0.494,
-     "avg_edge_pct": 0.16,
+     "avg_edge_pct": 0.14,
      "enough_data": true
     },
     "3": {
@@ -451,9 +451,9 @@
    "link": "Red Sea shipping disruption → Global shipping costs → Welspun Living",
    "stats": {
     "1": {
-     "n": 40,
-     "hit_rate": 0.25,
-     "avg_edge_pct": -1.04,
+     "n": 41,
+     "hit_rate": 0.268,
+     "avg_edge_pct": -0.95,
      "enough_data": true
     },
     "3": {
@@ -465,18 +465,41 @@
    }
   },
   {
+   "link": "Nvidia → TSMC",
+   "stats": {
+    "1": {
+     "n": 38,
+     "hit_rate": 0.474,
+     "avg_edge_pct": -0.55,
+     "enough_data": true
+    },
+    "3": {
+     "n": 24,
+     "hit_rate": 0.375,
+     "avg_edge_pct": -1.0,
+     "enough_data": true
+    },
+    "7": {
+     "n": 1,
+     "hit_rate": 0.0,
+     "avg_edge_pct": -7.65,
+     "enough_data": false
+    }
+   }
+  },
+  {
    "link": "Indian rupee strength → TCS",
    "stats": {
     "1": {
-     "n": 34,
-     "hit_rate": 0.235,
-     "avg_edge_pct": -1.69,
+     "n": 35,
+     "hit_rate": 0.229,
+     "avg_edge_pct": -1.7,
      "enough_data": true
     },
     "3": {
      "n": 21,
      "hit_rate": 0.19,
-     "avg_edge_pct": -5.13,
+     "avg_edge_pct": -5.09,
      "enough_data": true
     }
    }
@@ -485,15 +508,15 @@
    "link": "Indian rupee strength → Infosys",
    "stats": {
     "1": {
-     "n": 34,
-     "hit_rate": 0.265,
-     "avg_edge_pct": -0.95,
+     "n": 35,
+     "hit_rate": 0.257,
+     "avg_edge_pct": -1.0,
      "enough_data": true
     },
     "3": {
      "n": 21,
      "hit_rate": 0.19,
-     "avg_edge_pct": -3.62,
+     "avg_edge_pct": -3.57,
      "enough_data": true
     }
    }
@@ -516,41 +539,18 @@
    }
   },
   {
-   "link": "Nvidia → TSMC",
-   "stats": {
-    "1": {
-     "n": 32,
-     "hit_rate": 0.438,
-     "avg_edge_pct": -0.76,
-     "enough_data": true
-    },
-    "3": {
-     "n": 18,
-     "hit_rate": 0.444,
-     "avg_edge_pct": -0.52,
-     "enough_data": false
-    },
-    "7": {
-     "n": 1,
-     "hit_rate": 0.0,
-     "avg_edge_pct": -7.65,
-     "enough_data": false
-    }
-   }
-  },
-  {
    "link": "Nvidia → TSMC → Semiconductor supply → Maruti Suzuki",
    "stats": {
     "1": {
-     "n": 31,
-     "hit_rate": 0.387,
-     "avg_edge_pct": -0.17,
+     "n": 32,
+     "hit_rate": 0.406,
+     "avg_edge_pct": -0.13,
      "enough_data": true
     },
     "3": {
      "n": 25,
      "hit_rate": 0.44,
-     "avg_edge_pct": -0.41,
+     "avg_edge_pct": -0.35,
      "enough_data": true
     },
     "7": {
@@ -573,7 +573,7 @@
     "3": {
      "n": 28,
      "hit_rate": 0.75,
-     "avg_edge_pct": 2.27,
+     "avg_edge_pct": 2.28,
      "enough_data": true
     }
    }
@@ -589,8 +589,8 @@
     },
     "3": {
      "n": 28,
-     "hit_rate": 0.75,
-     "avg_edge_pct": 1.27,
+     "hit_rate": 0.786,
+     "avg_edge_pct": 1.28,
      "enough_data": true
     }
    }
@@ -641,7 +641,7 @@
     "3": {
      "n": 28,
      "hit_rate": 0.25,
-     "avg_edge_pct": -0.14,
+     "avg_edge_pct": -0.13,
      "enough_data": true
     }
    }
@@ -669,13 +669,13 @@
     "1": {
      "n": 30,
      "hit_rate": 0.433,
-     "avg_edge_pct": -0.6,
+     "avg_edge_pct": -0.61,
      "enough_data": true
     },
     "3": {
      "n": 21,
      "hit_rate": 0.19,
-     "avg_edge_pct": -2.49,
+     "avg_edge_pct": -2.47,
      "enough_data": true
     }
    }
@@ -686,13 +686,13 @@
     "1": {
      "n": 30,
      "hit_rate": 0.433,
-     "avg_edge_pct": -0.83,
+     "avg_edge_pct": -0.82,
      "enough_data": true
     },
     "3": {
      "n": 21,
      "hit_rate": 0.19,
-     "avg_edge_pct": -4.13,
+     "avg_edge_pct": -4.15,
      "enough_data": true
     }
    }
@@ -703,13 +703,13 @@
     "1": {
      "n": 30,
      "hit_rate": 0.4,
-     "avg_edge_pct": -0.9,
+     "avg_edge_pct": -0.92,
      "enough_data": true
     },
     "3": {
      "n": 21,
      "hit_rate": 0.19,
-     "avg_edge_pct": -2.69,
+     "avg_edge_pct": -2.6,
      "enough_data": true
     }
    }
@@ -726,7 +726,7 @@
     "3": {
      "n": 20,
      "hit_rate": 0.25,
-     "avg_edge_pct": -0.62,
+     "avg_edge_pct": -0.64,
      "enough_data": true
     }
    }
@@ -743,7 +743,7 @@
     "3": {
      "n": 19,
      "hit_rate": 0.789,
-     "avg_edge_pct": 0.32,
+     "avg_edge_pct": 0.29,
      "enough_data": false
     }
    }
@@ -754,13 +754,13 @@
     "1": {
      "n": 26,
      "hit_rate": 0.308,
-     "avg_edge_pct": -0.2,
+     "avg_edge_pct": -0.21,
      "enough_data": true
     },
     "3": {
      "n": 19,
      "hit_rate": 0.263,
-     "avg_edge_pct": -1.05,
+     "avg_edge_pct": -1.07,
      "enough_data": false
     }
    }
@@ -769,15 +769,15 @@
    "link": "Nvidia → TSMC → Semiconductor supply → Apple",
    "stats": {
     "1": {
-     "n": 20,
-     "hit_rate": 0.55,
-     "avg_edge_pct": 0.14,
+     "n": 24,
+     "hit_rate": 0.542,
+     "avg_edge_pct": 0.12,
      "enough_data": true
     },
     "3": {
-     "n": 15,
-     "hit_rate": 0.533,
-     "avg_edge_pct": 0.14,
+     "n": 18,
+     "hit_rate": 0.556,
+     "avg_edge_pct": 0.22,
      "enough_data": false
     },
     "7": {
@@ -789,41 +789,176 @@
    }
   },
   {
+   "link": "TSMC → Semiconductor supply → Apple",
+   "stats": {
+    "1": {
+     "n": 22,
+     "hit_rate": 0.682,
+     "avg_edge_pct": 0.87,
+     "enough_data": true
+    },
+    "3": {
+     "n": 14,
+     "hit_rate": 0.786,
+     "avg_edge_pct": 0.58,
+     "enough_data": false
+    }
+   }
+  },
+  {
    "link": "TSMC → Semiconductor supply → Maruti Suzuki",
    "stats": {
     "1": {
-     "n": 20,
-     "hit_rate": 0.25,
+     "n": 21,
+     "hit_rate": 0.238,
      "avg_edge_pct": -0.59,
      "enough_data": true
     },
     "3": {
      "n": 16,
      "hit_rate": 0.562,
-     "avg_edge_pct": -0.64,
-     "enough_data": false
-    }
-   }
-  },
-  {
-   "link": "US work-visa (H-1B) restrictions → TCS",
-   "stats": {
-    "1": {
-     "n": 20,
-     "hit_rate": 0.15,
-     "avg_edge_pct": -2.94,
-     "enough_data": true
-    },
-    "3": {
-     "n": 13,
-     "hit_rate": 0.0,
-     "avg_edge_pct": -9.17,
+     "avg_edge_pct": -0.58,
      "enough_data": false
     }
    }
   }
  ],
  "recent": [
+  {
+   "alert": "US Stock Market Today: Nasdaq Futures Jump 2% as NVIDIA & AI Stocks Rally",
+   "published": "2026-11-27T15:00:00+00:00",
+   "company": "TSMC",
+   "symbol": "TSM",
+   "effect": "tailwind",
+   "link": "Nvidia → TSMC",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.01616,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "US Stock Market Today: Nasdaq Futures Jump 2% as NVIDIA & AI Stocks Rally",
+   "published": "2026-11-27T15:00:00+00:00",
+   "company": "Apple",
+   "symbol": "AAPL",
+   "effect": "tailwind",
+   "link": "Nvidia → TSMC → Semiconductor supply → Apple",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00765,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Can Microsoft Stock Sustain Margins as AI Data Center Spending Climbs?",
+   "published": "2026-11-27T14:14:38+00:00",
+   "company": "Nvidia",
+   "symbol": "NVDA",
+   "effect": "tailwind",
+   "link": "AI / data-centre spending → Nvidia",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.008,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Can Microsoft Stock Sustain Margins as AI Data Center Spending Climbs?",
+   "published": "2026-11-27T14:14:38+00:00",
+   "company": "TSMC",
+   "symbol": "TSM",
+   "effect": "tailwind",
+   "link": "AI / data-centre spending → TSMC",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.01616,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "TSMC Introduces AI Design Kit to Cut Chip Development Timelines",
+   "published": "2026-11-27T13:10:58+00:00",
+   "company": "Apple",
+   "symbol": "AAPL",
+   "effect": "headwind",
+   "link": "TSMC → Semiconductor supply → Apple",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00765,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena",
+   "published": "2026-11-27T12:08:10+00:00",
+   "company": "Nvidia",
+   "symbol": "NVDA",
+   "effect": "tailwind",
+   "link": "AI / data-centre spending → Nvidia",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.008,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena",
+   "published": "2026-11-27T12:08:10+00:00",
+   "company": "TSMC",
+   "symbol": "TSM",
+   "effect": "tailwind",
+   "link": "AI / data-centre spending → TSMC",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": 0.01616,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "India-US Trade Deal Nearing Finalisation, Says Piyush Goyal Amid Fresh US Tariff Threats",
+   "published": "2026-11-27T11:17:16+00:00",
+   "company": "Apple",
+   "symbol": "AAPL",
+   "effect": "headwind",
+   "link": "US import tariffs (general) → Apple",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00765,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Foreign Investors Pull More Than NT$500 Billion From Taiwan Stocks Over 10 Straight Sessions; TSMC Cut by 8,711 Lots as Futures Shorts Hit Record High",
+   "published": "2026-11-27T10:25:00+00:00",
+   "company": "Apple",
+   "symbol": "AAPL",
+   "effect": "headwind",
+   "link": "TSMC → Semiconductor supply → Apple",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00765,
+     "hit": true
+    }
+   }
+  },
   {
    "alert": "Strait of Hormuz tanker traffic rises despite escalating attacks",
    "published": "2026-11-27T09:36:55+00:00",
@@ -834,7 +969,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.00489,
+     "excess": 0.00926,
      "hit": false
     }
    }
@@ -849,7 +984,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.01325,
+     "excess": 0.01364,
      "hit": false
     }
    }
@@ -864,7 +999,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.01039,
+     "excess": 0.01162,
      "hit": false
     }
    }
@@ -879,7 +1014,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.01769,
+     "excess": 0.01713,
      "hit": true
     }
    }
@@ -894,7 +1029,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.01447,
+     "excess": 0.01686,
      "hit": false
     }
    }
@@ -909,7 +1044,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.00692,
+     "excess": 0.00662,
      "hit": false
     }
    }
@@ -924,7 +1059,52 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.01274,
+     "excess": -0.01497,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Falls 24 Paise to 92.62 Against US Dollar Amid Crude Oil Price Surge",
+   "published": "2026-11-27T09:33:45+00:00",
+   "company": "ONGC",
+   "symbol": "ONGC.NS",
+   "effect": "tailwind",
+   "link": "Crude oil price → ONGC",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01713,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee Falls 24 Paise to 92.62 Against US Dollar Amid Crude Oil Price Surge",
+   "published": "2026-11-27T09:33:45+00:00",
+   "company": "IndiGo (InterGlobe Aviation)",
+   "symbol": "INDIGO.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → IndiGo (InterGlobe Aviation)",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01686,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Falls 24 Paise to 92.62 Against US Dollar Amid Crude Oil Price Surge",
+   "published": "2026-11-27T09:33:45+00:00",
+   "company": "Asian Paints",
+   "symbol": "ASIANPAINT.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → Asian Paints",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00662,
      "hit": false
     }
    }
@@ -939,7 +1119,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.02907,
+     "excess": 0.02915,
      "hit": false
     }
    }
@@ -954,7 +1134,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": 0.02263,
+     "excess": 0.02296,
      "hit": false
     }
    }
@@ -969,7 +1149,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.01274,
+     "excess": -0.01497,
      "hit": false
     }
    }
@@ -984,7 +1164,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.01274,
+     "excess": -0.01497,
      "hit": true
     }
    }
@@ -999,7 +1179,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.01079,
+     "excess": -0.01188,
      "hit": true
     }
    }
@@ -1014,7 +1194,7 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.02046,
+     "excess": -0.01959,
      "hit": true
     }
    }
@@ -1029,397 +1209,217 @@
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.00681,
+     "excess": -0.01129,
      "hit": true
     }
    }
   },
   {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "Indian Oil",
-   "symbol": "IOC.NS",
+   "alert": "Nvidia Slides 6% After a 32% Surge: Why Some See Upside",
+   "published": "2026-11-27T09:02:49+00:00",
+   "company": "TSMC",
+   "symbol": "TSM",
    "effect": "headwind",
-   "link": "Crude oil price → Indian Oil",
-   "cross_market": true,
+   "link": "Nvidia → TSMC",
+   "cross_market": false,
    "results": {
     "1": {
-     "excess": 0.00489,
+     "excess": 0.01616,
      "hit": false
     }
    }
   },
   {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "BPCL",
-   "symbol": "BPCL.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → BPCL",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01325,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "HPCL",
-   "symbol": "HINDPETRO.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → HPCL",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01039,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "ONGC",
-   "symbol": "ONGC.NS",
-   "effect": "tailwind",
-   "link": "Crude oil price → ONGC",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01769,
-     "hit": true
-    }
-   }
-  },
-  {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "IndiGo (InterGlobe Aviation)",
-   "symbol": "INDIGO.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → IndiGo (InterGlobe Aviation)",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01447,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "Asian Paints",
-   "symbol": "ASIANPAINT.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → Asian Paints",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.00692,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
-   "published": "2026-11-27T08:48:15+00:00",
-   "company": "TCS",
-   "symbol": "TCS.NS",
-   "effect": "tailwind",
-   "link": "Crude oil price → Indian rupee strength → TCS",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01274,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "Indian Oil",
-   "symbol": "IOC.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → Indian Oil",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.00489,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "BPCL",
-   "symbol": "BPCL.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → BPCL",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01325,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "HPCL",
-   "symbol": "HINDPETRO.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → HPCL",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01039,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "ONGC",
-   "symbol": "ONGC.NS",
-   "effect": "tailwind",
-   "link": "Crude oil price → ONGC",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01769,
-     "hit": true
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "IndiGo (InterGlobe Aviation)",
-   "symbol": "INDIGO.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → IndiGo (InterGlobe Aviation)",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.01447,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "Asian Paints",
-   "symbol": "ASIANPAINT.NS",
-   "effect": "headwind",
-   "link": "Crude oil price → Asian Paints",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": 0.00692,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Oil Prices Rise Ahead of OPEC+ Meeting as Middle East Supply Risks Persist",
-   "published": "2026-11-27T08:27:00+00:00",
-   "company": "TCS",
-   "symbol": "TCS.NS",
-   "effect": "tailwind",
-   "link": "Crude oil price → Indian rupee strength → TCS",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01274,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold Price Falls Below $3,500 Amid Fed Rate Hikes and Downtrend",
-   "published": "2026-11-27T08:14:28+00:00",
-   "company": "TCS",
-   "symbol": "TCS.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → TCS",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01274,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold Price Falls Below $3,500 Amid Fed Rate Hikes and Downtrend",
-   "published": "2026-11-27T08:14:28+00:00",
-   "company": "Infosys",
-   "symbol": "INFY.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Infosys",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01324,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold Price Falls Below $3,500 Amid Fed Rate Hikes and Downtrend",
-   "published": "2026-11-27T08:14:28+00:00",
-   "company": "Wipro",
-   "symbol": "WIPRO.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Wipro",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01079,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold Price Falls Below $3,500 Amid Fed Rate Hikes and Downtrend",
-   "published": "2026-11-27T08:14:28+00:00",
-   "company": "HCLTech",
-   "symbol": "HCLTECH.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → HCLTech",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.02046,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold Price Falls Below $3,500 Amid Fed Rate Hikes and Downtrend",
-   "published": "2026-11-27T08:14:28+00:00",
-   "company": "Tech Mahindra",
-   "symbol": "TECHM.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Tech Mahindra",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.00681,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold price forecast: Fed rate hike in December may limit recovery to ₹1.30 lakh per 10 grams by 2026-end, says expert",
-   "published": "2026-11-27T08:13:47+00:00",
-   "company": "TCS",
-   "symbol": "TCS.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → TCS",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01274,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold price forecast: Fed rate hike in December may limit recovery to ₹1.30 lakh per 10 grams by 2026-end, says expert",
-   "published": "2026-11-27T08:13:47+00:00",
-   "company": "Infosys",
-   "symbol": "INFY.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Infosys",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01324,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold price forecast: Fed rate hike in December may limit recovery to ₹1.30 lakh per 10 grams by 2026-end, says expert",
-   "published": "2026-11-27T08:13:47+00:00",
-   "company": "Wipro",
-   "symbol": "WIPRO.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Wipro",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.01079,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold price forecast: Fed rate hike in December may limit recovery to ₹1.30 lakh per 10 grams by 2026-end, says expert",
-   "published": "2026-11-27T08:13:47+00:00",
-   "company": "HCLTech",
-   "symbol": "HCLTECH.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → HCLTech",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.02046,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Gold price forecast: Fed rate hike in December may limit recovery to ₹1.30 lakh per 10 grams by 2026-end, says expert",
-   "published": "2026-11-27T08:13:47+00:00",
-   "company": "Tech Mahindra",
-   "symbol": "TECHM.NS",
-   "effect": "tailwind",
-   "link": "US interest rates (Fed) → US dollar strength → Indian rupee strength → Tech Mahindra",
-   "cross_market": true,
-   "results": {
-    "1": {
-     "excess": -0.00681,
-     "hit": false
-    }
-   }
-  },
-  {
-   "alert": "Overseas Expansion of Taiwan’s TSMC Gets NT$ 168 Bil Boost",
-   "published": "2026-11-27T08:00:44+00:00",
+   "alert": "Nvidia Slides 6% After a 32% Surge: Why Some See Upside",
+   "published": "2026-11-27T09:02:49+00:00",
    "company": "Maruti Suzuki",
    "symbol": "MARUTI.NS",
-   "effect": "tailwind",
-   "link": "TSMC → Semiconductor supply → Maruti Suzuki",
+   "effect": "headwind",
+   "link": "Nvidia → TSMC → Semiconductor supply → Maruti Suzuki",
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.00967,
+     "excess": -0.00713,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Nvidia Slides 6% After a 32% Surge: Why Some See Upside",
+   "published": "2026-11-27T09:02:49+00:00",
+   "company": "Apple",
+   "symbol": "AAPL",
+   "effect": "headwind",
+   "link": "Nvidia → TSMC → Semiconductor supply → Apple",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00765,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "Indian Oil",
+   "symbol": "IOC.NS",
+   "effect": "headwind",
+   "link": "Strait of Hormuz tension → Crude oil price → Indian Oil",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00926,
      "hit": false
     }
    }
   },
   {
-   "alert": "IBM Cuts H-1B Visa and Green Card Sponsorship in the US",
-   "published": "2026-11-27T07:57:04+00:00",
-   "company": "TCS",
-   "symbol": "TCS.NS",
-   "effect": "tailwind",
-   "link": "US work-visa (H-1B) restrictions → TCS",
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "BPCL",
+   "symbol": "BPCL.NS",
+   "effect": "headwind",
+   "link": "Strait of Hormuz tension → Crude oil price → BPCL",
    "cross_market": true,
    "results": {
     "1": {
-     "excess": -0.01274,
+     "excess": 0.01364,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "HPCL",
+   "symbol": "HINDPETRO.NS",
+   "effect": "headwind",
+   "link": "Strait of Hormuz tension → Crude oil price → HPCL",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01162,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "ONGC",
+   "symbol": "ONGC.NS",
+   "effect": "tailwind",
+   "link": "Strait of Hormuz tension → Crude oil price → ONGC",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01713,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "IndiGo (InterGlobe Aviation)",
+   "symbol": "INDIGO.NS",
+   "effect": "headwind",
+   "link": "Strait of Hormuz tension → Crude oil price → IndiGo (InterGlobe Aviation)",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01686,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "Asian Paints",
+   "symbol": "ASIANPAINT.NS",
+   "effect": "headwind",
+   "link": "Strait of Hormuz tension → Crude oil price → Asian Paints",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00662,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "TCS",
+   "symbol": "TCS.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → TCS",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01497,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Rupee Slides as Oil Rally & Hormuz Tensions Hit Mood",
+   "published": "2026-11-27T08:52:13+00:00",
+   "company": "Infosys",
+   "symbol": "INFY.NS",
+   "effect": "tailwind",
+   "link": "Indian rupee strength → Infosys",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.01608,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Piyush Goyal: US trade deal nearing completion after new US tariff announcement",
+   "published": "2026-11-27T08:48:30+00:00",
+   "company": "Apple",
+   "symbol": "AAPL",
+   "effect": "headwind",
+   "link": "US import tariffs (general) → Apple",
+   "cross_market": false,
+   "results": {
+    "1": {
+     "excess": -0.00765,
+     "hit": true
+    }
+   }
+  },
+  {
+   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
+   "published": "2026-11-27T08:48:15+00:00",
+   "company": "Indian Oil",
+   "symbol": "IOC.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → Indian Oil",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.00926,
+     "hit": false
+    }
+   }
+  },
+  {
+   "alert": "Houthi Attack on Saudi Refinery Sparks Fresh Rally in Global Crude Oil Prices",
+   "published": "2026-11-27T08:48:15+00:00",
+   "company": "BPCL",
+   "symbol": "BPCL.NS",
+   "effect": "headwind",
+   "link": "Crude oil price → BPCL",
+   "cross_market": true,
+   "results": {
+    "1": {
+     "excess": 0.01364,
      "hit": false
     }
    }
@@ -1431,6 +1431,6 @@
   3,
   7
  ],
- "generated": "2026-11-27T09:42:33.773419+00:00",
- "alerts_logged": 1176
+ "generated": "2026-11-28T08:56:31.157130+00:00",
+ "alerts_logged": 1262
 }

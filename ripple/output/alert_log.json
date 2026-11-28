@@ -121143,6 +121143,80 @@
 ]
 },
 {
+"id": "233ca32f7f08",
+"title": "Meta Faces Higher AI Costs as JPMorgan Cuts Price Target",
+"url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9WaXpUTVNPcld6X25uOW44cUJWX2dPdHdoaUhyTmY0cmIxdUxpaWR5THdubmh0VVE4RlJRdWdWY0xMTTFGTkhITHVuZWdVMXhZRjFtSkpIcUZaN3ZhZU1wZS11TWF6a1JOcEhzcGFR?oc=5",
+"published": "2026-11-27T11:43:50+00:00",
+"logged": "2026-11-28T08:54:45.275887+00:00",
+"impacts": [
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "TCS",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "Infosys",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "Wipro",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "HCLTech",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "headwind",
+"cross_market": true,
+"path": [
+{
+"from": "US banks",
+"to": "Tech Mahindra",
+"why": "Banking & financial services is Indian IT's largest client vertical"
+}
+]
+}
+]
+},
+{
 "id": "37f352774839",
 "title": "Indian Rupee corrects as oil prices rise, strong FIIs inflow to limit downside",
 "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWXQwTXhzUlJHRExfMGl0RHRaOC1uQVl3NXQ2MWZUa3FEN1Z6YVpDbVczR05tenRHeC16bEhHallYT3Z5Ykt0aWJpTUk4bTJLdXJjZ3VEQ2tmX1FYbUhrb2hkall3UW5OZjB1bXk5ZDcxTlVGSU45VGsxbmtaeXg0MjJNa3pocEhTdjNqeWw3bThQUTluWnN6RGVDOWJTZzBMV3lieUdrS2VoZFRMS1ZNMVRB?oc=5",
@@ -121285,6 +121359,119 @@
 "from": "Indian monsoon strength",
 "to": "Hindustan Unilever",
 "why": "Rural demand drives a large share of FMCG sales"
+}
+]
+}
+]
+},
+{
+"id": "eccb40885755",
+"title": "Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena",
+"url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOTXMxaW1yc0NWa0pPa29kcHpySm9CZWtTZXkxdV8zcHVZcGlUU25kVDdpdHAzYUkxbXcwVnZRTzBabzhYMW9MSzJmVG9NcWVPRFA0Rm1GQTdMb3F3aEJqN3M1T1UwcXBkSkxhSDkwbU5yVUxlVkx2Q2lLbXJyZXVjMkdTWGMzVVRVcDU1RTFZZ095bjQzME9OMDBOQS1CdUJLZjlyQngwTlFaX0M3YVctWHhKOXFidVRvUWlvd1hHNWlFTEJzZko4OWRPNnp5UC0wWTBpbUhNR3RJYW9idWF6MFJkTFVWUGNBemRNUWd1Mk5HQQ?oc=5",
+"published": "2026-11-27T12:08:10+00:00",
+"logged": "2026-11-28T08:54:45.275887+00:00",
+"impacts": [
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "tailwind",
+"cross_market": true,
+"path": [
+{
+"from": "Jaguar Land Rover",
+"to": "Tata Motors (JLR parent)",
+"why": "JLR is Tata Motors' biggest profit driver"
+}
+]
+},
+{
+"id": "nvidia",
+"name": "Nvidia",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Nvidia",
+"why": "Data-centre buildouts run on Nvidia GPUs"
+}
+]
+},
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "tailwind",
+"cross_market": false,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TSMC",
+"why": "TSMC manufactures most advanced AI chips"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "TCS",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Infosys",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Wipro",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "HCLTech",
+"why": "AI can bring new deals but also shrink traditional services work"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "AI / data-centre spending",
+"to": "Tech Mahindra",
+"why": "AI can bring new deals but also shrink traditional services work"
 }
 ]
 }
@@ -121611,6 +121798,189 @@
 "from": "Apple",
 "to": "Foxconn",
 "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+}
+]
+}
+]
+},
+{
+"id": "ba1f3b757cef",
+"title": "Fed Blames High Stock Prices Partly on “Enthusiasm for Super Intelligence.” Microsoft Has More to Lose Than Nvidia",
+"url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNOG1DMExUcG1MdEx5anRtWklOUWZlR1R2YU5BbFVEYVBiLVVtQldhUTgyRkdjeENsWnlRdFh3eHpHZjhTR0IyODVvLUw3NkJKVHd4STlPVVFwNk1UQWZnaVZJUkxXM29SMzVTVjh3d3NqNkF3ZnoyOGZuc3doMGpJUWNBQkNvWmpKbzlELVFhR0VlOW03b3VkdG4xNUpMd0JTZlhjMTdkLTJHZXRyaF9UREo4X2RTX2ZQTFJSeVRfejFnXzBBakVmaHFob0Jod3pVODNiV1BxYWJfMEs2bWRuNTV3MWk?oc=5",
+"published": "2026-11-27T13:18:45+00:00",
+"logged": "2026-11-28T08:54:45.275887+00:00",
+"impacts": [
+{
+"id": "tsmc",
+"name": "TSMC",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+}
+]
+},
+{
+"id": "tcs",
+"name": "TCS",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "TCS",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "infosys",
+"name": "Infosys",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Infosys",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "wipro",
+"name": "Wipro",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Wipro",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "hcltech",
+"name": "HCLTech",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "HCLTech",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "techm",
+"name": "Tech Mahindra",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "US interest rates (Fed)",
+"to": "US dollar strength",
+"why": "Higher US rates tend to strengthen the dollar"
+},
+{
+"from": "US dollar strength",
+"to": "Indian rupee strength",
+"why": "A stronger dollar usually means a weaker rupee"
+},
+{
+"from": "Indian rupee strength",
+"to": "Tech Mahindra",
+"why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+}
+]
+},
+{
+"id": "maruti",
+"name": "Maruti Suzuki",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Maruti Suzuki",
+"why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+}
+]
+},
+{
+"id": "tatamotors",
+"name": "Tata Motors (JLR parent)",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Nvidia",
+"to": "TSMC",
+"why": "TSMC manufactures Nvidia's chips"
+},
+{
+"from": "TSMC",
+"to": "Semiconductor supply",
+"why": "TSMC is the world's largest contract chipmaker"
+},
+{
+"from": "Semiconductor supply",
+"to": "Tata Motors (JLR parent)",
+"why": "Chip shortages have previously cut JLR and Tata Motors output"
 }
 ]
 }
@@ -127395,6 +127765,54 @@
 "published": "2026-11-28T07:43:36+00:00",
 "logged": "2026-11-28T07:52:49.610091+00:00",
 "impacts": [
+{
+"id": "titan",
+"name": "Titan",
+"effect": "exposed",
+"cross_market": true,
+"path": [
+{
+"from": "Gold price",
+"to": "Titan",
+"why": "Jewellery demand and inventory value both move with gold prices"
+}
+]
+}
+]
+},
+{
+"id": "d279c0354fcb",
+"title": "How a 13% monsoon deficit threatens PSU banks—And why gold loans soften the blow",
+"url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWlNEeFZxTkM4RkZQVjdLT3ltUXhxUmdpNXJ5UHcyRDBVb2s3cEhkVkplTGotemY3MkxlajUzTjRvNV91YktvZFR5RUdnT09TRGlqN2ZKaHlMbFlYd1JJZFFVNDIwQmNXa0JyZHZVRThLYUFLNlJZVXpKbkZSZU0yU1E3dGZQMnR2b1pWVUo1NVBHVlJnemdXZGpRN25CNTViek1BOWNWVGpaZ1hncC1VOHpNTmkwLWhFd3VWV09kemJnZFFzTmJZRmQ4QWF2NzBjb0dqZGVGa18yeXRoaVE?oc=5",
+"published": "2026-11-28T08:11:56+00:00",
+"logged": "2026-11-28T08:54:45.275887+00:00",
+"impacts": [
+{
+"id": "mm",
+"name": "Mahindra & Mahindra",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian monsoon strength",
+"to": "Mahindra & Mahindra",
+"why": "Tractor sales track farm incomes"
+}
+]
+},
+{
+"id": "hul",
+"name": "Hindustan Unilever",
+"effect": "exposed",
+"cross_market": false,
+"path": [
+{
+"from": "Indian monsoon strength",
+"to": "Hindustan Unilever",
+"why": "Rural demand drives a large share of FMCG sales"
+}
+]
+},
 {
 "id": "titan",
 "name": "Titan",

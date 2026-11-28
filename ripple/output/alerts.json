@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-28T07:52:49.610091+00:00",
+ "generated": "2026-11-28T08:54:45.275887+00:00",
  "sample": false,
- "headlines_scanned": 935,
+ "headlines_scanned": 980,
  "feed_errors": 1,
  "alerts": [
   {
@@ -177,12 +177,12 @@
      "effect": "tailwind"
     }
    ],
-   "score": 2.206,
+   "score": 2.217,
    "cross_market": true,
    "post": "🌊 The news: Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock\nSource: EnergyNow.com\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMikgFBVV95cUxPSXFwRjliNjJSakhhNDA1YlQ3S20zRG82UUhOMnhxanFONHdpT09sWlVGb3Q4RmRqbTBzSWg4RVVKb3piREVQUjI1cFphaVpiQi03Y1IyMFRWMmkwOEc2RVN0bF9jajNiYWdHWU84SGcycGwzY2N2czV0NHJhOHlrc3JfSXMtYTQzS3dBLTZhN3FHdw?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.3,
-   "coverage": 25,
+   "coverage": 26,
    "sources": [
     {
      "title": "Global Market Today: Asian stocks rise for second day, crude oil gains",
@@ -973,6 +973,243 @@
    ]
   },
   {
+   "id": "8d5954b37764",
+   "title": "Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5",
+   "source": "BW Businessworld",
+   "published": "2026-11-27T23:35:02+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "crude",
+     "name": "Crude oil price",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.975,
+   "cross_market": true,
+   "post": "🌊 The news: Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher\nSource: BW Businessworld\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 1.3,
+   "coverage": 11,
+   "sources": [
+    {
+     "title": "Sensex plunges 989 points as surge in crude oil prices triggers sell-off",
+     "source": "The Federal",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbGFfcmxmOUp3OFdKNDRnREp3ak43aUN4WXNGSjZLdTlVemJsdjlweDZWUjJiQ2ZrNUJJMzZ1OHhGTnJVRnVhOHJzT0ZoemFnQ3dBQ05qZmlyNHZndjhDTXd6X2p4YXloV05fb1ZmRjJBSndBMEp6bUlUN2hHRGlnc3RPQ1Zma2ZIdjBTUVJVVjd4Z3ZweDR4TG1LUkhVQXJWQlFNSTk0Q0pTUDdGdGx0Vm83Nm1lQU9u?oc=5"
+    },
+    {
+     "title": "Delayed publication of crude coconut oil fob Philippines price: pricing notice",
+     "source": "Fastmarkets",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOG5CSW1oUFdGVW5hUFdBcWp3MnJnR0JkSE92Vm9BaUxya2pSYWgwcUppTmFLcTV6TEtUajM5bUJxel94Vld4amtPNU1ITlJMY1RPMVk3Mk1fazU2NVdNR0xBSmFLR1ZHMEVyUlhjeDR4eUtSenhfMWl4azNZYzlGbVdsM1ZRQlAyUzIwS1lmc1BmY3BYLXBUSmlFN19tSDBKaFRSdENfeWN0V0xqSWNzV1M3Zkp2Zw?oc=5"
+    },
+    {
+     "title": "Ethanol Margins Face Pressure as Oil Prices Fall Nearly 20%",
+     "source": "AgroLatam",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNaVJOaE5Rel9yODNpZnFiMEY5TGgtb3d2aUltazRRMVNZV2pQZFo4WnVwRE5IZkpFcFNpX2ppUFhoa3hqcjdCeS04b0MyeU1aSmt2VXhOWDNYSGNBazFXVXpqd2lvWGl3ZFc0QUVhZWNDd1ZSbWRvZURqQ01Ja3hpd3FMN3E0aWpwcXI0OVg2ck1ScmwyMFFTazZ3?oc=5"
+    },
+    {
+     "title": "Crude Oil Slides As Trump Offers More Time For Diplomacy To Resolve Iran Crisis",
+     "source": "finanzen.ch",
+     "url": "https://www.finanzen.ch/nachrichten/aktien/crude-oil-slides-as-trump-offers-more-time-for-diplomacy-to-resolve-iran-crisis-1036806310"
+    },
+    {
+     "title": "The reasons behind the rebound in oil prices following three weeks of falls",
+     "source": "Atalayar",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWGd6dGFzdW9YZ3prWHk3ZFh2a2pBTUpvU055N1pkLVFob29GWTBsT19ON01KcGd3cjRiYTYySTBVRktfOEZvUXBDc24yZlc0Ulhfd3kwVjY3d3ZHNEd4QUc2S3JiQXFRd0x0RkhYUHdwZUV2SVh6cjBLazNiWFBwQVNlUmoxVF9xN2cxSUd3bGc3enJIakl0REk5M1JsUzlmYXA3bVhVaTBMaktaVWxTaWpOeFp6VWhyVXhoaW9SZlV6bGRSTUFlbUIybzRsaDh0dXI2WC1UWVhHXzE0VWFORUE2aVc?oc=5"
+    },
+    {
+     "title": "Crude oil prices may fall to $70/barrel in 2027 as external conditions improve: SBI Report",
+     "source": "DD News",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQTNNcTBLbGNEOHQxX01DU2N1VGc5N3JPeS1tdlR2RmY1UzlLdnBHa2lXX2pzWFBKeWg4NVA3VFNZek41a3BHTmNVSWozRzNFLTR3N0k1YjRoRjdrdzYxWTFDODkxVWdiRllVZjU1dklGRmVabElsMm92S3hWd01BVllyRnkxdERObmRRSkxXb2NaRjBZcnpnck5UZldnbWp4UnBOdmFRdnZuM1FPZ3Z0eklpUzE?oc=5"
+    },
+    {
+     "title": "Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher",
+     "source": "BW Businessworld",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5"
+    },
+    {
+     "title": "Stock markets climb in early trade led by foreign fund inflows, lower crude oil prices",
+     "source": "DD News",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZGVSOVI4VlNMdFVobUwxNHV4alZqdU5YWFlCV3EzZHhWS1RwSEtQN2pkTnA5MndITXN5QzF1RHhyLUFEU3Q2SHBOV0h5UjlaaHlrdHJLcnpLSGc1Z1JjaGN4UE1RN0Q2MlY1Mm5jMmF5VWZBTjZ0dDV2cDVHNEQ3UWNtVWkzOG9NWnVRMkQzT2YwT3lNcnJuVHd5anZ1WEdsRURaZTFfXzI4SzRybWJCcg?oc=5"
+    },
+    {
+     "title": "Festive cheer on D-Street: Sensex rallies for 5th day on foreign fund inflows, easing crude oil prices",
+     "source": "DD News",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMDFiSXFxWDFuYTVGbWFKeDdJbnAwZF9QWGp2UERsQzRpMl9tR3RmYVpUemN1UzF5VE5PZlBsSEt6MU9vd2dyN0tkYUJ1MGJOMUhCUzIwVGpwTGZZVDJvX2FmRnN3cGc2QmhUdGR3SWY0M1diVlh6UVQzNTVNeWItdV9wOUdxVEcxTjlrQXk0RXpoN0RpUzJpcGo2UkRVblllajZScDRNU0hOeTdlaDNMeDBfbTMzNWdra1JVcm9fTzFPdllx?oc=5"
+    },
+    {
+     "title": "Sensex surges over 1,100 points, Nifty crosses 25,350 as oil prices decline",
+     "source": "DD News",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMC1odms4ZmZHNjh0R1FUanFSZjJmcU5zM3B3T1pjYVhCTC1iS05sR3VabFItM1haR0RERnBlUjloUUJNRUNCM3lxeENYTWRzXzhOcllTdWp4eW1LcTlYcXhlcjdqcGNMUldRbjdjNFAwWDh0TTlSZjBaNUpGUWJLN0ZWTXFkRGFBMVdoWjRwR0kxWi1fcFpGOTNpUFZjdzg?oc=5"
+    },
+    {
+     "title": "Brent drops to $91",
+     "source": "The Daily Star",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWFpqM3JfTi1icV9ZWU52dEY5VXU2MldkQU4tU0huSUZ2YS1BWUhVbTJvVGs2aHhMckdnZ0luM2lSVzc4cUVISk1wM3JPTHd6OFBaS3ZmMzRKSndFTzhmdWhCVjRQbjBkMktZZ2RvMHVqT0VXUlpVVmtMSUNxNmtlX3Iwbk9qaVk?oc=5"
+    }
+   ]
+  },
+  {
    "id": "dedc0ef61c9b",
    "title": "Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal",
    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSVctRUFVM1l4Z3VNRnhLZVN0dV9KMENjZW1wWWo4eXJycklOLTdJSkJNSm9qbTB4WDB5OUFsaktnUDc0V2JheDl0eUZoZk43bVpCMjhSTEFJeXNpeWhlc1FhZnhvOXN3Q3B4R0ppbkM3ZmJreFpEbUd3Y3A3WmxTY2Jla1RzSXUwekdNV1l4bnlZOEw3bG85TUt2S08wRm9FNkNlajRR?oc=5",
@@ -1372,12 +1609,12 @@
      "effect": "exposed"
     }
    ],
-   "score": 1.888,
+   "score": 1.882,
    "cross_market": true,
    "post": "🌊 The news: Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso\nSource: EnergyNow\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMijwFBVV95cUxOdFdYdGwxbmxoUXBPMG4wc21QMmhnSmZjTDUzSGFfSVVFRE56bVJmNlh0eTFCMVlQVkE0VUxDMXdjRXp5dlptakdzcmV3ZXFHRzRZT2xOWDAwOTZyNFBpbV96Ym9qNmg2SGZBMDVLbWJJZnZTRXVYZnk2WFk4aVZZZVFwdlMyajAwQWc0SnYySQ?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.05,
-   "coverage": 40,
+   "coverage": 39,
    "sources": [
     {
      "title": "India bonds decline ahead of fresh debt sale as elevated oil prices fan inflation worries",
@@ -1664,223 +1901,6 @@
    ]
   },
   {
-   "id": "8d5954b37764",
-   "title": "Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher",
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5",
-   "source": "BW Businessworld",
-   "published": "2026-11-27T23:35:02+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "crude",
-     "name": "Crude oil price",
-     "dir": "falling"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.319,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.847,
-   "cross_market": true,
-   "post": "🌊 The news: Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher\nSource: BW Businessworld\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 1.3,
-   "coverage": 7,
-   "sources": [
-    {
-     "title": "Sensex plunges 989 points as surge in crude oil prices triggers sell-off",
-     "source": "The Federal",
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbGFfcmxmOUp3OFdKNDRnREp3ak43aUN4WXNGSjZLdTlVemJsdjlweDZWUjJiQ2ZrNUJJMzZ1OHhGTnJVRnVhOHJzT0ZoemFnQ3dBQ05qZmlyNHZndjhDTXd6X2p4YXloV05fb1ZmRjJBSndBMEp6bUlUN2hHRGlnc3RPQ1Zma2ZIdjBTUVJVVjd4Z3ZweDR4TG1LUkhVQXJWQlFNSTk0Q0pTUDdGdGx0Vm83Nm1lQU9u?oc=5"
-    },
-    {
-     "title": "Delayed publication of crude coconut oil fob Philippines price: pricing notice",
-     "source": "Fastmarkets",
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOG5CSW1oUFdGVW5hUFdBcWp3MnJnR0JkSE92Vm9BaUxya2pSYWgwcUppTmFLcTV6TEtUajM5bUJxel94Vld4amtPNU1ITlJMY1RPMVk3Mk1fazU2NVdNR0xBSmFLR1ZHMEVyUlhjeDR4eUtSenhfMWl4azNZYzlGbVdsM1ZRQlAyUzIwS1lmc1BmY3BYLXBUSmlFN19tSDBKaFRSdENfeWN0V0xqSWNzV1M3Zkp2Zw?oc=5"
-    },
-    {
-     "title": "Ethanol Margins Face Pressure as Oil Prices Fall Nearly 20%",
-     "source": "AgroLatam",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNaVJOaE5Rel9yODNpZnFiMEY5TGgtb3d2aUltazRRMVNZV2pQZFo4WnVwRE5IZkpFcFNpX2ppUFhoa3hqcjdCeS04b0MyeU1aSmt2VXhOWDNYSGNBazFXVXpqd2lvWGl3ZFc0QUVhZWNDd1ZSbWRvZURqQ01Ja3hpd3FMN3E0aWpwcXI0OVg2ck1ScmwyMFFTazZ3?oc=5"
-    },
-    {
-     "title": "Crude Oil Slides As Trump Offers More Time For Diplomacy To Resolve Iran Crisis",
-     "source": "finanzen.ch",
-     "url": "https://www.finanzen.ch/nachrichten/aktien/crude-oil-slides-as-trump-offers-more-time-for-diplomacy-to-resolve-iran-crisis-1036806310"
-    },
-    {
-     "title": "The reasons behind the rebound in oil prices following three weeks of falls",
-     "source": "Atalayar",
-     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWGd6dGFzdW9YZ3prWHk3ZFh2a2pBTUpvU055N1pkLVFob29GWTBsT19ON01KcGd3cjRiYTYySTBVRktfOEZvUXBDc24yZlc0Ulhfd3kwVjY3d3ZHNEd4QUc2S3JiQXFRd0x0RkhYUHdwZUV2SVh6cjBLazNiWFBwQVNlUmoxVF9xN2cxSUd3bGc3enJIakl0REk5M1JsUzlmYXA3bVhVaTBMaktaVWxTaWpOeFp6VWhyVXhoaW9SZlV6bGRSTUFlbUIybzRsaDh0dXI2WC1UWVhHXzE0VWFORUE2aVc?oc=5"
-    },
-    {
-     "title": "Crude oil prices may fall to $70/barrel in 2027 as external conditions improve: SBI Report",
-     "source": "DD News",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQTNNcTBLbGNEOHQxX01DU2N1VGc5N3JPeS1tdlR2RmY1UzlLdnBHa2lXX2pzWFBKeWg4NVA3VFNZek41a3BHTmNVSWozRzNFLTR3N0k1YjRoRjdrdzYxWTFDODkxVWdiRllVZjU1dklGRmVabElsMm92S3hWd01BVllyRnkxdERObmRRSkxXb2NaRjBZcnpnck5UZldnbWp4UnBOdmFRdnZuM1FPZ3Z0eklpUzE?oc=5"
-    },
-    {
-     "title": "Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher",
-     "source": "BW Businessworld",
-     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5"
-    }
-   ]
-  },
-  {
    "id": "4f78083db501",
    "title": "India-US Trade Deal Nears Final Stage As Tariff Talks Advance",
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOd0d3S3RsdldtWWRCeTl2R0dCeWFqX0o2MjlHRXBtVkZPYVRRRWFDcVBEUlRUbHJVcUdLZlZuOTNxcmJrZ0JWdV8yWHRmYmdoeHZEMnBWWmxMNVNCbU9Rcl9GQnBxTXNoaHhMbDVHdWdscnd6cmlkeFNwdzZNeGpvdnY0U0RxM29xeUhMVjBvR2paVDBnWkNuVzUzZ3pYX0FoVzlmcFc4UUY?oc=5",
@@ -2053,12 +2073,12 @@
      "effect": "tailwind"
     }
    ],
-   "score": 1.838,
+   "score": 1.83,
    "cross_market": true,
    "post": "🌊 The news: India-US Trade Deal Nears Final Stage As Tariff Talks Advance\n\nThe hidden link nobody's talking about:\nUS tariffs on Indian goods → Indian rupee strength → TCS\n\n• Trade friction can hit export earnings and sentiment on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Welspun Living ▼, Avanti Feeds ▼, Sun Pharma ◆, Dr. Reddy's ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 India-US Trade Deal Nears Final Stage As Tariff Talks Advance\nSource: BW Businessworld\n\n▼ Welspun Living (NSE:WELSPUNLIV) [IN] — headwind, via US tariffs on Indian goods\n▼ Avanti Feeds (NSE:AVANTIFEED) [IN] — headwind, via US tariffs on Indian goods\n◆ Sun Pharma (NSE:SUNPHARMA) [IN] — exposed, via US tariffs on Indian goods\n◆ Dr. Reddy's (NSE:DRREDDY) [IN] — exposed, via US tariffs on Indian goods\n◆ Cipla (NSE:CIPLA) [IN] — exposed, via US tariffs on Indian goods\n\nhttps://news.google.com/rss/articles/CBMiqAFBVV95cUxOd0d3S3RsdldtWWRCeTl2R0dCeWFqX0o2MjlHRXBtVkZPYVRRRWFDcVBEUlRUbHJVcUdLZlZuOTNxcmJrZ0JWdV8yWHRmYmdoeHZEMnBWWmxMNVNCbU9Rcl9GQnBxTXNoaHhMbDVHdWdscnd6cmlkeFNwdzZNeGpvdnY0U0RxM29xeUhMVjBvR2paVDBnWkNuVzUzZ3pYX0FoVzlmcFc4UUY?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.05,
-   "coverage": 32,
+   "coverage": 31,
    "sources": [
     {
      "title": "India-US Trade Deal: Key Issues, Tariffs And The Road Ahead",
@@ -2543,6 +2563,213 @@
      "title": "Oil, gas prices fall as Brent trims weekly gains ahead of OPEC+ meeting",
      "source": "Middle East Monitor",
      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNa2s1Z0U2UnRIRTBMcllWZlZxakRlZGl4T09kdnRrLUs4bjdZclJVRXY2NlN4UHlHOWJyZ29aUndRXzdFX3JGSmNHNHduTkw4VHhVWFFsVXlsWjExMnB6cUJSM2FpS190aFhlLV83NkxITG45NU5DeG5zY1RKdWRaeXdlcWxiZXVZNnNhOTZ6ZVNqOGhKcFJSMlA3UUpiaTQ2VDMzVUFXbFY1WmdMY0JCdjhBa9IBuAFBVV95cUxOUEdqZXNrTW1WMEFNdVZxRnVDQWNKOThNRXZUcEFxTVh1MXp6RmZhTWJmV0owanFrQVl0ZXRzd1V5Z0loSEp2eUIyMVJBMy15ZUYtZ1I3U0FuUXptQWsteXFOUFU3NnBXWkN0MHltVUpQXzVENVNoQ3RoUGRqd0hhd1MtN3NvaWxrUjBVMVd4bWJ5OEVMQVBSRHR2VjlPdDNmV3V6bWNGbjlXSGhYcWZTeGxkb1J2OGFK?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "2dae130986ff",
+   "title": "21.7% Crude Oil Price Drop: FCCPC Demands Petrol Price Cuts",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONnktVDZPdHZxR2EzQTIwT0I5aFFRQlFsMDl5aFlFQVkwZkpGbGU2dkJud3FEejU2MmRaUG0xOV9mOWhFMUZIdGRXeDJnVGV2aFFOeXhLLTJMWE5CbVVhT2RwcjFNcW5EVS12SGVwMXpkSV9GUm5iSUpvRVZiSkI4ZDA0QmNfUEk?oc=5",
+   "source": "LEADERSHIP Newspapers",
+   "published": "2026-11-28T08:10:16+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "crude",
+     "name": "Crude oil price",
+     "dir": "falling"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "ioc",
+     "name": "Indian Oil",
+     "market": "IN",
+     "ticker": "NSE:IOC",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian Oil",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "bpcl",
+     "name": "BPCL",
+     "market": "IN",
+     "ticker": "NSE:BPCL",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "BPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "hpcl",
+     "name": "HPCL",
+     "market": "IN",
+     "ticker": "NSE:HINDPETRO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "HPCL",
+       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "ongc",
+     "name": "ONGC",
+     "market": "IN",
+     "ticker": "NSE:ONGC",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "ONGC",
+       "why": "As an oil producer, ONGC earns more when crude is higher"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "indigo",
+     "name": "IndiGo (InterGlobe Aviation)",
+     "market": "IN",
+     "ticker": "NSE:INDIGO",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.875,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "IndiGo (InterGlobe Aviation)",
+       "why": "Jet fuel is an airline's single biggest cost"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "asianpaints",
+     "name": "Asian Paints",
+     "market": "IN",
+     "ticker": "NSE:ASIANPAINT",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.75,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Asian Paints",
+       "why": "Many paint raw materials are crude-oil derivatives"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "reliance",
+     "name": "Reliance Industries",
+     "market": "IN",
+     "ticker": "NSE:RELIANCE",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.375,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Reliance Industries",
+       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.319,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Crude oil price",
+       "to": "Indian rupee strength",
+       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
+      },
+      {
+       "from": "Indian rupee strength",
+       "to": "TCS",
+       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.753,
+   "cross_market": true,
+   "post": "🌊 The news: 21.7% Crude Oil Price Drop: FCCPC Demands Petrol Price Cuts\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 21.7% Crude Oil Price Drop: FCCPC Demands Petrol Price Cuts\nSource: LEADERSHIP Newspapers\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMihwFBVV95cUxONnktVDZPdHZxR2EzQTIwT0I5aFFRQlFsMDl5aFlFQVkwZkpGbGU2dkJud3FEejU2MmRaUG0xOV9mOWhFMUZIdGRXeDJnVGV2aFFOeXhLLTJMWE5CbVVhT2RwcjFNcW5EVS12SGVwMXpkSV9GUm5iSUpvRVZiSkI4ZDA0QmNfUEk?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 1.3,
+   "coverage": 5,
+   "sources": [
+    {
+     "title": "From war premium to demand concerns: What is driving the sharp fall in crude oil prices?",
+     "source": "economictimes.indiatimes.com",
+     "url": "https://economictimes.indiatimes.com/markets/commodities/news/from-war-premium-to-demand-concerns-what-is-driving-the-sharp-fall-in-crude-oil-prices/articleshow/136238953.cms"
+    },
+    {
+     "title": "Brent crude oil price falls",
+     "source": "Apa.az",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5LbmlxQkd4Uy1DVTF3WGxGcXhENHhKWWY2WnJ0N2FxeDRVbFVrcmRnVjVMbHRDN2NMZDJrRm5kQjFVcThwU3MyQWdtRW9pNWkyeUpCUzgzX1NDVUp4Wk92RjJtYlVHWU1SNjMw?oc=5"
+    },
+    {
+     "title": "Azeri Light oil price falls to $101.40 per barrel",
+     "source": "AzerNews",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85c25sSXlQRXZ2WWdwQU1GdzNTX2llcmhLdXZpaDJpVmY3QU5ZQWZtM2ZteGFacnlGX0VlV2JXZk9UdFFyVy1tMEllTXpLazdCS1JsakR1bDNoSlk?oc=5"
+    },
+    {
+     "title": "Azerbaijani oil price falls to $101 per barrel",
+     "source": "Report.az",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE96dEFtUkdzRldZRWhncUNqT1REakdKWnNEMGdsOThaaXk2UUMtVGhrYkVCcDBCei00ZVRtRHk5ZmdWa012LWZBMGVPN3I5aXB6SExlTklXV1FZdFBBLWQyZkhaMzQ5UkxVSHlodXk3bUFxclp3TDRKYXRjT0RXZw?oc=5"
+    },
+    {
+     "title": "21.7% Crude Oil Price Drop: FCCPC Demands Petrol Price Cuts",
+     "source": "LEADERSHIP Newspapers",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONnktVDZPdHZxR2EzQTIwT0I5aFFRQlFsMDl5aFlFQVkwZkpGbGU2dkJud3FEejU2MmRaUG0xOV9mOWhFMUZIdGRXeDJnVGV2aFFOeXhLLTJMWE5CbVVhT2RwcjFNcW5EVS12SGVwMXpkSV9GUm5iSUpvRVZiSkI4ZDA0QmNfUEk?oc=5"
     }
    ]
   },
@@ -3163,17 +3390,17 @@
    ]
   },
   {
-   "id": "2dae130986ff",
-   "title": "Azeri Light oil price falls to $101.40 per barrel",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85c25sSXlQRXZ2WWdwQU1GdzNTX2llcmhLdXZpaDJpVmY3QU5ZQWZtM2ZteGFacnlGX0VlV2JXZk9UdFFyVy1tMEllTXpLazdCS1JsakR1bDNoSlk?oc=5",
-   "source": "AzerNews",
-   "published": "2026-11-28T06:00:00+00:00",
+   "id": "5f3054c9212e",
+   "title": "Energy Market Wrap: Crude Oil Prices Surge, Brent Tops $96",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWllBdmpfeURBNXg4ZnBLR0ppSjEtMGQ1TGd1eVhSa0tJU09YSkg0eGlVNHVaSDdUMjV3Yy0yUnA0MzAtRVpHX3BFQ3dRd2Q0djR3UnFuR3IyQi1hVnNHTmV2NXdWYTdHa2tGQ2Z5cWE3WmpYMVotNkx1aFBuakJqWHdEUmVFS2xjWGc?oc=5",
+   "source": "MarketForces Africa",
+   "published": "2026-11-28T08:47:19+00:00",
    "sample": false,
    "seeds": [
     {
      "id": "crude",
      "name": "Crude oil price",
-     "dir": "falling"
+     "dir": "rising"
     }
    ],
    "impacts": [
@@ -3183,7 +3410,7 @@
      "market": "IN",
      "ticker": "NSE:IOC",
      "unlisted": false,
-     "dir": 1,
+     "dir": -1,
      "mixed": false,
      "score": 1.0,
      "cross_market": true,
@@ -3194,7 +3421,7 @@
        "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
       }
      ],
-     "effect": "tailwind"
+     "effect": "headwind"
     },
     {
      "id": "bpcl",
@@ -3202,7 +3429,7 @@
      "market": "IN",
      "ticker": "NSE:BPCL",
      "unlisted": false,
-     "dir": 1,
+     "dir": -1,
      "mixed": false,
      "score": 1.0,
      "cross_market": true,
@@ -3213,7 +3440,7 @@
        "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
       }
      ],
-     "effect": "tailwind"
+     "effect": "headwind"
     },
     {
      "id": "hpcl",
@@ -3221,7 +3448,7 @@
      "market": "IN",
      "ticker": "NSE:HINDPETRO",
      "unlisted": false,
-     "dir": 1,
+     "dir": -1,
      "mixed": false,
      "score": 1.0,
      "cross_market": true,
@@ -3232,7 +3459,7 @@
        "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
       }
      ],
-     "effect": "tailwind"
+     "effect": "headwind"
     },
     {
      "id": "ongc",
@@ -3240,7 +3467,7 @@
      "market": "IN",
      "ticker": "NSE:ONGC",
      "unlisted": false,
-     "dir": -1,
+     "dir": 1,
      "mixed": false,
      "score": 0.875,
      "cross_market": true,
@@ -3251,7 +3478,7 @@
        "why": "As an oil producer, ONGC earns more when crude is higher"
       }
      ],
-     "effect": "headwind"
+     "effect": "tailwind"
     },
     {
      "id": "indigo",
@@ -3259,7 +3486,7 @@
      "market": "IN",
      "ticker": "NSE:INDIGO",
      "unlisted": false,
-     "dir": 1,
+     "dir": -1,
      "mixed": false,
      "score": 0.875,
      "cross_market": true,
@@ -3270,7 +3497,7 @@
        "why": "Jet fuel is an airline's single biggest cost"
       }
      ],
-     "effect": "tailwind"
+     "effect": "headwind"
     },
     {
      "id": "asianpaints",
@@ -3278,7 +3505,7 @@
      "market": "IN",
      "ticker": "NSE:ASIANPAINT",
      "unlisted": false,
-     "dir": 1,
+     "dir": -1,
      "mixed": false,
      "score": 0.75,
      "cross_market": true,
@@ -3289,7 +3516,7 @@
        "why": "Many paint raw materials are crude-oil derivatives"
       }
      ],
-     "effect": "tailwind"
+     "effect": "headwind"
     },
     {
      "id": "reliance",
@@ -3316,7 +3543,7 @@
      "market": "IN",
      "ticker": "NSE:TCS",
      "unlisted": false,
-     "dir": -1,
+     "dir": 1,
      "mixed": false,
      "score": 0.319,
      "cross_market": true,
@@ -3332,44 +3559,44 @@
        "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
       }
      ],
-     "effect": "headwind"
+     "effect": "tailwind"
     }
    ],
    "score": 1.69,
    "cross_market": true,
-   "post": "🌊 The news: Azeri Light oil price falls to $101.40 per barrel\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Azeri Light oil price falls to $101.40 per barrel\nSource: AzerNews\n\n▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price\n▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price\n▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price\n▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price\n▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiW0FVX3lxTE85c25sSXlQRXZ2WWdwQU1GdzNTX2llcmhLdXZpaDJpVmY3QU5ZQWZtM2ZteGFacnlGX0VlV2JXZk9UdFFyVy1tMEllTXpLazdCS1JsakR1bDNoSlk?oc=5\n\nResearch & education only. Not investment advice.",
+   "post": "🌊 The news: Energy Market Wrap: Crude Oil Prices Surge, Brent Tops $96\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Energy Market Wrap: Crude Oil Prices Surge, Brent Tops $96\nSource: MarketForces Africa\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiigFBVV95cUxQWllBdmpfeURBNXg4ZnBLR0ppSjEtMGQ1TGd1eVhSa0tJU09YSkg0eGlVNHVaSDdUMjV3Yy0yUnA0MzAtRVpHX3BFQ3dRd2Q0djR3UnFuR3IyQi1hVnNHTmV2NXdWYTdHa2tGQ2Z5cWE3WmpYMVotNkx1aFBuakJqWHdEUmVFS2xjWGc?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.3,
    "coverage": 4,
    "sources": [
     {
-     "title": "From war premium to demand concerns: What is driving the sharp fall in crude oil prices?",
-     "source": "economictimes.indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/markets/commodities/news/from-war-premium-to-demand-concerns-what-is-driving-the-sharp-fall-in-crude-oil-prices/articleshow/136238953.cms"
+     "title": "Oil Prices Rise as Supply Concerns and Geopolitical Tensions Mount",
+     "source": "India News Network",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTjFpV0RDWklCbmhNSlIwUktxRExRRVl0YVdldWczTFBLRnRkNFhJVXB1THQ5TTVZMGZwYmx2Q3l0Zk9QaC1VcVpLTEtLQ0NYeWl2NVd5aE50YXNDWXBkbUo4ajJPY0J6ajRpVW1vRnR0VE9FWmhHTmF5SUw5WXZodGtDRXRZLVYtVk1BTU9GUVhRODBaM01fd050LUxNMHhhXzlRYjR3QQ?oc=5"
     },
     {
-     "title": "Brent crude oil price falls",
-     "source": "Apa.az",
-     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5LbmlxQkd4Uy1DVTF3WGxGcXhENHhKWWY2WnJ0N2FxeDRVbFVrcmRnVjVMbHRDN2NMZDJrRm5kQjFVcThwU3MyQWdtRW9pNWkyeUpCUzgzX1NDVUp4Wk92RjJtYlVHWU1SNjMw?oc=5"
+     "title": "Nifty, Sensex snap 4-week rally amid profit booking, higher crude prices",
+     "source": "tennews.in",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTV9NS0VBbWMtb01iTDBfWlFEX1Q5SjhfLVQzY3pfZWRYWXk5eVUta1ZfaHhPWXhHT2JPdEcxS1Z1aXRXeEVDYWI1WkVvWVk0eWtXM04tT1JLRU1yU182alFaNFlRYng5ejFJS3BrckcyWTVLS2FzbVd4VFVGenVqejY0MGxuSFBsTF95UzRGUHVRRUp4?oc=5"
     },
     {
-     "title": "Azeri Light oil price falls to $101.40 per barrel",
-     "source": "AzerNews",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85c25sSXlQRXZ2WWdwQU1GdzNTX2llcmhLdXZpaDJpVmY3QU5ZQWZtM2ZteGFacnlGX0VlV2JXZk9UdFFyVy1tMEllTXpLazdCS1JsakR1bDNoSlk?oc=5"
+     "title": "Energy Market Wrap: Crude Oil Prices Surge, Brent Tops $96",
+     "source": "MarketForces Africa",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWllBdmpfeURBNXg4ZnBLR0ppSjEtMGQ1TGd1eVhSa0tJU09YSkg0eGlVNHVaSDdUMjV3Yy0yUnA0MzAtRVpHX3BFQ3dRd2Q0djR3UnFuR3IyQi1hVnNHTmV2NXdWYTdHa2tGQ2Z5cWE3WmpYMVotNkx1aFBuakJqWHdEUmVFS2xjWGc?oc=5"
     },
     {
-     "title": "Azerbaijani oil price falls to $101 per barrel",
-     "source": "Report.az",
-     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE96dEFtUkdzRldZRWhncUNqT1REakdKWnNEMGdsOThaaXk2UUMtVGhrYkVCcDBCei00ZVRtRHk5ZmdWa012LWZBMGVPN3I5aXB6SExlTklXV1FZdFBBLWQyZkhaMzQ5UkxVSHlodXk3bUFxclp3TDRKYXRjT0RXZw?oc=5"
+     "title": "Oil Prices Record First Weekly Gain in November amid Middle East Supply Concerns",
+     "source": "PUKmedia",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5tNjFiS29udmxUb0tOUWNMaUE4N3ROZUItZjE4QnV1UGxidVoySW9rMTRXaEt1bkU3elg0RXlhaDhxVUd6SG04eGdudWdCSUNzWVJV?oc=5"
     }
    ]
   },
   {
    "id": "e89abbf18b04",
-   "title": "\"Breaking through enemy blockade is underway\": Iran Navy chief dismisses US blockade in Strait of Hormuz",
-   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNWDZIRHBCSHhpWDlzSFkxOHdZWF92MTZ0T05LOXAyZVlwVFdValZYWHNEazNNekVTUlBwdFZxb1g5ZURMSmhIWFVXM3FZWGVWVU1pVVdtcVVRUUtlUlg2NkdrSjJtS2sybnVHdmhIQkdWT3ZvMi1NX0FDemVlQVdwYkZrOU9wQUlaNXU0b1I2d2ozWVdmcFJETk12NzJGV05qVENBV3UyaFRRc21PY1dDdmU0cUZxeExhSGRmMk9FWE0tM2hWUnF0eGV1ZDd5Qkp2QXVWUHhHcjJrcnRjcUFTcnZYc2V1bk1ia01NZXB4ZVI1R0k?oc=5",
-   "source": "ANI News",
-   "published": "2026-11-27T22:50:00+00:00",
+   "title": "Attack Risks Rise for Tankers as Iran Vows to Block More Hormuz Routes",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNnJjcmFKQ1RqWWJRRm00Wjc0T1liSzFxUUZXQzAwU3Bxc0lJNjVHSXB1dzhEM1BnWDFwOVQ5a1lYN0lrekYwUjJWTWNWVFRCVzNPek1DZnhzTlpCSm1KeElfbGozQ29xZC1oWkZ2N0hMNU1NVFQtMUpZQkpKRWFFdUhwaVk3STV0bHVwOEZBdXFHaGRoRXhCQnR2NU1IMW50T0E?oc=5",
+   "source": "EnergyNow",
+   "published": "2026-11-27T23:25:55+00:00",
    "sample": false,
    "seeds": [
     {
@@ -3579,8 +3806,8 @@
    ],
    "score": 1.687,
    "cross_market": true,
-   "post": "🌊 The news: \"Breaking through enemy blockade is underway\": Iran Navy chief dismisses US blockade in Strait of Hormuz\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 \"Breaking through enemy blockade is underway\": Iran Navy chief dismisses US blockade in Strait of Hormuz\nSource: ANI News\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMi8wFBVV95cUxNWDZIRHBCSHhpWDlzSFkxOHdZWF92MTZ0T05LOXAyZVlwVFdValZYWHNEazNNekVTUlBwdFZxb1g5ZURMSmhIWFVXM3FZWGVWVU1pVVdtcVVRUUtlUlg2NkdrSjJtS2sybnVHdmhIQkdWT3ZvMi1NX0FDemVlQVdwYkZrOU9wQUlaNXU0b1I2d2ozWVdmcFJETk12NzJGV05qVENBV3UyaFRRc21PY1dDdmU0cUZxeExhSGRmMk9FWE0tM2hWUnF0eGV1ZDd5Qkp2QXVWUHhHcjJrcnRjcUFTcnZYc2V1bk1ia01NZXB4ZVI1R0k?oc=5\n\nResearch & education only. Not investment advice.",
+   "post": "🌊 The news: Attack Risks Rise for Tankers as Iran Vows to Block More Hormuz Routes\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Attack Risks Rise for Tankers as Iran Vows to Block More Hormuz Routes\nSource: EnergyNow\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiogFBVV95cUxNNnJjcmFKQ1RqWWJRRm00Wjc0T1liSzFxUUZXQzAwU3Bxc0lJNjVHSXB1dzhEM1BnWDFwOVQ5a1lYN0lrekYwUjJWTWNWVFRCVzNPek1DZnhzTlpCSm1KeElfbGozQ29xZC1oWkZ2N0hMNU1NVFQtMUpZQkpKRWFFdUhwaVk3STV0bHVwOEZBdXFHaGRoRXhCQnR2NU1IMW50T0E?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 0.98,
    "coverage": 28,
    "sources": [
@@ -7476,203 +7703,11 @@
    ]
   },
   {
-   "id": "5f3054c9212e",
-   "title": "Oil Prices Rise as Supply Concerns and Geopolitical Tensions Mount",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTjFpV0RDWklCbmhNSlIwUktxRExRRVl0YVdldWczTFBLRnRkNFhJVXB1THQ5TTVZMGZwYmx2Q3l0Zk9QaC1VcVpLTEtLQ0NYeWl2NVd5aE50YXNDWXBkbUo4ajJPY0J6ajRpVW1vRnR0VE9FWmhHTmF5SUw5WXZodGtDRXRZLVYtVk1BTU9GUVhRODBaM01fd050LUxNMHhhXzlRYjR3QQ?oc=5",
-   "source": "India News Network",
-   "published": "2026-11-28T07:20:47+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "crude",
-     "name": "Crude oil price",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.319,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian rupee strength",
-       "why": "India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee"
-      },
-      {
-       "from": "Indian rupee strength",
-       "to": "TCS",
-       "why": "IT firms earn in dollars, so a weaker rupee lifts their rupee revenue"
-      }
-     ],
-     "effect": "tailwind"
-    }
-   ],
-   "score": 1.495,
-   "cross_market": true,
-   "post": "🌊 The news: Oil Prices Rise as Supply Concerns and Geopolitical Tensions Mount\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Rise as Supply Concerns and Geopolitical Tensions Mount\nSource: India News Network\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMipwFBVV95cUxNTjFpV0RDWklCbmhNSlIwUktxRExRRVl0YVdldWczTFBLRnRkNFhJVXB1THQ5TTVZMGZwYmx2Q3l0Zk9QaC1VcVpLTEtLQ0NYeWl2NVd5aE50YXNDWXBkbUo4ajJPY0J6ajRpVW1vRnR0VE9FWmhHTmF5SUw5WXZodGtDRXRZLVYtVk1BTU9GUVhRODBaM01fd050LUxNMHhhXzlRYjR3QQ?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 1.3,
-   "coverage": 2,
-   "sources": [
-    {
-     "title": "Oil Prices Rise as Supply Concerns and Geopolitical Tensions Mount",
-     "source": "India News Network",
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTjFpV0RDWklCbmhNSlIwUktxRExRRVl0YVdldWczTFBLRnRkNFhJVXB1THQ5TTVZMGZwYmx2Q3l0Zk9QaC1VcVpLTEtLQ0NYeWl2NVd5aE50YXNDWXBkbUo4ajJPY0J6ajRpVW1vRnR0VE9FWmhHTmF5SUw5WXZodGtDRXRZLVYtVk1BTU9GUVhRODBaM01fd050LUxNMHhhXzlRYjR3QQ?oc=5"
-    },
-    {
-     "title": "Nifty, Sensex snap 4-week rally amid profit booking, higher crude prices",
-     "source": "tennews.in",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTV9NS0VBbWMtb01iTDBfWlFEX1Q5SjhfLVQzY3pfZWRYWXk5eVUta1ZfaHhPWXhHT2JPdEcxS1Z1aXRXeEVDYWI1WkVvWVk0eWtXM04tT1JLRU1yU182alFaNFlRYng5ejFJS3BrckcyWTVLS2FzbVd4VFVGenVqejY0MGxuSFBsTF95UzRGUHVRRUp4?oc=5"
-    }
-   ]
-  },
-  {
    "id": "79f7aceef7ee",
-   "title": "Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNE1fMzFiSjhrOFpJV21kajdMYkJEd20zcGM4Sm0yREpWU09IZnBwX0VyUk9LTWlHYWhDYXZCOS04eng0d1lPdVlKX2pZUjFwYzAwZkM4NWlDazVaSUFfRHlLaTczenpiZTdrb0lXd09XZTRiWHpNVGYxcDRjaHhoZ3JvcVFtb1VZM29raVc4RE9kUXBZWVdkbmktRU5FbV9hb1Fweg?oc=5",
-   "source": "EnergyNow.com",
-   "published": "2026-11-27T21:31:39+00:00",
+   "title": "Oil Prices Linger Near Three-Month Low Despite Strait Of Hormuz Risks",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaVJyc1dkTUZDd3MybWo4eTkzVENwVkhkV0VDNkkxQkoyWTBFZE1wOElDRTNwN3VuRjhaa2dRWURGdTFQRlBVd0t3bjBSNmNxMm5Cazk1cG9WQjhvSE5lakFQNlpkN3J5dThielJWOTM4cG9SVmNRUGNrc3VfMURucDVuMW5nMGxmYmVLWEo4MWhYcEFaXy1adTJSSUVoRno4c0E?oc=5",
+   "source": "Moomoo",
+   "published": "2026-11-27T22:05:27+00:00",
    "sample": false,
    "seeds": [
     {
@@ -7847,8 +7882,8 @@
    ],
    "score": 1.492,
    "cross_market": true,
-   "post": "🌊 The news: Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption\nSource: EnergyNow.com\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMipAFBVV95cUxNNE1fMzFiSjhrOFpJV21kajdMYkJEd20zcGM4Sm0yREpWU09IZnBwX0VyUk9LTWlHYWhDYXZCOS04eng0d1lPdVlKX2pZUjFwYzAwZkM4NWlDazVaSUFfRHlLaTczenpiZTdrb0lXd09XZTRiWHpNVGYxcDRjaHhoZ3JvcVFtb1VZM29raVc4RE9kUXBZWVdkbmktRU5FbV9hb1Fweg?oc=5\n\nResearch & education only. Not investment advice.",
+   "post": "🌊 The news: Oil Prices Linger Near Three-Month Low Despite Strait Of Hormuz Risks\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian rupee strength → TCS\n\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Oil Prices Linger Near Three-Month Low Despite Strait Of Hormuz Risks\nSource: Moomoo\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiogFBVV95cUxOaVJyc1dkTUZDd3MybWo4eTkzVENwVkhkV0VDNkkxQkoyWTBFZE1wOElDRTNwN3VuRjhaa2dRWURGdTFQRlBVd0t3bjBSNmNxMm5Cazk1cG9WQjhvSE5lakFQNlpkN3J5dThielJWOTM4cG9SVmNRUGNrc3VfMURucDVuMW5nMGxmYmVLWEo4MWhYcEFaXy1adTJSSUVoRno4c0E?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 1.05,
    "coverage": 7,
    "sources": [
@@ -8909,10 +8944,10 @@
   },
   {
    "id": "3139d5783964",
-   "title": "Iran struck at least six ships twice in Strait of Hormuz, Financial Times reports",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBuMFBkRHpKaTBhM3RIMXpOQXpiNUYzYUJOUktVamNNMmw3b3hnUHFyVi1qNFk0VGxrWFlDaFZPbGNSaFFTSzlEUXVBSTdCZldXZnc?oc=5",
-   "source": "Digg",
-   "published": "2026-11-28T06:46:59+00:00",
+   "title": "UAE residents' update: Regional tensions, Mecca pact and Hormuz standoff",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdllFVHJWdXR1OWJYc19tSi1BSDJUTWY4c210MGh5TFlSSDkyY2JtVWVoQjRLaVRvcl9uOVNNWjhmZ2FBTnZ3NXJ4a0h1aUk1SnV5eVRyS2hmMjJGWFdQd2NmcEMyMVFNaXN1UnVUQnZnaDZUQnhYMHN2Zm5oVDN2UmxPb1hFM3AzdXVZOWl4LUZNTk9VVURkUDRldERLQUVOMmhKa0ZVSFRxd9IBugFBVV95cUxPdHFDZ3I2aU5DQWw2QWc4TGJWYVV5SW56Ni1CWEM4VlRKNmNCTHpWM196TkdBTHpCT1VEc05NeUMzVHphV1pnX1VVWFlNbkZtb0dJMzZrWXBuVlpqYzZMNGlVVE5NZlJRWkNIOS1YRmVPamtGYXdlQ0Jfb21BSTc4Y3JRZU9HUG1nYnNSeHlWNFFfQ1dGb0tjbVRsakMyWWVUUE5pVmJYVDlmbWxBVjd6cnlZRHN3X0FNNFE?oc=5",
+   "source": "Gulf News",
+   "published": "2026-11-28T07:10:56+00:00",
    "sample": false,
    "seeds": [
     {
@@ -9120,12 +9155,12 @@
      "effect": "tailwind"
     }
    ],
-   "score": 1.393,
+   "score": 1.421,
    "cross_market": true,
-   "post": "🌊 The news: Iran struck at least six ships twice in Strait of Hormuz, Financial Times reports\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Iran struck at least six ships twice in Strait of Hormuz, Financial Times reports\nSource: Digg\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiUkFVX3lxTFBuMFBkRHpKaTBhM3RIMXpOQXpiNUYzYUJOUktVamNNMmw3b3hnUHFyVi1qNFk0VGxrWFlDaFZPbGNSaFFTSzlEUXVBSTdCZldXZnc?oc=5\n\nResearch & education only. Not investment advice.",
+   "post": "🌊 The news: UAE residents' update: Regional tensions, Mecca pact and Hormuz standoff\n\nThe hidden link nobody's talking about:\nStrait of Hormuz tension → Crude oil price → Indian rupee strength → TCS\n\n• About a fifth of the world's oil passes through the Strait of Hormuz.\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 UAE residents' update: Regional tensions, Mecca pact and Hormuz standoff\nSource: Gulf News\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Strait of Hormuz tension → Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Strait of Hormuz tension → Crude oil price\n\nhttps://news.google.com/rss/articles/CBMiqgFBVV95cUxPdllFVHJWdXR1OWJYc19tSi1BSDJUTWY4c210MGh5TFlSSDkyY2JtVWVoQjRLaVRvcl9uOVNNWjhmZ2FBTnZ3NXJ4a0h1aUk1SnV5eVRyS2hmMjJGWFdQd2NmcEMyMVFNaXN1UnVUQnZnaDZUQnhYMHN2Zm5oVDN2UmxPb1hFM3AzdXVZOWl4LUZNTk9VVURkUDRldERLQUVOMmhKa0ZVSFRxd9IBugFBVV95cUxPdHFDZ3I2aU5DQWw2QWc4TGJWYVV5SW56Ni1CWEM4VlRKNmNCTHpWM196TkdBTHpCT1VEc05NeUMzVHphV1pnX1VVWFlNbkZtb0dJMzZrWXBuVlpqYzZMNGlVVE5NZlJRWkNIOS1YRmVPamtGYXdlQ0Jfb21BSTc4Y3JRZU9HUG1nYnNSeHlWNFFfQ1dGb0tjbVRsakMyWWVUUE5pVmJYVDlmbWxBVjd6cnlZRHN3X0FNNFE?oc=5\n\nResearch & education only. Not investment advice.",
    "base_score": 0.98,
-   "coverage": 7,
+   "coverage": 8,
    "sources": [
     {
      "title": "US disables another ship attempting to breach Iran blockade; Tehran vows to keep Strait of Hormuz shut",
@@ -9161,6 +9196,451 @@
      "title": "Chinese engineers defy Hormuz blockade to install Abu Dhabi drilling rigs",
      "source": "South China Morning Post",
      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNR2M4WFJMbzctOEhLUkdDTXIzUVNNUGFkZHVOM2ItUjJBYUI4dDR2Qk84MThWWUpfN2Uya29MQ1YyZTlJaDZFM2RfcHlqVEpTam8tV0U5QTl3QjUyME1zNmFYU2lGLVZLdmZXRDRiUW9tNGtfbDlLcUZybWEycGRONWt4dDhwUTZ0RFJwTkgyVkdqU2hCZUlQZ241MHh4c3lWTEJEVVhKUmNUT29WdEExM0RZZlhXVTI1YXfSAboBQVVfeXFMT2kzeFIzcU5PWE1POWVTNkl1YW42VzV3VnZmeDFIS1NiSDhSa1JwTVk5VExNR1VVdXVMUjFaY2x4cW1HZW5KT210WGwwR0pSckN0Y0ltb0VlTk1FMjlYTll6anBZWVNhU0RjUkJRcWNrVlBvQ25FUDFCb3dHOUxqNlUtblJlYnZGTzVEb2Y1UDhxNDkwS3piMUxGUVVXRVlqWkIyLW9xZkFVR254SjhiSmdIZlJYd2YxaXVR?oc=5"
+    },
+    {
+     "title": "UAE residents' update: Regional tensions, Mecca pact and Hormuz standoff",
+     "source": "Gulf News",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdllFVHJWdXR1OWJYc19tSi1BSDJUTWY4c210MGh5TFlSSDkyY2JtVWVoQjRLaVRvcl9uOVNNWjhmZ2FBTnZ3NXJ4a0h1aUk1SnV5eVRyS2hmMjJGWFdQd2NmcEMyMVFNaXN1UnVUQnZnaDZUQnhYMHN2Zm5oVDN2UmxPb1hFM3AzdXVZOWl4LUZNTk9VVURkUDRldERLQUVOMmhKa0ZVSFRxd9IBugFBVV95cUxPdHFDZ3I2aU5DQWw2QWc4TGJWYVV5SW56Ni1CWEM4VlRKNmNCTHpWM196TkdBTHpCT1VEc05NeUMzVHphV1pnX1VVWFlNbkZtb0dJMzZrWXBuVlpqYzZMNGlVVE5NZlJRWkNIOS1YRmVPamtGYXdlQ0Jfb21BSTc4Y3JRZU9HUG1nYnNSeHlWNFFfQ1dGb0tjbVRsakMyWWVUUE5pVmJYVDlmbWxBVjd6cnlZRHN3X0FNNFE?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "6160646d2bd3",
+   "title": "Big Tech faces mounting debt market pressure as AI spending accelerates",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnB0TE9pR3BoUGkyWGR3ZWFFcnZQZ2M5U2xDb3dZekdwWE5wN1JDU1pTaFV5emQ0SXFzcjNtcTYwRTJka1FMVHhESno4WFNJZE9sM1N3NHJSQWwwaXV1bjgtSnVjUmt6TnlBZnBuWnNSUW1sVFRuRDkwVVE3c0VVQkdFZEYzSHdIUE1hVlVkRjlXNlhYX3Q2eklXTjgwYXM?oc=5",
+   "source": "Beinsure",
+   "published": "2026-11-25T14:18:33+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "ai_capex",
+     "name": "AI / data-centre spending",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "nvidia",
+     "name": "Nvidia",
+     "market": "US",
+     "ticker": "NVDA",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.8,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Nvidia",
+       "why": "Data-centre buildouts run on Nvidia GPUs"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "tsmc",
+     "name": "TSMC",
+     "market": "Global",
+     "ticker": "TSM",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.6,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TCS",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Infosys",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Wipro",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "HCLTech",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Tech Mahindra",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "maruti",
+     "name": "Maruti Suzuki",
+     "market": "IN",
+     "ticker": "NSE:MARUTI",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.135,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      },
+      {
+       "from": "TSMC",
+       "to": "Semiconductor supply",
+       "why": "TSMC is the world's largest contract chipmaker"
+      },
+      {
+       "from": "Semiconductor supply",
+       "to": "Maruti Suzuki",
+       "why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
+      }
+     ],
+     "effect": "tailwind"
+    }
+   ],
+   "score": 1.362,
+   "cross_market": true,
+   "post": "🌊 The news: Big Tech faces mounting debt market pressure as AI spending accelerates\n\nThe hidden link nobody's talking about:\nAI / data-centre spending → TSMC → Semiconductor supply → Maruti Suzuki\n\n• TSMC manufactures most advanced AI chips.\n• TSMC is the world's largest contract chipmaker.\n• The 2021 chip shortage forced carmakers, including Maruti, to cut production.\n\nAlso in the ripple: Nvidia ▲, TSMC ▲, TCS ◆, Infosys ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Big Tech faces mounting debt market pressure as AI spending accelerates\nSource: Beinsure\n\n▲ Nvidia (NVDA) [US] — tailwind, via AI / data-centre spending\n▲ TSMC (TSM) [Global] — tailwind, via AI / data-centre spending\n◆ TCS (NSE:TCS) [IN] — exposed, via AI / data-centre spending\n◆ Infosys (NSE:INFY) [IN] — exposed, via AI / data-centre spending\n◆ Wipro (NSE:WIPRO) [IN] — exposed, via AI / data-centre spending\n\nhttps://news.google.com/rss/articles/CBMinwFBVV95cUxQUnB0TE9pR3BoUGkyWGR3ZWFFcnZQZ2M5U2xDb3dZekdwWE5wN1JDU1pTaFV5emQ0SXFzcjNtcTYwRTJka1FMVHhESno4WFNJZE9sM1N3NHJSQWwwaXV1bjgtSnVjUmt6TnlBZnBuWnNSUW1sVFRuRDkwVVE3c0VVQkdFZEYzSHdIUE1hVlVkRjlXNlhYX3Q2eklXTjgwYXM?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 1.1,
+   "coverage": 3,
+   "sources": [
+    {
+     "title": "HFCL, Sterlite Technologies Shares Fall 5% As Global AI Sell-Off Raises Data Centre Concerns",
+     "source": "Kotak Neo",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZk1MTlVPelZWQ3BMNDFOb25RZm5ld0dYQVFvUGlOTlhGcm4zTVdaR1VMYVRneE9QVXBmZmpsNkRyZGpjaEpsT1U0MXN4LTB6MmlGb3lXZzNVTW16TjlCb25CcHRzdFl6UE8ydzdDcXJiQmNkYXMzWnBmWXVxMlJ5UlJxU3J1LTZYc1VETDhwbzc2X05YSnZ4NHRfQnhtTWRRdEFUUFFYQ3JRUDk5eHJsaE5QS3RydFRnRnh2enVEQ2tZTHBMOURLSQ?oc=5"
+    },
+    {
+     "title": "Data Center Boom Tightens US Steel Supply, Buyers Turn to Asian Imports",
+     "source": "Shanghai Metals Market",
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQVFZnWElqdlJEZnZnSk1nYlFvTGZzM1NFQkNIYXJMUjFzZVlvNktncVZiMDB5aUtXYl94aU5odUlsanJZcUZiUmYxeGpXY0VDVnFsdlFCMUpIQXFUSXZhVUliLWhORVdVaFZ0Y3BSUDFIYVo4akktZDhBdk1fWXNmTjB0ckZIR1hMMl9DU21PSk9OVXhlclJGdkduaTd1VHpvSllBWFhPcHZlY2lHS3FiRXhFcWpmb0ljN3d0Um9NaHJIdkZhcmtPYWNYZVJUMkFadGxiRE9pM0JkeUpsTFE?oc=5"
+    },
+    {
+     "title": "Big Tech faces mounting debt market pressure as AI spending accelerates",
+     "source": "Beinsure",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnB0TE9pR3BoUGkyWGR3ZWFFcnZQZ2M5U2xDb3dZekdwWE5wN1JDU1pTaFV5emQ0SXFzcjNtcTYwRTJka1FMVHhESno4WFNJZE9sM1N3NHJSQWwwaXV1bjgtSnVjUmt6TnlBZnBuWnNSUW1sVFRuRDkwVVE3c0VVQkdFZEYzSHdIUE1hVlVkRjlXNlhYX3Q2eklXTjgwYXM?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "5e2175377bdb",
+   "title": "India unfazed by proposed US tariffs, eyes $1 trillion export target",
+   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE96enFYMlphekl4NV9xTnBmdWhhWktUdUd5V0pIazM3bGlQQnNiVzRybmlXbFJGcm11MjZIVkJPUFNwcTgzQlFIUk13?oc=5",
+   "source": "Daily Observer",
+   "published": "2026-11-27T17:27:02+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "us_tariffs",
+     "name": "US import tariffs (general)",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "jlr",
+     "name": "Jaguar Land Rover",
+     "market": "Global",
+     "ticker": null,
+     "unlisted": true,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.5,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Jaguar Land Rover",
+       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "tatamotors",
+     "name": "Tata Motors (JLR parent)",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.425,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Jaguar Land Rover",
+       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
+      },
+      {
+       "from": "Jaguar Land Rover",
+       "to": "Tata Motors (JLR parent)",
+       "why": "JLR is Tata Motors' biggest profit driver"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "apple",
+     "name": "Apple",
+     "market": "US",
+     "ticker": "AAPL",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.4,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "novelis",
+     "name": "Novelis",
+     "market": "US",
+     "ticker": null,
+     "unlisted": true,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.3,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Novelis",
+       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "foxconn",
+     "name": "Foxconn",
+     "market": "Global",
+     "ticker": "2317.TW",
+     "unlisted": false,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.238,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      },
+      {
+       "from": "Apple",
+       "to": "Foxconn",
+       "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
+      }
+     ],
+     "effect": "headwind"
+    },
+    {
+     "id": "hindalco",
+     "name": "Hindalco",
+     "market": "IN",
+     "ticker": "NSE:HINDALCO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.223,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Novelis",
+       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
+      },
+      {
+       "from": "Novelis",
+       "to": "Hindalco",
+       "why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "tata_elec",
+     "name": "Tata Electronics",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": true,
+     "dir": -1,
+     "mixed": false,
+     "score": 0.213,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "US import tariffs (general)",
+       "to": "Apple",
+       "why": "Most iPhones are assembled outside the US"
+      },
+      {
+       "from": "Apple",
+       "to": "Tata Electronics",
+       "why": "Tata Electronics assembles iPhones in India"
+      }
+     ],
+     "effect": "headwind"
+    }
+   ],
+   "score": 1.35,
+   "cross_market": true,
+   "post": "🌊 The news: India unfazed by proposed US tariffs, eyes $1 trillion export target\n\nThe hidden link nobody's talking about:\nUS import tariffs (general) → Jaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR has no US factory, so US-bound cars are imported from the UK and Europe.\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Jaguar Land Rover ▼, Apple ▼, Novelis ◆, Foxconn ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 India unfazed by proposed US tariffs, eyes $1 trillion export target\nSource: Daily Observer\n\n▼ Jaguar Land Rover (unlisted) [Global] — headwind, via US import tariffs (general)\n▼ Tata Motors (JLR parent) [IN] — headwind, via US import tariffs (general) → Jaguar Land Rover\n▼ Apple (AAPL) [US] — headwind, via US import tariffs (general)\n◆ Novelis (unlisted) [US] — exposed, via US import tariffs (general)\n▼ Foxconn (2317.TW) [Global] — headwind, via US import tariffs (general) → Apple\n\nhttps://news.google.com/rss/articles/CBMiSkFVX3lxTE96enFYMlphekl4NV9xTnBmdWhhWktUdUd5V0pIazM3bGlQQnNiVzRybmlXbFJGcm11MjZIVkJPUFNwcTgzQlFIUk13?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 0.8,
+   "coverage": 24,
+   "sources": [
+    {
+     "title": "US tariff threat clouds India export outlook ; MSMEs seek relief amid uncertainty over orders",
+     "source": "economictimes.indiatimes.com",
+     "url": "https://economictimes.indiatimes.com/small-biz/trade/exports/insights/us-tariff-threat-clouds-indias-export-outlook-msmes-seek-relief-amid-uncertainty-over-orders/articleshow/136211144.cms"
+    },
+    {
+     "title": "India - US trade deal : What the new US tariff proposal means for India",
+     "source": "economictimes.indiatimes.com",
+     "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-trade-deal-what-the-new-us-tariff-proposal-means-for-india/articleshow/136210536.cms"
+    },
+    {
+     "title": "India calls for US tariff concerns to be ironed out through 'early conclusion' of trade talks",
+     "source": "DW.com",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR0NKVThESXhqamZNdUpfeTlkS3doTWxHS2ZBd3ktVFNUSHpQekM2cl9KWmRPQlF5Y0dZZEcwYnRfRjV0SmEza0xUM1ItU2NCNWtkVGI4R1ZyMElKaGtsZURHZ1R5TE1UMmpRQTVWTVB2c2pWQVhKQUdid3hZOHpzMU12eEVER1FBTzlWVU15SXVXNTd4aWJZMXM4Z1oxcV9JUlE?oc=5"
+    },
+    {
+     "title": "US Tariffs on India are Driven by Concerns About Make In India, Chinese Imports",
+     "source": "TheWire.in",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOE1LWDFWZkd1eThMMlVncTR5ck83MXVRNnU4YmY0MS16bVVmbmJWMy1LN3MxcEVzdy1nOGlEdm9waWMyN3QzQUNrcGxhMGNSc0tZcXRWQ1ZrNG54N2VGUmhmQ0dPVzI2MjNCVFVlZ0ZUa3VHRjcxMFVjOWNyT3BtZ0FmamJtS3dyQ3FxcmVJeEdMbTM4c3o3VWhPMjhaVzRVVUN4dURB0gG4AUFVX3lxTE5FTDlSOW1wcEhfbV83eXFtYjNqNXo5WXZDTXU3NEotcWpjQTlLLWtwRUNGR1NUaGg4QUhpQ29TdjlmVnlFOWZQWXozM2F5ZUJfRGZLMEZOZjhXZGdlekx2U0FnNlR3ajJ2U2FGQUNZeXhJbGxzMHRwcGJRRTNhQWFkalk2RXFoMHR5SWE5cEZjYUNyMTV2MmFvUWZtbHJpcDBEY2g3WHVsRnpWTDkwczlURFVUNEgyY3A?oc=5"
+    },
+    {
+     "title": "US tariff proposal raises pressure on India to close trade deal",
+     "source": "PRESS Insider",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBITkgtSzIxaV9jUGgzV0RxZi1tWFJNLTNOZ0VzTWtLVUQ4eHpOZWZra00yRTdURFNnQnloaFl2UnhyR1AyT19IUXlxeGdBd1dBQVpfQUpsMm5PVTR2cjN6SEZzT0JmOU11eWZOeTN3REJGTmVYZy1n?oc=5"
+    },
+    {
+     "title": "Trade deal close, final path taking shape: Piyush Goyal after new US tariffs proposal",
+     "source": "Scroll.in",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOakRneFRfeks0aGNrcU9RSy1PUXI4Q3U5Q2JQLTlPOG91OTB5RjRMcEQyYjVwMHpPdUdRMGlQNzYyR21qcHE5T25VYmxDV3dqYXNTUWdDTXg4VzYwcTJ3OURGd1FHQlV2a1FMVklNRk8ycW82NGJYTW1odGZXS1hmb0hiTE1TaVRYNGdOUWRCM2I5M1JqOUd2SkxESWIwSU9CdWJIQ1E0Z0xIakx3QUpTd202QkRNc1HSAbwBQVVfeXFMUHMxcmxlSks1djdiNXN3VlRwZ01zNEVNY1Viak5YVGRjaV94LUkyWGpLRjRtWjUwcHpYaVg3VjVWUHBqTTBLQ2ZsbjNNQ0dkcUF3MTd3N1NwdkpldURHQjgwVk45anB2TVpISjllRW9CeG9RcDRZNG93blN6bzhROHA0VFpvWFBGZFlmc0R2NXlfUkNvbXBQb1R6ck9DcGlJX1V5VjBCdS1ueS1xV2ppenpLdGRpZVltZXE4MXc?oc=5"
+    },
+    {
+     "title": "US Tariff Impact on Indian Exports to Depend on Trade Deal, Duties on Rivals: Industry Experts",
+     "source": "KNN India",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNV0NIR3FMMkRhNFowVWpGU1pleGdNWUwzcW5qbFRMd3Rmc1NNb3AxcDdUOEtOaGxXUDBITUpRLXZBOERCOUdIUkRaWmlIOUFoZTFfcFFnWWk1V0x1TktGZGpsaHlCNDR4VU91cDFRT2pUSjZxcVVsS2oxSzZhdXBFcDBPYnhBNmVrMVdZaXBIdEp0d2R1ajVaR1RfLU5DVjJVXzEwRlAwaEVVWVdvOWQwUHFOYmYydzc4bkZJOFNFemYzT0pLb3hHR2Y0c0QyWXV0UHJCTXdjQQ?oc=5"
+    },
+    {
+     "title": "Global Markets- Stocks rally in Asia, unrocked by US tariffs",
+     "source": "DD India",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbTVyeExOUDRkNjhWTlRidm9sQUJQTE5yd1p1Ti1ZV2k4NnFMU2xHLV9JWVJFbW82U0VUYUZKUzZiYVlVNGJRTDUwRExiR2pCZ2R1a1cxR0cyaXNJRWp6UzNKekJBcTVScmY1TjVJX3FyZEhzQWhDX0dKTW5jZ1FTSTBtYmMtbGo1LVpQQjJLMksxUkE?oc=5"
+    },
+    {
+     "title": "US tariff uncertainty clouds outlook for Indian apparel exporters",
+     "source": "BusinessLine",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQW5NTVRMdHBaZ2YxMjBvQWhzT2xsbDhvUUM0VkZTY1o4MVNkRGlud1NSV2E4TVpjOTg3ZS10ZU5OcVl5WVdhbWZqMkRsd0loUk9fMGJ0Rnp0R2dQVWo1bVJBd0gxUHFoV2RHSG5LMUpENHJyZjFoV0FLS28zUU0yRHdPTnlpSmNqQVQxOGJoOGVXM3BKNnQ0M1pyUmJ2MS1Pb3dkYWptaGlfOFh4enVqRzk5bjdFaDhKd2o5NXJFbWxER1BFSHfSAcwBQVVfeXFMTWswUHJkVGNIMlk3dFZ4aXpxbUZ5RnZNUXNqZmZBZUF6NEpXQ0dMVF9tY2ZPS1lOa2o3M1IyMWl6S0NrVWJoN2FwZ1pXRWd6N24xdS11T2Q2d1lGVlJFcXpkVHlOcWdiMFlyVGtEVGRrMHRFaWs3bzF3dE1MaGJsRHRsWXlYaVlqcnJ1QTFnYnd1aW1xLWtnMFZpWEd5WjQ5Q0MtQkxEMVg1ZFlUWHJQNFFmbWJLNVQ4X0lPcGN3Z2tVYjRSdkY2RkNPS0lD?oc=5"
+    },
+    {
+     "title": "US trade deal close, final path emerging: Piyush Goyal after new US tariff plan",
+     "source": "The Indian Express",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNWNJNnM2dmhhbmRnUGMyX3FUQTlrczVuUnRlWHNIZ3U1djJRNFllVzh1bE1GNThGYUNNRmFCN1pqQXZVd1J0SzhVcnpVSXlnOWFYb3pQSzFmSTh1WmczcGN6eWxhZ1lXTkhhd3BlTE5lajVJb2xNa2U4NXRUQmlhanFkcmI3TkZrNk5ZRGZXR3M1eFFWRG4xTHpR0gGgAUFVX3lxTE85Yk4wVlNjYnJiM2NIUnNPTVhtdXRoMnpZeUpkcWRVUzZuWmtEdmlaRFNpSnpUWVdyem5YT1FJSHZEb0ZfNVBTV3BDUi1OYUhZekthcG5ZVXNOZGpWejlJV0l3NUZReWRPTkNRcFkyOTlCSzJFdGRka01jN0ZmYUZZc1ZodnJjSGFNaEJ1bkFkeFFVRnNpMDRKdDRRcF84ZU0?oc=5"
+    },
+    {
+     "title": "US Tariff Threat Tests India’s $1 Tn Export Ambition, Seven Sectors Face Scrutiny",
+     "source": "TradingView",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZ1N6eTEtSE45SVlfdndnNHBzWjhBbnV3bFYxeGxxakJxcUpHSzNZYjhDSXZZcE4wYWw3dXpadXk4M2ZvLUpGXy1kZm9sZHFQVFA0WldpYmJQRmVsUGVRSnhnVjVEaUZjVnVQNUEwTXpPVXVnc1ExZGhMenBkeVAzUUlOczBlc3pkYnRhXy1vbjJzbXFZckJ6NzEycDZFOW9UYk5FSTRucENZQzhfM3VnVXZQR05SQUtjM2tCcnJCT2d5ZEZ1blhfdHBubk5ZYk41M1E?oc=5"
+    },
+    {
+     "title": "Fresh US tariff threat pushes exporters to explore new markets",
+     "source": "The New Indian Express",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORmw5U2xTOXVFMTJqekdCWnltR3MtaU40czM3cURwNVdZU2VoTEJxaV9pcVhUamt4SGdNLVFmQkN5QWg0WkJYV2gwSGtpYWxlRHJkQ1puTHJJQ2tRTUlZVEFyeV80Y1c5M2J5aU9Ic1M5MkxsT1A3NXRLcmlvUHgtYV9aNUVSS3VXUVE0OXFsYXVfYlp1UnJoc0tBcnVMX1lZRk4wQmpMM0VTXzBURnd2RXd6eWJCWWPSAcQBQVVfeXFMT3FKdk9URkNSZ2gzcldKMWxlS29MUjFBZUU0eFF3M1JHcWp5am1GMnRMNlpRdU92VjNPQ1p6cWcxQ1JFeUx1VVo3ZWFjWGd2WjVaNHgtdThCQkFXNzhqTmFiVGd3WDF5bmd5dU90MmVLYUpkZk9sWjdka3IwcEFpT3JNaExPM0hUMmhEVDkxT0tweEFsVlF4ZS1vSWJCVjQ3LVRtZW8tSUFURzZzTkxJRkZhdktKdldTaVZicnVGQzd0REZObQ?oc=5"
     }
    ]
   },
@@ -9377,12 +9857,12 @@
      "effect": "exposed"
     }
    ],
-   "score": 1.374,
+   "score": 1.335,
    "cross_market": true,
    "post": "🌊 The news: U . S . pushed for Venezuela and Iraq to exit OPEC : Reuters exclusive\n\nThe hidden link nobody's talking about:\nOPEC+ oil output → Crude oil price → Indian rupee strength → TCS\n\n• Less OPEC+ output tightens supply and pushes oil prices up (and vice versa).\n• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.\n• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.\n\nAlso in the ripple: Indian Oil ◆, BPCL ◆, HPCL ◆, ONGC ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
    "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 U . S . pushed for Venezuela and Iraq to exit OPEC : Reuters exclusive\nSource: bnnbloomberg.ca\n\n◆ Indian Oil (NSE:IOC) [IN] — exposed, via OPEC+ oil output → Crude oil price\n◆ BPCL (NSE:BPCL) [IN] — exposed, via OPEC+ oil output → Crude oil price\n◆ HPCL (NSE:HINDPETRO) [IN] — exposed, via OPEC+ oil output → Crude oil price\n◆ ONGC (NSE:ONGC) [IN] — exposed, via OPEC+ oil output → Crude oil price\n◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via OPEC+ oil output → Crude oil price\n\nhttps://www.bnnbloomberg.ca/business/international/2026/11/27/us-pushed-venezuela-iraq-to-consider-leaving-opec-sources-say-reuters-exclusive/\n\nResearch & education only. Not investment advice.",
    "base_score": 0.81,
-   "coverage": 25,
+   "coverage": 20,
    "sources": [
     {
      "title": "U . S . pushed for Venezuela and Iraq to exit OPEC : Reuters exclusive",
@@ -9443,446 +9923,6 @@
      "title": "Is Trump Trying to Break OPEC? US Pressured Venezuela and Iraq to Consider Leaving Oil Group",
      "source": "Modern Diplomacy",
      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOR1c4Uzk4STQweVU5YmY3YUtTMmJpcGNibDFobDFwNDFBR1FVVGh3ZjBseXFOVlBZUFdLXzZwNmJEVExLQVo2dl9JakNJNzNEaDJhVE9ETmpLT3BHT3NYU3pXM1hmM1BTZmRyd1lLWFhyNjN5YWlISkJEdnJBdzFwdk0yaXpQdjQwSlhpUVhEcENtSlh3X3pnX2g4N2xRaWF6SVVaN1JlZWVna3JPOW11UDNOSXF4Q2VaQUdBcUFzWXBOb09ubWF4dU5B?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "5e2175377bdb",
-   "title": "India unfazed by proposed US tariffs, eyes $1 trillion export target",
-   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE96enFYMlphekl4NV9xTnBmdWhhWktUdUd5V0pIazM3bGlQQnNiVzRybmlXbFJGcm11MjZIVkJPUFNwcTgzQlFIUk13?oc=5",
-   "source": "Daily Observer",
-   "published": "2026-11-27T17:27:02+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "us_tariffs",
-     "name": "US import tariffs (general)",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "jlr",
-     "name": "Jaguar Land Rover",
-     "market": "Global",
-     "ticker": null,
-     "unlisted": true,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.5,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Jaguar Land Rover",
-       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "tatamotors",
-     "name": "Tata Motors (JLR parent)",
-     "market": "IN",
-     "ticker": null,
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.425,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Jaguar Land Rover",
-       "why": "JLR has no US factory, so US-bound cars are imported from the UK and Europe"
-      },
-      {
-       "from": "Jaguar Land Rover",
-       "to": "Tata Motors (JLR parent)",
-       "why": "JLR is Tata Motors' biggest profit driver"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "apple",
-     "name": "Apple",
-     "market": "US",
-     "ticker": "AAPL",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.4,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Apple",
-       "why": "Most iPhones are assembled outside the US"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "novelis",
-     "name": "Novelis",
-     "market": "US",
-     "ticker": null,
-     "unlisted": true,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.3,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Novelis",
-       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "foxconn",
-     "name": "Foxconn",
-     "market": "Global",
-     "ticker": "2317.TW",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.238,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Apple",
-       "why": "Most iPhones are assembled outside the US"
-      },
-      {
-       "from": "Apple",
-       "to": "Foxconn",
-       "why": "Foxconn is Apple's largest iPhone assembler, including at plants in India"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hindalco",
-     "name": "Hindalco",
-     "market": "IN",
-     "ticker": "NSE:HINDALCO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.223,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Novelis",
-       "why": "US aluminium tariffs change Novelis' input costs and US pricing"
-      },
-      {
-       "from": "Novelis",
-       "to": "Hindalco",
-       "why": "Novelis is Hindalco's US-based subsidiary and its biggest earnings driver"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "tata_elec",
-     "name": "Tata Electronics",
-     "market": "IN",
-     "ticker": null,
-     "unlisted": true,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.213,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "US import tariffs (general)",
-       "to": "Apple",
-       "why": "Most iPhones are assembled outside the US"
-      },
-      {
-       "from": "Apple",
-       "to": "Tata Electronics",
-       "why": "Tata Electronics assembles iPhones in India"
-      }
-     ],
-     "effect": "headwind"
-    }
-   ],
-   "score": 1.371,
-   "cross_market": true,
-   "post": "🌊 The news: India unfazed by proposed US tariffs, eyes $1 trillion export target\n\nThe hidden link nobody's talking about:\nUS import tariffs (general) → Jaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR has no US factory, so US-bound cars are imported from the UK and Europe.\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Jaguar Land Rover ▼, Apple ▼, Novelis ◆, Foxconn ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 India unfazed by proposed US tariffs, eyes $1 trillion export target\nSource: Daily Observer\n\n▼ Jaguar Land Rover (unlisted) [Global] — headwind, via US import tariffs (general)\n▼ Tata Motors (JLR parent) [IN] — headwind, via US import tariffs (general) → Jaguar Land Rover\n▼ Apple (AAPL) [US] — headwind, via US import tariffs (general)\n◆ Novelis (unlisted) [US] — exposed, via US import tariffs (general)\n▼ Foxconn (2317.TW) [Global] — headwind, via US import tariffs (general) → Apple\n\nhttps://news.google.com/rss/articles/CBMiSkFVX3lxTE96enFYMlphekl4NV9xTnBmdWhhWktUdUd5V0pIazM3bGlQQnNiVzRybmlXbFJGcm11MjZIVkJPUFNwcTgzQlFIUk13?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 0.8,
-   "coverage": 27,
-   "sources": [
-    {
-     "title": "US tariff threat clouds India export outlook ; MSMEs seek relief amid uncertainty over orders",
-     "source": "economictimes.indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/small-biz/trade/exports/insights/us-tariff-threat-clouds-indias-export-outlook-msmes-seek-relief-amid-uncertainty-over-orders/articleshow/136211144.cms"
-    },
-    {
-     "title": "India - US trade deal : What the new US tariff proposal means for India",
-     "source": "economictimes.indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-trade-deal-what-the-new-us-tariff-proposal-means-for-india/articleshow/136210536.cms"
-    },
-    {
-     "title": "India calls for US tariff concerns to be ironed out through 'early conclusion' of trade talks",
-     "source": "DW.com",
-     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR0NKVThESXhqamZNdUpfeTlkS3doTWxHS2ZBd3ktVFNUSHpQekM2cl9KWmRPQlF5Y0dZZEcwYnRfRjV0SmEza0xUM1ItU2NCNWtkVGI4R1ZyMElKaGtsZURHZ1R5TE1UMmpRQTVWTVB2c2pWQVhKQUdid3hZOHpzMU12eEVER1FBTzlWVU15SXVXNTd4aWJZMXM4Z1oxcV9JUlE?oc=5"
-    },
-    {
-     "title": "US Tariffs on India are Driven by Concerns About Make In India, Chinese Imports",
-     "source": "TheWire.in",
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOE1LWDFWZkd1eThMMlVncTR5ck83MXVRNnU4YmY0MS16bVVmbmJWMy1LN3MxcEVzdy1nOGlEdm9waWMyN3QzQUNrcGxhMGNSc0tZcXRWQ1ZrNG54N2VGUmhmQ0dPVzI2MjNCVFVlZ0ZUa3VHRjcxMFVjOWNyT3BtZ0FmamJtS3dyQ3FxcmVJeEdMbTM4c3o3VWhPMjhaVzRVVUN4dURB0gG4AUFVX3lxTE5FTDlSOW1wcEhfbV83eXFtYjNqNXo5WXZDTXU3NEotcWpjQTlLLWtwRUNGR1NUaGg4QUhpQ29TdjlmVnlFOWZQWXozM2F5ZUJfRGZLMEZOZjhXZGdlekx2U0FnNlR3ajJ2U2FGQUNZeXhJbGxzMHRwcGJRRTNhQWFkalk2RXFoMHR5SWE5cEZjYUNyMTV2MmFvUWZtbHJpcDBEY2g3WHVsRnpWTDkwczlURFVUNEgyY3A?oc=5"
-    },
-    {
-     "title": "US tariff proposal raises pressure on India to close trade deal",
-     "source": "PRESS Insider",
-     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBITkgtSzIxaV9jUGgzV0RxZi1tWFJNLTNOZ0VzTWtLVUQ4eHpOZWZra00yRTdURFNnQnloaFl2UnhyR1AyT19IUXlxeGdBd1dBQVpfQUpsMm5PVTR2cjN6SEZzT0JmOU11eWZOeTN3REJGTmVYZy1n?oc=5"
-    },
-    {
-     "title": "Trade deal close, final path taking shape: Piyush Goyal after new US tariffs proposal",
-     "source": "Scroll.in",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOakRneFRfeks0aGNrcU9RSy1PUXI4Q3U5Q2JQLTlPOG91OTB5RjRMcEQyYjVwMHpPdUdRMGlQNzYyR21qcHE5T25VYmxDV3dqYXNTUWdDTXg4VzYwcTJ3OURGd1FHQlV2a1FMVklNRk8ycW82NGJYTW1odGZXS1hmb0hiTE1TaVRYNGdOUWRCM2I5M1JqOUd2SkxESWIwSU9CdWJIQ1E0Z0xIakx3QUpTd202QkRNc1HSAbwBQVVfeXFMUHMxcmxlSks1djdiNXN3VlRwZ01zNEVNY1Viak5YVGRjaV94LUkyWGpLRjRtWjUwcHpYaVg3VjVWUHBqTTBLQ2ZsbjNNQ0dkcUF3MTd3N1NwdkpldURHQjgwVk45anB2TVpISjllRW9CeG9RcDRZNG93blN6bzhROHA0VFpvWFBGZFlmc0R2NXlfUkNvbXBQb1R6ck9DcGlJX1V5VjBCdS1ueS1xV2ppenpLdGRpZVltZXE4MXc?oc=5"
-    },
-    {
-     "title": "US Tariff Impact on Indian Exports to Depend on Trade Deal, Duties on Rivals: Industry Experts",
-     "source": "KNN India",
-     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNV0NIR3FMMkRhNFowVWpGU1pleGdNWUwzcW5qbFRMd3Rmc1NNb3AxcDdUOEtOaGxXUDBITUpRLXZBOERCOUdIUkRaWmlIOUFoZTFfcFFnWWk1V0x1TktGZGpsaHlCNDR4VU91cDFRT2pUSjZxcVVsS2oxSzZhdXBFcDBPYnhBNmVrMVdZaXBIdEp0d2R1ajVaR1RfLU5DVjJVXzEwRlAwaEVVWVdvOWQwUHFOYmYydzc4bkZJOFNFemYzT0pLb3hHR2Y0c0QyWXV0UHJCTXdjQQ?oc=5"
-    },
-    {
-     "title": "Global Markets- Stocks rally in Asia, unrocked by US tariffs",
-     "source": "DD India",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbTVyeExOUDRkNjhWTlRidm9sQUJQTE5yd1p1Ti1ZV2k4NnFMU2xHLV9JWVJFbW82U0VUYUZKUzZiYVlVNGJRTDUwRExiR2pCZ2R1a1cxR0cyaXNJRWp6UzNKekJBcTVScmY1TjVJX3FyZEhzQWhDX0dKTW5jZ1FTSTBtYmMtbGo1LVpQQjJLMksxUkE?oc=5"
-    },
-    {
-     "title": "US tariff uncertainty clouds outlook for Indian apparel exporters",
-     "source": "BusinessLine",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQW5NTVRMdHBaZ2YxMjBvQWhzT2xsbDhvUUM0VkZTY1o4MVNkRGlud1NSV2E4TVpjOTg3ZS10ZU5OcVl5WVdhbWZqMkRsd0loUk9fMGJ0Rnp0R2dQVWo1bVJBd0gxUHFoV2RHSG5LMUpENHJyZjFoV0FLS28zUU0yRHdPTnlpSmNqQVQxOGJoOGVXM3BKNnQ0M1pyUmJ2MS1Pb3dkYWptaGlfOFh4enVqRzk5bjdFaDhKd2o5NXJFbWxER1BFSHfSAcwBQVVfeXFMTWswUHJkVGNIMlk3dFZ4aXpxbUZ5RnZNUXNqZmZBZUF6NEpXQ0dMVF9tY2ZPS1lOa2o3M1IyMWl6S0NrVWJoN2FwZ1pXRWd6N24xdS11T2Q2d1lGVlJFcXpkVHlOcWdiMFlyVGtEVGRrMHRFaWs3bzF3dE1MaGJsRHRsWXlYaVlqcnJ1QTFnYnd1aW1xLWtnMFZpWEd5WjQ5Q0MtQkxEMVg1ZFlUWHJQNFFmbWJLNVQ4X0lPcGN3Z2tVYjRSdkY2RkNPS0lD?oc=5"
-    },
-    {
-     "title": "US trade deal close, final path emerging: Piyush Goyal after new US tariff plan",
-     "source": "The Indian Express",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNWNJNnM2dmhhbmRnUGMyX3FUQTlrczVuUnRlWHNIZ3U1djJRNFllVzh1bE1GNThGYUNNRmFCN1pqQXZVd1J0SzhVcnpVSXlnOWFYb3pQSzFmSTh1WmczcGN6eWxhZ1lXTkhhd3BlTE5lajVJb2xNa2U4NXRUQmlhanFkcmI3TkZrNk5ZRGZXR3M1eFFWRG4xTHpR0gGgAUFVX3lxTE85Yk4wVlNjYnJiM2NIUnNPTVhtdXRoMnpZeUpkcWRVUzZuWmtEdmlaRFNpSnpUWVdyem5YT1FJSHZEb0ZfNVBTV3BDUi1OYUhZekthcG5ZVXNOZGpWejlJV0l3NUZReWRPTkNRcFkyOTlCSzJFdGRka01jN0ZmYUZZc1ZodnJjSGFNaEJ1bkFkeFFVRnNpMDRKdDRRcF84ZU0?oc=5"
-    },
-    {
-     "title": "US Tariff Threat Tests India’s $1 Tn Export Ambition, Seven Sectors Face Scrutiny",
-     "source": "TradingView",
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZ1N6eTEtSE45SVlfdndnNHBzWjhBbnV3bFYxeGxxakJxcUpHSzNZYjhDSXZZcE4wYWw3dXpadXk4M2ZvLUpGXy1kZm9sZHFQVFA0WldpYmJQRmVsUGVRSnhnVjVEaUZjVnVQNUEwTXpPVXVnc1ExZGhMenBkeVAzUUlOczBlc3pkYnRhXy1vbjJzbXFZckJ6NzEycDZFOW9UYk5FSTRucENZQzhfM3VnVXZQR05SQUtjM2tCcnJCT2d5ZEZ1blhfdHBubk5ZYk41M1E?oc=5"
-    },
-    {
-     "title": "Fresh US tariff threat pushes exporters to explore new markets",
-     "source": "The New Indian Express",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORmw5U2xTOXVFMTJqekdCWnltR3MtaU40czM3cURwNVdZU2VoTEJxaV9pcVhUamt4SGdNLVFmQkN5QWg0WkJYV2gwSGtpYWxlRHJkQ1puTHJJQ2tRTUlZVEFyeV80Y1c5M2J5aU9Ic1M5MkxsT1A3NXRLcmlvUHgtYV9aNUVSS3VXUVE0OXFsYXVfYlp1UnJoc0tBcnVMX1lZRk4wQmpMM0VTXzBURnd2RXd6eWJCWWPSAcQBQVVfeXFMT3FKdk9URkNSZ2gzcldKMWxlS29MUjFBZUU0eFF3M1JHcWp5am1GMnRMNlpRdU92VjNPQ1p6cWcxQ1JFeUx1VVo3ZWFjWGd2WjVaNHgtdThCQkFXNzhqTmFiVGd3WDF5bmd5dU90MmVLYUpkZk9sWjdka3IwcEFpT3JNaExPM0hUMmhEVDkxT0tweEFsVlF4ZS1vSWJCVjQ3LVRtZW8tSUFURzZzTkxJRkZhdktKdldTaVZicnVGQzd0REZObQ?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "6160646d2bd3",
-   "title": "Big Tech faces mounting debt market pressure as AI spending accelerates",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnB0TE9pR3BoUGkyWGR3ZWFFcnZQZ2M5U2xDb3dZekdwWE5wN1JDU1pTaFV5emQ0SXFzcjNtcTYwRTJka1FMVHhESno4WFNJZE9sM1N3NHJSQWwwaXV1bjgtSnVjUmt6TnlBZnBuWnNSUW1sVFRuRDkwVVE3c0VVQkdFZEYzSHdIUE1hVlVkRjlXNlhYX3Q2eklXTjgwYXM?oc=5",
-   "source": "Beinsure",
-   "published": "2026-11-25T14:18:33+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "ai_capex",
-     "name": "AI / data-centre spending",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "nvidia",
-     "name": "Nvidia",
-     "market": "US",
-     "ticker": "NVDA",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.8,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "Nvidia",
-       "why": "Data-centre buildouts run on Nvidia GPUs"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "tsmc",
-     "name": "TSMC",
-     "market": "Global",
-     "ticker": "TSM",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.6,
-     "cross_market": false,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "TSMC",
-       "why": "TSMC manufactures most advanced AI chips"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "tcs",
-     "name": "TCS",
-     "market": "IN",
-     "ticker": "NSE:TCS",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.281,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "TCS",
-       "why": "AI can bring new deals but also shrink traditional services work"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "infosys",
-     "name": "Infosys",
-     "market": "IN",
-     "ticker": "NSE:INFY",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.281,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "Infosys",
-       "why": "AI can bring new deals but also shrink traditional services work"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "wipro",
-     "name": "Wipro",
-     "market": "IN",
-     "ticker": "NSE:WIPRO",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.281,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "Wipro",
-       "why": "AI can bring new deals but also shrink traditional services work"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "hcltech",
-     "name": "HCLTech",
-     "market": "IN",
-     "ticker": "NSE:HCLTECH",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.281,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "HCLTech",
-       "why": "AI can bring new deals but also shrink traditional services work"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "techm",
-     "name": "Tech Mahindra",
-     "market": "IN",
-     "ticker": "NSE:TECHM",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.281,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "Tech Mahindra",
-       "why": "AI can bring new deals but also shrink traditional services work"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "maruti",
-     "name": "Maruti Suzuki",
-     "market": "IN",
-     "ticker": "NSE:MARUTI",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.135,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "AI / data-centre spending",
-       "to": "TSMC",
-       "why": "TSMC manufactures most advanced AI chips"
-      },
-      {
-       "from": "TSMC",
-       "to": "Semiconductor supply",
-       "why": "TSMC is the world's largest contract chipmaker"
-      },
-      {
-       "from": "Semiconductor supply",
-       "to": "Maruti Suzuki",
-       "why": "The 2021 chip shortage forced carmakers, including Maruti, to cut production"
-      }
-     ],
-     "effect": "tailwind"
-    }
-   ],
-   "score": 1.362,
-   "cross_market": true,
-   "post": "🌊 The news: Big Tech faces mounting debt market pressure as AI spending accelerates\n\nThe hidden link nobody's talking about:\nAI / data-centre spending → TSMC → Semiconductor supply → Maruti Suzuki\n\n• TSMC manufactures most advanced AI chips.\n• TSMC is the world's largest contract chipmaker.\n• The 2021 chip shortage forced carmakers, including Maruti, to cut production.\n\nAlso in the ripple: Nvidia ▲, TSMC ▲, TCS ◆, Infosys ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Big Tech faces mounting debt market pressure as AI spending accelerates\nSource: Beinsure\n\n▲ Nvidia (NVDA) [US] — tailwind, via AI / data-centre spending\n▲ TSMC (TSM) [Global] — tailwind, via AI / data-centre spending\n◆ TCS (NSE:TCS) [IN] — exposed, via AI / data-centre spending\n◆ Infosys (NSE:INFY) [IN] — exposed, via AI / data-centre spending\n◆ Wipro (NSE:WIPRO) [IN] — exposed, via AI / data-centre spending\n\nhttps://news.google.com/rss/articles/CBMinwFBVV95cUxQUnB0TE9pR3BoUGkyWGR3ZWFFcnZQZ2M5U2xDb3dZekdwWE5wN1JDU1pTaFV5emQ0SXFzcjNtcTYwRTJka1FMVHhESno4WFNJZE9sM1N3NHJSQWwwaXV1bjgtSnVjUmt6TnlBZnBuWnNSUW1sVFRuRDkwVVE3c0VVQkdFZEYzSHdIUE1hVlVkRjlXNlhYX3Q2eklXTjgwYXM?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 1.1,
-   "coverage": 3,
-   "sources": [
-    {
-     "title": "HFCL, Sterlite Technologies Shares Fall 5% As Global AI Sell-Off Raises Data Centre Concerns",
-     "source": "Kotak Neo",
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZk1MTlVPelZWQ3BMNDFOb25RZm5ld0dYQVFvUGlOTlhGcm4zTVdaR1VMYVRneE9QVXBmZmpsNkRyZGpjaEpsT1U0MXN4LTB6MmlGb3lXZzNVTW16TjlCb25CcHRzdFl6UE8ydzdDcXJiQmNkYXMzWnBmWXVxMlJ5UlJxU3J1LTZYc1VETDhwbzc2X05YSnZ4NHRfQnhtTWRRdEFUUFFYQ3JRUDk5eHJsaE5QS3RydFRnRnh2enVEQ2tZTHBMOURLSQ?oc=5"
-    },
-    {
-     "title": "Data Center Boom Tightens US Steel Supply, Buyers Turn to Asian Imports",
-     "source": "Shanghai Metals Market",
-     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQVFZnWElqdlJEZnZnSk1nYlFvTGZzM1NFQkNIYXJMUjFzZVlvNktncVZiMDB5aUtXYl94aU5odUlsanJZcUZiUmYxeGpXY0VDVnFsdlFCMUpIQXFUSXZhVUliLWhORVdVaFZ0Y3BSUDFIYVo4akktZDhBdk1fWXNmTjB0ckZIR1hMMl9DU21PSk9OVXhlclJGdkduaTd1VHpvSllBWFhPcHZlY2lHS3FiRXhFcWpmb0ljN3d0Um9NaHJIdkZhcmtPYWNYZVJUMkFadGxiRE9pM0JkeUpsTFE?oc=5"
-    },
-    {
-     "title": "Big Tech faces mounting debt market pressure as AI spending accelerates",
-     "source": "Beinsure",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnB0TE9pR3BoUGkyWGR3ZWFFcnZQZ2M5U2xDb3dZekdwWE5wN1JDU1pTaFV5emQ0SXFzcjNtcTYwRTJka1FMVHhESno4WFNJZE9sM1N3NHJSQWwwaXV1bjgtSnVjUmt6TnlBZnBuWnNSUW1sVFRuRDkwVVE3c0VVQkdFZEYzSHdIUE1hVlVkRjlXNlhYX3Q2eklXTjgwYXM?oc=5"
     }
    ]
   },
@@ -10123,198 +10163,6 @@
      "title": "Texas H-1B U-Turn: Infosys Approvals Surge As Incoming Governor Plans To Reverse Abbott Order",
      "source": "Times Now",
      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQbFZSWktIdkZJZzdTN1JBa2dka3M0ZURfOE9aZHdwS1JUSlRZclRuV005bW9BZEpfZTE0NEl3MWQ0b0tGeDJGUWlyTGp2ZlNoQi1LaEJEVjd1M3VEX3VvR2VVSlJqNld2b1BxX2RIMFdNTENfcXVfU2otOEI1QUc4S2xiNF82bVF2ZnhqVGNnX3VYcVQzN3ROVUlkWW5XTnkwd3IwWW9SbGFFUW5rRFBEajFjOEUzZk5PR2tGMkV0RGZVVjZ2dVY5YUZKRWI5WUt2cV9MaDB3Qk5ibnlZS3p6bUZackRSWmZzS1RBOdIB8gFBVV95cUxNRzdiTmVjQ0ZiSENral9hWHFQOWl4ODdmQUxzUFJxWHhSREtyVVIxbzJBOXdOLXJkZzU1Ykltc2FIOGpjLXhXZE4zSnEzSjhxSEszUXhBYlAxNnlfbmprMTVhZ25fN3NMYlJTeDRVWDJSczV3aEhkalRleld1YS1NTFBiZXd0MG9ZN05HUTZuSzNPcXdZTDBwT2FVS1Z0RGVOSmpTOGFZTFBUZ1U0OS1LTkRXYVdhcmxyaU9pTGpHOXMyWV80RFlTZDAxSTZfQjRENFpKZHVWQlRncDFpQi14OHE5c2ZvQWRzelNsZDhkcnBKZw?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "6dba027afc0e",
-   "title": "What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZjMxUFlyX1VhUTJkU0I5azVGbF9qOUlMa0xtNTNVc0pnU1oxR05yZDRITDZteWxKb3I5c2ZnWjh2bHprTGRRWDRwQkVKVnd2NDFSWHl6T2M2ODNnTkVkOGdRY2VPQ05nbEVOdEVoclcxVjhBUHFwS1NKdUNteENMcVdJMzlYYlFSVHJyV3pzcm1BYUs4c1pQY0dxaWN0T1ZzZGZEQnpkUG9tZWdxbm9pZXdEcnhzdU5rV182c0J5NDNoeThSYjk4dnEwZXNjMTVSOVFxRHRyRTg0UGVUblJRV0RiWmJ6bEVwcDY00gHyAUFVX3lxTE02WlJzVGNUX1FrLVBQT2R5RnZXV213TUNocTZMRW9rZnljZ1lwaHJVRlVOc2NfaDZFcGl5bVV1c01Idmk4Y3VOd1pobDFkbTlhaXhOSHNCNFpteE04MkZBcmhTWkJqOFQzc2FoSTM0eG9ZX0pJS3NaU0hvLUNNV1FpaFJFaGVJcUdxVFhVNkgwQ1RSU2Y1QU9laF9iaGZaUlEtbHhhV3BUUDh3WjltcnI3VWZLcTUxUmNhb3pvdFQ5Q1l0YnhCU2l6MGZ2UUtUT3JBZzNBcjc3M1pIMTQyV2l0YXduZGJYSk1WMkYzcGpjZ0t3?oc=5",
-   "source": "BusinessLine",
-   "published": "2026-11-25T08:39:34+00:00",
-   "sample": false,
-   "seeds": [
-    {
-     "id": "gold",
-     "name": "Gold price",
-     "dir": "rising"
-    },
-    {
-     "id": "crude",
-     "name": "Crude oil price",
-     "dir": "rising"
-    },
-    {
-     "id": "fed",
-     "name": "US interest rates (Fed)",
-     "dir": "rising"
-    }
-   ],
-   "impacts": [
-    {
-     "id": "ioc",
-     "name": "Indian Oil",
-     "market": "IN",
-     "ticker": "NSE:IOC",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Indian Oil",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "bpcl",
-     "name": "BPCL",
-     "market": "IN",
-     "ticker": "NSE:BPCL",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "BPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "hpcl",
-     "name": "HPCL",
-     "market": "IN",
-     "ticker": "NSE:HINDPETRO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 1.0,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "HPCL",
-       "why": "Fuel retailers' margins shrink when crude rises faster than pump prices"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "ongc",
-     "name": "ONGC",
-     "market": "IN",
-     "ticker": "NSE:ONGC",
-     "unlisted": false,
-     "dir": 1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "ONGC",
-       "why": "As an oil producer, ONGC earns more when crude is higher"
-      }
-     ],
-     "effect": "tailwind"
-    },
-    {
-     "id": "indigo",
-     "name": "IndiGo (InterGlobe Aviation)",
-     "market": "IN",
-     "ticker": "NSE:INDIGO",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.875,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "IndiGo (InterGlobe Aviation)",
-       "why": "Jet fuel is an airline's single biggest cost"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "asianpaints",
-     "name": "Asian Paints",
-     "market": "IN",
-     "ticker": "NSE:ASIANPAINT",
-     "unlisted": false,
-     "dir": -1,
-     "mixed": false,
-     "score": 0.75,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Asian Paints",
-       "why": "Many paint raw materials are crude-oil derivatives"
-      }
-     ],
-     "effect": "headwind"
-    },
-    {
-     "id": "titan",
-     "name": "Titan",
-     "market": "IN",
-     "ticker": "NSE:TITAN",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Gold price",
-       "to": "Titan",
-       "why": "Jewellery demand and inventory value both move with gold prices"
-      }
-     ],
-     "effect": "exposed"
-    },
-    {
-     "id": "reliance",
-     "name": "Reliance Industries",
-     "market": "IN",
-     "ticker": "NSE:RELIANCE",
-     "unlisted": false,
-     "dir": 0,
-     "mixed": false,
-     "score": 0.375,
-     "cross_market": true,
-     "path": [
-      {
-       "from": "Crude oil price",
-       "to": "Reliance Industries",
-       "why": "A refining and petrochemicals giant: the effect depends on refining margins"
-      }
-     ],
-     "effect": "exposed"
-    }
-   ],
-   "score": 1.3,
-   "cross_market": true,
-   "post": "🌊 The news: What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh\n\nThe hidden link nobody's talking about:\nCrude oil price → Indian Oil\n\n• Fuel retailers' margins shrink when crude rises faster than pump prices.\n\nAlso in the ripple: BPCL ▼, HPCL ▼, ONGC ▲, IndiGo (InterGlobe Aviation) ▼\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
-   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh\nSource: BusinessLine\n\n▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price\n▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price\n▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price\n▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price\n▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price\n\nhttps://news.google.com/rss/articles/CBMi6wFBVV95cUxNZjMxUFlyX1VhUTJkU0I5azVGbF9qOUlMa0xtNTNVc0pnU1oxR05yZDRITDZteWxKb3I5c2ZnWjh2bHprTGRRWDRwQkVKVnd2NDFSWHl6T2M2ODNnTkVkOGdRY2VPQ05nbEVOdEVoclcxVjhBUHFwS1NKdUNteENMcVdJMzlYYlFSVHJyV3pzcm1BYUs4c1pQY0dxaWN0T1ZzZGZEQnpkUG9tZWdxbm9pZXdEcnhzdU5rV182c0J5NDNoeThSYjk4dnEwZXNjMTVSOVFxRHRyRTg0UGVUblJRV0RiWmJ6bEVwcDY00gHyAUFVX3lxTE02WlJzVGNUX1FrLVBQT2R5RnZXV213TUNocTZMRW9rZnljZ1lwaHJVRlVOc2NfaDZFcGl5bVV1c01Idmk4Y3VOd1pobDFkbTlhaXhOSHNCNFpteE04MkZBcmhTWkJqOFQzc2FoSTM0eG9ZX0pJS3NaU0hvLUNNV1FpaFJFaGVJcUdxVFhVNkgwQ1RSU2Y1QU9laF9iaGZaUlEtbHhhV3BUUDh3WjltcnI3VWZLcTUxUmNhb3pvdFQ5Q1l0YnhCU2l6MGZ2UUtUT3JBZzNBcjc3M1pIMTQyV2l0YXduZGJYSk1WMkYzcGpjZ0t3?oc=5\n\nResearch & education only. Not investment advice.",
-   "base_score": 1.3,
-   "coverage": 1,
-   "sources": [
-    {
-     "title": "What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh",
-     "source": "BusinessLine",
-     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZjMxUFlyX1VhUTJkU0I5azVGbF9qOUlMa0xtNTNVc0pnU1oxR05yZDRITDZteWxKb3I5c2ZnWjh2bHprTGRRWDRwQkVKVnd2NDFSWHl6T2M2ODNnTkVkOGdRY2VPQ05nbEVOdEVoclcxVjhBUHFwS1NKdUNteENMcVdJMzlYYlFSVHJyV3pzcm1BYUs4c1pQY0dxaWN0T1ZzZGZEQnpkUG9tZWdxbm9pZXdEcnhzdU5rV182c0J5NDNoeThSYjk4dnEwZXNjMTVSOVFxRHRyRTg0UGVUblJRV0RiWmJ6bEVwcDY00gHyAUFVX3lxTE02WlJzVGNUX1FrLVBQT2R5RnZXV213TUNocTZMRW9rZnljZ1lwaHJVRlVOc2NfaDZFcGl5bVV1c01Idmk4Y3VOd1pobDFkbTlhaXhOSHNCNFpteE04MkZBcmhTWkJqOFQzc2FoSTM0eG9ZX0pJS3NaU0hvLUNNV1FpaFJFaGVJcUdxVFhVNkgwQ1RSU2Y1QU9laF9iaGZaUlEtbHhhV3BUUDh3WjltcnI3VWZLcTUxUmNhb3pvdFQ5Q1l0YnhCU2l6MGZ2UUtUT3JBZzNBcjc3M1pIMTQyV2l0YXduZGJYSk1WMkYzcGpjZ0t3?oc=5"
     }
    ]
   },
@@ -12826,6 +12674,198 @@
      "title": "Indian Rupee corrects as oil prices rise, strong FIIs inflow to limit downside",
      "source": "FXStreet",
      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWXQwTXhzUlJHRExfMGl0RHRaOC1uQVl3NXQ2MWZUa3FEN1Z6YVpDbVczR05tenRHeC16bEhHallYT3Z5Ykt0aWJpTUk4bTJLdXJjZ3VEQ2tmX1FYbUhrb2hkall3UW5OZjB1bXk5ZDcxTlVGSU45VGsxbmtaeXg0MjJNa3pocEhTdjNqeWw3bThQUTluWnN6RGVDOWJTZzBMV3lieUdrS2VoZFRMS1ZNMVRB?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "eccb40885755",
+   "title": "Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOTXMxaW1yc0NWa0pPa29kcHpySm9CZWtTZXkxdV8zcHVZcGlUU25kVDdpdHAzYUkxbXcwVnZRTzBabzhYMW9MSzJmVG9NcWVPRFA0Rm1GQTdMb3F3aEJqN3M1T1UwcXBkSkxhSDkwbU5yVUxlVkx2Q2lLbXJyZXVjMkdTWGMzVVRVcDU1RTFZZ095bjQzME9OMDBOQS1CdUJLZjlyQngwTlFaX0M3YVctWHhKOXFidVRvUWlvd1hHNWlFTEJzZko4OWRPNnp5UC0wWTBpbUhNR3RJYW9idWF6MFJkTFVWUGNBemRNUWd1Mk5HQQ?oc=5",
+   "source": "Telangana NavaNirmana Sena",
+   "published": "2026-11-27T12:08:10+00:00",
+   "sample": false,
+   "seeds": [
+    {
+     "id": "tatasteel",
+     "name": "Tata Steel",
+     "dir": "rising"
+    },
+    {
+     "id": "jlr",
+     "name": "Jaguar Land Rover",
+     "dir": "rising"
+    },
+    {
+     "id": "ai_capex",
+     "name": "AI / data-centre spending",
+     "dir": "rising"
+    }
+   ],
+   "impacts": [
+    {
+     "id": "tatamotors",
+     "name": "Tata Motors (JLR parent)",
+     "market": "IN",
+     "ticker": null,
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 1.0,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "Jaguar Land Rover",
+       "to": "Tata Motors (JLR parent)",
+       "why": "JLR is Tata Motors' biggest profit driver"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "nvidia",
+     "name": "Nvidia",
+     "market": "US",
+     "ticker": "NVDA",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.8,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Nvidia",
+       "why": "Data-centre buildouts run on Nvidia GPUs"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "tsmc",
+     "name": "TSMC",
+     "market": "Global",
+     "ticker": "TSM",
+     "unlisted": false,
+     "dir": 1,
+     "mixed": false,
+     "score": 0.6,
+     "cross_market": false,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TSMC",
+       "why": "TSMC manufactures most advanced AI chips"
+      }
+     ],
+     "effect": "tailwind"
+    },
+    {
+     "id": "tcs",
+     "name": "TCS",
+     "market": "IN",
+     "ticker": "NSE:TCS",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "TCS",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "infosys",
+     "name": "Infosys",
+     "market": "IN",
+     "ticker": "NSE:INFY",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Infosys",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "wipro",
+     "name": "Wipro",
+     "market": "IN",
+     "ticker": "NSE:WIPRO",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Wipro",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "hcltech",
+     "name": "HCLTech",
+     "market": "IN",
+     "ticker": "NSE:HCLTECH",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "HCLTech",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    },
+    {
+     "id": "techm",
+     "name": "Tech Mahindra",
+     "market": "IN",
+     "ticker": "NSE:TECHM",
+     "unlisted": false,
+     "dir": 0,
+     "mixed": false,
+     "score": 0.281,
+     "cross_market": true,
+     "path": [
+      {
+       "from": "AI / data-centre spending",
+       "to": "Tech Mahindra",
+       "why": "AI can bring new deals but also shrink traditional services work"
+      }
+     ],
+     "effect": "exposed"
+    }
+   ],
+   "score": 1.3,
+   "cross_market": true,
+   "post": "🌊 The news: Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena\n\nThe hidden link nobody's talking about:\nJaguar Land Rover → Tata Motors (JLR parent)\n\n• JLR is Tata Motors' biggest profit driver.\n\nAlso in the ripple: Nvidia ▲, TSMC ▲, TCS ◆, Infosys ◆\n\n▲ possible tailwind ▼ possible headwind ◆ exposed\nResearch & education only. Not investment advice.\n#stockmarket #nifty #wallstreet #ripple",
+   "telegram": "⚡ RIPPLE ALERT · cross-market\n📰 Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena\nSource: Telangana NavaNirmana Sena\n\n▲ Tata Motors (JLR parent) [IN] — tailwind, via Jaguar Land Rover\n▲ Nvidia (NVDA) [US] — tailwind, via AI / data-centre spending\n▲ TSMC (TSM) [Global] — tailwind, via AI / data-centre spending\n◆ TCS (NSE:TCS) [IN] — exposed, via AI / data-centre spending\n◆ Infosys (NSE:INFY) [IN] — exposed, via AI / data-centre spending\n\nhttps://news.google.com/rss/articles/CBMi8gFBVV95cUxOTXMxaW1yc0NWa0pPa29kcHpySm9CZWtTZXkxdV8zcHVZcGlUU25kVDdpdHAzYUkxbXcwVnZRTzBabzhYMW9MSzJmVG9NcWVPRFA0Rm1GQTdMb3F3aEJqN3M1T1UwcXBkSkxhSDkwbU5yVUxlVkx2Q2lLbXJyZXVjMkdTWGMzVVRVcDU1RTFZZ095bjQzME9OMDBOQS1CdUJLZjlyQngwTlFaX0M3YVctWHhKOXFidVRvUWlvd1hHNWlFTEJzZko4OWRPNnp5UC0wWTBpbUhNR3RJYW9idWF6MFJkTFVWUGNBemRNUWd1Mk5HQQ?oc=5\n\nResearch & education only. Not investment advice.",
+   "base_score": 1.3,
+   "coverage": 1,
+   "sources": [
+    {
+     "title": "Indian Stock Market News Today: Tata Steel–APL Apollo SEBI Review, US GDP Controversy, NSE Rally, JLR EV Launch and Airtel Data Centre Investment – Telangana NavaNirmana Sena",
+     "source": "Telangana NavaNirmana Sena",
+     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOTXMxaW1yc0NWa0pPa29kcHpySm9CZWtTZXkxdV8zcHVZcGlUU25kVDdpdHAzYUkxbXcwVnZRTzBabzhYMW9MSzJmVG9NcWVPRFA0Rm1GQTdMb3F3aEJqN3M1T1UwcXBkSkxhSDkwbU5yVUxlVkx2Q2lLbXJyZXVjMkdTWGMzVVRVcDU1RTFZZ095bjQzME9OMDBOQS1CdUJLZjlyQngwTlFaX0M3YVctWHhKOXFidVRvUWlvd1hHNWlFTEJzZko4OWRPNnp5UC0wWTBpbUhNR3RJYW9idWF6MFJkTFVWUGNBemRNUWd1Mk5HQQ?oc=5"
     }
    ]
   },

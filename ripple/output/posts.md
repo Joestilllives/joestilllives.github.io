@@ -1,4 +1,4 @@
-# Ripple posts — 2026-11-28 07:52 UTC
+# Ripple posts — 2026-11-28 08:54 UTC
 
 ## Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock
 
@@ -144,6 +144,42 @@ Research & education only. Not investment advice.
 
 ---
 
+## Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
+
+### Post
+
+🌊 The news: Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
+Source: BW Businessworld
+
+▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
+▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
+▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price
+▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
+▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
 ## Morgan Stanley Lowers Oil Price Forecasts After US-Iran Peace Deal
 
 ### Post
@@ -247,42 +283,6 @@ Source: Finimize
 ▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
 
 https://news.google.com/rss/articles/CBMijgFBVV95cUxPR0puM0NyYm9QRmE4OEppTXVzclcwQTYwWGtMNG5GQlUwYnkySkh0QzZ1WXB5eklXWkE3a0M0QkIxMXNuTjlSWGtWRU9MZ1JmREJIQmJMTjdEaHVDUXotaFZJWTUzWkRXdDlYc3h4QXMzaDlqTGh1aHU2akR5Y1gzcFFxUTMwRDZ3dHNHRDN3?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
-
-### Post
-
-🌊 The news: Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
-Source: BW Businessworld
-
-▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
-▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
-▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price
-▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
-▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
-
-https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5
 
 Research & education only. Not investment advice.
 
