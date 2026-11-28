@@ -1,10 +1,10 @@
-# Ripple posts — 2026-11-27 23:28 UTC
+# Ripple posts — 2026-11-28 07:52 UTC
 
-## Crude oil futures rise 2.08% to ₹8,036 per barrel amid positive global cues
+## Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock
 
 ### Post
 
-🌊 The news: Crude oil futures rise 2.08% to ₹8,036 per barrel amid positive global cues
+🌊 The news: Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -21,8 +21,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 Crude oil futures rise 2.08% to ₹8,036 per barrel amid positive global cues
-Source: ET Auto
+📰 Oil Prices Rise After Ship Attacks, US-Iran Talks Deadlock
+Source: EnergyNow.com
 
 ▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
 ▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
@@ -30,7 +30,7 @@ Source: ET Auto
 ▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
 ▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
 
-https://news.google.com/rss/articles/CBMi4AFBVV95cUxQcU1LbjJJRGk1NnBLYndDTkx4NFJBNGVSVHpDNzFnNk8yNm8xS21xNFhxSGxST2lKYVhLVWN4dllTWE1LM0NtUGdFYk1fMXhXZ3V2LTYwUHQtSVJSdFFLczJqSl9YWElIQ012YzFLZGFhbWRlTGFQdzJBMnlTMlBTWENRZThnLTFSRXJNaDM5cmtQNUJmZDRyWHJMc0tFOGZNcEVMVGktMmNhRjhvTVhXbndBcXRXdXptNDBmcmtGNFVHbHNoLXo2azhuSndZNjZpVjRIMVNfcVljZXVhaVFnSNIB4AFBVV95cUxQcU1LbjJJRGk1NnBLYndDTkx4NFJBNGVSVHpDNzFnNk8yNm8xS21xNFhxSGxST2lKYVhLVWN4dllTWE1LM0NtUGdFYk1fMXhXZ3V2LTYwUHQtSVJSdFFLczJqSl9YWElIQ012YzFLZGFhbWRlTGFQdzJBMnlTMlBTWENRZThnLTFSRXJNaDM5cmtQNUJmZDRyWHJMc0tFOGZNcEVMVGktMmNhRjhvTVhXbndBcXRXdXptNDBmcmtGNFVHbHNoLXo2azhuSndZNjZpVjRIMVNfcVljZXVhaVFnSA?oc=5
+https://news.google.com/rss/articles/CBMikgFBVV95cUxPSXFwRjliNjJSakhhNDA1YlQ3S20zRG82UUhOMnhxanFONHdpT09sWlVGb3Q4RmRqbTBzSWg4RVVKb3piREVQUjI1cFphaVpiQi03Y1IyMFRWMmkwOEc2RVN0bF9jajNiYWdHWU84SGcycGwzY2N2czV0NHJhOHlrc3JfSXMtYTQzS3dBLTZhN3FHdw?oc=5
 
 Research & education only. Not investment advice.
 
@@ -180,11 +180,11 @@ Research & education only. Not investment advice.
 
 ---
 
-## [International Oil Prices] Fall Around 1% ... Brent Crude Rises 3% for the Week
+## Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso
 
 ### Post
 
-🌊 The news: [International Oil Prices] Fall Around 1% ... Brent Crude Rises 3% for the Week
+🌊 The news: Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso
 
 The hidden link nobody's talking about:
 Crude oil price → Indian rupee strength → TCS
@@ -201,8 +201,8 @@ Research & education only. Not investment advice.
 ### Telegram
 
 ⚡ RIPPLE ALERT · cross-market
-📰 [International Oil Prices] Fall Around 1% ... Brent Crude Rises 3% for the Week
-Source: 파이낸셜뉴스
+📰 Oil Prices Fly Blind as the Hormuz Enigma Deepens: Bousso
+Source: EnergyNow
 
 ◆ Indian Oil (NSE:IOC) [IN] — exposed, via Crude oil price
 ◆ BPCL (NSE:BPCL) [IN] — exposed, via Crude oil price
@@ -210,7 +210,7 @@ Source: 파이낸셜뉴스
 ◆ ONGC (NSE:ONGC) [IN] — exposed, via Crude oil price
 ◆ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — exposed, via Crude oil price
 
-https://news.google.com/rss/articles/CBMiWEFVX3lxTFBmZGR6dkk1YkJNLUpmVGxobFlfTXk0eDZUc0llQmludmNKR21FbzB4dC10WHNiOXZhWm9wTjFWR21oTmRNVFM1RGd5aEt1ZG16TVVRQTZnaEU?oc=5
+https://news.google.com/rss/articles/CBMijwFBVV95cUxOdFdYdGwxbmxoUXBPMG4wc21QMmhnSmZjTDUzSGFfSVVFRE56bVJmNlh0eTFCMVlQVkE0VUxDMXdjRXp5dlptakdzcmV3ZXFHRzRZT2xOWDAwOTZyNFBpbV96Ym9qNmg2SGZBMDVLbWJJZnZTRXVYZnk2WFk4aVZZZVFwdlMyajAwQWc0SnYySQ?oc=5
 
 Research & education only. Not investment advice.
 
@@ -247,6 +247,42 @@ Source: Finimize
 ▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
 
 https://news.google.com/rss/articles/CBMijgFBVV95cUxPR0puM0NyYm9QRmE4OEppTXVzclcwQTYwWGtMNG5GQlUwYnkySkh0QzZ1WXB5eklXWkE3a0M0QkIxMXNuTjlSWGtWRU9MZ1JmREJIQmJMTjdEaHVDUXotaFZJWTUzWkRXdDlYc3h4QXMzaDlqTGh1aHU2akR5Y1gzcFFxUTMwRDZ3dHNHRDN3?oc=5
+
+Research & education only. Not investment advice.
+
+---
+
+## Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
+
+### Post
+
+🌊 The news: Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
+
+The hidden link nobody's talking about:
+Crude oil price → Indian rupee strength → TCS
+
+• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
+• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
+
+Also in the ripple: Indian Oil ▲, BPCL ▲, HPCL ▲, ONGC ▼
+
+▲ possible tailwind ▼ possible headwind ◆ exposed
+Research & education only. Not investment advice.
+#stockmarket #nifty #wallstreet #ripple
+
+### Telegram
+
+⚡ RIPPLE ALERT · cross-market
+📰 Oil Prices Fall Despite Middle East Supply Disruption Concerns; Brent Ends Week 3.1% Higher
+Source: BW Businessworld
+
+▲ Indian Oil (NSE:IOC) [IN] — tailwind, via Crude oil price
+▲ BPCL (NSE:BPCL) [IN] — tailwind, via Crude oil price
+▲ HPCL (NSE:HINDPETRO) [IN] — tailwind, via Crude oil price
+▼ ONGC (NSE:ONGC) [IN] — headwind, via Crude oil price
+▲ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — tailwind, via Crude oil price
+
+https://news.google.com/rss/articles/CBMizgFBVV95cUxPRkQtZ1V5QTJZaklfWWtGMVVyY2VZOENjbmVINUc0MEJic1dxTWNyUEpoUU1uNXh2WmJMdndRa0ZUdThEM0NDMjA5UVdMeFBjQ1dxeXlhTnBlSTdvQzdLMUpLbDZ6N2FTUjhpZ0hWQ0lkbGR6LTR4eGNHSFF3RFRZSmVxYzhXSVlaRFp4eEJmbTBKdUktQXVjbHdUaVA2TXpEYmdla2RmNW5fc09PZWdoSjJYU0pwUTdIa21PZ1R2WXZOQldkUnFLdGJLc0xjZw?oc=5
 
 Research & education only. Not investment advice.
 
@@ -319,42 +355,6 @@ Source: Baird Maritime
 ▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
 
 https://news.google.com/rss/articles/CBMitgFBVV95cUxOMF9yaHJYdHRRcWppOUxnUzQtUVZpT2dSSWF2V24wclFENEg1anBRMEc3eWRQRFZLSDR0YmdTcUMyUWRhd3JJZDBUVkdmdXBpR1RJclg1OHRUTmpjblhZMUczbENTemVLOUFpRjEtclVzZlNrQjB4VTFFdmRtY05RaTZtQmZrN3NiUkc3VEtZWV9YWkc5MUFFX09VLWF0R3pldnZ6OTF1ZHNWaEhCZlpBMnF3U1Bad9IBwwFBVV95cUxQaUwtM2RpS0FMLXBoNENDZ0gxSXcyWWY1al81Rld3c2ZkUUlxMTdkb0xKLWw4S1Q4SlpHaklWUXpyRnMtWDVsNGh6Z0J2SXdOVjFfRTFzc0VfaC1WZ0VoelZRQl9NZU9aaG1ZZFgxSTVsckdRUmhrXzFaWkNmcTdhVzh4M2tPbkRqUFJCbDZIYWhGYk9CT1hGY001a3RCNlluUFJyLU1PNjA5OU0wOE1SUnU4Skt4eTNWbUxhTXdFaHFaSGc?oc=5
-
-Research & education only. Not investment advice.
-
----
-
-## Oil, gas prices fall as Brent trims weekly gains ahead of OPEC+ meeting
-
-### Post
-
-🌊 The news: Oil, gas prices fall as Brent trims weekly gains ahead of OPEC+ meeting
-
-The hidden link nobody's talking about:
-Crude oil price → Indian rupee strength → TCS
-
-• India imports most of its oil, so costlier crude widens the import bill and weighs on the rupee.
-• IT firms earn in dollars, so a weaker rupee lifts their rupee revenue.
-
-Also in the ripple: Indian Oil ▼, BPCL ▼, HPCL ▼, ONGC ▲
-
-▲ possible tailwind ▼ possible headwind ◆ exposed
-Research & education only. Not investment advice.
-#stockmarket #nifty #wallstreet #ripple
-
-### Telegram
-
-⚡ RIPPLE ALERT · cross-market
-📰 Oil, gas prices fall as Brent trims weekly gains ahead of OPEC+ meeting
-Source: Middle East Monitor
-
-▼ Indian Oil (NSE:IOC) [IN] — headwind, via Crude oil price
-▼ BPCL (NSE:BPCL) [IN] — headwind, via Crude oil price
-▼ HPCL (NSE:HINDPETRO) [IN] — headwind, via Crude oil price
-▲ ONGC (NSE:ONGC) [IN] — tailwind, via Crude oil price
-▼ IndiGo (InterGlobe Aviation) (NSE:INDIGO) [IN] — headwind, via Crude oil price
-
-https://news.google.com/rss/articles/CBMiswFBVV95cUxNa2s1Z0U2UnRIRTBMcllWZlZxakRlZGl4T09kdnRrLUs4bjdZclJVRXY2NlN4UHlHOWJyZ29aUndRXzdFX3JGSmNHNHduTkw4VHhVWFFsVXlsWjExMnB6cUJSM2FpS190aFhlLV83NkxITG45NU5DeG5zY1RKdWRaeXdlcWxiZXVZNnNhOTZ6ZVNqOGhKcFJSMlA3UUpiaTQ2VDMzVUFXbFY1WmdMY0JCdjhBa9IBuAFBVV95cUxOUEdqZXNrTW1WMEFNdVZxRnVDQWNKOThNRXZUcEFxTVh1MXp6RmZhTWJmV0owanFrQVl0ZXRzd1V5Z0loSEp2eUIyMVJBMy15ZUYtZ1I3U0FuUXptQWsteXFOUFU3NnBXWkN0MHltVUpQXzVENVNoQ3RoUGRqd0hhd1MtN3NvaWxrUjBVMVd4bWJ5OEVMQVBSRHR2VjlPdDNmV3V6bWNGbjlXSGhYcWZTeGxkb1J2OGFK?oc=5
 
 Research & education only. Not investment advice.
 
